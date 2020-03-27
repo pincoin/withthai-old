@@ -6,4 +6,4 @@ travel with thai
 * Django
 
 ## CSS
-* materialize css version 1.0.0 (Sass)
+* materialize css version 1.0.0
