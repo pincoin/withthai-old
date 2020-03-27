@@ -201,7 +201,7 @@ server {
 
 #### /etc/nginx/sites-available/com.withthai.www-ssl
 
-Get your PEM, KEY files.
+Get your PEM, KEY files from cloudflare.
 
 ```
 upstream app_server {

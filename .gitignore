@@ -206,7 +206,7 @@ fabric.properties
 conf/settings/production.py
 secret.json
 
-materializecss/.sass-cache/
+.sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
