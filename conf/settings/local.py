@@ -24,6 +24,10 @@ STATICFILES_DIRS = [
     '/Users/mairoo/.pyenv/versions/toj/lib/python3.6/site-packages/django/contrib/admin/static',
     os.path.join(BASE_DIR, 'conf', 'static'),
 ]
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    #'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 
 # Media files (Uploaded files)
 MEDIA_URL = '/media/'
