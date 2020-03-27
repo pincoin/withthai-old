@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 23:16+0700\n"
+"POT-Creation-Date: 2020-03-28 04:22+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: conf/settings/local.py:83
+#: conf/settings/local.py:8
 msgid "Korean"
-msgstr ""
+msgstr "한국어"
 
-#: conf/settings/local.py:84
+#: conf/settings/local.py:9
 msgid "Thai"
-msgstr ""
+msgstr "태국어"
 
-#: conf/settings/local.py:85
+#: conf/settings/local.py:10
 msgid "English"
-msgstr ""
+msgstr "영어"
+
+#: conf/templates/conf/home.html:11 conf/templates/conf/home.html:18
+#: conf/templates/conf/home.html:154
+msgid "WITH THAI"
+msgstr "위드타이"
+
+#: conf/templates/conf/home.html:20
+msgid "BOOKING"
+msgstr "나의예약"
+
+#: conf/templates/conf/home.html:21
+msgid "CART"
+msgstr "장바구니"
+
+#: conf/templates/conf/home.html:22
+msgid "HELP"
+msgstr "고객센터"
+
+#: conf/templates/conf/home.html:23
+msgid "MY PAGE"
+msgstr "마이페이지"
+
+#: conf/templates/conf/home.html:24
+msgid "SIGN OUT"
+msgstr "로그아웃"
+
+#: conf/templates/conf/home.html:25
+msgid "SIGN UP"
+msgstr "회원가입"
+
+#: conf/templates/conf/home.html:26
+msgid "SIGN IN"
+msgstr "로그인"
+
+#: conf/templates/conf/home.html:34
+msgid "GOLF"
+msgstr "골프"
+
+#: conf/templates/conf/home.html:35
+msgid "HOTEL"
+msgstr "호텔"
+
+#: conf/templates/conf/home.html:36
+msgid "HOT DEALS"
+msgstr "핫딜"
+
+#: conf/templates/conf/home.html:37
+msgid "PROMOTIONS"
+msgstr "프로모션"
+
+#: conf/templates/conf/home.html:38
+msgid "BLOG"
+msgstr "블로그"
+
+#: conf/templates/conf/home.html:165
+msgid "Help"
+msgstr "이용안내"

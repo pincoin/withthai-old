@@ -1,0 +1,56 @@
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 15px;
+}
+
+/* navbar */
+.withthai-navbar {
+    background-color: #ffffff;
+}
+
+.withthai-navbar-sub {
+    background-color: #ebf2ea;
+    height: 36px;
+    line-height: 36px;
+}
+
+.withthai-navbar a:link, .withthai-navbar a:visited, .withthai-navbar a:active {
+    color: #2c3e50;
+}
+
+.withthai-navbar-sub a:link, .withthai-navbar-sub a:visited, .withthai-navbar-sub a:active {
+    color: #03353e;
+}
+
+.withthai-logo {
+    margin-top: 16px;
+}
+
+/* footer */
+.page-footer {
+    color: #03353e;
+    background-color: #ebf2ea;
+    padding: 0;
+}
+
+.page-footer .container .row {
+    margin: 0;
+}
+
+.page-footer .container li {
+    padding: 2px 0;
+}
+
+.page-footer .footer-copyright {
+    color: #f8f9fa;
+    background-color: #03353e;
+}
+
+.footer-copyright .container .row {
+    margin: 0;
+}
+
+.footer-heading {
+    font-size: 19px;
+    font-weight: bold;
+}

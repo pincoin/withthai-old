@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-27 23:16+0700\n"
+"POT-Creation-Date: 2020-03-28 04:22+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: conf/settings/local.py:83
+#: conf/settings/local.py:8
 msgid "Korean"
-msgstr ""
+msgstr "ภาษาเกาหลี"
 
-#: conf/settings/local.py:84
+#: conf/settings/local.py:9
 msgid "Thai"
+msgstr "ภาษาไทย"
+
+#: conf/settings/local.py:10
+msgid "English"
+msgstr "ภาษาอังกฤษ"
+
+#: conf/templates/conf/home.html:11 conf/templates/conf/home.html:18
+#: conf/templates/conf/home.html:154
+msgid "WITH THAI"
+msgstr "วิธไทย"
+
+#: conf/templates/conf/home.html:20
+msgid "BOOKING"
 msgstr ""
 
-#: conf/settings/local.py:85
-msgid "English"
+#: conf/templates/conf/home.html:21
+msgid "CART"
 msgstr ""
+
+#: conf/templates/conf/home.html:22
+msgid "HELP"
+msgstr ""
+
+#: conf/templates/conf/home.html:23
+msgid "MY PAGE"
+msgstr ""
+
+#: conf/templates/conf/home.html:24
+msgid "SIGN OUT"
+msgstr ""
+
+#: conf/templates/conf/home.html:25
+msgid "SIGN UP"
+msgstr ""
+
+#: conf/templates/conf/home.html:26
+msgid "SIGN IN"
+msgstr ""
+
+#: conf/templates/conf/home.html:34
+msgid "GOLF"
+msgstr ""
+
+#: conf/templates/conf/home.html:35
+msgid "HOTEL"
+msgstr ""
+
+#: conf/templates/conf/home.html:36
+msgid "HOT DEALS"
+msgstr ""
+
+#: conf/templates/conf/home.html:37
+msgid "PROMOTIONS"
+msgstr ""
+
+#: conf/templates/conf/home.html:38
+msgid "BLOG"
+msgstr ""
+
+#: conf/templates/conf/home.html:165
+msgid "Help"
+msgstr "Help"

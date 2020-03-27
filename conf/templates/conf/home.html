@@ -1,18 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+{% load static i18n %}
 <head>
-
     <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
     <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="{% static 'conf/css/materialize.min.css' %}"
-          media="screen,projection"/>
+    <link type="text/css" href="{% static 'conf/css/materialize.min.css' %}"
+          media="screen,projection" rel="stylesheet"/>
+    <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>WITHTHAI</title>
+    <title>{% trans 'WITH THAI' %}</title>
 </head>
 <body>
-<p style="font-family: 'Nanum Gothic'">위드타이 วิธไทย WITH THAI</p>
-<p style="font-family: 'Sarabun'">위드타이 วิธไทย WITH THAI</p>
+<div class="navbar-fixed">
+    <nav class="withthai-navbar z-depth-0">
+        <div class="nav-wrapper container">
+            <img src="{% static 'conf/images/withthai_logo_en.png' %}" class="withthai-logo"
+                 alt="{% trans 'WITH THAI' %}">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="">{% trans 'BOOKING' %}</a></li>
+                <li><a href="">{% trans 'CART' %}</a></li>
+                <li><a href="">{% trans 'HELP' %}</a></li>
+                <li><a href="">{% trans 'MY PAGE' %}</a></li>
+                <li><a href="">{% trans 'SIGN OUT' %}</a></li>
+                <li><a href="">{% trans 'SIGN UP' %}</a></li>
+                <li><a href="">{% trans 'SIGN IN' %}</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<nav class="withthai-navbar-sub z-depth-0">
+    <div class="nav-wrapper container">
+        <ul id="nav-mobile" class="hide-on-med-and-down">
+            <li><a href="">{% trans 'GOLF' %}</a></li>
+            <li><a href="">{% trans 'HOTEL' %}</a></li>
+            <li><a href="">{% trans 'HOT DEALS' %}</a></li>
+            <li><a href="">{% trans 'PROMOTIONS' %}</a></li>
+            <li><a href="">{% trans 'BLOG' %}</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+            <div class="row center">
+                <a href="http://materializecss.com/getting-started.html" id="download-button"
+                   class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+</div>
+
+
+<div class="container">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                    <h5 class="center">Speeds up development</h5>
+
+                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that
+                        incorporate our custom components. Additionally, we refined animations and transitions to
+                        provide a smoother experience for developers.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                    <h5 class="center">User Experience Focused</h5>
+
+                    <p class="light">By utilizing elements and principles of Material Design, we were able to create a
+                        framework that incorporates components and animations that provide more feedback to users.
+                        Additionally, a single underlying responsive system across all platforms allow for a more
+                        unified user experience.</p>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                    <h5 class="center">Easy to work with</h5>
+
+                    <p class="light">We have provided detailed documentation as well as specific code examples to help
+                        new users get started. We are also always open to feedback and can answer any questions a user
+                        may have about Materialize.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+    <div class="section">
+
+        <div class="row">
+            <div class="col s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <h4>Contact Us</h4>
+                <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque
+                    id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut
+                    ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem
+                    neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu
+                    mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum
+                    ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        <div class="container">
+            <div class="row center">
+                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+        </div>
+    </div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l9 s12">
+                <h5 class="footer-heading">{% trans 'WITH THAI' %}</h5>
+                <ul>
+                    <li>Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110</li>
+                    <li>TAX ID: 0105563049000</li>
+                    <li>TAT License: 11/012345</li>
+                    <li>(+66)080-023-3602</li>
+                    <li>help@withthai.com</li>
+                    <li>LINE: @withthai</li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="footer-heading">{% trans "Help" %}</h5>
+                <ul>
+                    <li><a href="#!">TERMS &amp; CONDITIONS</a></li>
+                    <li><a href="#!">PRIVACY POLICY</a></li>
+                    <li><a href="#!">ABOUT US</a></li>
+                    <li><a href="#!">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12">
+                    Copyright &copy {% now 'Y' %} withthai.com
+                </div>
+                <div class="col l8 s12">
+                    All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- scripts -->
+<script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'conf/js/materialize.min.js' %}"></script>
 </body>
 </html>
