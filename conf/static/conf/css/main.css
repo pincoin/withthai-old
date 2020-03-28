@@ -37,6 +37,10 @@ body {
     margin: 0;
 }
 
+.page-footer .container .row .col {
+    padding: 0;
+}
+
 .page-footer .container li {
     padding: 2px 0;
 }
