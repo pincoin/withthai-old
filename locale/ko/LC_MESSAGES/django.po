@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 04:22+0700\n"
+"POT-Creation-Date: 2020-03-28 11:47+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,59 +30,79 @@ msgstr "태국어"
 msgid "English"
 msgstr "영어"
 
-#: conf/templates/conf/home.html:11 conf/templates/conf/home.html:18
-#: conf/templates/conf/home.html:154
+#: conf/templates/conf/home.html:10 conf/templates/conf/home.html:27
+#: conf/templates/conf/home.html:193
 msgid "WITH THAI"
 msgstr "위드타이"
 
-#: conf/templates/conf/home.html:20
+#: conf/templates/conf/home.html:32
 msgid "BOOKING"
 msgstr "나의예약"
 
-#: conf/templates/conf/home.html:21
+#: conf/templates/conf/home.html:38
 msgid "CART"
 msgstr "장바구니"
 
-#: conf/templates/conf/home.html:22
+#: conf/templates/conf/home.html:43
 msgid "HELP"
 msgstr "고객센터"
 
-#: conf/templates/conf/home.html:23
+#: conf/templates/conf/home.html:50
 msgid "MY PAGE"
 msgstr "마이페이지"
 
-#: conf/templates/conf/home.html:24
+#: conf/templates/conf/home.html:56
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
-#: conf/templates/conf/home.html:25
+#: conf/templates/conf/home.html:62
 msgid "SIGN UP"
 msgstr "회원가입"
 
-#: conf/templates/conf/home.html:26
+#: conf/templates/conf/home.html:68
 msgid "SIGN IN"
 msgstr "로그인"
 
-#: conf/templates/conf/home.html:34
+#: conf/templates/conf/home.html:79
 msgid "GOLF"
 msgstr "골프"
 
-#: conf/templates/conf/home.html:35
+#: conf/templates/conf/home.html:80
 msgid "HOTEL"
 msgstr "호텔"
 
-#: conf/templates/conf/home.html:36
+#: conf/templates/conf/home.html:81
 msgid "HOT DEALS"
 msgstr "핫딜"
 
-#: conf/templates/conf/home.html:37
+#: conf/templates/conf/home.html:82
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
-#: conf/templates/conf/home.html:38
+#: conf/templates/conf/home.html:83
 msgid "BLOG"
 msgstr "블로그"
 
-#: conf/templates/conf/home.html:165
+#: conf/templates/conf/home.html:204
 msgid "Help"
 msgstr "이용안내"
+
+#: conf/templates/conf/home.html:206
+msgid "FAQ/How-to"
+msgstr "자주묻는질문"
+
+#: conf/templates/conf/home.html:207
+msgid "TERMS &amp; CONDITIONS"
+msgstr "이용약관"
+
+#: conf/templates/conf/home.html:208
+msgid "PRIVACY POLICY"
+msgstr "개인정보보호방침"
+
+#: conf/templates/conf/home.html:209
+msgid "ABOUT US"
+msgstr "소개"
+
+#: conf/templates/conf/home.html:210
+msgid "CONTACT US"
+msgstr "문의하기"
