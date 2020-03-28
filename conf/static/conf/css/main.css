@@ -1,6 +1,7 @@
 body {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 15px;
+    background: #eef5f9;
 }
 
 /* navbar */
@@ -42,6 +43,10 @@ nav ul a:hover {
 
 .withthai-navbar-sub a:link, .withthai-navbar-sub a:visited, .withthai-navbar-sub a:active {
     color: #03353e;
+}
+
+.withthai-navbar > div > ul > li a {
+    padding: 0 8px;
 }
 
 .withthai-navbar > div > ul > li:last-child a {
