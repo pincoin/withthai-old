@@ -27,10 +27,13 @@
                 <li><a href="">{% trans 'BOOKING' %}</a></li>
                 <li><a href="">{% trans 'CART' %}</a></li>
                 <li><a href="">{% trans 'HELP' %}</a></li>
-                <li><a href="">{% trans 'MY PAGE' %}</a></li>
-                <li><a href="">{% trans 'SIGN OUT' %}</a></li>
-                <li><a href="">{% trans 'SIGN UP' %}</a></li>
-                <li><a href="">{% trans 'SIGN IN' %}</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="">{% trans 'MY PAGE' %}</a></li>
+                    <li><a href="">{% trans 'SIGN OUT' %}</a></li>
+                {% else %}
+                    <li><a href="">{% trans 'SIGN UP' %}</a></li>
+                    <li><a href="">{% trans 'SIGN IN' %}</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
