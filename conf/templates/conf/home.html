@@ -2,13 +2,20 @@
 <html lang="en">
 {% load static i18n %}
 <head>
-    <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
-    <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
-    <link type="text/css" href="{% static 'conf/css/materialize.min.css' %}"
-          media="screen,projection" rel="stylesheet"/>
-    <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#87b842">
+    <meta property="og:image" content="http://www.withthai.com{% static 'conf/images/withthai_og_en.png' %}"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="1024"/>
     <title>{% trans 'WITH THAI' %}</title>
+    {% block stylesheet %}
+        <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
+        <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
+        <link type="text/css" href="{% static 'conf/css/materialize.min.css' %}"
+              media="screen,projection" rel="stylesheet"/>
+        <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'conf/images/favicon_16x16.png' %}">
+    {% endblock %}
 </head>
 <body>
 <div class="navbar-fixed">
@@ -53,16 +60,13 @@
                    class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
             </div>
             <br><br>
-
         </div>
     </div>
     <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
 </div>
 
-
 <div class="container">
     <div class="section">
-
         <!--   Icon Section   -->
         <div class="row">
             <div class="col s12 m4">
@@ -99,10 +103,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 
 <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -134,7 +136,6 @@
 
     </div>
 </div>
-
 
 <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -185,8 +186,9 @@
         </div>
     </div>
 </footer>
-<!-- scripts -->
-<script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'conf/js/materialize.min.js' %}"></script>
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'conf/js/materialize.min.js' %}"></script>
+{% endblock %}
 </body>
 </html>
