@@ -4,15 +4,36 @@ body {
 }
 
 /* navbar */
+.navbar-fixed {
+    height: 50px;
+    line-height: 50px;
+}
+
 .withthai-navbar {
     background-color: #ffffff;
     border-bottom: 1px solid #eaeaea;
+    height: 50px;
+    line-height: 50px;
+}
+
+.navbar-fixed > nav > div > ul > li > a > i {
+    height: 50px;
+    line-height: 50px;
+}
+
+nav ul a:hover {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .withthai-navbar-sub {
     background-color: #ebf2ea;
     height: 36px;
     line-height: 36px;
+}
+
+.withthai-logo {
+    margin-top: 10px;
 }
 
 .withthai-navbar a:link, .withthai-navbar a:visited, .withthai-navbar a:active {
@@ -29,10 +50,6 @@ body {
 
 .withthai-navbar-sub > div > ul > li:first-child a {
     padding-left: 0;
-}
-
-.withthai-logo {
-    margin-top: 16px;
 }
 
 /* footer */
