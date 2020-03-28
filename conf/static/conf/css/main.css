@@ -6,6 +6,7 @@ body {
 /* navbar */
 .withthai-navbar {
     background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .withthai-navbar-sub {
