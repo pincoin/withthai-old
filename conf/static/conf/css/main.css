@@ -23,6 +23,14 @@ body {
     color: #03353e;
 }
 
+.withthai-navbar > div > ul > li:last-child a {
+    padding-right: 0;
+}
+
+.withthai-navbar-sub > div > ul > li:first-child a {
+    padding-left: 0;
+}
+
 .withthai-logo {
     margin-top: 16px;
 }
