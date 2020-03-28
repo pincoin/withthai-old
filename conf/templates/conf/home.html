@@ -9,6 +9,8 @@
     <meta property="og:image:height" content="1024"/>
     <title>{% trans 'WITH THAI' %}</title>
     {% block stylesheet %}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+              integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
         <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
         <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
         <link type="text/css" href="{% static 'conf/css/materialize.min.css' %}"
@@ -24,15 +26,48 @@
             <img src="{% static 'conf/images/withthai_logo_en.png' %}" class="withthai-logo"
                  alt="{% trans 'WITH THAI' %}">
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="">{% trans 'BOOKING' %}</a></li>
-                <li><a href="">{% trans 'CART' %}</a></li>
-                <li><a href="">{% trans 'HELP' %}</a></li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-passport fa-fw fa-sm"></i>
+                        {% trans 'BOOKING' %}
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-luggage-cart fa-fw fa-sm"></i>
+                        {% trans 'CART' %}</a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-info-circle fa-fw fa-sm"></i>
+                        {% trans 'HELP' %}
+                    </a>
+                </li>
                 {% if user.is_authenticated %}
-                    <li><a href="">{% trans 'MY PAGE' %}</a></li>
-                    <li><a href="">{% trans 'SIGN OUT' %}</a></li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-user-cog fa-fw fa-sm"></i>
+                            {% trans 'MY PAGE' %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-sign-out-alt fa-fw fa-sm"></i>
+                            {% trans 'SIGN OUT' %}
+                        </a>
+                    </li>
                 {% else %}
-                    <li><a href="">{% trans 'SIGN UP' %}</a></li>
-                    <li><a href="">{% trans 'SIGN IN' %}</a></li>
+                    <li><a href="">
+                        <i class="fas fa-user-plus fa-fw fa-sm"></i>
+                        {% trans 'SIGN UP' %}
+                    </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-sign-in-alt fa-fw fa-sm"></i>
+                            {% trans 'SIGN IN' %}
+                        </a>
+                    </li>
                 {% endif %}
             </ul>
         </div>
