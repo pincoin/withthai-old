@@ -58,4 +58,9 @@ body {
 .footer-heading {
     font-size: 19px;
     font-weight: bold;
+    color: #87b842;
+}
+
+.page-footer a:link, .page-footer a:visited, .page-footer a:active {
+    color: #03353e;
 }

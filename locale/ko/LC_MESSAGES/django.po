@@ -89,7 +89,7 @@ msgstr "이용안내"
 
 #: conf/templates/conf/home.html:206
 msgid "FAQ/How-to"
-msgstr "자주묻는질문"
+msgstr "자주 묻는 질문"
 
 #: conf/templates/conf/home.html:207
 msgid "TERMS &amp; CONDITIONS"
@@ -97,7 +97,7 @@ msgstr "이용약관"
 
 #: conf/templates/conf/home.html:208
 msgid "PRIVACY POLICY"
-msgstr "개인정보보호방침"
+msgstr "개인정보 처리방침"
 
 #: conf/templates/conf/home.html:209
 msgid "ABOUT US"
