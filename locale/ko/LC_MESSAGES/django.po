@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-28 11:47+0700\n"
+"POT-Creation-Date: 2020-03-29 20:02+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,79 +29,95 @@ msgstr "태국어"
 msgid "English"
 msgstr "영어"
 
-#: conf/templates/conf/home.html:10 conf/templates/conf/home.html:27
-#: conf/templates/conf/home.html:193
+#: conf/templates/conf/home.html:10 conf/templates/conf/home.html:28
+#: conf/templates/conf/home.html:170
 msgid "WITH THAI"
 msgstr "위드타이"
 
-#: conf/templates/conf/home.html:32
+#: conf/templates/conf/home.html:33
 msgid "BOOKING"
 msgstr "나의예약"
 
-#: conf/templates/conf/home.html:38
+#: conf/templates/conf/home.html:39
 msgid "CART"
 msgstr "장바구니"
 
-#: conf/templates/conf/home.html:43
+#: conf/templates/conf/home.html:44
 msgid "HELP"
 msgstr "고객센터"
 
-#: conf/templates/conf/home.html:50
+#: conf/templates/conf/home.html:51
 msgid "MY PAGE"
 msgstr "마이페이지"
 
-#: conf/templates/conf/home.html:56
+#: conf/templates/conf/home.html:57
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
-#: conf/templates/conf/home.html:62
+#: conf/templates/conf/home.html:63
 msgid "SIGN UP"
 msgstr "회원가입"
 
-#: conf/templates/conf/home.html:68
+#: conf/templates/conf/home.html:69
 msgid "SIGN IN"
 msgstr "로그인"
 
-#: conf/templates/conf/home.html:79
+#: conf/templates/conf/home.html:80
 msgid "GOLF"
 msgstr "골프"
 
-#: conf/templates/conf/home.html:80
+#: conf/templates/conf/home.html:81
 msgid "HOTEL"
 msgstr "호텔"
 
-#: conf/templates/conf/home.html:81
+#: conf/templates/conf/home.html:82 conf/templates/conf/home.html:122
 msgid "HOT DEALS"
 msgstr "핫딜"
 
-#: conf/templates/conf/home.html:82
+#: conf/templates/conf/home.html:83 conf/templates/conf/home.html:130
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
-#: conf/templates/conf/home.html:83
+#: conf/templates/conf/home.html:84
 msgid "BLOG"
 msgstr "블로그"
 
-#: conf/templates/conf/home.html:204
+#: conf/templates/conf/home.html:102
+msgid "CATEGORIES"
+msgstr "분류"
+
+#: conf/templates/conf/home.html:138
+msgid "RECENT POSTS"
+msgstr "최근 게시물"
+
+#: conf/templates/conf/home.html:146
+msgid "RECENT COMMENTS"
+msgstr "최근 댓글"
+
+#: conf/templates/conf/home.html:154
+msgid "POPULAR TAGS"
+msgstr "인기 태그"
+
+#: conf/templates/conf/home.html:181
 msgid "Help"
 msgstr "이용안내"
 
-#: conf/templates/conf/home.html:206
+#: conf/templates/conf/home.html:183
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/home.html:207
+#: conf/templates/conf/home.html:184
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/home.html:208
+#: conf/templates/conf/home.html:185
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
-#: conf/templates/conf/home.html:209
+#: conf/templates/conf/home.html:186
 msgid "ABOUT US"
-msgstr "소개"
+msgstr "위드타이 소개"
 
-#: conf/templates/conf/home.html:210
+#: conf/templates/conf/home.html:187
 msgid "CONTACT US"
 msgstr "문의하기"

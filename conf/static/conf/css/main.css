@@ -51,14 +51,6 @@ nav ul a:hover {
     padding: 0 8px;
 }
 
-.withthai-navbar > div > ul > li:last-child a {
-    padding-right: 0;
-}
-
-.withthai-navbar-sub > div > ul > li:first-child a {
-    padding-left: 0;
-}
-
 /* footer */
 main {
     flex: 1 0 auto;
@@ -99,4 +91,32 @@ main {
 
 .page-footer a:link, .page-footer a:visited, .page-footer a:active {
     color: #03353e;
+}
+
+/* Blog */
+.blog-sidebar-card-title {
+    font-weight: bold;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.blog-sidebar-card-content > ul {
+    margin-top: 0;
+    padding-left: 2rem;
+}
+
+.blog-sidebar-card-content > ul > li {
+    list-style: disc;
+    padding: .2rem 0;
+}
+
+.blog-sidebar-card-content > ul > li > ul {
+    padding-left: 1rem;
+}
+
+.blog-sidebar-card-content > ul > li > ul > li{
+    list-style-type: circle;
+    padding: .2rem 0;
 }
