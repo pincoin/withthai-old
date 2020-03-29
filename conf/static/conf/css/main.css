@@ -1,7 +1,9 @@
 body {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 15px;
-    background: #eef5f9;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 /* navbar */
@@ -58,6 +60,10 @@ nav ul a:hover {
 }
 
 /* footer */
+main {
+    flex: 1 0 auto;
+}
+
 .page-footer {
     color: #03353e;
     background-color: #ebf2ea;
