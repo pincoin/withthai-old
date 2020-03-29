@@ -120,3 +120,25 @@ main {
     list-style-type: circle;
     padding: .2rem 0;
 }
+
+.blog-content-card-title {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.blog-content-card-content {
+    font-weight: bold;
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.blog-content-card-footer {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}

@@ -205,6 +205,7 @@ fabric.properties
 # WITHTHAI Project
 conf/settings/production.py
 secret.json
+assets/
 
 .sass-cache/
 *.css.map
