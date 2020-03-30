@@ -23,69 +23,71 @@
 <header>
     <div class="navbar-fixed">
         <nav class="withthai-navbar z-depth-0">
-            <div class="nav-wrapper container">
-                <a href="" class="brand-logo">
-                    <img src="{% static 'conf/images/withthai_logo_en.png' %}"
-                         class="withthai-logo" alt="{% trans 'WITH THAI' %}">
-                </a>
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="" class="brand-logo">
+                        <img src="{% static 'conf/images/withthai_logo_en.png' %}"
+                             class="withthai-logo" alt="{% trans 'WITH THAI' %}">
+                    </a>
 
-                <a href="#" data-target="mobile-menu" class="sidenav-trigger mobile-menu-icon">
-                    <i class="fas fa-bars"></i>
-                </a>
+                    <a href="#" data-target="mobile-menu" class="sidenav-trigger mobile-menu-icon teal-text text-darken-4">
+                        <i class="fas fa-bars"></i>
+                    </a>
 
-                <a href="#" data-target="mobile-cart" class="sidenav-trigger mobile-menu-icon right">
-                    <i class="fas fa-shopping-basket"></i>
-                </a>
+                    <a href="#" data-target="mobile-cart" class="sidenav-trigger mobile-menu-icon teal-text text-darken-4 right">
+                        <i class="fas fa-shopping-basket"></i>
+                    </a>
 
-                <a href="#" data-target="mobile-cart" class="sidenav-trigger mobile-menu-icon right">
-                    <i class="fas fa-search"></i>
-                </a>
+                    <a href="#" data-target="mobile-cart" class="sidenav-trigger mobile-menu-icon teal-text text-darken-4 right">
+                        <i class="fas fa-search"></i>
+                    </a>
 
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a href="">
-                            <i class="fas fa-passport fa-fw fa-sm"></i>
-                            {% trans 'BOOKING' %}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-luggage-cart fa-fw fa-sm"></i>
-                            {% trans 'CART' %}</a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-info-circle fa-fw fa-sm"></i>
-                            {% trans 'HELP' %}
-                        </a>
-                    </li>
-                    {% if user.is_authenticated %}
+                    <ul class="right hide-on-med-and-down">
                         <li>
                             <a href="">
-                                <i class="fas fa-user-cog fa-fw fa-sm"></i>
-                                {% trans 'MY PAGE' %}
+                                <i class="fas fa-passport fa-fw fa-sm"></i>
+                                {% trans 'BOOKING' %}
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fas fa-sign-out-alt fa-fw fa-sm"></i>
-                                {% trans 'SIGN OUT' %}
-                            </a>
-                        </li>
-                    {% else %}
-                        <li><a href="">
-                            <i class="fas fa-user-plus fa-fw fa-sm"></i>
-                            {% trans 'SIGN UP' %}
-                        </a>
+                                <i class="fas fa-luggage-cart fa-fw fa-sm"></i>
+                                {% trans 'CART' %}</a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="fas fa-sign-in-alt fa-fw fa-sm"></i>
-                                {% trans 'SIGN IN' %}
+                                <i class="fas fa-info-circle fa-fw fa-sm"></i>
+                                {% trans 'HELP' %}
                             </a>
                         </li>
-                    {% endif %}
-                </ul>
+                        {% if user.is_authenticated %}
+                            <li>
+                                <a href="">
+                                    <i class="fas fa-user-cog fa-fw fa-sm"></i>
+                                    {% trans 'MY PAGE' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fas fa-sign-out-alt fa-fw fa-sm"></i>
+                                    {% trans 'SIGN OUT' %}
+                                </a>
+                            </li>
+                        {% else %}
+                            <li><a href="">
+                                <i class="fas fa-user-plus fa-fw fa-sm"></i>
+                                {% trans 'SIGN UP' %}
+                            </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="fas fa-sign-in-alt fa-fw fa-sm"></i>
+                                    {% trans 'SIGN IN' %}
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>
