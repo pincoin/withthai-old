@@ -36,7 +36,7 @@ nav ul a:hover {
 }
 
 .withthai-logo {
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .withthai-navbar a:link, .withthai-navbar a:visited, .withthai-navbar a:active {
@@ -49,6 +49,10 @@ nav ul a:hover {
 
 .withthai-navbar > div > ul > li a {
     padding: 0 8px;
+}
+
+.mobile-menu-icon {
+    margin: 0 6px !important;
 }
 
 /* footer */
@@ -116,7 +120,7 @@ main {
     padding-left: 1rem;
 }
 
-.blog-sidebar-card-content > ul > li > ul > li{
+.blog-sidebar-card-content > ul > li > ul > li {
     list-style-type: circle;
     padding: .2rem 0;
 }
@@ -135,6 +139,10 @@ main {
     border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
+.blog-content-card-content > .row {
+    margin-bottom: 0;
+}
+
 .blog-content-card-footer {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
@@ -145,6 +153,7 @@ main {
 .blog-content-card-content-heading {
     font-size: 1.2rem;
     font-weight: bold;
+    margin-top: 0;
 }
 
 .blog-tag {

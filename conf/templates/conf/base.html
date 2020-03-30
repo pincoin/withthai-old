@@ -24,8 +24,23 @@
     <div class="navbar-fixed">
         <nav class="withthai-navbar z-depth-0">
             <div class="nav-wrapper container">
-                <img src="{% static 'conf/images/withthai_logo_en.png' %}"
-                     class="withthai-logo" alt="{% trans 'WITH THAI' %}">
+                <a href="" class="brand-logo">
+                    <img src="{% static 'conf/images/withthai_logo_en.png' %}"
+                         class="withthai-logo" alt="{% trans 'WITH THAI' %}">
+                </a>
+
+                <a href="#" data-target="mobile-menu" class="sidenav-trigger mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+                </a>
+
+                <a href="#" data-target="mobile-cart" class="sidenav-trigger mobile-menu-icon right">
+                    <i class="fas fa-shopping-basket"></i>
+                </a>
+
+                <a href="#" data-target="mobile-cart" class="sidenav-trigger mobile-menu-icon right">
+                    <i class="fas fa-search"></i>
+                </a>
+
                 <ul class="right hide-on-med-and-down">
                     <li>
                         <a href="">
