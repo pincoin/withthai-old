@@ -55,6 +55,12 @@ nav ul a:hover {
     margin: 0 6px !important;
 }
 
+@media only screen and (max-width: 992px) {
+    .brand-logo {
+        left: 46% !important;
+    }
+}
+
 /* footer */
 main {
     flex: 1 0 auto;
