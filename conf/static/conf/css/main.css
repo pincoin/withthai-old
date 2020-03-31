@@ -1,68 +1,55 @@
 body {
     font-family: "Nanum Gothic", sans-serif;
     font-size: 15px;
+
+    /* sticky footer */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
 /* navbar */
-.navbar-fixed {
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i, .navbar-fixed, .brand-logo {
     height: 50px;
     line-height: 50px;
 }
 
-.withthai-navbar {
-    background-color: #ffffff;
+.navbar-fixed > nav {
     border-bottom: 1px solid #eaeaea;
-    height: 50px;
-    line-height: 50px;
 }
 
-.navbar-fixed > nav > div > ul > li > a > i {
-    height: 50px;
-    line-height: 50px;
+.brand-logo img {
+    margin-top: 10px;
 }
 
-nav ul a:hover {
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.withthai-navbar-sub {
-    background-color: #ebf2ea;
-    height: 36px;
-    line-height: 36px;
-}
-
-.withthai-logo {
-    margin-top: 12px;
-}
-
-.withthai-navbar a:link, .withthai-navbar a:visited, .withthai-navbar a:active {
+nav > .nav-wrapper > .container > ul > li > a {
     color: #2c3e50;
 }
 
-.withthai-navbar-sub a:link, .withthai-navbar-sub a:visited, .withthai-navbar-sub a:active {
-    color: #03353e;
+nav i {
+    font-size: 15px;
 }
 
-.withthai-navbar > div > ul > li a {
-    padding: 0 8px;
+.mobile-menu-icon i {
+    font-size: 18px;
+    margin: 0 5px;
 }
 
-.mobile-menu-icon {
-    margin: 0 6px !important;
+@media only screen and (min-width: 993px) {
+    .mobile-menu-icon i {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 992px) {
-    .brand-logo {
-        left: 45.5% !important;
+    nav .brand-logo {
+        left: 46%;
     }
 }
 
 /* footer */
 main {
+    /* sticky footer */
     flex: 1 0 auto;
 }
 
