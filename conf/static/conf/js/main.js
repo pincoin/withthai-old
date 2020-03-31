@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
 $('document').ready(function() {
    $('#navbar-search1').on('click', function() {
        $('#navbar-top-right').hide();
-       $('#navbar-search-box').show();
+       $('#navbar-search-box1').show();
    });
 
-   $('#search-close').on('click', function() {
+   $('#navbar-search-close1').on('click', function() {
        $('#navbar-top-right').show();
-       $('#navbar-search-box').hide();
+       $('#navbar-search-box1').hide();
    });
 });

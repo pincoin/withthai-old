@@ -63,15 +63,16 @@ nav ul a:hover {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.navbar-search, .navbar-search:focus {
+/* navbar search box */
+.navbar-search-input1, .navbar-search-input1:focus {
     border: 0 !important;
 }
 
-#navbar-search-box {
+#navbar-search-box1 {
     display: none;
 }
 
-#navbar-search1 i, #navbar-cart1 i, #navbar-search-box li span i {
+#navbar-search1 i, #navbar-cart1 i, #navbar-search-box1 li span i {
     font-size: 20px;
     margin: 0 12px;
 }
