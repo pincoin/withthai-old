@@ -68,6 +68,10 @@ nav ul a:hover {
     border: 0 !important;
 }
 
+.navbar-search-input2 {
+    width: 120px !important;
+}
+
 #navbar-search-box1, #navbar-search-box2 {
     display: none;
 }
