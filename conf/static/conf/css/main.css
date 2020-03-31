@@ -47,6 +47,15 @@ nav i {
     }
 }
 
+body > header > nav {
+    color: #03353e;
+    background-color: #ebf2ea;
+}
+
+nav a:link, nav a:visited, nav a:active {
+    color: #03353e;
+}
+
 /* footer */
 main {
     /* sticky footer */
