@@ -44,7 +44,27 @@
                         <i class="fas fa-search fa-fw"></i>
                     </a>
 
-                    <ul class="right hide-on-med-and-down">
+                    <ul class="right" id="navbar-search-box">
+                        <li>
+                            <span>
+                                <i class="fas fa-search fa-fw"></i>
+                            </span>
+                        </li>
+                        <li class="right">
+                            <span id="search-close">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <div>
+                                <form role="search" method="GET">
+                                    <input class="navbar-search" name="q" type="text" placeholder="검색" value=""/>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="right hide-on-med-and-down" id="navbar-top-right">
                         <li>
                             <a href="">
                                 <i class="fas fa-passport fa-fw"></i>
@@ -85,14 +105,14 @@
                             </li>
                         {% endif %}
                         <li>
-                            <a href="">
+                            <span id="navbar-cart1">
                                 <i class="fas fa-luggage-cart fa-fw"></i>
-                            </a>
+                            </span>
                         </li>
                         <li>
-                            <a href="">
+                            <span id="navbar-search1">
                                 <i class="fas fa-search fa-fw"></i>
-                            </a>
+                            </span>
                         </li>
                     </ul>
                 </div>

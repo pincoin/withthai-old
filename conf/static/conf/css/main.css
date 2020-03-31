@@ -9,7 +9,7 @@ body {
 }
 
 /* navbar */
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i, .navbar-fixed, .brand-logo {
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i, .navbar-fixed, .brand-logo, #navbar-search-box > li > div > form {
     height: 50px;
     line-height: 50px;
 }
@@ -22,7 +22,7 @@ nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i, .navbar
     margin-top: 10px;
 }
 
-nav > .nav-wrapper > .container > ul > li > a {
+nav > .nav-wrapper > .container > ul > li > a, nav > .nav-wrapper > .container > ul > li > span {
     color: #2c3e50;
 }
 
@@ -50,10 +50,30 @@ nav i {
 body > header > nav {
     color: #03353e;
     background-color: #ebf2ea;
+    height: 36px;
+    line-height: 36px;
 }
 
 nav a:link, nav a:visited, nav a:active {
     color: #03353e;
+}
+
+nav ul a:hover {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-search, .navbar-search:focus {
+    border: 0 !important;
+}
+
+#navbar-search-box {
+    display: none;
+}
+
+#navbar-search1 i, #navbar-cart1 i, #navbar-search-box li span i {
+    font-size: 20px;
+    margin: 0 12px;
 }
 
 /* footer */
