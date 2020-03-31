@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-29 20:02+0700\n"
+"POT-Creation-Date: 2020-03-31 15:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,95 +29,113 @@ msgstr "Thai"
 msgid "English"
 msgstr "English"
 
-#: conf/templates/conf/home.html:10 conf/templates/conf/home.html:28
-#: conf/templates/conf/home.html:170
+#: conf/templates/conf/base.html:10 conf/templates/conf/base.html:30
+#: conf/templates/conf/base.html:137
 msgid "WITH THAI"
 msgstr "WITH THAI"
 
-#: conf/templates/conf/home.html:33
+#: conf/templates/conf/base.html:52
 msgid "BOOKING"
 msgstr "BOOKING"
 
-#: conf/templates/conf/home.html:39
+#: conf/templates/conf/base.html:58 conf/templates/conf/base.html:126
 msgid "CART"
 msgstr "CART"
 
-#: conf/templates/conf/home.html:44
+#: conf/templates/conf/base.html:63
 msgid "HELP"
 msgstr "HELP"
 
-#: conf/templates/conf/home.html:51
+#: conf/templates/conf/base.html:70
 msgid "MY PAGE"
 msgstr "MY PAGE"
 
-#: conf/templates/conf/home.html:57
+#: conf/templates/conf/base.html:76 conf/templates/conf/base.html:117
 msgid "SIGN OUT"
 msgstr "LOGOUT"
 
-#: conf/templates/conf/home.html:63
+#: conf/templates/conf/base.html:82 conf/templates/conf/base.html:122
 msgid "SIGN UP"
 msgstr "REGISTER"
 
-#: conf/templates/conf/home.html:69
+#: conf/templates/conf/base.html:88 conf/templates/conf/base.html:120
 msgid "SIGN IN"
 msgstr "LOGIN"
 
-#: conf/templates/conf/home.html:80
+#: conf/templates/conf/base.html:100 conf/templates/conf/base.html:110
 msgid "GOLF"
 msgstr "GOLF"
 
-#: conf/templates/conf/home.html:81
+#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:111
 msgid "HOTEL"
 msgstr "HOTEL"
 
-#: conf/templates/conf/home.html:82 conf/templates/conf/home.html:122
+#: conf/templates/conf/base.html:102 conf/templates/conf/base.html:112
+#: conf/templates/conf/home.html:83
 msgid "HOT DEALS"
 msgstr "HOT DEALS"
 
-#: conf/templates/conf/home.html:83 conf/templates/conf/home.html:130
+#: conf/templates/conf/base.html:103 conf/templates/conf/base.html:113
+#: conf/templates/conf/home.html:91
 msgid "PROMOTIONS"
 msgstr "PROMOTIONS"
 
-#: conf/templates/conf/home.html:84
+#: conf/templates/conf/base.html:104 conf/templates/conf/base.html:114
 msgid "BLOG"
 msgstr "BLOG"
 
-#: conf/templates/conf/home.html:102
-msgid "CATEGORIES"
+#: conf/templates/conf/base.html:109
+msgid "HOME"
 msgstr ""
 
-#: conf/templates/conf/home.html:138
-msgid "RECENT POSTS"
+#: conf/templates/conf/base.html:116
+msgid "PROFILE"
 msgstr ""
 
-#: conf/templates/conf/home.html:146
-msgid "RECENT COMMENTS"
+#: conf/templates/conf/base.html:127
+msgid "EMPTY"
 msgstr ""
 
-#: conf/templates/conf/home.html:154
-msgid "POPULAR TAGS"
+#: conf/templates/conf/base.html:128
+msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/home.html:181
+#: conf/templates/conf/base.html:148
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/home.html:183
+#: conf/templates/conf/base.html:150
 msgid "FAQ/How-to"
 msgstr "FAQ/How-to"
 
-#: conf/templates/conf/home.html:184
+#: conf/templates/conf/base.html:151
 msgid "TERMS &amp; CONDITIONS"
 msgstr "TERMS &amp; CONDITIONS"
 
-#: conf/templates/conf/home.html:185
+#: conf/templates/conf/base.html:152
 msgid "PRIVACY POLICY"
 msgstr "PRIVACY POLICY"
 
-#: conf/templates/conf/home.html:186
+#: conf/templates/conf/base.html:153
 msgid "ABOUT US"
 msgstr "ABOUT US"
 
-#: conf/templates/conf/home.html:187
+#: conf/templates/conf/base.html:154
 msgid "CONTACT US"
 msgstr "CONTACT US"
+
+#: conf/templates/conf/home.html:63
+msgid "CATEGORIES"
+msgstr ""
+
+#: conf/templates/conf/home.html:99
+msgid "RECENT POSTS"
+msgstr ""
+
+#: conf/templates/conf/home.html:107
+msgid "RECENT COMMENTS"
+msgstr ""
+
+#: conf/templates/conf/home.html:115
+msgid "POPULAR TAGS"
+msgstr ""
