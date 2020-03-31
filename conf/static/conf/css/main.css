@@ -64,15 +64,15 @@ nav ul a:hover {
 }
 
 /* navbar search box */
-.navbar-search-input1, .navbar-search-input1:focus {
+.navbar-search-input1, .navbar-search-input1:focus, .navbar-search-input2 {
     border: 0 !important;
 }
 
-#navbar-search-box1 {
+#navbar-search-box1, #navbar-search-box2 {
     display: none;
 }
 
-#navbar-search1 i, #navbar-cart1 i, #navbar-search-box1 li span i {
+#navbar-search1 i, #navbar-cart1 i, #navbar-search-box1 li span i, #navbar-search-box2 li span i {
     font-size: 20px;
     margin: 0 12px;
 }
