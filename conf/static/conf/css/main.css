@@ -9,7 +9,7 @@ body {
 }
 
 /* navbar */
-nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i, .navbar-fixed, .brand-logo, #navbar-search-box > li > div > form {
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i, nav .sidenav-trigger, .navbar-fixed, .brand-logo, #navbar-search-box > li > div > form {
     height: 50px;
     line-height: 50px;
 }
@@ -76,9 +76,10 @@ nav ul a:hover {
     display: none;
 }
 
-#navbar-search1 i, #navbar-cart1 i, #navbar-search-box1 li span i, #navbar-search-box2 li span i {
+#navbar-search1 i, #navbar-cart1 i, #navbar-search-box1 li span i, #navbar-search-box2 li span i, .sidenav-trigger {
     font-size: 20px;
-    margin: 0 12px;
+    margin: 0 12px !important;
+    width: 25px;
 }
 
 /* footer */

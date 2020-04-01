@@ -34,8 +34,8 @@
                         <i class="fas fa-bars fa-fw"></i>
                     </a>
 
-                    <a href="#" data-target="mobile-cart"
-                       class="mobile-menu-icon teal-text text-darken-4 right">
+                    <a href="#" id="navbar-cart1" data-target="mobile-cart"
+                       class="mobile-menu-icon teal-text text-darken-4 right sidenav-trigger">
                         <i class="fas fa-luggage-cart fa-fw"></i>
                     </a>
 
@@ -121,7 +121,7 @@
                             </li>
                         {% endif %}
                         <li>
-                            <span id="navbar-cart1">
+                            <span id="navbar-cart1" class="sidenav-trigger" data-target="mobile-cart">
                                 <i class="fas fa-luggage-cart fa-fw"></i>
                             </span>
                         </li>
@@ -147,6 +147,12 @@
             </ul>
         </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-cart">
+        <li class="waves-effect waves-block"><a href="#">{% trans 'CART' %}</a></li>
+        <li class="waves-effect waves-block"><a href="#">{% trans 'EMPTY' %}</a></li>
+        <li class="waves-effect waves-block"><a href="#">{% trans 'PAY NOW' %}</a></li>
+    </ul>
 </header>
 {% block main %}
 {% endblock %}

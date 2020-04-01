@@ -32,4 +32,5 @@ $('document').ready(function () {
         $('.brand-logo').show();
         $('#navbar-search-box2').hide();
     });
+
 });
