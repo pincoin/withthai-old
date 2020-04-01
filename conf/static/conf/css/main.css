@@ -76,10 +76,13 @@ nav ul a:hover {
     display: none;
 }
 
-#navbar-search1 i, #navbar-cart1 i, #navbar-search-box1 li span i, #navbar-search-box2 li span i, .sidenav-trigger {
+#navbar-search1 i, #navbar-cart1 i, #navbar-search-box1 li span i, #navbar-search-box2 li span i {
     font-size: 20px;
     margin: 0 12px !important;
-    width: 25px;
+}
+
+.sidenav-trigger {
+    margin: 0 !important;
 }
 
 /* footer */
