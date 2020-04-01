@@ -30,7 +30,7 @@
                     </a>
 
                     <a href="#" data-target="mobile-menu"
-                       class="mobile-menu-icon teal-text text-darken-4">
+                       class="mobile-menu-icon teal-text text-darken-4 sidenav-trigger">
                         <i class="fas fa-bars fa-fw"></i>
                     </a>
 
@@ -147,6 +147,24 @@
             </ul>
         </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-menu">
+        <li class="waves-effect waves-block"><a href="#">{% trans 'HOME' %}</a></li>
+        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'GOLF' %}</a></li>
+        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'HOTEL' %}</a></li>
+        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'HOT DEALS' %}</a></li>
+        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'PROMOTIONS' %}</a></li>
+        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'BLOG' %}</a></li>
+        {% if user.is_authenticated %}
+            <li class="waves-effect waves-block"><a href="#">{% trans 'PROFILE' %}</a></li>
+            <li class="waves-effect waves-block"><a href="#">{% trans 'SIGN OUT' %}</a></li>
+        {% else %}
+            <li class="waves-effect waves-block"><a href="#"><i class="fas fa-sign-in-alt fa-fw fa-sm"></i>
+                {% trans 'SIGN IN' %}</a></li>
+            <li class="waves-effect waves-block"><a href="#"><i class="fas fa-user-plus fa-fw fa-sm"></i>
+                {% trans 'SIGN UP' %}</a></li>
+        {% endif %}
+    </ul>
 
     <ul class="sidenav" id="mobile-cart">
         <li class="waves-effect waves-block"><a href="#">{% trans 'CART' %}</a></li>
