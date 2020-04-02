@@ -149,27 +149,56 @@
     </nav>
 
     <ul class="sidenav" id="mobile-menu">
-        <li class="waves-effect waves-block"><a href="#">{% trans 'HOME' %}</a></li>
-        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'GOLF' %}</a></li>
-        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'HOTEL' %}</a></li>
-        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'HOT DEALS' %}</a></li>
-        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'PROMOTIONS' %}</a></li>
-        <li class="category-item waves-effect waves-block"><a href="#">{% trans 'BLOG' %}</a></li>
+        <li class="submenu-heading waves-effect waves-block">
+            <a href="#">{% trans 'WITH THAI' %}</a>
+        </li>
+        <li class="submenu-item waves-effect waves-block">
+            <a href="#">{% trans 'GOLF' %}</a>
+        </li>
+        <li class="submenu-item waves-effect waves-block">
+            <a href="#">{% trans 'HOTEL' %}</a>
+        </li>
+        <li class="submenu-item waves-effect waves-block">
+            <a href="#">{% trans 'HOT DEALS' %}</a>
+        </li>
+        <li class="submenu-item waves-effect waves-block">
+            <a href="#">{% trans 'PROMOTIONS' %}</a>
+        </li>
+        <li class="submenu-item waves-effect waves-block">
+            <a href="#">{% trans 'BLOG' %}</a>
+        </li>
         {% if user.is_authenticated %}
-            <li class="waves-effect waves-block"><a href="#">{% trans 'PROFILE' %}</a></li>
-            <li class="waves-effect waves-block"><a href="#">{% trans 'SIGN OUT' %}</a></li>
+            <li class="submenu-item waves-effect waves-block">
+                <a href="#">{% trans 'PROFILE' %}</a>
+            </li>
+            <li class="submenu-item waves-effect waves-block">
+                <a href="#">{% trans 'SIGN OUT' %}</a>
+            </li>
         {% else %}
-            <li class="waves-effect waves-block"><a href="#"><i class="fas fa-sign-in-alt fa-fw fa-sm"></i>
-                {% trans 'SIGN IN' %}</a></li>
-            <li class="waves-effect waves-block"><a href="#"><i class="fas fa-user-plus fa-fw fa-sm"></i>
-                {% trans 'SIGN UP' %}</a></li>
+            <li class="submenu-item waves-effect waves-block">
+                <a href="#"><i class="fas fa-sign-in-alt fa-fw"></i>
+                    {% trans 'SIGN IN' %}</a>
+            </li>
+            <li class="submenu-item waves-effect waves-block">
+                <a href="#"><i class="fas fa-user-plus fa-fw"></i>
+                    {% trans 'SIGN UP' %}</a>
+            </li>
         {% endif %}
     </ul>
 
     <ul class="sidenav" id="mobile-cart">
-        <li class="waves-effect waves-block"><a href="#">{% trans 'CART' %}</a></li>
-        <li class="waves-effect waves-block"><a href="#">{% trans 'EMPTY' %}</a></li>
-        <li class="waves-effect waves-block"><a href="#">{% trans 'PAY NOW' %}</a></li>
+        <li class="submenu-heading waves-effect waves-block">
+            <i class="fas fa-luggage-cart fa-fw"></i>
+            {% trans 'CART' %}
+        </li>
+        <li class="submenu-item waves-effect waves-block">
+            <a href="#">{% trans 'EMPTY' %}</a>
+        </li>
+        <li class="submenu-item waves-effect waves-block">
+            <a href="#" class="btn btn-small light-blue accent-2 white-text">
+                {% trans 'PAY NOW' %}
+            </a>
+        </li>
     </ul>
 </header>
 {% block main %}

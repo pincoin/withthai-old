@@ -85,6 +85,37 @@ nav ul a:hover {
     margin: 0 !important;
 }
 
+.submenu-heading {
+    background-color: #ebf2ea;
+    color: #87b842;
+    font-weight: bold;
+    padding: 0 32px;
+}
+
+.submenu-heading a {
+    color: #87b842 !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    height: 38px !important;
+    line-height: 38px !important;
+}
+
+.submenu-item {
+    padding: 0 32px;
+}
+
+.submenu-item a {
+    padding: 0 !important;
+    height: 38px !important;
+    line-height: 38px !important;
+}
+
+.submenu-item a i {
+    height: 38px !important;
+    line-height: 38px !important;
+    margin: 0 12px 0 0 !important;
+}
+
 /* footer */
 main {
     /* sticky footer */
