@@ -110,10 +110,10 @@ nav ul a:hover {
     line-height: 38px !important;
 }
 
-.submenu-item a i {
+.submenu-item-icon {
     height: 38px !important;
     line-height: 38px !important;
-    margin: 0 12px 0 0 !important;
+    margin-right: 8px !important;
 }
 
 /* footer */
