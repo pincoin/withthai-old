@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-31 15:37+0700\n"
+"POT-Creation-Date: 2020-04-02 20:20+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,98 +29,121 @@ msgstr "태국어"
 msgid "English"
 msgstr "영어"
 
-#: conf/templates/conf/base.html:10 conf/templates/conf/base.html:30
-#: conf/templates/conf/base.html:137
+#: conf/templates/conf/base.html:10 conf/templates/conf/base.html:29
+#: conf/templates/conf/base.html:153 conf/templates/conf/base.html:245
 msgid "WITH THAI"
 msgstr "위드타이"
 
-#: conf/templates/conf/base.html:52
+#: conf/templates/conf/base.html:87 conf/templates/conf/base.html:179
 msgid "BOOKING"
 msgstr "나의예약"
 
-#: conf/templates/conf/base.html:58 conf/templates/conf/base.html:126
-msgid "CART"
-msgstr "장바구니"
-
-#: conf/templates/conf/base.html:63
+#: conf/templates/conf/base.html:93 conf/templates/conf/base.html:185
 msgid "HELP"
 msgstr "고객센터"
 
-#: conf/templates/conf/base.html:70
+#: conf/templates/conf/base.html:100 conf/templates/conf/base.html:157
 msgid "MY PAGE"
 msgstr "마이페이지"
 
-#: conf/templates/conf/base.html:76 conf/templates/conf/base.html:117
+#: conf/templates/conf/base.html:106 conf/templates/conf/base.html:160
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
-#: conf/templates/conf/base.html:82 conf/templates/conf/base.html:122
+#: conf/templates/conf/base.html:113 conf/templates/conf/base.html:172
 msgid "SIGN UP"
 msgstr "회원가입"
 
-#: conf/templates/conf/base.html:88 conf/templates/conf/base.html:120
+#: conf/templates/conf/base.html:119 conf/templates/conf/base.html:166
 msgid "SIGN IN"
 msgstr "로그인"
 
-#: conf/templates/conf/base.html:100 conf/templates/conf/base.html:110
+#: conf/templates/conf/base.html:142 conf/templates/conf/base.html:190
+#: conf/templates/conf/base.html:218
 msgid "GOLF"
 msgstr "골프"
 
-#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:111
+#: conf/templates/conf/base.html:143 conf/templates/conf/base.html:219
 msgid "HOTEL"
 msgstr "호텔"
 
-#: conf/templates/conf/base.html:102 conf/templates/conf/base.html:112
-#: conf/templates/conf/home.html:83
+#: conf/templates/conf/base.html:144 conf/templates/conf/home.html:83
 msgid "HOT DEALS"
 msgstr "핫딜"
 
-#: conf/templates/conf/base.html:103 conf/templates/conf/base.html:113
-#: conf/templates/conf/home.html:91
+#: conf/templates/conf/base.html:145 conf/templates/conf/home.html:91
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
-#: conf/templates/conf/base.html:104 conf/templates/conf/base.html:114
-msgid "BLOG"
-msgstr "블로그"
+#: conf/templates/conf/base.html:146 conf/templates/conf/base.html:220
+msgid "MAGAZINE"
+msgstr "매거진"
 
-#: conf/templates/conf/base.html:109
-msgid "HOME"
-msgstr "홈"
-
-#: conf/templates/conf/base.html:116
-msgid "PROFILE"
+#: conf/templates/conf/base.html:193
+msgid "Bangkok"
 msgstr ""
 
-#: conf/templates/conf/base.html:127
+#: conf/templates/conf/base.html:196
+msgid "Pattaya"
+msgstr ""
+
+#: conf/templates/conf/base.html:199
+msgid "Chaing Mai"
+msgstr ""
+
+#: conf/templates/conf/base.html:202
+msgid "Chiang Rai"
+msgstr ""
+
+#: conf/templates/conf/base.html:205
+msgid "Hua Hin"
+msgstr ""
+
+#: conf/templates/conf/base.html:208
+msgid "Khao Yai"
+msgstr ""
+
+#: conf/templates/conf/base.html:211
+msgid "Kanchanaburi"
+msgstr ""
+
+#: conf/templates/conf/base.html:214
+msgid "Phuket"
+msgstr ""
+
+#: conf/templates/conf/base.html:227
+msgid "CART"
+msgstr "장바구니"
+
+#: conf/templates/conf/base.html:230
 msgid "EMPTY"
 msgstr "비어있음"
 
-#: conf/templates/conf/base.html:128
+#: conf/templates/conf/base.html:234
 msgid "PAY NOW"
 msgstr "결제하기"
 
-#: conf/templates/conf/base.html:148
+#: conf/templates/conf/base.html:256
 msgid "Help"
 msgstr "이용안내"
 
-#: conf/templates/conf/base.html:150
+#: conf/templates/conf/base.html:258
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/base.html:151
+#: conf/templates/conf/base.html:259
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/base.html:152
+#: conf/templates/conf/base.html:260
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
-#: conf/templates/conf/base.html:153
+#: conf/templates/conf/base.html:261
 msgid "ABOUT US"
 msgstr "위드타이 소개"
 
-#: conf/templates/conf/base.html:154
+#: conf/templates/conf/base.html:262
 msgid "CONTACT US"
 msgstr "문의하기"
 
