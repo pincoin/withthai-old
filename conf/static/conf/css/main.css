@@ -116,6 +116,10 @@ nav ul a:hover {
     margin-right: 8px !important;
 }
 
+.submenu-scroll {
+    overflow-y: scroll;
+}
+
 /* footer */
 main {
     /* sticky footer */
