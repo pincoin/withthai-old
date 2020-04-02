@@ -120,6 +120,23 @@ nav ul a:hover {
     overflow-y: scroll;
 }
 
+
+.submenu-bottom {
+    background-color: #ebf2ea;;
+}
+
+.submenu-bottom > li {
+
+    display: inline-block;
+}
+
+.submenu-bottom > li a {
+    color: #87b842 !important;
+    font-weight: bold !important;
+    height: 38px !important;
+    line-height: 38px !important;
+}
+
 /* footer */
 main {
     /* sticky footer */
