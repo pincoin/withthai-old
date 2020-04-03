@@ -154,9 +154,11 @@
         </li>
         {% if user.is_authenticated %}
             <li class="submenu-item waves-effect waves-block">
+                <i class="fas fa-user-cog fa-fw"></i>
                 <a href="#">{% trans 'MY PAGE' %}</a>
             </li>
             <li class="submenu-item waves-effect waves-block">
+                <i class="fas fa-sign-out-alt fa-fw"></i>
                 <a href="#">{% trans 'SIGN OUT' %}</a>
             </li>
         {% else %}
