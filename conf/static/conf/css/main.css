@@ -137,6 +137,10 @@ nav ul a:hover {
     line-height: 38px !important;
 }
 
+.submenu-bottom-active {
+    border-top: 2px solid #e88f2e;
+}
+
 /* footer */
 main {
     /* sticky footer */
