@@ -160,7 +160,7 @@ nav ul a:hover {
 }
 
 .submenu-bottom {
-    background-color: #ebf2ea;;
+    background-color: #ebf2ea;
 }
 
 .submenu-bottom > li {
@@ -172,6 +172,10 @@ nav ul a:hover {
     font-weight: bold !important;
     height: 38px !important;
     line-height: 38px !important;
+}
+
+.submenu-bottom > li a:hover {
+    background-color: #ebf2ea;
 }
 
 .submenu-bottom-active {
