@@ -110,23 +110,43 @@ nav ul a:hover {
     line-height: 38px !important;
 }
 
+.submenu-item > a > i {
+    margin-right: 8px !important;
+}
+
 .submenu-item-icon {
     height: 38px !important;
     line-height: 38px !important;
-    margin-right: 8px !important;
+}
+
+.submenu-item-pay-button {
+    background-color: #e88f2e;
+    color: #ffffff;
+}
+
+.submenu-item-pay-button:focus, .submenu-item-pay-button:hover {
+    background-color: #fb9f30 !important;
+    color: #ffffff !important;
+}
+
+.submenu-item-pay-icon {
+    color: #ffffff !important;
+    height: 38px !important;
+    line-height: 38px !important;
+    float: inherit !important;
+    margin: 0 !important;
+    font-size: inherit !important;
 }
 
 .submenu-scroll {
     overflow-y: scroll;
 }
 
-
 .submenu-bottom {
     background-color: #ebf2ea;;
 }
 
 .submenu-bottom > li {
-
     display: inline-block;
 }
 
