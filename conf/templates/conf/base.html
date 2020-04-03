@@ -154,12 +154,16 @@
         </li>
         {% if user.is_authenticated %}
             <li class="submenu-item">
-                <i class="fas fa-user-cog fa-fw submenu-item-icon"></i>
-                <a href="#">{% trans 'MY PAGE' %}</a>
+                <a href="#">
+                    <i class="fas fa-user-cog fa-fw submenu-item-icon"></i>
+                    {% trans 'MY PAGE' %}
+                </a>
             </li>
             <li class="submenu-item">
-                <i class="fas fa-sign-out-alt fa-fw submenu-item-icon"></i>
-                <a href="#">{% trans 'SIGN OUT' %}</a>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt fa-fw submenu-item-icon"></i>
+                    {% trans 'SIGN OUT' %}
+                </a>
             </li>
         {% else %}
             <li class="submenu-item">
