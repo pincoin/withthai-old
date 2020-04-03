@@ -100,6 +100,10 @@ nav ul a:hover {
     line-height: 38px !important;
 }
 
+.submenu-heading a:hover {
+    background-color: #ebf2ea !important;
+}
+
 .submenu-item {
     padding: 0 32px;
 }
@@ -110,8 +114,13 @@ nav ul a:hover {
     line-height: 38px !important;
 }
 
+.submenu-item a:hover {
+    font-weight: bold;
+    background-color: #ffffff !important;
+}
+
 .submenu-item > a > i {
-    margin-right: 8px !important;
+    margin-right: 4px !important;
 }
 
 .submenu-item-icon {
@@ -119,13 +128,21 @@ nav ul a:hover {
     line-height: 38px !important;
 }
 
-.submenu-item-pay-button {
-    background-color: #e88f2e;
-    color: #ffffff;
+.submenu-cart-line {
+    margin: 0 32px !important;
+    border-top: 1px solid #03353e;
 }
 
-.submenu-item-pay-button:focus, .submenu-item-pay-button:hover {
-    background-color: #fb9f30 !important;
+.submenu-item-pay-button {
+    background-color: #e88f2e !important;
+    color: #ffffff !important;
+    padding: 8px !important;
+    display: inline !important;
+    margin: 0 !important;
+}
+
+.submenu-item-pay-button:hover {
+    background-color: #ef6c00 !important;
     color: #ffffff !important;
 }
 

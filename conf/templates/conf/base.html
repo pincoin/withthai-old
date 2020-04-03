@@ -153,35 +153,35 @@
             <a href="#">{% trans 'WITH THAI' %}</a>
         </li>
         {% if user.is_authenticated %}
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <i class="fas fa-user-cog fa-fw submenu-item-icon"></i>
                 <a href="#">{% trans 'MY PAGE' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <i class="fas fa-sign-out-alt fa-fw submenu-item-icon"></i>
                 <a href="#">{% trans 'SIGN OUT' %}</a>
             </li>
         {% else %}
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">
                     <i class="fas fa-sign-in-alt fa-fw submenu-item-icon"></i>
                     {% trans 'SIGN IN' %}
                 </a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">
                     <i class="fas fa-user-plus fa-fw submenu-item-icon"></i>
                     {% trans 'SIGN UP' %}
                 </a>
             </li>
         {% endif %}
-        <li class="submenu-item waves-effect waves-block">
+        <li class="submenu-item">
             <a href="#">
                 <i class="fas fa-passport fa-fw submenu-item-icon"></i>
                 {% trans 'BOOKING' %}
             </a>
         </li>
-        <li class="submenu-item waves-effect waves-block">
+        <li class="submenu-item">
             <a href="#">
                 <i class="fas fa-info-circle fa-fw submenu-item-icon"></i>
                 {% trans 'HELP' %}
@@ -192,28 +192,28 @@
             <li class="submenu-heading">
                 <a href="#">{% trans 'GOLF' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Bangkok' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Pattaya' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Chaing Mai' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Chiang Rai' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Hua Hin' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Khao Yai' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Kanchanaburi' %}</a>
             </li>
-            <li class="submenu-item waves-effect waves-block">
+            <li class="submenu-item">
                 <a href="#">{% trans 'Phuket' %}</a>
             </li>
         </ul>
@@ -236,11 +236,11 @@
             <i class="fas fa-luggage-cart fa-fw submenu-item-icon"></i>
             {% trans 'CART' %}
         </li>
-        <li class="submenu-item waves-effect waves-block">
+        <li class="submenu-item">
             <a href="#">{% trans 'EMPTY' %}</a>
         </li>
-        <li class="submenu-item">
-            <a href="#" class="btn btn-small submenu-item-pay-button">
+        <li class="submenu-cart-line">
+            <a href="#" class="btn btn-small z-depth-0 submenu-item-pay-button">
                 <i class="far fa-credit-card fa-fw submenu-item-pay-icon"></i>
                 {% trans 'PAY NOW' %}
             </a>
