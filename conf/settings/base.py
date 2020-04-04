@@ -115,5 +115,11 @@ SOCIALACCOUNT_PROVIDERS = {
     'google': {},
     'kakao': {},
     'naver': {},
-    'line': {},
+    'line': {
+        'SCOPE': [
+            'profile',
+            'openid',
+            'email',
+        ],
+    },
 }
