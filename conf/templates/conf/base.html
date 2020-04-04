@@ -109,20 +109,20 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{% url 'account_logout' %}">
                                     <i class="fas fa-sign-out-alt fa-fw"></i>
                                     {% trans 'SIGN OUT' %}
                                 </a>
                             </li>
                         {% else %}
                             <li>
-                                <a href="">
+                                <a href="{% url 'account_signup' %}">
                                     <i class="fas fa-user-plus fa-fw"></i>
                                     {% trans 'SIGN UP' %}
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{% url 'account_login' %}">
                                     <i class="fas fa-sign-in-alt fa-fw"></i>
                                     {% trans 'SIGN IN' %}
                                 </a>
@@ -156,20 +156,20 @@
                 </a>
             </li>
             <li class="submenu-item">
-                <a href="#">
+                <a href="{% url 'account_logout' %}">
                     <i class="fas fa-sign-out-alt fa-fw submenu-item-icon"></i>
                     {% trans 'SIGN OUT' %}
                 </a>
             </li>
         {% else %}
             <li class="submenu-item">
-                <a href="#">
+                <a href="{% url 'account_login' %}">
                     <i class="fas fa-sign-in-alt fa-fw submenu-item-icon"></i>
                     {% trans 'SIGN IN' %}
                 </a>
             </li>
             <li class="submenu-item">
-                <a href="#">
+                <a href="{% url 'account_signup' %}">
                     <i class="fas fa-user-plus fa-fw submenu-item-icon"></i>
                     {% trans 'SIGN UP' %}
                 </a>
