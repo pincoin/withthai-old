@@ -34,6 +34,12 @@ INSTALLED_APPS += [
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.kakao',
     'allauth.socialaccount.providers.naver',
+    'member.socialaccount.providers.line',
+]
+
+INSTALLED_APPS += [
+    'member',
+    'blog',
 ]
 
 MIDDLEWARE = [
