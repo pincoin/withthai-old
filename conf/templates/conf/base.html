@@ -7,7 +7,7 @@
     <meta property="og:image" content="http://www.withthai.com{% static 'conf/images/withthai_og_en.png' %}"/>
     <meta property="og:image:width" content="1024"/>
     <meta property="og:image:height" content="1024"/>
-    <title>{% trans 'WITH THAI' %}</title>
+    <title>{% trans 'WITH THAI' %} : {% block title %}{% endblock %}</title>
     {% block stylesheet %}
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
               integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
@@ -25,7 +25,7 @@
         <nav class="white z-depth-0">
             <div class="nav-wrapper">
                 <div class="container">
-                    <a href="" class="brand-logo">
+                    <a href="{% url 'home' %}" class="brand-logo">
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     </a>
 
@@ -257,7 +257,7 @@
                 <ul>
                     <li>Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110</li>
                     <li>TAX ID: 0105563049000</li>
-                    <li>TAT License: 11/012345</li>
+                    <li>TAT License: 14/012345</li>
                     <li>(+66) 080-023-3602</li>
                     <li>help@withthai.com</li>
                     <li>LINE: @withthai</li>
