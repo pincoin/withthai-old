@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-05 21:29+0700\n"
+"POT-Creation-Date: 2020-04-05 21:31+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,6 +55,10 @@ msgstr "로그아웃"
 #: allauth/templates/account/logout.html:14
 msgid "Are you sure you want to sign out?"
 msgstr "정말로 로그아웃하시겠습니까?"
+
+#: board/apps.py:7
+msgid "Board"
+msgstr "게시판"
 
 #: conf/settings/local.py:8
 msgid "Korean"
