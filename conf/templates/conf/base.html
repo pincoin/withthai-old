@@ -103,24 +103,12 @@
                         </li>
                         {% if user.is_authenticated %}
                             <li>
-                                <a href="">
-                                    <i class="fas fa-user-cog fa-fw"></i>
-                                    {% trans 'MY PAGE' %}
-                                </a>
-                            </li>
-                            <li>
                                 <a href="{% url 'account_logout' %}">
                                     <i class="fas fa-sign-out-alt fa-fw"></i>
                                     {% trans 'SIGN OUT' %}
                                 </a>
                             </li>
                         {% else %}
-                            <li>
-                                <a href="{% url 'account_signup' %}">
-                                    <i class="fas fa-user-plus fa-fw"></i>
-                                    {% trans 'SIGN UP' %}
-                                </a>
-                            </li>
                             <li>
                                 <a href="{% url 'account_login' %}">
                                     <i class="fas fa-sign-in-alt fa-fw"></i>
@@ -150,12 +138,6 @@
         </li>
         {% if user.is_authenticated %}
             <li class="submenu-item">
-                <a href="#">
-                    <i class="fas fa-user-cog fa-fw submenu-item-icon"></i>
-                    {% trans 'MY PAGE' %}
-                </a>
-            </li>
-            <li class="submenu-item">
                 <a href="{% url 'account_logout' %}">
                     <i class="fas fa-sign-out-alt fa-fw submenu-item-icon"></i>
                     {% trans 'SIGN OUT' %}
@@ -166,12 +148,6 @@
                 <a href="{% url 'account_login' %}">
                     <i class="fas fa-sign-in-alt fa-fw submenu-item-icon"></i>
                     {% trans 'SIGN IN' %}
-                </a>
-            </li>
-            <li class="submenu-item">
-                <a href="{% url 'account_signup' %}">
-                    <i class="fas fa-user-plus fa-fw submenu-item-icon"></i>
-                    {% trans 'SIGN UP' %}
                 </a>
             </li>
         {% endif %}

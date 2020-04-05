@@ -278,25 +278,11 @@ main {
 }
 
 .allauth-sns {
-    padding-bottom: 48px;
-    border-bottom: 1px dotted #03353e;
     text-align: center;
 }
 
 .allauth-sns > li {
     display: inline;
-}
-
-.allauth-login-form {
-    margin-bottom: 4px;
-}
-
-.allauth-login-form > .row {
-    margin: 0 0 8px 0;
-}
-
-.allauth-login-form > .row > .col {
-    margin: 0;
 }
 
 /* Blog */
