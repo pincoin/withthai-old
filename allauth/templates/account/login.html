@@ -1,0 +1,72 @@
+{% extends "conf/base.html" %}
+
+{% load i18n static %}
+{% load account socialaccount %}
+
+{% block title %}{% trans "SIGN IN" %}{% endblock %}
+
+{% block main %}
+    <main class="container">
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+                <h5 class="allauth-heading center-align">{% trans 'SIGN IN' %}</h5>
+
+                <ul class="allauth-sns">
+                    <li>
+                        <a title="Naver"
+                           class="socialaccount_provider naver"
+                           href="/accounts/naver/login/?process=login">
+                            <img src="{% static 'conf/images/sns_naver.png' %}" width="64" height="64">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Kakao"
+                           class="socialaccount_provider kakao"
+                           href="/accounts/kakao/login/?process=login">
+                            <img src="{% static 'conf/images/sns_kakao.svg' %}" width="64" height="64" alt="Kakao">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Line"
+                           class="socialaccount_provider line"
+                           href="/accounts/line/login/?process=login">
+                            <img src="{% static 'conf/images/sns_line.svg' %}" width="64" height="64" alt="Line">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Facebook"
+                           class="socialaccount_provider facebook"
+                           href="/accounts/facebook/login/?process=login">
+                            <img src="{% static 'conf/images/sns_facebook.svg' %}" width="64" height="64" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Google"
+                           class="socialaccount_provider google"
+                           href="/accounts/google/login/?process=login">
+                            <img src="{% static 'conf/images/sns_google.svg' %}" width="64" height="64" alt="Google">
+                        </a>
+                    </li>
+                </ul>
+
+                {% providers_media_js %}
+
+                <form class="center-align" method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+                    {% endif %}
+
+                    <button class="btn blue darken-2" type="submit">{% trans "SIGN IN" %}</button>
+                </form>
+                <a class="btn" href="{% url 'account_reset_password' %}">
+                    {% trans "Forgot Password?" %}
+                </a>
+                <a class="btn" href="{{ signup_url }}">
+                    {% trans 'SIGN UP' %}
+                </a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

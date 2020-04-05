@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-02 23:20+0700\n"
+"POT-Creation-Date: 2020-04-05 15:45+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,37 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: allauth/templates/account/login.html:6
+#: allauth/templates/account/login.html:12
+#: allauth/templates/account/login.html:31 conf/templates/conf/base.html:127
+#: conf/templates/conf/base.html:168
+msgid "SIGN IN"
+msgstr ""
+
+#: allauth/templates/account/login.html:15
+msgid "Login with SNS"
+msgstr ""
+
+#: allauth/templates/account/login.html:34
+msgid "Forgot Password?"
+msgstr ""
+
+#: allauth/templates/account/login.html:37 conf/templates/conf/base.html:121
+#: conf/templates/conf/base.html:174
+msgid "SIGN UP"
+msgstr ""
+
+#: allauth/templates/account/logout.html:6
+#: allauth/templates/account/logout.html:12
+#: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:114
+#: conf/templates/conf/base.html:161
+msgid "SIGN OUT"
+msgstr ""
+
+#: allauth/templates/account/logout.html:14
+msgid "Are you sure you want to sign out?"
+msgstr ""
 
 #: conf/settings/local.py:8
 msgid "Korean"
@@ -30,120 +61,108 @@ msgid "English"
 msgstr "ภาษาอังกฤษ"
 
 #: conf/templates/conf/base.html:10 conf/templates/conf/base.html:29
-#: conf/templates/conf/base.html:153 conf/templates/conf/base.html:253
+#: conf/templates/conf/base.html:149 conf/templates/conf/base.html:268
 msgid "WITH THAI"
 msgstr "วิธไทย"
 
-#: conf/templates/conf/base.html:87 conf/templates/conf/base.html:179
-msgid "BOOKING"
-msgstr ""
-
-#: conf/templates/conf/base.html:93 conf/templates/conf/base.html:185
-msgid "HELP"
-msgstr ""
-
-#: conf/templates/conf/base.html:100 conf/templates/conf/base.html:157
-msgid "MY PAGE"
-msgstr ""
-
-#: conf/templates/conf/base.html:106 conf/templates/conf/base.html:160
-msgid "SIGN OUT"
-msgstr ""
-
-#: conf/templates/conf/base.html:113 conf/templates/conf/base.html:172
-msgid "SIGN UP"
-msgstr ""
-
-#: conf/templates/conf/base.html:119 conf/templates/conf/base.html:166
-msgid "SIGN IN"
-msgstr ""
-
-#: conf/templates/conf/base.html:142 conf/templates/conf/base.html:191
-#: conf/templates/conf/base.html:221
+#: conf/templates/conf/base.html:33 conf/templates/conf/base.html:193
+#: conf/templates/conf/base.html:223
 msgid "GOLF"
 msgstr ""
 
-#: conf/templates/conf/base.html:143 conf/templates/conf/base.html:224
+#: conf/templates/conf/base.html:34 conf/templates/conf/base.html:226
 msgid "HOTEL"
 msgstr ""
 
-#: conf/templates/conf/base.html:144 conf/templates/conf/home.html:83
+#: conf/templates/conf/base.html:35 conf/templates/conf/home.html:83
 msgid "HOT DEALS"
 msgstr ""
 
-#: conf/templates/conf/base.html:145 conf/templates/conf/home.html:91
+#: conf/templates/conf/base.html:36 conf/templates/conf/home.html:91
 msgid "PROMOTIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:146 conf/templates/conf/base.html:227
+#: conf/templates/conf/base.html:37 conf/templates/conf/base.html:229
 msgid "MAGAZINE"
 msgstr ""
 
-#: conf/templates/conf/base.html:194
+#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:181
+msgid "BOOKING"
+msgstr ""
+
+#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:187
+msgid "HELP"
+msgstr ""
+
+#: conf/templates/conf/base.html:108 conf/templates/conf/base.html:155
+msgid "MY PAGE"
+msgstr ""
+
+#: conf/templates/conf/base.html:196
 msgid "Bangkok"
 msgstr ""
 
-#: conf/templates/conf/base.html:197
+#: conf/templates/conf/base.html:199
 msgid "Pattaya"
 msgstr ""
 
-#: conf/templates/conf/base.html:200
+#: conf/templates/conf/base.html:202
 msgid "Chaing Mai"
 msgstr ""
 
-#: conf/templates/conf/base.html:203
+#: conf/templates/conf/base.html:205
 msgid "Chiang Rai"
 msgstr ""
 
-#: conf/templates/conf/base.html:206
+#: conf/templates/conf/base.html:208
 msgid "Hua Hin"
 msgstr ""
 
-#: conf/templates/conf/base.html:209
+#: conf/templates/conf/base.html:211
 msgid "Khao Yai"
 msgstr ""
 
-#: conf/templates/conf/base.html:212
+#: conf/templates/conf/base.html:214
 msgid "Kanchanaburi"
 msgstr ""
 
-#: conf/templates/conf/base.html:215
+#: conf/templates/conf/base.html:217
 msgid "Phuket"
 msgstr ""
 
-#: conf/templates/conf/base.html:235
+#: conf/templates/conf/base.html:237
 msgid "CART"
 msgstr ""
 
-#: conf/templates/conf/base.html:238
+#: conf/templates/conf/base.html:240
 msgid "EMPTY"
 msgstr ""
 
-#: conf/templates/conf/base.html:242
+#: conf/templates/conf/base.html:245
 msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/base.html:264
+#: conf/templates/conf/base.html:279
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:266
+#: conf/templates/conf/base.html:281
 msgid "FAQ/How-to"
 msgstr ""
 
-#: conf/templates/conf/base.html:267
+#: conf/templates/conf/base.html:282
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:268
+#: conf/templates/conf/base.html:283
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:269
+#: conf/templates/conf/base.html:284
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:270
+#: conf/templates/conf/base.html:285
 msgid "CONTACT US"
 msgstr ""
 
