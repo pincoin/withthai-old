@@ -11,61 +11,106 @@
             <div class="col s12 m6 offset-m3">
                 <h5 class="allauth-heading center-align">{% trans 'SIGN IN' %}</h5>
 
+
                 <ul class="allauth-sns">
                     <li>
                         <a title="Naver"
                            class="socialaccount_provider naver"
                            href="/accounts/naver/login/?process=login">
-                            <img src="{% static 'conf/images/sns_naver.png' %}" width="64" height="64">
+                            <img src="{% static 'conf/images/sns_naver.svg' %}" width="64" height="64">
                         </a>
                     </li>
                     <li>
                         <a title="Kakao"
                            class="socialaccount_provider kakao"
                            href="/accounts/kakao/login/?process=login">
-                            <img src="{% static 'conf/images/sns_kakao.svg' %}" width="64" height="64" alt="Kakao">
+                            <img src="{% static 'conf/images/sns_kakao.svg' %}" width="64" height="64"
+                                 alt="Kakao">
                         </a>
                     </li>
                     <li>
                         <a title="Line"
                            class="socialaccount_provider line"
                            href="/accounts/line/login/?process=login">
-                            <img src="{% static 'conf/images/sns_line.svg' %}" width="64" height="64" alt="Line">
+                            <img src="{% static 'conf/images/sns_line.svg' %}" width="64" height="64"
+                                 alt="Line">
                         </a>
                     </li>
                     <li>
                         <a title="Facebook"
                            class="socialaccount_provider facebook"
                            href="/accounts/facebook/login/?process=login">
-                            <img src="{% static 'conf/images/sns_facebook.svg' %}" width="64" height="64" alt="Facebook">
+                            <img src="{% static 'conf/images/sns_facebook.svg' %}" width="64" height="64"
+                                 alt="Facebook">
                         </a>
                     </li>
                     <li>
                         <a title="Google"
                            class="socialaccount_provider google"
                            href="/accounts/google/login/?process=login">
-                            <img src="{% static 'conf/images/sns_google.svg' %}" width="64" height="64" alt="Google">
+                            <img src="{% static 'conf/images/sns_google.svg' %}" width="64" height="64"
+                                 alt="Google">
                         </a>
                     </li>
                 </ul>
 
                 {% providers_media_js %}
 
-                <form class="center-align" method="POST" action="{% url 'account_login' %}">
+                <form class="col s12 allauth-login-form" method="POST"
+                      action="{% url 'account_login' %}">
                     {% csrf_token %}
-                    {{ form.as_p }}
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="email" name="{{ form.login.name }}"
+                                   class="validate" required id="{{ form.login.id_for_label }}">
+                            <label for="{{ form.login.id_for_label }}">{{ form.login.label }}</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="password" name="{{ form.password.name }}"
+                                   class="validate" required id="{{ form.password.id_for_label }}">
+                            <label for="{{ form.password.id_for_label }}">{{ form.password.label }}</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <p>
+                                <label>
+                                    <input type="checkbox" name="{{ form.remember.name }}"
+                                           id="{{ form.remember.id_for_label }}"/>
+                                    <span>{{ form.remember.label }}</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+
                     {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                     {% endif %}
 
-                    <button class="btn blue darken-2" type="submit">{% trans "SIGN IN" %}</button>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <button class="btn blue darken-2" type="submit" style="width:100%">
+                                {% trans "SIGN IN" %}
+                            </button>
+                        </div>
+                    </div>
                 </form>
-                <a class="btn" href="{% url 'account_reset_password' %}">
-                    {% trans "Forgot Password?" %}
-                </a>
-                <a class="btn" href="{{ signup_url }}">
-                    {% trans 'SIGN UP' %}
-                </a>
+
+                <div class="row">
+                    <div class="col s12 m6">
+                        <a class="btn" href="{% url 'account_reset_password' %}">
+                            {% trans "Forgot Password?" %}
+                        </a>
+                    </div>
+                    <div class="col s12 m6">
+                        <a class="btn" href="{{ signup_url }}">
+                            {% trans 'SIGN UP' %}
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

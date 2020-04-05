@@ -287,6 +287,18 @@ main {
     display: inline;
 }
 
+.allauth-login-form {
+    margin-bottom: 16px;
+}
+
+.allauth-login-form > .row {
+    margin: 0;
+}
+
+.allauth-login-form > .row > .col {
+    margin: 0;
+}
+
 /* Blog */
 .blog-sidebar-card-title {
     font-weight: bold;
