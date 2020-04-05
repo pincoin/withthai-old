@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-05 15:45+0700\n"
+"POT-Creation-Date: 2020-04-05 19:26+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,20 +19,28 @@ msgstr ""
 
 #: allauth/templates/account/login.html:6
 #: allauth/templates/account/login.html:12
-#: allauth/templates/account/login.html:31 conf/templates/conf/base.html:127
+#: allauth/templates/account/login.html:98 conf/templates/conf/base.html:127
 #: conf/templates/conf/base.html:168
 msgid "SIGN IN"
 msgstr "로그인"
 
-#: allauth/templates/account/login.html:15
+#: allauth/templates/account/login.html:14
 msgid "Login with SNS"
 msgstr "SNS 간편 로그인"
 
-#: allauth/templates/account/login.html:34
+#: allauth/templates/account/login.html:63
+msgid "Login with WITH THAI account"
+msgstr "위드타이 계정으로 로그인"
+
+#: allauth/templates/account/login.html:85
+msgid "Remember me"
+msgstr "로그인 상태 유지"
+
+#: allauth/templates/account/login.html:110
 msgid "Forgot Password?"
 msgstr "비밀번호 찾기"
 
-#: allauth/templates/account/login.html:37 conf/templates/conf/base.html:121
+#: allauth/templates/account/login.html:117 conf/templates/conf/base.html:121
 #: conf/templates/conf/base.html:174
 msgid "SIGN UP"
 msgstr "회원가입"

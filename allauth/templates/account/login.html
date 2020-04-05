@@ -60,6 +60,7 @@
                 <form class="col s12 allauth-login-form" method="POST"
                       action="{% url 'account_login' %}">
                     {% csrf_token %}
+                    <p class="center-align">{% trans 'Login with WITH THAI account' %}</p>
 
                     <div class="row">
                         <div class="input-field col s12">
@@ -81,7 +82,7 @@
                                 <label>
                                     <input type="checkbox" name="{{ form.remember.name }}"
                                            id="{{ form.remember.id_for_label }}"/>
-                                    <span>{{ form.remember.label }}</span>
+                                    <span>{% trans 'Remember me' %}</span>
                                 </label>
                             </p>
                         </div>
@@ -93,7 +94,7 @@
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <button class="btn green lighten-2" type="submit" style="width:100%">
+                            <button class="btn light-green lighten-1" type="submit" style="width:100%">
                                 {% trans "SIGN IN" %}
                             </button>
                         </div>
@@ -103,12 +104,16 @@
 
                     <div class="row">
                         <div class="col s12 m6">
-                            <a class="btn btn-block cyan darken-4" href="{% url 'account_reset_password' %}">
+                            <a class="btn btn-block cyan darken-4"
+                               style="margin-top:12px;"
+                               href="{% url 'account_reset_password' %}">
                                 {% trans "Forgot Password?" %}
                             </a>
                         </div>
                         <div class="col s12 m6">
-                            <a class="btn btn-block orange lighten-1" href="{{ signup_url }}">
+                            <a class="btn btn-block orange lighten-1"
+                               style="margin-top:12px;"
+                               href="{{ signup_url }}">
                                 {% trans 'SIGN UP' %}
                             </a>
                         </div>
