@@ -242,6 +242,32 @@ main {
     white-space: nowrap;
 }
 
+.messages {
+    margin: 15px 12px 0 12px;
+}
+
+.messages > li {
+    padding: 8px 8px 8px 12px;
+    margin: 4px 0;
+}
+
+.messages .success {
+    background-color: #e3f2fd;
+}
+
+.messages .warning {
+    background-color: #ffecb3;
+}
+
+.messages .info {
+    background-color: #f9fbe7;
+}
+
+.messages .error {
+    color: #ffffff;
+    background-color: #ff8a80;
+}
+
 /* Allauth */
 .allauth-heading {
     color: #e88f2e;
