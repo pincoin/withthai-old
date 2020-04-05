@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-05 19:26+0700\n"
+"POT-Creation-Date: 2020-04-05 21:29+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -189,3 +189,11 @@ msgstr "최근 댓글"
 #: conf/templates/conf/home.html:115
 msgid "POPULAR TAGS"
 msgstr "인기 태그"
+
+#: magazine/apps.py:7
+msgid "Magazine"
+msgstr "매거진"
+
+#: member/apps.py:6
+msgid "Member"
+msgstr "회원"
