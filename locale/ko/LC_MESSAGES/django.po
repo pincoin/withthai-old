@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-06 10:53+0700\n"
+"POT-Creation-Date: 2020-04-06 18:59+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -290,6 +290,10 @@ msgstr "최근 댓글"
 #: conf/templates/conf/home.html:115
 msgid "POPULAR TAGS"
 msgstr "인기 태그"
+
+#: golf/apps.py:7
+msgid "Golf"
+msgstr "골프"
 
 #: magazine/apps.py:7
 msgid "Magazine"
