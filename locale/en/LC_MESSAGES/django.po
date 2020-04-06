@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-05 21:31+0700\n"
+"POT-Creation-Date: 2020-04-06 10:53+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: allauth/templates/account/login.html:6
-#: allauth/templates/account/login.html:12
-#: allauth/templates/account/login.html:98 conf/templates/conf/base.html:127
-#: conf/templates/conf/base.html:168
+#: allauth/templates/account/login.html:12 conf/templates/conf/base.html:121
+#: conf/templates/conf/base.html:156
 msgid "SIGN IN"
 msgstr "LOGIN"
-
-#: allauth/templates/account/login.html:14
-msgid "Login with SNS"
-msgstr ""
-
-#: allauth/templates/account/login.html:63
-msgid "Login with WITH THAI account"
-msgstr ""
-
-#: allauth/templates/account/login.html:85
-msgid "Remember me"
-msgstr ""
-
-#: allauth/templates/account/login.html:110
-msgid "Forgot Password?"
-msgstr ""
-
-#: allauth/templates/account/login.html:117 conf/templates/conf/base.html:121
-#: conf/templates/conf/base.html:174
-msgid "SIGN UP"
-msgstr "REGISTER"
 
 #: allauth/templates/account/logout.html:6
 #: allauth/templates/account/logout.html:12
 #: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:114
-#: conf/templates/conf/base.html:161
+#: conf/templates/conf/base.html:149
 msgid "SIGN OUT"
 msgstr "LOGOUT"
 
@@ -58,6 +36,125 @@ msgstr ""
 
 #: board/apps.py:7
 msgid "Board"
+msgstr ""
+
+#: conf/models.py:14 conf/models.py:57
+msgid "Title"
+msgstr ""
+
+#: conf/models.py:16
+msgid "The page title as you'd like it to be seen by the public"
+msgstr ""
+
+#: conf/models.py:20
+msgid "Description"
+msgstr ""
+
+#: conf/models.py:22
+msgid ""
+"A short description not longer than 155 characters. Don't use double quotes."
+msgstr ""
+
+#: conf/models.py:27
+msgid "Keywords"
+msgstr ""
+
+#: conf/models.py:29
+msgid "A comma-separated list of keywords. Don't use double quotes."
+msgstr ""
+
+#: conf/models.py:35 conf/models.py:133
+msgid "Owner"
+msgstr ""
+
+#: conf/models.py:49 conf/models.py:124
+msgid "Parent"
+msgstr ""
+
+#: conf/models.py:62
+msgid "Slug"
+msgstr ""
+
+#: conf/models.py:63
+msgid ""
+"A short label containing only letters, numbers, underscores or hyphens for "
+"URL"
+msgstr ""
+
+#: conf/models.py:81
+msgid "File name"
+msgstr ""
+
+#: conf/models.py:86
+msgid "Public identifier"
+msgstr ""
+
+#: conf/models.py:93
+msgid "Uploaded file"
+msgstr ""
+
+#: conf/models.py:98
+msgid "Created time"
+msgstr ""
+
+#: conf/models.py:104
+msgid "Attachment"
+msgstr ""
+
+#: conf/models.py:105
+msgid "Attachments"
+msgstr ""
+
+#: conf/models.py:113
+msgid "Approved"
+msgstr ""
+
+#: conf/models.py:114
+msgid "Flagged"
+msgstr ""
+
+#: conf/models.py:115
+msgid "Deleted"
+msgstr ""
+
+#: conf/models.py:119
+msgid "Content"
+msgstr ""
+
+#: conf/models.py:141
+msgid "Username"
+msgstr ""
+
+#: conf/models.py:148
+msgid "Email address"
+msgstr ""
+
+#: conf/models.py:154
+msgid "Website URL"
+msgstr ""
+
+#: conf/models.py:160
+msgid "IP address"
+msgstr ""
+
+#: conf/models.py:164
+msgid "Status"
+msgstr ""
+
+#: conf/models.py:182
+msgid "Site ID"
+msgstr ""
+
+#: conf/models.py:186
+msgid "Google Analytics UA-ID"
+msgstr ""
+
+#: conf/models.py:193
+msgid "Google Service"
+msgstr ""
+
+#: conf/models.py:194
+msgid "Google Services"
 msgstr ""
 
 #: conf/settings/local.py:8
@@ -73,16 +170,16 @@ msgid "English"
 msgstr "English"
 
 #: conf/templates/conf/base.html:10 conf/templates/conf/base.html:29
-#: conf/templates/conf/base.html:149 conf/templates/conf/base.html:268
+#: conf/templates/conf/base.html:143 conf/templates/conf/base.html:256
 msgid "WITH THAI"
 msgstr "WITH THAI"
 
-#: conf/templates/conf/base.html:33 conf/templates/conf/base.html:193
-#: conf/templates/conf/base.html:223
+#: conf/templates/conf/base.html:33 conf/templates/conf/base.html:181
+#: conf/templates/conf/base.html:211
 msgid "GOLF"
 msgstr "GOLF"
 
-#: conf/templates/conf/base.html:34 conf/templates/conf/base.html:226
+#: conf/templates/conf/base.html:34 conf/templates/conf/base.html:214
 msgid "HOTEL"
 msgstr "HOTEL"
 
@@ -94,87 +191,87 @@ msgstr "HOT DEALS"
 msgid "PROMOTIONS"
 msgstr "PROMOTIONS"
 
-#: conf/templates/conf/base.html:37 conf/templates/conf/base.html:229
+#: conf/templates/conf/base.html:37 conf/templates/conf/base.html:217
 msgid "MAGAZINE"
 msgstr ""
 
-#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:181
+#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:169
 msgid "BOOKING"
 msgstr "BOOKING"
 
-#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:187
+#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:175
 msgid "HELP"
 msgstr "HELP"
 
-#: conf/templates/conf/base.html:108 conf/templates/conf/base.html:155
+#: conf/templates/conf/base.html:107 conf/templates/conf/base.html:163
 msgid "MY PAGE"
 msgstr "MY PAGE"
 
-#: conf/templates/conf/base.html:196
+#: conf/templates/conf/base.html:184
 msgid "Bangkok"
 msgstr ""
 
-#: conf/templates/conf/base.html:199
+#: conf/templates/conf/base.html:187
 msgid "Pattaya"
 msgstr ""
 
-#: conf/templates/conf/base.html:202
+#: conf/templates/conf/base.html:190
 msgid "Chaing Mai"
 msgstr ""
 
-#: conf/templates/conf/base.html:205
+#: conf/templates/conf/base.html:193
 msgid "Chiang Rai"
 msgstr ""
 
-#: conf/templates/conf/base.html:208
+#: conf/templates/conf/base.html:196
 msgid "Hua Hin"
 msgstr ""
 
-#: conf/templates/conf/base.html:211
+#: conf/templates/conf/base.html:199
 msgid "Khao Yai"
 msgstr ""
 
-#: conf/templates/conf/base.html:214
+#: conf/templates/conf/base.html:202
 msgid "Kanchanaburi"
 msgstr ""
 
-#: conf/templates/conf/base.html:217
+#: conf/templates/conf/base.html:205
 msgid "Phuket"
 msgstr ""
 
-#: conf/templates/conf/base.html:237
+#: conf/templates/conf/base.html:225
 msgid "CART"
 msgstr "CART"
 
-#: conf/templates/conf/base.html:240
+#: conf/templates/conf/base.html:228
 msgid "EMPTY"
 msgstr ""
 
-#: conf/templates/conf/base.html:245
+#: conf/templates/conf/base.html:233
 msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/base.html:279
+#: conf/templates/conf/base.html:267 help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:281
+#: conf/templates/conf/base.html:269
 msgid "FAQ/How-to"
 msgstr "FAQ/How-to"
 
-#: conf/templates/conf/base.html:282
+#: conf/templates/conf/base.html:270
 msgid "TERMS &amp; CONDITIONS"
 msgstr "TERMS &amp; CONDITIONS"
 
-#: conf/templates/conf/base.html:283
+#: conf/templates/conf/base.html:271
 msgid "PRIVACY POLICY"
 msgstr "PRIVACY POLICY"
 
-#: conf/templates/conf/base.html:284
+#: conf/templates/conf/base.html:272
 msgid "ABOUT US"
 msgstr "ABOUT US"
 
-#: conf/templates/conf/base.html:285
+#: conf/templates/conf/base.html:273
 msgid "CONTACT US"
 msgstr "CONTACT US"
 
@@ -201,6 +298,3 @@ msgstr ""
 #: member/apps.py:6
 msgid "Member"
 msgstr ""
-
-#~ msgid "BLOG"
-#~ msgstr "BLOG"

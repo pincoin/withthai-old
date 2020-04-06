@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-05 21:31+0700\n"
+"POT-Creation-Date: 2020-04-06 10:53+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,37 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: allauth/templates/account/login.html:6
-#: allauth/templates/account/login.html:12
-#: allauth/templates/account/login.html:98 conf/templates/conf/base.html:127
-#: conf/templates/conf/base.html:168
+#: allauth/templates/account/login.html:12 conf/templates/conf/base.html:121
+#: conf/templates/conf/base.html:156
 msgid "SIGN IN"
 msgstr "로그인"
-
-#: allauth/templates/account/login.html:14
-msgid "Login with SNS"
-msgstr "SNS 간편 로그인"
-
-#: allauth/templates/account/login.html:63
-msgid "Login with WITH THAI account"
-msgstr "위드타이 계정으로 로그인"
-
-#: allauth/templates/account/login.html:85
-msgid "Remember me"
-msgstr "로그인 상태 유지"
-
-#: allauth/templates/account/login.html:110
-msgid "Forgot Password?"
-msgstr "비밀번호 찾기"
-
-#: allauth/templates/account/login.html:117 conf/templates/conf/base.html:121
-#: conf/templates/conf/base.html:174
-msgid "SIGN UP"
-msgstr "회원가입"
 
 #: allauth/templates/account/logout.html:6
 #: allauth/templates/account/logout.html:12
 #: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:114
-#: conf/templates/conf/base.html:161
+#: conf/templates/conf/base.html:149
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
@@ -59,6 +37,125 @@ msgstr "정말로 로그아웃하시겠습니까?"
 #: board/apps.py:7
 msgid "Board"
 msgstr "게시판"
+
+#: conf/models.py:14 conf/models.py:57
+msgid "Title"
+msgstr "제목"
+
+#: conf/models.py:16
+msgid "The page title as you'd like it to be seen by the public"
+msgstr "공개 제목"
+
+#: conf/models.py:20
+msgid "Description"
+msgstr "설명"
+
+#: conf/models.py:22
+msgid ""
+"A short description not longer than 155 characters. Don't use double quotes."
+msgstr "155자 이내 짧은 설명, 큰따옴표 사용 불가"
+
+#: conf/models.py:27
+msgid "Keywords"
+msgstr "키워드"
+
+#: conf/models.py:29
+msgid "A comma-separated list of keywords. Don't use double quotes."
+msgstr "콤마로 띄어쓰기, 큰따옴표 사용 불가"
+
+#: conf/models.py:35 conf/models.py:133
+msgid "Owner"
+msgstr "소유자"
+
+#: conf/models.py:49 conf/models.py:124
+msgid "Parent"
+msgstr "부모"
+
+#: conf/models.py:62
+msgid "Slug"
+msgstr "슬러그"
+
+#: conf/models.py:63
+msgid ""
+"A short label containing only letters, numbers, underscores or hyphens for "
+"URL"
+msgstr "문자, 숫자, 밑줄, 하이프만 사용 가능한 짧은 표시 URL"
+
+#: conf/models.py:81
+msgid "File name"
+msgstr "파일이름"
+
+#: conf/models.py:86
+msgid "Public identifier"
+msgstr "공개식별자"
+
+#: conf/models.py:93
+msgid "Uploaded file"
+msgstr "업로드파일"
+
+#: conf/models.py:98
+msgid "Created time"
+msgstr "생성시각"
+
+#: conf/models.py:104
+msgid "Attachment"
+msgstr "첨부파일"
+
+#: conf/models.py:105
+msgid "Attachments"
+msgstr "첨부파일"
+
+#: conf/models.py:113
+msgid "Approved"
+msgstr "승인됨"
+
+#: conf/models.py:114
+msgid "Flagged"
+msgstr "제재됨"
+
+#: conf/models.py:115
+msgid "Deleted"
+msgstr "삭제됨"
+
+#: conf/models.py:119
+msgid "Content"
+msgstr "내용"
+
+#: conf/models.py:141
+msgid "Username"
+msgstr "아이디"
+
+#: conf/models.py:148
+msgid "Email address"
+msgstr "이메일주소"
+
+#: conf/models.py:154
+msgid "Website URL"
+msgstr "웹사이트주소"
+
+#: conf/models.py:160
+msgid "IP address"
+msgstr "IP 주소"
+
+#: conf/models.py:164
+msgid "Status"
+msgstr "상태"
+
+#: conf/models.py:182
+msgid "Site ID"
+msgstr "사이트 아이디"
+
+#: conf/models.py:186
+msgid "Google Analytics UA-ID"
+msgstr "구글 애널리틱스 UA-ID"
+
+#: conf/models.py:193
+msgid "Google Service"
+msgstr "구글 서비스"
+
+#: conf/models.py:194
+msgid "Google Services"
+msgstr "구글 서비스"
 
 #: conf/settings/local.py:8
 msgid "Korean"
@@ -73,16 +170,16 @@ msgid "English"
 msgstr "영어"
 
 #: conf/templates/conf/base.html:10 conf/templates/conf/base.html:29
-#: conf/templates/conf/base.html:149 conf/templates/conf/base.html:268
+#: conf/templates/conf/base.html:143 conf/templates/conf/base.html:256
 msgid "WITH THAI"
 msgstr "위드타이"
 
-#: conf/templates/conf/base.html:33 conf/templates/conf/base.html:193
-#: conf/templates/conf/base.html:223
+#: conf/templates/conf/base.html:33 conf/templates/conf/base.html:181
+#: conf/templates/conf/base.html:211
 msgid "GOLF"
 msgstr "골프"
 
-#: conf/templates/conf/base.html:34 conf/templates/conf/base.html:226
+#: conf/templates/conf/base.html:34 conf/templates/conf/base.html:214
 msgid "HOTEL"
 msgstr "호텔"
 
@@ -94,87 +191,87 @@ msgstr "핫딜"
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
-#: conf/templates/conf/base.html:37 conf/templates/conf/base.html:229
+#: conf/templates/conf/base.html:37 conf/templates/conf/base.html:217
 msgid "MAGAZINE"
 msgstr "매거진"
 
-#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:181
+#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:169
 msgid "BOOKING"
 msgstr "나의예약"
 
-#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:187
+#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:175
 msgid "HELP"
 msgstr "고객센터"
 
-#: conf/templates/conf/base.html:108 conf/templates/conf/base.html:155
+#: conf/templates/conf/base.html:107 conf/templates/conf/base.html:163
 msgid "MY PAGE"
 msgstr "마이페이지"
 
-#: conf/templates/conf/base.html:196
+#: conf/templates/conf/base.html:184
 msgid "Bangkok"
 msgstr "방콕"
 
-#: conf/templates/conf/base.html:199
+#: conf/templates/conf/base.html:187
 msgid "Pattaya"
 msgstr "파타야"
 
-#: conf/templates/conf/base.html:202
+#: conf/templates/conf/base.html:190
 msgid "Chaing Mai"
 msgstr "치앙마이"
 
-#: conf/templates/conf/base.html:205
+#: conf/templates/conf/base.html:193
 msgid "Chiang Rai"
 msgstr "치앙라이"
 
-#: conf/templates/conf/base.html:208
+#: conf/templates/conf/base.html:196
 msgid "Hua Hin"
 msgstr "후어힌"
 
-#: conf/templates/conf/base.html:211
+#: conf/templates/conf/base.html:199
 msgid "Khao Yai"
 msgstr "카오야이"
 
-#: conf/templates/conf/base.html:214
+#: conf/templates/conf/base.html:202
 msgid "Kanchanaburi"
 msgstr "깐짜나부리"
 
-#: conf/templates/conf/base.html:217
+#: conf/templates/conf/base.html:205
 msgid "Phuket"
 msgstr "푸껫"
 
-#: conf/templates/conf/base.html:237
+#: conf/templates/conf/base.html:225
 msgid "CART"
 msgstr "장바구니"
 
-#: conf/templates/conf/base.html:240
+#: conf/templates/conf/base.html:228
 msgid "EMPTY"
 msgstr "비어있음"
 
-#: conf/templates/conf/base.html:245
+#: conf/templates/conf/base.html:233
 msgid "PAY NOW"
 msgstr "결제하기"
 
-#: conf/templates/conf/base.html:279
+#: conf/templates/conf/base.html:267 help/apps.py:7
 msgid "Help"
 msgstr "이용안내"
 
-#: conf/templates/conf/base.html:281
+#: conf/templates/conf/base.html:269
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/base.html:282
+#: conf/templates/conf/base.html:270
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/base.html:283
+#: conf/templates/conf/base.html:271
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
-#: conf/templates/conf/base.html:284
+#: conf/templates/conf/base.html:272
 msgid "ABOUT US"
 msgstr "위드타이 소개"
 
-#: conf/templates/conf/base.html:285
+#: conf/templates/conf/base.html:273
 msgid "CONTACT US"
 msgstr "문의하기"
 
