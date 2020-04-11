@@ -26,9 +26,54 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
-    #'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # 'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
 # Media files (Uploaded files)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# Email reports
+ADMINS = [('devops', 'dev@withthai.com'), ]
+
+# Logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        }
+    },
+    'loggers': {
+        'django.db.backends': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'conf': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'golf': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'help': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'magazine': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'board': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+        'member': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
+    },
+}
