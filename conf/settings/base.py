@@ -10,7 +10,16 @@ SECRET_KEY = secret['SECRET_KEY']
 ALLOWED_HOSTS = secret['ALLOWED_HOSTS']
 DATABASES = secret['DATABASES']
 DEBUG = secret['DEBUG']
+
 CELERY_BROKER_URL = secret['CELERY_BROKER_URL']
+
+EMAIL_HOST = secret['EMAIL_HOST']
+EMAIL_HOST_USER = secret['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = secret['EMAIL_HOST_PASSWORD']
+EMAIL_PORT = secret['EMAIL_PORT']
+EMAIL_USE_TLS = secret['EMAIL_USE_TLS']
+EMAIL_NO_REPLY = secret['EMAIL_NO_REPLY']
+EMAIL_CUSTOMER_SERVICE = secret['EMAIL_CUSTOMER_SERVICE']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
