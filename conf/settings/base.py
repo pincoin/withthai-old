@@ -10,6 +10,7 @@ SECRET_KEY = secret['SECRET_KEY']
 ALLOWED_HOSTS = secret['ALLOWED_HOSTS']
 DATABASES = secret['DATABASES']
 DEBUG = secret['DEBUG']
+CELERY_BROKER_URL = secret['CELERY_BROKER_URL']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
