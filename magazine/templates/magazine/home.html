@@ -2,6 +2,11 @@
 
 {% load i18n static %}
 
+{% block stylesheet %}
+    {{ block.super }}
+    <link type="text/css" href="{% static 'magazine/css/main.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block main %}
     <main class="container">
         <div class="row">
