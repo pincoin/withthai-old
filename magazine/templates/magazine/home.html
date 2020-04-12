@@ -1,0 +1,133 @@
+{% extends 'conf/base.html' %}
+
+{% load i18n static %}
+
+{% block main %}
+    <main class="container">
+        <div class="row">
+            <div class="col s12 m8 l9">
+                <div class="card">
+                    <div class="blog-content-card-title">
+                        <i class="far fa-folder-open fa-fw"></i> 리뷰-골프장
+                        | <i class="far fa-calendar-alt fa-fw"></i> 2020-03-29 12:35
+                        | <i class="far fa-eye fa-fw"></i> 1,037회
+                        | <i class="far fa-comments fa-fw"></i> 57
+                        <span class="new badge blue lighten-3 black-text" data-badge-caption="">발행됨</span>
+                    </div>
+                    <div class="blog-content-card-content">
+                        <div class="row">
+                            <div class="col m3 hide-on-med-and-down">
+                                <img class="responsive-img" src="//via.placeholder.com/500" alt="">
+                            </div>
+                            <div class="col s12 m9">
+                                <h5 class="blog-content-card-content-heading">위드타이 개발 중</h5>
+                                <p>
+                                    골프장 예약 직거래 플랫폼
+                                </p>
+                                <p>
+                                    환율 손해 없이 바트화 기준으로 신용카드 결제
+                                </p>
+                                <p>
+                                    골프장이 직접 판매하는 프로모션 티오프 즉시 구매
+                                </p>
+                                <p>
+                                    엄격한 티오프 시간 준수와 합리적인 가격
+                                </p>
+                                <p>
+                                    고객을 위한 맞춤형 정보 제공 커뮤니티
+                                    잡담, 질문, 번개합시다, 번개후기, 골프장후기, 캐디후기
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content-card-footer">
+                        <i class="fas fa-tags fa-fw"></i>
+                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#골프장</span>
+                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#방콕</span>
+                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#가성비</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="blog-content-card-title">
+                        리뷰-골프장 | 2020-03-29 12:35 | 1,037회 [발행됨]
+                    </div>
+                    <div class="blog-content-card-content">
+                        어쩌고 저쩌고
+
+                    </div>
+                    <div class="blog-content-card-footer">
+                        태그
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4 l3">
+                <div class="card grey lighten-5">
+                    <span>광고 영역</span>
+                </div>
+                <div class="card lime lighten-5">
+                    <div class="blog-sidebar-card-title">
+                        {% trans 'CATEGORIES' %}
+                    </div>
+                    <div class="blog-sidebar-card-content">
+                        <ul class="">
+                            <li>태국뉴스</li>
+                            <li>태국어</li>
+                            <li>태국생활</li>
+                            <li>리뷰
+                                <ul>
+                                    <li>골프장</li>
+                                    <li>호텔</li>
+                                    <li>음식점</li>
+                                    <li>쇼핑몰</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card pink lighten-5">
+                    <div class="blog-sidebar-card-title">
+                        {% trans 'HOT DEALS' %}
+                    </div>
+                    <div class="blog-sidebar-card-content">
+
+                    </div>
+                </div>
+                <div class="card cyan lighten-5">
+                    <div class="blog-sidebar-card-title">
+                        {% trans 'PROMOTIONS' %}
+                    </div>
+                    <div class="blog-sidebar-card-content">
+
+                    </div>
+                </div>
+                <div class="card light-green lighten-5">
+                    <div class="blog-sidebar-card-title">
+                        {% trans 'RECENT POSTS' %}
+                    </div>
+                    <div class="blog-sidebar-card-content">
+
+                    </div>
+                </div>
+                <div class="card indigo lighten-5">
+                    <div class="blog-sidebar-card-title">
+                        {% trans 'RECENT COMMENTS' %}
+                    </div>
+                    <div class="blog-sidebar-card-content">
+
+                    </div>
+                </div>
+                <div class="card orange lighten-5">
+                    <div class="blog-sidebar-card-title">
+                        {% trans 'POPULAR TAGS' %}
+                    </div>
+                    <div class="blog-sidebar-card-content">
+
+                    </div>
+                </div>
+                <div class="card grey lighten-5">
+                    <span>광고 영역</span>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

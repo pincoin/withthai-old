@@ -34,7 +34,7 @@
                         <li><a href="">{% trans 'HOTEL' %}</a></li>
                         <li><a href="">{% trans 'HOT DEALS' %}</a></li>
                         <li><a href="">{% trans 'PROMOTIONS' %}</a></li>
-                        <li><a href="">{% trans 'MAGAZINE' %}</a></li>
+                        <li><a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a></li>
                     </ul>
 
                     <a href="#" data-target="mobile-menu"
@@ -214,7 +214,7 @@
                 <a href="#">{% trans 'HOTEL' %}</a>
             </li>
             <li>
-                <a href="#">{% trans 'MAGAZINE' %}</a>
+                <a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a>
             </li>
         </ul>
     </ul>
