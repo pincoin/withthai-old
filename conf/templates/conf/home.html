@@ -131,11 +131,85 @@
     <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
 
-        <h3>SIDEBAR</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat.</p>
+        <ul class="uk-list">
+            <li class="sidenav-menu-heading">
+                <a href="#">{% trans 'WITH THAI' %}</a>
+            </li>
+            <li class="sidenav-menu-item">
+                <a href="/accounts/logout/">
+                    <i class="fas fa-sign-out-alt fa-fw"></i>
+                    {% trans 'SIGN OUT' %}
+                </a>
+            </li>
+            <li class="sidenav-menu-item">
+                <a href="#">
+                    <i class="fas fa-user-cog fa-fw"></i>
+                    {% trans 'MY PAGE' %}
+                </a>
+            </li>
+            <li class="sidenav-menu-item">
+                <a href="#">
+                    <i class="fas fa-passport fa-fw"></i>
+                    {% trans 'BOOKING' %}
+                </a>
+            </li>
+            <li class="sidenav-menu-item">
+                <a href="#">
+                    <i class="fas fa-info-circle fa-fw"></i>
+                    {% trans 'HELP' %}
+                </a>
+            </li>
+            <li class="sidenav-menu-subitem">
+                <ul class="uk-list sidenav-menu-sublist submenu-scroll">
+                    <li class="sidenav-menu-heading">
+                        <a href="#">{% trans 'GOLF' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Bangkok' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Pattaya' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Chiang Mai' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Chiang Rai' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Hua Hin' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Khao Yai' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Kanchanaburi' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Phuket' %}</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-menu-subitem">
+                <ul class="sidenav-menu-bottom">
+                    <li class="uk-text-center submenu-bottom-active">
+                        <a href="#" class="">
+                            {% trans 'GOLF' %}
+                        </a>
+                    </li>
+                    <li class="uk-text-center">
+                        <a href="#">
+                            {% trans 'HOTEL' %}
+                        </a>
+                    </li>
+                    <li class="uk-text-center">
+                        <a href="{% url 'magazine:home' %}">
+                            {% trans 'MAGAZINE' %}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
 </div>
 <div id="offcanvas-overlay-cart" uk-offcanvas="overlay: true; flip: true">
@@ -145,15 +219,15 @@
         <ul class="uk-list">
             <li class="sidenav-cart-heading">
                 <i class="fas fa-luggage-cart fa-fw"></i>
-                장바구니
+                {% trans 'CART' %}
             </li>
             <li class="sidenav-cart-item">
-                <a href="#">비어있음</a>
+                <a href="#">{% trans 'EMPTY' %}</a>
             </li>
             <li class="sidenav-cart-button">
                 <a href="#" class="pay-button">
                     <i class="far fa-credit-card fa-fw"></i>
-                    결제하기
+                    {% trans 'PAY NOW' %}
                 </a>
             </li>
         </ul>

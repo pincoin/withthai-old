@@ -5275,8 +5275,8 @@ ul.uk-nav-sub {
 .uk-offcanvas-close {
   position: absolute;
   z-index: 1000;
-  top: 12px;
-  right: 12px;
+  top: 6px;
+  right: 6px;
   padding: 5px; }
 
 /* Overlay

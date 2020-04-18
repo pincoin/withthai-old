@@ -87,13 +87,77 @@ main {
     background: #ffffff;
 }
 
+.sidenav-menu-heading {
+    background-color: #ebf2ea;
+    font-weight: bold;
+    padding: 0 32px;
+    margin: 0;
+    line-height: 38px;
+}
+
+.sidenav-menu-heading > a:link,
+.sidenav-menu-heading > a:visited,
+.sidenav-menu-heading > a:active,
+.sidenav-menu-heading > a:hover {
+    color: #87b842;
+}
+
+.sidenav-menu-subitem {
+    margin: 0 !important;
+}
+
+.sidenav-menu-sublist {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sidenav-menu-item {
+    background-color: #ffffff;
+    color: #03353e;
+    padding: 0 32px;
+    margin: 0 !important;
+    line-height: 38px;
+}
+
+.sidenav-menu-item > a:link,
+.sidenav-menu-item > a:visited,
+.sidenav-menu-item > a:active,
+.sidenav-menu-item > a:hover {
+    color: #03353e;
+    text-decoration: none;
+}
+
+.sidenav-menu-bottom {
+    background-color: #ebf2ea;
+    font-weight: bold;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 36px;
+    display: flex;
+}
+
+.sidenav-menu-bottom > li {
+    flex-grow: 1;
+}
+
+.sidenav-menu-bottom > li > a:link,
+.sidenav-menu-bottom > li > a:visited,
+.sidenav-menu-bottom > li > a:active,
+.sidenav-menu-bottom > li > a:hover {
+    color: #87b842;
+}
+
+.submenu-bottom-active {
+    border-top: 2px solid #e88f2e;
+}
+
 .sidenav-cart-heading {
     background-color: #ebf2ea;
     color: #87b842;
     font-weight: bold;
     padding: 0 32px;
     margin: 0;
-    line-height: 48px;
+    line-height: 38px;
 }
 
 .sidenav-cart-item {
@@ -101,7 +165,7 @@ main {
     color: #03353e;
     padding: 0 32px;
     margin: 0 !important;
-    line-height: 48px;
+    line-height: 38px;
 }
 
 .sidenav-cart-item > a:link,
@@ -115,9 +179,9 @@ main {
 .sidenav-cart-button {
     background-color: #ffffff;
     color: #03353e;
-    padding: 0;
+    padding: 8px 0 0 0;
     margin: 0 32px !important;
-    line-height: 48px;
+    line-height: 38px;
     border-top: 1px solid #03353e;
 }
 

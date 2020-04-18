@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-08 01:43+0700\n"
+"POT-Creation-Date: 2020-04-19 00:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,15 @@ msgstr ""
 
 #: allauth/templates/account/login.html:6
 #: allauth/templates/account/login.html:12 conf/templates/conf/base.html:121
-#: conf/templates/conf/base.html:156
+#: conf/templates/conf/base.html:156 conf/templates/conf/home.html:82
 msgid "SIGN IN"
 msgstr ""
 
 #: allauth/templates/account/logout.html:6
 #: allauth/templates/account/logout.html:12
 #: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:114
-#: conf/templates/conf/base.html:149
+#: conf/templates/conf/base.html:149 conf/templates/conf/home.html:88
+#: conf/templates/conf/home.html:141
 msgid "SIGN OUT"
 msgstr ""
 
@@ -171,124 +172,120 @@ msgstr "ภาษาอังกฤษ"
 
 #: conf/templates/conf/base.html:10 conf/templates/conf/base.html:29
 #: conf/templates/conf/base.html:143 conf/templates/conf/base.html:256
+#: conf/templates/conf/home.html:10 conf/templates/conf/home.html:30
+#: conf/templates/conf/home.html:115 conf/templates/conf/home.html:136
+#: conf/templates/conf/home.html:244
 msgid "WITH THAI"
 msgstr "วิธไทย"
 
 #: conf/templates/conf/base.html:33 conf/templates/conf/base.html:181
-#: conf/templates/conf/base.html:211
+#: conf/templates/conf/base.html:211 conf/templates/conf/home.html:35
+#: conf/templates/conf/home.html:165 conf/templates/conf/home.html:197
 msgid "GOLF"
 msgstr ""
 
 #: conf/templates/conf/base.html:34 conf/templates/conf/base.html:214
+#: conf/templates/conf/home.html:40 conf/templates/conf/home.html:202
 msgid "HOTEL"
 msgstr ""
 
-#: conf/templates/conf/base.html:35 conf/templates/conf/home.html:83
+#: conf/templates/conf/base.html:35 conf/templates/conf/home.html:45
+#: magazine/templates/magazine/home.html:94
 msgid "HOT DEALS"
 msgstr ""
 
-#: conf/templates/conf/base.html:36 conf/templates/conf/home.html:91
+#: conf/templates/conf/base.html:36 conf/templates/conf/home.html:50
+#: magazine/templates/magazine/home.html:102
 msgid "PROMOTIONS"
 msgstr ""
 
 #: conf/templates/conf/base.html:37 conf/templates/conf/base.html:217
+#: conf/templates/conf/home.html:55 conf/templates/conf/home.html:207
 msgid "MAGAZINE"
 msgstr ""
 
 #: conf/templates/conf/base.html:95 conf/templates/conf/base.html:169
+#: conf/templates/conf/home.html:65 conf/templates/conf/home.html:153
 msgid "BOOKING"
 msgstr ""
 
 #: conf/templates/conf/base.html:101 conf/templates/conf/base.html:175
+#: conf/templates/conf/home.html:71 conf/templates/conf/home.html:159
 msgid "HELP"
 msgstr ""
 
 #: conf/templates/conf/base.html:107 conf/templates/conf/base.html:163
+#: conf/templates/conf/home.html:76 conf/templates/conf/home.html:147
 msgid "MY PAGE"
 msgstr ""
 
-#: conf/templates/conf/base.html:184
+#: conf/templates/conf/base.html:184 conf/templates/conf/home.html:168
 msgid "Bangkok"
 msgstr ""
 
-#: conf/templates/conf/base.html:187
+#: conf/templates/conf/base.html:187 conf/templates/conf/home.html:171
 msgid "Pattaya"
 msgstr ""
 
-#: conf/templates/conf/base.html:190
-msgid "Chaing Mai"
+#: conf/templates/conf/base.html:190 conf/templates/conf/home.html:174
+msgid "Chiang Mai"
 msgstr ""
 
-#: conf/templates/conf/base.html:193
+#: conf/templates/conf/base.html:193 conf/templates/conf/home.html:177
 msgid "Chiang Rai"
 msgstr ""
 
-#: conf/templates/conf/base.html:196
+#: conf/templates/conf/base.html:196 conf/templates/conf/home.html:180
 msgid "Hua Hin"
 msgstr ""
 
-#: conf/templates/conf/base.html:199
+#: conf/templates/conf/base.html:199 conf/templates/conf/home.html:183
 msgid "Khao Yai"
 msgstr ""
 
-#: conf/templates/conf/base.html:202
+#: conf/templates/conf/base.html:202 conf/templates/conf/home.html:186
 msgid "Kanchanaburi"
 msgstr ""
 
-#: conf/templates/conf/base.html:205
+#: conf/templates/conf/base.html:205 conf/templates/conf/home.html:189
 msgid "Phuket"
 msgstr ""
 
-#: conf/templates/conf/base.html:225
+#: conf/templates/conf/base.html:225 conf/templates/conf/home.html:222
 msgid "CART"
 msgstr ""
 
-#: conf/templates/conf/base.html:228
+#: conf/templates/conf/base.html:228 conf/templates/conf/home.html:225
 msgid "EMPTY"
 msgstr ""
 
-#: conf/templates/conf/base.html:233
+#: conf/templates/conf/base.html:233 conf/templates/conf/home.html:230
 msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/base.html:267 help/apps.py:7
+#: conf/templates/conf/base.html:267 conf/templates/conf/home.html:255
+#: help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:269
+#: conf/templates/conf/base.html:269 conf/templates/conf/home.html:257
 msgid "FAQ/How-to"
 msgstr ""
 
-#: conf/templates/conf/base.html:270
+#: conf/templates/conf/base.html:270 conf/templates/conf/home.html:258
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:271
+#: conf/templates/conf/base.html:271 conf/templates/conf/home.html:259
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:272
+#: conf/templates/conf/base.html:272 conf/templates/conf/home.html:260
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:273
+#: conf/templates/conf/base.html:273 conf/templates/conf/home.html:261
 msgid "CONTACT US"
-msgstr ""
-
-#: conf/templates/conf/home.html:63
-msgid "CATEGORIES"
-msgstr ""
-
-#: conf/templates/conf/home.html:99
-msgid "RECENT POSTS"
-msgstr ""
-
-#: conf/templates/conf/home.html:107
-msgid "RECENT COMMENTS"
-msgstr ""
-
-#: conf/templates/conf/home.html:115
-msgid "POPULAR TAGS"
 msgstr ""
 
 #: golf/apps.py:7
@@ -296,10 +293,8 @@ msgid "Golf"
 msgstr ""
 
 #: golf/models.py:9 golf/models.py:123
-#, fuzzy
-#| msgid "Thai"
 msgid "Thailand"
-msgstr "ภาษาไทย"
+msgstr "ไทย"
 
 #: golf/models.py:10 golf/models.py:124
 msgid "South Korea"
@@ -516,6 +511,22 @@ msgstr ""
 
 #: magazine/apps.py:7
 msgid "Magazine"
+msgstr ""
+
+#: magazine/templates/magazine/home.html:74
+msgid "CATEGORIES"
+msgstr ""
+
+#: magazine/templates/magazine/home.html:110
+msgid "RECENT POSTS"
+msgstr ""
+
+#: magazine/templates/magazine/home.html:118
+msgid "RECENT COMMENTS"
+msgstr ""
+
+#: magazine/templates/magazine/home.html:126
+msgid "POPULAR TAGS"
 msgstr ""
 
 #: member/apps.py:6
