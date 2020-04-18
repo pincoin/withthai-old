@@ -61,7 +61,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="uk-navbar-right nav-overlay">
+                <div class="uk-navbar-right search-desktop-overlay">
                     <ul class="uk-navbar-nav">
                         <li>
                             <a href="#">
@@ -101,19 +101,19 @@
                             </a>
                         </li>
                         <li>
-                            <a class="uk-navbar-toggle" uk-toggle="target: .nav-overlay; animation: uk-animation-fade">
+                            <a class="uk-navbar-toggle" uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade">
                                 <i class="fas fa-search fa-fw navbar-search-icon"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="nav-overlay uk-navbar-right" hidden>
+                <div class="uk-navbar-right search-desktop-overlay" hidden>
                     <div class="uk-navbar-item">
                         <form class="uk-search uk-search-navbar uk-width-1-1">
                             <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}" autofocus>
                         </form>
                     </div>
-                    <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade"
+                    <a class="uk-navbar-toggle" uk-close uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade"
                        href="#"></a>
                 </div>
             </nav>
@@ -126,18 +126,27 @@
                         <i class="fas fa-bars fa-fw navbar-burger-icon"></i>
                     </a>
                 </div>
-                <div class="uk-navbar-center">
+                <div class="uk-navbar-center search-mobile-overlay">
                     <a class="uk-navbar-item uk-logo" href="{% url 'home' %}">
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     </a>
                 </div>
-                <div class="uk-navbar-right">
-                    <a href="#">
+                <div class="uk-navbar-right search-mobile-overlay">
+                    <a class="uk-navbar-toggle" uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade">
                         <i class="fas fa-search fa-fw navbar-search-icon"></i>
                     </a>
                     <a href="#" uk-toggle="target: #offcanvas-overlay-cart">
                         <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
                     </a>
+                </div>
+                <div class="uk-navbar-right search-mobile-overlay" hidden>
+                    <div class="uk-navbar-item">
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}" autofocus>
+                        </form>
+                    </div>
+                    <a class="uk-navbar-toggle" uk-close uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade"
+                       href="#"></a>
                 </div>
             </nav>
         </div>
