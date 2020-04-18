@@ -2898,7 +2898,7 @@ select.uk-form-width-xsmall {
  * Adopts `uk-icon`
  */
 .uk-close {
-  color: #999; }
+  color: #03353e; }
 
 /* Hover + Focus */
 .uk-close:hover,
@@ -5275,8 +5275,8 @@ ul.uk-nav-sub {
 .uk-offcanvas-close {
   position: absolute;
   z-index: 1000;
-  top: 20px;
-  right: 20px;
+  top: 12px;
+  right: 12px;
   padding: 5px; }
 
 /* Overlay

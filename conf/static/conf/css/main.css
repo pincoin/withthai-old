@@ -131,3 +131,7 @@ main {
     padding: 0.5rem;
     border-radius: 2px;
 }
+
+.uk-close {
+    color: #03353e !important;
+}
