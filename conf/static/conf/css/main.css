@@ -30,6 +30,10 @@ main {
     font-size: 20px;
 }
 
+a.uk-navbar-item {
+    color: #03353e;
+}
+
 .navbar-mobile-logo {
     margin-left: 16%;
 }
