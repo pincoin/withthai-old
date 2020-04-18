@@ -5187,8 +5187,8 @@ ul.uk-nav-sub {
   /* 2 */
   box-sizing: border-box;
   width: 270px;
-  padding: 20px 20px;
-  background: #222;
+  padding: 0 0;
+  background: #ffffff;
   /* 3 */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
@@ -5198,7 +5198,7 @@ ul.uk-nav-sub {
   .uk-offcanvas-bar {
     left: -350px;
     width: 350px;
-    padding: 40px 40px; } }
+    padding: 0 0; } }
 /* Flip modifier */
 .uk-offcanvas-flip .uk-offcanvas-bar {
   left: auto;

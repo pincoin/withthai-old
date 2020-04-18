@@ -34,7 +34,9 @@ main {
     margin-right: 4px;
 }
 
-.navbar-cart-icon, .navbar-search-icon, .navbar-burger-icon {
+.navbar-cart-icon,
+.navbar-search-icon,
+.navbar-burger-icon {
     font-size: 20px;
 }
 
@@ -73,4 +75,59 @@ main {
     background-color: #03353e;
     padding-top: .8rem;
     padding-bottom: .8rem;
+}
+
+/* Sidenav */
+.uk-offcanvas-bar {
+    color: #03353e;
+}
+
+.uk-offcanvas-bar > .uk-list {
+    margin: 0;
+    background: #ffffff;
+}
+
+.sidenav-cart-heading {
+    background-color: #ebf2ea;
+    color: #87b842;
+    font-weight: bold;
+    padding: 0 32px;
+    margin: 0;
+    line-height: 48px;
+}
+
+.sidenav-cart-item {
+    background-color: #ffffff;
+    color: #03353e;
+    padding: 0 32px;
+    margin: 0 !important;
+    line-height: 48px;
+}
+
+.sidenav-cart-item > a:link,
+.sidenav-cart-item > a:visited,
+.sidenav-cart-item > a:active,
+.sidenav-cart-item > a:hover {
+    color: #03353e;
+    text-decoration: none;
+}
+
+.sidenav-cart-button {
+    background-color: #ffffff;
+    color: #03353e;
+    padding: 0;
+    margin: 0 32px !important;
+    line-height: 48px;
+    border-top: 1px solid #03353e;
+}
+
+.pay-button:link,
+.pay-button:visited,
+.pay-button:active,
+.pay-button:hover {
+    background-color: #e88f2e;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 2px;
 }
