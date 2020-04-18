@@ -10,19 +10,9 @@ main {
 }
 
 /* Navbar */
-
-@media (min-width: 960px) {
-    .navbar-vertical-padding {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
-
-@media (max-width: 959px) {
-    .navbar-vertical-padding {
-        padding-top: 12px;
-        padding-bottom: 12px;
-    }
+.navbar-vertical-padding {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .in-sticky {
@@ -44,10 +34,6 @@ main {
     .navbar-search-icon {
         margin-right: 15px;
     }
-}
-
-.search-mobile-close {
-    min-height: auto;
 }
 
 /* Footer */
