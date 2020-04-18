@@ -33,6 +33,7 @@ $('document').ready(function () {
         $('#navbar-search-box2').hide();
     });
 
+    $('.parallax').parallax();
 });
 
 $(window).on('load resize', function () {

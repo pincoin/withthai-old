@@ -1,138 +1,174 @@
-{% extends 'conf/base.html' %}
-
-{% load i18n static %}
-
-{% block stylesheet %}
-    {{ block.super }}
-    <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
-{% endblock %}
-
-{% block main %}
-    <main class="container">
-        <div class="row">
-            <div class="col s12 m8 l9">
-                <div class="card">
-                    <div class="blog-content-card-title">
-                        <i class="far fa-folder-open fa-fw"></i> 리뷰-골프장
-                        | <i class="far fa-calendar-alt fa-fw"></i> 2020-03-29 12:35
-                        | <i class="far fa-eye fa-fw"></i> 1,037회
-                        | <i class="far fa-comments fa-fw"></i> 57
-                        <span class="new badge blue lighten-3 black-text" data-badge-caption="">발행됨</span>
-                    </div>
-                    <div class="blog-content-card-content">
-                        <div class="row">
-                            <div class="col m3 hide-on-med-and-down">
-                                <img class="responsive-img" src="//via.placeholder.com/500" alt="">
-                            </div>
-                            <div class="col s12 m9">
-                                <h5 class="blog-content-card-content-heading">위드타이 개발 중</h5>
-                                <p>
-                                    골프장 예약 직거래 플랫폼
-                                </p>
-                                <p>
-                                    환율 손해 없이 바트화 기준으로 신용카드 결제
-                                </p>
-                                <p>
-                                    골프장이 직접 판매하는 프로모션 티오프 즉시 구매
-                                </p>
-                                <p>
-                                    엄격한 티오프 시간 준수와 합리적인 가격
-                                </p>
-                                <p>
-                                    고객을 위한 맞춤형 정보 제공 커뮤니티
-                                    잡담, 질문, 번개합시다, 번개후기, 골프장후기, 캐디후기
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-content-card-footer">
-                        <i class="fas fa-tags fa-fw"></i>
-                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#골프장</span>
-                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#방콕</span>
-                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#가성비</span>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+{% load static i18n %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#87b842">
+    <meta property="og:image" content="http://www.withthai.com{% static 'conf/images/withthai_og_en.png' %}"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="1024"/>
+    <title>{% trans 'WITH THAI' %} : {% block title %}{% endblock %}</title>
+    {% block stylesheet %}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+              integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
+        <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
+        <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
+        <link type="text/css" href="{% static 'conf/css/uikit.css' %}"
+              media="screen,projection" rel="stylesheet"/>
+        <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'conf/images/favicon_16x16.png' %}">
+    {% endblock %}
+</head>
+<body>
+<header class="uk-visible@m" uk-sticky="cls-active: in-sticky">
+    <div class="uk-section uk-padding-remove-vertical" id="navbar-desktop">
+        <div class="uk-container">
+            <nav class="uk-navbar" uk-navbar="">
+                <div class="uk-navbar-left">
+                    <a href="{% url 'home' %}" class="uk-navbar-item uk-logo">
+                        <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
+                    </a>
+                    <ul class="uk-navbar-nav">
+                        <li><a href="#">{% trans 'GOLF' %}</a></li>
+                        <li><a href="#">{% trans 'HOTEL' %}</a></li>
+                        <li><a href="#">{% trans 'HOT DEALS' %}</a></li>
+                        <li><a href="#">{% trans 'PROMOTIONS' %}</a></li>
+                        <li><a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a></li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="blog-content-card-title">
-                        리뷰-골프장 | 2020-03-29 12:35 | 1,037회 [발행됨]
-                    </div>
-                    <div class="blog-content-card-content">
-                        어쩌고 저쩌고
 
+                <div class="nav-overlay uk-navbar-right" hidden>
+                    <div class="uk-navbar-item">
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
+                                   autofocus>
+                        </form>
                     </div>
-                    <div class="blog-content-card-footer">
-                        태그
-                    </div>
+                    <i class="uk-navbar-toggle" uk-close
+                       uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></i>
                 </div>
+                <div class="nav-overlay uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-passport fa-fw navbar-icon"></i>
+                                {% trans 'BOOKING' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-info-circle fa-fw navbar-icon"></i>
+                                {% trans 'HELP' %}
+                            </a></li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-user-cog fa-fw navbar-icon"></i>
+                                {% trans 'MY PAGE' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-sign-in-alt fa-fw navbar-icon"></i>
+                                {% trans 'SIGN IN' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-sign-out-alt fa-fw navbar-icon"></i>
+                                {% trans 'SIGN OUT' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="uk-navbar-toggle"
+                               uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#">
+                                <i class="fas fa-search fa-fw navbar-search-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+    <p>withthai</p>
+
+</main>
+<footer>
+    <div class="uk-section footer-info">
+        <div class="uk-container">
+            <div class="" uk-grid>
+                <div class="uk-width-1-1 uk-width-2-3@m">
+                    <h4 class="footer-info-heading">{% trans 'WITH THAI' %}</h4>
+                    <ul class="uk-list uk-margin-remove-vertical footer-info-list">
+                        <li>Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110</li>
+                        <li>TAX ID: 0105563049000</li>
+                        <li>TAT License: 14/03216</li>
+                        <li>(+66) 080-023-3602</li>
+                        <li>help@withthai.com</li>
+                        <li>LINE: @withthai</li>
+                    </ul>
+                </div>
+                <div class="uk-width-1-1 uk-width-1-3@m">
+                    <h4 class="footer-info-heading">{% trans "Help" %}</h4>
+                    <ul class="uk-list uk-margin-remove-vertical footer-info-list">
+                        <li><a href="#!">{% trans 'FAQ/How-to' %}</a></li>
+                        <li><a href="#!">{% trans 'TERMS &amp; CONDITIONS' %}</a></li>
+                        <li><a href="#!">{% trans 'PRIVACY POLICY' %}</a></li>
+                        <li><a href="#!">{% trans 'ABOUT US' %}</a></li>
+                        <li><a href="#!">{% trans 'CONTACT US' %}</a></li>
+                    </ul>
+                </div>
+                <a href="#" uk-totop uk-scroll class="uk-visible@m footer-in-top"></a>
             </div>
-            <div class="col s12 m4 l3">
-                <div class="card grey lighten-5">
-                    <span>광고 영역</span>
+        </div>
+    </div>
+    <div class="uk-section footer-copyright">
+        <div class="uk-container">
+            <div class="" uk-grid>
+                <div class="uk-width-1-1 uk-width-1-4@m uk-text-center uk-text-left@m">
+                    Copyright &copy {% now 'Y' %} withthai.com
                 </div>
-                <div class="card lime lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'CATEGORIES' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-                        <ul class="">
-                            <li>태국뉴스</li>
-                            <li>태국어</li>
-                            <li>태국생활</li>
-                            <li>리뷰
-                                <ul>
-                                    <li>골프장</li>
-                                    <li>호텔</li>
-                                    <li>음식점</li>
-                                    <li>쇼핑몰</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card pink lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'HOT DEALS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card cyan lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'PROMOTIONS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card light-green lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'RECENT POSTS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card indigo lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'RECENT COMMENTS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card orange lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'POPULAR TAGS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card grey lighten-5">
-                    <span>광고 영역</span>
+                <div class="uk-width-1-1 uk-width-expand@m uk-text-center uk-text-left@m">
+                    All Rights Reserved.
                 </div>
             </div>
         </div>
-    </main>
-{% endblock %}
+    </div>
+</footer>
+<script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'conf/js/uikit.min.js' %}"></script>
+</body>
+</html>
