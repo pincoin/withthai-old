@@ -3325,17 +3325,17 @@ select.uk-form-width-xsmall {
   width: 100%;
   /* 9 */
   border: none;
-  color: #666; }
+  color: #e88f2e; }
 
 .uk-search-input:focus {
   outline: none; }
 
 /* Placeholder */
 .uk-search-input:-ms-input-placeholder {
-  color: #999 !important; }
+  color: #03353e !important; }
 
 .uk-search-input::placeholder {
-  color: #999; }
+  color: #03353e; }
 
 /* Icon (Adopts `uk-icon`)
  ========================================================================== */
@@ -3424,7 +3424,7 @@ select.uk-form-width-xsmall {
 .uk-search-navbar .uk-search-input {
   height: 40px;
   background: transparent;
-  font-size: 1.5rem; }
+  font-size: 1rem; }
 
 /*
  * Icon

@@ -61,7 +61,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="uk-navbar-right">
+                <div class="uk-navbar-right nav-overlay">
                     <ul class="uk-navbar-nav">
                         <li>
                             <a href="#">
@@ -101,11 +101,20 @@
                             </a>
                         </li>
                         <li>
-                            <a class="uk-navbar-toggle">
+                            <a class="uk-navbar-toggle" uk-toggle="target: .nav-overlay; animation: uk-animation-fade">
                                 <i class="fas fa-search fa-fw navbar-search-icon"></i>
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="nav-overlay uk-navbar-right" hidden>
+                    <div class="uk-navbar-item">
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}" autofocus>
+                        </form>
+                    </div>
+                    <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade"
+                       href="#"></a>
                 </div>
             </nav>
         </div>

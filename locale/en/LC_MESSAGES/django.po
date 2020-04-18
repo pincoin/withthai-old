@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 00:52+0700\n"
+"POT-Creation-Date: 2020-04-19 02:10+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,15 +19,16 @@ msgstr ""
 
 #: allauth/templates/account/login.html:6
 #: allauth/templates/account/login.html:12 conf/templates/conf/base.html:121
-#: conf/templates/conf/base.html:156 conf/templates/conf/home.html:82
+#: conf/templates/conf/base.html:156 conf/templates/conf/home.html:94
+#: conf/templates/conf/home.html:165
 msgid "SIGN IN"
 msgstr "LOGIN"
 
 #: allauth/templates/account/logout.html:6
 #: allauth/templates/account/logout.html:12
 #: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:114
-#: conf/templates/conf/base.html:149 conf/templates/conf/home.html:88
-#: conf/templates/conf/home.html:141
+#: conf/templates/conf/base.html:149 conf/templates/conf/home.html:87
+#: conf/templates/conf/home.html:158
 msgid "SIGN OUT"
 msgstr "LOGOUT"
 
@@ -172,121 +173,125 @@ msgstr "English"
 
 #: conf/templates/conf/base.html:10 conf/templates/conf/base.html:29
 #: conf/templates/conf/base.html:143 conf/templates/conf/base.html:256
-#: conf/templates/conf/home.html:10 conf/templates/conf/home.html:30
-#: conf/templates/conf/home.html:115 conf/templates/conf/home.html:136
-#: conf/templates/conf/home.html:244
+#: conf/templates/conf/home.html:14 conf/templates/conf/home.html:34
+#: conf/templates/conf/home.html:131 conf/templates/conf/home.html:152
+#: conf/templates/conf/home.html:268
 msgid "WITH THAI"
 msgstr "WITH THAI"
 
 #: conf/templates/conf/base.html:33 conf/templates/conf/base.html:181
-#: conf/templates/conf/base.html:211 conf/templates/conf/home.html:35
-#: conf/templates/conf/home.html:165 conf/templates/conf/home.html:197
+#: conf/templates/conf/base.html:211 conf/templates/conf/home.html:39
+#: conf/templates/conf/home.html:190 conf/templates/conf/home.html:222
 msgid "GOLF"
 msgstr "GOLF"
 
 #: conf/templates/conf/base.html:34 conf/templates/conf/base.html:214
-#: conf/templates/conf/home.html:40 conf/templates/conf/home.html:202
+#: conf/templates/conf/home.html:44 conf/templates/conf/home.html:227
 msgid "HOTEL"
 msgstr "HOTEL"
 
-#: conf/templates/conf/base.html:35 conf/templates/conf/home.html:45
+#: conf/templates/conf/base.html:35 conf/templates/conf/home.html:49
 #: magazine/templates/magazine/home.html:94
 msgid "HOT DEALS"
 msgstr "HOT DEALS"
 
-#: conf/templates/conf/base.html:36 conf/templates/conf/home.html:50
+#: conf/templates/conf/base.html:36 conf/templates/conf/home.html:54
 #: magazine/templates/magazine/home.html:102
 msgid "PROMOTIONS"
 msgstr "PROMOTIONS"
 
 #: conf/templates/conf/base.html:37 conf/templates/conf/base.html:217
-#: conf/templates/conf/home.html:55 conf/templates/conf/home.html:207
+#: conf/templates/conf/home.html:59 conf/templates/conf/home.html:232
 msgid "MAGAZINE"
 msgstr ""
 
 #: conf/templates/conf/base.html:95 conf/templates/conf/base.html:169
-#: conf/templates/conf/home.html:65 conf/templates/conf/home.html:153
+#: conf/templates/conf/home.html:69 conf/templates/conf/home.html:178
 msgid "BOOKING"
 msgstr "BOOKING"
 
 #: conf/templates/conf/base.html:101 conf/templates/conf/base.html:175
-#: conf/templates/conf/home.html:71 conf/templates/conf/home.html:159
+#: conf/templates/conf/home.html:75 conf/templates/conf/home.html:184
 msgid "HELP"
 msgstr "HELP"
 
 #: conf/templates/conf/base.html:107 conf/templates/conf/base.html:163
-#: conf/templates/conf/home.html:76 conf/templates/conf/home.html:147
+#: conf/templates/conf/home.html:80 conf/templates/conf/home.html:172
 msgid "MY PAGE"
 msgstr "MY PAGE"
 
-#: conf/templates/conf/base.html:184 conf/templates/conf/home.html:168
+#: conf/templates/conf/base.html:184 conf/templates/conf/home.html:193
 msgid "Bangkok"
 msgstr ""
 
-#: conf/templates/conf/base.html:187 conf/templates/conf/home.html:171
+#: conf/templates/conf/base.html:187 conf/templates/conf/home.html:196
 msgid "Pattaya"
 msgstr ""
 
-#: conf/templates/conf/base.html:190 conf/templates/conf/home.html:174
+#: conf/templates/conf/base.html:190 conf/templates/conf/home.html:199
 msgid "Chiang Mai"
 msgstr ""
 
-#: conf/templates/conf/base.html:193 conf/templates/conf/home.html:177
+#: conf/templates/conf/base.html:193 conf/templates/conf/home.html:202
 msgid "Chiang Rai"
 msgstr ""
 
-#: conf/templates/conf/base.html:196 conf/templates/conf/home.html:180
+#: conf/templates/conf/base.html:196 conf/templates/conf/home.html:205
 msgid "Hua Hin"
 msgstr ""
 
-#: conf/templates/conf/base.html:199 conf/templates/conf/home.html:183
+#: conf/templates/conf/base.html:199 conf/templates/conf/home.html:208
 msgid "Khao Yai"
 msgstr ""
 
-#: conf/templates/conf/base.html:202 conf/templates/conf/home.html:186
+#: conf/templates/conf/base.html:202 conf/templates/conf/home.html:211
 msgid "Kanchanaburi"
 msgstr ""
 
-#: conf/templates/conf/base.html:205 conf/templates/conf/home.html:189
+#: conf/templates/conf/base.html:205 conf/templates/conf/home.html:214
 msgid "Phuket"
 msgstr ""
 
-#: conf/templates/conf/base.html:225 conf/templates/conf/home.html:222
+#: conf/templates/conf/base.html:225 conf/templates/conf/home.html:247
 msgid "CART"
 msgstr "CART"
 
-#: conf/templates/conf/base.html:228 conf/templates/conf/home.html:225
+#: conf/templates/conf/base.html:228 conf/templates/conf/home.html:250
 msgid "EMPTY"
 msgstr ""
 
-#: conf/templates/conf/base.html:233 conf/templates/conf/home.html:230
+#: conf/templates/conf/base.html:233 conf/templates/conf/home.html:255
 msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/base.html:267 conf/templates/conf/home.html:255
+#: conf/templates/conf/base.html:267 conf/templates/conf/home.html:279
 #: help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:269 conf/templates/conf/home.html:257
+#: conf/templates/conf/base.html:269 conf/templates/conf/home.html:281
 msgid "FAQ/How-to"
 msgstr "FAQ/How-to"
 
-#: conf/templates/conf/base.html:270 conf/templates/conf/home.html:258
+#: conf/templates/conf/base.html:270 conf/templates/conf/home.html:282
 msgid "TERMS &amp; CONDITIONS"
 msgstr "TERMS &amp; CONDITIONS"
 
-#: conf/templates/conf/base.html:271 conf/templates/conf/home.html:259
+#: conf/templates/conf/base.html:271 conf/templates/conf/home.html:283
 msgid "PRIVACY POLICY"
 msgstr "PRIVACY POLICY"
 
-#: conf/templates/conf/base.html:272 conf/templates/conf/home.html:260
+#: conf/templates/conf/base.html:272 conf/templates/conf/home.html:284
 msgid "ABOUT US"
 msgstr "ABOUT US"
 
-#: conf/templates/conf/base.html:273 conf/templates/conf/home.html:261
+#: conf/templates/conf/base.html:273 conf/templates/conf/home.html:285
 msgid "CONTACT US"
 msgstr "CONTACT US"
+
+#: conf/templates/conf/home.html:113
+msgid "Search..."
+msgstr ""
 
 #: golf/apps.py:7
 msgid "Golf"
