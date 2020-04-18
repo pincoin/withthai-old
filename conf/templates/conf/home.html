@@ -20,34 +20,44 @@
     {% endblock %}
 </head>
 <body>
-<header class="uk-visible@m" uk-sticky="cls-active: in-sticky">
-    <div class="uk-section uk-padding-remove-vertical" id="navbar-desktop">
-        <div class="uk-container">
-            <nav class="uk-navbar" uk-navbar="">
+<header>
+    <div class="uk-section navbar-vertical-padding" uk-sticky="cls-active: in-sticky">
+        <!-- desktop/table navbar top menu -->
+        <div class="uk-container uk-visible@m">
+            <nav class="uk-navbar-container" uk-navbar>
                 <div class="uk-navbar-left">
-                    <a href="{% url 'home' %}" class="uk-navbar-item uk-logo">
+                    <a class="uk-navbar-item uk-logo" href="{% url 'home' %}">
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     </a>
                     <ul class="uk-navbar-nav">
-                        <li><a href="#">{% trans 'GOLF' %}</a></li>
-                        <li><a href="#">{% trans 'HOTEL' %}</a></li>
-                        <li><a href="#">{% trans 'HOT DEALS' %}</a></li>
-                        <li><a href="#">{% trans 'PROMOTIONS' %}</a></li>
-                        <li><a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a></li>
+                        <li>
+                            <a href="#">
+                                {% trans 'GOLF' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                {% trans 'HOTEL' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                {% trans 'HOT DEALS' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                {% trans 'PROMOTIONS' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                {% trans 'MAGAZINE' %}
+                            </a>
+                        </li>
                     </ul>
                 </div>
-
-                <div class="nav-overlay uk-navbar-right" hidden>
-                    <div class="uk-navbar-item">
-                        <form class="uk-search uk-search-navbar uk-width-1-1">
-                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
-                                   autofocus>
-                        </form>
-                    </div>
-                    <i class="uk-navbar-toggle" uk-close
-                       uk-toggle="target: .nav-overlay; animation: uk-animation-fade"></i>
-                </div>
-                <div class="nav-overlay uk-navbar-right">
+                <div class="uk-navbar-right">
                     <ul class="uk-navbar-nav">
                         <li>
                             <a href="#">
@@ -84,8 +94,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="uk-navbar-toggle"
-                               uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#">
+                            <a class="uk-navbar-toggle">
                                 <i class="fas fa-search fa-fw navbar-search-icon"></i>
                             </a>
                         </li>
@@ -93,46 +102,41 @@
                 </div>
             </nav>
         </div>
+        <!-- mobile navbar top menu -->
+        <div class="uk-container uk-hidden@m">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a href="#">
+                        <i class="fas fa-bars fa-fw navbar-burger-icon"></i>
+                    </a>
+                </div>
+                <div class="uk-navbar-center">
+                    <a class="uk-navbar-item uk-logo" href="{% url 'home' %}">
+                        <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
+                    </a>
+                </div>
+                <div class="uk-navbar-right">
+                    <a href="#">
+                        <i class="fas fa-search fa-fw navbar-search-icon"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
     </div>
 </header>
 <main>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
-    <p>withthai</p>
 
 </main>
 <footer>
     <div class="uk-section footer-info">
         <div class="uk-container">
-            <div class="" uk-grid>
+            <div class="uk-grid">
                 <div class="uk-width-1-1 uk-width-2-3@m">
                     <h4 class="footer-info-heading">{% trans 'WITH THAI' %}</h4>
-                    <ul class="uk-list uk-margin-remove-vertical footer-info-list">
+                    <ul class="uk-list footer-info-list">
                         <li>Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110</li>
                         <li>TAX ID: 0105563049000</li>
                         <li>TAT License: 14/03216</li>
@@ -141,9 +145,9 @@
                         <li>LINE: @withthai</li>
                     </ul>
                 </div>
-                <div class="uk-width-1-1 uk-width-1-3@m">
+                <div class="uk-width-1-1 uk-width-1-3@m footer-info-spacer">
                     <h4 class="footer-info-heading">{% trans "Help" %}</h4>
-                    <ul class="uk-list uk-margin-remove-vertical footer-info-list">
+                    <ul class="uk-list footer-info-list">
                         <li><a href="#!">{% trans 'FAQ/How-to' %}</a></li>
                         <li><a href="#!">{% trans 'TERMS &amp; CONDITIONS' %}</a></li>
                         <li><a href="#!">{% trans 'PRIVACY POLICY' %}</a></li>
@@ -151,17 +155,16 @@
                         <li><a href="#!">{% trans 'CONTACT US' %}</a></li>
                     </ul>
                 </div>
-                <a href="#" uk-totop uk-scroll class="uk-visible@m footer-in-top"></a>
             </div>
         </div>
     </div>
     <div class="uk-section footer-copyright">
         <div class="uk-container">
-            <div class="" uk-grid>
-                <div class="uk-width-1-1 uk-width-1-4@m uk-text-center uk-text-left@m">
+            <div class="uk-grid">
+                <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-right@m">
                     Copyright &copy {% now 'Y' %} withthai.com
                 </div>
-                <div class="uk-width-1-1 uk-width-expand@m uk-text-center uk-text-left@m">
+                <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-left@m">
                     All Rights Reserved.
                 </div>
             </div>
