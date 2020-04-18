@@ -30,10 +30,8 @@ main {
     font-size: 20px;
 }
 
-@media (max-width: 959px) {
-    .navbar-search-icon {
-        margin-right: 15px;
-    }
+.navbar-mobile-logo {
+    margin-left: 16%;
 }
 
 /* Footer */
