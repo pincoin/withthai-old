@@ -46,6 +46,10 @@ main {
     }
 }
 
+.search-mobile-close {
+    min-height: auto;
+}
+
 /* Footer */
 .footer-info {
     color: #03353e;

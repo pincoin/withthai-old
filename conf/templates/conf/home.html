@@ -101,7 +101,8 @@
                             </a>
                         </li>
                         <li>
-                            <a class="uk-navbar-toggle" uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade">
+                            <a class="uk-navbar-toggle"
+                               uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade">
                                 <i class="fas fa-search fa-fw navbar-search-icon"></i>
                             </a>
                         </li>
@@ -110,11 +111,12 @@
                 <div class="uk-navbar-right search-desktop-overlay" hidden>
                     <div class="uk-navbar-item">
                         <form class="uk-search uk-search-navbar uk-width-1-1">
-                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}" autofocus>
+                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
+                                   autofocus>
                         </form>
                     </div>
-                    <a class="uk-navbar-toggle" uk-close uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade"
-                       href="#"></a>
+                    <a href="#" class="uk-navbar-toggle"
+                       uk-close uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade"></a>
                 </div>
             </nav>
         </div>
@@ -132,7 +134,7 @@
                     </a>
                 </div>
                 <div class="uk-navbar-right search-mobile-overlay">
-                    <a class="uk-navbar-toggle" uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade">
+                    <a href="#" uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade">
                         <i class="fas fa-search fa-fw navbar-search-icon"></i>
                     </a>
                     <a href="#" uk-toggle="target: #offcanvas-overlay-cart">
@@ -140,13 +142,14 @@
                     </a>
                 </div>
                 <div class="uk-navbar-right search-mobile-overlay" hidden>
-                    <div class="uk-navbar-item">
+                    <div>
                         <form class="uk-search uk-search-navbar uk-width-1-1">
-                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}" autofocus>
+                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
+                                   autofocus>
                         </form>
                     </div>
-                    <a class="uk-navbar-toggle" uk-close uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade"
-                       href="#"></a>
+                    <a href="#" class="uk-navbar-toggle search-mobile-close"
+                       uk-close uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade"></a>
                 </div>
             </nav>
         </div>
