@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static i18n %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#87b842">
+    <meta property="og:image" content="http://www.withthai.com{% static 'conf/images/withthai_og_en.png' %}"/>
+    <meta property="og:image:width" content="1024"/>
+    <meta property="og:image:height" content="1024"/>
+    <title>{% trans 'WITH THAI' %} : {% block title %}{% endblock %}</title>
+    {% block stylesheet %}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+              integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
+        <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
+        <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
+        <link type="text/css" href="{% static 'conf/css/materialize.min.css' %}"
+              media="screen,projection" rel="stylesheet"/>
+        <link type="text/css" href="{% static 'conf/css/base.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static 'conf/images/favicon_16x16.png' %}">
+    {% endblock %}
+</head>
+<body>
+<header>
+    <div class="navbar-fixed">
+        <nav class="white z-depth-0">
+            <div class="nav-wrapper">
+                <div class="container">
+                    <a href="{% url 'home' %}" class="brand-logo">
+                        <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
+                    </a>
+
+                    <ul id="navbar-top-left" class="hide-on-med-and-down">
+                        <li><a href="">{% trans 'GOLF' %}</a></li>
+                        <li><a href="">{% trans 'HOTEL' %}</a></li>
+                        <li><a href="">{% trans 'HOT DEALS' %}</a></li>
+                        <li><a href="">{% trans 'PROMOTIONS' %}</a></li>
+                        <li><a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a></li>
+                    </ul>
+
+                    <a href="#" data-target="mobile-menu"
+                       class="mobile-menu-icon teal-text text-darken-4 sidenav-trigger">
+                        <i class="fas fa-bars fa-fw"></i>
+                    </a>
+
+                    <a href="#" id="navbar-cart1" data-target="mobile-cart"
+                       class="mobile-menu-icon teal-text text-darken-4 right sidenav-trigger">
+                        <i class="fas fa-luggage-cart fa-fw"></i>
+                    </a>
+
+                    <ul class="right" id="navbar-search-box2">
+                        <li>
+                            <span>
+                                <i class="fas fa-search fa-fw"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <form role="search" method="GET">
+                                <input class="navbar-search-input2" name="q" type="text" placeholder="검색" value=""/>
+                            </form>
+                        </li>
+                        <li>
+                            <span id="navbar-search-close2">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <a href="#" id="navbar-search2"
+                       class="mobile-menu-icon teal-text text-darken-4 right">
+                        <i class="fas fa-search fa-fw"></i>
+                    </a>
+
+                    <ul class="right" id="navbar-search-box1">
+                        <li>
+                            <span>
+                                <i class="fas fa-search fa-fw"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <form role="search" method="GET">
+                                <input class="navbar-search-input1" name="q" type="text" placeholder="검색" value=""/>
+                            </form>
+                        </li>
+                        <li>
+                            <span id="navbar-search-close1">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </li>
+                    </ul>
+
+                    <ul class="right hide-on-med-and-down" id="navbar-top-right">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-passport fa-fw"></i>
+                                {% trans 'BOOKING' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-info-circle fa-fw"></i>
+                                {% trans 'HELP' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fas fa-user-cog fa-fw"></i>
+                                {% trans 'MY PAGE' %}
+                            </a>
+                        </li>
+                        {% if user.is_authenticated %}
+                            <li>
+                                <a href="{% url 'account_logout' %}">
+                                    <i class="fas fa-sign-out-alt fa-fw"></i>
+                                    {% trans 'SIGN OUT' %}
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{% url 'account_login' %}">
+                                    <i class="fas fa-sign-in-alt fa-fw"></i>
+                                    {% trans 'SIGN IN' %}
+                                </a>
+                            </li>
+                        {% endif %}
+                        <li>
+                            <span id="navbar-cart1" class="sidenav-trigger" data-target="mobile-cart">
+                                <i class="fas fa-luggage-cart fa-fw"></i>
+                            </span>
+                        </li>
+                        <li>
+                            <span id="navbar-search1">
+                                <i class="fas fa-search fa-fw"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-menu">
+        <li class="submenu-heading">
+            <a href="#">{% trans 'WITH THAI' %}</a>
+        </li>
+        {% if user.is_authenticated %}
+            <li class="submenu-item">
+                <a href="{% url 'account_logout' %}">
+                    <i class="fas fa-sign-out-alt fa-fw submenu-item-icon"></i>
+                    {% trans 'SIGN OUT' %}
+                </a>
+            </li>
+        {% else %}
+            <li class="submenu-item">
+                <a href="{% url 'account_login' %}">
+                    <i class="fas fa-sign-in-alt fa-fw submenu-item-icon"></i>
+                    {% trans 'SIGN IN' %}
+                </a>
+            </li>
+        {% endif %}
+        <li class="submenu-item">
+            <a href="#">
+                <i class="fas fa-user-cog fa-fw submenu-item-icon"></i>
+                {% trans 'MY PAGE' %}
+            </a>
+        </li>
+        <li class="submenu-item">
+            <a href="#">
+                <i class="fas fa-passport fa-fw submenu-item-icon"></i>
+                {% trans 'BOOKING' %}
+            </a>
+        </li>
+        <li class="submenu-item">
+            <a href="#">
+                <i class="fas fa-info-circle fa-fw submenu-item-icon"></i>
+                {% trans 'HELP' %}
+            </a>
+        </li>
+
+        <ul class="submenu-scroll">
+            <li class="submenu-heading">
+                <a href="#">{% trans 'GOLF' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Bangkok' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Pattaya' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Chiang Mai' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Chiang Rai' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Hua Hin' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Khao Yai' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Kanchanaburi' %}</a>
+            </li>
+            <li class="submenu-item">
+                <a href="#">{% trans 'Phuket' %}</a>
+            </li>
+        </ul>
+
+        <ul class="submenu-bottom">
+            <li>
+                <a href="#" class="submenu-bottom-active">{% trans 'GOLF' %}</a>
+            </li>
+            <li>
+                <a href="#">{% trans 'HOTEL' %}</a>
+            </li>
+            <li>
+                <a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a>
+            </li>
+        </ul>
+    </ul>
+
+    <ul class="sidenav" id="mobile-cart">
+        <li class="submenu-heading">
+            <i class="fas fa-luggage-cart fa-fw submenu-item-icon"></i>
+            {% trans 'CART' %}
+        </li>
+        <li class="submenu-item">
+            <a href="#">{% trans 'EMPTY' %}</a>
+        </li>
+        <li class="submenu-cart-line">
+            <a href="#" class="btn btn-small z-depth-0 submenu-item-pay-button">
+                <i class="far fa-credit-card fa-fw submenu-item-pay-icon"></i>
+                {% trans 'PAY NOW' %}
+            </a>
+        </li>
+    </ul>
+</header>
+{% if messages %}
+    <div class="container">
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                    {{ message }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+{% block main %}
+{% endblock %}
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l9 s12">
+                <h5 class="footer-heading">{% trans 'WITH THAI' %}</h5>
+                <ul>
+                    <li>Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110</li>
+                    <li>TAX ID: 0105563049000</li>
+                    <li>TAT License: 14/03216</li>
+                    <li>(+66) 080-023-3602</li>
+                    <li>help@withthai.com</li>
+                    <li>LINE: @withthai</li>
+                </ul>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="footer-heading">{% trans "Help" %}</h5>
+                <ul>
+                    <li><a href="#!">{% trans 'FAQ/How-to' %}</a></li>
+                    <li><a href="#!">{% trans 'TERMS &amp; CONDITIONS' %}</a></li>
+                    <li><a href="#!">{% trans 'PRIVACY POLICY' %}</a></li>
+                    <li><a href="#!">{% trans 'ABOUT US' %}</a></li>
+                    <li><a href="#!">{% trans 'CONTACT US' %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col l4 s12 center-on-small-only">
+                    Copyright &copy {% now 'Y' %} withthai.com
+                </div>
+                <div class="col l8 s12 center-on-small-only">
+                    All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{% block javascript %}
+    <script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'conf/js/materialize.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'conf/js/main.js' %}"></script>
+{% endblock %}
+</body>
+</html>

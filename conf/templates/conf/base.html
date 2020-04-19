@@ -7,291 +7,335 @@
     <meta property="og:image" content="http://www.withthai.com{% static 'conf/images/withthai_og_en.png' %}"/>
     <meta property="og:image:width" content="1024"/>
     <meta property="og:image:height" content="1024"/>
+    <meta charset="utf-8">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="태국어,태국,여행,골프,호텔,예약">
+    <meta name="description" content="태국어,태국이민,태국사업,태국여행,골프,호텔,예약,취업">
     <title>{% trans 'WITH THAI' %} : {% block title %}{% endblock %}</title>
     {% block stylesheet %}
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
               integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
         <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
         <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
-        <link type="text/css" href="{% static 'conf/css/materialize.min.css' %}"
+        <link type="text/css" href="{% static 'conf/css/uikit.css' %}"
               media="screen,projection" rel="stylesheet"/>
-        <link type="text/css" href="{% static 'conf/css/base.css' %}" rel="stylesheet">
+        <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
         <link rel="shortcut icon" href="{% static 'conf/images/favicon_16x16.png' %}">
     {% endblock %}
 </head>
 <body>
 <header>
-    <div class="navbar-fixed">
-        <nav class="white z-depth-0">
-            <div class="nav-wrapper">
-                <div class="container">
-                    <a href="{% url 'home' %}" class="brand-logo">
+    <div class="uk-section navbar-vertical-padding" uk-sticky="cls-active: in-sticky">
+        <!-- desktop/table navbar top menu -->
+        <div class="uk-container uk-visible@m">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="{% url 'home' %}">
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     </a>
-
-                    <ul id="navbar-top-left" class="hide-on-med-and-down">
-                        <li><a href="">{% trans 'GOLF' %}</a></li>
-                        <li><a href="">{% trans 'HOTEL' %}</a></li>
-                        <li><a href="">{% trans 'HOT DEALS' %}</a></li>
-                        <li><a href="">{% trans 'PROMOTIONS' %}</a></li>
-                        <li><a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a></li>
-                    </ul>
-
-                    <a href="#" data-target="mobile-menu"
-                       class="mobile-menu-icon teal-text text-darken-4 sidenav-trigger">
-                        <i class="fas fa-bars fa-fw"></i>
-                    </a>
-
-                    <a href="#" id="navbar-cart1" data-target="mobile-cart"
-                       class="mobile-menu-icon teal-text text-darken-4 right sidenav-trigger">
-                        <i class="fas fa-luggage-cart fa-fw"></i>
-                    </a>
-
-                    <ul class="right" id="navbar-search-box2">
+                    <ul class="uk-navbar-nav">
                         <li>
-                            <span>
-                                <i class="fas fa-search fa-fw"></i>
-                            </span>
+                            <a href="#">
+                                {% trans 'GOLF' %}
+                            </a>
                         </li>
                         <li>
-                            <form role="search" method="GET">
-                                <input class="navbar-search-input2" name="q" type="text" placeholder="검색" value=""/>
-                            </form>
+                            <a href="#">
+                                {% trans 'HOTEL' %}
+                            </a>
                         </li>
                         <li>
-                            <span id="navbar-search-close2">
-                                <i class="fas fa-times"></i>
-                            </span>
+                            <a href="#">
+                                {% trans 'HOT DEALS' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                {% trans 'PROMOTIONS' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'magazine:home' %}">
+                                {% trans 'MAGAZINE' %}
+                            </a>
                         </li>
                     </ul>
-
-                    <a href="#" id="navbar-search2"
-                       class="mobile-menu-icon teal-text text-darken-4 right">
-                        <i class="fas fa-search fa-fw"></i>
-                    </a>
-
-                    <ul class="right" id="navbar-search-box1">
+                </div>
+                <div class="uk-navbar-right search-desktop-overlay">
+                    <ul class="uk-navbar-nav">
                         <li>
-                            <span>
-                                <i class="fas fa-search fa-fw"></i>
-                            </span>
-                        </li>
-                        <li>
-                            <form role="search" method="GET">
-                                <input class="navbar-search-input1" name="q" type="text" placeholder="검색" value=""/>
-                            </form>
-                        </li>
-                        <li>
-                            <span id="navbar-search-close1">
-                                <i class="fas fa-times"></i>
-                            </span>
-                        </li>
-                    </ul>
-
-                    <ul class="right hide-on-med-and-down" id="navbar-top-right">
-                        <li>
-                            <a href="">
-                                <i class="fas fa-passport fa-fw"></i>
+                            <a href="#">
+                                <i class="fas fa-passport fa-fw navbar-icon"></i>
                                 {% trans 'BOOKING' %}
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <i class="fas fa-info-circle fa-fw"></i>
+                            <a href="#">
+                                <i class="fas fa-info-circle fa-fw navbar-icon"></i>
                                 {% trans 'HELP' %}
-                            </a>
-                        </li>
+                            </a></li>
                         <li>
-                            <a href="">
-                                <i class="fas fa-user-cog fa-fw"></i>
+                            <a href="#">
+                                <i class="fas fa-user-cog fa-fw navbar-icon"></i>
                                 {% trans 'MY PAGE' %}
                             </a>
                         </li>
                         {% if user.is_authenticated %}
                             <li>
                                 <a href="{% url 'account_logout' %}">
-                                    <i class="fas fa-sign-out-alt fa-fw"></i>
+                                    <i class="fas fa-sign-out-alt fa-fw navbar-icon"></i>
                                     {% trans 'SIGN OUT' %}
                                 </a>
                             </li>
                         {% else %}
                             <li>
                                 <a href="{% url 'account_login' %}">
-                                    <i class="fas fa-sign-in-alt fa-fw"></i>
+                                    <i class="fas fa-sign-in-alt fa-fw navbar-icon"></i>
                                     {% trans 'SIGN IN' %}
                                 </a>
                             </li>
                         {% endif %}
                         <li>
-                            <span id="navbar-cart1" class="sidenav-trigger" data-target="mobile-cart">
-                                <i class="fas fa-luggage-cart fa-fw"></i>
-                            </span>
+                            <a uk-toggle="target: #offcanvas-overlay-cart">
+                                <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
+                            </a>
                         </li>
                         <li>
-                            <span id="navbar-search1">
-                                <i class="fas fa-search fa-fw"></i>
-                            </span>
+                            <a class="uk-navbar-toggle"
+                               uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade">
+                                <i class="fas fa-search fa-fw navbar-search-icon"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+                <div class="uk-navbar-right search-desktop-overlay" hidden>
+                    <div class="uk-navbar-item">
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
+                                   autofocus>
+                        </form>
+                    </div>
+                    <a href="#" class="uk-navbar-toggle"
+                       uk-close uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade"></a>
+                </div>
+            </nav>
+        </div>
+        <!-- mobile navbar top menu -->
+        <div class="uk-container uk-hidden@m">
+            <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a href="#" class="uk-navbar-item" uk-toggle="target: #offcanvas-overlay-sidebar">
+                        <i class="fas fa-bars fa-fw navbar-burger-icon"></i>
+                    </a>
+                </div>
+                <div class="uk-navbar-left search-mobile-overlay navbar-mobile-logo">
+                    <a class="uk-navbar-item uk-logo" href="{% url 'home' %}">
+                        <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
+                    </a>
+                </div>
+                <div class="uk-navbar-right search-mobile-overlay">
+                    <a href="#" class="uk-navbar-item"
+                       uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade">
+                        <i class="fas fa-search fa-fw navbar-search-icon"></i>
+                    </a>
+                    <a href="#" class="uk-navbar-item" uk-toggle="target: #offcanvas-overlay-cart">
+                        <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
+                    </a>
+                </div>
+                <div class="uk-navbar-right search-mobile-overlay" hidden>
+                    <div>
+                        <form class="uk-search uk-search-navbar uk-width-1-1">
+                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
+                                   autofocus>
+                        </form>
+                    </div>
+                    <a href="#" class="uk-navbar-toggle"
+                       uk-close uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade"></a>
+                </div>
+            </nav>
+        </div>
     </div>
-
-    <ul class="sidenav" id="mobile-menu">
-        <li class="submenu-heading">
-            <a href="#">{% trans 'WITH THAI' %}</a>
-        </li>
-        {% if user.is_authenticated %}
-            <li class="submenu-item">
-                <a href="{% url 'account_logout' %}">
-                    <i class="fas fa-sign-out-alt fa-fw submenu-item-icon"></i>
-                    {% trans 'SIGN OUT' %}
-                </a>
-            </li>
-        {% else %}
-            <li class="submenu-item">
-                <a href="{% url 'account_login' %}">
-                    <i class="fas fa-sign-in-alt fa-fw submenu-item-icon"></i>
-                    {% trans 'SIGN IN' %}
-                </a>
-            </li>
-        {% endif %}
-        <li class="submenu-item">
-            <a href="#">
-                <i class="fas fa-user-cog fa-fw submenu-item-icon"></i>
-                {% trans 'MY PAGE' %}
-            </a>
-        </li>
-        <li class="submenu-item">
-            <a href="#">
-                <i class="fas fa-passport fa-fw submenu-item-icon"></i>
-                {% trans 'BOOKING' %}
-            </a>
-        </li>
-        <li class="submenu-item">
-            <a href="#">
-                <i class="fas fa-info-circle fa-fw submenu-item-icon"></i>
-                {% trans 'HELP' %}
-            </a>
-        </li>
-
-        <ul class="submenu-scroll">
-            <li class="submenu-heading">
-                <a href="#">{% trans 'GOLF' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Bangkok' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Pattaya' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Chiang Mai' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Chiang Rai' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Hua Hin' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Khao Yai' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Kanchanaburi' %}</a>
-            </li>
-            <li class="submenu-item">
-                <a href="#">{% trans 'Phuket' %}</a>
-            </li>
-        </ul>
-
-        <ul class="submenu-bottom">
-            <li>
-                <a href="#" class="submenu-bottom-active">{% trans 'GOLF' %}</a>
-            </li>
-            <li>
-                <a href="#">{% trans 'HOTEL' %}</a>
-            </li>
-            <li>
-                <a href="{% url 'magazine:home' %}">{% trans 'MAGAZINE' %}</a>
-            </li>
-        </ul>
-    </ul>
-
-    <ul class="sidenav" id="mobile-cart">
-        <li class="submenu-heading">
-            <i class="fas fa-luggage-cart fa-fw submenu-item-icon"></i>
-            {% trans 'CART' %}
-        </li>
-        <li class="submenu-item">
-            <a href="#">{% trans 'EMPTY' %}</a>
-        </li>
-        <li class="submenu-cart-line">
-            <a href="#" class="btn btn-small z-depth-0 submenu-item-pay-button">
-                <i class="far fa-credit-card fa-fw submenu-item-pay-icon"></i>
-                {% trans 'PAY NOW' %}
-            </a>
-        </li>
-    </ul>
 </header>
-{% if messages %}
-    <div class="container">
-        <ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
-                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
-                    {{ message }}
+<div id="offcanvas-overlay-sidebar" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-list">
+            <li class="sidenav-menu-heading">
+                <a href="#">{% trans 'WITH THAI' %}</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="sidenav-menu-item">
+                    <a href="{% url 'account_logout' %}">
+                        <i class="fas fa-sign-out-alt fa-fw"></i>
+                        {% trans 'SIGN OUT' %}
+                    </a>
                 </li>
-            {% endfor %}
+            {% else %}
+                <li class="sidenav-menu-item">
+                    <a href="{% url 'account_login' %}">
+                        <i class="fas fa-sign-out-alt fa-fw"></i>
+                        {% trans 'SIGN IN' %}
+                    </a>
+                </li>
+            {% endif %}
+            <li class="sidenav-menu-item">
+                <a href="#">
+                    <i class="fas fa-user-cog fa-fw"></i>
+                    {% trans 'MY PAGE' %}
+                </a>
+            </li>
+            <li class="sidenav-menu-item">
+                <a href="#">
+                    <i class="fas fa-passport fa-fw"></i>
+                    {% trans 'BOOKING' %}
+                </a>
+            </li>
+            <li class="sidenav-menu-item">
+                <a href="#">
+                    <i class="fas fa-info-circle fa-fw"></i>
+                    {% trans 'HELP' %}
+                </a>
+            </li>
+            <li class="sidenav-menu-subitem">
+                <ul class="uk-list sidenav-menu-sublist submenu-scroll">
+                    <li class="sidenav-menu-heading">
+                        <a href="#">{% trans 'GOLF' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Bangkok' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Pattaya' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Chiang Mai' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Chiang Rai' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Hua Hin' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Khao Yai' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Kanchanaburi' %}</a>
+                    </li>
+                    <li class="sidenav-menu-item">
+                        <a href="#">{% trans 'Phuket' %}</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidenav-menu-subitem">
+                <ul class="sidenav-menu-bottom">
+                    <li class="uk-text-center submenu-bottom-active">
+                        <a href="#" class="">
+                            {% trans 'GOLF' %}
+                        </a>
+                    </li>
+                    <li class="uk-text-center">
+                        <a href="#">
+                            {% trans 'HOTEL' %}
+                        </a>
+                    </li>
+                    <li class="uk-text-center">
+                        <a href="{% url 'magazine:home' %}">
+                            {% trans 'MAGAZINE' %}
+                        </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
+    </div>
+</div>
+<div id="offcanvas-overlay-cart" uk-offcanvas="overlay: true; flip: true">
+    <div class="uk-offcanvas-bar sidenav-cart">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-list">
+            <li class="sidenav-cart-heading">
+                <i class="fas fa-luggage-cart fa-fw"></i>
+                {% trans 'CART' %}
+            </li>
+            <li class="sidenav-cart-item">
+                <a href="#">{% trans 'EMPTY' %}</a>
+            </li>
+            <li class="sidenav-cart-button">
+                <a href="#" class="pay-button">
+                    <i class="far fa-credit-card fa-fw"></i>
+                    {% trans 'PAY NOW' %}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% if messages %}
+    <div class="uk-section uk-padding-remove-vertical">
+        <div class="uk-container">
+            {% for message in messages %}
+                <div class="uk-border-rounded
+{% if message.tags == 'error' %}uk-alert-danger
+{% elif message.tags == 'warning' %}uk-alert-warning
+{% elif message.tags == 'success' %}uk-alert-primary
+{% else %}uk-alert-success{% endif %}" uk-alert>
+                    <a class="uk-alert-close" uk-close></a>
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endif %}
 {% block main %}
 {% endblock %}
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l9 s12">
-                <h5 class="footer-heading">{% trans 'WITH THAI' %}</h5>
-                <ul>
-                    <li>Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110</li>
-                    <li>TAX ID: 0105563049000</li>
-                    <li>TAT License: 14/03216</li>
-                    <li>(+66) 080-023-3602</li>
-                    <li>help@withthai.com</li>
-                    <li>LINE: @withthai</li>
-                </ul>
-            </div>
-            <div class="col l3 s12">
-                <h5 class="footer-heading">{% trans "Help" %}</h5>
-                <ul>
-                    <li><a href="#!">{% trans 'FAQ/How-to' %}</a></li>
-                    <li><a href="#!">{% trans 'TERMS &amp; CONDITIONS' %}</a></li>
-                    <li><a href="#!">{% trans 'PRIVACY POLICY' %}</a></li>
-                    <li><a href="#!">{% trans 'ABOUT US' %}</a></li>
-                    <li><a href="#!">{% trans 'CONTACT US' %}</a></li>
-                </ul>
+<footer>
+    <div class="uk-section footer-info">
+        <div class="uk-container">
+            <div class="uk-grid">
+                <div class="uk-width-1-1 uk-width-2-3@m">
+                    <h4 class="footer-info-heading">{% trans 'WITH THAI' %}</h4>
+                    <ul class="uk-list footer-info-list">
+                        <li>Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110</li>
+                        <li>TAX ID: 0105563049000</li>
+                        <li>TAT License: 14/03216</li>
+                        <li>(+66) 080-023-3602</li>
+                        <li>help@withthai.com</li>
+                        <li>LINE: @withthai</li>
+                    </ul>
+                </div>
+                <div class="uk-width-1-1 uk-width-1-3@m footer-info-spacer">
+                    <h4 class="footer-info-heading">{% trans "Help" %}</h4>
+                    <ul class="uk-list footer-info-list">
+                        <li><a href="#!">{% trans 'FAQ/How-to' %}</a></li>
+                        <li><a href="#!">{% trans 'TERMS &amp; CONDITIONS' %}</a></li>
+                        <li><a href="#!">{% trans 'PRIVACY POLICY' %}</a></li>
+                        <li><a href="#!">{% trans 'ABOUT US' %}</a></li>
+                        <li><a href="#!">{% trans 'CONTACT US' %}</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col l4 s12 center-on-small-only">
+
+    <a href="" uk-totop class="uk-visible@m footer-totop" data-uk-scroll=""
+       data-uk-scrollspy="cls: uk-animation-fade; repeat: true"></a>
+
+    <div class="uk-section footer-copyright">
+        <div class="uk-container">
+            <div class="uk-grid">
+                <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-right@m">
                     Copyright &copy {% now 'Y' %} withthai.com
                 </div>
-                <div class="col l8 s12 center-on-small-only">
+                <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-left@m">
                     All Rights Reserved.
                 </div>
             </div>
         </div>
     </div>
 </footer>
-{% block javascript %}
-    <script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'conf/js/materialize.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'conf/js/main.js' %}"></script>
-{% endblock %}
+<script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'conf/js/uikit.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'conf/js/main.js' %}"></script>
 </body>
 </html>
