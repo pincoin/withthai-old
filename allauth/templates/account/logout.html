@@ -1,4 +1,4 @@
-{% extends 'conf/base_old.html' %}
+{% extends 'conf/base.html' %}
 
 {% load i18n %}
 {% load static %}
@@ -6,21 +6,29 @@
 {% block title %}{% trans 'SIGN OUT' %}{% endblock %}
 
 {% block main %}
-    <main class="container">
-        <div class="row">
-            <div class="col s12 m6 offset-m3">
-                <h5 class="allauth-heading center-align">{% trans 'SIGN OUT' %}</h5>
-                <p class="center-align nowrap">
-                    {% trans 'Are you sure you want to sign out?' %}
-                </p>
+    <main>
+        <div class="uk-section uk-section-default uk-section-large">
+            <div class="uk-container ">
+                <div class="uk-width-large uk-margin-auto">
+                    <h1 class="uk-h2 uk-margin-medium-bottom uk-heading-divider uk-text-center">
+                        {% trans 'SIGN OUT' %}
+                    </h1>
 
-                <form method="post" action="{% url 'account_logout' %}" class="center-align">
-                    {% csrf_token %}
-                    {% if redirect_field_value %}
-                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
-                    {% endif %}
-                    <button type="submit" class="btn red accent-3">{% trans 'SIGN OUT' %}</button>
-                </form>
+                    <p class="uk-text-center">
+                        {% trans 'Are you sure you want to sign out?' %}
+                    </p>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-margin-medium-top uk-text-center">
+                        <form method="post" action="{% url 'account_logout' %}" class="center-align">
+                            {% csrf_token %}
+                            {% if redirect_field_value %}
+                                <input type="hidden" name="{{ redirect_field_name }}"
+                                       value="{{ redirect_field_value }}"/>
+                            {% endif %}
+                            <button type="submit" class="uk-button uk-button-danger">{% trans 'SIGN OUT' %}</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
