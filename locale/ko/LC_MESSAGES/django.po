@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 02:10+0700\n"
+"POT-Creation-Date: 2020-04-19 22:25+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,17 +18,21 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: allauth/templates/account/login.html:6
-#: allauth/templates/account/login.html:12 conf/templates/conf/base.html:121
-#: conf/templates/conf/base.html:156 conf/templates/conf/home.html:94
-#: conf/templates/conf/home.html:165
+#: allauth/templates/account/login.html:13 conf/templates/conf/base.html:94
+#: conf/templates/conf/base.html:178 conf/templates/conf/base_old.html:121
+#: conf/templates/conf/base_old.html:156
 msgid "SIGN IN"
 msgstr "로그인"
 
+#: allauth/templates/account/login.html:60
+msgid "You may login with your SNS accounts."
+msgstr "회원가입하지 않아도 SNS 계정으로 로그인할 수 있습니다."
+
 #: allauth/templates/account/logout.html:6
 #: allauth/templates/account/logout.html:12
-#: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:114
-#: conf/templates/conf/base.html:149 conf/templates/conf/home.html:87
-#: conf/templates/conf/home.html:158
+#: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:87
+#: conf/templates/conf/base.html:171 conf/templates/conf/base_old.html:114
+#: conf/templates/conf/base_old.html:149
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
@@ -171,127 +175,127 @@ msgstr "태국어"
 msgid "English"
 msgstr "영어"
 
-#: conf/templates/conf/base.html:10 conf/templates/conf/base.html:29
-#: conf/templates/conf/base.html:143 conf/templates/conf/base.html:256
-#: conf/templates/conf/home.html:14 conf/templates/conf/home.html:34
-#: conf/templates/conf/home.html:131 conf/templates/conf/home.html:152
-#: conf/templates/conf/home.html:268
+#: conf/templates/conf/base.html:14 conf/templates/conf/base.html:34
+#: conf/templates/conf/base.html:133 conf/templates/conf/base.html:165
+#: conf/templates/conf/base.html:297 conf/templates/conf/base_old.html:10
+#: conf/templates/conf/base_old.html:29 conf/templates/conf/base_old.html:143
+#: conf/templates/conf/base_old.html:256
 msgid "WITH THAI"
 msgstr "위드타이"
 
-#: conf/templates/conf/base.html:33 conf/templates/conf/base.html:181
-#: conf/templates/conf/base.html:211 conf/templates/conf/home.html:39
-#: conf/templates/conf/home.html:190 conf/templates/conf/home.html:222
+#: conf/templates/conf/base.html:39 conf/templates/conf/base.html:203
+#: conf/templates/conf/base.html:235 conf/templates/conf/base_old.html:33
+#: conf/templates/conf/base_old.html:181 conf/templates/conf/base_old.html:211
 msgid "GOLF"
 msgstr "골프"
 
-#: conf/templates/conf/base.html:34 conf/templates/conf/base.html:214
-#: conf/templates/conf/home.html:44 conf/templates/conf/home.html:227
+#: conf/templates/conf/base.html:44 conf/templates/conf/base.html:240
+#: conf/templates/conf/base_old.html:34 conf/templates/conf/base_old.html:214
 msgid "HOTEL"
 msgstr "호텔"
 
-#: conf/templates/conf/base.html:35 conf/templates/conf/home.html:49
+#: conf/templates/conf/base.html:49 conf/templates/conf/base_old.html:35
 #: magazine/templates/magazine/home.html:94
 msgid "HOT DEALS"
 msgstr "핫딜"
 
-#: conf/templates/conf/base.html:36 conf/templates/conf/home.html:54
+#: conf/templates/conf/base.html:54 conf/templates/conf/base_old.html:36
 #: magazine/templates/magazine/home.html:102
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
-#: conf/templates/conf/base.html:37 conf/templates/conf/base.html:217
-#: conf/templates/conf/home.html:59 conf/templates/conf/home.html:232
+#: conf/templates/conf/base.html:59 conf/templates/conf/base.html:245
+#: conf/templates/conf/base_old.html:37 conf/templates/conf/base_old.html:217
 msgid "MAGAZINE"
 msgstr "매거진"
 
-#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:169
-#: conf/templates/conf/home.html:69 conf/templates/conf/home.html:178
+#: conf/templates/conf/base.html:69 conf/templates/conf/base.html:191
+#: conf/templates/conf/base_old.html:95 conf/templates/conf/base_old.html:169
 msgid "BOOKING"
 msgstr "나의예약"
 
-#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:175
-#: conf/templates/conf/home.html:75 conf/templates/conf/home.html:184
+#: conf/templates/conf/base.html:75 conf/templates/conf/base.html:197
+#: conf/templates/conf/base_old.html:101 conf/templates/conf/base_old.html:175
 msgid "HELP"
 msgstr "고객센터"
 
-#: conf/templates/conf/base.html:107 conf/templates/conf/base.html:163
-#: conf/templates/conf/home.html:80 conf/templates/conf/home.html:172
+#: conf/templates/conf/base.html:80 conf/templates/conf/base.html:185
+#: conf/templates/conf/base_old.html:107 conf/templates/conf/base_old.html:163
 msgid "MY PAGE"
 msgstr "마이페이지"
 
-#: conf/templates/conf/base.html:184 conf/templates/conf/home.html:193
+#: conf/templates/conf/base.html:114 conf/templates/conf/base.html:148
+msgid "Search..."
+msgstr "검색..."
+
+#: conf/templates/conf/base.html:206 conf/templates/conf/base_old.html:184
 msgid "Bangkok"
 msgstr "방콕"
 
-#: conf/templates/conf/base.html:187 conf/templates/conf/home.html:196
+#: conf/templates/conf/base.html:209 conf/templates/conf/base_old.html:187
 msgid "Pattaya"
 msgstr "파타야"
 
-#: conf/templates/conf/base.html:190 conf/templates/conf/home.html:199
+#: conf/templates/conf/base.html:212 conf/templates/conf/base_old.html:190
 msgid "Chiang Mai"
 msgstr "치앙마이"
 
-#: conf/templates/conf/base.html:193 conf/templates/conf/home.html:202
+#: conf/templates/conf/base.html:215 conf/templates/conf/base_old.html:193
 msgid "Chiang Rai"
 msgstr "치앙라이"
 
-#: conf/templates/conf/base.html:196 conf/templates/conf/home.html:205
+#: conf/templates/conf/base.html:218 conf/templates/conf/base_old.html:196
 msgid "Hua Hin"
 msgstr "후어힌"
 
-#: conf/templates/conf/base.html:199 conf/templates/conf/home.html:208
+#: conf/templates/conf/base.html:221 conf/templates/conf/base_old.html:199
 msgid "Khao Yai"
 msgstr "카오야이"
 
-#: conf/templates/conf/base.html:202 conf/templates/conf/home.html:211
+#: conf/templates/conf/base.html:224 conf/templates/conf/base_old.html:202
 msgid "Kanchanaburi"
 msgstr "깐짜나부리"
 
-#: conf/templates/conf/base.html:205 conf/templates/conf/home.html:214
+#: conf/templates/conf/base.html:227 conf/templates/conf/base_old.html:205
 msgid "Phuket"
 msgstr "푸껫"
 
-#: conf/templates/conf/base.html:225 conf/templates/conf/home.html:247
+#: conf/templates/conf/base.html:260 conf/templates/conf/base_old.html:225
 msgid "CART"
 msgstr "장바구니"
 
-#: conf/templates/conf/base.html:228 conf/templates/conf/home.html:250
+#: conf/templates/conf/base.html:263 conf/templates/conf/base_old.html:228
 msgid "EMPTY"
 msgstr "비어있음"
 
-#: conf/templates/conf/base.html:233 conf/templates/conf/home.html:255
+#: conf/templates/conf/base.html:268 conf/templates/conf/base_old.html:233
 msgid "PAY NOW"
 msgstr "결제하기"
 
-#: conf/templates/conf/base.html:267 conf/templates/conf/home.html:279
+#: conf/templates/conf/base.html:308 conf/templates/conf/base_old.html:267
 #: help/apps.py:7
 msgid "Help"
 msgstr "이용안내"
 
-#: conf/templates/conf/base.html:269 conf/templates/conf/home.html:281
+#: conf/templates/conf/base.html:310 conf/templates/conf/base_old.html:269
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/base.html:270 conf/templates/conf/home.html:282
+#: conf/templates/conf/base.html:311 conf/templates/conf/base_old.html:270
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/base.html:271 conf/templates/conf/home.html:283
+#: conf/templates/conf/base.html:312 conf/templates/conf/base_old.html:271
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
-#: conf/templates/conf/base.html:272 conf/templates/conf/home.html:284
+#: conf/templates/conf/base.html:313 conf/templates/conf/base_old.html:272
 msgid "ABOUT US"
 msgstr "위드타이 소개"
 
-#: conf/templates/conf/base.html:273 conf/templates/conf/home.html:285
+#: conf/templates/conf/base.html:314 conf/templates/conf/base_old.html:273
 msgid "CONTACT US"
 msgstr "문의하기"
-
-#: conf/templates/conf/home.html:113
-msgid "Search..."
-msgstr "검색..."
 
 #: golf/apps.py:7
 msgid "Golf"
