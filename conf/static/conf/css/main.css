@@ -34,8 +34,16 @@ a.uk-navbar-item {
     color: #03353e;
 }
 
-.navbar-mobile-logo {
-    margin-left: 16%;
+@media (max-width: 575px) {
+    .navbar-mobile-logo {
+        margin-left: 16%;
+    }
+}
+
+@media (min-width: 576px) {
+    .navbar-mobile-logo {
+        margin-left: 35%;
+    }
 }
 
 /* Footer */
