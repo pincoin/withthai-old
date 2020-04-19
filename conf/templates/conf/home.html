@@ -55,7 +55,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{% url 'magazine:home' %}">
                                 {% trans 'MAGAZINE' %}
                             </a>
                         </li>
@@ -271,6 +271,22 @@
         </ul>
     </div>
 </div>
+{% if messages %}
+    <div class="uk-section uk-padding-remove-vertical">
+        <div class="uk-container">
+            {% for message in messages %}
+                <div class="uk-border-rounded
+{% if message.tags == 'error' %}uk-alert-danger
+{% elif message.tags == 'warning' %}uk-alert-warning
+{% elif message.tags == 'success' %}uk-alert-primary
+{% else %}uk-alert-success{% endif %}" uk-alert>
+                    <a class="uk-alert-close" uk-close></a>
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
 <main>
     <p>with thai</p>
     <p>with thai</p>
@@ -324,7 +340,8 @@
         </div>
     </div>
 
-    <a href="" uk-totop class="uk-visible@m footer-totop" data-uk-scroll="" data-uk-scrollspy="cls: uk-animation-fade; repeat: true"></a>
+    <a href="" uk-totop class="uk-visible@m footer-totop" data-uk-scroll=""
+       data-uk-scrollspy="cls: uk-animation-fade; repeat: true"></a>
 
     <div class="uk-section footer-copyright">
         <div class="uk-container">
