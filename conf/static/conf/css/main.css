@@ -192,21 +192,23 @@ a.uk-navbar-item {
     color: #03353e !important;
 }
 
-.footer-totop {
-    position: fixed;
-    bottom: 60px;
-    right: 60px;
-    border: none;
-    outline: none;
-    background-color: #e88f2e;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-}
+@media (min-width: 960px) {
+    .footer-totop {
+        position: fixed;
+        bottom: 60px;
+        right: 60px;
+        border: none;
+        outline: none;
+        background-color: #e88f2e;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
 
-a.footer-totop:link,
-a.footer-totop:visited,
-a.footer-totop:hover,
-a.footer-totop:active {
-    color: #ffffff;
+    a.footer-totop:link,
+    a.footer-totop:visited,
+    a.footer-totop:hover,
+    a.footer-totop:active {
+        color: #ffffff;
+    }
 }
