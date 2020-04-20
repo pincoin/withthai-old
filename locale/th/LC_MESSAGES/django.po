@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 14:22+0700\n"
+"POT-Creation-Date: 2020-04-20 16:18+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 
 #: allauth/templates/account/login.html:6
 #: allauth/templates/account/login.html:14
+#: allauth/templates/account/signup_closed.html:24
 #: allauth/templates/socialaccount/authentication_error.html:24
 #: allauth/templates/socialaccount/login_cancelled.html:24
 #: conf/templates/conf/base.html:94 conf/templates/conf/base.html:178
@@ -40,6 +41,15 @@ msgstr ""
 
 #: allauth/templates/account/logout.html:18
 msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: allauth/templates/account/signup_closed.html:6
+#: allauth/templates/account/signup_closed.html:14
+msgid "SIGN UP CLOSED"
+msgstr ""
+
+#: allauth/templates/account/signup_closed.html:18
+msgid "We are sorry, but the sign up is currently closed."
 msgstr ""
 
 #: allauth/templates/socialaccount/authentication_error.html:6
