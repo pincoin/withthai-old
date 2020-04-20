@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-19 22:25+0700\n"
+"POT-Creation-Date: 2020-04-20 13:43+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,39 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: allauth/templates/account/login.html:6
-#: allauth/templates/account/login.html:13 conf/templates/conf/base.html:94
-#: conf/templates/conf/base.html:178 conf/templates/conf/base_old.html:121
-#: conf/templates/conf/base_old.html:156
+#: allauth/templates/account/login.html:14
+#: allauth/templates/socialaccount/login_cancelled.html:24
+#: conf/templates/conf/base.html:94 conf/templates/conf/base.html:178
+#: conf/templates/conf/base_old.html:121 conf/templates/conf/base_old.html:156
 msgid "SIGN IN"
 msgstr "로그인"
 
-#: allauth/templates/account/login.html:60
+#: allauth/templates/account/login.html:62
 msgid "You may login with your SNS accounts."
 msgstr "회원가입하지 않아도 SNS 계정으로 로그인할 수 있습니다."
 
 #: allauth/templates/account/logout.html:6
-#: allauth/templates/account/logout.html:12
-#: allauth/templates/account/logout.html:22 conf/templates/conf/base.html:87
+#: allauth/templates/account/logout.html:14
+#: allauth/templates/account/logout.html:28 conf/templates/conf/base.html:87
 #: conf/templates/conf/base.html:171 conf/templates/conf/base_old.html:114
 #: conf/templates/conf/base_old.html:149
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
-#: allauth/templates/account/logout.html:14
+#: allauth/templates/account/logout.html:18
 msgid "Are you sure you want to sign out?"
 msgstr "정말로 로그아웃하시겠습니까?"
+
+#: allauth/templates/socialaccount/login_cancelled.html:6
+#: allauth/templates/socialaccount/login_cancelled.html:14
+msgid "SNS LOGIN CANCELLED"
+msgstr "SNS 계정 로그인 취소"
+
+#: allauth/templates/socialaccount/login_cancelled.html:18
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts."
+msgstr "SNS 계정으로 간편 로그인하는 것을 취소했습니다."
 
 #: board/apps.py:7
 msgid "Board"
