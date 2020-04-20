@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 13:43+0700\n"
+"POT-Creation-Date: 2020-04-20 14:22+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 
 #: allauth/templates/account/login.html:6
 #: allauth/templates/account/login.html:14
+#: allauth/templates/socialaccount/authentication_error.html:24
 #: allauth/templates/socialaccount/login_cancelled.html:24
 #: conf/templates/conf/base.html:94 conf/templates/conf/base.html:178
 #: conf/templates/conf/base_old.html:121 conf/templates/conf/base_old.html:156
@@ -40,6 +41,15 @@ msgstr "로그아웃"
 #: allauth/templates/account/logout.html:18
 msgid "Are you sure you want to sign out?"
 msgstr "정말로 로그아웃하시겠습니까?"
+
+#: allauth/templates/socialaccount/authentication_error.html:6
+#: allauth/templates/socialaccount/authentication_error.html:14
+msgid "SNS LOGIN FAILURE"
+msgstr "SNS 계정 로그인 실패"
+
+#: allauth/templates/socialaccount/authentication_error.html:18
+msgid "An error occurred while attempting to login via your SNS account."
+msgstr "SNS 계정으로 로그인 하는 도중 오류가 발생했습니다."
 
 #: allauth/templates/socialaccount/login_cancelled.html:6
 #: allauth/templates/socialaccount/login_cancelled.html:14

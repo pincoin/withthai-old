@@ -1,0 +1,31 @@
+{% extends 'conf/base.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "SNS LOGIN FAILURE" %}{% endblock %}
+
+{% block main %}
+    <main>
+        <div class="uk-section uk-section-default uk-section-large">
+            <div class="uk-container ">
+                <div class="uk-width-large uk-margin-auto">
+                    <h1 class="uk-h2 uk-margin-medium-bottom uk-heading-divider uk-text-center">
+                        {% trans "SNS LOGIN FAILURE" %}
+                    </h1>
+
+                    <p class="uk-text-center">
+                        {% trans "An error occurred while attempting to login via your SNS account." %}
+                    </p>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-margin-medium-top uk-text-center">
+                        {% url 'account_login' as login_url %}
+                        <a href="{{ login_url }}" class="uk-button uk-button-primary">
+                            {% trans 'SIGN IN' %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
