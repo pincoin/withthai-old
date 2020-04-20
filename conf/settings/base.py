@@ -51,8 +51,10 @@ INSTALLED_APPS += [
     'member',
     'magazine',
     'board',
-    'golf',
     'help',
+    'golf',
+    'hotel',
+    'event',
 ]
 
 MIDDLEWARE = [
