@@ -1964,12 +1964,12 @@ select.uk-form-width-xsmall {
   line-height: 1.5;
   background: none;
   /* 2 */
-  color: #999; }
+  color: #616161; }
 
 /* Hover + Focus */
 .uk-button-text:hover,
 .uk-button-text:focus {
-  color: #333; }
+  color: #222; }
 
 /* Disabled */
 .uk-button-text:disabled {

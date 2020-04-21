@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 17:42+0700\n"
+"POT-Creation-Date: 2020-04-22 00:50+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,12 +227,12 @@ msgid "HOTEL"
 msgstr "호텔"
 
 #: conf/templates/conf/base.html:49 conf/templates/conf/base_old.html:35
-#: magazine/templates/magazine/home.html:94
+#: conf/templates/conf/home.html:76 magazine/templates/magazine/home.html:94
 msgid "HOT DEALS"
 msgstr "핫딜"
 
 #: conf/templates/conf/base.html:54 conf/templates/conf/base_old.html:36
-#: magazine/templates/magazine/home.html:102
+#: conf/templates/conf/home.html:81 magazine/templates/magazine/home.html:102
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
@@ -328,6 +328,26 @@ msgstr "위드타이 소개"
 #: conf/templates/conf/base.html:314 conf/templates/conf/base_old.html:273
 msgid "CONTACT US"
 msgstr "문의하기"
+
+#: conf/templates/conf/home.html:47
+msgid "Read more"
+msgstr "더보기"
+
+#: conf/templates/conf/home.html:68 magazine/templates/magazine/home.html:74
+msgid "CATEGORIES"
+msgstr "분류"
+
+#: conf/templates/conf/home.html:86 magazine/templates/magazine/home.html:110
+msgid "RECENT POSTS"
+msgstr "최근 게시물"
+
+#: conf/templates/conf/home.html:91 magazine/templates/magazine/home.html:118
+msgid "RECENT COMMENTS"
+msgstr "최근 댓글"
+
+#: conf/templates/conf/home.html:96 magazine/templates/magazine/home.html:126
+msgid "POPULAR TAGS"
+msgstr "인기 태그"
 
 #: event/apps.py:7
 msgid "Event"
@@ -561,22 +581,6 @@ msgstr "호텔"
 #: magazine/apps.py:7
 msgid "Magazine"
 msgstr "매거진"
-
-#: magazine/templates/magazine/home.html:74
-msgid "CATEGORIES"
-msgstr "분류"
-
-#: magazine/templates/magazine/home.html:110
-msgid "RECENT POSTS"
-msgstr "최근 게시물"
-
-#: magazine/templates/magazine/home.html:118
-msgid "RECENT COMMENTS"
-msgstr "최근 댓글"
-
-#: magazine/templates/magazine/home.html:126
-msgid "POPULAR TAGS"
-msgstr "인기 태그"
 
 #: member/apps.py:6
 msgid "Member"

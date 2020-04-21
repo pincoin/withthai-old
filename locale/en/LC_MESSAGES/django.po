@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 17:42+0700\n"
+"POT-Creation-Date: 2020-04-22 00:50+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -227,12 +227,12 @@ msgid "HOTEL"
 msgstr "HOTEL"
 
 #: conf/templates/conf/base.html:49 conf/templates/conf/base_old.html:35
-#: magazine/templates/magazine/home.html:94
+#: conf/templates/conf/home.html:76 magazine/templates/magazine/home.html:94
 msgid "HOT DEALS"
 msgstr "HOT DEALS"
 
 #: conf/templates/conf/base.html:54 conf/templates/conf/base_old.html:36
-#: magazine/templates/magazine/home.html:102
+#: conf/templates/conf/home.html:81 magazine/templates/magazine/home.html:102
 msgid "PROMOTIONS"
 msgstr "PROMOTIONS"
 
@@ -328,6 +328,26 @@ msgstr "ABOUT US"
 #: conf/templates/conf/base.html:314 conf/templates/conf/base_old.html:273
 msgid "CONTACT US"
 msgstr "CONTACT US"
+
+#: conf/templates/conf/home.html:47
+msgid "Read more"
+msgstr ""
+
+#: conf/templates/conf/home.html:68 magazine/templates/magazine/home.html:74
+msgid "CATEGORIES"
+msgstr ""
+
+#: conf/templates/conf/home.html:86 magazine/templates/magazine/home.html:110
+msgid "RECENT POSTS"
+msgstr ""
+
+#: conf/templates/conf/home.html:91 magazine/templates/magazine/home.html:118
+msgid "RECENT COMMENTS"
+msgstr ""
+
+#: conf/templates/conf/home.html:96 magazine/templates/magazine/home.html:126
+msgid "POPULAR TAGS"
+msgstr ""
 
 #: event/apps.py:7
 msgid "Event"
@@ -560,22 +580,6 @@ msgstr ""
 
 #: magazine/apps.py:7
 msgid "Magazine"
-msgstr ""
-
-#: magazine/templates/magazine/home.html:74
-msgid "CATEGORIES"
-msgstr ""
-
-#: magazine/templates/magazine/home.html:110
-msgid "RECENT POSTS"
-msgstr ""
-
-#: magazine/templates/magazine/home.html:118
-msgid "RECENT COMMENTS"
-msgstr ""
-
-#: magazine/templates/magazine/home.html:126
-msgid "POPULAR TAGS"
 msgstr ""
 
 #: member/apps.py:6
