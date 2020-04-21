@@ -1,6 +1,3 @@
-$('document').ready(function () {
-});
-
 $(window).on('load resize', function () {
     if ($(this).width() < 960) {
         var h = $(window).height();
