@@ -1,136 +1,107 @@
-{% extends 'conf/base_old.html' %}
+{% extends 'conf/base.html' %}
 
 {% load i18n static %}
 
-{% block stylesheet %}
-    {{ block.super }}
-    <link type="text/css" href="{% static 'magazine/css/main.css' %}" rel="stylesheet">
-{% endblock %}
-
 {% block main %}
-    <main class="container">
-        <div class="row">
-            <div class="col s12 m8 l9">
-                <div class="card">
-                    <div class="blog-content-card-title">
-                        <i class="far fa-folder-open fa-fw"></i> 리뷰-골프장
-                        | <i class="far fa-calendar-alt fa-fw"></i> 2020-03-29 12:35
-                        | <i class="far fa-eye fa-fw"></i> 1,037회
-                        | <i class="far fa-comments fa-fw"></i> 57
-                        <span class="new badge blue lighten-3 black-text" data-badge-caption="">발행됨</span>
-                    </div>
-                    <div class="blog-content-card-content">
-                        <div class="row">
-                            <div class="col m3 hide-on-med-and-down">
-                                <img class="responsive-img" src="//via.placeholder.com/500" alt="">
+    <main>
+        <div class="uk-section">
+            <div class="uk-container">
+                <div uk-grid="uk-grid-collapse" class="uk-grid">
+                    <div class="uk-width-3-4@m">
+                        <div class="uk-card">
+                            <div class="uk-card-header uk-padding-remove">
+                                <div class="uk-flex uk-flex-wrap uk-flex-auto">
+                                    <div class="uk-margin-right">
+                                        <i class="far fa-folder-open fa-fw"></i> 리뷰
+                                    </div>
+                                    <div class="uk-margin-right">
+                                        <i class="far fa-calendar-alt fa-fw"></i> 2020-03-29 12:35
+                                    </div>
+                                    <div class="uk-margin-right">
+                                        <i class="fas fa-user-edit"></i> 위드타이
+                                    </div>
+                                    <div class="uk-margin-right">
+                                        <i class="far fa-eye fa-fw"></i> 1,037회
+                                    </div>
+                                    <div class="uk-margin-right">
+                                        <i class="far fa-comments fa-fw"></i>5,732
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col s12 m9">
-                                <h5 class="blog-content-card-content-heading">위드타이 개발 중</h5>
-                                <p>
-                                    골프장 예약 직거래 플랫폼
-                                </p>
-                                <p>
-                                    환율 손해 없이 바트화 기준으로 신용카드 결제
-                                </p>
-                                <p>
-                                    골프장이 직접 판매하는 프로모션 티오프 즉시 구매
-                                </p>
-                                <p>
-                                    엄격한 티오프 시간 준수와 합리적인 가격
-                                </p>
-                                <p>
-                                    고객을 위한 맞춤형 정보 제공 커뮤니티
-                                    잡담, 질문, 번개합시다, 번개후기, 골프장후기, 캐디후기
-                                </p>
+                            <div class="uk-card-body uk-padding-remove-horizontal">
+                                <div class="uk-grid uk-grid-collapse" uk-grid>
+                                    <div class="uk-width-1-1 uk-width-1-4@m uk-cover-container">
+                                        <canvas width="222" height="145"></canvas>
+                                        <img src="//getuikit.com/docs/images/dark.jpg" alt="" uk-cover>
+                                    </div>
+                                    <div class="uk-width-1-1 uk-width-3-4@m blog-section">
+                                        <h3>위드타이 개발</h3>
+                                        <div>
+                                            <p>골프장 예약 직거래 플랫폼</p>
+                                            <p>환율 손해 없이 바트화 기준으로 신용카드 결제</p>
+                                            <p>골프장이 직접 판매하는 프로모션 티오프 즉시 구매</p>
+                                            <p>엄격한 티오프 시간 준수와 합리적인 가격</p>
+                                            <p>고객을 위한 맞춤형 정보 제공 커뮤니티 잡담, 질문, 번개합시다, 번개후기, 골프장후기, 캐디후기</p>
+                                        </div>
+                                        <div>
+                                            <a class="uk-button uk-button-text" href="#">{% trans 'Read more' %}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-card-footer uk-padding-remove">
+                                <i class="fas fa-tags fa-fw"></i>
+                                <span class="uk-label blog-tag">#골프장</span>
+                                <span class="uk-label blog-tag">#방콕</span>
+                                <span class="uk-label blog-tag">#가성비</span>
+                            </div>
+                        </div>
+
+                        <hr class="uk-divider-icon">
+                    </div>
+                    <div class="uk-width-1-4@m">
+                        <div class="uk-grid uk-grid-collapse" uk-grid>
+                            <div class="uk-width-1-1 uk-tile uk-tile-primary">
+                                ICONS
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'CATEGORIES' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-tile uk-tile-secondary">
+                                ADs
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'HOT DEALS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'PROMOTIONS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'RECENT POSTS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'RECENT COMMENTS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'POPULAR TAGS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-tile uk-tile-secondary">
+                                ADs
                             </div>
                         </div>
                     </div>
-                    <div class="blog-content-card-footer">
-                        <i class="fas fa-tags fa-fw"></i>
-                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#골프장</span>
-                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#방콕</span>
-                        <span class="btn orange lighten-3 black-text z-depth-0 blog-tag">#가성비</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="blog-content-card-title">
-                        리뷰-골프장 | 2020-03-29 12:35 | 1,037회 [발행됨]
-                    </div>
-                    <div class="blog-content-card-content">
-                        어쩌고 저쩌고
-
-                    </div>
-                    <div class="blog-content-card-footer">
-                        태그
-                    </div>
-                </div>
-            </div>
-            <div class="col s12 m4 l3">
-                <div class="card grey lighten-5">
-                    <span>광고 영역</span>
-                </div>
-                <div class="card lime lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'CATEGORIES' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-                        <ul class="">
-                            <li>태국뉴스</li>
-                            <li>태국어</li>
-                            <li>태국생활</li>
-                            <li>리뷰
-                                <ul>
-                                    <li>골프장</li>
-                                    <li>호텔</li>
-                                    <li>음식점</li>
-                                    <li>쇼핑몰</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card pink lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'HOT DEALS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card cyan lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'PROMOTIONS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card light-green lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'RECENT POSTS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card indigo lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'RECENT COMMENTS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card orange lighten-5">
-                    <div class="blog-sidebar-card-title">
-                        {% trans 'POPULAR TAGS' %}
-                    </div>
-                    <div class="blog-sidebar-card-content">
-
-                    </div>
-                </div>
-                <div class="card grey lighten-5">
-                    <span>광고 영역</span>
                 </div>
             </div>
         </div>
