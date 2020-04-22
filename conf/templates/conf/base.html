@@ -25,134 +25,66 @@
 </head>
 <body>
 <header>
-    <div class="uk-section navbar-vertical-padding" uk-sticky="cls-active: in-sticky">
-        <!-- desktop/table navbar top menu -->
-        <div class="uk-container uk-visible@m">
-            <nav class="uk-navbar-container" uk-navbar>
-                <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo" href="{% url 'home' %}">
-                        <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
-                    </a>
-                    <ul class="uk-navbar-nav">
-                        <li>
-                            <a href="#">
-                                {% trans 'GOLF' %}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                {% trans 'HOTEL' %}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                {% trans 'HOT DEALS' %}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                {% trans 'PROMOTIONS' %}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{% url 'magazine:home' %}">
-                                {% trans 'MAGAZINE' %}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="uk-navbar-right search-desktop-overlay">
-                    <ul class="uk-navbar-nav">
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-passport fa-fw navbar-icon"></i>
-                                {% trans 'BOOKING' %}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-info-circle fa-fw navbar-icon"></i>
-                                {% trans 'HELP' %}
-                            </a></li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-user-cog fa-fw navbar-icon"></i>
-                                {% trans 'MY PAGE' %}
-                            </a>
-                        </li>
-                        {% if user.is_authenticated %}
-                            <li>
-                                <a href="{% url 'account_logout' %}">
-                                    <i class="fas fa-sign-out-alt fa-fw navbar-icon"></i>
-                                    {% trans 'SIGN OUT' %}
-                                </a>
-                            </li>
-                        {% else %}
-                            <li>
-                                <a href="{% url 'account_login' %}">
-                                    <i class="fas fa-sign-in-alt fa-fw navbar-icon"></i>
-                                    {% trans 'SIGN IN' %}
-                                </a>
-                            </li>
-                        {% endif %}
-                        <li>
-                            <a uk-toggle="target: #offcanvas-overlay-cart">
-                                <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="uk-navbar-toggle"
-                               uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade">
-                                <i class="fas fa-search fa-fw navbar-search-icon"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="uk-navbar-right search-desktop-overlay" hidden>
-                    <div class="uk-navbar-item">
-                        <form class="uk-search uk-search-navbar uk-width-1-1">
-                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
-                                   autofocus>
-                        </form>
-                    </div>
-                    <a href="#" class="uk-navbar-toggle"
-                       uk-close uk-toggle="target: .search-desktop-overlay; animation: uk-animation-fade"></a>
-                </div>
-            </nav>
-        </div>
-        <!-- mobile navbar top menu -->
-        <div class="uk-container uk-hidden@m">
-            <nav class="uk-navbar-container" uk-navbar>
-                <div class="uk-navbar-left">
-                    <a href="#" class="uk-navbar-item" uk-toggle="target: #offcanvas-overlay-mobile-menu">
+    <div class="uk-section navbar-vertical-padding">
+        <div class="uk-container">
+            <div class="uk-flex uk-flex-middle uk-child-width-expand" uk-grid>
+                <div class="uk-hidden@m uk-width-1-3">
+                    <a href="#" class="" uk-toggle="target: #offcanvas-overlay-mobile-menu">
                         <i class="fas fa-bars fa-fw navbar-burger-icon"></i>
                     </a>
                 </div>
-                <div class="uk-navbar-left search-mobile-overlay navbar-mobile-logo">
-                    <a class="uk-navbar-item uk-logo" href="{% url 'home' %}">
+                <div class="uk-flex">
+                    <a class="uk-logo" href="{% url 'home' %}">
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     </a>
                 </div>
-                <div class="uk-navbar-right search-mobile-overlay">
-                    <a href="#" class="uk-navbar-item"
-                       uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade">
-                        <i class="fas fa-search fa-fw navbar-search-icon"></i>
-                    </a>
-                    <a href="#" class="uk-navbar-item" uk-toggle="target: #offcanvas-overlay-cart">
+                <div class="uk-hidden@m uk-width-1-3 uk-flex uk-flex-right">
+                    <a href="#" class="" uk-toggle="target: #offcanvas-overlay-cart">
                         <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
                     </a>
                 </div>
-                <div class="uk-navbar-right search-mobile-overlay" hidden>
-                    <div>
-                        <form class="uk-search uk-search-navbar uk-width-1-1">
-                            <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}"
-                                   autofocus>
-                        </form>
+                <div class="uk-flex uk-flex-right uk-visible@m">
+                    <div class="uk-margin-right">
+                        <a href="#">
+                            <i class="fas fa-passport fa-fw navbar-icon"></i>
+                            {% trans 'BOOKING' %}
+                        </a>
                     </div>
-                    <a href="#" class="uk-navbar-toggle"
-                       uk-close uk-toggle="target: .search-mobile-overlay; animation: uk-animation-fade"></a>
+                    <div class="uk-margin-right">
+                        <a href="#">
+                            <i class="fas fa-info-circle fa-fw navbar-icon"></i>
+                            {% trans 'HELP' %}
+                        </a>
+                    </div>
+                    <div class="uk-margin-right">
+                        <a href="#">
+                            <i class="fas fa-user-cog fa-fw navbar-icon"></i>
+                            {% trans 'MY PAGE' %}
+                        </a>
+                    </div>
+                    {% if user.is_authenticated %}
+                        <div class="uk-margin-right">
+                            <a href="{% url 'account_logout' %}">
+                                <i class="fas fa-sign-out-alt fa-fw navbar-icon"></i>
+                                {% trans 'SIGN OUT' %}
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="uk-margin-right">
+                            <a href="{% url 'account_login' %}">
+                                <i class="fas fa-sign-in-alt fa-fw navbar-icon"></i>
+                                {% trans 'SIGN IN' %}
+                            </a>
+                        </div>
+                    {% endif %}
+                    <div>
+                        <a uk-toggle="target: #offcanvas-overlay-cart">
+                            <i class="fas fa-luggage-cart fa-fw navbar-icon"></i>
+                            {% trans 'CART' %}
+                        </a>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </div>
 </header>
