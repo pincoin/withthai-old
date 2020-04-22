@@ -11,7 +11,7 @@ main {
 
 .container-veritcal-padding {
     padding: 8px 0;
- }
+}
 
 /* Navbar */
 .navbar-vertical-padding {
@@ -42,6 +42,10 @@ main {
 
 .navbar-item {
     min-height: 22px !important;
+}
+
+a.navbar-info-item {
+    color: #2c3e50;
 }
 
 /* Footer */

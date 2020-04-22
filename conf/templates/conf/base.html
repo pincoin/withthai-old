@@ -75,40 +75,40 @@
                 </div>
                 <div class="uk-flex uk-flex-right uk-visible@m">
                     <div class="uk-margin-right">
-                        <a href="#">
+                        <a href="#" class="navbar-info-item">
                             <i class="fas fa-passport fa-fw navbar-icon"></i>
                             {% trans 'BOOKING' %}
                         </a>
                     </div>
                     <div class="uk-margin-right">
-                        <a href="#">
+                        <a href="#" class="navbar-info-item">
                             <i class="fas fa-info-circle fa-fw navbar-icon"></i>
                             {% trans 'HELP' %}
                         </a>
                     </div>
                     <div class="uk-margin-right">
-                        <a href="#">
+                        <a href="#" class="navbar-info-item">
                             <i class="fas fa-user-cog fa-fw navbar-icon"></i>
                             {% trans 'MY PAGE' %}
                         </a>
                     </div>
                     {% if user.is_authenticated %}
                         <div class="uk-margin-right">
-                            <a href="{% url 'account_logout' %}">
+                            <a href="{% url 'account_logout' %}" class="navbar-info-item">
                                 <i class="fas fa-sign-out-alt fa-fw navbar-icon"></i>
                                 {% trans 'SIGN OUT' %}
                             </a>
                         </div>
                     {% else %}
                         <div class="uk-margin-right">
-                            <a href="{% url 'account_login' %}">
+                            <a href="{% url 'account_login' %}" class="navbar-info-item">
                                 <i class="fas fa-sign-in-alt fa-fw navbar-icon"></i>
                                 {% trans 'SIGN IN' %}
                             </a>
                         </div>
                     {% endif %}
                     <div>
-                        <a uk-toggle="target: #offcanvas-overlay-cart">
+                        <a uk-toggle="target: #offcanvas-overlay-cart" class="navbar-info-item">
                             <i class="fas fa-luggage-cart fa-fw navbar-icon"></i>
                             {% trans 'CART' %}
                         </a>
