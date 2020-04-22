@@ -25,7 +25,7 @@
 </head>
 <body>
 <header>
-    <div class="uk-section navbar-vertical-padding">
+    <div class="uk-section navbar-vertical-padding" uk-sticky="cls-active: in-sticky">
         <div class="uk-container">
             <div class="uk-flex uk-flex-middle uk-child-width-expand uk-grid-collapse" uk-grid>
                 <div class="uk-hidden@m uk-width-1-3">
@@ -37,6 +37,36 @@
                     <a class="uk-logo" href="{% url 'home' %}">
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     </a>
+
+                    <nav class="uk-navbar-container uk-visible@m uk-flex uk-flex-middle navbar" uk-navbar>
+                        <ul class="uk-navbar-nav">
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'GOLF' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'HOTEL' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'HOT DEALS' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'PROMOTIONS' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'magazine:home' %}" class="navbar-item">
+                                    {% trans 'MAGAZINE' %}
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="uk-hidden@m uk-width-1-3 uk-flex uk-flex-right">
                     <a href="#" class="" uk-toggle="target: #offcanvas-overlay-cart">
@@ -85,6 +115,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </header>

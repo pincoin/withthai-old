@@ -11,8 +11,7 @@ main {
 
 /* Navbar */
 .navbar-vertical-padding {
-    padding-top: 12px;
-    padding-bottom: 0;
+    padding: 8px 0;
 }
 
 .in-sticky {
@@ -31,6 +30,14 @@ main {
     padding: 4px;
     border: #666 1px solid;
     border-radius: 5px;
+}
+
+.navbar {
+    margin-left: 24px;
+}
+
+.navbar-item {
+    min-height: 22px !important;
 }
 
 /* Footer */
