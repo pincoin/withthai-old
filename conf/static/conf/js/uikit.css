@@ -2023,14 +2023,14 @@ select.uk-form-width-xsmall {
 .uk-section {
   box-sizing: border-box;
   /* 1 */
-  padding-top: 12px;
-  padding-bottom: 12px; }
+  padding-top: 8px;
+  padding-bottom: 8px; }
 
 /* Desktop and bigger */
 @media (min-width: 960px) {
   .uk-section {
-    padding-top: 16px;
-    padding-bottom: 16px; } }
+    padding-top: 8px;
+    padding-bottom: 8px; } }
 /*
  * Micro clearfix
  */

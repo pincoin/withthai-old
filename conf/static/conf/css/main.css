@@ -9,6 +9,10 @@ main {
     flex: 1 0 auto;
 }
 
+.container-veritcal-padding {
+    padding: 8px 0;
+ }
+
 /* Navbar */
 .navbar-vertical-padding {
     padding: 8px 0;
