@@ -33,22 +33,6 @@ main {
     border-radius: 5px;
 }
 
-a.uk-navbar-item {
-    color: #03353e;
-}
-
-@media (max-width: 575px) {
-    .navbar-mobile-logo {
-        margin-left: 16%;
-    }
-}
-
-@media (min-width: 576px) {
-    .navbar-mobile-logo {
-        margin-left: 35%;
-    }
-}
-
 /* Footer */
 .footer-info {
     color: #03353e;
