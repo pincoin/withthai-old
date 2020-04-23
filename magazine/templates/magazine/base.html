@@ -1,0 +1,65 @@
+{% extends 'conf/base.html' %}
+
+{% load i18n static %}
+
+{% block main %}
+    <main>
+        <div class="uk-section">
+            <div class="uk-container">
+                <div uk-grid="uk-grid-collapse" class="uk-grid">
+                    <div class="uk-width-3-4@m">
+                        {% block content %}{% endblock %}
+                    </div>
+                    <div class="uk-width-1-4@m">
+                        <div class="uk-grid uk-grid-collapse" uk-grid>
+                            <div class="uk-width-1-1 uk-tile uk-tile-primary">
+                                ICONS
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'CATEGORIES' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-tile uk-tile-secondary">
+                                ADs
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'HOT DEALS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'PROMOTIONS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'RECENT POSTS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'RECENT COMMENTS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body uk-padding-remove-horizontal">
+                                <h3 class="uk-card-title">{% trans 'POPULAR TAGS' %}</h3>
+                                <p>Lorem ipsum <a href="#">dolor</a> sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="uk-width-1-1 uk-tile uk-tile-secondary">
+                                ADs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block stylesheet %}
+    {{ block.super}}
+    <link type="text/css" href="{% static 'magazine/css/main.css' %}" rel="stylesheet">
+{% endblock %}
