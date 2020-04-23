@@ -1,4 +1,3 @@
-
 /* Blog */
 .blog-tag {
     background-color: #ffcc80;
@@ -14,14 +13,24 @@
     font-weight: bold;
 }
 
+/* Desktop */
 @media (min-width: 960px) {
     .blog-section > * {
         margin-left: 2rem;
     }
+
+    .blog-featured-image {
+        padding-top: 6px;
+    }
 }
 
+/* Small devices */
 @media (max-width: 959px) {
     .blog-section > * {
         margin: 1rem 0;
     }
+
+    .blog-featured-image {
+    }
 }
+
