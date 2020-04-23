@@ -107,3 +107,8 @@
         </div>
     </main>
 {% endblock %}
+
+{% block stylesheet %}
+    {{ block.super}}
+    <link type="text/css" href="{% static 'magazine/css/main.css' %}" rel="stylesheet">
+{% endblock %}

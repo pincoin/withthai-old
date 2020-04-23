@@ -226,31 +226,3 @@ a.navbar-info-item {
 .uk-close {
     color: #03353e !important;
 }
-
-
-/* Blog */
-.blog-tag {
-    background-color: #ffcc80;
-    color: #000000;
-}
-
-.blog-status {
-    background-color: #90caf9;
-    color: #000000;
-}
-
-.blog-section h3 {
-    font-weight: bold;
-}
-
-@media (min-width: 960px) {
-    .blog-section > * {
-        margin-left: 2rem;
-    }
-}
-
-@media (max-width: 959px) {
-    .blog-section > * {
-        margin: 1rem 0;
-    }
-}
