@@ -9,7 +9,7 @@ main {
     flex: 1 0 auto;
 }
 
-.container-veritcal-padding {
+main > .uk-section {
     padding: 8px 0;
 }
 
