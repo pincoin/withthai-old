@@ -219,12 +219,12 @@ msgstr "วิธไทย"
 #: conf/templates/conf/base.html:235 conf/templates/conf/base_old.html:33
 #: conf/templates/conf/base_old.html:181 conf/templates/conf/base_old.html:211
 msgid "GOLF"
-msgstr ""
+msgstr "กอล์ฟ"
 
 #: conf/templates/conf/base.html:44 conf/templates/conf/base.html:240
 #: conf/templates/conf/base_old.html:34 conf/templates/conf/base_old.html:214
 msgid "HOTEL"
-msgstr ""
+msgstr "โรงแรม"
 
 #: conf/templates/conf/base.html:49 conf/templates/conf/base_old.html:35
 #: conf/templates/conf/home.html:76 magazine/templates/magazine/home.html:94

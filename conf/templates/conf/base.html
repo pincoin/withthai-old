@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="theme-color" content="#87b842">
@@ -15,8 +18,11 @@
     {% block stylesheet %}
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
               integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
-        <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
-        <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
+        {% if LANGUAGE_CODE == 'th' %}
+            <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
+        {% else %}
+            <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
+        {% endif %}
         <link type="text/css" href="{% static 'conf/css/uikit.css' %}"
               media="screen,projection" rel="stylesheet"/>
         <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
@@ -35,38 +41,14 @@
                 </div>
                 <div class="uk-flex uk-flex-center uk-flex-left@m">
                     <a class="uk-logo" href="{% url 'home' %}">
-                        <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
+                        {% if LANGUAGE_CODE == 'ko' %}
+                            <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
+                        {% else %}
+                            <img src="{% static 'conf/images/withthai_logo_en.png' %}" alt="{% trans 'WITH THAI' %}">
+                        {% endif %}
                     </a>
 
-                    <nav class="uk-navbar-container uk-visible@m uk-flex uk-flex-middle navbar" uk-navbar>
-                        <ul class="uk-navbar-nav">
-                            <li>
-                                <a href="#" class="navbar-item">
-                                    {% trans 'GOLF' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar-item">
-                                    {% trans 'HOTEL' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar-item">
-                                    {% trans 'HOT DEALS' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar-item">
-                                    {% trans 'PROMOTIONS' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'magazine:home' %}" class="navbar-item">
-                                    {% trans 'MAGAZINE' %}
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+
                 </div>
                 <div class="uk-hidden@m uk-width-1-3 uk-flex uk-flex-right">
                     <a href="#" class="" uk-toggle="target: #offcanvas-overlay-cart">
@@ -115,7 +97,56 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="uk-container uk-visible@m">
+            <div class="uk-flex uk-grid" uk-grid>
+                <div class="uk-flex uk-flex-middle uk-width-expand">
+                    <nav class="uk-navbar-container" uk-navbar>
+                        <ul class="uk-navbar-nav">
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'GOLF' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'HOTEL' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'HOT DEALS' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="navbar-item">
+                                    {% trans 'PROMOTIONS' %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'magazine:home' %}" class="navbar-item">
+                                    {% trans 'MAGAZINE' %}
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="uk-flex uk-flex-middle uk-flex-right uk-width-1-5">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <button name="language" type="submit" value="th" class="language-button">
+                            <img src="{% static 'conf/images/flags/th.svg' %}" alt="{% trans 'Thai' %}">
+                        </button>
+                        <button name="language" type="submit" value="en" class="language-button">
+                            <img src="{% static 'conf/images/flags/en.svg' %}" alt="{% trans 'English' %}">
+                        </button>
+                        <button name="language" type="submit" value="ko" class="language-button">
+                           <img src="{% static 'conf/images/flags/ko.svg' %}" alt="{% trans 'Korean' %}">
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </header>

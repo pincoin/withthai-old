@@ -40,16 +40,18 @@ main > .uk-section {
     border-radius: 5px;
 }
 
-.navbar {
-    margin-left: 24px;
-}
-
-.navbar-item {
-    min-height: 22px !important;
+.uk-navbar-nav > li > a {
+    font-size: 1rem;
 }
 
 a.navbar-info-item {
     color: #2c3e50;
+}
+
+.language-button {
+    width: 40px;
+    height: 29px;
+    border: 1px solid #666666;
 }
 
 /* Footer */
