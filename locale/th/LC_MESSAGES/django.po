@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 21:47+0700\n"
+"POT-Creation-Date: 2020-04-26 00:47+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: allauth/templates/account/signup_closed.html:23
 #: allauth/templates/socialaccount/authentication_error.html:23
 #: allauth/templates/socialaccount/login_cancelled.html:23
-#: conf/templates/conf/base.html:88 conf/templates/conf/base.html:182
+#: conf/templates/conf/base.html:88 conf/templates/conf/base.html:184
 msgid "SIGN IN"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 #: allauth/templates/account/logout.html:5
 #: allauth/templates/account/logout.html:13
 #: allauth/templates/account/logout.html:27 conf/templates/conf/base.html:81
-#: conf/templates/conf/base.html:175
+#: conf/templates/conf/base.html:177
 msgid "SIGN OUT"
 msgstr ""
 
@@ -205,42 +205,42 @@ msgstr "ภาษาไทย"
 msgid "English"
 msgstr "ภาษาอังกฤษ"
 
-#: conf/settings/local.py:11 conf/templates/conf/base.html:155
+#: conf/settings/local.py:11 conf/templates/conf/base.html:156
 msgid "Japanese"
 msgstr ""
 
-#: conf/settings/local.py:12 conf/templates/conf/base.html:152
+#: conf/settings/local.py:12 conf/templates/conf/base.html:153
 msgid "Chinese"
 msgstr ""
 
 #: conf/templates/conf/base.html:17 conf/templates/conf/base.html:45
-#: conf/templates/conf/base.html:47 conf/templates/conf/base.html:169
-#: conf/templates/conf/base.html:301
+#: conf/templates/conf/base.html:47 conf/templates/conf/base.html:171
+#: conf/templates/conf/base.html:303 help/templates/help/about.html:12
 msgid "WITH THAI"
 msgstr "วิธไทย"
 
-#: conf/templates/conf/base.html:62 conf/templates/conf/base.html:195
+#: conf/templates/conf/base.html:62 conf/templates/conf/base.html:197
 msgid "BOOKING"
 msgstr ""
 
-#: conf/templates/conf/base.html:68 conf/templates/conf/base.html:201
+#: conf/templates/conf/base.html:68 conf/templates/conf/base.html:203
 msgid "HELP"
 msgstr ""
 
-#: conf/templates/conf/base.html:74 conf/templates/conf/base.html:189
+#: conf/templates/conf/base.html:74 conf/templates/conf/base.html:191
 msgid "MY PAGE"
 msgstr ""
 
-#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:264
+#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:266
 msgid "CART"
 msgstr ""
 
-#: conf/templates/conf/base.html:108 conf/templates/conf/base.html:207
-#: conf/templates/conf/base.html:239
+#: conf/templates/conf/base.html:108 conf/templates/conf/base.html:209
+#: conf/templates/conf/base.html:241
 msgid "GOLF"
 msgstr "กอล์ฟ"
 
-#: conf/templates/conf/base.html:113 conf/templates/conf/base.html:244
+#: conf/templates/conf/base.html:113 conf/templates/conf/base.html:246
 msgid "HOTEL"
 msgstr "โรงแรม"
 
@@ -252,7 +252,7 @@ msgstr ""
 msgid "PROMOTIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:128 conf/templates/conf/base.html:249
+#: conf/templates/conf/base.html:128 conf/templates/conf/base.html:251
 msgid "MAGAZINE"
 msgstr ""
 
@@ -260,67 +260,67 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: conf/templates/conf/base.html:210
+#: conf/templates/conf/base.html:212
 msgid "Bangkok"
 msgstr ""
 
-#: conf/templates/conf/base.html:213
+#: conf/templates/conf/base.html:215
 msgid "Pattaya"
 msgstr ""
 
-#: conf/templates/conf/base.html:216
+#: conf/templates/conf/base.html:218
 msgid "Chiang Mai"
 msgstr ""
 
-#: conf/templates/conf/base.html:219
+#: conf/templates/conf/base.html:221
 msgid "Chiang Rai"
 msgstr ""
 
-#: conf/templates/conf/base.html:222
+#: conf/templates/conf/base.html:224
 msgid "Hua Hin"
 msgstr ""
 
-#: conf/templates/conf/base.html:225
+#: conf/templates/conf/base.html:227
 msgid "Khao Yai"
 msgstr ""
 
-#: conf/templates/conf/base.html:228
+#: conf/templates/conf/base.html:230
 msgid "Kanchanaburi"
 msgstr ""
 
-#: conf/templates/conf/base.html:231
+#: conf/templates/conf/base.html:233
 msgid "Phuket"
 msgstr ""
 
-#: conf/templates/conf/base.html:267
+#: conf/templates/conf/base.html:269
 msgid "EMPTY"
 msgstr ""
 
-#: conf/templates/conf/base.html:272
+#: conf/templates/conf/base.html:274
 msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/base.html:312 help/apps.py:7
+#: conf/templates/conf/base.html:314 help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:316
+#: conf/templates/conf/base.html:318
 msgid "FAQ/How-to"
 msgstr ""
 
-#: conf/templates/conf/base.html:321
+#: conf/templates/conf/base.html:323
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:326
+#: conf/templates/conf/base.html:328
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:331
+#: conf/templates/conf/base.html:333
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:336
+#: conf/templates/conf/base.html:338
 msgid "CONTACT US"
 msgstr ""
 
@@ -549,11 +549,23 @@ msgstr ""
 msgid "Prices"
 msgstr ""
 
-#: help/templates/help/about.html:12
+#: help/templates/help/about.html:14
+msgid "We make online hotel/golf booking convenient."
+msgstr ""
+
+#: help/templates/help/about.html:15
+msgid "We offer a reasonable price at all times."
+msgstr ""
+
+#: help/templates/help/about.html:16
+msgid "We build trust with accuracy and clarity."
+msgstr ""
+
+#: help/templates/help/about.html:28
 msgid "Business Registration Cetrificate"
 msgstr "ใบสำคัญแสดงจดทะเบียนห้างหุ้นส่วนบริษัท"
 
-#: help/templates/help/about.html:17
+#: help/templates/help/about.html:34
 msgid "Tourism License"
 msgstr "ใบอนุญาตประกอบธุรกิจนำเที่ยว"
 
