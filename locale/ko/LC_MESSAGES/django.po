@@ -258,7 +258,7 @@ msgstr "마이페이지"
 
 #: conf/templates/conf/base.html:114 conf/templates/conf/base.html:148
 msgid "Search..."
-msgstr "검색..."
+msgstr "찾기..."
 
 #: conf/templates/conf/base.html:206 conf/templates/conf/base_old.html:184
 msgid "Bangkok"

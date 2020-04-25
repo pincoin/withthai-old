@@ -54,6 +54,15 @@ a.navbar-info-item {
     border: 1px solid #666666;
 }
 
+.uk-search-default {
+    margin-right: 20px;
+}
+
+.uk-search-default > .uk-search-input {
+    height: 29px;
+    border: 1px solid #666666;
+}
+
 /* Footer */
 .footer-info {
     color: #03353e;
