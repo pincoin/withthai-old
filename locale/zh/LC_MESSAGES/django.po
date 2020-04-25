@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,7 +16,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: allauth/templates/account/login.html:6
 #: allauth/templates/account/login.html:14
@@ -195,15 +195,15 @@ msgstr ""
 
 #: conf/settings/local.py:8 conf/templates/conf/base.html:149
 msgid "Korean"
-msgstr "ภาษาเกาหลี"
+msgstr ""
 
 #: conf/settings/local.py:9 conf/templates/conf/base.html:143
 msgid "Thai"
-msgstr "ภาษาไทย"
+msgstr ""
 
 #: conf/settings/local.py:10 conf/templates/conf/base.html:146
 msgid "English"
-msgstr "ภาษาอังกฤษ"
+msgstr ""
 
 #: conf/settings/local.py:11 conf/templates/conf/base.html:155
 msgid "Japanese"
@@ -217,7 +217,7 @@ msgstr ""
 #: conf/templates/conf/base.html:47 conf/templates/conf/base.html:169
 #: conf/templates/conf/base.html:301
 msgid "WITH THAI"
-msgstr "วิธไทย"
+msgstr ""
 
 #: conf/templates/conf/base.html:62 conf/templates/conf/base.html:195
 msgid "BOOKING"
@@ -238,11 +238,11 @@ msgstr ""
 #: conf/templates/conf/base.html:108 conf/templates/conf/base.html:207
 #: conf/templates/conf/base.html:239
 msgid "GOLF"
-msgstr "กอล์ฟ"
+msgstr ""
 
 #: conf/templates/conf/base.html:113 conf/templates/conf/base.html:244
 msgid "HOTEL"
-msgstr "โรงแรม"
+msgstr ""
 
 #: conf/templates/conf/base.html:118 magazine/templates/magazine/base.html:27
 msgid "HOT DEALS"
@@ -302,7 +302,7 @@ msgstr ""
 
 #: conf/templates/conf/base.html:312 help/apps.py:7
 msgid "Help"
-msgstr "Help"
+msgstr ""
 
 #: conf/templates/conf/base.html:314
 msgid "FAQ/How-to"
@@ -334,7 +334,7 @@ msgstr ""
 
 #: golf/models.py:9 golf/models.py:123
 msgid "Thailand"
-msgstr "ไทย"
+msgstr ""
 
 #: golf/models.py:10 golf/models.py:124
 msgid "South Korea"
