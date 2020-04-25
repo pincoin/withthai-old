@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 15:44+0700\n"
+"POT-Creation-Date: 2020-04-25 21:47+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -304,23 +304,23 @@ msgstr ""
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:314
+#: conf/templates/conf/base.html:316
 msgid "FAQ/How-to"
 msgstr "FAQ/How-to"
 
-#: conf/templates/conf/base.html:315
+#: conf/templates/conf/base.html:321
 msgid "TERMS &amp; CONDITIONS"
 msgstr "TERMS &amp; CONDITIONS"
 
-#: conf/templates/conf/base.html:316
+#: conf/templates/conf/base.html:326
 msgid "PRIVACY POLICY"
 msgstr "PRIVACY POLICY"
 
-#: conf/templates/conf/base.html:317
+#: conf/templates/conf/base.html:331
 msgid "ABOUT US"
 msgstr "ABOUT US"
 
-#: conf/templates/conf/base.html:318
+#: conf/templates/conf/base.html:336
 msgid "CONTACT US"
 msgstr "CONTACT US"
 
@@ -547,6 +547,14 @@ msgstr ""
 
 #: golf/models.py:295
 msgid "Prices"
+msgstr ""
+
+#: help/templates/help/about.html:12
+msgid "Business Registration Cetrificate"
+msgstr ""
+
+#: help/templates/help/about.html:17
+msgid "Tourism License"
 msgstr ""
 
 #: hotel/apps.py:7

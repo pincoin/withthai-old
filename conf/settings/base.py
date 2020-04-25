@@ -77,6 +77,7 @@ TEMPLATES = [
             os.path.join(BASE_DIR, 'conf', 'templates'),
             os.path.join(BASE_DIR, 'allauth', 'templates'),
             os.path.join(BASE_DIR, 'magazine', 'templates'),
+            os.path.join(BASE_DIR, 'help', 'templates'),
             os.path.join(BASE_DIR, 'board', 'templates'),
         ],
         'APP_DIRS': True,

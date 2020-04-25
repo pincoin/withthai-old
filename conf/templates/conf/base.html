@@ -311,11 +311,31 @@
                 <div class="uk-width-1-1 uk-width-1-3@m footer-info-spacer">
                     <h4 class="footer-info-heading">{% trans "Help" %}</h4>
                     <ul class="uk-list footer-info-list">
-                        <li><a href="#!">{% trans 'FAQ/How-to' %}</a></li>
-                        <li><a href="#!">{% trans 'TERMS &amp; CONDITIONS' %}</a></li>
-                        <li><a href="#!">{% trans 'PRIVACY POLICY' %}</a></li>
-                        <li><a href="#!">{% trans 'ABOUT US' %}</a></li>
-                        <li><a href="#!">{% trans 'CONTACT US' %}</a></li>
+                        <li>
+                            <a href="{% url 'help:faq-list' %}">
+                                {% trans 'FAQ/How-to' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'help:terms' %}">
+                                {% trans 'TERMS &amp; CONDITIONS' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'help:privacy' %}">
+                                {% trans 'PRIVACY POLICY' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'help:about' %}">
+                                {% trans 'ABOUT US' %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'help:question-list' %}">
+                                {% trans 'CONTACT US' %}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

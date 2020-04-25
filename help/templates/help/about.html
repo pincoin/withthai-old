@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+
+{% load i18n static %}
+
+{% block main %}
+    <main>
+        <div class="uk-section uk-section-muted">
+            <div class="uk-container">
+                <div class="uk-grid" uk-grid>
+                    <div class="uk-width-1-1 uk-width-1-2@m">
+                        <div class="uk-card uk-card-hover uk-card-body">
+                            <h3 class="uk-card-title">{% trans 'Business Registration Cetrificate' %}</h3>
+                            <img src="{% static 'help/images/withthai-business-registration.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-2@m">
+                        <div class="uk-card uk-card-hover uk-card-body">
+                            <h3 class="uk-card-title">{% trans 'Tourism License' %}</h3>
+                            <img src="{% static 'help/images/withthai-tour-license.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'conf/base.html' %}
+
+{% load static %}
+
+{% block stylesheet %}
+    {{ block.super }}
+    <link type="text/css" href="{% static 'magazine/css/main.css' %}" rel="stylesheet">
+{% endblock %}

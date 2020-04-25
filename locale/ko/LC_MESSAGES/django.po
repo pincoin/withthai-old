@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-25 15:44+0700\n"
+"POT-Creation-Date: 2020-04-25 21:47+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -308,23 +308,23 @@ msgstr "결제하기"
 msgid "Help"
 msgstr "이용안내"
 
-#: conf/templates/conf/base.html:314
+#: conf/templates/conf/base.html:316
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/base.html:315
+#: conf/templates/conf/base.html:321
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/base.html:316
+#: conf/templates/conf/base.html:326
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
-#: conf/templates/conf/base.html:317
+#: conf/templates/conf/base.html:331
 msgid "ABOUT US"
 msgstr "위드타이 소개"
 
-#: conf/templates/conf/base.html:318
+#: conf/templates/conf/base.html:336
 msgid "CONTACT US"
 msgstr "문의하기"
 
@@ -552,6 +552,14 @@ msgstr "가격표"
 #: golf/models.py:295
 msgid "Prices"
 msgstr "가격표"
+
+#: help/templates/help/about.html:12
+msgid "Business Registration Cetrificate"
+msgstr "사업자등록증"
+
+#: help/templates/help/about.html:17
+msgid "Tourism License"
+msgstr "여행업 허가증"
 
 #: hotel/apps.py:7
 msgid "Hotel"
