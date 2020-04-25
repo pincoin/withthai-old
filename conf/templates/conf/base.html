@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
 {% load static i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% get_available_languages as LANGUAGES %}
 {% get_language_info_list for LANGUAGES as languages %}
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="theme-color" content="#87b842">
@@ -21,7 +21,7 @@
         {% if LANGUAGE_CODE == 'th' %}
             <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
         {% else %}
-            <link href="{% static 'conf/css/nanum-gothic.css' %}" rel="stylesheet">
+            <link href="{% static 'conf/css/godo.css' %}" rel="stylesheet">
         {% endif %}
         <link type="text/css" href="{% static 'conf/css/uikit.css' %}"
               media="screen,projection" rel="stylesheet"/>
@@ -148,7 +148,7 @@
                         <button name="language" type="submit" value="ko" class="language-button">
                             <img src="{% static 'conf/images/flags/ko.svg' %}" alt="{% trans 'Korean' %}">
                         </button>
-                        <button name="language" type="submit" value="zh" class="language-button">
+                        <button name="language" type="submit" value="zh-cn" class="language-button">
                             <img src="{% static 'conf/images/flags/zh.svg' %}" alt="{% trans 'Chinese' %}">
                         </button>
                         <button name="language" type="submit" value="ja" class="language-button">

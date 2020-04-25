@@ -10,7 +10,7 @@
  */
 html {
   /* 1 */
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: Godo, Sarabun, sans-serif;
   font-size: 15px;
   font-weight: normal;
   line-height: 1.5;
@@ -236,7 +236,7 @@ h6, .uk-h6,
 .uk-heading-xlarge,
 .uk-heading-2xlarge {
   margin: 0 0 8px 0;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: Godo, Sarabun, sans-serif;
   font-weight: normal;
   color: #333;
   text-transform: none; }
@@ -4015,7 +4015,7 @@ ul.uk-nav-sub {
   padding: 0 8px;
   /* 3 */
   font-size: 0.9rem;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: Godo, Sarabun, sans-serif;
   /* 4 */
   text-decoration: none; }
 
@@ -7935,7 +7935,7 @@ iframe.uk-cover {
  */
 .uk-logo {
   font-size: 1.3rem;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: Godo, Sarabun, sans-serif;
   color: #333;
   /* 1 */
   text-decoration: none; }
