@@ -1,0 +1,72 @@
+{% extends './base.html' %}
+
+{% load i18n static %}
+
+{% block main %}
+    <main>
+        <div class="uk-section uk-section-muted">
+            <div class="uk-container">
+                <h3 class="">{% trans 'PRIVACY POLICY' %}</h3>
+                <p>
+                    {% trans 'WITH THAI collects some Personal Data from its Users as shown below:' %}
+                </p>
+                <div class="uk-grid uk-child-width-1-3@m" uk-grid>
+                    <div class="">
+                        <ul class="uk-list uk-list-bullet">
+                            <li>{% trans 'Username' %}</li>
+                            <li>{% trans 'Personal name' %}</li>
+                            <li>{% trans 'Email address' %}</li>
+                            <li>{% trans 'Telephone number' %}</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <ul class="uk-list uk-list-bullet">
+                            <li>{% trans 'IP address' %}</li>
+                            <li>{% trans 'Cookies' %}</li>
+                            <li>{% trans 'Access logs' %}</li>
+                            <li>{% trans 'Transaction logs' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-section uk-section-muted">
+            <div class="uk-container">
+                <h3 class="">{% trans 'Use of the Data and other Data collected' %}</h3>
+                <div class="uk-grid uk-child-width-1-3@m" uk-grid>
+                    <div class="">
+                        <p>{% trans "Access to third party services’ accounts" %}</p>
+                        <ul class="uk-list uk-list-bullet">
+                            <li>{% trans 'Naver Corp.' %}</li>
+                            <li>{% trans 'Kakao Corp.' %}</li>
+                            <li>{% trans 'LINE Corporation, Ltd.' %}</li>
+                            <li>{% trans 'Facebook, Inc.' %}</li>
+                            <li>{% trans 'Google LLC' %}</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <p>{% trans "Analytics" %}</p>
+                        <ul class="uk-list uk-list-bullet">
+                            <li>{% trans 'Google Analytics: Cookies and Usage data' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-section uk-section-muted">
+            <div class="uk-container">
+                <div class="uk-grid" uk-grid>
+                    <div class="">
+                        <h3 class="">{% trans 'Contact information' %}</h3>
+                        <p>
+                            {% trans 'The person in charge' %}
+                        </p>
+                        <ul class="uk-list uk-list-bullet">
+                            <li>{% trans 'WITH THAI, Co. Ltd., help@withthai.com' %}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

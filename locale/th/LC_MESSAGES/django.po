@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-26 00:47+0700\n"
+"POT-Creation-Date: 2020-04-26 15:32+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,11 +157,11 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: conf/models.py:141
+#: conf/models.py:141 help/templates/help/privacy.html:16
 msgid "Username"
 msgstr ""
 
-#: conf/models.py:148 golf/models.py:173
+#: conf/models.py:148 golf/models.py:173 help/templates/help/privacy.html:18
 msgid "Email address"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Website URL"
 msgstr ""
 
-#: conf/models.py:160
+#: conf/models.py:160 help/templates/help/privacy.html:24
 msgid "IP address"
 msgstr ""
 
@@ -312,7 +312,7 @@ msgstr ""
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:328
+#: conf/templates/conf/base.html:328 help/templates/help/privacy.html:9
 msgid "PRIVACY POLICY"
 msgstr ""
 
@@ -568,6 +568,78 @@ msgstr "ใบสำคัญแสดงจดทะเบียนห้าง
 #: help/templates/help/about.html:34
 msgid "Tourism License"
 msgstr "ใบอนุญาตประกอบธุรกิจนำเที่ยว"
+
+#: help/templates/help/privacy.html:11
+msgid "WITH THAI collects some Personal Data from its Users as shown below:"
+msgstr ""
+
+#: help/templates/help/privacy.html:17
+msgid "Personal name"
+msgstr ""
+
+#: help/templates/help/privacy.html:19
+msgid "Telephone number"
+msgstr ""
+
+#: help/templates/help/privacy.html:25
+msgid "Cookies"
+msgstr ""
+
+#: help/templates/help/privacy.html:26
+msgid "Access logs"
+msgstr ""
+
+#: help/templates/help/privacy.html:27
+msgid "Transaction logs"
+msgstr ""
+
+#: help/templates/help/privacy.html:35
+msgid "Use of the Data and other Data collected"
+msgstr ""
+
+#: help/templates/help/privacy.html:38
+msgid "Access to third party services’ accounts"
+msgstr ""
+
+#: help/templates/help/privacy.html:40
+msgid "Naver Corp."
+msgstr ""
+
+#: help/templates/help/privacy.html:41
+msgid "Kakao Corp."
+msgstr ""
+
+#: help/templates/help/privacy.html:42
+msgid "LINE Corporation, Ltd."
+msgstr ""
+
+#: help/templates/help/privacy.html:43
+msgid "Facebook, Inc."
+msgstr ""
+
+#: help/templates/help/privacy.html:44
+msgid "Google LLC"
+msgstr ""
+
+#: help/templates/help/privacy.html:48
+msgid "Analytics"
+msgstr ""
+
+#: help/templates/help/privacy.html:50
+msgid "Google Analytics: Cookies and Usage data"
+msgstr ""
+
+#: help/templates/help/privacy.html:60
+msgid "Contact information"
+msgstr ""
+
+#: help/templates/help/privacy.html:62
+msgid "The person in charge"
+msgstr ""
+
+#: help/templates/help/privacy.html:65
+msgid "WITH THAI, Co. Ltd., help@withthai.com"
+msgstr ""
 
 #: hotel/apps.py:7
 msgid "Hotel"

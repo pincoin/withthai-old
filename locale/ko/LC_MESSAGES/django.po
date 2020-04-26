@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-26 00:47+0700\n"
+"POT-Creation-Date: 2020-04-26 15:32+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,11 +157,11 @@ msgstr "삭제됨"
 msgid "Content"
 msgstr "내용"
 
-#: conf/models.py:141
+#: conf/models.py:141 help/templates/help/privacy.html:16
 msgid "Username"
 msgstr "아이디"
 
-#: conf/models.py:148 golf/models.py:173
+#: conf/models.py:148 golf/models.py:173 help/templates/help/privacy.html:18
 msgid "Email address"
 msgstr "이메일주소"
 
@@ -169,7 +169,7 @@ msgstr "이메일주소"
 msgid "Website URL"
 msgstr "웹사이트주소"
 
-#: conf/models.py:160
+#: conf/models.py:160 help/templates/help/privacy.html:24
 msgid "IP address"
 msgstr "IP 주소"
 
@@ -206,16 +206,12 @@ msgid "English"
 msgstr "영어"
 
 #: conf/settings/local.py:11 conf/templates/conf/base.html:156
-#, fuzzy
-#| msgid "Japan"
 msgid "Japanese"
-msgstr "일본"
+msgstr "일본어"
 
 #: conf/settings/local.py:12 conf/templates/conf/base.html:153
-#, fuzzy
-#| msgid "China"
 msgid "Chinese"
-msgstr "중국"
+msgstr "중국어"
 
 #: conf/templates/conf/base.html:17 conf/templates/conf/base.html:45
 #: conf/templates/conf/base.html:47 conf/templates/conf/base.html:171
@@ -316,7 +312,7 @@ msgstr "자주 묻는 질문"
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/base.html:328
+#: conf/templates/conf/base.html:328 help/templates/help/privacy.html:9
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
@@ -572,6 +568,78 @@ msgstr "태국 회사등록증"
 #: help/templates/help/about.html:34
 msgid "Tourism License"
 msgstr "태국 여행업 허가증"
+
+#: help/templates/help/privacy.html:11
+msgid "WITH THAI collects some Personal Data from its Users as shown below:"
+msgstr "위드타이는 사용자로부터 다음 개인정보를 수집합니다."
+
+#: help/templates/help/privacy.html:17
+msgid "Personal name"
+msgstr "이름"
+
+#: help/templates/help/privacy.html:19
+msgid "Telephone number"
+msgstr "전화번호"
+
+#: help/templates/help/privacy.html:25
+msgid "Cookies"
+msgstr "쿠키"
+
+#: help/templates/help/privacy.html:26
+msgid "Access logs"
+msgstr "접속 로그"
+
+#: help/templates/help/privacy.html:27
+msgid "Transaction logs"
+msgstr "결제기록"
+
+#: help/templates/help/privacy.html:35
+msgid "Use of the Data and other Data collected"
+msgstr "수집된 개인 정보의 이용"
+
+#: help/templates/help/privacy.html:38
+msgid "Access to third party services’ accounts"
+msgstr "서드파티 서비스 계정에 접근"
+
+#: help/templates/help/privacy.html:40
+msgid "Naver Corp."
+msgstr "네이버"
+
+#: help/templates/help/privacy.html:41
+msgid "Kakao Corp."
+msgstr "카카오"
+
+#: help/templates/help/privacy.html:42
+msgid "LINE Corporation, Ltd."
+msgstr "라인"
+
+#: help/templates/help/privacy.html:43
+msgid "Facebook, Inc."
+msgstr "페이스북"
+
+#: help/templates/help/privacy.html:44
+msgid "Google LLC"
+msgstr "구글"
+
+#: help/templates/help/privacy.html:48
+msgid "Analytics"
+msgstr "애널리틱스"
+
+#: help/templates/help/privacy.html:50
+msgid "Google Analytics: Cookies and Usage data"
+msgstr "구글 애널리틱스: 쿠키와 이용 데이터"
+
+#: help/templates/help/privacy.html:60
+msgid "Contact information"
+msgstr "문의"
+
+#: help/templates/help/privacy.html:62
+msgid "The person in charge"
+msgstr "담당자"
+
+#: help/templates/help/privacy.html:65
+msgid "WITH THAI, Co. Ltd., help@withthai.com"
+msgstr "위드타이, help@withthai.com"
 
 #: hotel/apps.py:7
 msgid "Hotel"
