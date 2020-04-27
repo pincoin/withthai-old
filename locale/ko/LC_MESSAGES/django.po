@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-26 21:57+0700\n"
+"POT-Creation-Date: 2020-04-27 23:13+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -568,6 +568,26 @@ msgstr "태국 회사등록증"
 #: help/templates/help/about.html:34
 msgid "Tourism License"
 msgstr "태국 여행업 허가증"
+
+#: help/templates/help/guide.html:9
+msgid "GUIDE"
+msgstr "이용가이드"
+
+#: help/templates/help/guide.html:12
+msgid "How to book"
+msgstr "예약하기"
+
+#: help/templates/help/guide.html:20
+msgid "How to play"
+msgstr "라운딩하기"
+
+#: help/templates/help/guide.html:28
+msgid "How to cancel or amend"
+msgstr "예약 취소 또는 변경하기"
+
+#: help/templates/help/guide.html:36
+msgid "How to refund"
+msgstr "환불하기"
 
 #: help/templates/help/privacy.html:11
 msgid "WITH THAI collects some Personal Data from its Users as shown below:"

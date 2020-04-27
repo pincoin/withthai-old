@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-26 21:57+0700\n"
+"POT-Creation-Date: 2020-04-27 23:13+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -567,6 +567,26 @@ msgstr ""
 
 #: help/templates/help/about.html:34
 msgid "Tourism License"
+msgstr ""
+
+#: help/templates/help/guide.html:9
+msgid "GUIDE"
+msgstr ""
+
+#: help/templates/help/guide.html:12
+msgid "How to book"
+msgstr ""
+
+#: help/templates/help/guide.html:20
+msgid "How to play"
+msgstr ""
+
+#: help/templates/help/guide.html:28
+msgid "How to cancel or amend"
+msgstr ""
+
+#: help/templates/help/guide.html:36
+msgid "How to refund"
 msgstr ""
 
 #: help/templates/help/privacy.html:11

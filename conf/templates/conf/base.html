@@ -314,6 +314,12 @@
                     <h4 class="footer-info-heading">{% trans "Help" %}</h4>
                     <ul class="uk-list footer-info-list">
                         <li>
+                            <a href="{% url 'help:guide' %}">
+                                {% trans 'GUIDE' %}
+                            </a>
+
+                        </li>
+                        <li>
                             <a href="{% url 'help:faq-list' %}">
                                 {% trans 'FAQ/How-to' %}
                             </a>
@@ -321,9 +327,7 @@
                         <li>
                             <a href="{% url 'help:terms' %}">
                                 {% trans 'TERMS &amp; CONDITIONS' %}
-                            </a>
-                        </li>
-                        <li>
+                            </a> &middot;
                             <a href="{% url 'help:privacy' %}">
                                 {% trans 'PRIVACY POLICY' %}
                             </a>
