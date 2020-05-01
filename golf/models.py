@@ -108,7 +108,7 @@ class District(model_utils_models.TimeStampedModel):
         verbose_name_plural = _('Districts')
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return '{}'.format(self.title_english)
 
 
 class Club(model_utils_models.TimeStampedModel):
