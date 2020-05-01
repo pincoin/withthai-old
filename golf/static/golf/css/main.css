@@ -1,0 +1,16 @@
+.club-list-price {
+    font-size: 24px;
+}
+
+/* Desktop */
+@media (min-width: 960px) {
+    .club-list-description {
+        padding-left: 12px;
+    }
+}
+
+/* Small devices */
+@media (max-width: 959px) {
+    .club-list-description {
+    }
+}

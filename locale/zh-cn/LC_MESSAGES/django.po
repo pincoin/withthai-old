@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-27 23:13+0700\n"
+"POT-Creation-Date: 2020-05-01 22:15+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -304,23 +304,27 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: conf/templates/conf/base.html:318
+#: conf/templates/conf/base.html:318 help/templates/help/guide.html:9
+msgid "GUIDE"
+msgstr ""
+
+#: conf/templates/conf/base.html:324
 msgid "FAQ/How-to"
 msgstr ""
 
-#: conf/templates/conf/base.html:323 help/templates/help/terms.html:9
+#: conf/templates/conf/base.html:329 help/templates/help/terms.html:9
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:328 help/templates/help/privacy.html:9
+#: conf/templates/conf/base.html:332 help/templates/help/privacy.html:9
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:333
+#: conf/templates/conf/base.html:337
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:338
+#: conf/templates/conf/base.html:342
 msgid "CONTACT US"
 msgstr ""
 
@@ -549,6 +553,43 @@ msgstr ""
 msgid "Prices"
 msgstr ""
 
+#: golf/templates/golf/home.html:13
+msgid "Search Golf course / Area"
+msgstr ""
+
+#: golf/templates/golf/home.html:16
+msgid "Where to?"
+msgstr ""
+
+#: golf/templates/golf/home.html:22
+msgid "Search"
+msgstr ""
+
+#: golf/templates/golf/home.html:28
+msgid "Sorting"
+msgstr ""
+
+#: golf/templates/golf/home.html:32
+msgid "A - Z"
+msgstr ""
+
+#: golf/templates/golf/home.html:36
+msgid "Price: Low - High"
+msgstr ""
+
+#: golf/templates/golf/home.html:40
+msgid "Price: High - Low"
+msgstr ""
+
+#: golf/templates/golf/home.html:44
+msgid "Rating: 5 Star - 1 Star"
+msgstr ""
+
+#: golf/templates/golf/home.html:63 golf/templates/golf/home.html:81
+#: golf/templates/golf/home.html:99 golf/templates/golf/home.html:117
+msgid "Start From"
+msgstr ""
+
 #: help/templates/help/about.html:14
 msgid "We make online hotel/golf booking convenient."
 msgstr ""
@@ -567,10 +608,6 @@ msgstr ""
 
 #: help/templates/help/about.html:34
 msgid "Tourism License"
-msgstr ""
-
-#: help/templates/help/guide.html:9
-msgid "GUIDE"
 msgstr ""
 
 #: help/templates/help/guide.html:12
@@ -654,10 +691,6 @@ msgid "Contact information"
 msgstr ""
 
 #: help/templates/help/privacy.html:62
-msgid "The person in charge"
-msgstr ""
-
-#: help/templates/help/privacy.html:65
 msgid "WITH THAI, Co. Ltd., help@withthai.com"
 msgstr ""
 
