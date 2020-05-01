@@ -12,15 +12,17 @@ class HolidayAdmin(admin.ModelAdmin):
 
 
 class AreaAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title_english', 'title_thai', 'title_korean')
 
 
 class ProvinceAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title_english', 'title_thai', 'title_korean', 'area')
+    list_filter = ('area__title_english',)
 
 
 class DistrictAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title_english', 'title_thai', 'title_korean')
+    list_filter = ('province__title_english',)
 
 
 class ClubAdmin(admin.ModelAdmin):

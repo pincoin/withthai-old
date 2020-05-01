@@ -64,7 +64,7 @@ class Area(model_utils_models.TimeStampedModel):
 
 
 class Province(model_utils_models.TimeStampedModel):
-    title_enlish = models.CharField(
+    title_english = models.CharField(
         verbose_name=_('Province English name'),
         max_length=255,
     )
@@ -91,7 +91,7 @@ class Province(model_utils_models.TimeStampedModel):
         verbose_name_plural = _('Provinces')
 
     def __str__(self):
-        return '{}'.format(self.title_enlish)
+        return '{}'.format(self.title_english)
 
 
 class District(model_utils_models.TimeStampedModel):
