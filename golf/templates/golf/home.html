@@ -1,0 +1,14 @@
+{% extends 'conf/base.html' %}
+
+{% load i18n static %}
+
+{% block main %}
+    <main>
+        golf home
+    </main>
+{% endblock %}
+
+{% block stylesheet %}
+    {{ block.super}}
+    <link type="text/css" href="{% static 'golf/css/main.css' %}" rel="stylesheet">
+{% endblock %}
