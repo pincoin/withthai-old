@@ -79,6 +79,13 @@ class Province(model_utils_models.TimeStampedModel):
         max_length=255,
     )
 
+    area = models.ForeignKey(
+        'golf.Area',
+        verbose_name=_('Location area'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
     class Meta:
         verbose_name = _('Province')
         verbose_name_plural = _('Provinces')
@@ -101,6 +108,13 @@ class District(model_utils_models.TimeStampedModel):
     title_korean = models.CharField(
         verbose_name=_('District Korean name'),
         max_length=255,
+    )
+
+    province = models.ForeignKey(
+        'golf.Province',
+        verbose_name=_('Province'),
+        db_index=True,
+        on_delete=models.CASCADE,
     )
 
     class Meta:
@@ -139,20 +153,6 @@ class Club(model_utils_models.TimeStampedModel):
     title_korean = models.CharField(
         verbose_name=_('Golf club Korean name'),
         max_length=255,
-    )
-
-    area = models.ForeignKey(
-        'golf.Area',
-        verbose_name=_('Location area'),
-        db_index=True,
-        on_delete=models.CASCADE,
-    )
-
-    province = models.ForeignKey(
-        'golf.Province',
-        verbose_name=_('Province'),
-        db_index=True,
-        on_delete=models.CASCADE,
     )
 
     district = models.ForeignKey(
