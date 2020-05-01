@@ -394,43 +394,43 @@ msgstr "지역"
 
 #: golf/models.py:68
 msgid "Province English name"
-msgstr "주 영문명"
+msgstr "도 영문명"
 
 #: golf/models.py:73
 msgid "Province Thai name"
-msgstr "주 태국명"
+msgstr "도 태국명"
 
 #: golf/models.py:78
 msgid "Province Korean name"
-msgstr "주 국문명"
+msgstr "도 국문명"
 
 #: golf/models.py:83 golf/models.py:153
 msgid "Province"
-msgstr "주"
+msgstr "도"
 
 #: golf/models.py:84
 msgid "Provinces"
-msgstr "주"
+msgstr "도"
 
 #: golf/models.py:92
 msgid "District English name"
-msgstr "시 영문명"
+msgstr "군 영문명"
 
 #: golf/models.py:97
 msgid "District Thai name"
-msgstr "시 태국명 "
+msgstr "군 태국명 "
 
 #: golf/models.py:102
 msgid "District Korean name"
-msgstr "시 국문명"
+msgstr "군 국문명"
 
 #: golf/models.py:107 golf/models.py:160
 msgid "District"
-msgstr "시"
+msgstr "군"
 
 #: golf/models.py:108
 msgid "Districts"
-msgstr "시"
+msgstr "군"
 
 #: golf/models.py:116
 msgid "18 Holes"
