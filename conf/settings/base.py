@@ -45,6 +45,7 @@ INSTALLED_APPS += [
     'allauth.socialaccount.providers.kakao',
     'allauth.socialaccount.providers.naver',
     'member.socialaccount.providers.line',
+    'easy_thumbnails',
 ]
 
 INSTALLED_APPS += [

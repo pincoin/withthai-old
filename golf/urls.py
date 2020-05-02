@@ -1,6 +1,4 @@
-from django.urls import (
-    path, re_path
-)
+from django.urls import path
 
 from . import views
 
@@ -10,6 +8,6 @@ urlpatterns = [
     path('',
          views.HomeView.as_view(), name='home'),
 
-    re_path(r'^(?P<slug>[-\w]+)/$',
-            views.HomeView.as_view(), name='club-detail'),
+    path('<slug:slug>/',
+         views.HomeView.as_view(), name='club-detail'),
 ]

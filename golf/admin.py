@@ -26,7 +26,8 @@ class DistrictAdmin(admin.ModelAdmin):
 
 
 class ClubAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title_english', 'title_thai', 'title_korean')
+    prepopulated_fields = {'slug': ('title_english',)}
 
 
 class PriceAdmin(admin.ModelAdmin):

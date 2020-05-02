@@ -1,7 +1,16 @@
+import uuid
+
 from django.db import models
+from django.utils.timezone import now
 from django.utils.translation import gettext_lazy as _
+from easy_thumbnails.fields import ThumbnailerImageField
 from model_utils import Choices
 from model_utils import models as model_utils_models
+
+
+def upload_directory_path(instance, filename):
+    # File will be uploaded to MEDIA_ROOT/golf/<today>/<uuid>.<ext>
+    return 'golf/{}/{}.{}'.format(now().strftime('%Y-%m-%d'), uuid.uuid4(), filename.split('.')[-1])
 
 
 class Holiday(model_utils_models.TimeStampedModel):
@@ -155,6 +164,15 @@ class Club(model_utils_models.TimeStampedModel):
         max_length=255,
     )
 
+    slug = models.SlugField(
+        verbose_name=_('Slug'),
+        help_text=_('A short label containing only letters, numbers, underscores or hyphens for URL'),
+        max_length=255,
+        db_index=True,
+        unique=True,
+        allow_unicode=True,
+    )
+
     district = models.ForeignKey(
         'golf.District',
         verbose_name=_('District'),
@@ -209,6 +227,46 @@ class Club(model_utils_models.TimeStampedModel):
         max_digits=11,
         decimal_places=2,
         help_text=_('THB'),
+    )
+
+    thumbnail1 = ThumbnailerImageField(
+        verbose_name=_('Thumbnail 1'),
+        upload_to=upload_directory_path,
+        blank=True,
+        null=True,
+    )
+
+    thumbnail2 = ThumbnailerImageField(
+        verbose_name=_('Thumbnail 2'),
+        upload_to=upload_directory_path,
+        blank=True,
+        null=True,
+    )
+
+    thumbnail3 = ThumbnailerImageField(
+        verbose_name=_('Thumbnail 3'),
+        upload_to=upload_directory_path,
+        blank=True,
+        null=True,
+    )
+
+    thumbnail4 = ThumbnailerImageField(
+        verbose_name=_('Thumbnail 4'),
+        upload_to=upload_directory_path,
+        blank=True,
+        null=True,
+    )
+
+    thumbnail5 = ThumbnailerImageField(
+        verbose_name=_('Thumbnail 5'),
+        upload_to=upload_directory_path,
+        blank=True,
+        null=True,
+    )
+
+    position = models.IntegerField(
+        verbose_name=_('Position'),
+        default=0,
     )
 
     class Meta:
