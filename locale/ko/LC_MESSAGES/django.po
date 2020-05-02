@@ -588,7 +588,7 @@ msgstr "평점순"
 #: golf/templates/golf/home.html:63 golf/templates/golf/home.html:81
 #: golf/templates/golf/home.html:99 golf/templates/golf/home.html:117
 msgid "Start From"
-msgstr "최저가"
+msgstr "시작가"
 
 #: help/templates/help/about.html:14
 msgid "We make online hotel/golf booking convenient."

@@ -204,6 +204,13 @@ class Club(model_utils_models.TimeStampedModel):
         db_index=True,
     )
 
+    green_fee_selling_price = models.DecimalField(
+        verbose_name=_('Start from'),
+        max_digits=11,
+        decimal_places=2,
+        help_text=_('THB'),
+    )
+
     class Meta:
         verbose_name = _('Golf club')
         verbose_name_plural = _('Golf clubs')
