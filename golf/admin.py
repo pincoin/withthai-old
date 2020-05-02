@@ -28,6 +28,7 @@ class DistrictAdmin(admin.ModelAdmin):
 class ClubAdmin(admin.ModelAdmin):
     list_display = ('title_english', 'title_thai', 'title_korean')
     prepopulated_fields = {'slug': ('title_english',)}
+    list_filter = ('district__province__title_english', 'hole')
 
 
 class PriceAdmin(admin.ModelAdmin):

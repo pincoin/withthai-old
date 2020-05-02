@@ -152,16 +152,19 @@ class Club(model_utils_models.TimeStampedModel):
     title_english = models.CharField(
         verbose_name=_('Golf club English name'),
         max_length=255,
+        db_index=True,
     )
 
     title_thai = models.CharField(
         verbose_name=_('Golf club Thai name'),
         max_length=255,
+        db_index=True,
     )
 
     title_korean = models.CharField(
         verbose_name=_('Golf club Korean name'),
         max_length=255,
+        db_index=True,
     )
 
     slug = models.SlugField(
@@ -227,6 +230,7 @@ class Club(model_utils_models.TimeStampedModel):
         max_digits=11,
         decimal_places=2,
         help_text=_('THB'),
+        db_index=True,
     )
 
     thumbnail1 = ThumbnailerImageField(
@@ -267,6 +271,7 @@ class Club(model_utils_models.TimeStampedModel):
     position = models.IntegerField(
         verbose_name=_('Position'),
         default=0,
+        db_index=True,
     )
 
     class Meta:
