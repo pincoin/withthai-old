@@ -19,19 +19,21 @@ class AreaAdmin(admin.ModelAdmin):
 class ProvinceAdmin(admin.ModelAdmin):
     list_display = ('title_english', 'title_thai', 'title_korean', 'area', 'position')
     list_filter = ('area__title_english',)
-    ordering = ('area__position', 'position',)
+    ordering = ('area', 'position',)
 
 
 class DistrictAdmin(admin.ModelAdmin):
     list_display = ('title_english', 'title_thai', 'title_korean', 'province', 'position')
     list_filter = ('province__title_english',)
-    ordering = ('province__position', 'position',)
+    ordering = ('province', 'position',)
 
 
 class ClubAdmin(admin.ModelAdmin):
-    list_display = ('title_english', 'title_thai', 'title_korean')
+    list_display = ('title_english', 'title_thai', 'title_korean', 'district',
+                    'slug', 'hole', 'green_fee_selling_price', 'position')
     prepopulated_fields = {'slug': ('title_english',)}
     list_filter = ('district__province__title_english', 'hole')
+    ordering = ('district', 'position',)
 
 
 class PriceAdmin(admin.ModelAdmin):
