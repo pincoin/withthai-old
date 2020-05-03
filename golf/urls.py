@@ -6,8 +6,8 @@ app_name = 'golf'
 
 urlpatterns = [
     path('',
-         views.HomeView.as_view(), name='home'),
+         views.GolfClubListView.as_view(), name='golf-club-list'),
 
     path('<slug:slug>/',
-         views.HomeView.as_view(), name='club-detail'),
+         views.GolfClubListView.as_view(), name='golf-club-detail'),
 ]
