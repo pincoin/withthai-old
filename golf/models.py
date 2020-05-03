@@ -64,6 +64,12 @@ class Area(model_utils_models.TimeStampedModel):
         max_length=255,
     )
 
+    position = models.IntegerField(
+        verbose_name=_('Position'),
+        default=0,
+        db_index=True,
+    )
+
     class Meta:
         verbose_name = _('Area')
         verbose_name_plural = _('Areas')
@@ -95,6 +101,12 @@ class Province(model_utils_models.TimeStampedModel):
         on_delete=models.CASCADE,
     )
 
+    position = models.IntegerField(
+        verbose_name=_('Position'),
+        default=0,
+        db_index=True,
+    )
+
     class Meta:
         verbose_name = _('Province')
         verbose_name_plural = _('Provinces')
@@ -124,6 +136,12 @@ class District(model_utils_models.TimeStampedModel):
         verbose_name=_('Province'),
         db_index=True,
         on_delete=models.CASCADE,
+    )
+
+    position = models.IntegerField(
+        verbose_name=_('Position'),
+        default=0,
+        db_index=True,
     )
 
     class Meta:

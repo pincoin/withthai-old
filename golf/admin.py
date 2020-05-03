@@ -12,17 +12,20 @@ class HolidayAdmin(admin.ModelAdmin):
 
 
 class AreaAdmin(admin.ModelAdmin):
-    list_display = ('title_english', 'title_thai', 'title_korean')
+    list_display = ('title_english', 'title_thai', 'title_korean', 'position')
+    ordering = ('position',)
 
 
 class ProvinceAdmin(admin.ModelAdmin):
-    list_display = ('title_english', 'title_thai', 'title_korean', 'area')
+    list_display = ('title_english', 'title_thai', 'title_korean', 'area', 'position')
     list_filter = ('area__title_english',)
+    ordering = ('area__position', 'position',)
 
 
 class DistrictAdmin(admin.ModelAdmin):
-    list_display = ('title_english', 'title_thai', 'title_korean')
+    list_display = ('title_english', 'title_thai', 'title_korean', 'province', 'position')
     list_filter = ('province__title_english',)
+    ordering = ('province__position', 'position',)
 
 
 class ClubAdmin(admin.ModelAdmin):
