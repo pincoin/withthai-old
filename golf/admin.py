@@ -36,7 +36,7 @@ class ClubAdmin(admin.ModelAdmin):
     ordering = ('district', 'position',)
 
 
-class PriceAdmin(admin.ModelAdmin):
+class RateAdmin(admin.ModelAdmin):
     pass
 
 
@@ -45,4 +45,4 @@ admin.site.register(models.Area, AreaAdmin)
 admin.site.register(models.Province, ProvinceAdmin)
 admin.site.register(models.District, DistrictAdmin)
 admin.site.register(models.Club, ClubAdmin)
-admin.site.register(models.Price, PriceAdmin)
+admin.site.register(models.Rate, RateAdmin)

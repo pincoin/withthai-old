@@ -300,7 +300,7 @@ class Club(model_utils_models.TimeStampedModel):
         return '{} {} {}'.format(self.title_english, self.email, self.phone)
 
 
-class Price(model_utils_models.TimeStampedModel):
+class Rate(model_utils_models.TimeStampedModel):
     DAY_CHOICES = Choices(
         (0, 'weekday', _('Weekday')),
         (1, 'weekend', _('Weekend')),
@@ -384,8 +384,8 @@ class Price(model_utils_models.TimeStampedModel):
     )
 
     class Meta:
-        verbose_name = _('Price')
-        verbose_name_plural = _('Prices')
+        verbose_name = _('Service rate')
+        verbose_name_plural = _('Service rates')
 
     def __str__(self):
         return '{} {}'.format(self.season_start, self.season_end)

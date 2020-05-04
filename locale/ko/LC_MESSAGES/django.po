@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 18:36+0700\n"
+"POT-Creation-Date: 2020-05-04 18:41+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -578,12 +578,12 @@ msgid "Cart fee cost price"
 msgstr "카.피 매입가"
 
 #: golf/models.py:387
-msgid "Price"
-msgstr "가격표"
+msgid "Service rate"
+msgstr "요금표"
 
 #: golf/models.py:388
-msgid "Prices"
-msgstr "가격표"
+msgid "Service rates"
+msgstr "요금표"
 
 #: golf/templates/golf/golf-club-list.html:13
 msgid "Search Golf course / Area"
