@@ -328,11 +328,11 @@ class Price(model_utils_models.TimeStampedModel):
         db_index=True,
     )
 
-    slot_start = models.DateField(
+    slot_start = models.TimeField(
         verbose_name=_('Slot start time'),
     )
 
-    slot_end = models.DateField(
+    slot_end = models.TimeField(
         verbose_name=_('Slot end time'),
     )
 
