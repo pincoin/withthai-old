@@ -336,6 +336,11 @@ class Price(model_utils_models.TimeStampedModel):
         verbose_name=_('Slot end time'),
     )
 
+    title = models.CharField(
+        verbose_name=_('Rate title'),
+        max_length=255,
+    )
+
     green_fee_selling_price = models.DecimalField(
         verbose_name=_('Green fee selling price'),
         max_digits=11,
