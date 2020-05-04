@@ -306,6 +306,14 @@ class Rate(model_utils_models.TimeStampedModel):
         (1, 'weekend', _('Weekend')),
     )
 
+    RATE_CHOICES = Choices(
+        (0, 'day_golf', _('Day golf')),
+        (1, 'day_golf_1', _('Day golf 1st round')),
+        (2, 'day_golf_1', _('Day golf 2nd round')),
+        (3, 'twilight_golf', _('Twilight golf')),
+        (4, 'night_golf', _('Night golf')),
+    )
+
     club = models.ForeignKey(
         'golf.Club',
         verbose_name=_('Golf club'),
@@ -336,9 +344,11 @@ class Rate(model_utils_models.TimeStampedModel):
         verbose_name=_('Slot end time'),
     )
 
-    title = models.CharField(
+    title = models.IntegerField(
         verbose_name=_('Rate title'),
-        max_length=255,
+        choices=RATE_CHOICES,
+        default=RATE_CHOICES.day_golf,
+        db_index=True,
     )
 
     green_fee_selling_price = models.DecimalField(

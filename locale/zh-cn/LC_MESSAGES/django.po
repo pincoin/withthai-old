@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 18:41+0700\n"
+"POT-Creation-Date: 2020-05-04 19:09+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -488,8 +488,8 @@ msgstr ""
 msgid "Start from"
 msgstr ""
 
-#: golf/models.py:250 golf/models.py:348 golf/models.py:355 golf/models.py:362
-#: golf/models.py:369 golf/models.py:376 golf/models.py:383
+#: golf/models.py:250 golf/models.py:358 golf/models.py:365 golf/models.py:372
+#: golf/models.py:379 golf/models.py:386 golf/models.py:393
 msgid "THB"
 msgstr ""
 
@@ -513,7 +513,7 @@ msgstr ""
 msgid "Thumbnail 5"
 msgstr ""
 
-#: golf/models.py:296 golf/models.py:311
+#: golf/models.py:296 golf/models.py:319
 msgid "Golf club"
 msgstr ""
 
@@ -529,59 +529,79 @@ msgstr ""
 msgid "Weekend"
 msgstr ""
 
-#: golf/models.py:317
-msgid "Season start date"
+#: golf/models.py:310
+msgid "Day golf"
 msgstr ""
 
-#: golf/models.py:321
-msgid "Season end date"
+#: golf/models.py:311
+msgid "Day golf 1st round"
+msgstr ""
+
+#: golf/models.py:312
+msgid "Day golf 2nd round"
+msgstr ""
+
+#: golf/models.py:313
+msgid "Twilight golf"
+msgstr ""
+
+#: golf/models.py:314
+msgid "Night golf"
 msgstr ""
 
 #: golf/models.py:325
+msgid "Season start date"
+msgstr ""
+
+#: golf/models.py:329
+msgid "Season end date"
+msgstr ""
+
+#: golf/models.py:333
 msgid "Day of week"
 msgstr ""
 
-#: golf/models.py:332
+#: golf/models.py:340
 msgid "Slot start time"
 msgstr ""
 
-#: golf/models.py:336
+#: golf/models.py:344
 msgid "Slot end time"
 msgstr ""
 
-#: golf/models.py:340
+#: golf/models.py:348
 msgid "Rate title"
 msgstr ""
 
-#: golf/models.py:345
+#: golf/models.py:355
 msgid "Green fee selling price"
 msgstr ""
 
-#: golf/models.py:352
+#: golf/models.py:362
 msgid "Green fee cost price"
 msgstr ""
 
-#: golf/models.py:359
+#: golf/models.py:369
 msgid "Caddie fee selling price"
 msgstr ""
 
-#: golf/models.py:366
+#: golf/models.py:376
 msgid "Caddie fee cost price"
 msgstr ""
 
-#: golf/models.py:373
+#: golf/models.py:383
 msgid "Cart fee selling price"
 msgstr ""
 
-#: golf/models.py:380
+#: golf/models.py:390
 msgid "Cart fee cost price"
 msgstr ""
 
-#: golf/models.py:387
+#: golf/models.py:397
 msgid "Service rate"
 msgstr ""
 
-#: golf/models.py:388
+#: golf/models.py:398
 msgid "Service rates"
 msgstr ""
 
