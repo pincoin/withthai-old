@@ -29,4 +29,4 @@ class GolfClubListView(generic.ListView):
         return context
 
     def get_paginate_by(self, queryset):
-        return 20
+        return 10
