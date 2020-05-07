@@ -206,6 +206,7 @@ fabric.properties
 conf/settings/production.py
 secret.json
 assets/
+media/
 
 .sass-cache/
 *.css.map
