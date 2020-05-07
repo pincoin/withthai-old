@@ -4,69 +4,49 @@
 
 {% block main %}
     <main>
+        <div class="uk-section breadcrumbs">
+            <div class="uk-container">
+                <ul class="uk-breadcrumb ">
+                    <li><a href="">{% trans 'GOLF' %}</a></li>
+                    <li><a href="">방콕 근교</a></li>
+                    <li><span>싸뭇쁘라깐</span></li>
+                </ul>
+            </div>
+        </div>
         <div class="uk-section">
             <div class="uk-container">
-                <div uk-grid="uk-grid-collapse" class="uk-grid">
-                    <div class="uk-width-1-4@m">
-                        <div class="uk-grid uk-grid-collapse" uk-grid>
-                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body">
-                                <h3 class="uk-card-title">{% trans 'Search Golf course / Area' %}</h3>
-                                <form>
-                                    <div class="uk-margin">
-                                        <input type="text" placeholder="{% trans 'Where to?' %}"
-                                               class="uk-input uk-form-with-large">
-                                    </div>
-                                    <div class="uk-margin">
-                                        <button type="submit" class="uk-button uk-button-default uk-width-1-1">
-                                            <span uk-search-icon></span>
-                                            {% trans 'Search' %}
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="uk-width-1-1 uk-card uk-card-default uk-card-body">
-                                <h3 class="uk-card-title">{% trans 'Sorting' %}</h3>
-                                <div class="uk-form-controls uk-form-controls-text">
-                                    <label>
-                                        <input class="uk-radio" type="radio" name="radio1">
-                                        {% trans 'A - Z' %}
-                                    </label><br>
-                                    <label>
-                                        <input class="uk-radio" type="radio" name="radio1">
-                                        {% trans 'Price: Low - High' %}
-                                    </label><br>
-                                    <label>
-                                        <input class="uk-radio" type="radio" name="radio1">
-                                        {% trans 'Price: High - Low' %}
-                                    </label><br>
-                                    <label>
-                                        <input class="uk-radio" type="radio" name="radio1">
-                                        {% trans 'Rating: 5 Star - 1 Star' %}
-                                    </label>
+                <form>
+                    <select class="uk-select">
+                        <option>{% trans 'Rating: 5 Star - 1 Star' %}</option>
+                        <option>{% trans 'Price: Low - High' %}</option>
+                        <option>{% trans 'Price: High - Low' %}</option>
+                        <option>{% trans 'A - Z' %}</option>
+                    </select>
+                </form>
+
+                <div class="uk-grid" uk-grid>
+                    {% for club in clubs %}
+                        <div class="uk-width-1-1 uk-width-1-2@m uk-card uk-card-default uk-card-body">
+                            <div class="uk-flex uk-flex-wrap">
+                                <div class="uk-width-1-1 uk-width-1-3@m">
+                                    <a href="">
+                                        <img data-src="//via.placeholder.com/640x320"
+                                             width="640" height="320" alt="" uk-img="">
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-3-4@m">
-                        <div class="uk-grid uk-margin-auto-left" uk-grid>
-                            {% for club in clubs %}
-                                <div class="uk-width-1-1 uk-card uk-card-default uk-card-body">
-                                    <div class="uk-flex uk-flex-wrap">
-                                        <div class="uk-width-1-1 uk-width-1-3@m">
-                                            <img data-src="//via.placeholder.com/640x320"
-                                                 width="640" height="320" alt="" uk-img="">
-                                        </div>
-                                        <div class="uk-width-1-1 uk-width-2-3@m club-list-description">
-                                            <h3>
-                                                {% if LANGUAGE_CODE == 'th' %}
-                                                    {{ club.title_thai }}
-                                                {% elif LANGUAGE_CODE == 'ko' %}
-                                                    {{ club.title_korean }}
-                                                {% else %}
-                                                    {{ club.title_english }}
-                                                {% endif %}
-                                            </h3>
-                                            <span>
+                                <div class="uk-width-1-1 uk-width-2-3@m club-list-description">
+                                    <a href="">
+                                        <h3>
+                                            {% if LANGUAGE_CODE == 'th' %}
+                                                {{ club.title_thai }}
+                                            {% elif LANGUAGE_CODE == 'ko' %}
+                                                {{ club.title_korean }}
+                                            {% else %}
+                                                {{ club.title_english }}
+                                            {% endif %}
+                                        </h3>
+                                    </a>
+                                    <span>
                                                 {% if LANGUAGE_CODE == 'th' %}
                                                     {{ club.district.title_thai }}
                                                 {% elif LANGUAGE_CODE == 'ko' %}
@@ -74,29 +54,27 @@
                                                 {% else %}
                                                     {{ club.district.title_english }}
                                                 {% endif %}
-                                                -
-                                                {% if LANGUAGE_CODE == 'th' %}
-                                                    {{ club.district.province.title_thai }}
-                                                {% elif LANGUAGE_CODE == 'ko' %}
-                                                    {{ club.district.province.title_korean }}
-                                                {% else %}
-                                                    {{ club.district.province.title_english }}
-                                                {% endif %}
+                                        -
+                                        {% if LANGUAGE_CODE == 'th' %}
+                                            {{ club.district.province.title_thai }}
+                                        {% elif LANGUAGE_CODE == 'ko' %}
+                                            {{ club.district.province.title_korean }}
+                                        {% else %}
+                                            {{ club.district.province.title_english }}
+                                        {% endif %}
                                             </span>
-                                            <hr>
-                                            <div class="uk-align-right">
-                                                <span>{% trans 'Start From' %}</span> <br>
-                                                <span class="club-list-price">
+                                    <hr>
+                                    <div class="uk-align-right">
+                                        <span>{% trans 'Start From' %}</span> <br>
+                                        <span class="club-list-price">
                                                     {{ club.green_fee_selling_price|floatformat:0|intcomma }}
                                                 </span>
-                                                <span>THB</span>
-                                            </div>
-                                        </div>
+                                        <span>THB</span>
                                     </div>
                                 </div>
-                            {% endfor %}
+                            </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
