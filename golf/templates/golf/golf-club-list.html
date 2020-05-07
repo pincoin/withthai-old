@@ -76,6 +76,58 @@
                         </div>
                     {% endfor %}
                 </div>
+
+                {% if page_obj %}
+                    <ul class="uk-pagination uk-flex-center">
+                        {% if page_obj.has_previous %}
+                            <li>
+                                <a href="?page={{ page_obj.previous_page_number }}{% if q %}&q={{ q }}{% endif %}"
+                                   aria-label="Previous">
+                                    <span uk-pagination-previous></span>
+                                    <span class="sr-only">{% trans "Previous" %}</span>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="#">
+                                    <span uk-pagination-previous></span>
+                                    <span class="sr-only">{% trans "Previous" %}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+
+                        {% for i in page_range %}
+                            {% if page_obj.number == i %}
+                                <li class="uk-active">
+                                    <a href="#">{{ i }} <span class="sr-only">(current)</span></a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="?page={{ i }}{% if q %}&q={{ q }}{% endif %}">
+                                        {{ i }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if page_obj.has_next %}
+                            <li>
+                                <a href="?page={{ page_obj.next_page_number }}{% if q %}&q={{ q }}{% endif %}"
+                                   aria-label="Next">
+                                    <span uk-pagination-next></span>
+                                    <span class="sr-only">{% trans "Next" %}</span>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="#">
+                                    <span uk-pagination-next></span>
+                                    <span class="sr-only">{% trans "Next" %}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
             </div>
         </div>
     </main>
