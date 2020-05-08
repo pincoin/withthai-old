@@ -69,6 +69,7 @@ class Area(model_utils_models.TimeStampedModel):
         help_text=_('A short label containing only letters, numbers, underscores or hyphens for URL'),
         max_length=255,
         db_index=True,
+        unique=True,
         allow_unicode=True,
     )
 
@@ -107,6 +108,7 @@ class Province(model_utils_models.TimeStampedModel):
         help_text=_('A short label containing only letters, numbers, underscores or hyphens for URL'),
         max_length=255,
         db_index=True,
+        unique=True,
         allow_unicode=True,
     )
 
@@ -152,6 +154,7 @@ class District(model_utils_models.TimeStampedModel):
         help_text=_('A short label containing only letters, numbers, underscores or hyphens for URL'),
         max_length=255,
         db_index=True,
+        unique=True,
         allow_unicode=True,
     )
 
