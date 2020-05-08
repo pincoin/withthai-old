@@ -64,6 +64,14 @@ class Area(model_utils_models.TimeStampedModel):
         max_length=255,
     )
 
+    slug = models.SlugField(
+        verbose_name=_('Slug'),
+        help_text=_('A short label containing only letters, numbers, underscores or hyphens for URL'),
+        max_length=255,
+        db_index=True,
+        allow_unicode=True,
+    )
+
     position = models.IntegerField(
         verbose_name=_('Position'),
         default=0,
@@ -92,6 +100,14 @@ class Province(model_utils_models.TimeStampedModel):
     title_korean = models.CharField(
         verbose_name=_('Province Korean name'),
         max_length=255,
+    )
+
+    slug = models.SlugField(
+        verbose_name=_('Slug'),
+        help_text=_('A short label containing only letters, numbers, underscores or hyphens for URL'),
+        max_length=255,
+        db_index=True,
+        allow_unicode=True,
     )
 
     area = models.ForeignKey(
@@ -129,6 +145,14 @@ class District(model_utils_models.TimeStampedModel):
     title_korean = models.CharField(
         verbose_name=_('District Korean name'),
         max_length=255,
+    )
+
+    slug = models.SlugField(
+        verbose_name=_('Slug'),
+        help_text=_('A short label containing only letters, numbers, underscores or hyphens for URL'),
+        max_length=255,
+        db_index=True,
+        allow_unicode=True,
     )
 
     province = models.ForeignKey(

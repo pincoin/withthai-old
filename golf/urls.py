@@ -8,6 +8,12 @@ urlpatterns = [
     path('',
          views.GolfClubListView.as_view(), name='golf-club-list'),
 
-    path('<slug:slug>/',
+    path('area/<slug:slug>/',
+         views.GolfAreaListView.as_view(), name='golf-area-list'),
+
+    path('province/<slug:slug>/',
+         views.GolfProvinceListView.as_view(), name='golf-province-list'),
+
+    path('club/<slug:slug>/',
          views.GolfClubListView.as_view(), name='golf-club-detail'),
 ]
