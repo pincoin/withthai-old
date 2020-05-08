@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-04 19:09+0700\n"
+"POT-Creation-Date: 2020-05-09 00:23+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,11 +107,13 @@ msgstr ""
 msgid "Parent"
 msgstr ""
 
-#: conf/models.py:62 golf/models.py:189
+#: conf/models.py:62 golf/models.py:68 golf/models.py:107 golf/models.py:153
+#: golf/models.py:216
 msgid "Slug"
 msgstr ""
 
-#: conf/models.py:63 golf/models.py:190
+#: conf/models.py:63 golf/models.py:69 golf/models.py:108 golf/models.py:154
+#: golf/models.py:217
 msgid ""
 "A short label containing only letters, numbers, underscores or hyphens for "
 "URL"
@@ -161,7 +163,7 @@ msgstr ""
 msgid "Username"
 msgstr ""
 
-#: conf/models.py:148 golf/models.py:212 help/templates/help/privacy.html:18
+#: conf/models.py:148 golf/models.py:239 help/templates/help/privacy.html:18
 msgid "Email address"
 msgstr ""
 
@@ -236,7 +238,9 @@ msgid "CART"
 msgstr ""
 
 #: conf/templates/conf/base.html:108 conf/templates/conf/base.html:209
-#: conf/templates/conf/base.html:241
+#: conf/templates/conf/base.html:241 golf/templates/golf/golf-area-list.html:10
+#: golf/templates/golf/golf-club-list.html:10
+#: golf/templates/golf/golf-province-list.html:10
 msgid "GOLF"
 msgstr ""
 
@@ -336,19 +340,19 @@ msgstr ""
 msgid "Golf"
 msgstr ""
 
-#: golf/models.py:18 golf/models.py:164
+#: golf/models.py:18 golf/models.py:191
 msgid "Thailand"
 msgstr ""
 
-#: golf/models.py:19 golf/models.py:165
+#: golf/models.py:19 golf/models.py:192
 msgid "South Korea"
 msgstr ""
 
-#: golf/models.py:20 golf/models.py:166
+#: golf/models.py:20 golf/models.py:193
 msgid "Japan"
 msgstr ""
 
-#: golf/models.py:21 golf/models.py:167
+#: golf/models.py:21 golf/models.py:194
 msgid "China"
 msgstr ""
 
@@ -360,7 +364,7 @@ msgstr ""
 msgid "Holiday day"
 msgstr ""
 
-#: golf/models.py:35 golf/models.py:240
+#: golf/models.py:35 golf/models.py:267
 msgid "Country code"
 msgstr ""
 
@@ -384,261 +388,273 @@ msgstr ""
 msgid "Area Korean name"
 msgstr ""
 
-#: golf/models.py:68 golf/models.py:105 golf/models.py:142 golf/models.py:290
+#: golf/models.py:77 golf/models.py:123 golf/models.py:169 golf/models.py:317
 msgid "Position"
 msgstr ""
 
-#: golf/models.py:74
+#: golf/models.py:83
 msgid "Area"
 msgstr ""
 
-#: golf/models.py:75
+#: golf/models.py:84
 msgid "Areas"
 msgstr ""
 
-#: golf/models.py:83
+#: golf/models.py:92
 msgid "Province English name"
 msgstr ""
 
-#: golf/models.py:88
+#: golf/models.py:97
 msgid "Province Thai name"
 msgstr ""
 
-#: golf/models.py:93
+#: golf/models.py:102
 msgid "Province Korean name"
 msgstr ""
 
-#: golf/models.py:99
+#: golf/models.py:117
 msgid "Location area"
 msgstr ""
 
-#: golf/models.py:111 golf/models.py:136
+#: golf/models.py:129 golf/models.py:163
 msgid "Province"
 msgstr ""
 
-#: golf/models.py:112
+#: golf/models.py:130
 msgid "Provinces"
 msgstr ""
 
-#: golf/models.py:120
+#: golf/models.py:138
 msgid "District English name"
 msgstr ""
 
-#: golf/models.py:125
+#: golf/models.py:143
 msgid "District Thai name"
 msgstr ""
 
-#: golf/models.py:130
+#: golf/models.py:148
 msgid "District Korean name"
 msgstr ""
 
-#: golf/models.py:148 golf/models.py:199
+#: golf/models.py:175 golf/models.py:226
 msgid "District"
 msgstr ""
 
-#: golf/models.py:149
+#: golf/models.py:176
 msgid "Districts"
 msgstr ""
 
-#: golf/models.py:157
+#: golf/models.py:184
 msgid "18 Holes"
 msgstr ""
 
-#: golf/models.py:158
+#: golf/models.py:185
 msgid "9 Holes"
 msgstr ""
 
-#: golf/models.py:159
+#: golf/models.py:186
 msgid "27 Holes"
 msgstr ""
 
-#: golf/models.py:160
+#: golf/models.py:187
 msgid "36 Holes"
 msgstr ""
 
-#: golf/models.py:171
+#: golf/models.py:198
 msgid "Golf club English name"
 msgstr ""
 
-#: golf/models.py:177
+#: golf/models.py:204
 msgid "Golf club Thai name"
 msgstr ""
 
-#: golf/models.py:183
+#: golf/models.py:210
 msgid "Golf club Korean name"
 msgstr ""
 
-#: golf/models.py:205
+#: golf/models.py:232
 msgid "Phone number"
 msgstr ""
 
-#: golf/models.py:219
+#: golf/models.py:246
 msgid "Fax number"
 msgstr ""
 
-#: golf/models.py:226
+#: golf/models.py:253
 msgid "Website"
 msgstr ""
 
-#: golf/models.py:233
+#: golf/models.py:260
 msgid "No. of holes"
 msgstr ""
 
-#: golf/models.py:247
+#: golf/models.py:274
 msgid "Start from"
 msgstr ""
 
-#: golf/models.py:250 golf/models.py:358 golf/models.py:365 golf/models.py:372
-#: golf/models.py:379 golf/models.py:386 golf/models.py:393
+#: golf/models.py:277 golf/models.py:385 golf/models.py:392 golf/models.py:399
+#: golf/models.py:406 golf/models.py:413 golf/models.py:420
 msgid "THB"
 msgstr ""
 
-#: golf/models.py:255
+#: golf/models.py:282
 msgid "Thumbnail 1"
 msgstr ""
 
-#: golf/models.py:262
+#: golf/models.py:289
 msgid "Thumbnail 2"
 msgstr ""
 
-#: golf/models.py:269
+#: golf/models.py:296
 msgid "Thumbnail 3"
 msgstr ""
 
-#: golf/models.py:276
+#: golf/models.py:303
 msgid "Thumbnail 4"
 msgstr ""
 
-#: golf/models.py:283
+#: golf/models.py:310
 msgid "Thumbnail 5"
 msgstr ""
 
-#: golf/models.py:296 golf/models.py:319
+#: golf/models.py:323 golf/models.py:346
 msgid "Golf club"
 msgstr ""
 
-#: golf/models.py:297
+#: golf/models.py:324
 msgid "Golf clubs"
 msgstr ""
 
-#: golf/models.py:305
+#: golf/models.py:332
 msgid "Weekday"
 msgstr ""
 
-#: golf/models.py:306
+#: golf/models.py:333
 msgid "Weekend"
 msgstr ""
 
-#: golf/models.py:310
+#: golf/models.py:337
 msgid "Day golf"
 msgstr ""
 
-#: golf/models.py:311
+#: golf/models.py:338
 msgid "Day golf 1st round"
 msgstr ""
 
-#: golf/models.py:312
+#: golf/models.py:339
 msgid "Day golf 2nd round"
 msgstr ""
 
-#: golf/models.py:313
+#: golf/models.py:340
 msgid "Twilight golf"
 msgstr ""
 
-#: golf/models.py:314
+#: golf/models.py:341
 msgid "Night golf"
 msgstr ""
 
-#: golf/models.py:325
+#: golf/models.py:352
 msgid "Season start date"
 msgstr ""
 
-#: golf/models.py:329
+#: golf/models.py:356
 msgid "Season end date"
 msgstr ""
 
-#: golf/models.py:333
+#: golf/models.py:360
 msgid "Day of week"
 msgstr ""
 
-#: golf/models.py:340
+#: golf/models.py:367
 msgid "Slot start time"
 msgstr ""
 
-#: golf/models.py:344
+#: golf/models.py:371
 msgid "Slot end time"
 msgstr ""
 
-#: golf/models.py:348
+#: golf/models.py:375
 msgid "Rate title"
 msgstr ""
 
-#: golf/models.py:355
+#: golf/models.py:382
 msgid "Green fee selling price"
 msgstr ""
 
-#: golf/models.py:362
+#: golf/models.py:389
 msgid "Green fee cost price"
 msgstr ""
 
-#: golf/models.py:369
+#: golf/models.py:396
 msgid "Caddie fee selling price"
 msgstr ""
 
-#: golf/models.py:376
+#: golf/models.py:403
 msgid "Caddie fee cost price"
 msgstr ""
 
-#: golf/models.py:383
+#: golf/models.py:410
 msgid "Cart fee selling price"
 msgstr ""
 
-#: golf/models.py:390
+#: golf/models.py:417
 msgid "Cart fee cost price"
 msgstr ""
 
-#: golf/models.py:397
+#: golf/models.py:424
 msgid "Service rate"
 msgstr ""
 
-#: golf/models.py:398
+#: golf/models.py:425
 msgid "Service rates"
 msgstr ""
 
-#: golf/templates/golf/golf-club-list.html:13
-msgid "Search Golf course / Area"
+#: golf/templates/golf/golf-area-list.html:20
+#: golf/templates/golf/golf-club-list.html:18
+#: golf/templates/golf/golf-province-list.html:20
+msgid "Recommended"
 msgstr ""
 
-#: golf/templates/golf/golf-club-list.html:16
-msgid "Where to?"
-msgstr ""
-
-#: golf/templates/golf/golf-club-list.html:22
-msgid "Search"
-msgstr ""
-
-#: golf/templates/golf/golf-club-list.html:28
-msgid "Sorting"
-msgstr ""
-
-#: golf/templates/golf/golf-club-list.html:32
-msgid "A - Z"
-msgstr ""
-
-#: golf/templates/golf/golf-club-list.html:36
-msgid "Price: Low - High"
-msgstr ""
-
-#: golf/templates/golf/golf-club-list.html:40
-msgid "Price: High - Low"
-msgstr ""
-
-#: golf/templates/golf/golf-club-list.html:44
+#: golf/templates/golf/golf-area-list.html:21
+#: golf/templates/golf/golf-club-list.html:19
+#: golf/templates/golf/golf-province-list.html:21
 msgid "Rating: 5 Star - 1 Star"
 msgstr ""
 
-#: golf/templates/golf/golf-club-list.html:88
+#: golf/templates/golf/golf-area-list.html:22
+#: golf/templates/golf/golf-club-list.html:20
+#: golf/templates/golf/golf-province-list.html:22
+msgid "Price: Low - High"
+msgstr ""
+
+#: golf/templates/golf/golf-area-list.html:23
+#: golf/templates/golf/golf-club-list.html:21
+#: golf/templates/golf/golf-province-list.html:23
+msgid "Price: High - Low"
+msgstr ""
+
+#: golf/templates/golf/golf-area-list.html:72
+#: golf/templates/golf/golf-club-list.html:70
+#: golf/templates/golf/golf-province-list.html:72
 msgid "Start From"
+msgstr ""
+
+#: golf/templates/golf/golf-area-list.html:91
+#: golf/templates/golf/golf-area-list.html:98
+#: golf/templates/golf/golf-club-list.html:89
+#: golf/templates/golf/golf-club-list.html:96
+#: golf/templates/golf/golf-province-list.html:91
+#: golf/templates/golf/golf-province-list.html:98
+msgid "Previous"
+msgstr ""
+
+#: golf/templates/golf/golf-area-list.html:122
+#: golf/templates/golf/golf-area-list.html:129
+#: golf/templates/golf/golf-club-list.html:120
+#: golf/templates/golf/golf-club-list.html:127
+#: golf/templates/golf/golf-province-list.html:122
+#: golf/templates/golf/golf-province-list.html:129
+msgid "Next"
 msgstr ""
 
 #: help/templates/help/about.html:14

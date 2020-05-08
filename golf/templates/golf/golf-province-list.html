@@ -16,11 +16,11 @@
         <div class="uk-section">
             <div class="uk-container">
                 <form>
-                    <select class="uk-select">
-                        <option>{% trans 'Rating: 5 Star - 1 Star' %}</option>
-                        <option>{% trans 'Price: Low - High' %}</option>
-                        <option>{% trans 'Price: High - Low' %}</option>
-                        <option>{% trans 'A - Z' %}</option>
+                    <select class="uk-select" name="ordering">
+                        <option value="1">{% trans 'Recommended' %}</option>
+                        <option value="2">{% trans 'Rating: 5 Star - 1 Star' %}</option>
+                        <option value="3">{% trans 'Price: Low - High' %}</option>
+                        <option value="4">{% trans 'Price: High - Low' %}</option>
                     </select>
                 </form>
 
