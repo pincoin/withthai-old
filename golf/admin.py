@@ -12,7 +12,7 @@ class HolidayAdmin(admin.ModelAdmin):
 
 
 class AreaAdmin(admin.ModelAdmin):
-    list_display = ('title_english', 'title_thai', 'title_korean', 'position')
+    list_display = ('title_english', 'title_thai', 'title_korean', 'slug', 'position')
     prepopulated_fields = {'slug': ('title_english',)}
     ordering = ('position',)
 
