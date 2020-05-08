@@ -36,13 +36,14 @@ class GolfAreaListView(generic.ListView):
     logger = logging.getLogger(__name__)
     context_object_name = 'clubs'
 
-    template_name = 'golf/golf-club-list.html'
+    template_name = 'golf/golf-area-list.html'
 
     block_size = 5
 
     def get_queryset(self):
         queryset = models.Club.objects \
-            .select_related('district', 'district__province', 'district__province__area')
+            .select_related('district', 'district__province', 'district__province__area') \
+            .filter(district__province__area__slug=self.kwargs['slug'])
 
         return queryset.order_by('position')
 
@@ -63,13 +64,14 @@ class GolfProvinceListView(generic.ListView):
     logger = logging.getLogger(__name__)
     context_object_name = 'clubs'
 
-    template_name = 'golf/golf-club-list.html'
+    template_name = 'golf/golf-province-list.html'
 
     block_size = 5
 
     def get_queryset(self):
         queryset = models.Club.objects \
-            .select_related('district', 'district__province', 'district__province__area')
+            .select_related('district', 'district__province', 'district__province__area') \
+            .filter(district__province__slug=self.kwargs['slug'])
 
         return queryset.order_by('position')
 
