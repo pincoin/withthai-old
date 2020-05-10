@@ -16,6 +16,6 @@
     }
 }
 
-.areas {
+.areas > * {
     margin-bottom: 8px;
 }

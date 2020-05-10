@@ -17,7 +17,7 @@
                 {% get_areas as areas %}
                 <div class="uk-flex uk-flex-wrap uk-flex-between@m uk-child-width-1-4 areas">
                     {% for area in areas %}
-                        <div class="uk-margin">
+                        <div class="">
                             <a href="{% url 'golf:golf-area-list' area.slug %}"
                                class="">
                                 {% if LANGUAGE_CODE == 'th' %}
