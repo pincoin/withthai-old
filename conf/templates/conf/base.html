@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 {% load static i18n %}
+{% load golf_tags %}
+
 {% get_current_language as LANGUAGE_CODE %}
 {% get_available_languages as LANGUAGES %}
 {% get_language_info_list for LANGUAGES as languages %}
@@ -163,7 +165,7 @@
     </div>
 </header>
 <div id="offcanvas-overlay-mobile-menu" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar">
+    <li class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" uk-close></button>
 
         <ul class="uk-list">
@@ -208,30 +210,21 @@
                     <li class="sidenav-menu-heading">
                         <a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a>
                     </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Bangkok' %}</a>
-                    </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Pattaya' %}</a>
-                    </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Chiang Mai' %}</a>
-                    </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Chiang Rai' %}</a>
-                    </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Hua Hin' %}</a>
-                    </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Khao Yai' %}</a>
-                    </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Kanchanaburi' %}</a>
-                    </li>
-                    <li class="sidenav-menu-item">
-                        <a href="#">{% trans 'Phuket' %}</a>
-                    </li>
+                    {% get_areas as areas %}
+
+                    {% for area in areas %}
+                        <li class="sidenav-menu-item">
+                            <a href="{% url 'golf:golf-area-list' area.slug %}">
+                                {% if LANGUAGE_CODE == 'th' %}
+                                    {{ area.title_thai }}
+                                {% elif LANGUAGE_CODE == 'ko' %}
+                                    {{ area.title_korean }}
+                                {% else %}
+                                    {{ area.title_english }}
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </li>
             <li class="sidenav-menu-subitem">
