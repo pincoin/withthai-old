@@ -5,13 +5,6 @@
 
 {% block main %}
     <main>
-        <div class="uk-section uk-visible@m breadcrumbs">
-            <div class="uk-container">
-                <ul class="uk-breadcrumb ">
-                    <li><a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="uk-section">
             <div class="uk-container">
                 {% get_areas as areas %}

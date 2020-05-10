@@ -4,10 +4,9 @@
 
 {% block main %}
     <main>
-        <div class="uk-section uk-visible@m breadcrumbs">
+        <div class="uk-section breadcrumbs">
             <div class="uk-container">
-                <ul class="uk-breadcrumb ">
-                    <li><a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a></li>
+                <ul class="uk-breadcrumb">
                     <li>
                         <a href="{% url 'golf:golf-area-list' province.area.slug %}">
                             {% if LANGUAGE_CODE == 'th' %}
