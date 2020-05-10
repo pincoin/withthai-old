@@ -54,6 +54,7 @@ class GolfAreaListView(generic.ListView):
         end_index = min(start_index + GolfClubListView.block_size, len(context['paginator'].page_range))
 
         context['page_range'] = context['paginator'].page_range[start_index:end_index]
+
         context['area'] = models.Area.objects.get(slug=self.kwargs['slug'])
         return context
 
@@ -83,6 +84,8 @@ class GolfProvinceListView(generic.ListView):
         end_index = min(start_index + GolfClubListView.block_size, len(context['paginator'].page_range))
 
         context['page_range'] = context['paginator'].page_range[start_index:end_index]
+
+        context['province'] = models.Province.objects.select_related('area').get(slug=self.kwargs['slug'])
         return context
 
     def get_paginate_by(self, queryset):

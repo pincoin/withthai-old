@@ -9,15 +9,17 @@
             <div class="uk-container">
                 <ul class="uk-breadcrumb ">
                     <li><a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a></li>
-                    <li><a href="">
-                        {% if LANGUAGE_CODE == 'th' %}
-                            {{ area.title_thai }}
-                        {% elif LANGUAGE_CODE == 'ko' %}
-                            {{ area.title_korean }}
-                        {% else %}
-                            {{ area.title_english }}
-                        {% endif %}
-                    </a></li>
+                    <li>
+                        <a href="{% url 'golf:golf-area-list' area.slug %}">
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ area.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ area.title_korean }}
+                            {% else %}
+                                {{ area.title_english }}
+                            {% endif %}
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
