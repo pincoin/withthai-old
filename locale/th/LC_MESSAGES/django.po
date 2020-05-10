@@ -637,7 +637,7 @@ msgstr ""
 #: golf/templates/golf/golf-club-list.html:70
 #: golf/templates/golf/golf-province-list.html:72
 msgid "Start From"
-msgstr ""
+msgstr "ราคาเริ่มต้น"
 
 #: golf/templates/golf/golf-area-list.html:91
 #: golf/templates/golf/golf-area-list.html:98
