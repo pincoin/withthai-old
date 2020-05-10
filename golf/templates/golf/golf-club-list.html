@@ -15,11 +15,11 @@
         <div class="uk-section">
             <div class="uk-container">
                 {% get_areas as areas %}
-                <div class="uk-flex uk-flex-between@m uk-margin-small">
+                <div class="uk-flex uk-flex-between@m uk-child-width-1-4">
                     {% for area in areas %}
                         <div>
                             <a href="{% url 'golf:golf-area-list' area.slug %}"
-                               class="uk-button uk-button-default">
+                               class="uk-button uk-button-default uk-width-1-1">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ area.title_thai }}
                                 {% elif LANGUAGE_CODE == 'ko' %}
