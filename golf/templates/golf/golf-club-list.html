@@ -1,6 +1,7 @@
 {% extends 'conf/base.html' %}
 
 {% load i18n static humanize %}
+{% load golf_tags %}
 
 {% block main %}
     <main>
@@ -13,6 +14,20 @@
         </div>
         <div class="uk-section">
             <div class="uk-container">
+                {% get_areas as areas %}
+                <div class="uk-flex uk-flex-around@m uk-margin-small">
+                    {% for area in areas %}
+                        <div>
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ area.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ area.title_korean }}
+                            {% else %}
+                                {{ area.title_english }}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
                 <form>
                     <select class="uk-select" name="ordering">
                         <option value="1">{% trans 'Recommended' %}</option>
