@@ -28,7 +28,7 @@ msgstr "로그인"
 
 #: allauth/templates/account/login.html:62
 msgid "You may login with your SNS accounts."
-msgstr "회원가입하지 않아도 SNS 계정으로 로그인할 수 있습니다."
+msgstr "SNS 계정으로 간편하게 로그인할 수 있습니다."
 
 #: allauth/templates/account/logout.html:5
 #: allauth/templates/account/logout.html:13
