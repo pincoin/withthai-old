@@ -490,7 +490,7 @@ msgstr ""
 
 #: golf/models.py:274
 msgid "Start from"
-msgstr ""
+msgstr "ราคาเริ่มต้น"
 
 #: golf/models.py:277 golf/models.py:385 golf/models.py:392 golf/models.py:399
 #: golf/models.py:406 golf/models.py:413 golf/models.py:420
