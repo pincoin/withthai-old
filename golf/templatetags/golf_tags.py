@@ -1,4 +1,6 @@
 from django import template
+from django.conf import settings
+from django.core.cache import cache
 
 from .. import models
 
@@ -12,13 +14,33 @@ def get_clubs():
 
 @register.simple_tag
 def get_areas():
-    return models.Area.objects \
-        .all() \
-        .order_by('position')
+    cache_key = 'golf.templatetags.golf_tags.get_areas()'
+    cache_time = settings.CACHES['default']['TIMEOUT']
+
+    areas = cache.get(cache_key)
+
+    if not areas:
+        areas = models.Area.objects \
+            .all() \
+            .order_by('position')
+
+        cache.set(cache_key, areas, cache_time)
+
+    return areas
 
 
 @register.simple_tag
 def get_provinces(slug):
-    return models.Province.objects \
-        .filter(area__slug=slug) \
-        .order_by('position')
+    cache_key = 'golf.templatetags.golf_tags.get_areas({})'.format(slug)
+    cache_time = settings.CACHES['default']['TIMEOUT']
+
+    provinces = cache.get(cache_key)
+
+    if not provinces:
+        provinces = models.Province.objects \
+            .filter(area__slug=slug) \
+            .order_by('position')
+
+        cache.set(cache_key, provinces, cache_time)
+
+    return provinces
