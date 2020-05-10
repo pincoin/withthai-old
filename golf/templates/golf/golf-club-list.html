@@ -77,13 +77,15 @@
                                         {% else %}
                                             {{ club.district.title_english }}
                                         {% endif %} -
-                                        {% if LANGUAGE_CODE == 'th' %}
-                                            {{ club.district.province.title_thai }}
-                                        {% elif LANGUAGE_CODE == 'ko' %}
-                                            {{ club.district.province.title_korean }}
-                                        {% else %}
-                                            {{ club.district.province.title_english }}
-                                        {% endif %}
+                                        <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                            {% if LANGUAGE_CODE == 'th' %}
+                                                {{ club.district.province.title_thai }}
+                                            {% elif LANGUAGE_CODE == 'ko' %}
+                                                {{ club.district.province.title_korean }}
+                                            {% else %}
+                                                {{ club.district.province.title_english }}
+                                            {% endif %}
+                                        </a>
                                     </span>
                                     <hr>
                                     <div class="uk-align-right">
