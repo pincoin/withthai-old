@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-09 00:23+0700\n"
+"POT-Creation-Date: 2020-05-10 20:14+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -238,8 +238,8 @@ msgid "CART"
 msgstr ""
 
 #: conf/templates/conf/base.html:108 conf/templates/conf/base.html:209
-#: conf/templates/conf/base.html:241 golf/templates/golf/golf-area-list.html:10
-#: golf/templates/golf/golf-club-list.html:10
+#: conf/templates/conf/base.html:241 golf/templates/golf/golf-area-list.html:11
+#: golf/templates/golf/golf-club-list.html:11
 #: golf/templates/golf/golf-province-list.html:10
 msgid "GOLF"
 msgstr "กอล์ฟ"
@@ -494,8 +494,11 @@ msgstr "ราคาเริ่มต้น"
 
 #: golf/models.py:277 golf/models.py:385 golf/models.py:392 golf/models.py:399
 #: golf/models.py:406 golf/models.py:413 golf/models.py:420
+#: golf/templates/golf/golf-area-list.html:105
+#: golf/templates/golf/golf-club-list.html:94
+#: golf/templates/golf/golf-province-list.html:96
 msgid "THB"
-msgstr ""
+msgstr "บาท"
 
 #: golf/models.py:282
 msgid "Thumbnail 1"
@@ -609,51 +612,51 @@ msgstr ""
 msgid "Service rates"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:20
-#: golf/templates/golf/golf-club-list.html:18
-#: golf/templates/golf/golf-province-list.html:20
+#: golf/templates/golf/golf-area-list.html:49
+#: golf/templates/golf/golf-club-list.html:38
+#: golf/templates/golf/golf-province-list.html:40
 msgid "Recommended"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:21
-#: golf/templates/golf/golf-club-list.html:19
-#: golf/templates/golf/golf-province-list.html:21
+#: golf/templates/golf/golf-area-list.html:50
+#: golf/templates/golf/golf-club-list.html:39
+#: golf/templates/golf/golf-province-list.html:41
 msgid "Rating: 5 Star - 1 Star"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:22
-#: golf/templates/golf/golf-club-list.html:20
-#: golf/templates/golf/golf-province-list.html:22
+#: golf/templates/golf/golf-area-list.html:51
+#: golf/templates/golf/golf-club-list.html:40
+#: golf/templates/golf/golf-province-list.html:42
 msgid "Price: Low - High"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:23
-#: golf/templates/golf/golf-club-list.html:21
-#: golf/templates/golf/golf-province-list.html:23
+#: golf/templates/golf/golf-area-list.html:52
+#: golf/templates/golf/golf-club-list.html:41
+#: golf/templates/golf/golf-province-list.html:43
 msgid "Price: High - Low"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:72
-#: golf/templates/golf/golf-club-list.html:70
-#: golf/templates/golf/golf-province-list.html:72
+#: golf/templates/golf/golf-area-list.html:101
+#: golf/templates/golf/golf-club-list.html:90
+#: golf/templates/golf/golf-province-list.html:92
 msgid "Start From"
 msgstr "ราคาเริ่มต้น"
 
-#: golf/templates/golf/golf-area-list.html:91
-#: golf/templates/golf/golf-area-list.html:98
-#: golf/templates/golf/golf-club-list.html:89
-#: golf/templates/golf/golf-club-list.html:96
-#: golf/templates/golf/golf-province-list.html:91
-#: golf/templates/golf/golf-province-list.html:98
+#: golf/templates/golf/golf-area-list.html:120
+#: golf/templates/golf/golf-area-list.html:127
+#: golf/templates/golf/golf-club-list.html:109
+#: golf/templates/golf/golf-club-list.html:116
+#: golf/templates/golf/golf-province-list.html:111
+#: golf/templates/golf/golf-province-list.html:118
 msgid "Previous"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:122
-#: golf/templates/golf/golf-area-list.html:129
-#: golf/templates/golf/golf-club-list.html:120
-#: golf/templates/golf/golf-club-list.html:127
-#: golf/templates/golf/golf-province-list.html:122
-#: golf/templates/golf/golf-province-list.html:129
+#: golf/templates/golf/golf-area-list.html:151
+#: golf/templates/golf/golf-area-list.html:158
+#: golf/templates/golf/golf-club-list.html:140
+#: golf/templates/golf/golf-club-list.html:147
+#: golf/templates/golf/golf-province-list.html:142
+#: golf/templates/golf/golf-province-list.html:149
 msgid "Next"
 msgstr ""
 
