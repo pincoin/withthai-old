@@ -1,5 +1,7 @@
 import logging
 
+from django.conf import settings
+from django.core.cache import cache
 from django.views import generic
 
 from . import models
@@ -55,7 +57,16 @@ class GolfAreaListView(generic.ListView):
 
         context['page_range'] = context['paginator'].page_range[start_index:end_index]
 
-        context['area'] = models.Area.objects.get(slug=self.kwargs['slug'])
+        cache_key = 'golf.GolfAreaListView.get_context_data({})'.format(self.kwargs['slug'])
+        cache_time = settings.CACHES['default']['TIMEOUT_DAY']
+
+        context['area'] = cache.get(cache_key)
+
+        if not context['area']:
+            context['area'] = models.Area.objects.get(slug=self.kwargs['slug'])
+
+            cache.set(cache_key, context['area'], cache_time)
+
         return context
 
     def get_paginate_by(self, queryset):
@@ -85,7 +96,16 @@ class GolfProvinceListView(generic.ListView):
 
         context['page_range'] = context['paginator'].page_range[start_index:end_index]
 
-        context['province'] = models.Province.objects.select_related('area').get(slug=self.kwargs['slug'])
+        cache_key = 'golf.GolfProvinceListView.get_context_data({})'.format(self.kwargs['slug'])
+        cache_time = settings.CACHES['default']['TIMEOUT_DAY']
+
+        context['province'] = cache.get(cache_key)
+
+        if not context['province']:
+            context['province'] = models.Province.objects.select_related('area').get(slug=self.kwargs['slug'])
+
+            cache.set(cache_key, context['province'], cache_time)
+
         return context
 
     def get_paginate_by(self, queryset):
