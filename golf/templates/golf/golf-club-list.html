@@ -16,7 +16,7 @@
             <div class="uk-container">
                 {% get_areas as areas %}
 
-                <div class="uk-flex uk-flex-wrap uk-flex-between@m uk-child-width-1-2 uk-child-width-1-4@m areas">
+                <div class="uk-flex uk-flex-wrap uk-flex-between@m uk-child-width-1-2 uk-child-width-1-4@m uk-visible@m areas">
                     {% for area in areas %}
                         <div class="">
                             <a href="{% url 'golf:golf-area-list' area.slug %}"
