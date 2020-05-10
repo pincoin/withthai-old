@@ -5,7 +5,7 @@
 
 {% block main %}
     <main>
-        <div class="uk-section breadcrumbs">
+        <div class="uk-section uk-visible@m breadcrumbs">
             <div class="uk-container">
                 <ul class="uk-breadcrumb ">
                     <li><a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a></li>
@@ -27,7 +27,7 @@
             <div class="uk-container">
                 {% get_provinces area.slug as provinces %}
 
-                <div class="uk-flex uk-flex-wrap uk-flex-between@m uk-child-width-1-2 uk-child-width-1-4@m uk-visible@m areas">
+                <div class="uk-flex uk-flex-wrap uk-flex-between@m uk-child-width-1-2 uk-child-width-1-4@m areas">
                     {% for province in provinces %}
                         <div class="">
                             <a href="{% url 'golf:golf-province-list' province.slug %}"
