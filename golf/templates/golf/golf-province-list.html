@@ -34,6 +34,11 @@
         </div>
         <div class="uk-section">
             <div class="uk-container">
+                <form class="uk-search uk-search-default uk-hidden@m uk-width-1-1 mobile-search">
+                    <span uk-search-icon></span>
+                    <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}">
+                </form>
+
                 <form>
                     <select class="uk-select" name="ordering">
                         <option value="1">{% trans 'Recommended' %}</option>

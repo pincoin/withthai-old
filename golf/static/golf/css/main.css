@@ -24,6 +24,14 @@
     }
 }
 
+.mobile-search {
+    margin-bottom: 8px;
+}
+
+.mobile-search .uk-search-input {
+    border: 1px solid #e5e5e5;
+}
+
 .areas {
     border: 1px solid #e5e5e5;
     margin-bottom: 8px;
