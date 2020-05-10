@@ -5,6 +5,10 @@
 
 /* Desktop */
 @media (min-width: 960px) {
+    .club-card {
+
+    }
+
     .club-list-description {
         padding-left: 12px;
     }
@@ -12,6 +16,10 @@
 
 /* Small devices */
 @media (max-width: 959px) {
+    .club-card {
+        padding-right: 0;
+    }
+
     .club-list-description {
     }
 }
