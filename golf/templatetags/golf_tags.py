@@ -12,9 +12,13 @@ def get_clubs():
 
 @register.simple_tag
 def get_areas():
-    return models.Area.objects.all().order_by('position')
+    return models.Area.objects \
+        .all() \
+        .order_by('position')
 
 
 @register.simple_tag
-def get_provinces():
-    return models.Province.objects.all().order_by('position')
+def get_provinces(slug):
+    return models.Province.objects \
+        .filter(area__slug=slug) \
+        .order_by('position')

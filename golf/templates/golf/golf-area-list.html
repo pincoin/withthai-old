@@ -1,6 +1,7 @@
 {% extends 'conf/base.html' %}
 
 {% load i18n static humanize %}
+{% load golf_tags %}
 
 {% block main %}
     <main>
@@ -8,13 +9,39 @@
             <div class="uk-container">
                 <ul class="uk-breadcrumb ">
                     <li><a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a></li>
-                    <li><a href="">방콕 근교</a></li>
-                    <li><span>싸뭇쁘라깐</span></li>
+                    <li><a href="">
+                        {% if LANGUAGE_CODE == 'th' %}
+                            {{ area.title_thai }}
+                        {% elif LANGUAGE_CODE == 'ko' %}
+                            {{ area.title_korean }}
+                        {% else %}
+                            {{ area.title_english }}
+                        {% endif %}
+                    </a></li>
                 </ul>
             </div>
         </div>
         <div class="uk-section">
             <div class="uk-container">
+                {% get_provinces area.slug as provinces %}
+
+                <div class="uk-flex uk-flex-wrap uk-flex-between@m uk-child-width-1-2 uk-child-width-1-4@m areas">
+                    {% for province in provinces %}
+                        <div class="">
+                            <a href="{% url 'golf:golf-province-list' province.slug %}"
+                               class="">
+                                {% if LANGUAGE_CODE == 'th' %}
+                                    {{ province.title_thai }}
+                                {% elif LANGUAGE_CODE == 'ko' %}
+                                    {{ province.title_korean }}
+                                {% else %}
+                                    {{ province.title_english }}
+                                {% endif %}
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+
                 <form>
                     <select class="uk-select" name="ordering">
                         <option value="1">{% trans 'Recommended' %}</option>

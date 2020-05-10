@@ -15,6 +15,7 @@
         <div class="uk-section">
             <div class="uk-container">
                 {% get_areas as areas %}
+
                 <div class="uk-flex uk-flex-wrap uk-flex-between@m uk-child-width-1-2 uk-child-width-1-4@m areas">
                     {% for area in areas %}
                         <div class="">
@@ -31,6 +32,7 @@
                         </div>
                     {% endfor %}
                 </div>
+
                 <form>
                     <select class="uk-select" name="ordering">
                         <option value="1">{% trans 'Recommended' %}</option>
