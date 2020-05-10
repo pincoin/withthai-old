@@ -16,6 +16,12 @@
     }
 }
 
-.areas > * {
+.areas {
+    border: 1px solid #e5e5e5;
     margin-bottom: 8px;
+}
+
+.areas > * {
+    padding: 0 20px 0 10px;
+    margin: 8px 0;
 }
