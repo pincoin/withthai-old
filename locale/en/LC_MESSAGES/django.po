@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-10 20:14+0700\n"
+"POT-Creation-Date: 2020-05-10 20:58+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 
 #: conf/templates/conf/base.html:17 conf/templates/conf/base.html:45
 #: conf/templates/conf/base.html:47 conf/templates/conf/base.html:171
-#: conf/templates/conf/base.html:303 help/templates/help/about.html:12
+#: help/templates/help/about.html:12
 msgid "WITH THAI"
 msgstr "WITH THAI"
 
@@ -304,31 +304,51 @@ msgstr ""
 msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/base.html:314 help/apps.py:7
+#: conf/templates/conf/base.html:303 help/templates/help/terms.html:73
+#, fuzzy
+#| msgid "WITH THAI"
+msgid "WITH THAI Co., Ltd."
+msgstr "WITH THAI"
+
+#: conf/templates/conf/base.html:306
+msgid ""
+"Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
+"10110"
+msgstr ""
+
+#: conf/templates/conf/base.html:309
+msgid "TAX ID: 0105563049000"
+msgstr ""
+
+#: conf/templates/conf/base.html:312
+msgid "TAT License: 14/03216"
+msgstr ""
+
+#: conf/templates/conf/base.html:320 help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:318 help/templates/help/guide.html:9
+#: conf/templates/conf/base.html:324 help/templates/help/guide.html:9
 msgid "GUIDE"
 msgstr ""
 
-#: conf/templates/conf/base.html:324
+#: conf/templates/conf/base.html:330
 msgid "FAQ/How-to"
 msgstr "FAQ/How-to"
 
-#: conf/templates/conf/base.html:329 help/templates/help/terms.html:9
+#: conf/templates/conf/base.html:335 help/templates/help/terms.html:9
 msgid "TERMS &amp; CONDITIONS"
 msgstr "TERMS &amp; CONDITIONS"
 
-#: conf/templates/conf/base.html:332 help/templates/help/privacy.html:9
+#: conf/templates/conf/base.html:338 help/templates/help/privacy.html:9
 msgid "PRIVACY POLICY"
 msgstr "PRIVACY POLICY"
 
-#: conf/templates/conf/base.html:337
+#: conf/templates/conf/base.html:343
 msgid "ABOUT US"
 msgstr "ABOUT US"
 
-#: conf/templates/conf/base.html:342
+#: conf/templates/conf/base.html:348
 msgid "CONTACT US"
 msgstr "CONTACT US"
 
@@ -921,12 +941,6 @@ msgid ""
 "Co., Ltd."
 msgstr ""
 
-#: help/templates/help/terms.html:73
-#, fuzzy
-#| msgid "WITH THAI"
-msgid "WITH THAI Co., Ltd"
-msgstr "WITH THAI"
-
 #: hotel/apps.py:7
 msgid "Hotel"
 msgstr ""
@@ -958,3 +972,8 @@ msgstr ""
 #: member/apps.py:6
 msgid "Member"
 msgstr ""
+
+#, fuzzy
+#~| msgid "WITH THAI"
+#~ msgid "WITH THAI Co., Ltd"
+#~ msgstr "WITH THAI"
