@@ -38,6 +38,7 @@ def get_provinces(slug):
 
     if not provinces:
         provinces = models.Province.objects \
+            .select_related('area') \
             .filter(area__slug=slug) \
             .order_by('position')
 

@@ -4,6 +4,7 @@ from django.conf import settings
 from django.core.cache import cache
 from django.views import generic
 
+from . import forms
 from . import models
 from . import viewmixins
 
@@ -77,3 +78,23 @@ class GolfProvinceListView(viewmixins.PageableMixin, generic.ListView):
             cache.set(cache_key, context['province'], cache_time)
 
         return context
+
+
+class GolfClubBookingForm(generic.edit.FormMixin, generic.DeleteView):
+    logger = logging.getLogger(__name__)
+    context_object_name = 'club'
+
+    form_class = forms.GolfClubBookingForm
+
+    template_name = 'golf/golf-club-booking-form.html'
+
+    def get_queryset(self):
+        return models.Club.objects \
+            .select_related('district', 'district__province', 'district__province__area') \
+            .filter(slug=self.kwargs['slug'])
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        return super().form_invalid(form)

@@ -15,5 +15,5 @@ urlpatterns = [
          views.GolfProvinceListView.as_view(), name='golf-province-list'),
 
     path('club/<slug:slug>/',
-         views.GolfClubListView.as_view(), name='golf-club-detail'),
+         views.GolfClubBookingForm.as_view(), name='golf-club-booking'),
 ]

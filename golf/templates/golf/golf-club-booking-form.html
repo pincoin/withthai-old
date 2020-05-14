@@ -1,0 +1,118 @@
+{% extends 'conf/base.html' %}
+
+{% load i18n static humanize %}
+
+{% block main %}
+    <main>
+        <div class="uk-section breadcrumbs">
+            <div class="uk-container">
+                <ul class="uk-breadcrumb ">
+                    <li>
+                        <a href="{% url 'golf:golf-area-list' club.district.province.area.slug %}">
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ club.district.province.area.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ club.district.province.area.title_korean }}
+                            {% else %}
+                                {{ club.district.province.area.title_english }}
+                            {% endif %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'golf:golf-province-list' club.district.province.slug %}">
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ club.district.province.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ club.district.province.title_korean }}
+                            {% else %}
+                                {{ club.district.province.title_english }}
+                            {% endif %}
+                        </a>
+                    </li>
+                    <li>
+                        <span>
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ club.district.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ club.district.title_korean }}
+                            {% else %}
+                                {{ club.district.title_english }}
+                            {% endif %}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="uk-section">
+            <div class="uk-container">
+                <form class="uk-search uk-search-default uk-hidden@m uk-width-1-1 mobile-search">
+                    <span uk-search-icon></span>
+                    <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}">
+                </form>
+
+                <div class="uk-grid" uk-grid>
+
+                    <div class="uk-width-1-1 uk-width-1-2@m uk-card uk-card-body club-card">
+                        <div class="uk-flex uk-flex-wrap">
+                            <div class="uk-width-1-1 uk-width-1-3@m">
+                                <a href="">
+                                    {% if club.thumbnail1 %}
+                                        <img data-src="{{ club.thumbnail1.url }}"
+                                             width="640" height="320" alt="" uk-img="">
+                                    {% else %}
+                                        <img data-src="//via.placeholder.com/640x320"
+                                             width="640" height="320" alt="" uk-img="">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="uk-width-1-1 uk-width-2-3@m club-list-description">
+                                <a href="">
+                                    <h3>
+                                        {% if LANGUAGE_CODE == 'th' %}
+                                            {{ club.title_thai }}
+                                        {% elif LANGUAGE_CODE == 'ko' %}
+                                            {{ club.title_korean }}
+                                        {% else %}
+                                            {{ club.title_english }}
+                                        {% endif %}
+                                    </h3>
+                                </a>
+                                <span>
+                                        {% if LANGUAGE_CODE == 'th' %}
+                                            {{ club.district.title_thai }}
+                                        {% elif LANGUAGE_CODE == 'ko' %}
+                                            {{ club.district.title_korean }}
+                                        {% else %}
+                                            {{ club.district.title_english }}
+                                        {% endif %} -
+                                        <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                            {% if LANGUAGE_CODE == 'th' %}
+                                                {{ club.district.province.title_thai }}
+                                            {% elif LANGUAGE_CODE == 'ko' %}
+                                                {{ club.district.province.title_korean }}
+                                            {% else %}
+                                                {{ club.district.province.title_english }}
+                                            {% endif %}
+                                        </a>
+                                    </span>
+                                <hr>
+                                <div class="uk-align-right">
+                                    <span>{% trans 'Start From' %}</span>
+                                    <span class="club-list-price">
+                                                    {{ club.green_fee_selling_price|floatformat:0|intcomma }}
+                                                </span>
+                                    <span>{% trans 'THB' %}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block stylesheet %}
+    {{ block.super }}
+    <link type="text/css" href="{% static 'golf/css/main.css' %}" rel="stylesheet">
+{% endblock %}
