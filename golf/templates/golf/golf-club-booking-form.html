@@ -52,31 +52,69 @@
 
                 <div class="uk-grid" uk-grid>
 
-                    <div class="uk-width-1-1 uk-width-1-2@m uk-card uk-card-body club-card">
+                    <div class="uk-width-1-1 uk-card uk-card-body club-card">
                         <div class="uk-flex uk-flex-wrap">
-                            <div class="uk-width-1-1 uk-width-1-3@m">
-                                <a href="">
-                                    {% if club.thumbnail1 %}
-                                        <img data-src="{{ club.thumbnail1.url }}"
-                                             width="640" height="320" alt="" uk-img="">
-                                    {% else %}
-                                        <img data-src="//via.placeholder.com/640x320"
-                                             width="640" height="320" alt="" uk-img="">
-                                    {% endif %}
-                                </a>
+                            <div class="uk-width-1-1 uk-width-1-2@m">
+                                <div uk-slider>
+                                    <ul class="uk-slider-items uk-child-width-1-2">
+                                        <li>
+                                            {% if club.thumbnail1 %}
+                                                <img data-src="{{ club.thumbnail1.url }}"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% else %}
+                                                <img data-src="//via.placeholder.com/640x320"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% endif %}
+                                        </li>
+                                        <li>
+                                            {% if club.thumbnail2 %}
+                                                <img data-src="{{ club.thumbnail2.url }}"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% else %}
+                                                <img data-src="//via.placeholder.com/640x320"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% endif %}
+                                        </li>
+                                        <li>
+                                            {% if club.thumbnail3 %}
+                                                <img data-src="{{ club.thumbnail3.url }}"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% else %}
+                                                <img data-src="//via.placeholder.com/640x320"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% endif %}
+                                        </li>
+                                        <li>
+                                            {% if club.thumbnail4 %}
+                                                <img data-src="{{ club.thumbnail4.url }}"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% else %}
+                                                <img data-src="//via.placeholder.com/640x320"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% endif %}
+                                        </li>
+                                        <li>
+                                            {% if club.thumbnail5 %}
+                                                <img data-src="{{ club.thumbnail5.url }}"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% else %}
+                                                <img data-src="//via.placeholder.com/640x320"
+                                                     width="640" height="320" alt="" uk-img="">
+                                            {% endif %}
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="uk-width-1-1 uk-width-2-3@m club-list-description">
-                                <a href="">
-                                    <h3>
-                                        {% if LANGUAGE_CODE == 'th' %}
-                                            {{ club.title_thai }}
-                                        {% elif LANGUAGE_CODE == 'ko' %}
-                                            {{ club.title_korean }}
-                                        {% else %}
-                                            {{ club.title_english }}
-                                        {% endif %}
-                                    </h3>
-                                </a>
+                            <div class="uk-width-1-1 uk-width-1-2@m club-list-description">
+                                <h3>
+                                    {% if LANGUAGE_CODE == 'th' %}
+                                        {{ club.title_thai }}
+                                    {% elif LANGUAGE_CODE == 'ko' %}
+                                        {{ club.title_korean }}
+                                    {% else %}
+                                        {{ club.title_english }}
+                                    {% endif %}
+                                </h3>
                                 <span>
                                         {% if LANGUAGE_CODE == 'th' %}
                                             {{ club.district.title_thai }}
