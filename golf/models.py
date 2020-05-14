@@ -426,3 +426,11 @@ class Rate(model_utils_models.TimeStampedModel):
 
     def __str__(self):
         return '{} {}'.format(self.season_start, self.season_end)
+
+
+class ClubBooking(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampedModel):
+    PAYMENT_METHOD_CHOICES = Choices(
+        (0, 'credit_card', _('Credit Card')),
+        (1, 'bank_transfer', _('Bank Transfer')),
+        (2, 'paypal', _('PayPal')),
+    )

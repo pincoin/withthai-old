@@ -50,99 +50,83 @@
                     <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}">
                 </form>
 
-                <div class="uk-grid" uk-grid>
+                <div class="uk-flex uk-flex-wrap">
+                    <div class="uk-width-1-1 uk-width-1-3@m">
+                        {% if club.thumbnail1 %}
+                            <img data-src="{{ club.thumbnail1.url }}"
+                                 width="640" height="320" alt="" uk-img="">
+                        {% else %}
+                            <img data-src="//via.placeholder.com/640x320"
+                                 width="640" height="320" alt="" uk-img="">
+                        {% endif %}
 
-                    <div class="uk-width-1-1 uk-card uk-card-body club-card">
-                        <div class="uk-flex uk-flex-wrap">
-                            <div class="uk-width-1-1 uk-width-1-2@m">
-                                <div uk-slider>
-                                    <ul class="uk-slider-items uk-child-width-1-2">
-                                        <li>
-                                            {% if club.thumbnail1 %}
-                                                <img data-src="{{ club.thumbnail1.url }}"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% else %}
-                                                <img data-src="//via.placeholder.com/640x320"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% endif %}
-                                        </li>
-                                        <li>
-                                            {% if club.thumbnail2 %}
-                                                <img data-src="{{ club.thumbnail2.url }}"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% else %}
-                                                <img data-src="//via.placeholder.com/640x320"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% endif %}
-                                        </li>
-                                        <li>
-                                            {% if club.thumbnail3 %}
-                                                <img data-src="{{ club.thumbnail3.url }}"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% else %}
-                                                <img data-src="//via.placeholder.com/640x320"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% endif %}
-                                        </li>
-                                        <li>
-                                            {% if club.thumbnail4 %}
-                                                <img data-src="{{ club.thumbnail4.url }}"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% else %}
-                                                <img data-src="//via.placeholder.com/640x320"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% endif %}
-                                        </li>
-                                        <li>
-                                            {% if club.thumbnail5 %}
-                                                <img data-src="{{ club.thumbnail5.url }}"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% else %}
-                                                <img data-src="//via.placeholder.com/640x320"
-                                                     width="640" height="320" alt="" uk-img="">
-                                            {% endif %}
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="uk-width-1-1 uk-width-1-2@m club-list-description">
-                                <h3>
-                                    {% if LANGUAGE_CODE == 'th' %}
-                                        {{ club.title_thai }}
-                                    {% elif LANGUAGE_CODE == 'ko' %}
-                                        {{ club.title_korean }}
-                                    {% else %}
-                                        {{ club.title_english }}
-                                    {% endif %}
-                                </h3>
-                                <span>
-                                        {% if LANGUAGE_CODE == 'th' %}
-                                            {{ club.district.title_thai }}
-                                        {% elif LANGUAGE_CODE == 'ko' %}
-                                            {{ club.district.title_korean }}
-                                        {% else %}
-                                            {{ club.district.title_english }}
-                                        {% endif %} -
-                                        <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
-                                            {% if LANGUAGE_CODE == 'th' %}
-                                                {{ club.district.province.title_thai }}
-                                            {% elif LANGUAGE_CODE == 'ko' %}
-                                                {{ club.district.province.title_korean }}
-                                            {% else %}
-                                                {{ club.district.province.title_english }}
-                                            {% endif %}
-                                        </a>
-                                    </span>
-                                <hr>
-                                <div class="uk-align-right">
-                                    <span>{% trans 'Start From' %}</span>
-                                    <span class="club-list-price">
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-3@m">
+                        <h3>
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ club.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ club.title_korean }}
+                            {% else %}
+                                {{ club.title_english }}
+                            {% endif %}
+                        </h3>
+                        <span>
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ club.district.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ club.district.title_korean }}
+                            {% else %}
+                                {{ club.district.title_english }}
+                            {% endif %} -
+                            <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                {% if LANGUAGE_CODE == 'th' %}
+                                    {{ club.district.province.title_thai }}
+                                {% elif LANGUAGE_CODE == 'ko' %}
+                                    {{ club.district.province.title_korean }}
+                                {% else %}
+                                    {{ club.district.province.title_english }}
+                                {% endif %}
+                            </a>
+                        </span>
+                        <hr>
+                        <div class="uk-align-right">
+                            <span>{% trans 'Start From' %}</span>
+                            <span class="club-list-price">
                                                     {{ club.green_fee_selling_price|floatformat:0|intcomma }}
                                                 </span>
-                                    <span>{% trans 'THB' %}</span>
+                            <span>{% trans 'THB' %}</span>
+                        </div>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-3@m">
+                        <form class="uk-form-horizontal uk-margin-large">
+                            <div class="uk-margin">
+                                <label class="uk-form-label">일자</label>
+                                <div class="uk-form-controls uk-form-controls-text">
+                                    <input type="text" class="uk-input" id="round_date">
                                 </div>
                             </div>
-                        </div>
+                            <div class="uk-margin">
+                                <div class="uk-form-label">시각</div>
+                                <div class="uk-form-controls uk-form-controls-text">
+                                    <input type="text" class="uk-input" id="round_time">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-form-label">인원</div>
+                                <div class="uk-form-controls uk-form-controls-text">
+                                    <input class="uk-input" type="number" min="0" max="5"
+                                           value="4">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <div class="uk-form-label">카트</div>
+                                <div class="uk-form-controls uk-form-controls-text">
+                                    <input class="uk-input" type="number" min="0" max="5"
+                                           value="4">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -152,5 +136,12 @@
 
 {% block stylesheet %}
     {{ block.super }}
-    <link type="text/css" href="{% static 'golf/css/main.css' %}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{% static 'golf/css/main.css' %}">
+    <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
+    <script src="//cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="{% static 'golf/js/datepicker.js' %}"></script>
 {% endblock %}

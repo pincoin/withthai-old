@@ -80,7 +80,7 @@ class GolfProvinceListView(viewmixins.PageableMixin, generic.ListView):
         return context
 
 
-class GolfClubBookingForm(generic.edit.FormMixin, generic.DeleteView):
+class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
     logger = logging.getLogger(__name__)
     context_object_name = 'club'
 
