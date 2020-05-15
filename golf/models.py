@@ -256,6 +256,13 @@ class Club(model_utils_models.TimeStampedModel):
         null=True,
     )
 
+    address = models.CharField(
+        verbose_name=_('Golf club address'),
+        max_length=255,
+        blank=True,
+        null=True,
+    )
+
     hole = models.IntegerField(
         verbose_name=_('No. of holes'),
         choices=HOLE_CHOICES,
@@ -272,6 +279,22 @@ class Club(model_utils_models.TimeStampedModel):
 
     green_fee_selling_price = models.DecimalField(
         verbose_name=_('Start from'),
+        max_digits=11,
+        decimal_places=2,
+        help_text=_('THB'),
+        db_index=True,
+    )
+
+    caddie_fee_selling_price = models.DecimalField(
+        verbose_name=_('Caddie fee'),
+        max_digits=11,
+        decimal_places=2,
+        help_text=_('THB'),
+        db_index=True,
+    )
+
+    cart_fee_selling_price = models.DecimalField(
+        verbose_name=_('Cart fee'),
         max_digits=11,
         decimal_places=2,
         help_text=_('THB'),

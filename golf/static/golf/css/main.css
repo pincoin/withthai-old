@@ -12,6 +12,14 @@
     .club-list-description {
         padding-left: 12px;
     }
+
+    .club-detail-card {
+        padding-right: 24px;
+    }
+
+    .uk-form-label {
+        font-size: 1rem;
+    }
 }
 
 /* Small devices */

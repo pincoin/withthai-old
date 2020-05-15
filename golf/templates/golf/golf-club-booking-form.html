@@ -51,7 +51,7 @@
                 </form>
 
                 <div class="uk-flex uk-flex-wrap">
-                    <div class="uk-width-1-1 uk-width-1-3@m">
+                    <div class="uk-width-1-1 uk-width-1-2@m club-detail-card">
                         {% if club.thumbnail1 %}
                             <img data-src="{{ club.thumbnail1.url }}"
                                  width="640" height="320" alt="" uk-img="">
@@ -61,7 +61,7 @@
                         {% endif %}
 
                     </div>
-                    <div class="uk-width-1-1 uk-width-1-3@m">
+                    <div class="uk-width-1-1 uk-width-1-2@m">
                         <h3>
                             {% if LANGUAGE_CODE == 'th' %}
                                 {{ club.title_thai }}
@@ -71,57 +71,103 @@
                                 {{ club.title_english }}
                             {% endif %}
                         </h3>
-                        <span>
-                            {% if LANGUAGE_CODE == 'th' %}
-                                {{ club.district.title_thai }}
-                            {% elif LANGUAGE_CODE == 'ko' %}
-                                {{ club.district.title_korean }}
-                            {% else %}
-                                {{ club.district.title_english }}
-                            {% endif %} -
-                            <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
-                                {% if LANGUAGE_CODE == 'th' %}
-                                    {{ club.district.province.title_thai }}
-                                {% elif LANGUAGE_CODE == 'ko' %}
-                                    {{ club.district.province.title_korean }}
-                                {% else %}
-                                    {{ club.district.province.title_english }}
-                                {% endif %}
-                            </a>
-                        </span>
-                        <hr>
-                        <div class="uk-align-right">
-                            <span>{% trans 'Start From' %}</span>
-                            <span class="club-list-price">
-                                                    {{ club.green_fee_selling_price|floatformat:0|intcomma }}
-                                                </span>
-                            <span>{% trans 'THB' %}</span>
-                        </div>
+                        <table class="uk-table uk-table-small">
+                            <tbody>
+                            <tr>
+                                <td>지역</td>
+                                <td colspan="2">
+                                    {% if LANGUAGE_CODE == 'th' %}
+                                        {{ club.district.title_thai }}
+                                    {% elif LANGUAGE_CODE == 'ko' %}
+                                        {{ club.district.title_korean }}
+                                    {% else %}
+                                        {{ club.district.title_english }}
+                                    {% endif %} -
+                                    <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                        {% if LANGUAGE_CODE == 'th' %}
+                                            {{ club.district.province.title_thai }}
+                                        {% elif LANGUAGE_CODE == 'ko' %}
+                                            {{ club.district.province.title_korean }}
+                                        {% else %}
+                                            {{ club.district.province.title_english }}
+                                        {% endif %}
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{% trans 'Cart Fee' %}</td>
+                                <td>
+                                    {{ club.cart_fee_selling_price|floatformat:0|intcomma }}
+                                    {% trans 'THB' %}
+                                </td>
+                                <td>
+                                    {% trans 'Optional' %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{% trans 'Caddie Fee' %}</td>
+                                <td>
+                                    {{ club.caddie_fee_selling_price|floatformat:0|intcomma }}
+                                    {% trans 'THB' %}
+                                </td>
+                                <td>
+                                    <span class="uk-text-danger">
+                                        {% trans 'Pay at golf course' %}
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>전화번호</td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td>주소</td>
+                                <td colspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td>홈페이지</td>
+                                <td colspan="2"></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="uk-width-1-1 uk-width-1-3@m">
+                    <div class="uk-width-1-1">
                         <form class="uk-form-horizontal uk-margin-large">
                             <div class="uk-margin">
+                                <label class="uk-form-label">{% trans 'Green Fee' %}</label>
+                                <div class="uk-form-controls">
+                                    <input type="text" class="uk-input">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
+                                <label class="uk-form-label">{% trans 'Cart Fee' %}</label>
+                                <div class="uk-form-controls">
+                                    <input type="text" class="uk-input"
+                                           value="{{ club.cart_fee_selling_price|floatformat:0|intcomma }}">
+                                </div>
+                            </div>
+                            <div class="uk-margin">
                                 <label class="uk-form-label">일자</label>
-                                <div class="uk-form-controls uk-form-controls-text">
+                                <div class="uk-form-controls">
                                     <input type="text" class="uk-input" id="round_date">
                                 </div>
                             </div>
                             <div class="uk-margin">
-                                <div class="uk-form-label">시각</div>
-                                <div class="uk-form-controls uk-form-controls-text">
+                                <label class="uk-form-label">시각</label>
+                                <div class="uk-form-controls">
                                     <input type="text" class="uk-input" id="round_time">
                                 </div>
                             </div>
                             <div class="uk-margin">
-                                <div class="uk-form-label">인원</div>
-                                <div class="uk-form-controls uk-form-controls-text">
+                                <label class="uk-form-label">인원</label>
+                                <div class="uk-form-controls">
                                     <input class="uk-input" type="number" min="0" max="5"
                                            value="4">
                                 </div>
                             </div>
                             <div class="uk-margin">
-                                <div class="uk-form-label">카트</div>
-                                <div class="uk-form-controls uk-form-controls-text">
+                                <label class="uk-form-label">카트</label>
+                                <div class="uk-form-controls">
                                     <input class="uk-input" type="number" min="0" max="5"
                                            value="4">
                                 </div>
