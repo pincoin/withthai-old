@@ -41,23 +41,13 @@ main {
     .navbar-brand {
         justify-content: space-between;
     }
-
-    .burger {
-        margin: 0 10px;
-        text-align: center;
-    }
-
-    .burger i {
-        font-size: 20px;
-        padding: 4px;
-        border: #666 1px solid;
-        border-radius: 5px;
-        width: 36px;
-        margin-top: 10px;
-    }
 }
 
 /* Breadcrumbs */
 .breadcrumb {
     background-color: #ebf2ea;
+}
+
+.breadcrumb ul {
+    padding: 4px 0;
 }
