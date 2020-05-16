@@ -37,9 +37,7 @@
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a role="button" class="navbar-burger burger">
-                    <i class="fas fa-bars fa-fw"></i>
-                </a>
+
 
                 <a class="navbar-item" href="{% url 'home' %}">
                     {% if LANGUAGE_CODE == 'ko' %}
@@ -49,9 +47,6 @@
                     {% endif %}
                 </a>
 
-                <a role="button" class="navbar-burger burger">
-                    <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
-                </a>
             </div>
 
             <div class="navbar-menu">
