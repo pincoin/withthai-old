@@ -7,61 +7,67 @@
 
 {% block main %}
     <main>
-        <div class="uk-section uk-section-default main-content-center">
-            <div class="uk-container">
-                <div class="uk-width-large uk-margin-auto">
-                    <h1 class="uk-h2 uk-margin-medium-bottom uk-heading-divider uk-text-center">
-                        {% trans 'SIGN IN' %}
-                    </h1>
+        <div class="hero is-large">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-multiline">
+                        <div class="column is-one-third is-offset-one-third has-text-centered">
+                            <h3>{% trans 'SIGN IN' %}</h3>
+                        </div>
 
-                    <div class="uk-margin-medium-top uk-text-center">
-                        <div class="uk-flex uk-flex-inline">
-                            <div class="uk-margin-small-right">
-                                <a title="Naver"
-                                   class="socialaccount_provider naver"
-                                   href="/accounts/naver/login/?process=login">
-                                    <img src="{% static 'conf/images/sns_naver.svg' %}" width="64" height="64">
-                                </a>
-                            </div>
-                            <div class="uk-margin-small-right">
-                                <a title="Kakao"
-                                   class="socialaccount_provider kakao"
-                                   href="/accounts/kakao/login/?process=login">
-                                    <img src="{% static 'conf/images/sns_kakao.svg' %}" width="64" height="64"
-                                         alt="Kakao">
-                                </a>
-                            </div>
-                            <div class="uk-margin-small-right">
-                                <a title="Line"
-                                   class="socialaccount_provider line"
-                                   href="/accounts/line/login/?process=login">
-                                    <img src="{% static 'conf/images/sns_line.svg' %}" width="64" height="64"
-                                         alt="Line">
-                                </a>
-                            </div>
-                            <div class="uk-margin-small-right">
-                                <a title="Facebook"
-                                   class="socialaccount_provider facebook"
-                                   href="/accounts/facebook/login/?process=login">
-                                    <img src="{% static 'conf/images/sns_facebook.svg' %}" width="64" height="64"
-                                         alt="Facebook">
-                                </a>
-                            </div>
-                            <div>
-                                <a title="Google"
-                                   class="socialaccount_provider google"
-                                   href="/accounts/google/login/?process=login">
-                                    <img src="{% static 'conf/images/sns_google.svg' %}" width="64" height="64"
-                                         alt="Google">
-                                </a>
+                        <div class="column is-one-third is-offset-one-third">
+                            <div class="columns is-mobile">
+                                <div class="column">
+                                    <a title="Naver"
+                                       class="socialaccount_provider naver"
+                                       href="/accounts/naver/login/?process=login">
+                                        <img src="{% static 'conf/images/sns_naver.svg' %}" width="64" height="64">
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a title="Kakao"
+                                       class="socialaccount_provider kakao"
+                                       href="/accounts/kakao/login/?process=login">
+                                        <img src="{% static 'conf/images/sns_kakao.svg' %}" width="64" height="64"
+                                             alt="Kakao">
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a title="Line"
+                                       class="socialaccount_provider line"
+                                       href="/accounts/line/login/?process=login">
+                                        <img src="{% static 'conf/images/sns_line.svg' %}" width="64" height="64"
+                                             alt="Line">
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a title="Facebook"
+                                       class="socialaccount_provider facebook"
+                                       href="/accounts/facebook/login/?process=login">
+                                        <img src="{% static 'conf/images/sns_facebook.svg' %}" width="64" height="64"
+                                             alt="Facebook">
+                                    </a>
+                                </div>
+                                <div class="column">
+                                    <a title="Google"
+                                       class="socialaccount_provider google"
+                                       href="/accounts/google/login/?process=login">
+                                        <img src="{% static 'conf/images/sns_google.svg' %}" width="64" height="64"
+                                             alt="Google">
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <hr>
+                        <div class="column is-one-third is-offset-one-third">
+                            <article class="message is-primary">
+                                <div class="message-body">
+                                    {% trans 'You may login with your SNS accounts.' %}
+                                </div>
+                            </article>
+                        </div>
+                        {% providers_media_js %}
                     </div>
-                    <hr class="uk-divider-icon">
-                    <p class="uk-text-center">
-                        {% trans 'You may login with your SNS accounts.' %}
-                    </p>
-                    {% providers_media_js %}
                 </div>
             </div>
         </div>
