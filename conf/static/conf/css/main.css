@@ -20,6 +20,10 @@ main {
     background-color: #03353e;
 }
 
+.footer-copyright .column {
+    padding: 0 0.75rem;
+}
+
 .footer-info-heading {
     color: #87b842;
     font-weight: 700;
