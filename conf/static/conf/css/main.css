@@ -13,19 +13,16 @@ main {
 .footer-info {
     color: #03353e;
     background-color: #ebf2ea;
-    padding: 0 .4rem .4rem .4rem;
 }
 
 .footer-copyright {
     color: #f8f9fa;
     background-color: #03353e;
-    padding: .4rem;
 }
 
 .footer-info-heading {
     color: #87b842;
     font-weight: 700;
-    padding-top: .4rem;
 }
 
 .footer-info-list li {
