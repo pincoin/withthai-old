@@ -2,12 +2,13 @@
 .footer-info {
     color: #03353e;
     background-color: #ebf2ea;
-    padding-bottom: 24px;
+    padding: .6rem;
 }
 
 .footer-copyright {
     color: #f8f9fa;
     background-color: #03353e;
+    padding: .6rem;
 }
 
 .footer-info-heading {

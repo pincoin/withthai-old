@@ -37,8 +37,6 @@
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-
-
                 <a class="navbar-item" href="{% url 'home' %}">
                     {% if LANGUAGE_CODE == 'ko' %}
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
@@ -46,7 +44,6 @@
                         <img src="{% static 'conf/images/withthai_logo_en.png' %}" alt="{% trans 'WITH THAI' %}">
                     {% endif %}
                 </a>
-
             </div>
 
             <div class="navbar-menu">
@@ -157,7 +154,7 @@
 <footer>
     <div class="footer-info">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-gapless">
                 <div class="column is-full-mobile is-two-thirds-desktop">
                     <h4 class="footer-info-heading">{% trans 'WITH THAI Co., Ltd.' %}</h4>
                     <ul class="footer-info-list">
@@ -215,7 +212,7 @@
 
     <div class="footer-copyright">
         <div class="container">
-            <div class="columns">
+            <div class="columns is-gapless">
                 <div class="column is-full-mobile is-half-desktop has-text-centered-mobile has-text-right-desktop">
                     Copyright &copy {% now 'Y' %} withthai.com
                 </div>
