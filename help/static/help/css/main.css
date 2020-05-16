@@ -1,6 +1,22 @@
 /* Help */
 
 .terms-list-item {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.privacy-heading {
+    margin-bottom: 1.5rem;
+}
+
+.privacy-subheading {
+    margin-bottom: 1rem;
+}
+
+.privacy-list {
+    margin-bottom: 1.5rem;
+}
+
+.privacy-list li {
+    margin-bottom: .5rem;
 }

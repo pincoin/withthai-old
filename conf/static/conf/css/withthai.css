@@ -375,19 +375,19 @@ table th {
   overflow: hidden !important; }
 
 .is-size-1 {
-  font-size: 3rem !important; }
-
-.is-size-2 {
-  font-size: 2.5rem !important; }
-
-.is-size-3 {
-  font-size: 2rem !important; }
-
-.is-size-4 {
   font-size: 1.5rem !important; }
 
+.is-size-2 {
+  font-size: 1.4rem !important; }
+
+.is-size-3 {
+  font-size: 1.3rem !important; }
+
+.is-size-4 {
+  font-size: 1.2rem !important; }
+
 .is-size-5 {
-  font-size: 1.25rem !important; }
+  font-size: 1.1rem !important; }
 
 .is-size-6 {
   font-size: 1rem !important; }
@@ -397,19 +397,19 @@ table th {
 
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
-    font-size: 3rem !important; }
-
-  .is-size-2-mobile {
-    font-size: 2.5rem !important; }
-
-  .is-size-3-mobile {
-    font-size: 2rem !important; }
-
-  .is-size-4-mobile {
     font-size: 1.5rem !important; }
 
+  .is-size-2-mobile {
+    font-size: 1.4rem !important; }
+
+  .is-size-3-mobile {
+    font-size: 1.3rem !important; }
+
+  .is-size-4-mobile {
+    font-size: 1.2rem !important; }
+
   .is-size-5-mobile {
-    font-size: 1.25rem !important; }
+    font-size: 1.1rem !important; }
 
   .is-size-6-mobile {
     font-size: 1rem !important; }
@@ -418,19 +418,19 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 769px), print {
   .is-size-1-tablet {
-    font-size: 3rem !important; }
-
-  .is-size-2-tablet {
-    font-size: 2.5rem !important; }
-
-  .is-size-3-tablet {
-    font-size: 2rem !important; }
-
-  .is-size-4-tablet {
     font-size: 1.5rem !important; }
 
+  .is-size-2-tablet {
+    font-size: 1.4rem !important; }
+
+  .is-size-3-tablet {
+    font-size: 1.3rem !important; }
+
+  .is-size-4-tablet {
+    font-size: 1.2rem !important; }
+
   .is-size-5-tablet {
-    font-size: 1.25rem !important; }
+    font-size: 1.1rem !important; }
 
   .is-size-6-tablet {
     font-size: 1rem !important; }
@@ -439,19 +439,19 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (max-width: 1023px) {
   .is-size-1-touch {
-    font-size: 3rem !important; }
-
-  .is-size-2-touch {
-    font-size: 2.5rem !important; }
-
-  .is-size-3-touch {
-    font-size: 2rem !important; }
-
-  .is-size-4-touch {
     font-size: 1.5rem !important; }
 
+  .is-size-2-touch {
+    font-size: 1.4rem !important; }
+
+  .is-size-3-touch {
+    font-size: 1.3rem !important; }
+
+  .is-size-4-touch {
+    font-size: 1.2rem !important; }
+
   .is-size-5-touch {
-    font-size: 1.25rem !important; }
+    font-size: 1.1rem !important; }
 
   .is-size-6-touch {
     font-size: 1rem !important; }
@@ -460,19 +460,19 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 1024px) {
   .is-size-1-desktop {
-    font-size: 3rem !important; }
-
-  .is-size-2-desktop {
-    font-size: 2.5rem !important; }
-
-  .is-size-3-desktop {
-    font-size: 2rem !important; }
-
-  .is-size-4-desktop {
     font-size: 1.5rem !important; }
 
+  .is-size-2-desktop {
+    font-size: 1.4rem !important; }
+
+  .is-size-3-desktop {
+    font-size: 1.3rem !important; }
+
+  .is-size-4-desktop {
+    font-size: 1.2rem !important; }
+
   .is-size-5-desktop {
-    font-size: 1.25rem !important; }
+    font-size: 1.1rem !important; }
 
   .is-size-6-desktop {
     font-size: 1rem !important; }
@@ -481,19 +481,19 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 1216px) {
   .is-size-1-widescreen {
-    font-size: 3rem !important; }
-
-  .is-size-2-widescreen {
-    font-size: 2.5rem !important; }
-
-  .is-size-3-widescreen {
-    font-size: 2rem !important; }
-
-  .is-size-4-widescreen {
     font-size: 1.5rem !important; }
 
+  .is-size-2-widescreen {
+    font-size: 1.4rem !important; }
+
+  .is-size-3-widescreen {
+    font-size: 1.3rem !important; }
+
+  .is-size-4-widescreen {
+    font-size: 1.2rem !important; }
+
   .is-size-5-widescreen {
-    font-size: 1.25rem !important; }
+    font-size: 1.1rem !important; }
 
   .is-size-6-widescreen {
     font-size: 1rem !important; }
@@ -502,19 +502,19 @@ table th {
     font-size: 0.75rem !important; } }
 @media screen and (min-width: 1408px) {
   .is-size-1-fullhd {
-    font-size: 3rem !important; }
-
-  .is-size-2-fullhd {
-    font-size: 2.5rem !important; }
-
-  .is-size-3-fullhd {
-    font-size: 2rem !important; }
-
-  .is-size-4-fullhd {
     font-size: 1.5rem !important; }
 
+  .is-size-2-fullhd {
+    font-size: 1.4rem !important; }
+
+  .is-size-3-fullhd {
+    font-size: 1.3rem !important; }
+
+  .is-size-4-fullhd {
+    font-size: 1.2rem !important; }
+
   .is-size-5-fullhd {
-    font-size: 1.25rem !important; }
+    font-size: 1.1rem !important; }
 
   .is-size-6-fullhd {
     font-size: 1rem !important; }
@@ -1840,9 +1840,9 @@ a.box:active {
   .button.is-normal {
     font-size: 1rem; }
   .button.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .button.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .button[disabled], fieldset[disabled] .button {
     background-color: white;
     border-color: #dbdbdb;
@@ -1887,9 +1887,9 @@ a.box:active {
     border-radius: 2px;
     font-size: 0.75rem; }
   .buttons.are-medium .button:not(.is-small):not(.is-normal):not(.is-large) {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .buttons.are-large .button:not(.is-small):not(.is-normal):not(.is-medium) {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .buttons.has-addons .button:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
@@ -2066,9 +2066,9 @@ a.box:active {
 .content.is-small {
   font-size: 0.75rem; }
 .content.is-medium {
-  font-size: 1.25rem; }
+  font-size: 1.1rem; }
 .content.is-large {
-  font-size: 1.5rem; }
+  font-size: 1.2rem; }
 
 .icon {
   align-items: center;
@@ -2356,9 +2356,9 @@ a.box:active {
   .progress.is-small {
     height: 0.75rem; }
   .progress.is-medium {
-    height: 1.25rem; }
+    height: 1.1rem; }
   .progress.is-large {
-    height: 1.5rem; }
+    height: 1.2rem; }
 
 @keyframes moveIndeterminate {
   from {
@@ -2510,7 +2510,7 @@ a.box:active {
   .tags.are-medium .tag:not(.is-normal):not(.is-large) {
     font-size: 1rem; }
   .tags.are-large .tag:not(.is-normal):not(.is-medium) {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .tags.is-centered {
     justify-content: center; }
     .tags.is-centered .tag {
@@ -2601,7 +2601,7 @@ a.box:active {
   .tag:not(body).is-medium {
     font-size: 1rem; }
   .tag:not(body).is-large {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .tag:not(body) .icon:first-child:not(:last-child) {
     margin-left: -0.375em;
     margin-right: 0.1875em; }
@@ -2661,7 +2661,7 @@ a.tag:hover {
 
 .title {
   color: #363636;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.125; }
   .title strong {
@@ -2672,15 +2672,15 @@ a.tag:hover {
   .title:not(.is-spaced) + .subtitle {
     margin-top: -1.25rem; }
   .title.is-1 {
-    font-size: 3rem; }
-  .title.is-2 {
-    font-size: 2.5rem; }
-  .title.is-3 {
-    font-size: 2rem; }
-  .title.is-4 {
     font-size: 1.5rem; }
+  .title.is-2 {
+    font-size: 1.4rem; }
+  .title.is-3 {
+    font-size: 1.3rem; }
+  .title.is-4 {
+    font-size: 1.2rem; }
   .title.is-5 {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .title.is-6 {
     font-size: 1rem; }
   .title.is-7 {
@@ -2688,7 +2688,7 @@ a.tag:hover {
 
 .subtitle {
   color: #4a4a4a;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.25; }
   .subtitle strong {
@@ -2697,15 +2697,15 @@ a.tag:hover {
   .subtitle:not(.is-spaced) + .title {
     margin-top: -1.25rem; }
   .subtitle.is-1 {
-    font-size: 3rem; }
-  .subtitle.is-2 {
-    font-size: 2.5rem; }
-  .subtitle.is-3 {
-    font-size: 2rem; }
-  .subtitle.is-4 {
     font-size: 1.5rem; }
+  .subtitle.is-2 {
+    font-size: 1.4rem; }
+  .subtitle.is-3 {
+    font-size: 1.3rem; }
+  .subtitle.is-4 {
+    font-size: 1.2rem; }
   .subtitle.is-5 {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .subtitle.is-6 {
     font-size: 1rem; }
   .subtitle.is-7 {
@@ -2732,7 +2732,7 @@ a.tag:hover {
   background-color: whitesmoke;
   border-radius: 290486px;
   display: inline-flex;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   height: 2em;
   justify-content: center;
   margin-right: 1.5rem;
@@ -2823,9 +2823,9 @@ a.tag:hover {
     border-radius: 2px;
     font-size: 0.75rem; }
   .is-medium.input, .is-medium.textarea {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .is-large.input, .is-large.textarea {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .is-fullwidth.input, .is-fullwidth.textarea {
     display: block;
     width: 100%; }
@@ -2991,9 +2991,9 @@ a.tag:hover {
     border-radius: 2px;
     font-size: 0.75rem; }
   .select.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .select.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .select.is-disabled::after {
     border-color: #7a7a7a; }
   .select.is-fullwidth {
@@ -3009,9 +3009,9 @@ a.tag:hover {
   .select.is-loading.is-small:after {
     font-size: 0.75rem; }
   .select.is-loading.is-medium:after {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .select.is-loading.is-large:after {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
 
 .file {
   align-items: stretch;
@@ -3181,11 +3181,11 @@ a.tag:hover {
   .file.is-small {
     font-size: 0.75rem; }
   .file.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
     .file.is-medium .file-icon .fa {
       font-size: 21px; }
   .file.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
     .file.is-large .file-icon .fa {
       font-size: 28px; }
   .file.has-name .file-cta {
@@ -3308,9 +3308,9 @@ a.tag:hover {
   .label.is-small {
     font-size: 0.75rem; }
   .label.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .label.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
 
 .help {
   display: block;
@@ -3439,10 +3439,10 @@ a.tag:hover {
     .field-label.is-normal {
       padding-top: 0.375em; }
     .field-label.is-medium {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       padding-top: 0.375em; }
     .field-label.is-large {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       padding-top: 0.375em; } }
 
 .field-body .field .field {
@@ -3479,11 +3479,11 @@ a.tag:hover {
   .control.has-icons-left .input.is-medium ~ .icon,
   .control.has-icons-left .select.is-medium ~ .icon, .control.has-icons-right .input.is-medium ~ .icon,
   .control.has-icons-right .select.is-medium ~ .icon {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .control.has-icons-left .input.is-large ~ .icon,
   .control.has-icons-left .select.is-large ~ .icon, .control.has-icons-right .input.is-large ~ .icon,
   .control.has-icons-right .select.is-large ~ .icon {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .control.has-icons-left .icon, .control.has-icons-right .icon {
     color: #dbdbdb;
     height: 2.5em;
@@ -3510,9 +3510,9 @@ a.tag:hover {
   .control.is-loading.is-small:after {
     font-size: 0.75rem; }
   .control.is-loading.is-medium:after {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .control.is-loading.is-large:after {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
 
 .breadcrumb {
   font-size: 1rem;
@@ -3556,9 +3556,9 @@ a.tag:hover {
   .breadcrumb.is-small {
     font-size: 0.75rem; }
   .breadcrumb.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .breadcrumb.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .breadcrumb.has-arrow-separator li + li::before {
     content: "→"; }
   .breadcrumb.has-bullet-separator li + li::before {
@@ -3834,9 +3834,9 @@ a.list-item {
   .menu.is-small {
     font-size: 0.75rem; }
   .menu.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .menu.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
 
 .menu-list {
   line-height: 1.25; }
@@ -3878,9 +3878,9 @@ a.list-item {
   .message.is-small {
     font-size: 0.75rem; }
   .message.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .message.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .message.is-white {
     background-color: white; }
     .message.is-white .message-header {
@@ -4053,7 +4053,7 @@ a.list-item {
   color: #363636;
   flex-grow: 1;
   flex-shrink: 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1; }
 
 .modal-card-foot {
@@ -4882,9 +4882,9 @@ a.navbar-item,
   .pagination.is-small {
     font-size: 0.75rem; }
   .pagination.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .pagination.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .pagination.is-rounded .pagination-previous,
   .pagination.is-rounded .pagination-next {
     padding-left: 1em;
@@ -5252,9 +5252,9 @@ label.panel-block {
   .tabs.is-small {
     font-size: 0.75rem; }
   .tabs.is-medium {
-    font-size: 1.25rem; }
+    font-size: 1.1rem; }
   .tabs.is-large {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
 
 .column {
   display: block;

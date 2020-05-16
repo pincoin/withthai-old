@@ -4,73 +4,81 @@
 
 {% block main %}
     <main>
-        <div class="uk-section uk-section-muted">
-            <div class="uk-container">
-                <h3 class="">{% trans 'TERMS &amp; CONDITIONS' %}</h3>
-                <p>
-                    {% trans 'The following Terms of Service have been agreed upon by the Customer and WITH THAI Co., Ltd., and will be used to govern and regulate the usage and services of the WITH THAI booking service with the following terms :' %}
-                </p>
-                <ul class="uk-list uk-list-large">
-                    <li class="terms-list-item">
-                        {% trans '1. The price that WITH THAI displays is for Green Fee only, except at some courses which has special rules which will be clearly stated in the Booking Confirmation Page. Please make sure to confirm the Booking Details, the Total Cost, Cancellation Policy and Rain Check Policy before payment.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '2. The Customer may use one eligible voucher code or promotion for each booking. Simply press the “Use Promotion” button in the Booking Confirmation page and enter your voucher code or select your promotion. The discount will be applied to your total cost.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '3. After completed payment, the Customer will be sent a booking receipt to their registered email and may check their booking in the Bookings Page in the WITH THAI application. When it’s time to play at the time slot of your booked Golf Course, make sure to bring your booking receipt or to display the Bookings page of your WITH THAI application to the Golf Course cashier staff.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '4. If you have problems or if there is a mistake regarding your booking, please contact WITH THAI at HOT LINE 080-023-3602, via LINE ID @withthai or email help@withthai.com' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '5. If the Customer is unable to personally play golf they may let another person use this time slot, who is then required to present the booking receipt to the Golf Course cashier staff.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '6. Regarding cancelling your paid booking to request refunds, refunds may be issued based on the Cancellation Policy used at the Golf Course you have booked at. Refunds are not possible if the Customer does not satisfy the requirements of the Cancellation Policy. To cancel a booking, contact WITH THAI via HOT LINE 080-023-3602, via LINE ID @withthai or via help@withthai.com' %}
-                        <ul class="uk-list">
+        <div class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <div class="column is-full has-text-centered">
+                        <h1 class="is-size-1">{% trans 'TERMS &amp; CONDITIONS' %}</h1>
+                    </div>
+                    <div class="column is-full">
+                        {% trans 'The following Terms of Service have been agreed upon by the Customer and WITH THAI Co., Ltd., and will be used to govern and regulate the usage and services of the WITH THAI booking service with the following terms :' %}
+                    </div>
+                    <div class="column is-full">
+                        <ul>
                             <li class="terms-list-item">
-                                {% trans '6A. FLEXI – If the Customer cancels their booking before midnight before booked date, the Customer is eligible for 100% refund via credit card or WITH THAI voucher for use on their next booking with WITH THAI. If the Customer cancels their booking a minimum of 2 hours before booked time, the Customer is eligible for 100% refund as a WITH THAI voucher ONLY.' %}
+                                {% trans '1. The price that WITH THAI displays is for Green Fee only, except at some courses which has special rules which will be clearly stated in the Booking Confirmation Page. Please make sure to confirm the Booking Details, the Total Cost, Cancellation Policy and Rain Check Policy before payment.' %}
                             </li>
                             <li class="terms-list-item">
-                                {% trans '6B. MODERATE – If the Customer cancels their booking before midnight before booked date, the Customer is eligible for 100% refund via credit card or WITH THAI voucher for use on their next booking with WITH THAI. If the Customer cancels their booking a minimum of 2 hours before booked time, the Golf Course may not allow cancel booking, but may allow change date, to do so please contact the Golf Course directly.' %}
+                                {% trans '2. The Customer may use one eligible voucher code or promotion for each booking. Simply press the “Use Promotion” button in the Booking Confirmation page and enter your voucher code or select your promotion. The discount will be applied to your total cost.' %}
                             </li>
                             <li class="terms-list-item">
-                                {% trans '6C. STRICT – If the Customer cancels their booking before midnight before booked date, the Customer is eligible for 100% refund via credit card or Golfdigg voucher for use on their next booking with Golfdigg. If the Customer cancels their booking on the booking date, the golf course does not allow refunds or change date.' %}
+                                {% trans '3. After completed payment, the Customer will be sent a booking receipt to their registered email and may check their booking in the Bookings Page in the WITH THAI application. When it’s time to play at the time slot of your booked Golf Course, make sure to bring your booking receipt or to display the Bookings page of your WITH THAI application to the Golf Course cashier staff.' %}
                             </li>
-                        </ul>
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '7. Regarding Rain Checks, these may be issued depending on the Rain Check Policy of the Golf Course.  The issuing of Rain Checks is strictly between the Customer and the Golf Course, WITH THAI will not take responsibility in this issue for any reason.' %}
+                            <li class="terms-list-item">
+                                {% trans '4. If you have problems or if there is a mistake regarding your booking, please contact WITH THAI at HOT LINE 080-023-3602, via LINE ID @withthai or email help@withthai.com' %}
+                            </li>
+                            <li class="terms-list-item">
+                                {% trans '5. If the Customer is unable to personally play golf they may let another person use this time slot, who is then required to present the booking receipt to the Golf Course cashier staff.' %}
+                            </li>
+                            <li class="terms-list-item">
+                                {% trans '6. Regarding cancelling your paid booking to request refunds, refunds may be issued based on the Cancellation Policy used at the Golf Course you have booked at. Refunds are not possible if the Customer does not satisfy the requirements of the Cancellation Policy. To cancel a booking, contact WITH THAI via HOT LINE 080-023-3602, via LINE ID @withthai or via help@withthai.com' %}
+                                <ul class="uk-list">
+                                    <li class="terms-list-item">
+                                        {% trans '6A. FLEXI – If the Customer cancels their booking before midnight before booked date, the Customer is eligible for 100% refund via credit card or WITH THAI voucher for use on their next booking with WITH THAI. If the Customer cancels their booking a minimum of 2 hours before booked time, the Customer is eligible for 100% refund as a WITH THAI voucher ONLY.' %}
+                                    </li>
+                                    <li class="terms-list-item">
+                                        {% trans '6B. MODERATE – If the Customer cancels their booking before midnight before booked date, the Customer is eligible for 100% refund via credit card or WITH THAI voucher for use on their next booking with WITH THAI. If the Customer cancels their booking a minimum of 2 hours before booked time, the Golf Course may not allow cancel booking, but may allow change date, to do so please contact the Golf Course directly.' %}
+                                    </li>
+                                    <li class="terms-list-item">
+                                        {% trans '6C. STRICT – If the Customer cancels their booking before midnight before booked date, the Customer is eligible for 100% refund via credit card or Golfdigg voucher for use on their next booking with Golfdigg. If the Customer cancels their booking on the booking date, the golf course does not allow refunds or change date.' %}
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="terms-list-item">
+                                {% trans '7. Regarding Rain Checks, these may be issued depending on the Rain Check Policy of the Golf Course.  The issuing of Rain Checks is strictly between the Customer and the Golf Course, WITH THAI will not take responsibility in this issue for any reason.' %}
 
-                        <ul class="uk-list">
+                                <ul class="uk-list">
+                                    <li class="terms-list-item">
+                                        {% trans '7A. Rain started during play – Rain Checks may OR may not be issued according to the Rain Check Policy of the Golf Course.' %}
+                                    </li>
+                                    <li class="terms-list-item">
+                                        {% trans '7B. Heavy rain and cannot play – the Golf Course may OR may not allow change date according to the Rain Check Policy of the Golf Course.' %}
+                                    </li>
+                                </ul>
                             <li class="terms-list-item">
-                                {% trans '7A. Rain started during play – Rain Checks may OR may not be issued according to the Rain Check Policy of the Golf Course.' %}
+                                {% trans '8. If the Customer uses the WITH THAI platform and service in ways outside of WITH THAI intention, WITH THAI will first provide a warning and collect the Customer’s information. In case of repeated offenses WITH THAI reserves the right to decline service to the Customer without prior notification.' %}
                             </li>
                             <li class="terms-list-item">
-                                {% trans '7B. Heavy rain and cannot play – the Golf Course may OR may not allow change date according to the Rain Check Policy of the Golf Course.' %}
+                                {% trans '9. WITH THAI reserves the right to cancel any booking for any reason and will process refund and notify the Customer. WITH THAI will not be responsible for any types of incidents for any reason.' %}
+                            </li>
+                            <li class="terms-list-item">
+                                {% trans '10. If the Customer is representing or otherwise has a business relationship with tour companies or agencies and books time slots through WITH THAI, the Golf Course is considered rightfully permitted to cancel the booking or increase the Green Fee without giving prior notice to the Customer. WITH THAI will not be responsible for any types of incidents for any reason.' %}
+                            </li>
+                            <li class="terms-list-item">
+                                {% trans '11. In the case where the Customer books a deal for less persons than Golf Courses minimum allowed group size or when creating / joining a JOIN slot, the Golf Course may require the Customer to join other groups at a time slot close to your booked timeslot without giving prior notice to the Customer and WITH THAI will not be responsible for any types of incidents for any reason.' %}
+                            </li>
+                            <li class="terms-list-item">
+                                {% trans '12. Completed booking and payment with WITH THAI will be considered as if the Customer have understood and fully agreed to this Terms of Service and WITH THAI will not be responsible for any incidents resulting the Customer breaking the Terms of Service.' %}
+                            </li>
+                            <li class="terms-list-item">
+                                {% trans '13. WITH THAI reserves the right to change the Terms of Service in any way possible way without needing to give prior notice to the Customer. WITH THAI Co., Ltd.' %}
                             </li>
                         </ul>
-                    <li class="terms-list-item">
-                        {% trans '8. If the Customer uses the WITH THAI platform and service in ways outside of WITH THAI intention, WITH THAI will first provide a warning and collect the Customer’s information. In case of repeated offenses WITH THAI reserves the right to decline service to the Customer without prior notification.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '9. WITH THAI reserves the right to cancel any booking for any reason and will process refund and notify the Customer. WITH THAI will not be responsible for any types of incidents for any reason.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '10. If the Customer is representing or otherwise has a business relationship with tour companies or agencies and books time slots through WITH THAI, the Golf Course is considered rightfully permitted to cancel the booking or increase the Green Fee without giving prior notice to the Customer. WITH THAI will not be responsible for any types of incidents for any reason.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '11. In the case where the Customer books a deal for less persons than Golf Courses minimum allowed group size or when creating / joining a JOIN slot, the Golf Course may require the Customer to join other groups at a time slot close to your booked timeslot without giving prior notice to the Customer and WITH THAI will not be responsible for any types of incidents for any reason.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '12. Completed booking and payment with WITH THAI will be considered as if the Customer have understood and fully agreed to this Terms of Service and WITH THAI will not be responsible for any incidents resulting the Customer breaking the Terms of Service.' %}
-                    </li>
-                    <li class="terms-list-item">
-                        {% trans '13. WITH THAI reserves the right to change the Terms of Service in any way possible way without needing to give prior notice to the Customer. WITH THAI Co., Ltd.' %}
-                    </li>
-                </ul>
-                <p>{% trans 'WITH THAI Co., Ltd.' %}</p>
+                    </div>
+                    <div class="column is-full">
+                        {% trans 'WITH THAI Co., Ltd.' %}
+                    </div>
+                </div>
             </div>
         </div>
     </main>

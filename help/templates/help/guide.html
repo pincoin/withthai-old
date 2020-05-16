@@ -4,39 +4,47 @@
 
 {% block main %}
     <main>
-        <div class="uk-section">
-            <div class="uk-container">
-                <h3 class="uk-card-title">{% trans 'GUIDE' %}</h3>
-                <div class="uk-grid uk-child-width-1-1" uk-grid>
-                    <div class="">
-                        <h4 class="uk-card-title">{% trans 'How to book' %}</h4>
-                        <div class="uk-card uk-card-body">
-                            <ul class="uk-list uk-list-bullet">
-                                <li>Required information</li>
+        <div class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <div class="column is-full has-text-centered">
+                        <h1 class="is-size-1">{% trans 'GUIDE' %}</h1>
+                    </div>
+                    <div class="column is-full">
+                        <div class="panel">
+                            <h2 class="panel-heading is-size-2">{% trans 'How to book' %}</h2>
+                            <ul class="">
+                                <li class="panel-block">
+                                    예약문의는 태국 골프장 예약 담당자 영업 시간을 기준으로 합니다.
+                                </li>
+                                <li class="panel-block">
+                                    예약문의 후 골프장에서 예약 가능 여부 회신까지 15~30분 정도 소요됩니다.
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="">
-                        <h4 class="uk-card-title">{% trans 'How to play' %}</h4>
-                        <div class="uk-card uk-card-body">
-                            <ul class="uk-list uk-list-bullet">
-                                <li>Required information</li>
+                    <div class="column is-full">
+                        <div class="panel">
+                            <h2 class="panel-heading is-size-2">{% trans 'How to play' %}</h2>
+                            <ul class="">
+                                <li class="panel-block">캐디팁은 통상적으로 캐디피에 준하여 지불합니다.</li>
+                                <li class="panel-block">복장 규정</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="">
-                        <h4 class="uk-card-title">{% trans 'How to cancel or amend' %}</h4>
-                        <div class="uk-card uk-card-body">
-                            <ul class="uk-list uk-list-bullet">
-                                <li>Required information</li>
+                    <div class="column is-full">
+                        <div class="panel">
+                            <h2 class="panel-heading is-size-2">{% trans 'How to cancel or amend' %}</h2>
+                            <ul class="">
+                                <li class="panel-block">예약 변경 규정은 골프장의 약관을 따릅니다.</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="">
-                        <h4 class="uk-card-title">{% trans 'How to refund' %}</h4>
-                        <div class="uk-card uk-card-body">
-                            <ul class="uk-list uk-list-bullet">
-                                <li>Required information</li>
+                    <div class="column is-full">
+                        <div class="panel">
+                            <h2 class="panel-heading is-size-2">{% trans 'How to refund' %}</h2>
+                            <ul class="">
+                                <li class="panel-block">환불 규정은 골프장의 약관을 따릅니다.</li>
                             </ul>
                         </div>
                     </div>

@@ -4,34 +4,34 @@
 
 {% block main %}
     <main>
-        <div class="uk-section uk-section-primary">
-            <div class="uk-container">
-                <div class="uk-grid" uk-grid>
-                    <div class="">
-                        <div class="uk-card uk-card-hover uk-card-body">
-                            <h3 class="uk-card-title">{% trans 'WITH THAI' %}</h3>
-                            <ul class="uk-list uk-list-bullet">
-                                <li>{% trans 'We make online hotel/golf booking convenient.' %}</li>
-                                <li>{% trans 'We offer a reasonable price at all times.' %}</li>
-                                <li>{% trans 'We build trust with accuracy and clarity.' %}</li>
+        <div class="section">
+            <div class="container">
+                <div class="columns">
+                    <div class="column">
+                        <div class="panel">
+                            <h1 class="panel-heading is-size-1">{% trans 'WITH THAI' %}</h1>
+                            <ul class="">
+                                <li class="panel-block">{% trans 'We make online hotel/golf booking convenient.' %}</li>
+                                <li class="panel-block">{% trans 'We offer a reasonable price at all times.' %}</li>
+                                <li class="panel-block">{% trans 'We build trust with accuracy and clarity.' %}</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="uk-section uk-section-muted">
-            <div class="uk-container">
-                <div class="uk-grid" uk-grid>
-                    <div class="uk-width-1-1 uk-width-1-2@m">
-                        <div class="uk-card uk-card-hover uk-card-body">
-                            <h3 class="uk-card-title">{% trans 'Business Registration Cetrificate' %}</h3>
+        <div class="section">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <div class="column is-full-mobile is-half-desktop">
+                        <div class="panel">
+                            <h1 class="panel-heading is-size-1">{% trans 'Business Registration Cetrificate' %}</h1>
                             <img src="{% static 'help/images/withthai-business-registration.png' %}" alt="">
                         </div>
                     </div>
-                    <div class="uk-width-1-1 uk-width-1-2@m">
-                        <div class="uk-card uk-card-hover uk-card-body">
-                            <h3 class="uk-card-title">{% trans 'Tourism License' %}</h3>
+                    <div class="column is-full-mobile is-half-desktop">
+                        <div class="panel">
+                            <h1 class="panel-heading is-size-1">{% trans 'Tourism License' %}</h1>
                             <img src="{% static 'help/images/withthai-tour-license.png' %}" alt="">
                         </div>
                     </div>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-15 22:40+0700\n"
+"POT-Creation-Date: 2020-05-17 06:06+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,53 +18,52 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: allauth/templates/account/login.html:6
-#: allauth/templates/account/login.html:14
-#: allauth/templates/account/signup_closed.html:23
-#: allauth/templates/socialaccount/authentication_error.html:23
-#: allauth/templates/socialaccount/login_cancelled.html:23
-#: conf/templates/conf/base.html:88 conf/templates/conf/base.html:184
+#: allauth/templates/account/login.html:15
+#: allauth/templates/account/signup_closed.html:32
+#: allauth/templates/socialaccount/authentication_error.html:32
+#: allauth/templates/socialaccount/login_cancelled.html:32
+#: conf/templates/conf/base.html:96
 msgid "SIGN IN"
 msgstr "로그인"
 
-#: allauth/templates/account/login.html:62
+#: allauth/templates/account/login.html:65
 msgid "You may login with your SNS accounts."
 msgstr "SNS 계정으로 간편하게 회원가입/로그인하세요."
 
 #: allauth/templates/account/logout.html:5
-#: allauth/templates/account/logout.html:13
-#: allauth/templates/account/logout.html:27 conf/templates/conf/base.html:81
-#: conf/templates/conf/base.html:177
+#: allauth/templates/account/logout.html:14
+#: allauth/templates/account/logout.html:34 conf/templates/conf/base.html:91
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
-#: allauth/templates/account/logout.html:17
+#: allauth/templates/account/logout.html:20
 msgid "Are you sure you want to sign out?"
 msgstr "정말로 로그아웃하시겠습니까?"
 
 #: allauth/templates/account/signup_closed.html:5
-#: allauth/templates/account/signup_closed.html:13
+#: allauth/templates/account/signup_closed.html:15
 msgid "SIGN UP CLOSED"
 msgstr "회원가입 금지"
 
-#: allauth/templates/account/signup_closed.html:17
+#: allauth/templates/account/signup_closed.html:22
 msgid "We are sorry, but the sign up is currently closed."
 msgstr "죄송합니다. 현재 회원가입을 받지 않습니다."
 
 #: allauth/templates/socialaccount/authentication_error.html:5
-#: allauth/templates/socialaccount/authentication_error.html:13
+#: allauth/templates/socialaccount/authentication_error.html:15
 msgid "SNS LOGIN FAILURE"
 msgstr "SNS 계정 로그인 실패"
 
-#: allauth/templates/socialaccount/authentication_error.html:17
+#: allauth/templates/socialaccount/authentication_error.html:22
 msgid "An error occurred while attempting to login via your SNS account."
 msgstr "SNS 계정으로 로그인 하는 도중 오류가 발생했습니다."
 
 #: allauth/templates/socialaccount/login_cancelled.html:5
-#: allauth/templates/socialaccount/login_cancelled.html:13
+#: allauth/templates/socialaccount/login_cancelled.html:15
 msgid "SNS LOGIN CANCELLED"
 msgstr "SNS 계정 로그인 취소"
 
-#: allauth/templates/socialaccount/login_cancelled.html:17
+#: allauth/templates/socialaccount/login_cancelled.html:22
 msgid ""
 "You decided to cancel logging in to our site using one of your existing "
 "accounts."
@@ -159,11 +158,11 @@ msgstr "삭제됨"
 msgid "Content"
 msgstr "내용"
 
-#: conf/models.py:141 help/templates/help/privacy.html:16
+#: conf/models.py:141 help/templates/help/privacy.html:19
 msgid "Username"
 msgstr "아이디"
 
-#: conf/models.py:148 golf/models.py:239 help/templates/help/privacy.html:18
+#: conf/models.py:148 golf/models.py:239 help/templates/help/privacy.html:21
 msgid "Email address"
 msgstr "이메일주소"
 
@@ -171,7 +170,7 @@ msgstr "이메일주소"
 msgid "Website URL"
 msgstr "웹사이트주소"
 
-#: conf/models.py:160 help/templates/help/privacy.html:24
+#: conf/models.py:160 help/templates/help/privacy.html:25
 msgid "IP address"
 msgstr "IP 주소"
 
@@ -195,89 +194,79 @@ msgstr "구글 서비스"
 msgid "Google Services"
 msgstr "구글 서비스"
 
-#: conf/settings/local.py:8 conf/templates/conf/base.html:149
+#: conf/settings/local.py:8
 msgid "Korean"
 msgstr "한국어"
 
-#: conf/settings/local.py:9 conf/templates/conf/base.html:143
+#: conf/settings/local.py:9
 msgid "Thai"
 msgstr "태국어"
 
-#: conf/settings/local.py:10 conf/templates/conf/base.html:146
+#: conf/settings/local.py:10
 msgid "English"
 msgstr "영어"
 
-#: conf/settings/local.py:11 conf/templates/conf/base.html:156
+#: conf/settings/local.py:11
 msgid "Japanese"
 msgstr "일본어"
 
-#: conf/settings/local.py:12 conf/templates/conf/base.html:153
+#: conf/settings/local.py:12
 msgid "Chinese"
 msgstr "중국어"
 
-#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:47
-#: conf/templates/conf/base.html:49 conf/templates/conf/base.html:171
-#: help/templates/help/about.html:12
+#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:45
+#: conf/templates/conf/base.html:47 help/templates/help/about.html:12
 msgid "WITH THAI"
 msgstr "위드타이"
 
-#: conf/templates/conf/base.html:62 conf/templates/conf/base.html:197
-msgid "BOOKING"
-msgstr "나의예약"
-
-#: conf/templates/conf/base.html:68 conf/templates/conf/base.html:203
-msgid "HELP"
-msgstr "고객센터"
-
-#: conf/templates/conf/base.html:74 conf/templates/conf/base.html:191
-msgid "MY PAGE"
-msgstr "마이페이지"
-
-#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:257
-msgid "CART"
-msgstr "장바구니"
-
-#: conf/templates/conf/base.html:108 conf/templates/conf/base.html:209
-#: conf/templates/conf/base.html:232 golf/templates/golf/golf-club-list.html:11
+#: conf/templates/conf/base.html:58 golf/templates/golf/golf-club-list.html:11
 msgid "GOLF"
 msgstr "골프"
 
-#: conf/templates/conf/base.html:113 conf/templates/conf/base.html:237
+#: conf/templates/conf/base.html:61
 msgid "HOTEL"
 msgstr "호텔"
 
-#: conf/templates/conf/base.html:118 magazine/templates/magazine/base.html:27
+#: conf/templates/conf/base.html:64 magazine/templates/magazine/base.html:27
 msgid "HOT DEALS"
 msgstr "핫딜"
 
-#: conf/templates/conf/base.html:123 magazine/templates/magazine/base.html:32
+#: conf/templates/conf/base.html:67 magazine/templates/magazine/base.html:32
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
-#: conf/templates/conf/base.html:128 conf/templates/conf/base.html:242
+#: conf/templates/conf/base.html:70
 msgid "MAGAZINE"
 msgstr "매거진"
 
-#: conf/templates/conf/base.html:137 golf/templates/golf/golf-area-list.html:29
+#: conf/templates/conf/base.html:77
+msgid "BOOKING"
+msgstr "나의예약"
+
+#: conf/templates/conf/base.html:81
+msgid "HELP"
+msgstr "고객센터"
+
+#: conf/templates/conf/base.html:85
+msgid "MY PAGE"
+msgstr "마이페이지"
+
+#: conf/templates/conf/base.html:102
+msgid "CART"
+msgstr "장바구니"
+
+#: conf/templates/conf/base.html:111 golf/templates/golf/golf-area-list.html:29
 #: golf/templates/golf/golf-club-booking-form.html:50
 #: golf/templates/golf/golf-club-list.html:19
 #: golf/templates/golf/golf-province-list.html:39
 msgid "Search..."
 msgstr "찾기..."
 
-#: conf/templates/conf/base.html:260
-msgid "EMPTY"
-msgstr "비어있음"
-
-#: conf/templates/conf/base.html:265
-msgid "PAY NOW"
-msgstr "결제하기"
-
-#: conf/templates/conf/base.html:294 help/templates/help/terms.html:73
+#: conf/templates/conf/base.html:162 help/templates/help/terms.html:73
 msgid "WITH THAI Co., Ltd."
 msgstr "위드타이 주식회사"
 
-#: conf/templates/conf/base.html:297
+#: conf/templates/conf/base.html:165
 msgid ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
@@ -285,39 +274,39 @@ msgstr ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
 
-#: conf/templates/conf/base.html:300
+#: conf/templates/conf/base.html:168
 msgid "TAX ID: 0105563049000"
 msgstr "태국 법인등록번호: 0105563049000"
 
-#: conf/templates/conf/base.html:303
+#: conf/templates/conf/base.html:171
 msgid "TAT License: 14/03216"
 msgstr "태국 여행업등록번호: 14/03216"
 
-#: conf/templates/conf/base.html:311 help/apps.py:7
+#: conf/templates/conf/base.html:179 help/apps.py:7
 msgid "Help"
 msgstr "이용안내"
 
-#: conf/templates/conf/base.html:315 help/templates/help/guide.html:9
+#: conf/templates/conf/base.html:183 help/templates/help/guide.html:11
 msgid "GUIDE"
 msgstr "이용가이드"
 
-#: conf/templates/conf/base.html:321
+#: conf/templates/conf/base.html:189
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/base.html:326 help/templates/help/terms.html:9
+#: conf/templates/conf/base.html:194 help/templates/help/terms.html:9
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/base.html:329 help/templates/help/privacy.html:9
+#: conf/templates/conf/base.html:197 help/templates/help/privacy.html:11
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
-#: conf/templates/conf/base.html:334
+#: conf/templates/conf/base.html:202
 msgid "ABOUT US"
 msgstr "위드타이 소개"
 
-#: conf/templates/conf/base.html:339
+#: conf/templates/conf/base.html:207
 msgid "CONTACT US"
 msgstr "문의하기"
 
@@ -474,10 +463,8 @@ msgid "Website"
 msgstr "웹사이트"
 
 #: golf/models.py:260
-#, fuzzy
-#| msgid "Golf clubs"
 msgid "Golf club address"
-msgstr "골프장"
+msgstr "주소"
 
 #: golf/models.py:267
 msgid "No. of holes"
@@ -491,7 +478,7 @@ msgstr "시작가"
 #: golf/models.py:415 golf/models.py:422 golf/models.py:429 golf/models.py:436
 #: golf/models.py:443 golf/templates/golf/golf-area-list.html:111
 #: golf/templates/golf/golf-club-booking-form.html:101
-#: golf/templates/golf/golf-club-booking-form.html:108
+#: golf/templates/golf/golf-club-booking-form.html:111
 #: golf/templates/golf/golf-club-list.html:101
 #: golf/templates/golf/golf-province-list.html:102
 msgid "THB"
@@ -678,19 +665,23 @@ msgid "Next"
 msgstr "다음"
 
 #: golf/templates/golf/golf-club-booking-form.html:98
-#: golf/templates/golf/golf-club-booking-form.html:139
+#: golf/templates/golf/golf-club-booking-form.html:143
 msgid "Cart Fee"
 msgstr "카트피"
 
-#: golf/templates/golf/golf-club-booking-form.html:105
+#: golf/templates/golf/golf-club-booking-form.html:104
+msgid "Optional"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:108
 msgid "Caddie Fee"
 msgstr "캐디피"
 
-#: golf/templates/golf/golf-club-booking-form.html:111
+#: golf/templates/golf/golf-club-booking-form.html:115
 msgid "Pay at golf course"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:133
+#: golf/templates/golf/golf-club-booking-form.html:137
 msgid "Green Fee"
 msgstr "그린피"
 
@@ -714,87 +705,87 @@ msgstr "태국 회사등록증"
 msgid "Tourism License"
 msgstr "태국 여행업 허가증"
 
-#: help/templates/help/guide.html:12
+#: help/templates/help/guide.html:15
 msgid "How to book"
 msgstr "예약하기"
 
-#: help/templates/help/guide.html:20
+#: help/templates/help/guide.html:28
 msgid "How to play"
 msgstr "라운딩하기"
 
-#: help/templates/help/guide.html:28
+#: help/templates/help/guide.html:37
 msgid "How to cancel or amend"
 msgstr "예약 취소 또는 변경하기"
 
-#: help/templates/help/guide.html:36
+#: help/templates/help/guide.html:45
 msgid "How to refund"
 msgstr "환불하기"
 
-#: help/templates/help/privacy.html:11
-msgid "WITH THAI collects some Personal Data from its Users as shown below:"
-msgstr "위드타이는 사용자로부터 다음 개인정보를 수집합니다."
-
 #: help/templates/help/privacy.html:17
+msgid "Personal data from users"
+msgstr "수집하는 개인정보"
+
+#: help/templates/help/privacy.html:20
 msgid "Personal name"
 msgstr "이름"
 
-#: help/templates/help/privacy.html:19
+#: help/templates/help/privacy.html:22
 msgid "Telephone number"
 msgstr "전화번호"
 
-#: help/templates/help/privacy.html:25
+#: help/templates/help/privacy.html:26
 msgid "Cookies"
 msgstr "쿠키"
 
-#: help/templates/help/privacy.html:26
+#: help/templates/help/privacy.html:27
 msgid "Access logs"
 msgstr "접속 로그"
 
-#: help/templates/help/privacy.html:27
+#: help/templates/help/privacy.html:28
 msgid "Transaction logs"
 msgstr "결제기록"
 
-#: help/templates/help/privacy.html:35
-msgid "Use of the Data and other Data collected"
-msgstr "수집된 개인 정보의 이용"
-
-#: help/templates/help/privacy.html:38
+#: help/templates/help/privacy.html:32
 msgid "Access to third party services’ accounts"
 msgstr "서드파티 서비스 계정에 접근"
 
-#: help/templates/help/privacy.html:40
+#: help/templates/help/privacy.html:34
 msgid "Naver Corp."
 msgstr "네이버"
 
-#: help/templates/help/privacy.html:41
+#: help/templates/help/privacy.html:35
 msgid "Kakao Corp."
 msgstr "카카오"
 
-#: help/templates/help/privacy.html:42
+#: help/templates/help/privacy.html:36
 msgid "LINE Corporation, Ltd."
 msgstr "라인"
 
-#: help/templates/help/privacy.html:43
+#: help/templates/help/privacy.html:37
 msgid "Facebook, Inc."
 msgstr "페이스북"
 
-#: help/templates/help/privacy.html:44
+#: help/templates/help/privacy.html:38
 msgid "Google LLC"
 msgstr "구글"
 
-#: help/templates/help/privacy.html:48
+#: help/templates/help/privacy.html:42
+msgid "Use of the Data and other Data collected"
+msgstr "수집된 개인 정보의 이용"
+
+#: help/templates/help/privacy.html:43
 msgid "Analytics"
 msgstr "애널리틱스"
 
-#: help/templates/help/privacy.html:50
+#: help/templates/help/privacy.html:45
 msgid "Google Analytics: Cookies and Usage data"
 msgstr "구글 애널리틱스: 쿠키와 이용 데이터"
 
-#: help/templates/help/privacy.html:60
+#: help/templates/help/privacy.html:59
 msgid "Contact information"
 msgstr "문의"
 
-#: help/templates/help/privacy.html:62
+#: help/templates/help/privacy.html:61
 msgid "WITH THAI, Co. Ltd., help@withthai.com"
 msgstr "위드타이, help@withthai.com"
 
@@ -1003,3 +994,12 @@ msgstr "더보기"
 #: member/apps.py:6
 msgid "Member"
 msgstr "회원"
+
+#~ msgid "EMPTY"
+#~ msgstr "비어있음"
+
+#~ msgid "PAY NOW"
+#~ msgstr "결제하기"
+
+#~ msgid "WITH THAI collects some Personal Data from its Users as shown below:"
+#~ msgstr "위드타이는 사용자로부터 다음 개인정보를 수집합니다."

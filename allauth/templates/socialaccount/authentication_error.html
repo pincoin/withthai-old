@@ -11,26 +11,26 @@
                 <div class="container">
                     <div class="columns is-multiline">
                         <div class="column is-one-third is-offset-one-third has-text-centered">
-                            <h3>
+                            <h1 class="is-size-1">
                                 {% trans "SNS LOGIN FAILURE" %}
-                            </h3>
+                            </h1>
+                        </div>
 
-                            <div class="column is-one-third is-offset-one-third">
-                                <article class="message is-danger">
-                                    <div class="message-body">
-                                        {% trans "An error occurred while attempting to login via your SNS account." %}
-                                    </div>
-                                </article>
-                            </div>
+                        <div class="column is-one-third is-offset-one-third">
+                            <article class="message is-danger">
+                                <div class="message-body">
+                                    {% trans "An error occurred while attempting to login via your SNS account." %}
+                                </div>
+                            </article>
+                        </div>
 
-                            <hr>
+                        <hr>
 
-                            <div class="column is-one-third is-offset-one-third">
-                                {% url 'account_login' as login_url %}
-                                <a href="{{ login_url }}" class="button is-primary is-fullwidth">
-                                    {% trans 'SIGN IN' %}
-                                </a>
-                            </div>
+                        <div class="column is-one-third is-offset-one-third">
+                            {% url 'account_login' as login_url %}
+                            <a href="{{ login_url }}" class="button is-primary is-fullwidth">
+                                {% trans 'SIGN IN' %}
+                            </a>
                         </div>
                     </div>
                 </div>
