@@ -5,7 +5,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 {% get_available_languages as LANGUAGES %}
 {% get_language_info_list for LANGUAGES as languages %}
-<html lang="{{ LANGUAGE_CODE }}">
+<html lang="{{ LANGUAGE_CODE }}" class="has-navbar-fixed-top">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="theme-color" content="#87b842">
@@ -25,7 +25,7 @@
         {% else %}
             <link href="{% static 'conf/css/godo.css' %}" rel="stylesheet">
         {% endif %}
-        <link type="text/css" href="{% static 'conf/css/uikit.css' %}"
+        <link type="text/css" href="{% static 'conf/css/withthai.css' %}"
               media="screen,projection" rel="stylesheet"/>
         <link type="text/css" href="{% static 'conf/css/main.css' %}" rel="stylesheet">
         <link rel="shortcut icon" href="{% static 'conf/images/favicon_16x16.png' %}">
@@ -33,266 +33,141 @@
 </head>
 <body>
 <header>
-    <div class="uk-section navbar-vertical-padding" uk-sticky="cls-active: in-sticky">
-        <div class="uk-container">
-            <div class="uk-flex uk-flex-middle uk-child-width-expand uk-grid-collapse" uk-grid>
-                <div class="uk-hidden@m uk-width-1-3">
-                    <a href="#" class="" uk-toggle="target: #offcanvas-overlay-mobile-menu">
-                        <i class="fas fa-bars fa-fw navbar-burger-icon"></i>
-                    </a>
-                </div>
-                <div class="uk-flex uk-flex-center uk-flex-left@m">
-                    <a class="uk-logo" href="{% url 'home' %}">
-                        {% if LANGUAGE_CODE == 'ko' %}
-                            <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
-                        {% else %}
-                            <img src="{% static 'conf/images/withthai_logo_en.png' %}" alt="{% trans 'WITH THAI' %}">
-                        {% endif %}
-                    </a>
-                </div>
-                <div class="uk-hidden@m uk-width-1-3 uk-flex uk-flex-right">
-                    <a href="#" class="" uk-toggle="target: #offcanvas-overlay-cart">
-                        <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
-                    </a>
-                </div>
-                <div class="uk-flex uk-flex-right uk-visible@m">
-                    <div class="uk-margin-right">
-                        <a href="#" class="navbar-info-item">
-                            <i class="fas fa-passport fa-fw navbar-icon"></i>
-                            {% trans 'BOOKING' %}
-                        </a>
-                    </div>
-                    <div class="uk-margin-right">
-                        <a href="#" class="navbar-info-item">
-                            <i class="fas fa-info-circle fa-fw navbar-icon"></i>
-                            {% trans 'HELP' %}
-                        </a>
-                    </div>
-                    <div class="uk-margin-right">
-                        <a href="#" class="navbar-info-item">
-                            <i class="fas fa-user-cog fa-fw navbar-icon"></i>
-                            {% trans 'MY PAGE' %}
-                        </a>
-                    </div>
-                    {% if user.is_authenticated %}
-                        <div class="uk-margin-right">
-                            <a href="{% url 'account_logout' %}" class="navbar-info-item">
-                                <i class="fas fa-sign-out-alt fa-fw navbar-icon"></i>
-                                {% trans 'SIGN OUT' %}
-                            </a>
-                        </div>
+    <!-- desktop navbar -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger burger"
+                   aria-label="menu" aria-expanded="false" data-target="navbar">
+                    <i class="fas fa-bars fa-fw"></i>
+                </a>
+
+                <a class="navbar-item" href="{% url 'home' %}">
+                    {% if LANGUAGE_CODE == 'ko' %}
+                        <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     {% else %}
-                        <div class="uk-margin-right">
-                            <a href="{% url 'account_login' %}" class="navbar-info-item">
-                                <i class="fas fa-sign-in-alt fa-fw navbar-icon"></i>
-                                {% trans 'SIGN IN' %}
-                            </a>
-                        </div>
+                        <img src="{% static 'conf/images/withthai_logo_en.png' %}" alt="{% trans 'WITH THAI' %}">
                     {% endif %}
-                    <div>
-                        <a uk-toggle="target: #offcanvas-overlay-cart" class="navbar-info-item">
-                            <i class="fas fa-luggage-cart fa-fw navbar-icon"></i>
-                            {% trans 'CART' %}
+                </a>
+
+                <a role="button" class="navbar-burger burger"
+                   aria-label="menu" aria-expanded="false" data-target="navbar">
+                    <i class="fas fa-luggage-cart fa-fw navbar-cart-icon"></i>
+                </a>
+            </div>
+
+            <div id="navbar" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="{% url 'golf:golf-club-list' %}" class="navbar-item">
+                        {% trans 'GOLF' %}
+                    </a>
+                    <a href="#" class="navbar-item">
+                        {% trans 'HOTEL' %}
+                    </a>
+                    <a href="#" class="navbar-item">
+                        {% trans 'HOT DEALS' %}
+                    </a>
+                    <a href="#" class="navbar-item">
+                        {% trans 'PROMOTIONS' %}
+                    </a>
+                    <a href="{% url 'magazine:home' %}" class="navbar-item">
+                        {% trans 'MAGAZINE' %}
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <a href="#" class="navbar-item">
+                        <i class="fas fa-passport fa-fw"></i>
+                        {% trans 'BOOKING' %}
+                    </a>
+                    <a href="#" class="navbar-item">
+                        <i class="fas fa-info-circle fa-fw"></i>
+                        {% trans 'HELP' %}
+                    </a>
+                    <a href="#" class="navbar-item">
+                        <i class="fas fa-user-cog fa-fw"></i>
+                        {% trans 'MY PAGE' %}
+                    </a>
+
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'account_logout' %}" class="navbar-item">
+                            <i class="fas fa-sign-out-alt fa-fw"></i>
+                            {% trans 'SIGN OUT' %}
                         </a>
+                    {% else %}
+                        <a href="{% url 'account_login' %}" class="navbar-item">
+                            <i class="fas fa-sign-in-alt fa-fw"></i>
+                            {% trans 'SIGN IN' %}
+                        </a>
+                    {% endif %}
+
+                    <a class="navbar-item">
+                        <i class="fas fa-luggage-cart fa-fw"></i>
+                        {% trans 'CART' %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+        <div class="container">
+            <div class="level">
+                <ul class="level-left">
+                    <li><a href="#">{% trans 'Home' %}</a></li>
+                </ul>
+                <div class="level-right field is-grouped">
+                    <p class="control has-icons-left">
+                        <input class="input" type="text" placeholder="{% trans 'Search...' %}">
+                        <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
+                    </p>
+                    <div class="control has-icons-left">
+                        <form class="select" action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select id="language-selector" class="select" name="language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"
+                                            {% if language.code == LANGUAGE_CODE %}
+                                            selected{% endif %}>
+                                        {{ language.name_local }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </form>
+                        <div class="icon is-small is-left">
+                            <i class="fas fa-globe"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="uk-container uk-visible@m">
-            <div class="uk-flex uk-grid" uk-grid>
-                <div class="uk-flex uk-flex-middle uk-width-expand">
-                    <nav class="uk-navbar-container" uk-navbar>
-                        <ul class="uk-navbar-nav">
-                            <li>
-                                <a href="{% url 'golf:golf-club-list' %}" class="navbar-item">
-                                    {% trans 'GOLF' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar-item">
-                                    {% trans 'HOTEL' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar-item">
-                                    {% trans 'HOT DEALS' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="navbar-item">
-                                    {% trans 'PROMOTIONS' %}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{% url 'magazine:home' %}" class="navbar-item">
-                                    {% trans 'MAGAZINE' %}
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="uk-flex uk-flex-middle uk-flex-right uk-width-2-5">
-                    <form class="uk-search uk-search-default">
-                        <span uk-search-icon></span>
-                        <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}">
-                    </form>
-                    <form action="{% url 'set_language' %}" method="post">
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="{{ redirect_to }}">
-                        <button name="language" type="submit" value="th" class="language-button">
-                            <img src="{% static 'conf/images/flags/th.svg' %}" alt="{% trans 'Thai' %}">
-                        </button>
-                        <button name="language" type="submit" value="en" class="language-button">
-                            <img src="{% static 'conf/images/flags/en.svg' %}" alt="{% trans 'English' %}">
-                        </button>
-                        <button name="language" type="submit" value="ko" class="language-button">
-                            <img src="{% static 'conf/images/flags/ko.svg' %}" alt="{% trans 'Korean' %}">
-                        </button>
-                        <!--
-                        <button name="language" type="submit" value="zh-cn" class="language-button">
-                            <img src="{% static 'conf/images/flags/zh.svg' %}" alt="{% trans 'Chinese' %}">
-                        </button>
-                        <button name="language" type="submit" value="ja" class="language-button">
-                            <img src="{% static 'conf/images/flags/ja.svg' %}" alt="{% trans 'Japanese' %}">
-                        </button>
-                        -->
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    </nav>
 </header>
-<div id="offcanvas-overlay-mobile-menu" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-        <ul class="uk-list">
-            <li class="sidenav-menu-heading">
-                <a href="#">{% trans 'WITH THAI' %}</a>
-            </li>
-            {% if user.is_authenticated %}
-                <li class="sidenav-menu-item">
-                    <a href="{% url 'account_logout' %}">
-                        <i class="fas fa-sign-out-alt fa-fw"></i>
-                        {% trans 'SIGN OUT' %}
-                    </a>
-                </li>
-            {% else %}
-                <li class="sidenav-menu-item">
-                    <a href="{% url 'account_login' %}">
-                        <i class="fas fa-sign-out-alt fa-fw"></i>
-                        {% trans 'SIGN IN' %}
-                    </a>
-                </li>
-            {% endif %}
-            <li class="sidenav-menu-item">
-                <a href="#">
-                    <i class="fas fa-user-cog fa-fw"></i>
-                    {% trans 'MY PAGE' %}
-                </a>
-            </li>
-            <li class="sidenav-menu-item">
-                <a href="#">
-                    <i class="fas fa-passport fa-fw"></i>
-                    {% trans 'BOOKING' %}
-                </a>
-            </li>
-            <li class="sidenav-menu-item">
-                <a href="#">
-                    <i class="fas fa-info-circle fa-fw"></i>
-                    {% trans 'HELP' %}
-                </a>
-            </li>
-            <li class="sidenav-menu-subitem">
-                <ul class="uk-list sidenav-menu-sublist submenu-scroll">
-                    <li class="sidenav-menu-heading">
-                        <a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a>
-                    </li>
-                    {% get_areas as areas %}
-
-                    {% for area in areas %}
-                        <li class="sidenav-menu-item">
-                            <a href="{% url 'golf:golf-area-list' area.slug %}">
-                                {% if LANGUAGE_CODE == 'th' %}
-                                    {{ area.title_thai }}
-                                {% elif LANGUAGE_CODE == 'ko' %}
-                                    {{ area.title_korean }}
-                                {% else %}
-                                    {{ area.title_english }}
-                                {% endif %}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li class="sidenav-menu-subitem">
-                <ul class="sidenav-menu-bottom">
-                    <li class="uk-text-center submenu-bottom-active">
-                        <a href="#" class="">
-                            {% trans 'GOLF' %}
-                        </a>
-                    </li>
-                    <li class="uk-text-center">
-                        <a href="#">
-                            {% trans 'HOTEL' %}
-                        </a>
-                    </li>
-                    <li class="uk-text-center">
-                        <a href="{% url 'magazine:home' %}">
-                            {% trans 'MAGAZINE' %}
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
-<div id="offcanvas-overlay-cart" uk-offcanvas="overlay: true; flip: true">
-    <div class="uk-offcanvas-bar sidenav-cart">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-        <ul class="uk-list">
-            <li class="sidenav-cart-heading">
-                <i class="fas fa-luggage-cart fa-fw"></i>
-                {% trans 'CART' %}
-            </li>
-            <li class="sidenav-cart-item">
-                <a href="#">{% trans 'EMPTY' %}</a>
-            </li>
-            <li class="sidenav-cart-button">
-                <a href="#" class="pay-button">
-                    <i class="far fa-credit-card fa-fw"></i>
-                    {% trans 'PAY NOW' %}
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
 {% if messages %}
-    <div class="uk-section uk-padding-remove-vertical">
-        <div class="uk-container">
-            {% for message in messages %}
-                <div class="uk-border-rounded
-{% if message.tags == 'error' %}uk-alert-danger
-{% elif message.tags == 'warning' %}uk-alert-warning
-{% elif message.tags == 'success' %}uk-alert-primary
-{% else %}uk-alert-success{% endif %}" uk-alert>
-                    <a class="uk-alert-close" uk-close></a>
-                    <p>{{ message }}</p>
-                </div>
-            {% endfor %}
-        </div>
+    <div class="container">
+        {% for message in messages %}
+            <article class="message
+                {% if message.tags == 'error' %}is-danger
+                {% elif message.tags == 'warning' %}is-warning
+                {% elif message.tags == 'success' %}is-success
+                {% else %}is-primary{% endif %}">
+                <div class="message-body">{{ message }}</div>
+            </article>
+        {% endfor %}
     </div>
 {% endif %}
 {% block main %}
 {% endblock %}
 <footer>
-    <div class="uk-section footer-info">
-        <div class="uk-container">
-            <div class="uk-grid">
-                <div class="uk-width-1-1 uk-width-2-3@m">
+    <div class="footer-info">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-full-mobile is-two-thirds-desktop">
                     <h4 class="footer-info-heading">{% trans 'WITH THAI Co., Ltd.' %}</h4>
-                    <ul class="uk-list footer-info-list">
+                    <ul class="footer-info-list">
                         <li>
                             {% trans 'Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok 10110' %}
                         </li>
@@ -307,9 +182,9 @@
                         <li>LINE: @withthai</li>
                     </ul>
                 </div>
-                <div class="uk-width-1-1 uk-width-1-3@m footer-info-spacer">
+                <div class="column is-full-mobile is-one-third-desktop">
                     <h4 class="footer-info-heading">{% trans "Help" %}</h4>
-                    <ul class="uk-list footer-info-list">
+                    <ul class="footer-info-list">
                         <li>
                             <a href="{% url 'help:guide' %}">
                                 {% trans 'GUIDE' %}
@@ -345,16 +220,13 @@
         </div>
     </div>
 
-    <a href="" uk-totop class="uk-visible@m footer-totop" data-uk-scroll=""
-       data-uk-scrollspy="cls: uk-animation-fade; repeat: true"></a>
-
-    <div class="uk-section footer-copyright">
-        <div class="uk-container">
-            <div class="uk-grid">
-                <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-right@m">
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-full-mobile is-half-desktop has-text-centered-mobile has-text-right-desktop">
                     Copyright &copy {% now 'Y' %} withthai.com
                 </div>
-                <div class="uk-width-1-1 uk-width-1-2@m uk-text-center uk-text-left@m">
+                <div class="column is-full-mobile is-half-desktop has-text-centered-mobile">
                     All Rights Reserved.
                 </div>
             </div>
@@ -363,7 +235,6 @@
 </footer>
 {% block javascript %}
     <script type="text/javascript" src="{% static 'conf/js/jquery-3.4.1.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'conf/js/uikit.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'conf/js/main.js' %}"></script>
 {% endblock %}
 </body>

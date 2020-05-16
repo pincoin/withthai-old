@@ -6,3 +6,9 @@ $(window).on('load resize', function () {
         $('.submenu-scroll').css({'max-height': h - 228, 'min-height': h - 228});
     }
 });
+
+$(document).ready(function () {
+    $('#language-selector').on('change', function (e) {
+        this.form.submit();
+    });
+});
