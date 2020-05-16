@@ -2,25 +2,26 @@
 .footer-info {
     color: #03353e;
     background-color: #ebf2ea;
-    padding: .6rem;
+    padding: 0 .4rem .4rem .4rem;
 }
 
 .footer-copyright {
     color: #f8f9fa;
     background-color: #03353e;
-    padding: .6rem;
+    padding: .4rem;
 }
 
 .footer-info-heading {
     color: #87b842;
     font-weight: 700;
+    padding-top: .4rem;
 }
 
 .footer-info-list {
 }
 
 .footer-info-list li {
-    margin-top: 4px;
+    margin-top: .4rem;
 }
 
 /* Navbar */
@@ -41,5 +42,5 @@
 }
 
 .breadcrumb ul {
-    padding: 4px 0;
+    padding: .4rem;
 }
