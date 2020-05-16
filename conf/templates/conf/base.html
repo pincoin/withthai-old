@@ -37,12 +37,18 @@
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
+                <a role="button" class="navbar-burger burger">
+                    <i class="fas fa-bars fa-fw"></i>
+                </a>
                 <a class="navbar-item" href="{% url 'home' %}">
                     {% if LANGUAGE_CODE == 'ko' %}
                         <img src="{% static 'conf/images/withthai_logo_ko.png' %}" alt="{% trans 'WITH THAI' %}">
                     {% else %}
                         <img src="{% static 'conf/images/withthai_logo_en.png' %}" alt="{% trans 'WITH THAI' %}">
                     {% endif %}
+                </a>
+                <a role="button" class="navbar-burger burger">
+                    <i class="fas fa-luggage-cart fa-fw"></i>
                 </a>
             </div>
 
@@ -99,42 +105,35 @@
             </div>
         </div>
     </nav>
-    <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
-        <div class="container">
-            <div class="level">
-                <ul class="level-left">
-                    <li><a href="#">{% trans 'Home' %}</a></li>
-                </ul>
-                <div class="level-right field is-grouped is-hidden-touch">
-                    <p class="control has-icons-left">
-                        <input class="input" type="text" placeholder="{% trans 'Search...' %}">
-                        <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
-                    </p>
-                    <div class="control has-icons-left">
-                        <form class="select" action="{% url 'set_language' %}" method="post">
-                            {% csrf_token %}
-                            <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <select id="language-selector" class="select" name="language">
-                                {% get_current_language as LANGUAGE_CODE %}
-                                {% get_available_languages as LANGUAGES %}
-                                {% get_language_info_list for LANGUAGES as languages %}
-                                {% for language in languages %}
-                                    <option value="{{ language.code }}"
-                                            {% if language.code == LANGUAGE_CODE %}
-                                            selected{% endif %}>
-                                        {{ language.name_local }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                        </form>
-                        <div class="icon is-small is-left">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                    </div>
+    <div class="container is-hidden-touch">
+        <div class="is-pulled-right field is-grouped">
+            <form class="control has-icons-left">
+                <input class="input" type="text" placeholder="{% trans 'Search...' %}">
+                <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
+            </form>
+            <form class="control has-icons-left" action="{% url 'set_language' %}" method="post">
+                <div class="select">
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select id="language-selector" class="select" name="language">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"
+                                    {% if language.code == LANGUAGE_CODE %}
+                                    selected{% endif %}>
+                                {{ language.name_local }}
+                            </option>
+                        {% endfor %}
+                    </select>
                 </div>
-            </div>
+                <div class="icon is-small is-left">
+                    <i class="fas fa-globe"></i>
+                </div>
+            </form>
         </div>
-    </nav>
+    </div>
 </header>
 {% if messages %}
     <div class="container">

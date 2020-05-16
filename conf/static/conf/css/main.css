@@ -1,3 +1,14 @@
+/* Sticky footer */
+body {
+    display: flex;
+    min-height: calc(100vh - 52px);
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 /* Footer */
 .footer-info {
     color: #03353e;
@@ -17,30 +28,17 @@
     padding-top: .4rem;
 }
 
-.footer-info-list {
-}
-
 .footer-info-list li {
     margin-top: .4rem;
 }
 
 /* Navbar */
-
 .navbar-end .navbar-item i {
-    margin-right: 2px;
+    margin-right: .3rem;
 }
 
 @media (max-width: 1023px) {
     .navbar-brand {
         justify-content: space-between;
     }
-}
-
-/* Breadcrumbs */
-.breadcrumb {
-    background-color: #ebf2ea;
-}
-
-.breadcrumb ul {
-    padding: .4rem;
 }
