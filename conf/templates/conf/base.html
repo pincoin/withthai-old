@@ -73,33 +73,33 @@
 
                 <div class="navbar-end">
                     <a href="#" class="navbar-item">
-                        <i class="fas fa-passport fa-fw"></i>
-                        {% trans 'BOOKING' %}
+                        <span class="icon"><i class="fas fa-passport fa-fw"></i></span>
+                        <span>{% trans 'BOOKING' %}</span>
                     </a>
                     <a href="#" class="navbar-item">
-                        <i class="fas fa-info-circle fa-fw"></i>
-                        {% trans 'HELP' %}
+                        <span class="icon"><i class="fas fa-info-circle fa-fw"></i></span>
+                        <span>{% trans 'HELP' %}</span>
                     </a>
                     <a href="#" class="navbar-item">
-                        <i class="fas fa-user-cog fa-fw"></i>
-                        {% trans 'MY PAGE' %}
+                        <span class="icon"><i class="fas fa-user-cog fa-fw"></i></span>
+                        <span>{% trans 'MY PAGE' %}</span>
                     </a>
 
                     {% if user.is_authenticated %}
                         <a href="{% url 'account_logout' %}" class="navbar-item">
-                            <i class="fas fa-sign-out-alt fa-fw"></i>
-                            {% trans 'SIGN OUT' %}
+                            <span class="icon"><i class="fas fa-sign-out-alt fa-fw"></i></span>
+                            <span>{% trans 'SIGN OUT' %}</span>
                         </a>
                     {% else %}
                         <a href="{% url 'account_login' %}" class="navbar-item">
-                            <i class="fas fa-sign-in-alt fa-fw"></i>
-                            {% trans 'SIGN IN' %}
+                            <span class="icon"><i class="fas fa-sign-in-alt fa-fw"></i></span>
+                            <span>{% trans 'SIGN IN' %}</span>
                         </a>
                     {% endif %}
 
                     <a class="navbar-item">
-                        <i class="fas fa-luggage-cart fa-fw"></i>
-                        {% trans 'CART' %}
+                        <span class="icon"><i class="fas fa-luggage-cart fa-fw"></i></span>
+                        <span>{% trans 'CART' %}</span>
                     </a>
                 </div>
             </div>
