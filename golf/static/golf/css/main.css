@@ -7,6 +7,10 @@
     padding-bottom: .2rem;
 }
 
+.club-title {
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 1023px) {
     .club-list-item {
         padding: .5rem 0;
@@ -19,5 +23,15 @@
 
     .club-list-item .column:nth-child(2) {
         padding-top: 0;
+    }
+
+    .club-detail-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .club-detail .column {
+        padding-left: 0;
+        padding-right: 0;
     }
 }

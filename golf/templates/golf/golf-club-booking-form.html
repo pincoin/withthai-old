@@ -4,65 +4,61 @@
 
 {% block main %}
     <main>
-        <div class="uk-section breadcrumbs">
-            <div class="uk-container">
-                <ul class="uk-breadcrumb ">
-                    <li>
-                        <a href="{% url 'golf:golf-area-list' club.district.province.area.slug %}">
-                            {% if LANGUAGE_CODE == 'th' %}
-                                {{ club.district.province.area.title_thai }}
-                            {% elif LANGUAGE_CODE == 'ko' %}
-                                {{ club.district.province.area.title_korean }}
-                            {% else %}
-                                {{ club.district.province.area.title_english }}
-                            {% endif %}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{% url 'golf:golf-province-list' club.district.province.slug %}">
-                            {% if LANGUAGE_CODE == 'th' %}
-                                {{ club.district.province.title_thai }}
-                            {% elif LANGUAGE_CODE == 'ko' %}
-                                {{ club.district.province.title_korean }}
-                            {% else %}
-                                {{ club.district.province.title_english }}
-                            {% endif %}
-                        </a>
-                    </li>
-                    <li>
-                        <span>
-                            {% if LANGUAGE_CODE == 'th' %}
-                                {{ club.district.title_thai }}
-                            {% elif LANGUAGE_CODE == 'ko' %}
-                                {{ club.district.title_korean }}
-                            {% else %}
-                                {{ club.district.title_english }}
-                            {% endif %}
-                        </span>
-                    </li>
-                </ul>
+        <div class="section breadcrumbs">
+            <div class="container">
+                <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                    <ul>
+                        <li>
+                            <a href="{% url 'golf:golf-area-list' club.district.province.area.slug %}">
+                                {% if LANGUAGE_CODE == 'th' %}
+                                    {{ club.district.province.area.title_thai }}
+                                {% elif LANGUAGE_CODE == 'ko' %}
+                                    {{ club.district.province.area.title_korean }}
+                                {% else %}
+                                    {{ club.district.province.area.title_english }}
+                                {% endif %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'golf:golf-province-list' club.district.province.slug %}">
+                                {% if LANGUAGE_CODE == 'th' %}
+                                    {{ club.district.province.title_thai }}
+                                {% elif LANGUAGE_CODE == 'ko' %}
+                                    {{ club.district.province.title_korean }}
+                                {% else %}
+                                    {{ club.district.province.title_english }}
+                                {% endif %}
+                            </a>
+                        </li>
+                        <li class="is-active">
+                            <a href="#">
+                                {% if LANGUAGE_CODE == 'th' %}
+                                    {{ club.district.title_thai }}
+                                {% elif LANGUAGE_CODE == 'ko' %}
+                                    {{ club.district.title_korean }}
+                                {% else %}
+                                    {{ club.district.title_english }}
+                                {% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <div class="uk-section">
-            <div class="uk-container">
-                <form class="uk-search uk-search-default uk-hidden@m uk-width-1-1 mobile-search">
-                    <span uk-search-icon></span>
-                    <input class="uk-search-input" type="search" placeholder="{% trans 'Search...' %}">
-                </form>
 
-                <div class="uk-flex uk-flex-wrap">
-                    <div class="uk-width-1-1 uk-width-1-2@m club-detail-card">
+        <div class="section club-detail-section">
+            <div class="container">
+                <div class="columns is-multiline club-detail">
+                    <div class="column is-one-third">
                         {% if club.thumbnail1 %}
-                            <img data-src="{{ club.thumbnail1.url }}"
-                                 width="640" height="320" alt="" uk-img="">
+                            <img src="{{ club.thumbnail1.url }}" alt="" class="image">
                         {% else %}
-                            <img data-src="//via.placeholder.com/640x320"
-                                 width="640" height="320" alt="" uk-img="">
+                            <img src="//via.placeholder.com/640x320" alt="" class="image">
                         {% endif %}
 
                     </div>
-                    <div class="uk-width-1-1 uk-width-1-2@m">
-                        <h3>
+                    <div class="column is-one-third">
+                        <h3 class="is-size-3 has-text-weight-bold club-title">
                             {% if LANGUAGE_CODE == 'th' %}
                                 {{ club.title_thai }}
                             {% elif LANGUAGE_CODE == 'ko' %}
@@ -71,7 +67,7 @@
                                 {{ club.title_english }}
                             {% endif %}
                         </h3>
-                        <table class="uk-table uk-table-small">
+                        <table class="table">
                             <tbody>
                             <tr>
                                 <td>지역</td>
@@ -97,7 +93,7 @@
                             <tr>
                                 <td>{% trans 'Cart Fee' %}</td>
                                 <td>
-                                    {{ club.cart_fee_selling_price|floatformat:0|intcomma }}
+                                    999
                                     {% trans 'THB' %}
                                 </td>
                                 <td>
@@ -107,69 +103,105 @@
                             <tr>
                                 <td>{% trans 'Caddie Fee' %}</td>
                                 <td>
-                                    {{ club.caddie_fee_selling_price|floatformat:0|intcomma }}
+                                    999
                                     {% trans 'THB' %}
                                 </td>
                                 <td>
-                                    <span class="uk-text-danger">
+                                    <span class="has-text-danger">
                                         {% trans 'Pay at golf course' %}
                                     </span>
                                 </td>
                             </tr>
                             <tr>
-                                <td>전화번호</td>
-                                <td colspan="2"></td>
+                                <td>{% trans 'Telephone' %}</td>
+                                <td colspan="2">0813041545</td>
                             </tr>
                             <tr>
-                                <td>주소</td>
-                                <td colspan="2"></td>
+                                <td>{% trans 'Address' %}</td>
+                                <td colspan="2">99/1 Moo 5, Klongkiew, Banbung, 20220 Chonburi</td>
                             </tr>
                             <tr>
-                                <td>홈페이지</td>
-                                <td colspan="2"></td>
+                                <td>{% trans 'Website' %}</td>
+                                <td colspan="2">http://www.pattaviagolf.com</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="uk-width-1-1">
-                        <form class="uk-form-horizontal uk-margin-large">
-                            <div class="uk-margin">
-                                <label class="uk-form-label">{% trans 'Green Fee' %}</label>
-                                <div class="uk-form-controls">
-                                    <input type="text" class="uk-input">
+                    <div class="column is-one-third">
+                        <form>
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">일자</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input type="text" class="input" id="round_date">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="uk-margin">
-                                <label class="uk-form-label">{% trans 'Cart Fee' %}</label>
-                                <div class="uk-form-controls">
-                                    <input type="text" class="uk-input"
-                                           value="{{ club.cart_fee_selling_price|floatformat:0|intcomma }}">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">시각</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input type="text" class="input" id="round_time">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="uk-margin">
-                                <label class="uk-form-label">일자</label>
-                                <div class="uk-form-controls">
-                                    <input type="text" class="uk-input" id="round_date">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">인원</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="number" min="0" max="5"
+                                                   value="4">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="uk-margin">
-                                <label class="uk-form-label">시각</label>
-                                <div class="uk-form-controls">
-                                    <input type="text" class="uk-input" id="round_time">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">카트</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input class="input" type="number" min="0" max="5"
+                                                   value="4">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="uk-margin">
-                                <label class="uk-form-label">인원</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" type="number" min="0" max="5"
-                                           value="4">
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">{% trans 'Green Fee' %}</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input type="text" class="input" disabled>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="uk-margin">
-                                <label class="uk-form-label">카트</label>
-                                <div class="uk-form-controls">
-                                    <input class="uk-input" type="number" min="0" max="5"
-                                           value="4">
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label class="label">{% trans 'Cart Fee' %}</label>
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <input type="text" class="input" disabled>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </form>
