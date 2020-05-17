@@ -45,3 +45,14 @@ main {
     padding-top: .6rem;
     color: #03353e;
 }
+
+/* Breadcrumbs */
+.breadcrumbs {
+    background-color: #ebf2ea;
+    margin-top: 0.6rem;
+    padding: 0.2rem;
+}
+
+.breadcrumbs .breadcrumb {
+    padding-left: 0.2rem;
+}

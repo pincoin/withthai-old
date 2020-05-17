@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-17 11:03+0700\n"
+"POT-Creation-Date: 2020-05-17 17:01+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -220,7 +220,7 @@ msgstr ""
 msgid "WITH THAI"
 msgstr ""
 
-#: conf/templates/conf/base.html:58 golf/templates/golf/golf-club-list.html:11
+#: conf/templates/conf/base.html:58 golf/templates/golf/golf-club-list.html:12
 msgid "GOLF"
 msgstr ""
 
@@ -256,10 +256,8 @@ msgstr ""
 msgid "CART"
 msgstr ""
 
-#: conf/templates/conf/base.html:111 golf/templates/golf/golf-area-list.html:29
+#: conf/templates/conf/base.html:111
 #: golf/templates/golf/golf-club-booking-form.html:50
-#: golf/templates/golf/golf-club-list.html:19
-#: golf/templates/golf/golf-province-list.html:39
 msgid "Search..."
 msgstr ""
 
@@ -475,11 +473,11 @@ msgstr ""
 
 #: golf/models.py:284 golf/models.py:292 golf/models.py:300 golf/models.py:408
 #: golf/models.py:415 golf/models.py:422 golf/models.py:429 golf/models.py:436
-#: golf/models.py:443 golf/templates/golf/golf-area-list.html:111
+#: golf/models.py:443 golf/templates/golf/golf-area-list.html:107
 #: golf/templates/golf/golf-club-booking-form.html:101
 #: golf/templates/golf/golf-club-booking-form.html:111
-#: golf/templates/golf/golf-club-list.html:101
-#: golf/templates/golf/golf-province-list.html:102
+#: golf/templates/golf/golf-club-list.html:98
+#: golf/templates/golf/golf-province-list.html:98
 msgid "THB"
 msgstr ""
 
@@ -616,50 +614,50 @@ msgid "PayPal"
 msgstr ""
 
 #: golf/templates/golf/golf-area-list.html:53
-#: golf/templates/golf/golf-club-list.html:43
+#: golf/templates/golf/golf-club-list.html:44
 #: golf/templates/golf/golf-province-list.html:44
 msgid "Recommended"
 msgstr ""
 
 #: golf/templates/golf/golf-area-list.html:54
-#: golf/templates/golf/golf-club-list.html:44
+#: golf/templates/golf/golf-club-list.html:45
 #: golf/templates/golf/golf-province-list.html:45
 msgid "Rating: 5 Star - 1 Star"
 msgstr ""
 
 #: golf/templates/golf/golf-area-list.html:55
-#: golf/templates/golf/golf-club-list.html:45
+#: golf/templates/golf/golf-club-list.html:46
 #: golf/templates/golf/golf-province-list.html:46
 msgid "Price: Low - High"
 msgstr ""
 
 #: golf/templates/golf/golf-area-list.html:56
-#: golf/templates/golf/golf-club-list.html:46
+#: golf/templates/golf/golf-club-list.html:47
 #: golf/templates/golf/golf-province-list.html:47
 msgid "Price: High - Low"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:107
-#: golf/templates/golf/golf-club-list.html:97
-#: golf/templates/golf/golf-province-list.html:98
+#: golf/templates/golf/golf-area-list.html:105
+#: golf/templates/golf/golf-club-list.html:96
+#: golf/templates/golf/golf-province-list.html:96
 msgid "Start From"
 msgstr ""
 
+#: golf/templates/golf/golf-area-list.html:121
 #: golf/templates/golf/golf-area-list.html:126
-#: golf/templates/golf/golf-area-list.html:133
-#: golf/templates/golf/golf-club-list.html:116
-#: golf/templates/golf/golf-club-list.html:123
+#: golf/templates/golf/golf-club-list.html:112
+#: golf/templates/golf/golf-club-list.html:117
+#: golf/templates/golf/golf-province-list.html:112
 #: golf/templates/golf/golf-province-list.html:117
-#: golf/templates/golf/golf-province-list.html:124
 msgid "Previous"
 msgstr ""
 
+#: golf/templates/golf/golf-area-list.html:152
 #: golf/templates/golf/golf-area-list.html:157
-#: golf/templates/golf/golf-area-list.html:164
-#: golf/templates/golf/golf-club-list.html:147
-#: golf/templates/golf/golf-club-list.html:154
+#: golf/templates/golf/golf-club-list.html:143
+#: golf/templates/golf/golf-club-list.html:148
+#: golf/templates/golf/golf-province-list.html:143
 #: golf/templates/golf/golf-province-list.html:148
-#: golf/templates/golf/golf-province-list.html:155
 msgid "Next"
 msgstr ""
 
