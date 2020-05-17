@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-17 06:06+0700\n"
+"POT-Creation-Date: 2020-05-17 11:03+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -262,7 +262,7 @@ msgstr "장바구니"
 msgid "Search..."
 msgstr "찾기..."
 
-#: conf/templates/conf/base.html:162 help/templates/help/terms.html:73
+#: conf/templates/conf/base.html:162 help/templates/help/terms.html:79
 msgid "WITH THAI Co., Ltd."
 msgstr "위드타이 주식회사"
 
@@ -294,7 +294,7 @@ msgstr "이용가이드"
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/base.html:194 help/templates/help/terms.html:9
+#: conf/templates/conf/base.html:194 help/templates/help/terms.html:11
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
@@ -722,7 +722,7 @@ msgid "How to refund"
 msgstr "환불하기"
 
 #: help/templates/help/privacy.html:17
-msgid "Personal data from users"
+msgid "Personal Data from Users"
 msgstr "수집하는 개인정보"
 
 #: help/templates/help/privacy.html:20
@@ -746,7 +746,7 @@ msgid "Transaction logs"
 msgstr "결제기록"
 
 #: help/templates/help/privacy.html:32
-msgid "Access to third party services’ accounts"
+msgid "Access to Third Party Services’ Accounts"
 msgstr "서드파티 서비스 계정에 접근"
 
 #: help/templates/help/privacy.html:34
@@ -781,15 +781,15 @@ msgstr "애널리틱스"
 msgid "Google Analytics: Cookies and Usage data"
 msgstr "구글 애널리틱스: 쿠키와 이용 데이터"
 
-#: help/templates/help/privacy.html:59
+#: help/templates/help/privacy.html:58
 msgid "Contact information"
 msgstr "문의"
 
-#: help/templates/help/privacy.html:61
+#: help/templates/help/privacy.html:60
 msgid "WITH THAI, Co. Ltd., help@withthai.com"
 msgstr "위드타이, help@withthai.com"
 
-#: help/templates/help/terms.html:11
+#: help/templates/help/terms.html:14
 msgid ""
 "The following Terms of Service have been agreed upon by the Customer and "
 "WITH THAI Co., Ltd., and will be used to govern and regulate the usage and "
@@ -798,7 +798,7 @@ msgstr ""
 "본 이용약관은 고객과 위드타이 주식회사가 서로 동의한 것으로 간주하며 다음 조"
 "건에 따라 위드타이 예약 서비스 이용을 제공합니다."
 
-#: help/templates/help/terms.html:15
+#: help/templates/help/terms.html:19
 msgid ""
 "1. The price that WITH THAI displays is for Green Fee only, except at some "
 "courses which has special rules which will be clearly stated in the Booking "
@@ -809,7 +809,7 @@ msgstr ""
 "한 경우를 제외하고 그린피 기준입니다. 예약 상세 페이지에서 합계 금액, 취소 규"
 "정, 우천 시 규정을 지불하기 전에 반드시 확인해야 합니다."
 
-#: help/templates/help/terms.html:18
+#: help/templates/help/terms.html:22
 msgid ""
 "2. The Customer may use one eligible voucher code or promotion for each "
 "booking. Simply press the “Use Promotion” button in the Booking Confirmation "
@@ -820,7 +820,7 @@ msgstr ""
 "니다. 예약 확정 페이지서 '프로모션 사용' 버튼을 클릭하여 바우처 코드를 입력하"
 "거나 프로모션을 선택할 수 있습니다. 합계 금액에 할인이 적용됩니다."
 
-#: help/templates/help/terms.html:21
+#: help/templates/help/terms.html:25
 msgid ""
 "3. After completed payment, the Customer will be sent a booking receipt to "
 "their registered email and may check their booking in the Bookings Page in "
@@ -834,7 +834,7 @@ msgstr ""
 "약한 골프장에 예약 영수증 또는 위드타이 웹사이트 내 예약 페이지의 내역 화면"
 "을 골프장 프로샵 직원에게 제시합니다."
 
-#: help/templates/help/terms.html:24
+#: help/templates/help/terms.html:28
 msgid ""
 "4. If you have problems or if there is a mistake regarding your booking, "
 "please contact WITH THAI at HOT LINE 080-023-3602, via LINE ID @withthai or "
@@ -843,7 +843,7 @@ msgstr ""
 "4. 예약 관련 문제 또는 오류가 있을 경우에는 위드타이 담당자 현지 연락처 "
 "080-023-3602 또는 LINE @withthai, help@withthai.com으로 연락할 수 있습니다."
 
-#: help/templates/help/terms.html:27
+#: help/templates/help/terms.html:31
 msgid ""
 "5. If the Customer is unable to personally play golf they may let another "
 "person use this time slot, who is then required to present the booking "
@@ -853,7 +853,7 @@ msgstr ""
 "단, 양도 받은 이는 예약 영수증을 골프장 프로샵 직원에게 반드시 제출해야 합니"
 "다."
 
-#: help/templates/help/terms.html:30
+#: help/templates/help/terms.html:34
 msgid ""
 "6. Regarding cancelling your paid booking to request refunds, refunds may be "
 "issued based on the Cancellation Policy used at the Golf Course you have "
@@ -863,7 +863,7 @@ msgid ""
 "com"
 msgstr ""
 
-#: help/templates/help/terms.html:33
+#: help/templates/help/terms.html:37
 #, python-format
 msgid ""
 "6A. FLEXI – If the Customer cancels their booking before midnight before "
@@ -873,7 +873,7 @@ msgid ""
 "Customer is eligible for 100%% refund as a WITH THAI voucher ONLY."
 msgstr ""
 
-#: help/templates/help/terms.html:36
+#: help/templates/help/terms.html:40
 #, python-format
 msgid ""
 "6B. MODERATE – If the Customer cancels their booking before midnight before "
@@ -884,7 +884,7 @@ msgid ""
 "so please contact the Golf Course directly."
 msgstr ""
 
-#: help/templates/help/terms.html:39
+#: help/templates/help/terms.html:43
 #, python-format
 msgid ""
 "6C. STRICT – If the Customer cancels their booking before midnight before "
@@ -894,7 +894,7 @@ msgid ""
 "allow refunds or change date."
 msgstr ""
 
-#: help/templates/help/terms.html:44
+#: help/templates/help/terms.html:48
 msgid ""
 "7. Regarding Rain Checks, these may be issued depending on the Rain Check "
 "Policy of the Golf Course.  The issuing of Rain Checks is strictly between "
@@ -902,19 +902,19 @@ msgid ""
 "this issue for any reason."
 msgstr ""
 
-#: help/templates/help/terms.html:48
+#: help/templates/help/terms.html:52
 msgid ""
 "7A. Rain started during play – Rain Checks may OR may not be issued "
 "according to the Rain Check Policy of the Golf Course."
 msgstr ""
 
-#: help/templates/help/terms.html:51
+#: help/templates/help/terms.html:55
 msgid ""
 "7B. Heavy rain and cannot play – the Golf Course may OR may not allow change "
 "date according to the Rain Check Policy of the Golf Course."
 msgstr ""
 
-#: help/templates/help/terms.html:55
+#: help/templates/help/terms.html:59
 msgid ""
 "8. If the Customer uses the WITH THAI platform and service in ways outside "
 "of WITH THAI intention, WITH THAI will first provide a warning and collect "
@@ -922,14 +922,14 @@ msgid ""
 "the right to decline service to the Customer without prior notification."
 msgstr ""
 
-#: help/templates/help/terms.html:58
+#: help/templates/help/terms.html:62
 msgid ""
 "9. WITH THAI reserves the right to cancel any booking for any reason and "
 "will process refund and notify the Customer. WITH THAI will not be "
 "responsible for any types of incidents for any reason."
 msgstr ""
 
-#: help/templates/help/terms.html:61
+#: help/templates/help/terms.html:65
 msgid ""
 "10. If the Customer is representing or otherwise has a business relationship "
 "with tour companies or agencies and books time slots through WITH THAI, the "
@@ -938,7 +938,7 @@ msgid ""
 "THAI will not be responsible for any types of incidents for any reason."
 msgstr ""
 
-#: help/templates/help/terms.html:64
+#: help/templates/help/terms.html:68
 msgid ""
 "11. In the case where the Customer books a deal for less persons than Golf "
 "Courses minimum allowed group size or when creating / joining a JOIN slot, "
@@ -948,7 +948,7 @@ msgid ""
 "reason."
 msgstr ""
 
-#: help/templates/help/terms.html:67
+#: help/templates/help/terms.html:71
 msgid ""
 "12. Completed booking and payment with WITH THAI will be considered as if "
 "the Customer have understood and fully agreed to this Terms of Service and "
@@ -956,7 +956,7 @@ msgid ""
 "breaking the Terms of Service."
 msgstr ""
 
-#: help/templates/help/terms.html:70
+#: help/templates/help/terms.html:74
 msgid ""
 "13. WITH THAI reserves the right to change the Terms of Service in any way "
 "possible way without needing to give prior notice to the Customer. WITH THAI "
@@ -1000,6 +1000,3 @@ msgstr "회원"
 
 #~ msgid "PAY NOW"
 #~ msgstr "결제하기"
-
-#~ msgid "WITH THAI collects some Personal Data from its Users as shown below:"
-#~ msgstr "위드타이는 사용자로부터 다음 개인정보를 수집합니다."
