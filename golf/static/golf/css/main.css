@@ -1,3 +1,7 @@
 .club-rate {
     margin-top: 1rem;
 }
+
+.pagination-list li a {
+    margin: .2rem;
+}

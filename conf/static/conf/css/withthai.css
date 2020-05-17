@@ -4907,8 +4907,8 @@ a.navbar-item,
   font-size: 1em;
   justify-content: center;
   margin: 0.25rem;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
   text-align: center; }
 
 .pagination-previous,
