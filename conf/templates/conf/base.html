@@ -33,11 +33,10 @@
 </head>
 <body>
 <header>
-    <!-- desktop navbar -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a role="button" class="navbar-burger burger">
+                <a role="button" class="navbar-burger burger" id="icon-burger">
                     <i class="fas fa-bars fa-fw"></i>
                 </a>
                 <a class="navbar-item" href="{% url 'home' %}">
@@ -47,7 +46,7 @@
                         <img src="{% static 'conf/images/withthai_logo_en.png' %}" alt="{% trans 'WITH THAI' %}">
                     {% endif %}
                 </a>
-                <a role="button" class="navbar-burger burger">
+                <a role="button" class="navbar-burger burger" id="icon-cart">
                     <i class="fas fa-luggage-cart fa-fw"></i>
                 </a>
             </div>
@@ -105,6 +104,7 @@
             </div>
         </div>
     </nav>
+
     <div class="container is-hidden-touch">
         <div class="is-pulled-right field is-grouped">
             <form class="control has-icons-left">
@@ -132,6 +132,89 @@
                     <i class="fas fa-globe"></i>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div class="modal" id="left-sidebar">
+        <div class="modal-background"></div>
+        <div class="modal-content left-sidebar">
+            <ul class="">
+                <li class="submenu-heading">
+                    <a href="#">{% trans 'WITH THAI' %}</a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="submenu-item">
+                        <a href="{% url 'account_logout' %}">
+                            <i class="fas fa-sign-out-alt fa-fw"></i>
+                            {% trans 'SIGN OUT' %}
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="submenu-item">
+                        <a href="{% url 'account_login' %}">
+                            <i class="fas fa-sign-out-alt fa-fw"></i>
+                            {% trans 'SIGN IN' %}
+                        </a>
+                    </li>
+                {% endif %}
+                <li class="submenu-item">
+                    <a href="#">
+                        <i class="fas fa-user-cog fa-fw"></i>
+                        {% trans 'MY PAGE' %}
+                    </a>
+                </li>
+                <li class="submenu-item">
+                    <a href="#">
+                        <i class="fas fa-passport fa-fw"></i>
+                        {% trans 'BOOKING' %}
+                    </a>
+                </li>
+                <li class="submenu-item">
+                    <a href="#">
+                        <i class="fas fa-info-circle fa-fw"></i>
+                        {% trans 'HELP' %}
+                    </a>
+                </li>
+
+                <li class="submenu-heading">
+                    <a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a>
+                </li>
+                {% get_areas as areas %}
+
+                {% for area in areas %}
+                    <li class="submenu-item">
+                        <a href="{% url 'golf:golf-area-list' area.slug %}">
+                            {% if LANGUAGE_CODE == 'th' %}
+                                {{ area.title_thai }}
+                            {% elif LANGUAGE_CODE == 'ko' %}
+                                {{ area.title_korean }}
+                            {% else %}
+                                {{ area.title_english }}
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endfor %}
+
+                <li class="submenu-bottom">
+                    <div class="columns is-mobile is-gapless">
+                        <div class="column has-text-centered submenu-heading submenu-bottom-active">
+                            <a href="{% url 'golf:golf-club-list' %}">
+                                {% trans 'GOLF' %}
+                            </a>
+                        </div>
+                        <div class="column has-text-centered submenu-heading ">
+                            <a href="#">
+                                {% trans 'HOTEL' %}
+                            </a>
+                        </div>
+                        <div class="column has-text-centered submenu-heading ">
+                            <a href="{% url 'magazine:home' %}">
+                                {% trans 'MAGAZINE' %}
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </header>

@@ -61,3 +61,49 @@ main {
 .pagination-list li a {
     margin: .2rem;
 }
+
+/* Mobile Sidebar */
+.left-sidebar {
+    position: fixed;
+    right: 0 !important;
+    left: 0 !important;
+    top: 0;
+    margin: 0;
+    min-height: 100vh;
+    width: 76%;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: #e4ebe3;
+    overflow-y: scroll;
+}
+
+.submenu-item {
+    padding: .5rem;
+    background: #ffffff;
+}
+
+.submenu-item a {
+    color: #03353e;
+}
+
+.submenu-heading {
+    padding: .5rem;
+    background-color: #ebf2ea;
+}
+
+.submenu-heading a {
+    color: #87b842;
+    font-weight: bold;
+}
+
+.submenu-scroll {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.submenu-bottom .columns .column {
+    padding: .5rem !important;
+}
+
+.submenu-bottom-active {
+    border-bottom: 4px solid #e88f2f;
+}

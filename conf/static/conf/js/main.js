@@ -20,4 +20,14 @@ $(document).ready(function () {
             $(".navbar").css("box-shadow", "none");
         }
     });
+
+    $('#icon-burger').on('click', function() {
+        $('#left-sidebar').addClass('is-active');
+        $('html').addClass('is-clipped');
+    });
+
+    $('.modal-background').on('click', function() {
+        $('#left-sidebar').removeClass('is-active');
+        $('html').removeClass('is-clipped');
+    });
 });
