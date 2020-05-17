@@ -56,3 +56,8 @@ main {
 .breadcrumbs .breadcrumb {
     padding-left: 0.2rem;
 }
+
+/* Pagination */
+.pagination-list li a {
+    margin: .2rem;
+}
