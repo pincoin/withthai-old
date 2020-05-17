@@ -20,7 +20,7 @@
 
                 {% get_areas as areas %}
 
-                <div class="columns is-multiline is-mobile">
+                <div class="columns is-multiline is-mobile club-location">
                     {% for area in areas %}
                         <div class="column is-half-mobile is-one-quarter-desktop">
                             <a href="{% url 'golf:golf-area-list' area.slug %}"

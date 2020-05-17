@@ -29,7 +29,7 @@
             <div class="container">
                 {% get_provinces area.slug as provinces %}
 
-                <div class="columns is-multiline is-mobile">
+                <div class="columns is-multiline is-mobile club-location">
                     {% for province in provinces %}
                         <div class="column is-half-mobile is-one-quarter-desktop">
                             <a href="{% url 'golf:golf-province-list' province.slug %}"
