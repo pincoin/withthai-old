@@ -26,8 +26,14 @@ $(document).ready(function () {
         $('html').addClass('is-clipped');
     });
 
+    $('#icon-cart').on('click', function() {
+        $('#right-sidebar').addClass('is-active');
+        $('html').addClass('is-clipped');
+    });
+
     $('.modal-background').on('click', function() {
         $('#left-sidebar').removeClass('is-active');
+        $('#right-sidebar').removeClass('is-active');
         $('html').removeClass('is-clipped');
     });
 });

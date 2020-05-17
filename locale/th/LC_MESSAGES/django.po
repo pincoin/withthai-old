@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-17 17:01+0700\n"
+"POT-Creation-Date: 2020-05-18 01:14+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: allauth/templates/account/signup_closed.html:32
 #: allauth/templates/socialaccount/authentication_error.html:32
 #: allauth/templates/socialaccount/login_cancelled.html:32
-#: conf/templates/conf/base.html:96
+#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:156
 msgid "SIGN IN"
 msgstr ""
 
@@ -32,7 +32,8 @@ msgstr ""
 
 #: allauth/templates/account/logout.html:5
 #: allauth/templates/account/logout.html:14
-#: allauth/templates/account/logout.html:34 conf/templates/conf/base.html:91
+#: allauth/templates/account/logout.html:34 conf/templates/conf/base.html:90
+#: conf/templates/conf/base.html:149
 msgid "SIGN OUT"
 msgstr ""
 
@@ -214,44 +215,47 @@ msgstr ""
 msgid "Chinese"
 msgstr ""
 
-#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:45
-#: conf/templates/conf/base.html:47 help/templates/help/about.html:12
+#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:44
+#: conf/templates/conf/base.html:46 conf/templates/conf/base.html:143
+#: help/templates/help/about.html:12
 msgid "WITH THAI"
 msgstr "วิธไทย"
 
-#: conf/templates/conf/base.html:58 golf/templates/golf/golf-club-list.html:12
+#: conf/templates/conf/base.html:57 conf/templates/conf/base.html:180
+#: conf/templates/conf/base.html:204 golf/templates/golf/golf-club-list.html:12
 msgid "GOLF"
 msgstr "กอล์ฟ"
 
-#: conf/templates/conf/base.html:61
+#: conf/templates/conf/base.html:60 conf/templates/conf/base.html:209
 msgid "HOTEL"
 msgstr "โรงแรม"
 
-#: conf/templates/conf/base.html:64 magazine/templates/magazine/base.html:27
+#: conf/templates/conf/base.html:63 magazine/templates/magazine/base.html:27
 msgid "HOT DEALS"
 msgstr ""
 
-#: conf/templates/conf/base.html:67 magazine/templates/magazine/base.html:32
+#: conf/templates/conf/base.html:66 magazine/templates/magazine/base.html:32
 msgid "PROMOTIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:70
+#: conf/templates/conf/base.html:69 conf/templates/conf/base.html:214
 msgid "MAGAZINE"
 msgstr ""
 
-#: conf/templates/conf/base.html:77
+#: conf/templates/conf/base.html:76 conf/templates/conf/base.html:169
+#: conf/templates/conf/base.html:238
 msgid "BOOKING"
 msgstr ""
 
-#: conf/templates/conf/base.html:81
+#: conf/templates/conf/base.html:80 conf/templates/conf/base.html:175
 msgid "HELP"
 msgstr ""
 
-#: conf/templates/conf/base.html:85
+#: conf/templates/conf/base.html:84 conf/templates/conf/base.html:163
 msgid "MY PAGE"
 msgstr ""
 
-#: conf/templates/conf/base.html:102
+#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:228
 msgid "CART"
 msgstr ""
 
@@ -260,49 +264,57 @@ msgstr ""
 msgid "Search..."
 msgstr ""
 
-#: conf/templates/conf/base.html:162 help/templates/help/terms.html:79
+#: conf/templates/conf/base.html:232
+msgid "EMPTY"
+msgstr ""
+
+#: conf/templates/conf/base.html:244
+msgid "PAY NOW"
+msgstr ""
+
+#: conf/templates/conf/base.html:275 help/templates/help/terms.html:79
 msgid "WITH THAI Co., Ltd."
 msgstr "บริษัท วิธไทย จำกัด"
 
-#: conf/templates/conf/base.html:165
+#: conf/templates/conf/base.html:278
 msgid ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
 msgstr ""
 
-#: conf/templates/conf/base.html:168
+#: conf/templates/conf/base.html:281
 msgid "TAX ID: 0105563049000"
 msgstr "TAX ID: 0105563049000"
 
-#: conf/templates/conf/base.html:171
+#: conf/templates/conf/base.html:284
 msgid "TAT License: 14/03216"
 msgstr "TAT License: 14/03216"
 
-#: conf/templates/conf/base.html:179 help/apps.py:7
+#: conf/templates/conf/base.html:292 help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:183 help/templates/help/guide.html:11
+#: conf/templates/conf/base.html:296 help/templates/help/guide.html:11
 msgid "GUIDE"
 msgstr ""
 
-#: conf/templates/conf/base.html:189
+#: conf/templates/conf/base.html:302
 msgid "FAQ/How-to"
 msgstr ""
 
-#: conf/templates/conf/base.html:194 help/templates/help/terms.html:11
+#: conf/templates/conf/base.html:307 help/templates/help/terms.html:11
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:197 help/templates/help/privacy.html:11
+#: conf/templates/conf/base.html:310 help/templates/help/privacy.html:11
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:202
+#: conf/templates/conf/base.html:315
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:207
+#: conf/templates/conf/base.html:320
 msgid "CONTACT US"
 msgstr ""
 
@@ -472,11 +484,9 @@ msgstr "ราคาเริ่มต้น"
 
 #: golf/models.py:284 golf/models.py:292 golf/models.py:300 golf/models.py:408
 #: golf/models.py:415 golf/models.py:422 golf/models.py:429 golf/models.py:436
-#: golf/models.py:443 golf/templates/golf/golf-area-list.html:107
+#: golf/models.py:443 golf/templates/golf/_golf-club-list.html:62
 #: golf/templates/golf/golf-club-booking-form.html:101
 #: golf/templates/golf/golf-club-booking-form.html:111
-#: golf/templates/golf/golf-club-list.html:98
-#: golf/templates/golf/golf-province-list.html:98
 msgid "THB"
 msgstr "บาท"
 
@@ -612,51 +622,33 @@ msgstr ""
 msgid "PayPal"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:53
-#: golf/templates/golf/golf-club-list.html:44
-#: golf/templates/golf/golf-province-list.html:44
+#: golf/templates/golf/_golf-club-list.html:7
 msgid "Recommended"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:54
-#: golf/templates/golf/golf-club-list.html:45
-#: golf/templates/golf/golf-province-list.html:45
+#: golf/templates/golf/_golf-club-list.html:8
 msgid "Rating: 5 Star - 1 Star"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:55
-#: golf/templates/golf/golf-club-list.html:46
-#: golf/templates/golf/golf-province-list.html:46
+#: golf/templates/golf/_golf-club-list.html:9
 msgid "Price: Low - High"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:56
-#: golf/templates/golf/golf-club-list.html:47
-#: golf/templates/golf/golf-province-list.html:47
+#: golf/templates/golf/_golf-club-list.html:10
 msgid "Price: High - Low"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:105
-#: golf/templates/golf/golf-club-list.html:96
-#: golf/templates/golf/golf-province-list.html:96
+#: golf/templates/golf/_golf-club-list.html:60
 msgid "Start From"
 msgstr "ราคาเริ่มต้น"
 
-#: golf/templates/golf/golf-area-list.html:121
-#: golf/templates/golf/golf-area-list.html:126
-#: golf/templates/golf/golf-club-list.html:112
-#: golf/templates/golf/golf-club-list.html:117
-#: golf/templates/golf/golf-province-list.html:112
-#: golf/templates/golf/golf-province-list.html:117
+#: golf/templates/golf/_golf-club-pagination.html:11
+#: golf/templates/golf/_golf-club-pagination.html:18
 msgid "Previous"
 msgstr ""
 
-#: golf/templates/golf/golf-area-list.html:152
-#: golf/templates/golf/golf-area-list.html:157
-#: golf/templates/golf/golf-club-list.html:143
-#: golf/templates/golf/golf-club-list.html:148
-#: golf/templates/golf/golf-province-list.html:143
-#: golf/templates/golf/golf-province-list.html:148
+#: golf/templates/golf/_golf-club-pagination.html:44
+#: golf/templates/golf/_golf-club-pagination.html:51
 msgid "Next"
 msgstr ""
 

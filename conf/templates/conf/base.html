@@ -182,19 +182,19 @@
                 {% get_areas as areas %}
 
                 <div class="submenu-scroll">
-                {% for area in areas %}
-                    <li class="submenu-item">
-                        <a href="{% url 'golf:golf-area-list' area.slug %}">
-                            {% if LANGUAGE_CODE == 'th' %}
-                                {{ area.title_thai }}
-                            {% elif LANGUAGE_CODE == 'ko' %}
-                                {{ area.title_korean }}
-                            {% else %}
-                                {{ area.title_english }}
-                            {% endif %}
-                        </a>
-                    </li>
-                {% endfor %}
+                    {% for area in areas %}
+                        <li class="submenu-item">
+                            <a href="{% url 'golf:golf-area-list' area.slug %}">
+                                {% if LANGUAGE_CODE == 'th' %}
+                                    {{ area.title_thai }}
+                                {% elif LANGUAGE_CODE == 'ko' %}
+                                    {{ area.title_korean }}
+                                {% else %}
+                                    {{ area.title_english }}
+                                {% endif %}
+                            </a>
+                        </li>
+                    {% endfor %}
                 </div>
 
                 <li class="submenu-bottom">
@@ -214,6 +214,30 @@
                                 {% trans 'MAGAZINE' %}
                             </a>
                         </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="right-sidebar">
+        <div class="modal-background"></div>
+        <div class="modal-content right-sidebar">
+            <ul class="">
+                <li class="submenu-heading">
+                    <a href="#">{% trans 'CART' %}</a>
+                </li>
+                <li class="submenu-item">
+                    <a href="#">
+                        {% trans 'EMPTY' %}
+                    </a>
+                </li>
+                <li class="submenu-item">
+                    <div class="pay-now">
+                        <a href="#" class="button is-primary">
+                            <span class="icon"><i class="far fa-credit-card"></i></span>
+                            <span>{% trans 'PAY NOW' %}</span>
+                        </a>
                     </div>
                 </li>
             </ul>
