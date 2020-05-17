@@ -2,24 +2,28 @@
 
 {% if page_obj %}
     <nav class="pagination is-centered">
-        {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}{% if q %}&q={{ q }}{% endif %}"
-               aria-label="Previous" class="pagination-previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">{% trans "Previous" %}</span>
-            </a>
-        {% else %}
-            <a href="#" class="pagination-previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">{% trans "Previous" %}</span>
-            </a>
-        {% endif %}
-
         <ul class="pagination-list">
+            {% if page_obj.has_previous %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}{% if q %}&q={{ q }}{% endif %}"
+                       aria-label="Previous" class="pagination-previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">{% trans "Previous" %}</span>
+                    </a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="#" class="pagination-previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">{% trans "Previous" %}</span>
+                    </a>
+                </li>
+            {% endif %}
+
             {% for i in page_range %}
                 {% if page_obj.number == i %}
                     <li>
-                        <a href="#" class="pagination-link">{{ i }}
+                        <a href="#" class="pagination-link is-current">{{ i }}
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -31,19 +35,23 @@
                     </li>
                 {% endif %}
             {% endfor %}
-        </ul>
 
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}{% if q %}&q={{ q }}{% endif %}"
-               aria-label="Next" class="pagination-next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">{% trans "Next" %}</span>
-            </a>
-        {% else %}
-            <a href="#" class="pagination-next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">{% trans "Next" %}</span>
-            </a>
-        {% endif %}
+            {% if page_obj.has_next %}
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}{% if q %}&q={{ q }}{% endif %}"
+                       aria-label="Next" class="pagination-next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">{% trans "Next" %}</span>
+                    </a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="#" class="pagination-next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">{% trans "Next" %}</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
     </nav>
 {% endif %}
