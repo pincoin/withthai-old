@@ -1,6 +1,6 @@
 {% extends 'conf/base.html' %}
 
-{% load i18n static humanize %}
+{% load i18n static %}
 {% load golf_tags %}
 
 {% block main %}
@@ -46,119 +46,9 @@
                     {% endfor %}
                 </div>
 
-                <div class="columns is-multiline is-mobile">
-                    <div class="column is-full">
-                        <form class="select is-pulled-right">
-                            <select class="" name="ordering">
-                                <option value="1">{% trans 'Recommended' %}</option>
-                                <option value="2">{% trans 'Rating: 5 Star - 1 Star' %}</option>
-                                <option value="3">{% trans 'Price: Low - High' %}</option>
-                                <option value="4">{% trans 'Price: High - Low' %}</option>
-                            </select>
-                        </form>
-                    </div>
+                {% include './_golf-club-list.html' with clubs=clubs %}
 
-                    {% for club in clubs %}
-                        <div class="column is-full-mobile is-half-desktop">
-                            <div class="columns">
-                                <div class="column is-full-mobile is-one-third-desktop">
-                                    <a href="{% url 'golf:golf-club-booking' club.slug %}">
-                                        {% if club.thumbnail1 %}
-                                            <img src="{{ club.thumbnail1.url }}" alt="" class="image">
-                                        {% else %}
-                                            <img src="//via.placeholder.com/640x320" alt="" class="image">
-                                        {% endif %}
-                                    </a>
-                                </div>
-                                <div class="column is-full-mobile is-two-thirds-desktop">
-                                    <a href="{% url 'golf:golf-club-booking' club.slug %}">
-                                        <h3 class="is-size-3">
-                                            {% if LANGUAGE_CODE == 'th' %}
-                                                {{ club.title_thai }}
-                                            {% elif LANGUAGE_CODE == 'ko' %}
-                                                {{ club.title_korean }}
-                                            {% else %}
-                                                {{ club.title_english }}
-                                            {% endif %}
-                                        </h3>
-                                    </a>
-                                    <div>
-                                        {% if LANGUAGE_CODE == 'th' %}
-                                            {{ club.district.title_thai }}
-                                        {% elif LANGUAGE_CODE == 'ko' %}
-                                            {{ club.district.title_korean }}
-                                        {% else %}
-                                            {{ club.district.title_english }}
-                                        {% endif %} -
-                                        <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
-                                            {% if LANGUAGE_CODE == 'th' %}
-                                                {{ club.district.province.title_thai }}
-                                            {% elif LANGUAGE_CODE == 'ko' %}
-                                                {{ club.district.province.title_korean }}
-                                            {% else %}
-                                                {{ club.district.province.title_english }}
-                                            {% endif %}
-                                        </a>
-                                    </div>
-
-                                    <div class="club-rate has-text-weight-bold">
-                                        <span>{% trans 'Start From' %}</span>
-                                        <span>{{ club.green_fee_selling_price|floatformat:0|intcomma }}</span>
-                                        <span>{% trans 'THB' %}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-
-                {% if page_obj %}
-                    <nav class="pagination is-centered">
-                        {% if page_obj.has_previous %}
-                            <a href="?page={{ page_obj.previous_page_number }}{% if q %}&q={{ q }}{% endif %}"
-                               aria-label="Previous" class="pagination-previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">{% trans "Previous" %}</span>
-                            </a>
-                        {% else %}
-                            <a href="#" class="pagination-previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">{% trans "Previous" %}</span>
-                            </a>
-                        {% endif %}
-
-                        <ul class="pagination-list">
-                            {% for i in page_range %}
-                                {% if page_obj.number == i %}
-                                    <li>
-                                        <a href="#" class="pagination-link">{{ i }}
-                                            <span class="sr-only">(current)</span>
-                                        </a>
-                                    </li>
-                                {% else %}
-                                    <li>
-                                        <a href="?page={{ i }}{% if q %}&q={{ q }}{% endif %}" class="pagination-link">
-                                            {{ i }}
-                                        </a>
-                                    </li>
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-
-                        {% if page_obj.has_next %}
-                            <a href="?page={{ page_obj.next_page_number }}{% if q %}&q={{ q }}{% endif %}"
-                               aria-label="Next" class="pagination-next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">{% trans "Next" %}</span>
-                            </a>
-                        {% else %}
-                            <a href="#" class="pagination-next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">{% trans "Next" %}</span>
-                            </a>
-                        {% endif %}
-                    </nav>
-                {% endif %}
+                {% include './_golf-club-pagination.html' with page_obj=page_obj page_range=page_range %}
             </div>
         </div>
     </main>
