@@ -2,8 +2,8 @@ $(window).on('load resize', function () {
     if ($(this).width() < 960) {
         var h = $(window).height();
 
-        // 38x7=266, 38x8=304
-        $('.submenu-scroll').css({'max-height': h - 228, 'min-height': h - 228});
+        // 40x7=280, 40x8=320
+        $('.submenu-scroll').css({'max-height': h - 280, 'min-height': h - 280});
     }
 });
 

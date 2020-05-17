@@ -181,6 +181,7 @@
                 </li>
                 {% get_areas as areas %}
 
+                <div class="submenu-scroll">
                 {% for area in areas %}
                     <li class="submenu-item">
                         <a href="{% url 'golf:golf-area-list' area.slug %}">
@@ -194,6 +195,7 @@
                         </a>
                     </li>
                 {% endfor %}
+                </div>
 
                 <li class="submenu-bottom">
                     <div class="columns is-mobile is-gapless">
