@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-18 01:14+0700\n"
+"POT-Creation-Date: 2020-05-18 09:56+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -244,7 +244,6 @@ msgid "MAGAZINE"
 msgstr ""
 
 #: conf/templates/conf/base.html:76 conf/templates/conf/base.html:169
-#: conf/templates/conf/base.html:238
 msgid "BOOKING"
 msgstr ""
 
@@ -261,7 +260,6 @@ msgid "CART"
 msgstr ""
 
 #: conf/templates/conf/base.html:111
-#: golf/templates/golf/golf-club-booking-form.html:50
 msgid "Search..."
 msgstr ""
 
@@ -269,53 +267,53 @@ msgstr ""
 msgid "EMPTY"
 msgstr ""
 
-#: conf/templates/conf/base.html:244
+#: conf/templates/conf/base.html:239
 msgid "PAY NOW"
 msgstr ""
 
-#: conf/templates/conf/base.html:275 help/templates/help/terms.html:79
+#: conf/templates/conf/base.html:271 help/templates/help/terms.html:79
 msgid "WITH THAI Co., Ltd."
 msgstr ""
 
-#: conf/templates/conf/base.html:278
+#: conf/templates/conf/base.html:274
 msgid ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
 msgstr ""
 
-#: conf/templates/conf/base.html:281
+#: conf/templates/conf/base.html:277
 msgid "TAX ID: 0105563049000"
 msgstr ""
 
-#: conf/templates/conf/base.html:284
+#: conf/templates/conf/base.html:280
 msgid "TAT License: 14/03216"
 msgstr ""
 
-#: conf/templates/conf/base.html:292 help/apps.py:7
+#: conf/templates/conf/base.html:288 help/apps.py:7
 msgid "Help"
 msgstr ""
 
-#: conf/templates/conf/base.html:296 help/templates/help/guide.html:11
+#: conf/templates/conf/base.html:292 help/templates/help/guide.html:11
 msgid "GUIDE"
 msgstr ""
 
-#: conf/templates/conf/base.html:302
+#: conf/templates/conf/base.html:298
 msgid "FAQ/How-to"
 msgstr ""
 
-#: conf/templates/conf/base.html:307 help/templates/help/terms.html:11
+#: conf/templates/conf/base.html:303 help/templates/help/terms.html:11
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:310 help/templates/help/privacy.html:11
+#: conf/templates/conf/base.html:306 help/templates/help/privacy.html:11
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:315
+#: conf/templates/conf/base.html:311
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:320
+#: conf/templates/conf/base.html:316
 msgid "CONTACT US"
 msgstr ""
 
@@ -467,7 +465,7 @@ msgstr ""
 msgid "Fax number"
 msgstr ""
 
-#: golf/models.py:253
+#: golf/models.py:253 golf/templates/golf/golf-club-booking-form.html:124
 msgid "Website"
 msgstr ""
 
@@ -486,8 +484,8 @@ msgstr ""
 #: golf/models.py:284 golf/models.py:292 golf/models.py:300 golf/models.py:408
 #: golf/models.py:415 golf/models.py:422 golf/models.py:429 golf/models.py:436
 #: golf/models.py:443 golf/templates/golf/_golf-club-list.html:62
-#: golf/templates/golf/golf-club-booking-form.html:101
-#: golf/templates/golf/golf-club-booking-form.html:111
+#: golf/templates/golf/golf-club-booking-form.html:97
+#: golf/templates/golf/golf-club-booking-form.html:107
 msgid "THB"
 msgstr ""
 
@@ -653,24 +651,36 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:98
-#: golf/templates/golf/golf-club-booking-form.html:143
+#: golf/templates/golf/golf-club-booking-form.html:94
+#: golf/templates/golf/golf-club-booking-form.html:190
 msgid "Cart Fee"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:104
+#: golf/templates/golf/golf-club-booking-form.html:100
 msgid "Optional"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:108
+#: golf/templates/golf/golf-club-booking-form.html:104
 msgid "Caddie Fee"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:115
+#: golf/templates/golf/golf-club-booking-form.html:111
 msgid "Pay at golf course"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:137
+#: golf/templates/golf/golf-club-booking-form.html:116
+msgid "Telephone"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:120
+msgid "Address"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:134
+msgid "Date/Time"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:178
 msgid "Green Fee"
 msgstr ""
 
