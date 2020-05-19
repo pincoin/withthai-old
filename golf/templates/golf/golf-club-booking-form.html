@@ -49,7 +49,7 @@
         <div class="section club-detail-section">
             <div class="container">
                 <div class="columns is-multiline club-detail">
-                    <div class="column is-one-third">
+                    <div class="column is-3">
                         {% if club.thumbnail1 %}
                             <img src="{{ club.thumbnail1.url }}" alt="" class="image">
                         {% else %}
@@ -57,8 +57,8 @@
                         {% endif %}
 
                     </div>
-                    <div class="column is-one-third">
-                        <h3 class="is-size-3 has-text-weight-bold club-title">
+                    <div class="column is-6">
+                        <h3 class="is-size-3 has-text-weight-bold has-margin-bottom-4">
                             {% if LANGUAGE_CODE == 'th' %}
                                 {{ club.title_thai }}
                             {% elif LANGUAGE_CODE == 'ko' %}
@@ -67,11 +67,11 @@
                                 {{ club.title_english }}
                             {% endif %}
                         </h3>
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <td>지역</td>
-                                <td colspan="2">
+
+                        <div class="section">
+                            <div class="columns is-mobile">
+                                <div class="column is-3">지역</div>
+                                <div class="column is-9">
                                     {% if LANGUAGE_CODE == 'th' %}
                                         {{ club.district.title_thai }}
                                     {% elif LANGUAGE_CODE == 'ko' %}
@@ -88,46 +88,45 @@
                                             {{ club.district.province.title_english }}
                                         {% endif %}
                                     </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>{% trans 'Cart Fee' %}</td>
-                                <td>
-                                    999
-                                    {% trans 'THB' %}
-                                </td>
-                                <td>
-                                    {% trans 'Optional' %}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>{% trans 'Caddie Fee' %}</td>
-                                <td>
-                                    999
-                                    {% trans 'THB' %}
-                                </td>
-                                <td>
+                                </div>
+                            </div>
+                            <div class="columns is-mobile">
+                                <div class="column is-3">{% trans 'Cart Fee' %}</div>
+                                <div class="column is-9">
+                                    <span>999 {% trans 'THB' %}</span>
+
+                                    &nbsp;&nbsp; - &nbsp;&nbsp;
+                                    <span>
+                                        {% trans 'Optional' %}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="columns is-mobile">
+                                <div class="column is-3">{% trans 'Caddie Fee' %}</div>
+                                <div class="column is-9">
+                                    <span>999 {% trans 'THB' %}</span>
+
+                                    &nbsp;&nbsp; - &nbsp;&nbsp;
                                     <span class="has-text-danger">
                                         {% trans 'Pay at golf course' %}
                                     </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>{% trans 'Telephone' %}</td>
-                                <td colspan="2">0813041545</td>
-                            </tr>
-                            <tr>
-                                <td>{% trans 'Address' %}</td>
-                                <td colspan="2">99/1 Moo 5, Klongkiew, Banbung, 20220 Chonburi</td>
-                            </tr>
-                            <tr>
-                                <td>{% trans 'Website' %}</td>
-                                <td colspan="2">http://www.pattaviagolf.com</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                </div>
+                            </div>
+                            <div class="columns is-mobile">
+                                <div class="column is-3">{% trans 'Telephone' %}</div>
+                                <div class="column is-9">0813041545</div>
+                            </div>
+                            <div class="columns is-mobile">
+                                <div class="column is-3">{% trans 'Address' %}</div>
+                                <div class="column is-9">99/1 Moo 5, Klongkiew, Banbung, 20220 Chonburi</div>
+                            </div>
+                            <div class="columns is-mobile">
+                                <div class="column is-3">{% trans 'Website' %}</div>
+                                <div class="column is-9">http://www.pattaviagolf.com</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="column is-one-third">
+                    <div class="column is-3">
                         <form>
                             <div class="field is-horizontal">
                                 <div class="field-label is-normal">

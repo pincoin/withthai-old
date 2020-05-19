@@ -1,14 +1,6 @@
-.club-rate {
-    margin-top: 1rem;
-}
-
 .club-location .column {
     padding-top: .2rem;
     padding-bottom: .2rem;
-}
-
-.club-title {
-    margin-bottom: 1rem;
 }
 
 @media (max-width: 1023px) {
