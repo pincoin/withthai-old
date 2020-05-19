@@ -1,6 +1,10 @@
-.club-location .column {
-    padding-top: .2rem;
-    padding-bottom: .2rem;
+.club-detail .column .card {
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.flex-same-height {
+    height: 100%;
 }
 
 @media (max-width: 1023px) {
@@ -17,8 +21,12 @@
         padding-top: 0;
     }
 
-    .club-detail .column {
+    .club-detail > .column {
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+.word-no-break {
+    word-break: keep-all;
 }

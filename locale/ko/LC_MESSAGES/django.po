@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-18 09:56+0700\n"
+"POT-Creation-Date: 2020-05-20 00:07+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: allauth/templates/account/signup_closed.html:32
 #: allauth/templates/socialaccount/authentication_error.html:32
 #: allauth/templates/socialaccount/login_cancelled.html:32
-#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:156
+#: conf/templates/conf/base.html:98 conf/templates/conf/base.html:159
 msgid "SIGN IN"
 msgstr "로그인"
 
@@ -32,8 +32,8 @@ msgstr "SNS 계정으로 간편하게 회원가입/로그인하세요."
 
 #: allauth/templates/account/logout.html:5
 #: allauth/templates/account/logout.html:14
-#: allauth/templates/account/logout.html:34 conf/templates/conf/base.html:90
-#: conf/templates/conf/base.html:149
+#: allauth/templates/account/logout.html:34 conf/templates/conf/base.html:93
+#: conf/templates/conf/base.html:152
 msgid "SIGN OUT"
 msgstr "로그아웃"
 
@@ -215,66 +215,66 @@ msgstr "일본어"
 msgid "Chinese"
 msgstr "중국어"
 
-#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:44
-#: conf/templates/conf/base.html:46 conf/templates/conf/base.html:143
+#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:47
+#: conf/templates/conf/base.html:49 conf/templates/conf/base.html:146
 #: help/templates/help/about.html:12
 msgid "WITH THAI"
 msgstr "위드타이"
 
-#: conf/templates/conf/base.html:57 conf/templates/conf/base.html:180
-#: conf/templates/conf/base.html:204 golf/templates/golf/golf-club-list.html:12
+#: conf/templates/conf/base.html:60 conf/templates/conf/base.html:183
+#: conf/templates/conf/base.html:207 golf/templates/golf/golf-club-list.html:12
 msgid "GOLF"
 msgstr "골프"
 
-#: conf/templates/conf/base.html:60 conf/templates/conf/base.html:209
+#: conf/templates/conf/base.html:63 conf/templates/conf/base.html:212
 msgid "HOTEL"
 msgstr "호텔"
 
-#: conf/templates/conf/base.html:63 magazine/templates/magazine/base.html:27
+#: conf/templates/conf/base.html:66 magazine/templates/magazine/base.html:27
 msgid "HOT DEALS"
 msgstr "핫딜"
 
-#: conf/templates/conf/base.html:66 magazine/templates/magazine/base.html:32
+#: conf/templates/conf/base.html:69 magazine/templates/magazine/base.html:32
 msgid "PROMOTIONS"
 msgstr "프로모션"
 
-#: conf/templates/conf/base.html:69 conf/templates/conf/base.html:214
+#: conf/templates/conf/base.html:72 conf/templates/conf/base.html:217
 msgid "MAGAZINE"
 msgstr "매거진"
 
-#: conf/templates/conf/base.html:76 conf/templates/conf/base.html:169
+#: conf/templates/conf/base.html:79 conf/templates/conf/base.html:172
 msgid "BOOKING"
 msgstr "나의예약"
 
-#: conf/templates/conf/base.html:80 conf/templates/conf/base.html:175
+#: conf/templates/conf/base.html:83 conf/templates/conf/base.html:178
 msgid "HELP"
 msgstr "고객센터"
 
-#: conf/templates/conf/base.html:84 conf/templates/conf/base.html:163
+#: conf/templates/conf/base.html:87 conf/templates/conf/base.html:166
 msgid "MY PAGE"
 msgstr "마이페이지"
 
-#: conf/templates/conf/base.html:101 conf/templates/conf/base.html:228
+#: conf/templates/conf/base.html:104 conf/templates/conf/base.html:231
 msgid "CART"
 msgstr "장바구니"
 
-#: conf/templates/conf/base.html:111
+#: conf/templates/conf/base.html:114
 msgid "Search..."
 msgstr "찾기..."
 
-#: conf/templates/conf/base.html:232
+#: conf/templates/conf/base.html:235
 msgid "EMPTY"
 msgstr "비어있음"
 
-#: conf/templates/conf/base.html:239
+#: conf/templates/conf/base.html:242
 msgid "PAY NOW"
 msgstr "결제하기"
 
-#: conf/templates/conf/base.html:271 help/templates/help/terms.html:79
+#: conf/templates/conf/base.html:274 help/templates/help/terms.html:79
 msgid "WITH THAI Co., Ltd."
 msgstr "위드타이 주식회사"
 
-#: conf/templates/conf/base.html:274
+#: conf/templates/conf/base.html:277
 msgid ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
@@ -282,39 +282,39 @@ msgstr ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
 
-#: conf/templates/conf/base.html:277
+#: conf/templates/conf/base.html:280
 msgid "TAX ID: 0105563049000"
 msgstr "태국 법인등록번호: 0105563049000"
 
-#: conf/templates/conf/base.html:280
+#: conf/templates/conf/base.html:283
 msgid "TAT License: 14/03216"
 msgstr "태국 여행업등록번호: 14/03216"
 
-#: conf/templates/conf/base.html:288 help/apps.py:7
+#: conf/templates/conf/base.html:291 help/apps.py:7
 msgid "Help"
 msgstr "이용안내"
 
-#: conf/templates/conf/base.html:292 help/templates/help/guide.html:11
+#: conf/templates/conf/base.html:295 help/templates/help/guide.html:11
 msgid "GUIDE"
 msgstr "이용가이드"
 
-#: conf/templates/conf/base.html:298
+#: conf/templates/conf/base.html:301
 msgid "FAQ/How-to"
 msgstr "자주 묻는 질문"
 
-#: conf/templates/conf/base.html:303 help/templates/help/terms.html:11
+#: conf/templates/conf/base.html:306 help/templates/help/terms.html:11
 msgid "TERMS &amp; CONDITIONS"
 msgstr "이용약관"
 
-#: conf/templates/conf/base.html:306 help/templates/help/privacy.html:11
+#: conf/templates/conf/base.html:309 help/templates/help/privacy.html:11
 msgid "PRIVACY POLICY"
 msgstr "개인정보 처리방침"
 
-#: conf/templates/conf/base.html:311
+#: conf/templates/conf/base.html:314
 msgid "ABOUT US"
 msgstr "위드타이 소개"
 
-#: conf/templates/conf/base.html:316
+#: conf/templates/conf/base.html:319
 msgid "CONTACT US"
 msgstr "문의하기"
 
@@ -466,7 +466,7 @@ msgstr "대표 전화번호"
 msgid "Fax number"
 msgstr "팩스 번호"
 
-#: golf/models.py:253 golf/templates/golf/golf-club-booking-form.html:124
+#: golf/models.py:253 golf/templates/golf/golf-club-booking-form.html:139
 msgid "Website"
 msgstr "웹사이트"
 
@@ -485,8 +485,15 @@ msgstr "시작가"
 #: golf/models.py:284 golf/models.py:292 golf/models.py:300 golf/models.py:408
 #: golf/models.py:415 golf/models.py:422 golf/models.py:429 golf/models.py:436
 #: golf/models.py:443 golf/templates/golf/_golf-club-list.html:62
-#: golf/templates/golf/golf-club-booking-form.html:97
-#: golf/templates/golf/golf-club-booking-form.html:107
+#: golf/templates/golf/golf-club-booking-form.html:104
+#: golf/templates/golf/golf-club-booking-form.html:116
+#: golf/templates/golf/golf-club-booking-form.html:260
+#: golf/templates/golf/golf-club-booking-form.html:267
+#: golf/templates/golf/golf-club-booking-form.html:274
+#: golf/templates/golf/golf-club-booking-form.html:281
+#: golf/templates/golf/golf-club-booking-form.html:288
+#: golf/templates/golf/golf-club-booking-form.html:295
+#: golf/templates/golf/golf-club-booking-form.html:302
 msgid "THB"
 msgstr "바트"
 
@@ -526,25 +533,30 @@ msgstr "골프장"
 msgid "Golf clubs"
 msgstr "골프장"
 
-#: golf/models.py:355
+#: golf/models.py:355 golf/templates/golf/golf-club-booking-form.html:257
+#: golf/templates/golf/golf-club-booking-form.html:264
+#: golf/templates/golf/golf-club-booking-form.html:271
 msgid "Weekday"
 msgstr "평일"
 
-#: golf/models.py:356
+#: golf/models.py:356 golf/templates/golf/golf-club-booking-form.html:278
+#: golf/templates/golf/golf-club-booking-form.html:285
+#: golf/templates/golf/golf-club-booking-form.html:292
+#: golf/templates/golf/golf-club-booking-form.html:299
 msgid "Weekend"
 msgstr "휴일"
 
 #: golf/models.py:360
 msgid "Day golf"
-msgstr "주간"
+msgstr "오전/낮"
 
 #: golf/models.py:361
 msgid "Day golf 1st round"
-msgstr "주간1부"
+msgstr "오전/낮 1부"
 
 #: golf/models.py:362
 msgid "Day golf 2nd round"
-msgstr "주간2부"
+msgstr "오전/낮 2부"
 
 #: golf/models.py:363
 msgid "Twilight golf"
@@ -612,15 +624,15 @@ msgstr "요금표"
 
 #: golf/models.py:456
 msgid "Credit Card"
-msgstr ""
+msgstr "신용카드"
 
 #: golf/models.py:457
 msgid "Bank Transfer"
-msgstr ""
+msgstr "계좌이체"
 
 #: golf/models.py:458
 msgid "PayPal"
-msgstr ""
+msgstr "페이팔"
 
 #: golf/templates/golf/_golf-club-list.html:7
 msgid "Recommended"
@@ -652,38 +664,108 @@ msgstr "이전"
 msgid "Next"
 msgstr "다음"
 
-#: golf/templates/golf/golf-club-booking-form.html:94
-#: golf/templates/golf/golf-club-booking-form.html:190
+#: golf/templates/golf/golf-club-booking-form.html:78
+msgid "Location"
+msgstr "지역"
+
+#: golf/templates/golf/golf-club-booking-form.html:101
+#: golf/templates/golf/golf-club-booking-form.html:205
 msgid "Cart Fee"
 msgstr "카트피"
 
-#: golf/templates/golf/golf-club-booking-form.html:100
+#: golf/templates/golf/golf-club-booking-form.html:107
 msgid "Optional"
 msgstr "의무아님"
 
-#: golf/templates/golf/golf-club-booking-form.html:104
+#: golf/templates/golf/golf-club-booking-form.html:113
 msgid "Caddie Fee"
 msgstr "캐디피"
 
-#: golf/templates/golf/golf-club-booking-form.html:111
+#: golf/templates/golf/golf-club-booking-form.html:119
 msgid "Pay at golf course"
 msgstr "골프장에서 결제"
 
-#: golf/templates/golf/golf-club-booking-form.html:116
+#: golf/templates/golf/golf-club-booking-form.html:125
 msgid "Telephone"
 msgstr "전화번호"
 
-#: golf/templates/golf/golf-club-booking-form.html:120
+#: golf/templates/golf/golf-club-booking-form.html:131
 msgid "Address"
 msgstr "주소"
 
-#: golf/templates/golf/golf-club-booking-form.html:134
+#: golf/templates/golf/golf-club-booking-form.html:150
 msgid "Date/Time"
 msgstr "일시"
 
-#: golf/templates/golf/golf-club-booking-form.html:178
+#: golf/templates/golf/golf-club-booking-form.html:167
+msgid "Golfer #"
+msgstr "인원"
+
+#: golf/templates/golf/golf-club-booking-form.html:180
+msgid "Cart #"
+msgstr "카트 수량"
+
+#: golf/templates/golf/golf-club-booking-form.html:193
 msgid "Green Fee"
 msgstr "그린피"
+
+#: golf/templates/golf/golf-club-booking-form.html:222
+msgid "Booking Inquiry"
+msgstr "예약문의신청"
+
+#: golf/templates/golf/golf-club-booking-form.html:239
+msgid "Rate / Schedule"
+msgstr "요금 및 시간표"
+
+#: golf/templates/golf/golf-club-booking-form.html:247
+msgid "Period"
+msgstr "기간"
+
+#: golf/templates/golf/golf-club-booking-form.html:248
+msgid "Type of day"
+msgstr "휴일구분"
+
+#: golf/templates/golf/golf-club-booking-form.html:249
+msgid "Time slot"
+msgstr "시간대"
+
+#: golf/templates/golf/golf-club-booking-form.html:250
+msgid "Time"
+msgstr "시간"
+
+#: golf/templates/golf/golf-club-booking-form.html:251
+msgid "Rate"
+msgstr "요금"
+
+#: golf/templates/golf/golf-club-booking-form.html:258
+msgid "Day Golf"
+msgstr "오전/낮"
+
+#: golf/templates/golf/golf-club-booking-form.html:265
+#: golf/templates/golf/golf-club-booking-form.html:293
+msgid "Twilight Golf"
+msgstr "일몰"
+
+#: golf/templates/golf/golf-club-booking-form.html:272
+#: golf/templates/golf/golf-club-booking-form.html:300
+msgid "Night Golf"
+msgstr "야간"
+
+#: golf/templates/golf/golf-club-booking-form.html:279
+msgid "Day Golf 1st"
+msgstr "오전/낮 1부"
+
+#: golf/templates/golf/golf-club-booking-form.html:286
+msgid "Day Golf 2nd"
+msgstr "오전/낮 2부"
+
+#: golf/templates/golf/golf-club-booking-form.html:314
+msgid "Cancel Policy"
+msgstr "취소 규정"
+
+#: golf/templates/golf/golf-club-booking-form.html:327
+msgid "Rain Check"
+msgstr "우천 시 규정"
 
 #: help/templates/help/about.html:14
 msgid "We make online hotel/golf booking convenient."

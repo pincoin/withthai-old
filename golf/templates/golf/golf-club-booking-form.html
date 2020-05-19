@@ -46,161 +46,294 @@
             </div>
         </div>
 
-        <div class="section club-detail-section">
+        <div class="section">
             <div class="container">
                 <div class="columns is-multiline club-detail">
-                    <div class="column is-3">
-                        {% if club.thumbnail1 %}
-                            <img src="{{ club.thumbnail1.url }}" alt="" class="image">
-                        {% else %}
-                            <img src="//via.placeholder.com/640x320" alt="" class="image">
-                        {% endif %}
-
-                    </div>
-                    <div class="column is-6">
-                        <h3 class="is-size-3 has-text-weight-bold has-margin-bottom-4">
-                            {% if LANGUAGE_CODE == 'th' %}
-                                {{ club.title_thai }}
-                            {% elif LANGUAGE_CODE == 'ko' %}
-                                {{ club.title_korean }}
-                            {% else %}
-                                {{ club.title_english }}
-                            {% endif %}
-                        </h3>
-
-                        <div class="section">
-                            <div class="columns is-mobile">
-                                <div class="column is-3">지역</div>
-                                <div class="column is-9">
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
                                     {% if LANGUAGE_CODE == 'th' %}
-                                        {{ club.district.title_thai }}
+                                        {{ club.title_thai }}
                                     {% elif LANGUAGE_CODE == 'ko' %}
-                                        {{ club.district.title_korean }}
+                                        {{ club.title_korean }}
                                     {% else %}
-                                        {{ club.district.title_english }}
-                                    {% endif %} -
-                                    <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
-                                        {% if LANGUAGE_CODE == 'th' %}
-                                            {{ club.district.province.title_thai }}
-                                        {% elif LANGUAGE_CODE == 'ko' %}
-                                            {{ club.district.province.title_korean }}
-                                        {% else %}
-                                            {{ club.district.province.title_english }}
-                                        {% endif %}
-                                    </a>
+                                        {{ club.title_english }}
+                                    {% endif %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="columns">
+                                        <div class="column is-2">
+                                            {% if club.thumbnail1 %}
+                                                <img src="{{ club.thumbnail1.url }}" alt="" class="image">
+                                            {% else %}
+                                                <img src="//via.placeholder.com/640x320" alt="" class="image">
+                                            {% endif %}
+                                        </div>
+                                        <div class="column is-5">
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Location' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    {% if LANGUAGE_CODE == 'th' %}
+                                                        {{ club.district.title_thai }}
+                                                    {% elif LANGUAGE_CODE == 'ko' %}
+                                                        {{ club.district.title_korean }}
+                                                    {% else %}
+                                                        {{ club.district.title_english }}
+                                                    {% endif %} -
+                                                    <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                                        {% if LANGUAGE_CODE == 'th' %}
+                                                            {{ club.district.province.title_thai }}
+                                                        {% elif LANGUAGE_CODE == 'ko' %}
+                                                            {{ club.district.province.title_korean }}
+                                                        {% else %}
+                                                            {{ club.district.province.title_english }}
+                                                        {% endif %}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Cart Fee' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    <span>999 {% trans 'THB' %}</span>
+                                                    -
+                                                    <span>
+                                                        {% trans 'Optional' %}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Caddie Fee' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    <span>999 {% trans 'THB' %}</span>
+                                                    -
+                                                    <span class="has-text-danger">
+                                                        {% trans 'Pay at golf course' %}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Telephone' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">0813041545</div>
+                                            </div>
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Address' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    	19 Moo.14, Bang Krasan, Bangpain,Phra Nakhon Si Ayutthaya 13160
+                                                </div>
+                                            </div>
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Website' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    http://www.pattaviagolf.com
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column is-5">
+                                            <form>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label is-normal">
+                                                        <label class="label">{% trans 'Date/Time' %}</label>
+                                                    </div>
+                                                    <div class="field-body">
+                                                        <div class="field">
+                                                            <div class="control">
+                                                                <input type="text" class="input" id="round_date">
+                                                            </div>
+                                                        </div>
+                                                        <div class="field">
+                                                            <div class="control">
+                                                                <input type="text" class="input" id="round_time">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label is-normal">
+                                                        <label class="label">{% trans 'Golfer #' %}</label>
+                                                    </div>
+                                                    <div class="field-body">
+                                                        <div class="field">
+                                                            <div class="control">
+                                                                <input class="input" type="number" min="0" max="5"
+                                                                       value="4">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label is-normal">
+                                                        <label class="label">{% trans 'Cart #' %}</label>
+                                                    </div>
+                                                    <div class="field-body">
+                                                        <div class="field">
+                                                            <div class="control">
+                                                                <input class="input" type="number" min="0" max="5"
+                                                                       value="4">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label is-normal">
+                                                        <label class="label">{% trans 'Green Fee' %}</label>
+                                                    </div>
+                                                    <div class="field-body">
+                                                        <div class="field">
+                                                            <div class="control">
+                                                                <input type="text" class="input" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label is-normal">
+                                                        <label class="label">{% trans 'Cart Fee' %}</label>
+                                                    </div>
+                                                    <div class="field-body">
+                                                        <div class="field">
+                                                            <div class="control">
+                                                                <input type="text" class="input" disabled>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label"></div>
+                                                    <div class="field-body">
+                                                        <div class="field">
+                                                            <div class="control">
+                                                                <button type="submit"
+                                                                        class="button is-fullwidth is-primary">
+                                                                    {% trans 'Booking Inquiry' %}
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="columns is-mobile">
-                                <div class="column is-3">{% trans 'Cart Fee' %}</div>
-                                <div class="column is-9">
-                                    <span>999 {% trans 'THB' %}</span>
-
-                                    &nbsp;&nbsp; - &nbsp;&nbsp;
-                                    <span>
-                                        {% trans 'Optional' %}
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns is-mobile">
-                                <div class="column is-3">{% trans 'Caddie Fee' %}</div>
-                                <div class="column is-9">
-                                    <span>999 {% trans 'THB' %}</span>
-
-                                    &nbsp;&nbsp; - &nbsp;&nbsp;
-                                    <span class="has-text-danger">
-                                        {% trans 'Pay at golf course' %}
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="columns is-mobile">
-                                <div class="column is-3">{% trans 'Telephone' %}</div>
-                                <div class="column is-9">0813041545</div>
-                            </div>
-                            <div class="columns is-mobile">
-                                <div class="column is-3">{% trans 'Address' %}</div>
-                                <div class="column is-9">99/1 Moo 5, Klongkiew, Banbung, 20220 Chonburi</div>
-                            </div>
-                            <div class="columns is-mobile">
-                                <div class="column is-3">{% trans 'Website' %}</div>
-                                <div class="column is-9">http://www.pattaviagolf.com</div>
                             </div>
                         </div>
                     </div>
-                    <div class="column is-3">
-                        <form>
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">{% trans 'Date/Time' %}</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input type="text" class="input" id="round_date">
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <div class="control">
-                                            <input type="text" class="input" id="round_time">
-                                        </div>
-                                    </div>
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Rate / Schedule' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content table-container">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th class="word-no-break">{% trans 'Period' %}</th>
+                                            <th class="word-no-break">{% trans 'Type of day' %}</th>
+                                            <th class="ord-no-break is-hidden-touch">{% trans 'Time slot' %}</th>
+                                            <th class="word-no-break">{% trans 'Time' %}</th>
+                                            <th class="word-no-break">{% trans 'Rate' %}</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>2020-04-01 ~ 2020-10-31</td>
+                                            <td>{% trans 'Weekday' %}</td>
+                                            <td class="is-hidden-touch">{% trans 'Day Golf' %}</td>
+                                            <td>06:00 ~ 14:00</td>
+                                            <td>9,999 {% trans 'THB' %}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-04-01 ~ 2020-10-31</td>
+                                            <td>{% trans 'Weekday' %}</td>
+                                            <td class="is-hidden-touch">{% trans 'Twilight Golf' %}</td>
+                                            <td>14:30 ~ 15:34</td>
+                                            <td>9,999 {% trans 'THB' %}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-04-01 ~ 2020-10-31</td>
+                                            <td>{% trans 'Weekday' %}</td>
+                                            <td class="is-hidden-touch">{% trans 'Night Golf' %}</td>
+                                            <td>16:00 ~ 19:30</td>
+                                            <td>9,999 {% trans 'THB' %}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-04-01 ~ 2020-10-31</td>
+                                            <td>{% trans 'Weekend' %}</td>
+                                            <td class="is-hidden-touch">{% trans 'Day Golf 1st' %}</td>
+                                            <td>06:00 ~ 08:16</td>
+                                            <td>9,999 {% trans 'THB' %}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-04-01 ~ 2020-10-31</td>
+                                            <td>{% trans 'Weekend' %}</td>
+                                            <td class="is-hidden-touch">{% trans 'Day Golf 2nd' %}</td>
+                                            <td>10:48 ~ 13:04</td>
+                                            <td>9,999 {% trans 'THB' %}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-04-01 ~ 2020-10-31</td>
+                                            <td>{% trans 'Weekend' %}</td>
+                                            <td class="is-hidden-touch">{% trans 'Twilight Golf' %}</td>
+                                            <td>15:36 ~ 17:20</td>
+                                            <td>9,999 {% trans 'THB' %}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020-04-01 ~ 2020-10-31</td>
+                                            <td>{% trans 'Weekend' %}</td>
+                                            <td class="is-hidden-touch">{% trans 'Night Golf' %}</td>
+                                            <td>17:36 ~ 19:00</td>
+                                            <td>9,999 {% trans 'THB' %}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">인원</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input" type="number" min="0" max="5"
-                                                   value="4">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">카트</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input class="input" type="number" min="0" max="5"
-                                                   value="4">
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Cancel Policy' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
                                 </div>
                             </div>
-
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">{% trans 'Green Fee' %}</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input type="text" class="input" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="field is-horizontal">
-                                <div class="field-label is-normal">
-                                    <label class="label">{% trans 'Cart Fee' %}</label>
-                                </div>
-                                <div class="field-body">
-                                    <div class="field">
-                                        <div class="control">
-                                            <input type="text" class="input" disabled>
-                                        </div>
-                                    </div>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Rain Check' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </main>
 {% endblock %}
 
