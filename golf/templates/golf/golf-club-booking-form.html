@@ -131,7 +131,7 @@
                                                     {% trans 'Address' %}
                                                 </div>
                                                 <div class="column is-9-desktop is-8-touch">
-                                                    	19 Moo.14, Bang Krasan, Bangpain,Phra Nakhon Si Ayutthaya 13160
+                                                    19 Moo.14, Bang Krasan, Bangpain,Phra Nakhon Si Ayutthaya 13160
                                                 </div>
                                             </div>
                                             <div class="columns is-mobile">
@@ -146,20 +146,22 @@
                                         <div class="column is-5">
                                             <form>
                                                 <div class="field is-horizontal">
+
                                                     <div class="field-label is-normal">
                                                         <label class="label">{% trans 'Date/Time' %}</label>
                                                     </div>
                                                     <div class="field-body">
-                                                        <div class="field">
+                                                        <div class="field has-addons has-addons-right">
                                                             <div class="control">
-                                                                <input type="text" class="input" id="round_date">
+                                                                <input class="input" type="text"
+                                                                       placeholder="YYYY-MM-DD">
+                                                            </div>
+                                                            <div class="control">
+                                                                <input class="input" type="text"
+                                                                       placeholder="HH:MM">
                                                             </div>
                                                         </div>
-                                                        <div class="field">
-                                                            <div class="control">
-                                                                <input type="text" class="input" id="round_time">
-                                                            </div>
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                                 <div class="field is-horizontal">
@@ -169,8 +171,15 @@
                                                     <div class="field-body">
                                                         <div class="field">
                                                             <div class="control">
-                                                                <input class="input" type="number" min="0" max="5"
-                                                                       value="4">
+                                                                <div class="select is-fullwidth">
+                                                                    <select>
+                                                                        <option>1</option>
+                                                                        <option>2</option>
+                                                                        <option>3</option>
+                                                                        <option selected>4</option>
+                                                                        <option>5</option>
+                                                                    </select>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -182,8 +191,16 @@
                                                     <div class="field-body">
                                                         <div class="field">
                                                             <div class="control">
-                                                                <input class="input" type="number" min="0" max="5"
-                                                                       value="4">
+                                                                <div class="select is-fullwidth">
+                                                                    <select>
+                                                                        <option selected>0</option>
+                                                                        <option>1</option>
+                                                                        <option>2</option>
+                                                                        <option>3</option>
+                                                                        <option>4</option>
+                                                                        <option>5</option>
+                                                                    </select>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -195,7 +212,7 @@
                                                     <div class="field-body">
                                                         <div class="field">
                                                             <div class="control">
-                                                                <input type="text" class="input" disabled>
+                                                                <input type="text" class="input" readonly>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -207,7 +224,7 @@
                                                     <div class="field-body">
                                                         <div class="field">
                                                             <div class="control">
-                                                                <input type="text" class="input" disabled>
+                                                                <input type="text" class="input" readonly>
                                                             </div>
                                                         </div>
                                                     </div>
