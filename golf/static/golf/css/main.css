@@ -3,10 +3,6 @@
     border-radius: 8px;
 }
 
-.flex-same-height {
-    height: 100%;
-}
-
 @media (max-width: 1023px) {
     .club-list-item {
         padding: .5rem 0;
@@ -29,4 +25,8 @@
 
 .word-no-break {
     word-break: keep-all;
+}
+
+.booking-divider {
+    margin: 0 !important;
 }
