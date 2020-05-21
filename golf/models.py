@@ -336,6 +336,20 @@ class Club(model_utils_models.TimeStampedModel):
         null=True,
     )
 
+    latitude = models.DecimalField(
+        verbose_name=_('Latitude'),
+        max_digits=9,
+        decimal_places=6,
+        default=0,
+    )
+
+    longitude = models.DecimalField(
+        verbose_name=_('Longitude'),
+        max_digits=9,
+        decimal_places=6,
+        default=0,
+    )
+
     position = models.IntegerField(
         verbose_name=_('Position'),
         default=0,

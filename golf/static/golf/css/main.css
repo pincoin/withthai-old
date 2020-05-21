@@ -3,6 +3,12 @@
     border-radius: 8px;
 }
 
+#club-map {
+    margin-top: .75rem;
+    width: 100%;
+    height: 180px;
+}
+
 @media (max-width: 1023px) {
     .club-list-item {
         padding: .5rem 0;
@@ -29,8 +35,9 @@
 
 .booking-divider {
     margin: 0 !important;
+    background-color: #dbdbdb;
 }
 
-.flatpickr-mobile {
-
+.booking-divider:before, .booking-divider:after {
+    background-color: #dbdbdb;
 }

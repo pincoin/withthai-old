@@ -67,10 +67,11 @@
                                     <div class="columns">
                                         <div class="column is-2">
                                             {% if club.thumbnail1 %}
-                                                <img src="{{ club.thumbnail1.url }}" alt="" class="image">
+                                                <img src="{{ club.thumbnail1.url }}" alt="">
                                             {% else %}
-                                                <img src="//via.placeholder.com/640x320" alt="" class="image">
+                                                <img src="//via.placeholder.com/640x320" alt="">
                                             {% endif %}
+                                            <div id="club-map"></div>
                                         </div>
                                         <div class="column is-5">
                                             <div class="columns is-mobile">
@@ -143,7 +144,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="divider is-vertical is-info booking-divider"></div>
+                                        <div class="divider is-vertical booking-divider"></div>
                                         <div class="column is-5">
                                             <form>
                                                 <div class="field is-horizontal">
@@ -413,4 +414,19 @@
     {{ block.super }}
     <script src="//cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{% static 'golf/js/datepicker.js' %}"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_y2LWJLlY_XY_B4aM1O3YBMAZD9T0S3A&callback=initMap">
+    </script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of Club
+            var location = {lat: 13.641305, lng: 100.732487};
+            // The map, centered at Club
+            var map = new google.maps.Map(
+                document.getElementById('club-map'), {zoom: 12, center: location});
+            // The marker, positioned at Club
+            var marker = new google.maps.Marker({position: location, map: map});
+        }
+    </script>
 {% endblock %}
