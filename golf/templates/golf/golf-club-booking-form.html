@@ -421,7 +421,7 @@
         // Initialize and add the map
         function initMap() {
             // The location of Club
-            var location = {lat: 13.641305, lng: 100.732487};
+            var location = {lat: {{ club.latitude }}, lng: {{ club.longitude }}};
             // The map, centered at Club
             var map = new google.maps.Map(
                 document.getElementById('club-map'), {zoom: 12, center: location});
