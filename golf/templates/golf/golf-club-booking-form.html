@@ -121,28 +121,37 @@
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div class="columns is-mobile">
-                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
-                                                    {% trans 'Telephone' %}
+
+                                            {% if club.phone %}
+                                                <div class="columns is-mobile">
+                                                    <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                        {% trans 'Telephone' %}
+                                                    </div>
+                                                    <div class="column is-9-desktop is-8-touch">{{ club.phone }}</div>
                                                 </div>
-                                                <div class="column is-9-desktop is-8-touch">0813041545</div>
-                                            </div>
-                                            <div class="columns is-mobile">
-                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
-                                                    {% trans 'Address' %}
+                                            {% endif %}
+
+                                            {% if club.address %}
+                                                <div class="columns is-mobile">
+                                                    <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                        {% trans 'Address' %}
+                                                    </div>
+                                                    <div class="column is-9-desktop is-8-touch">
+                                                        {{ club.address }}
+                                                    </div>
                                                 </div>
-                                                <div class="column is-9-desktop is-8-touch">
-                                                    19 Moo.14, Bang Krasan, Bangpain,Phra Nakhon Si Ayutthaya 13160
+                                            {% endif %}
+
+                                            {% if club.website %}
+                                                <div class="columns is-mobile">
+                                                    <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                        {% trans 'Website' %}
+                                                    </div>
+                                                    <div class="column is-9-desktop is-8-touch">
+                                                        {{ club.website }}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="columns is-mobile">
-                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
-                                                    {% trans 'Website' %}
-                                                </div>
-                                                <div class="column is-9-desktop is-8-touch">
-                                                    http://www.pattaviagolf.com
-                                                </div>
-                                            </div>
+                                            {% endif %}
                                         </div>
                                         <div class="divider is-vertical booking-divider"></div>
                                         <div class="column is-5">
