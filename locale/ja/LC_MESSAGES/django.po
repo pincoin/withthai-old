@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-20 23:03+0700\n"
+"POT-Creation-Date: 2020-05-21 21:52+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -775,27 +775,28 @@ msgstr ""
 msgid "Payable when available"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:357
-msgid "Booking Confirmed"
+#: golf/templates/golf/golf-club-booking-form.html:352
+#: golf/templates/golf/golf-club-booking-form.html:359
+msgid "Estimated time: 15~30 minutes during business hours"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:358
-msgid "Awaits confirmation"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:364
-msgid "Voucher Issued"
+msgid "Booking Confirmed"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:365
-msgid "Submits your voucher issued"
+msgid "Voucher Issued"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:377
+#: golf/templates/golf/golf-club-booking-form.html:366
+msgid "Submits your voucher issued to golf club on a date of a round"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:378
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:390
+#: golf/templates/golf/golf-club-booking-form.html:391
 msgid "Rain Check"
 msgstr ""
 
