@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-21 21:52+0700\n"
+"POT-Creation-Date: 2020-05-21 23:49+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -372,7 +372,7 @@ msgstr ""
 msgid "Area Korean name"
 msgstr ""
 
-#: golf/models.py:77 golf/models.py:123 golf/models.py:169 golf/models.py:340
+#: golf/models.py:77 golf/models.py:123 golf/models.py:169 golf/models.py:354
 msgid "Position"
 msgstr ""
 
@@ -464,7 +464,7 @@ msgstr ""
 msgid "Fax number"
 msgstr ""
 
-#: golf/models.py:253 golf/templates/golf/golf-club-booking-form.html:139
+#: golf/models.py:253 golf/templates/golf/golf-club-booking-form.html:140
 msgid "Website"
 msgstr ""
 
@@ -480,18 +480,18 @@ msgstr ""
 msgid "Start from"
 msgstr "ราคาเริ่มต้น"
 
-#: golf/models.py:284 golf/models.py:292 golf/models.py:300 golf/models.py:408
-#: golf/models.py:415 golf/models.py:422 golf/models.py:429 golf/models.py:436
-#: golf/models.py:443 golf/templates/golf/_golf-club-list.html:62
-#: golf/templates/golf/golf-club-booking-form.html:104
-#: golf/templates/golf/golf-club-booking-form.html:116
-#: golf/templates/golf/golf-club-booking-form.html:276
-#: golf/templates/golf/golf-club-booking-form.html:283
-#: golf/templates/golf/golf-club-booking-form.html:290
-#: golf/templates/golf/golf-club-booking-form.html:297
-#: golf/templates/golf/golf-club-booking-form.html:304
-#: golf/templates/golf/golf-club-booking-form.html:311
-#: golf/templates/golf/golf-club-booking-form.html:318
+#: golf/models.py:284 golf/models.py:292 golf/models.py:300 golf/models.py:422
+#: golf/models.py:429 golf/models.py:436 golf/models.py:443 golf/models.py:450
+#: golf/models.py:457 golf/templates/golf/_golf-club-list.html:62
+#: golf/templates/golf/golf-club-booking-form.html:105
+#: golf/templates/golf/golf-club-booking-form.html:117
+#: golf/templates/golf/golf-club-booking-form.html:277
+#: golf/templates/golf/golf-club-booking-form.html:284
+#: golf/templates/golf/golf-club-booking-form.html:291
+#: golf/templates/golf/golf-club-booking-form.html:298
+#: golf/templates/golf/golf-club-booking-form.html:305
+#: golf/templates/golf/golf-club-booking-form.html:312
+#: golf/templates/golf/golf-club-booking-form.html:319
 msgid "THB"
 msgstr "บาท"
 
@@ -523,112 +523,120 @@ msgstr ""
 msgid "Thumbnail 5"
 msgstr ""
 
-#: golf/models.py:346 golf/models.py:369
-msgid "Golf club"
+#: golf/models.py:340
+msgid "Latitude"
 msgstr ""
 
 #: golf/models.py:347
-msgid "Golf clubs"
+msgid "Longitude"
 msgstr ""
 
-#: golf/models.py:355 golf/templates/golf/golf-club-booking-form.html:273
-#: golf/templates/golf/golf-club-booking-form.html:280
-#: golf/templates/golf/golf-club-booking-form.html:287
-msgid "Weekday"
-msgstr ""
-
-#: golf/models.py:356 golf/templates/golf/golf-club-booking-form.html:294
-#: golf/templates/golf/golf-club-booking-form.html:301
-#: golf/templates/golf/golf-club-booking-form.html:308
-#: golf/templates/golf/golf-club-booking-form.html:315
-msgid "Weekend"
-msgstr ""
-
-#: golf/models.py:360
-msgid "Day golf"
+#: golf/models.py:360 golf/models.py:383
+msgid "Golf club"
 msgstr ""
 
 #: golf/models.py:361
-msgid "Day golf 1st round"
+msgid "Golf clubs"
 msgstr ""
 
-#: golf/models.py:362
-msgid "Day golf 2nd round"
+#: golf/models.py:369 golf/templates/golf/golf-club-booking-form.html:274
+#: golf/templates/golf/golf-club-booking-form.html:281
+#: golf/templates/golf/golf-club-booking-form.html:288
+msgid "Weekday"
 msgstr ""
 
-#: golf/models.py:363
-msgid "Twilight golf"
+#: golf/models.py:370 golf/templates/golf/golf-club-booking-form.html:295
+#: golf/templates/golf/golf-club-booking-form.html:302
+#: golf/templates/golf/golf-club-booking-form.html:309
+#: golf/templates/golf/golf-club-booking-form.html:316
+msgid "Weekend"
 msgstr ""
 
-#: golf/models.py:364
-msgid "Night golf"
+#: golf/models.py:374
+msgid "Day golf"
 msgstr ""
 
 #: golf/models.py:375
+msgid "Day golf 1st round"
+msgstr ""
+
+#: golf/models.py:376
+msgid "Day golf 2nd round"
+msgstr ""
+
+#: golf/models.py:377
+msgid "Twilight golf"
+msgstr ""
+
+#: golf/models.py:378
+msgid "Night golf"
+msgstr ""
+
+#: golf/models.py:389
 msgid "Season start date"
 msgstr ""
 
-#: golf/models.py:379
+#: golf/models.py:393
 msgid "Season end date"
 msgstr ""
 
-#: golf/models.py:383
+#: golf/models.py:397
 msgid "Day of week"
 msgstr ""
 
-#: golf/models.py:390
+#: golf/models.py:404
 msgid "Slot start time"
 msgstr ""
 
-#: golf/models.py:394
+#: golf/models.py:408
 msgid "Slot end time"
 msgstr ""
 
-#: golf/models.py:398
+#: golf/models.py:412
 msgid "Rate title"
 msgstr ""
 
-#: golf/models.py:405
+#: golf/models.py:419
 msgid "Green fee selling price"
 msgstr ""
 
-#: golf/models.py:412
+#: golf/models.py:426
 msgid "Green fee cost price"
 msgstr ""
 
-#: golf/models.py:419
+#: golf/models.py:433
 msgid "Caddie fee selling price"
 msgstr ""
 
-#: golf/models.py:426
+#: golf/models.py:440
 msgid "Caddie fee cost price"
 msgstr ""
 
-#: golf/models.py:433
+#: golf/models.py:447
 msgid "Cart fee selling price"
 msgstr ""
 
-#: golf/models.py:440
+#: golf/models.py:454
 msgid "Cart fee cost price"
 msgstr ""
 
-#: golf/models.py:447
+#: golf/models.py:461
 msgid "Service rate"
 msgstr ""
 
-#: golf/models.py:448
+#: golf/models.py:462
 msgid "Service rates"
 msgstr ""
 
-#: golf/models.py:456
+#: golf/models.py:470
 msgid "Credit Card"
 msgstr ""
 
-#: golf/models.py:457
+#: golf/models.py:471
 msgid "Bank Transfer"
 msgstr ""
 
-#: golf/models.py:458
+#: golf/models.py:472
 msgid "PayPal"
 msgstr ""
 
@@ -662,142 +670,146 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:78
+#: golf/templates/golf/golf-club-booking-form.html:79
 msgid "Location"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:101
-#: golf/templates/golf/golf-club-booking-form.html:221
+#: golf/templates/golf/golf-club-booking-form.html:102
+#: golf/templates/golf/golf-club-booking-form.html:222
 msgid "Cart Fee"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:107
+#: golf/templates/golf/golf-club-booking-form.html:108
 msgid "Optional"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:113
+#: golf/templates/golf/golf-club-booking-form.html:114
 msgid "Caddie Fee"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:119
+#: golf/templates/golf/golf-club-booking-form.html:120
 msgid "Pay at golf course"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:125
+#: golf/templates/golf/golf-club-booking-form.html:126
 msgid "Telephone"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:131
+#: golf/templates/golf/golf-club-booking-form.html:132
 msgid "Address"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:151
+#: golf/templates/golf/golf-club-booking-form.html:152
 msgid "Date/Time"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:168
+#: golf/templates/golf/golf-club-booking-form.html:169
 msgid "Golfer #"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:188
+#: golf/templates/golf/golf-club-booking-form.html:189
 msgid "Cart #"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:209
+#: golf/templates/golf/golf-club-booking-form.html:210
 #, fuzzy
 #| msgid "Start from"
 msgid "Green Fee"
 msgstr "ราคาเริ่มต้น"
 
-#: golf/templates/golf/golf-club-booking-form.html:238
-#: golf/templates/golf/golf-club-booking-form.html:343
+#: golf/templates/golf/golf-club-booking-form.html:239
+#: golf/templates/golf/golf-club-booking-form.html:344
 msgid "Booking Inquiry"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:255
+#: golf/templates/golf/golf-club-booking-form.html:256
 msgid "Rate / Schedule"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:263
+#: golf/templates/golf/golf-club-booking-form.html:264
 msgid "Period"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:264
+#: golf/templates/golf/golf-club-booking-form.html:265
 msgid "Type of day"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:265
+#: golf/templates/golf/golf-club-booking-form.html:266
 msgid "Time slot"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:266
+#: golf/templates/golf/golf-club-booking-form.html:267
 msgid "Time"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:267
+#: golf/templates/golf/golf-club-booking-form.html:268
 msgid "Rate"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:274
+#: golf/templates/golf/golf-club-booking-form.html:275
 msgid "Day Golf"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:281
-#: golf/templates/golf/golf-club-booking-form.html:309
+#: golf/templates/golf/golf-club-booking-form.html:282
+#: golf/templates/golf/golf-club-booking-form.html:310
 msgid "Twilight Golf"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:288
-#: golf/templates/golf/golf-club-booking-form.html:316
+#: golf/templates/golf/golf-club-booking-form.html:289
+#: golf/templates/golf/golf-club-booking-form.html:317
 msgid "Night Golf"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:295
+#: golf/templates/golf/golf-club-booking-form.html:296
 msgid "Day Golf 1st"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:302
+#: golf/templates/golf/golf-club-booking-form.html:303
 msgid "Day Golf 2nd"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:330
+#: golf/templates/golf/golf-club-booking-form.html:331
 msgid "Booking Process"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:344
-msgid "Checks the availability"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:350
-msgid "Invoice Issued"
+#: golf/templates/golf/golf-club-booking-form.html:345
+msgid "Check availability"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:351
-msgid "Payable when available"
+msgid "Invoice Issued"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:352
-#: golf/templates/golf/golf-club-booking-form.html:359
+msgid "Payable when available"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:353
+#: golf/templates/golf/golf-club-booking-form.html:361
 msgid "Estimated time: 15~30 minutes during business hours"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:358
+#: golf/templates/golf/golf-club-booking-form.html:359
 msgid "Booking Confirmed"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:365
+#: golf/templates/golf/golf-club-booking-form.html:360
+msgid "Wait for final confirmation"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:367
 msgid "Voucher Issued"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:366
-msgid "Submits your voucher issued to golf club on a date of a round"
+#: golf/templates/golf/golf-club-booking-form.html:368
+msgid "Submit your voucher issued to golf club on a date of a round"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:378
+#: golf/templates/golf/golf-club-booking-form.html:380
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:391
+#: golf/templates/golf/golf-club-booking-form.html:393
 msgid "Rain Check"
 msgstr ""
 
