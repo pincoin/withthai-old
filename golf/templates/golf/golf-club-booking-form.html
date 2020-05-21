@@ -127,7 +127,11 @@
                                                     <div class="column is-3-desktop is-4-touch has-text-weight-bold">
                                                         {% trans 'Telephone' %}
                                                     </div>
-                                                    <div class="column is-9-desktop is-8-touch">{{ club.phone }}</div>
+                                                    <div class="column is-9-desktop is-8-touch">
+                                                        <a href="tel:{{ club.phone|phone2numeric }}">
+                                                            {{ club.phone }}
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             {% endif %}
 
@@ -148,7 +152,9 @@
                                                         {% trans 'Website' %}
                                                     </div>
                                                     <div class="column is-9-desktop is-8-touch">
-                                                        {{ club.website }}
+                                                        <a href="{{ club.website }}" target="_blank">
+                                                            {{ club.website }}
+                                                        </a>
                                                     </div>
                                                 </div>
                                             {% endif %}
