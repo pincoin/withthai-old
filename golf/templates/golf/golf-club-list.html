@@ -22,7 +22,7 @@
 
                 <div class="columns is-multiline is-mobile">
                     {% for area in areas %}
-                        <div class="column is-half-mobile is-one-quarter-desktop has-padding-top-4 has-padding-bottom-4">
+                        <div class="column is-half-mobile is-one-quarter-desktop location-item">
                             <a href="{% url 'golf:golf-area-list' area.slug %}"
                                class="button is-fullwidth">
                                 {% if LANGUAGE_CODE == 'th' %}

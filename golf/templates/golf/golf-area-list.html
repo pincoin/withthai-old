@@ -31,7 +31,7 @@
 
                 <div class="columns is-multiline is-mobile">
                     {% for province in provinces %}
-                        <div class="column is-half-mobile is-one-quarter-desktop has-padding-top-4 has-padding-bottom-4">
+                        <div class="column is-half-mobile is-one-quarter-desktop location-item">
                             <a href="{% url 'golf:golf-province-list' province.slug %}"
                                class="button is-fullwidth">
                                 {% if LANGUAGE_CODE == 'th' %}

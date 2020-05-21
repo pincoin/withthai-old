@@ -18,6 +18,10 @@
     .club-list-item {
         padding: 1rem .8rem;
     }
+
+    .location-item {
+        padding: .3rem .7rem;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -27,6 +31,10 @@
 
     .club-list-item .column:nth-child(2) {
         padding-top: 0;
+    }
+
+    .location-item {
+        padding: .2rem .1rem;
     }
 
     .club-detail > .column {
