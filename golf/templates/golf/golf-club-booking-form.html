@@ -102,7 +102,7 @@
                                                     {% trans 'Cart Fee' %}
                                                 </div>
                                                 <div class="column is-9-desktop is-8-touch">
-                                                    <span>999 {% trans 'THB' %}</span>
+                                                    <span>{{ club.cart_fee_selling_price|floatformat:0|intcomma }} {% trans 'THB' %}</span>
                                                     -
                                                     <span>
                                                         {% trans 'Optional' %}
@@ -114,7 +114,7 @@
                                                     {% trans 'Caddie Fee' %}
                                                 </div>
                                                 <div class="column is-9-desktop is-8-touch">
-                                                    <span>999 {% trans 'THB' %}</span>
+                                                    <span>{{ club.caddie_fee_selling_price|floatformat:0|intcomma }} {% trans 'THB' %}</span>
                                                     -
                                                     <span class="has-text-danger">
                                                         {% trans 'Pay at golf course' %}
