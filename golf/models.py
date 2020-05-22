@@ -301,6 +301,12 @@ class Club(model_utils_models.TimeStampedModel):
         db_index=True,
     )
 
+    cart_required = models.IntegerField(
+        verbose_name=_('Require golf cart'),
+        default=0,
+        db_index=True,
+    )
+
     thumbnail1 = ThumbnailerImageField(
         verbose_name=_('Thumbnail 1'),
         upload_to=upload_directory_path,

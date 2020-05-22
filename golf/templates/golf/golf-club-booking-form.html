@@ -104,9 +104,19 @@
                                                 <div class="column is-9-desktop is-8-touch">
                                                     <span>{{ club.cart_fee_selling_price|floatformat:0|intcomma }} {% trans 'THB' %}</span>
                                                     -
-                                                    <span>
-                                                        {% trans 'Optional' %}
-                                                    </span>
+                                                    {% if club.cart_required == 0 %}
+                                                        <span>
+                                                            {% trans 'May require golf cart' %}
+                                                        </span>
+                                                    {% elif club.cart_required == 1 %}
+                                                        <span class="has-text-danger">
+                                                            {% trans 'Require golf cart' %}
+                                                        </span>
+                                                    {% else %}
+                                                        <span class="has-text-danger">
+                                                                {% blocktrans with golfers=club.cart_required %}Require golf cart with {{ golfers }} golfers{% endblocktrans %}
+                                                        </span>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                             <div class="columns is-mobile">
