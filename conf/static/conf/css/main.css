@@ -46,6 +46,10 @@ main {
     color: #03353e;
 }
 
+.burger:hover, .burger:active, .burger:focus {
+    background-color: transparent;
+}
+
 /* Breadcrumbs */
 .breadcrumbs {
     background-color: #ebf2ea;
