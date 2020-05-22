@@ -62,7 +62,8 @@
                                     {% endif %}
                                 </h3>
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'admin:golf_club_change' club.id %}" class="button is-size-3 is-text">
+                                    <a href="{% url 'admin:golf_club_change' club.id %}"
+                                       class="button is-size-3 is-text">
                                         <span class="icon"><i class="fas fa-edit"></i></span>
                                     </a>
                                 {% endif %}
@@ -130,10 +131,6 @@
                                                 </div>
                                                 <div class="column is-9-desktop is-8-touch">
                                                     <span>{{ club.caddie_fee_selling_price|floatformat:0|intcomma }} {% trans 'THB' %}</span>
-                                                    -
-                                                    <span class="has-text-danger">
-                                                        {% trans 'Pay at golf course' %}
-                                                    </span>
                                                 </div>
                                             </div>
 
@@ -270,6 +267,12 @@
                                                                 </button>
                                                             </div>
                                                         </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label"></div>
+                                                    <div class="field-body has-text-danger">
+                                                        {% trans 'You have to pay caddie fee and cart fee at golf course.' %}
                                                     </div>
                                                 </div>
                                             </form>
