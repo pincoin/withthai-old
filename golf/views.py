@@ -92,6 +92,7 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
     def get_queryset(self):
         return models.Club.objects \
             .select_related('district', 'district__province', 'district__province__area') \
+            .prefetch_related('rate_set') \
             .filter(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
 
     def get_context_data(self, **kwargs):

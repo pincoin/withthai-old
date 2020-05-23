@@ -302,55 +302,15 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>2020-04-01 ~ 2020-10-31</td>
-                                            <td>{% trans 'Weekday' %}</td>
-                                            <td class="is-hidden-touch">{% trans 'Day Golf' %}</td>
-                                            <td>06:00 ~ 14:00</td>
-                                            <td>9,999 {% trans 'THB' %}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020-04-01 ~ 2020-10-31</td>
-                                            <td>{% trans 'Weekday' %}</td>
-                                            <td class="is-hidden-touch">{% trans 'Twilight Golf' %}</td>
-                                            <td>14:30 ~ 15:34</td>
-                                            <td>9,999 {% trans 'THB' %}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020-04-01 ~ 2020-10-31</td>
-                                            <td>{% trans 'Weekday' %}</td>
-                                            <td class="is-hidden-touch">{% trans 'Night Golf' %}</td>
-                                            <td>16:00 ~ 19:30</td>
-                                            <td>9,999 {% trans 'THB' %}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020-04-01 ~ 2020-10-31</td>
-                                            <td>{% trans 'Weekend' %}</td>
-                                            <td class="is-hidden-touch">{% trans 'Day Golf 1st' %}</td>
-                                            <td>06:00 ~ 08:16</td>
-                                            <td>9,999 {% trans 'THB' %}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020-04-01 ~ 2020-10-31</td>
-                                            <td>{% trans 'Weekend' %}</td>
-                                            <td class="is-hidden-touch">{% trans 'Day Golf 2nd' %}</td>
-                                            <td>10:48 ~ 13:04</td>
-                                            <td>9,999 {% trans 'THB' %}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020-04-01 ~ 2020-10-31</td>
-                                            <td>{% trans 'Weekend' %}</td>
-                                            <td class="is-hidden-touch">{% trans 'Twilight Golf' %}</td>
-                                            <td>15:36 ~ 17:20</td>
-                                            <td>9,999 {% trans 'THB' %}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2020-04-01 ~ 2020-10-31</td>
-                                            <td>{% trans 'Weekend' %}</td>
-                                            <td class="is-hidden-touch">{% trans 'Night Golf' %}</td>
-                                            <td>17:36 ~ 19:00</td>
-                                            <td>9,999 {% trans 'THB' %}</td>
-                                        </tr>
+                                        {% for rate in club.rate_set.all %}
+                                            <tr>
+                                                <td>{{ rate.season_start }} ~ {{ rate.season_end }}</td>
+                                                <td>{{ rate.get_day_of_week_display }}</td>
+                                                <td class="is-hidden-touch">{{ rate.get_title_display }}</td>
+                                                <td>{{ rate.slot_start }} ~ {{ rate.slot_end }}</td>
+                                                <td>{{ rate.green_fee_selling_price }} {% trans 'THB' %}</td>
+                                            </tr>
+                                        {% endfor %}
                                         </tbody>
                                     </table>
                                 </div>
