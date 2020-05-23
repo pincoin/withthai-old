@@ -235,7 +235,7 @@ class Club(model_utils_models.TimeStampedModel):
 
     phone = models.CharField(
         verbose_name=_('Phone number'),
-        max_length=16,
+        max_length=32,
         blank=True,
         null=True,
     )
