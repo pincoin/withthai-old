@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.translation import gettext_lazy as _
 
 from . import models
 
@@ -40,7 +41,17 @@ class ClubAdmin(admin.ModelAdmin):
 
 
 class RateAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('get_club', 'season_start', 'season_end', 'day_of_week', 'title',
+                    'green_fee_selling_price', 'green_fee_cost_price',
+                    'caddie_fee_selling_price', 'caddie_fee_cost_price',
+                    'cart_fee_selling_price', 'cart_fee_cost_price')
+    list_filter = ('club__title_english',)
+    raw_id_fields = ('club',)
+
+    def get_club(self, obj):
+        return obj.club.title_english
+
+    get_club.short_description = _('Golf club')
 
 
 admin.site.register(models.Holiday, HolidayAdmin)
