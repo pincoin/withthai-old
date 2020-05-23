@@ -308,7 +308,7 @@
                                                 <td>{{ rate.get_day_of_week_display }}</td>
                                                 <td class="is-hidden-touch">{{ rate.get_title_display }}</td>
                                                 <td>{{ rate.slot_start }} ~ {{ rate.slot_end }}</td>
-                                                <td>{{ rate.green_fee_selling_price }} {% trans 'THB' %}</td>
+                                                <td>{{ rate.green_fee_selling_price|floatformat:0|intcomma }} {% trans 'THB' %}</td>
                                             </tr>
                                         {% endfor %}
                                         </tbody>
