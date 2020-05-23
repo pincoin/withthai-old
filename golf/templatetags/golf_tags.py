@@ -9,7 +9,7 @@ register = template.Library()
 
 @register.simple_tag
 def get_clubs():
-    return models.Club.objects.all()
+    return models.Club.objects.filter(status=models.Club.STATUS_CHOICES.open)
 
 
 @register.simple_tag

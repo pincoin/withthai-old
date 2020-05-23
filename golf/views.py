@@ -17,7 +17,8 @@ class GolfClubListView(viewmixins.PageableMixin, generic.ListView):
 
     def get_queryset(self):
         queryset = models.Club.objects \
-            .select_related('district', 'district__province', 'district__province__area')
+            .select_related('district', 'district__province', 'district__province__area') \
+            .filter(status=models.Club.STATUS_CHOICES.open)
 
         return queryset.order_by('position')
 
@@ -31,7 +32,7 @@ class GolfAreaListView(viewmixins.PageableMixin, generic.ListView):
     def get_queryset(self):
         queryset = models.Club.objects \
             .select_related('district', 'district__province', 'district__province__area') \
-            .filter(district__province__area__slug=self.kwargs['slug'])
+            .filter(district__province__area__slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
 
         return queryset.order_by('position')
 
@@ -60,7 +61,7 @@ class GolfProvinceListView(viewmixins.PageableMixin, generic.ListView):
     def get_queryset(self):
         queryset = models.Club.objects \
             .select_related('district', 'district__province', 'district__province__area') \
-            .filter(district__province__slug=self.kwargs['slug'])
+            .filter(district__province__slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
 
         return queryset.order_by('position')
 
@@ -91,7 +92,7 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
     def get_queryset(self):
         return models.Club.objects \
             .select_related('district', 'district__province', 'district__province__area') \
-            .filter(slug=self.kwargs['slug'])
+            .filter(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
 
     def form_valid(self, form):
         return super().form_valid(form)

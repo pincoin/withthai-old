@@ -194,6 +194,11 @@ class Club(model_utils_models.TimeStampedModel):
         (4, 'china', _('China')),
     )
 
+    STATUS_CHOICES = Choices(
+        (0, 'open', _('Club open')),
+        (1, 'closed', _('Club closed')),
+    )
+
     title_english = models.CharField(
         verbose_name=_('Golf club English name'),
         max_length=255,
@@ -359,6 +364,13 @@ class Club(model_utils_models.TimeStampedModel):
     position = models.IntegerField(
         verbose_name=_('Position'),
         default=0,
+        db_index=True,
+    )
+
+    status = models.IntegerField(
+        verbose_name=_('Club status'),
+        choices=STATUS_CHOICES,
+        default=STATUS_CHOICES.open,
         db_index=True,
     )
 
