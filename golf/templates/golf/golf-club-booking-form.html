@@ -302,7 +302,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        {% for rate in club.rate_set.all %}
+                                        {% for rate in rates %}
                                             <tr>
                                                 <td>{{ rate.season_start }} ~ {{ rate.season_end }}</td>
                                                 <td>{{ rate.get_day_of_week_display }}</td>
