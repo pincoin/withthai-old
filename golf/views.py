@@ -101,7 +101,7 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
         context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
         context['rates'] = models.Rate.objects \
             .filter(club__slug=self.kwargs['slug'], season_end__gt=timezone.make_aware(timezone.localtime().today())) \
-            .order_by('season_start', 'day_of_week', 'slot_start')
+            .order_by('season_start', '-day_of_week', 'slot_start')
 
         return context
 
