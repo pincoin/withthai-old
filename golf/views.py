@@ -94,6 +94,11 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
             .select_related('district', 'district__province', 'district__province__area') \
             .filter(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
 
+    def get_context_data(self, **kwargs):
+        context = super(GolfClubBookingForm, self).get_context_data(**kwargs)
+        context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
+        return context
+
     def form_valid(self, form):
         return super().form_valid(form)
 

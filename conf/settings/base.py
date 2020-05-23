@@ -21,6 +21,8 @@ EMAIL_USE_TLS = secret['EMAIL_USE_TLS']
 EMAIL_NO_REPLY = secret['EMAIL_NO_REPLY']
 EMAIL_CUSTOMER_SERVICE = secret['EMAIL_CUSTOMER_SERVICE']
 
+GOOGLE_MAPS_API_KEY = secret['GOOGLE_MAPS_API_KEY']
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
