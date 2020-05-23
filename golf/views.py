@@ -2,7 +2,6 @@ import logging
 
 from django.conf import settings
 from django.core.cache import cache
-from django.utils import timezone
 from django.views import generic
 
 from . import forms
@@ -95,7 +94,6 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
             .select_related('district', 'district__province', 'district__province__area') \
             .prefetch_related('rate_set') \
             .filter(slug=self.kwargs['slug'],
-                    rate__season_end__gt=timezone.make_aware(timezone.localtime().today()),
                     status=models.Club.STATUS_CHOICES.open)
 
     def get_context_data(self, **kwargs):
