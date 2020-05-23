@@ -2,6 +2,7 @@ import logging
 
 from django.conf import settings
 from django.core.cache import cache
+from django.utils import timezone
 from django.views import generic
 
 from . import forms
@@ -93,11 +94,14 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
         return models.Club.objects \
             .select_related('district', 'district__province', 'district__province__area') \
             .prefetch_related('rate_set') \
-            .filter(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
+            .filter(slug=self.kwargs['slug'],
+                    status=models.Club.STATUS_CHOICES.open)
+    # rate__season_end__gt=timezone.make_aware(timezone.localtime().today()
 
     def get_context_data(self, **kwargs):
         context = super(GolfClubBookingForm, self).get_context_data(**kwargs)
         context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
+        context['time'] = timezone.make_aware(timezone.localtime().today())
         return context
 
     def form_valid(self, form):
