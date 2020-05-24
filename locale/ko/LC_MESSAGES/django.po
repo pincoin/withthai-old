@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-23 16:11+0700\n"
+"POT-Creation-Date: 2020-05-24 22:09+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -322,6 +322,10 @@ msgstr "문의하기"
 msgid "Event"
 msgstr "이벤트"
 
+#: golf/admin.py:51 golf/admin.py:65 golf/models.py:378 golf/models.py:401
+msgid "Golf club"
+msgstr "골프장"
+
 #: golf/apps.py:7
 msgid "Golf"
 msgstr "골프"
@@ -495,13 +499,7 @@ msgstr "시작가"
 #: golf/models.py:475 golf/templates/golf/_golf-club-list.html:62
 #: golf/templates/golf/golf-club-booking-form.html:111
 #: golf/templates/golf/golf-club-booking-form.html:133
-#: golf/templates/golf/golf-club-booking-form.html:310
-#: golf/templates/golf/golf-club-booking-form.html:317
-#: golf/templates/golf/golf-club-booking-form.html:324
-#: golf/templates/golf/golf-club-booking-form.html:331
-#: golf/templates/golf/golf-club-booking-form.html:338
-#: golf/templates/golf/golf-club-booking-form.html:345
-#: golf/templates/golf/golf-club-booking-form.html:352
+#: golf/templates/golf/golf-club-booking-form.html:311
 msgid "THB"
 msgstr "바트"
 
@@ -547,26 +545,17 @@ msgstr "경도"
 
 #: golf/models.py:371
 msgid "Club status"
-msgstr ""
-
-#: golf/models.py:378 golf/models.py:401
-msgid "Golf club"
-msgstr "골프장"
+msgstr "상태"
 
 #: golf/models.py:379
 msgid "Golf clubs"
 msgstr "골프장"
 
-#: golf/models.py:387 golf/templates/golf/golf-club-booking-form.html:307
-#: golf/templates/golf/golf-club-booking-form.html:314
-#: golf/templates/golf/golf-club-booking-form.html:321
+#: golf/models.py:387
 msgid "Weekday"
 msgstr "평일"
 
-#: golf/models.py:388 golf/templates/golf/golf-club-booking-form.html:328
-#: golf/templates/golf/golf-club-booking-form.html:335
-#: golf/templates/golf/golf-club-booking-form.html:342
-#: golf/templates/golf/golf-club-booking-form.html:349
+#: golf/models.py:388
 msgid "Weekend"
 msgstr "휴일"
 
@@ -736,7 +725,7 @@ msgid "Green Fee"
 msgstr "그린피"
 
 #: golf/templates/golf/golf-club-booking-form.html:266
-#: golf/templates/golf/golf-club-booking-form.html:377
+#: golf/templates/golf/golf-club-booking-form.html:337
 msgid "Booking Inquiry"
 msgstr "예약문의신청"
 
@@ -768,70 +757,48 @@ msgstr "시간"
 msgid "Rate"
 msgstr "요금"
 
-#: golf/templates/golf/golf-club-booking-form.html:308
-msgid "Day Golf"
-msgstr "오전/낮"
-
-#: golf/templates/golf/golf-club-booking-form.html:315
-#: golf/templates/golf/golf-club-booking-form.html:343
-msgid "Twilight Golf"
-msgstr "일몰"
-
-#: golf/templates/golf/golf-club-booking-form.html:322
-#: golf/templates/golf/golf-club-booking-form.html:350
-msgid "Night Golf"
-msgstr "야간"
-
-#: golf/templates/golf/golf-club-booking-form.html:329
-msgid "Day Golf 1st"
-msgstr "오전/낮 1부"
-
-#: golf/templates/golf/golf-club-booking-form.html:336
-msgid "Day Golf 2nd"
-msgstr "오전/낮 2부"
-
-#: golf/templates/golf/golf-club-booking-form.html:364
+#: golf/templates/golf/golf-club-booking-form.html:324
 msgid "Booking Process"
 msgstr "예약 절차"
 
-#: golf/templates/golf/golf-club-booking-form.html:378
+#: golf/templates/golf/golf-club-booking-form.html:338
 msgid "Check availability"
 msgstr "예약 가능 여부 조회"
 
-#: golf/templates/golf/golf-club-booking-form.html:384
+#: golf/templates/golf/golf-club-booking-form.html:344
 msgid "Invoice Issued"
 msgstr "인보이스 발행"
 
-#: golf/templates/golf/golf-club-booking-form.html:385
+#: golf/templates/golf/golf-club-booking-form.html:345
 msgid "Payable when available"
 msgstr "예약 가능 시 결제 진행"
 
-#: golf/templates/golf/golf-club-booking-form.html:386
-#: golf/templates/golf/golf-club-booking-form.html:394
+#: golf/templates/golf/golf-club-booking-form.html:346
+#: golf/templates/golf/golf-club-booking-form.html:354
 msgid "Estimated time: 15~30 minutes during business hours"
 msgstr "소요시간: 업무시간 내 약 15~30분"
 
-#: golf/templates/golf/golf-club-booking-form.html:392
+#: golf/templates/golf/golf-club-booking-form.html:352
 msgid "Booking Confirmed"
 msgstr "예약확정진행"
 
-#: golf/templates/golf/golf-club-booking-form.html:393
+#: golf/templates/golf/golf-club-booking-form.html:353
 msgid "Wait for final confirmation"
 msgstr "최종 확정 대기"
 
-#: golf/templates/golf/golf-club-booking-form.html:400
+#: golf/templates/golf/golf-club-booking-form.html:360
 msgid "Voucher Issued"
 msgstr "바우처 발행"
 
-#: golf/templates/golf/golf-club-booking-form.html:401
+#: golf/templates/golf/golf-club-booking-form.html:361
 msgid "Submit your voucher issued to golf club on a date of a round"
 msgstr "라운딩 당일 골프장에 바우처 제시"
 
-#: golf/templates/golf/golf-club-booking-form.html:413
+#: golf/templates/golf/golf-club-booking-form.html:373
 msgid "Cancel Policy"
 msgstr "취소 규정"
 
-#: golf/templates/golf/golf-club-booking-form.html:426
+#: golf/templates/golf/golf-club-booking-form.html:386
 msgid "Rain Check"
 msgstr "우천 시 규정"
 
