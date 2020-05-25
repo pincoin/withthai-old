@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-24 22:09+0700\n"
+"POT-Creation-Date: 2020-05-25 19:47+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -314,6 +314,54 @@ msgstr ""
 
 #: conf/templates/conf/base.html:325
 msgid "CONTACT US"
+msgstr ""
+
+#: conf/templates/conf/home.html:13
+msgid "Direct Booking Platform"
+msgstr ""
+
+#: conf/templates/conf/home.html:17
+msgid "No Error via Direct Communication"
+msgstr ""
+
+#: conf/templates/conf/home.html:18
+msgid "Strict Tee-off Time"
+msgstr ""
+
+#: conf/templates/conf/home.html:19
+msgid "Transparent Information"
+msgstr ""
+
+#: conf/templates/conf/home.html:27
+msgid "Credit Card Payments Online"
+msgstr ""
+
+#: conf/templates/conf/home.html:31
+msgid "Reasonable Promotion Price"
+msgstr ""
+
+#: conf/templates/conf/home.html:32
+msgid "Baht Payment without Exchange Loss"
+msgstr ""
+
+#: conf/templates/conf/home.html:33
+msgid "Green Fee Online Payment for Booking"
+msgstr ""
+
+#: conf/templates/conf/home.html:41
+msgid "Living in Thailand"
+msgstr ""
+
+#: conf/templates/conf/home.html:45
+msgid "Thai News"
+msgstr ""
+
+#: conf/templates/conf/home.html:46
+msgid "Top Active Communities"
+msgstr ""
+
+#: conf/templates/conf/home.html:47
+msgid "Meetups"
 msgstr ""
 
 #: event/apps.py:7

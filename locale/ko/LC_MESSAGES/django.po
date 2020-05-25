@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-24 22:09+0700\n"
+"POT-Creation-Date: 2020-05-25 19:47+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -317,6 +317,54 @@ msgstr "위드타이 소개"
 #: conf/templates/conf/base.html:325
 msgid "CONTACT US"
 msgstr "문의하기"
+
+#: conf/templates/conf/home.html:13
+msgid "Direct Booking Platform"
+msgstr "예약 직거래 플랫폼"
+
+#: conf/templates/conf/home.html:17
+msgid "No Error via Direct Communication"
+msgstr "직접 커뮤니케이션으로 오류 없는 예약"
+
+#: conf/templates/conf/home.html:18
+msgid "Strict Tee-off Time"
+msgstr "엄격한 티오프 시간 준수"
+
+#: conf/templates/conf/home.html:19
+msgid "Transparent Information"
+msgstr "투명한 정보 공유"
+
+#: conf/templates/conf/home.html:27
+msgid "Credit Card Payments Online"
+msgstr "해외 신용카드 결제"
+
+#: conf/templates/conf/home.html:31
+msgid "Reasonable Promotion Price"
+msgstr "합리적인 프로모션 가격"
+
+#: conf/templates/conf/home.html:32
+msgid "Baht Payment without Exchange Loss"
+msgstr "상호간 환율 차손 없는 바트화 기준 결제"
+
+#: conf/templates/conf/home.html:33
+msgid "Green Fee Online Payment for Booking"
+msgstr "그린피 결제 예약 후 캐디피/카트피는 현장결제"
+
+#: conf/templates/conf/home.html:41
+msgid "Living in Thailand"
+msgstr "생생한 태국 생활 정보"
+
+#: conf/templates/conf/home.html:45
+msgid "Thai News"
+msgstr "태국 뉴스 및 지역 정보제공"
+
+#: conf/templates/conf/home.html:46
+msgid "Top Active Communities"
+msgstr "활발한 커뮤니티"
+
+#: conf/templates/conf/home.html:47
+msgid "Meetups"
+msgstr "밋업"
 
 #: event/apps.py:7
 msgid "Event"
