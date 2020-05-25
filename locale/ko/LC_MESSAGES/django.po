@@ -169,7 +169,7 @@ msgstr "이메일주소"
 
 #: conf/models.py:154
 msgid "Website URL"
-msgstr "웹사이트주소"
+msgstr "홈페이지주소"
 
 #: conf/models.py:160 help/templates/help/privacy.html:25
 msgid "IP address"
@@ -480,7 +480,7 @@ msgstr "팩스 번호"
 
 #: golf/models.py:258 golf/templates/golf/golf-club-booking-form.html:164
 msgid "Website"
-msgstr "웹사이트"
+msgstr "홈페이지"
 
 #: golf/models.py:265
 msgid "Golf club address"
