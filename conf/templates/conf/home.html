@@ -11,7 +11,7 @@
                     {% trans 'Most Popular Golf Clubs' %}
                 </h1>
                 <div class="columns is-multiline is-mobile">
-                    {% get_golf_club_list 'featured' as featured %}
+                    {% get_golf_club_list 'best' as best %}
                     {% for club in featured %}
                         <div class="column is-full-mobile is-half-desktop">
                             <div class="section club-list-item">
