@@ -261,9 +261,9 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th class="word-no-break">{% trans 'Period' %}</th>
+                                            <th class="word-no-break is-hidden-touch">{% trans 'Period' %}</th>
                                             <th class="word-no-break">{% trans 'Type of day' %}</th>
-                                            <th class="ord-no-break is-hidden-touch">{% trans 'Time slot' %}</th>
+                                            <th class="word-no-break is-hidden-touch">{% trans 'Time slot' %}</th>
                                             <th class="word-no-break">{% trans 'Time' %}</th>
                                             <th class="word-no-break">{% trans 'Rate' %}</th>
                                         </tr>
@@ -271,7 +271,7 @@
                                         <tbody>
                                         {% for rate in rates %}
                                             <tr>
-                                                <td>{{ rate.season_start }} ~ {{ rate.season_end }}</td>
+                                                <td class="is-hidden-touch">{{ rate.season_start }} ~ {{ rate.season_end }}</td>
                                                 <td>{{ rate.get_day_of_week_display }}</td>
                                                 <td class="is-hidden-touch">{{ rate.get_title_display }}</td>
                                                 <td>{{ rate.slot_start }} ~ {{ rate.slot_end }}</td>
