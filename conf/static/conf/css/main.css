@@ -160,5 +160,9 @@ main {
 }
 
 .block-title-margin {
-    margin-bottom: .8rem;
+    margin: 0 0 .8rem .5rem;
+}
+
+.home-card-list li {
+    margin: .4rem 0;
 }
