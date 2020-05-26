@@ -49,9 +49,17 @@
         padding-right: 0;
     }
 
+    .club-detail-meta {
+        padding-bottom: 0;
+    }
+
     .club-detail-meta .column {
         padding-top: .4rem;
         padding-bottom: .4rem;
+    }
+
+    .club-detail-meta-last-row-mobile {
+        margin-bottom: 0 !important;
     }
 
     .rate-table tr td, .rate-table tr th {
