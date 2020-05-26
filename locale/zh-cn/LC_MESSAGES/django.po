@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 19:47+0700\n"
+"POT-Creation-Date: 2020-05-26 10:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -316,51 +316,69 @@ msgstr ""
 msgid "CONTACT US"
 msgstr ""
 
-#: conf/templates/conf/home.html:13
+#: conf/templates/conf/home.html:11
+msgid "Most Popular Golf Clubs"
+msgstr ""
+
+#: conf/templates/conf/home.html:60 golf/templates/golf/_golf-club-list.html:60
+msgid "Start From"
+msgstr ""
+
+#: conf/templates/conf/home.html:62 golf/models.py:289 golf/models.py:297
+#: golf/models.py:305 golf/models.py:440 golf/models.py:447 golf/models.py:454
+#: golf/models.py:461 golf/models.py:468 golf/models.py:475
+#: golf/templates/golf/_golf-club-list.html:62
+#: golf/templates/golf/golf-club-booking-form.html:111
+#: golf/templates/golf/golf-club-booking-form.html:133
+#: golf/templates/golf/golf-club-booking-form.html:311
+msgid "THB"
+msgstr ""
+
+#: conf/templates/conf/home.html:78
 msgid "Direct Booking Platform"
 msgstr ""
 
-#: conf/templates/conf/home.html:17
+#: conf/templates/conf/home.html:82
 msgid "No Error via Direct Communication"
 msgstr ""
 
-#: conf/templates/conf/home.html:18
+#: conf/templates/conf/home.html:83
 msgid "Strict Tee-off Time"
 msgstr ""
 
-#: conf/templates/conf/home.html:19
+#: conf/templates/conf/home.html:84
 msgid "Transparent Information"
 msgstr ""
 
-#: conf/templates/conf/home.html:27
+#: conf/templates/conf/home.html:92
 msgid "Credit Card Payments Online"
 msgstr ""
 
-#: conf/templates/conf/home.html:31
+#: conf/templates/conf/home.html:96
 msgid "Reasonable Promotion Price"
 msgstr ""
 
-#: conf/templates/conf/home.html:32
+#: conf/templates/conf/home.html:97
 msgid "Baht Payment without Exchange Loss"
 msgstr ""
 
-#: conf/templates/conf/home.html:33
+#: conf/templates/conf/home.html:98
 msgid "Green Fee Online Payment for Booking"
 msgstr ""
 
-#: conf/templates/conf/home.html:41
+#: conf/templates/conf/home.html:106
 msgid "Living in Thailand"
 msgstr ""
 
-#: conf/templates/conf/home.html:45
+#: conf/templates/conf/home.html:110
 msgid "Thai News"
 msgstr ""
 
-#: conf/templates/conf/home.html:46
+#: conf/templates/conf/home.html:111
 msgid "Top Active Communities"
 msgstr ""
 
-#: conf/templates/conf/home.html:47
+#: conf/templates/conf/home.html:112
 msgid "Meetups"
 msgstr ""
 
@@ -368,7 +386,8 @@ msgstr ""
 msgid "Event"
 msgstr ""
 
-#: golf/admin.py:51 golf/admin.py:65 golf/models.py:378 golf/models.py:401
+#: golf/admin.py:56 golf/admin.py:70 golf/models.py:378 golf/models.py:401
+#: golf/models.py:510
 msgid "Golf club"
 msgstr ""
 
@@ -425,6 +444,7 @@ msgid "Area Korean name"
 msgstr ""
 
 #: golf/models.py:77 golf/models.py:123 golf/models.py:169 golf/models.py:365
+#: golf/models.py:523
 msgid "Position"
 msgstr ""
 
@@ -538,15 +558,6 @@ msgstr ""
 
 #: golf/models.py:286
 msgid "Start from"
-msgstr ""
-
-#: golf/models.py:289 golf/models.py:297 golf/models.py:305 golf/models.py:440
-#: golf/models.py:447 golf/models.py:454 golf/models.py:461 golf/models.py:468
-#: golf/models.py:475 golf/templates/golf/_golf-club-list.html:62
-#: golf/templates/golf/golf-club-booking-form.html:111
-#: golf/templates/golf/golf-club-booking-form.html:133
-#: golf/templates/golf/golf-club-booking-form.html:311
-msgid "THB"
 msgstr ""
 
 #: golf/models.py:294
@@ -682,14 +693,34 @@ msgid "Service rates"
 msgstr ""
 
 #: golf/models.py:488
+msgid "Club list title"
+msgstr ""
+
+#: golf/models.py:493
+msgid "Club list code"
+msgstr ""
+
+#: golf/models.py:500 golf/models.py:517
+msgid "Golf club list"
+msgstr ""
+
+#: golf/models.py:501
+msgid "Golf club lists"
+msgstr ""
+
+#: golf/models.py:527 golf/models.py:528
+msgid "Golf club list membership"
+msgstr ""
+
+#: golf/models.py:533
 msgid "Credit Card"
 msgstr ""
 
-#: golf/models.py:489
+#: golf/models.py:534
 msgid "Bank Transfer"
 msgstr ""
 
-#: golf/models.py:490
+#: golf/models.py:535
 msgid "PayPal"
 msgstr ""
 
@@ -707,10 +738,6 @@ msgstr ""
 
 #: golf/templates/golf/_golf-club-list.html:10
 msgid "Price: High - Low"
-msgstr ""
-
-#: golf/templates/golf/_golf-club-list.html:60
-msgid "Start From"
 msgstr ""
 
 #: golf/templates/golf/_golf-club-pagination.html:11

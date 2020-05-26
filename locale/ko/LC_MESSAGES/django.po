@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-25 19:47+0700\n"
+"POT-Creation-Date: 2020-05-26 10:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -318,51 +318,69 @@ msgstr "위드타이 소개"
 msgid "CONTACT US"
 msgstr "문의하기"
 
-#: conf/templates/conf/home.html:13
+#: conf/templates/conf/home.html:11
+msgid "Most Popular Golf Clubs"
+msgstr "인기 골프장"
+
+#: conf/templates/conf/home.html:60 golf/templates/golf/_golf-club-list.html:60
+msgid "Start From"
+msgstr "시작가"
+
+#: conf/templates/conf/home.html:62 golf/models.py:289 golf/models.py:297
+#: golf/models.py:305 golf/models.py:440 golf/models.py:447 golf/models.py:454
+#: golf/models.py:461 golf/models.py:468 golf/models.py:475
+#: golf/templates/golf/_golf-club-list.html:62
+#: golf/templates/golf/golf-club-booking-form.html:111
+#: golf/templates/golf/golf-club-booking-form.html:133
+#: golf/templates/golf/golf-club-booking-form.html:311
+msgid "THB"
+msgstr "바트"
+
+#: conf/templates/conf/home.html:78
 msgid "Direct Booking Platform"
 msgstr "예약 직거래 플랫폼"
 
-#: conf/templates/conf/home.html:17
+#: conf/templates/conf/home.html:82
 msgid "No Error via Direct Communication"
 msgstr "직접 커뮤니케이션으로 오류 없는 예약"
 
-#: conf/templates/conf/home.html:18
+#: conf/templates/conf/home.html:83
 msgid "Strict Tee-off Time"
 msgstr "엄격한 티오프 시간 준수"
 
-#: conf/templates/conf/home.html:19
+#: conf/templates/conf/home.html:84
 msgid "Transparent Information"
 msgstr "투명한 정보 공유"
 
-#: conf/templates/conf/home.html:27
+#: conf/templates/conf/home.html:92
 msgid "Credit Card Payments Online"
 msgstr "해외 신용카드 결제"
 
-#: conf/templates/conf/home.html:31
+#: conf/templates/conf/home.html:96
 msgid "Reasonable Promotion Price"
 msgstr "합리적인 프로모션 가격"
 
-#: conf/templates/conf/home.html:32
+#: conf/templates/conf/home.html:97
 msgid "Baht Payment without Exchange Loss"
 msgstr "상호간 환율 차손 없는 바트화 기준 결제"
 
-#: conf/templates/conf/home.html:33
+#: conf/templates/conf/home.html:98
 msgid "Green Fee Online Payment for Booking"
 msgstr "그린피 결제 예약 후 캐디피/카트피는 현장결제"
 
-#: conf/templates/conf/home.html:41
+#: conf/templates/conf/home.html:106
 msgid "Living in Thailand"
 msgstr "생생한 태국 생활 정보"
 
-#: conf/templates/conf/home.html:45
+#: conf/templates/conf/home.html:110
 msgid "Thai News"
 msgstr "태국 뉴스 및 지역 정보제공"
 
-#: conf/templates/conf/home.html:46
+#: conf/templates/conf/home.html:111
 msgid "Top Active Communities"
 msgstr "활발한 커뮤니티"
 
-#: conf/templates/conf/home.html:47
+#: conf/templates/conf/home.html:112
 msgid "Meetups"
 msgstr "밋업"
 
@@ -370,7 +388,8 @@ msgstr "밋업"
 msgid "Event"
 msgstr "이벤트"
 
-#: golf/admin.py:51 golf/admin.py:65 golf/models.py:378 golf/models.py:401
+#: golf/admin.py:56 golf/admin.py:70 golf/models.py:378 golf/models.py:401
+#: golf/models.py:510
 msgid "Golf club"
 msgstr "골프장"
 
@@ -427,6 +446,7 @@ msgid "Area Korean name"
 msgstr "지역 국문명"
 
 #: golf/models.py:77 golf/models.py:123 golf/models.py:169 golf/models.py:365
+#: golf/models.py:523
 msgid "Position"
 msgstr "위치"
 
@@ -541,15 +561,6 @@ msgstr "홀"
 #: golf/models.py:286
 msgid "Start from"
 msgstr "시작가"
-
-#: golf/models.py:289 golf/models.py:297 golf/models.py:305 golf/models.py:440
-#: golf/models.py:447 golf/models.py:454 golf/models.py:461 golf/models.py:468
-#: golf/models.py:475 golf/templates/golf/_golf-club-list.html:62
-#: golf/templates/golf/golf-club-booking-form.html:111
-#: golf/templates/golf/golf-club-booking-form.html:133
-#: golf/templates/golf/golf-club-booking-form.html:311
-msgid "THB"
-msgstr "바트"
 
 #: golf/models.py:294
 msgid "Caddie fee"
@@ -684,14 +695,34 @@ msgid "Service rates"
 msgstr "요금표"
 
 #: golf/models.py:488
+msgid "Club list title"
+msgstr "골프장 목록 이름"
+
+#: golf/models.py:493
+msgid "Club list code"
+msgstr "골프장 목록 코드"
+
+#: golf/models.py:500 golf/models.py:517
+msgid "Golf club list"
+msgstr "골프장 묶음"
+
+#: golf/models.py:501
+msgid "Golf club lists"
+msgstr "골프장 묶음"
+
+#: golf/models.py:527 golf/models.py:528
+msgid "Golf club list membership"
+msgstr "골프장 묶음 요소"
+
+#: golf/models.py:533
 msgid "Credit Card"
 msgstr "신용카드"
 
-#: golf/models.py:489
+#: golf/models.py:534
 msgid "Bank Transfer"
 msgstr "계좌이체"
 
-#: golf/models.py:490
+#: golf/models.py:535
 msgid "PayPal"
 msgstr "페이팔"
 
@@ -710,10 +741,6 @@ msgstr "낮은가격순"
 #: golf/templates/golf/_golf-club-list.html:10
 msgid "Price: High - Low"
 msgstr "높은가격"
-
-#: golf/templates/golf/_golf-club-list.html:60
-msgid "Start From"
-msgstr "시작가"
 
 #: golf/templates/golf/_golf-club-pagination.html:11
 #: golf/templates/golf/_golf-club-pagination.html:18

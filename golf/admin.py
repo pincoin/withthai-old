@@ -6,6 +6,11 @@ from django.utils.translation import gettext_lazy as _
 from . import models
 
 
+class ClubInline(admin.TabularInline):
+    model = models.ClubList.clubs.through
+    extra = 1
+
+
 class HolidayAdmin(admin.ModelAdmin):
     list_display = ('holiday', 'country', 'title')
     list_filter = ('holiday', 'country')
@@ -65,9 +70,16 @@ class RateAdmin(admin.ModelAdmin):
     get_club.short_description = _('Golf club')
 
 
+class ClubListAdmin(admin.ModelAdmin):
+    list_display = ('title', 'code')
+    inlines = [ClubInline, ]
+    exclude = ('clubs',)
+
+
 admin.site.register(models.Holiday, HolidayAdmin)
 admin.site.register(models.Area, AreaAdmin)
 admin.site.register(models.Province, ProvinceAdmin)
 admin.site.register(models.District, DistrictAdmin)
 admin.site.register(models.Club, ClubAdmin)
 admin.site.register(models.Rate, RateAdmin)
+admin.site.register(models.ClubList, ClubListAdmin)

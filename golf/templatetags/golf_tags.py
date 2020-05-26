@@ -45,3 +45,21 @@ def get_provinces(slug):
         cache.set(cache_key, provinces, cache_time)
 
     return provinces
+
+
+@register.simple_tag
+def get_golf_club_list(clublist_code):
+    cache_key = 'golf.templatetags.shop_tags.get_golf_club_list({})'.format(clublist_code)
+    cache_time = settings.CACHES['default']['TIMEOUT_DAY']
+
+    clubs = cache.get(cache_key)
+
+    if not clubs:
+        clubs = models.Club.objects \
+            .select_related('district', 'district__province', 'district__province__area') \
+            .filter(status=models.Club.STATUS_CHOICES.open, clublist__code=clublist_code) \
+            .order_by('clublistmembership__position')
+
+        cache.set(cache_key, clubs, cache_time)
+
+    return clubs

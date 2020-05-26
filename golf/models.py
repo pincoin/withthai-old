@@ -483,6 +483,51 @@ class Rate(model_utils_models.TimeStampedModel):
         return '{} {}'.format(self.season_start, self.season_end)
 
 
+class ClubList(model_utils_models.TimeStampedModel):
+    title = models.CharField(
+        verbose_name=_('Club list title'),
+        max_length=255,
+    )
+
+    code = models.CharField(
+        verbose_name=_('Club list code'),
+        max_length=255,
+    )
+
+    clubs = models.ManyToManyField(Club, through='ClubListMembership')
+
+    class Meta:
+        verbose_name = _('Golf club list')
+        verbose_name_plural = _('Golf club lists')
+
+    def __str__(self):
+        return self.title
+
+
+class ClubListMembership(models.Model):
+    club = models.ForeignKey(
+        'golf.Club',
+        verbose_name=_('Golf club'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
+    club_list = models.ForeignKey(
+        'golf.ClubList',
+        verbose_name=_('Golf club list'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
+    position = models.IntegerField(
+        verbose_name=_('Position'),
+    )
+
+    class Meta:
+        verbose_name = _('Golf club list membership')
+        verbose_name_plural = _('Golf club list membership')
+
+
 class ClubBooking(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampedModel):
     PAYMENT_METHOD_CHOICES = Choices(
         (0, 'credit_card', _('Credit Card')),
