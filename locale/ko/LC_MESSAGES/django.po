@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-26 10:16+0700\n"
+"POT-Creation-Date: 2020-05-26 20:53+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -332,55 +332,55 @@ msgstr "시작가"
 #: golf/templates/golf/_golf-club-list.html:62
 #: golf/templates/golf/golf-club-booking-form.html:111
 #: golf/templates/golf/golf-club-booking-form.html:133
-#: golf/templates/golf/golf-club-booking-form.html:311
+#: golf/templates/golf/golf-club-booking-form.html:290
 msgid "THB"
 msgstr "바트"
 
-#: conf/templates/conf/home.html:78
+#: conf/templates/conf/home.html:79
 msgid "Direct Booking Platform"
 msgstr "예약 직거래 플랫폼"
 
-#: conf/templates/conf/home.html:82
+#: conf/templates/conf/home.html:83
 msgid "No Error via Direct Communication"
 msgstr "직접 커뮤니케이션으로 오류 없는 예약"
 
-#: conf/templates/conf/home.html:83
+#: conf/templates/conf/home.html:84
 msgid "Strict Tee-off Time"
 msgstr "엄격한 티오프 시간 준수"
 
-#: conf/templates/conf/home.html:84
+#: conf/templates/conf/home.html:85
 msgid "Transparent Information"
 msgstr "투명한 정보 공유"
 
-#: conf/templates/conf/home.html:92
+#: conf/templates/conf/home.html:93
 msgid "Credit Card Payments Online"
 msgstr "해외 신용카드 결제"
 
-#: conf/templates/conf/home.html:96
+#: conf/templates/conf/home.html:97
 msgid "Reasonable Promotion Price"
 msgstr "합리적인 프로모션 가격"
 
-#: conf/templates/conf/home.html:97
+#: conf/templates/conf/home.html:98
 msgid "Baht Payment without Exchange Loss"
 msgstr "상호간 환율 차손 없는 바트화 기준 결제"
 
-#: conf/templates/conf/home.html:98
+#: conf/templates/conf/home.html:99
 msgid "Green Fee Online Payment for Booking"
 msgstr "그린피 결제 예약 후 캐디피/카트피는 현장결제"
 
-#: conf/templates/conf/home.html:106
+#: conf/templates/conf/home.html:107
 msgid "Living in Thailand"
 msgstr "생생한 태국 생활 정보"
 
-#: conf/templates/conf/home.html:110
+#: conf/templates/conf/home.html:111
 msgid "Thai News"
 msgstr "태국 뉴스 및 지역 정보제공"
 
-#: conf/templates/conf/home.html:111
+#: conf/templates/conf/home.html:112
 msgid "Top Active Communities"
 msgstr "활발한 커뮤니티"
 
-#: conf/templates/conf/home.html:112
+#: conf/templates/conf/home.html:113
 msgid "Meetups"
 msgstr "밋업"
 
@@ -757,7 +757,6 @@ msgid "Location"
 msgstr "지역"
 
 #: golf/templates/golf/golf-club-booking-form.html:108
-#: golf/templates/golf/golf-club-booking-form.html:249
 msgid "Cart Fee"
 msgstr "카트피"
 
@@ -792,88 +791,88 @@ msgid "Golfer #"
 msgstr "인원"
 
 #: golf/templates/golf/golf-club-booking-form.html:216
-msgid "Cart #"
-msgstr "카트 수량"
-
-#: golf/templates/golf/golf-club-booking-form.html:237
 msgid "Green Fee"
 msgstr "그린피"
 
-#: golf/templates/golf/golf-club-booking-form.html:266
-#: golf/templates/golf/golf-club-booking-form.html:337
+#: golf/templates/golf/golf-club-booking-form.html:228
+msgid "Total"
+msgstr "합계"
+
+#: golf/templates/golf/golf-club-booking-form.html:245
+#: golf/templates/golf/golf-club-booking-form.html:316
 msgid "Booking Inquiry"
 msgstr "예약문의신청"
 
-#: golf/templates/golf/golf-club-booking-form.html:275
+#: golf/templates/golf/golf-club-booking-form.html:254
 msgid "You have to pay caddie fee and cart fee at golf course."
 msgstr "캐디피와 카트피는 골프장에서 직접 결제합니다."
 
-#: golf/templates/golf/golf-club-booking-form.html:289
+#: golf/templates/golf/golf-club-booking-form.html:268
 msgid "Rate / Schedule"
 msgstr "요금 및 시간표"
 
-#: golf/templates/golf/golf-club-booking-form.html:297
+#: golf/templates/golf/golf-club-booking-form.html:276
 msgid "Period"
 msgstr "기간"
 
-#: golf/templates/golf/golf-club-booking-form.html:298
+#: golf/templates/golf/golf-club-booking-form.html:277
 msgid "Type of day"
 msgstr "휴일구분"
 
-#: golf/templates/golf/golf-club-booking-form.html:299
+#: golf/templates/golf/golf-club-booking-form.html:278
 msgid "Time slot"
 msgstr "시간대"
 
-#: golf/templates/golf/golf-club-booking-form.html:300
+#: golf/templates/golf/golf-club-booking-form.html:279
 msgid "Time"
 msgstr "시간"
 
-#: golf/templates/golf/golf-club-booking-form.html:301
+#: golf/templates/golf/golf-club-booking-form.html:280
 msgid "Rate"
 msgstr "요금"
 
-#: golf/templates/golf/golf-club-booking-form.html:324
+#: golf/templates/golf/golf-club-booking-form.html:303
 msgid "Booking Process"
 msgstr "예약 절차"
 
-#: golf/templates/golf/golf-club-booking-form.html:338
+#: golf/templates/golf/golf-club-booking-form.html:317
 msgid "Check availability"
 msgstr "예약 가능 여부 조회"
 
-#: golf/templates/golf/golf-club-booking-form.html:344
+#: golf/templates/golf/golf-club-booking-form.html:323
 msgid "Invoice Issued"
 msgstr "인보이스 발행"
 
-#: golf/templates/golf/golf-club-booking-form.html:345
+#: golf/templates/golf/golf-club-booking-form.html:324
 msgid "Payable when available"
 msgstr "예약 가능 시 결제 진행"
 
-#: golf/templates/golf/golf-club-booking-form.html:346
-#: golf/templates/golf/golf-club-booking-form.html:354
+#: golf/templates/golf/golf-club-booking-form.html:325
+#: golf/templates/golf/golf-club-booking-form.html:333
 msgid "Estimated time: 15~30 minutes during business hours"
 msgstr "소요시간: 업무시간 내 약 15~30분"
 
-#: golf/templates/golf/golf-club-booking-form.html:352
+#: golf/templates/golf/golf-club-booking-form.html:331
 msgid "Booking Confirmed"
 msgstr "예약확정진행"
 
-#: golf/templates/golf/golf-club-booking-form.html:353
+#: golf/templates/golf/golf-club-booking-form.html:332
 msgid "Wait for final confirmation"
 msgstr "최종 확정 대기"
 
-#: golf/templates/golf/golf-club-booking-form.html:360
+#: golf/templates/golf/golf-club-booking-form.html:339
 msgid "Voucher Issued"
 msgstr "바우처 발행"
 
-#: golf/templates/golf/golf-club-booking-form.html:361
+#: golf/templates/golf/golf-club-booking-form.html:340
 msgid "Submit your voucher issued to golf club on a date of a round"
 msgstr "라운딩 당일 골프장에 바우처 제시"
 
-#: golf/templates/golf/golf-club-booking-form.html:373
+#: golf/templates/golf/golf-club-booking-form.html:352
 msgid "Cancel Policy"
 msgstr "취소 규정"
 
-#: golf/templates/golf/golf-club-booking-form.html:386
+#: golf/templates/golf/golf-club-booking-form.html:365
 msgid "Rain Check"
 msgstr "우천 시 규정"
 
@@ -1186,3 +1185,6 @@ msgstr "더보기"
 #: member/apps.py:6
 msgid "Member"
 msgstr "회원"
+
+#~ msgid "Cart #"
+#~ msgstr "카트 수량"

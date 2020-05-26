@@ -216,9 +216,33 @@
                                                         <label class="label">{% trans 'Green Fee' %}</label>
                                                     </div>
                                                     <div class="field-body">
-                                                        <div class="field">
+                                                        <div class="field has-addons">
+                                                            <div class="control is-expanded">
+                                                                <input type="text" class="input has-text-right" readonly
+                                                                       id="green-fee" value="0">
+                                                            </div>
                                                             <div class="control">
-                                                                <input type="text" class="input" readonly>
+                                                                <a class="button is-static">
+                                                                    {% trans 'THB' %}
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label is-normal">
+                                                        <label class="label">{% trans 'Total' %}</label>
+                                                    </div>
+                                                    <div class="field-body">
+                                                        <div class="field has-addons">
+                                                            <div class="control is-expanded">
+                                                                <input type="text" class="input has-text-right" readonly
+                                                                       id="total-amount" value="0">
+                                                            </div>
+                                                            <div class="control">
+                                                                <a class="button is-static">
+                                                                    {% trans 'THB' %}
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -271,7 +295,8 @@
                                         <tbody>
                                         {% for rate in rates %}
                                             <tr>
-                                                <td class="is-hidden-touch">{{ rate.season_start }} ~ {{ rate.season_end }}</td>
+                                                <td class="is-hidden-touch">{{ rate.season_start }}
+                                                    ~ {{ rate.season_end }}</td>
                                                 <td>{{ rate.get_day_of_week_display }}</td>
                                                 <td class="is-hidden-touch">{{ rate.get_title_display }}</td>
                                                 <td>{{ rate.slot_start }} ~ {{ rate.slot_end }}</td>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-26 10:16+0700\n"
+"POT-Creation-Date: 2020-05-26 20:53+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -331,55 +331,55 @@ msgstr ""
 #: golf/templates/golf/_golf-club-list.html:62
 #: golf/templates/golf/golf-club-booking-form.html:111
 #: golf/templates/golf/golf-club-booking-form.html:133
-#: golf/templates/golf/golf-club-booking-form.html:311
+#: golf/templates/golf/golf-club-booking-form.html:290
 msgid "THB"
 msgstr ""
 
-#: conf/templates/conf/home.html:78
+#: conf/templates/conf/home.html:79
 msgid "Direct Booking Platform"
 msgstr ""
 
-#: conf/templates/conf/home.html:82
+#: conf/templates/conf/home.html:83
 msgid "No Error via Direct Communication"
 msgstr ""
 
-#: conf/templates/conf/home.html:83
+#: conf/templates/conf/home.html:84
 msgid "Strict Tee-off Time"
 msgstr ""
 
-#: conf/templates/conf/home.html:84
+#: conf/templates/conf/home.html:85
 msgid "Transparent Information"
 msgstr ""
 
-#: conf/templates/conf/home.html:92
+#: conf/templates/conf/home.html:93
 msgid "Credit Card Payments Online"
 msgstr ""
 
-#: conf/templates/conf/home.html:96
+#: conf/templates/conf/home.html:97
 msgid "Reasonable Promotion Price"
 msgstr ""
 
-#: conf/templates/conf/home.html:97
+#: conf/templates/conf/home.html:98
 msgid "Baht Payment without Exchange Loss"
 msgstr ""
 
-#: conf/templates/conf/home.html:98
+#: conf/templates/conf/home.html:99
 msgid "Green Fee Online Payment for Booking"
 msgstr ""
 
-#: conf/templates/conf/home.html:106
+#: conf/templates/conf/home.html:107
 msgid "Living in Thailand"
 msgstr ""
 
-#: conf/templates/conf/home.html:110
+#: conf/templates/conf/home.html:111
 msgid "Thai News"
 msgstr ""
 
-#: conf/templates/conf/home.html:111
+#: conf/templates/conf/home.html:112
 msgid "Top Active Communities"
 msgstr ""
 
-#: conf/templates/conf/home.html:112
+#: conf/templates/conf/home.html:113
 msgid "Meetups"
 msgstr ""
 
@@ -756,7 +756,6 @@ msgid "Location"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:108
-#: golf/templates/golf/golf-club-booking-form.html:249
 msgid "Cart Fee"
 msgstr ""
 
@@ -790,88 +789,88 @@ msgid "Golfer #"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:216
-msgid "Cart #"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:237
 msgid "Green Fee"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:266
-#: golf/templates/golf/golf-club-booking-form.html:337
+#: golf/templates/golf/golf-club-booking-form.html:228
+msgid "Total"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:245
+#: golf/templates/golf/golf-club-booking-form.html:316
 msgid "Booking Inquiry"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:275
+#: golf/templates/golf/golf-club-booking-form.html:254
 msgid "You have to pay caddie fee and cart fee at golf course."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:289
+#: golf/templates/golf/golf-club-booking-form.html:268
 msgid "Rate / Schedule"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:297
+#: golf/templates/golf/golf-club-booking-form.html:276
 msgid "Period"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:298
+#: golf/templates/golf/golf-club-booking-form.html:277
 msgid "Type of day"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:299
+#: golf/templates/golf/golf-club-booking-form.html:278
 msgid "Time slot"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:300
+#: golf/templates/golf/golf-club-booking-form.html:279
 msgid "Time"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:301
+#: golf/templates/golf/golf-club-booking-form.html:280
 msgid "Rate"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:324
+#: golf/templates/golf/golf-club-booking-form.html:303
 msgid "Booking Process"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:338
+#: golf/templates/golf/golf-club-booking-form.html:317
 msgid "Check availability"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:344
+#: golf/templates/golf/golf-club-booking-form.html:323
 msgid "Invoice Issued"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:345
+#: golf/templates/golf/golf-club-booking-form.html:324
 msgid "Payable when available"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:346
-#: golf/templates/golf/golf-club-booking-form.html:354
+#: golf/templates/golf/golf-club-booking-form.html:325
+#: golf/templates/golf/golf-club-booking-form.html:333
 msgid "Estimated time: 15~30 minutes during business hours"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:352
+#: golf/templates/golf/golf-club-booking-form.html:331
 msgid "Booking Confirmed"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:353
+#: golf/templates/golf/golf-club-booking-form.html:332
 msgid "Wait for final confirmation"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:360
+#: golf/templates/golf/golf-club-booking-form.html:339
 msgid "Voucher Issued"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:361
+#: golf/templates/golf/golf-club-booking-form.html:340
 msgid "Submit your voucher issued to golf club on a date of a round"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:373
+#: golf/templates/golf/golf-club-booking-form.html:352
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:386
+#: golf/templates/golf/golf-club-booking-form.html:365
 msgid "Rain Check"
 msgstr ""
 
