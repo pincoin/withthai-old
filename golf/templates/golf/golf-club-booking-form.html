@@ -77,7 +77,7 @@
                                             {% else %}
                                                 <img src="//via.placeholder.com/640x320" alt="">
                                             {% endif %}
-                                            <div id="club-map"></div>
+                                            <div class="is-hidden-touch" id="club-map-desktop"></div>
                                         </div>
                                         <div class="column is-5 club-detail-meta">
                                             <div class="columns is-mobile">
@@ -120,7 +120,7 @@
                                                         </span>
                                                     {% else %}
                                                         <span class="has-text-danger">
-                                                                {% blocktrans with golfers=club.cart_required %}Require golf cart with {{ golfers }} golfers or more{% endblocktrans %}
+{% blocktrans with golfers=club.cart_required %}Require golf cart with {{ golfers }} golfers or more{% endblocktrans %}
                                                         </span>
                                                     {% endif %}
                                                 </div>
@@ -135,7 +135,7 @@
                                             </div>
 
                                             {% if club.phone %}
-                                                <div class="columns is-mobile">
+                                                <div class="columns is-hidden-touch">
                                                     <div class="column is-3-desktop is-4-touch has-text-weight-bold">
                                                         {% trans 'Telephone' %}
                                                     </div>
@@ -148,7 +148,7 @@
                                             {% endif %}
 
                                             {% if club.address %}
-                                                <div class="columns is-mobile">
+                                                <div class="columns is-hidden-touch">
                                                     <div class="column is-3-desktop is-4-touch has-text-weight-bold">
                                                         {% trans 'Address' %}
                                                     </div>
@@ -159,7 +159,7 @@
                                             {% endif %}
 
                                             {% if club.website %}
-                                                <div class="columns is-mobile">
+                                                <div class="columns is-hidden-touch">
                                                     <div class="column is-3-desktop is-4-touch has-text-weight-bold">
                                                         {% trans 'Website' %}
                                                     </div>
@@ -358,6 +358,82 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column is-12 is-hidden-desktop">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Golf Club Information' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="" id="club-map-touch"></div>
+                                    <div class="club-detail-meta">
+                                        <div class="columns is-mobile">
+                                            <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                {% trans 'Location' %}
+                                            </div>
+                                            <div class="column is-9-desktop is-8-touch">
+                                                {% if LANGUAGE_CODE == 'th' %}
+                                                    {{ club.district.title_thai }}
+                                                {% elif LANGUAGE_CODE == 'ko' %}
+                                                    {{ club.district.title_korean }}
+                                                {% else %}
+                                                    {{ club.district.title_english }}
+                                                {% endif %} -
+                                                <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                                    {% if LANGUAGE_CODE == 'th' %}
+                                                        {{ club.district.province.title_thai }}
+                                                    {% elif LANGUAGE_CODE == 'ko' %}
+                                                        {{ club.district.province.title_korean }}
+                                                    {% else %}
+                                                        {{ club.district.province.title_english }}
+                                                    {% endif %}
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        {% if club.phone %}
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Telephone' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    <a href="tel:{{ club.phone|phone2numeric }}">
+                                                        {{ club.phone }}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if club.address %}
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Address' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    {{ club.address }}
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        {% if club.website %}
+                                            <div class="columns is-mobile">
+                                                <div class="column is-3-desktop is-4-touch has-text-weight-bold">
+                                                    {% trans 'Website' %}
+                                                </div>
+                                                <div class="column is-9-desktop is-8-touch">
+                                                    <a href="{{ club.website }}" target="_blank">
+                                                        {{ club.website }}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="column is-12">
                         <div class="card">
                             <header class="card-header has-background-grey-lighter">
@@ -408,9 +484,16 @@
         function initMap() {
             // The location of Club
             var location = {lat: {{ club.latitude }}, lng: {{ club.longitude }}};
+
             // The map, centered at Club
-            var map = new google.maps.Map(
-                document.getElementById('club-map'), {zoom: 12, center: location});
+            let map;
+
+            if ($(window).width() >= 1024) {
+                map = new google.maps.Map(document.getElementById('club-map-desktop'), {zoom: 12, center: location});
+            } else {
+                map = new google.maps.Map(document.getElementById('club-map-touch'), {zoom: 12, center: location});
+            }
+
             // The marker, positioned at Club
             var marker = new google.maps.Marker({position: location, map: map});
         }
