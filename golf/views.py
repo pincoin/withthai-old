@@ -2,6 +2,7 @@ import logging
 
 from django.conf import settings
 from django.core.cache import cache
+from django.urls import reverse
 from django.utils import timezone
 from django.views import generic
 
@@ -95,6 +96,10 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
             .select_related('district', 'district__province', 'district__province__area') \
             .filter(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
 
+    def get_form_kwargs(self):
+        kwargs = super(GolfClubBookingForm, self).get_form_kwargs()
+        return kwargs
+
     def get_context_data(self, **kwargs):
         context = super(GolfClubBookingForm, self).get_context_data(**kwargs)
 
@@ -106,7 +111,12 @@ class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
         return context
 
     def form_valid(self, form):
+        print(form.data)
         return super().form_valid(form)
 
     def form_invalid(self, form):
+        print(form.errors)
         return super().form_invalid(form)
+
+    def get_success_url(self):
+        return reverse('golf:golf-club-list', args=())

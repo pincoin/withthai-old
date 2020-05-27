@@ -3,12 +3,13 @@ $(window).on('load resize', function () {
         var h = $(window).height();
 
         // 40x7=280, 40x8=320 + 4(border)
-        $('.submenu-scroll').css({'max-height': h - 284 , 'min-height': h - 284});
+        // 40+56+40+44 = 180
+        $('.submenu-scroll').css({'max-height': h - 180 , 'min-height': h - 180});
     }
 });
 
 $(document).ready(function () {
-    $('#language-selector').on('change', function (e) {
+    $('#language-selector, #language-selector-mobile').on('change', function (e) {
         this.form.submit();
     });
 
@@ -26,7 +27,7 @@ $(document).ready(function () {
         $('html').addClass('is-clipped');
     });
 
-    $('#icon-cart').on('click', function() {
+    $('#icon-search').on('click', function() {
         $('#right-sidebar').addClass('is-active');
         $('html').addClass('is-clipped');
     });

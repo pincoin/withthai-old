@@ -1,5 +1,6 @@
 import uuid
 
+from django.conf import settings
 from django.db import models
 from django.utils.timezone import now
 from django.utils.translation import gettext_lazy as _
@@ -528,9 +529,122 @@ class ClubListMembership(models.Model):
         verbose_name_plural = _('Golf club list membership')
 
 
-class ClubBooking(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampedModel):
+class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampedModel):
     PAYMENT_METHOD_CHOICES = Choices(
         (0, 'credit_card', _('Credit Card')),
         (1, 'bank_transfer', _('Bank Transfer')),
         (2, 'paypal', _('PayPal')),
     )
+
+    # TODO: order status != payment status
+    # 전액환불요청 (total refund requested)
+    # 부분환불요청 (partial refund requested)
+    # 전액환불됨 (total refund)
+    # 부분환불됨 (partial refund)
+    STATUS_CHOICES = Choices(
+        (0, 'order_opened', _('Booking opened')),
+        (1, 'order_pending', _('Booking pending')),
+        (2, 'order_offered', _('Booking offered')),
+        (3, 'payment_completed', _('Payment completed')),
+        (4, 'order_confirmed', _('Booking confirmed')),
+        (5, 'order_unavailable', _('Booking unavailable')),
+        (6, 'payment_adjustment', _('Payment adjustment')),
+        (7, 'payment_adjusted', _('Payment adjusted')),
+        (8, 'refund_requested', _('Refund requested')),
+        (9, 'refund_pending', _('Refund pending')),
+        (10, 'refunded1', _('Refunded')),  # original order
+        (11, 'refunded2', _('Refunded')),  # refund order
+        (12, 'voided', _('Voided')),
+    )
+
+    order_no = models.UUIDField(
+        verbose_name=_('Order no'),
+        unique=True,
+        default=uuid.uuid4,
+        editable=False
+    )
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_('User'),
+        db_index=True,
+        null=True,
+        blank=True,
+        editable=True,
+        on_delete=models.SET_NULL,
+    )
+
+    fullname = models.CharField(
+        verbose_name=_('Personal name'),
+        max_length=64,
+        blank=True,
+    )
+
+    user_agent = models.TextField(
+        verbose_name=_('User-agent'),
+        blank=True,
+    )
+
+    accept_language = models.TextField(
+        verbose_name=_('Accept-language'),
+        blank=True,
+    )
+
+    ip_address = models.GenericIPAddressField(
+        verbose_name=_('IP address'),
+    )
+
+    payment_method = models.IntegerField(
+        verbose_name=_('Payment method'),
+        choices=PAYMENT_METHOD_CHOICES,
+        default=PAYMENT_METHOD_CHOICES.bank_transfer,
+        db_index=True,
+    )
+
+    transaction_id = models.CharField(
+        verbose_name=_('Transaction ID'),
+        max_length=64,
+        blank=True,
+    )
+
+    status = models.IntegerField(
+        verbose_name=_('Order status'),
+        choices=STATUS_CHOICES,
+        default=STATUS_CHOICES.order_opened,
+        db_index=True,
+    )
+
+    # Max = 999,999,999
+    total_selling_price = models.DecimalField(
+        verbose_name=_('Total selling price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+    )
+
+    total_cost_price = models.DecimalField(
+        verbose_name=_('Total cost price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+    )
+
+    message = models.TextField(
+        verbose_name=_('Order message'),
+        blank=True,
+    )
+
+    parent = models.ForeignKey(
+        'self',
+        verbose_name=_('Parent order'),
+        db_index=True,
+        null=True,
+        on_delete=models.CASCADE,
+    )
+
+    class Meta:
+        verbose_name = _('Booking order')
+        verbose_name_plural = _('Booking orders')
+
+    def __str__(self):
+        return '{} {} {}'.format(self.user, self.total_selling_price, self.created)

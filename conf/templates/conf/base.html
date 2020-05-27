@@ -55,8 +55,8 @@
                         <img src="{% static 'conf/images/withthai_logo_en.png' %}" alt="{% trans 'WITH THAI' %}">
                     {% endif %}
                 </a>
-                <a role="button" class="navbar-burger burger" id="icon-cart">
-                    <i class="fas fa-luggage-cart fa-fw"></i>
+                <a role="button" class="navbar-burger burger" id="icon-search">
+                    <i class="far fa-address-card fa-fw"></i>
                 </a>
             </div>
 
@@ -104,11 +104,6 @@
                             <span>{% trans 'SIGN IN' %}</span>
                         </a>
                     {% endif %}
-
-                    <a class="navbar-item">
-                        <span class="icon"><i class="fas fa-luggage-cart fa-fw"></i></span>
-                        <span>{% trans 'CART' %}</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -118,7 +113,7 @@
         <div class="is-pulled-right field is-grouped">
             <form class="control has-icons-left">
                 <input class="input" type="text" placeholder="{% trans 'Search...' %}">
-                <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
+                <span class="icon is-small is-left"><i class="fas fa-search fa-fw"></i></span>
             </form>
             <form class="control has-icons-left" action="{% url 'set_language' %}" method="post">
                 <div class="select">
@@ -147,42 +142,15 @@
     <div class="modal" id="left-sidebar">
         <div class="modal-background"></div>
         <div class="modal-content left-sidebar">
-            <ul class="">
+            <ul>
                 <li class="submenu-heading">
                     <a href="{% url 'home' %}">{% trans 'WITH THAI' %}</a>
                 </li>
-                {% if user.is_authenticated %}
-                    <li class="submenu-item">
-                        <a href="{% url 'account_logout' %}">
-                            <i class="fas fa-sign-out-alt fa-fw"></i>
-                            {% trans 'SIGN OUT' %}
-                        </a>
-                    </li>
-                {% else %}
-                    <li class="submenu-item">
-                        <a href="{% url 'account_login' %}">
-                            <i class="fas fa-sign-out-alt fa-fw"></i>
-                            {% trans 'SIGN IN' %}
-                        </a>
-                    </li>
-                {% endif %}
                 <li class="submenu-item">
-                    <a href="#">
-                        <i class="fas fa-user-cog fa-fw"></i>
-                        {% trans 'MY PAGE' %}
-                    </a>
-                </li>
-                <li class="submenu-item">
-                    <a href="#">
-                        <i class="fas fa-passport fa-fw"></i>
-                        {% trans 'BOOKING' %}
-                    </a>
-                </li>
-                <li class="submenu-item">
-                    <a href="#">
-                        <i class="fas fa-info-circle fa-fw"></i>
-                        {% trans 'HELP' %}
-                    </a>
+                    <form class="control has-icons-left">
+                        <input class="input" type="text" placeholder="{% trans 'Search...' %}">
+                        <span class="icon is-small is-left"><i class="fas fa-search"></i></span>
+                    </form>
                 </li>
 
                 <li class="submenu-heading">
@@ -232,22 +200,65 @@
     <div class="modal" id="right-sidebar">
         <div class="modal-background"></div>
         <div class="modal-content right-sidebar">
-            <ul class="">
+            <ul>
                 <li class="submenu-heading">
-                    <a href="#">{% trans 'CART' %}</a>
+                    <a href="#">{% trans 'MY WITH THAI' %}</a>
                 </li>
+                {% if user.is_authenticated %}
+                    <li class="submenu-item">
+                        <a href="{% url 'account_logout' %}">
+                            <i class="fas fa-sign-out-alt fa-fw"></i>
+                            {% trans 'SIGN OUT' %}
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="submenu-item">
+                        <a href="{% url 'account_login' %}">
+                            <i class="fas fa-sign-out-alt fa-fw"></i>
+                            {% trans 'SIGN IN' %}
+                        </a>
+                    </li>
+                {% endif %}
                 <li class="submenu-item">
                     <a href="#">
-                        {% trans 'EMPTY' %}
+                        <i class="fas fa-passport fa-fw"></i>
+                        {% trans 'MY BOOKING' %}
                     </a>
                 </li>
                 <li class="submenu-item">
-                    <div class="pay-now">
-                        <a href="#" class="button is-primary">
-                            <span class="icon"><i class="far fa-credit-card"></i></span>
-                            <span>{% trans 'PAY NOW' %}</span>
-                        </a>
-                    </div>
+                    <a href="#">
+                        <i class="fas fa-user-cog fa-fw"></i>
+                        {% trans 'MY PAGE' %}
+                    </a>
+                </li>
+                <li class="submenu-item">
+                    <a href="#">
+                        <i class="fas fa-info-circle fa-fw"></i>
+                        {% trans 'HELP' %}
+                    </a>
+                </li>
+                <li class="submenu-item">
+                    <form class="control has-icons-left" action="{% url 'set_language' %}" method="post">
+                        <div class="select is-fullwidth">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select id="language-selector-mobile" class="" name="language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"
+                                            {% if language.code == LANGUAGE_CODE %}
+                                            selected{% endif %}>
+                                        {{ language.name_local }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="icon is-small is-left">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </form>
                 </li>
             </ul>
         </div>
