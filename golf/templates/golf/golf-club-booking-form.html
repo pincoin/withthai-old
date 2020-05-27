@@ -173,7 +173,8 @@
                                         </div>
                                         <div class="divider is-vertical booking-divider is-hidden-touch"></div>
                                         <div class="column is-5">
-                                            <form>
+                                            <form method="post">
+                                                {% csrf_token %}
                                                 <div class="field is-horizontal">
                                                     <div class="field-label is-normal">
                                                         <label class="label">{% trans 'Date/Time' %}</label>

@@ -83,27 +83,22 @@ class GolfProvinceListView(viewmixins.PageableMixin, generic.ListView):
         return context
 
 
-class GolfClubBookingForm(generic.edit.FormMixin, generic.DetailView):
+class GolfClubBookingForm(generic.CreateView):
     logger = logging.getLogger(__name__)
-    context_object_name = 'club'
 
     form_class = forms.GolfClubBookingForm
 
     template_name = 'golf/golf-club-booking-form.html'
 
-    def get_queryset(self):
-        return models.Club.objects \
-            .select_related('district', 'district__province', 'district__province__area') \
-            .filter(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
-
-    def get_form_kwargs(self):
-        kwargs = super(GolfClubBookingForm, self).get_form_kwargs()
-        return kwargs
-
     def get_context_data(self, **kwargs):
         context = super(GolfClubBookingForm, self).get_context_data(**kwargs)
 
+        context['club'] = models.Club.objects \
+            .select_related('district', 'district__province', 'district__province__area') \
+            .get(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
+
         context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
+
         context['rates'] = models.Rate.objects \
             .filter(club__slug=self.kwargs['slug'], season_end__gt=timezone.make_aware(timezone.localtime().today())) \
             .order_by('season_start', 'day_of_week', 'slot_start')

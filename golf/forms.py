@@ -1,15 +1,19 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 
+from . import models
 
-class GolfClubBookingForm(forms.Form):
+
+class GolfClubBookingForm(forms.ModelForm):
     round_date = forms.DateField()
 
     round_time = forms.TimeField()
 
     pax = forms.IntegerField()
 
-    # TODO: Validation rules
+    class Meta:
+        model = models.Order
+        fields = []
 
 
 class SearchForm(forms.Form):

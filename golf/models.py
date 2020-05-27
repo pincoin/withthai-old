@@ -313,6 +313,30 @@ class Club(model_utils_models.TimeStampedModel):
         db_index=True,
     )
 
+    weekdays_min_in_advance = models.IntegerField(
+        verbose_name=_('Weekdays minimum in advance'),
+        default=1,
+        db_index=True,
+    )
+
+    weekdays_max_in_advance = models.IntegerField(
+        verbose_name=_('Weekdays maximum in advance'),
+        default=30,
+        db_index=True,
+    )
+
+    weekend_min_in_advance = models.IntegerField(
+        verbose_name=_('Weekend minimum in advance'),
+        default=1,
+        db_index=True,
+    )
+
+    weekend_max_in_advance = models.IntegerField(
+        verbose_name=_('Weekend maximum in advance'),
+        default=7,
+        db_index=True,
+    )
+
     thumbnail1 = ThumbnailerImageField(
         verbose_name=_('Thumbnail 1'),
         upload_to=upload_directory_path,
