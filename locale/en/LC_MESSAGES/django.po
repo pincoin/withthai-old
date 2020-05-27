@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 00:09+0700\n"
+"POT-Creation-Date: 2020-05-28 01:03+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -557,7 +557,7 @@ msgid "Fax number"
 msgstr ""
 
 #: golf/models.py:259 golf/templates/golf/golf-club-booking-form.html:164
-#: golf/templates/golf/golf-club-booking-form.html:431
+#: golf/templates/golf/golf-club-booking-form.html:432
 msgid "Website"
 msgstr ""
 
@@ -868,7 +868,7 @@ msgid "Next"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:85
-#: golf/templates/golf/golf-club-booking-form.html:382
+#: golf/templates/golf/golf-club-booking-form.html:383
 msgid "Location"
 msgstr ""
 
@@ -890,12 +890,12 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:407
+#: golf/templates/golf/golf-club-booking-form.html:408
 msgid "Telephone"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:153
-#: golf/templates/golf/golf-club-booking-form.html:420
+#: golf/templates/golf/golf-club-booking-form.html:421
 msgid "Address"
 msgstr ""
 
@@ -956,44 +956,48 @@ msgstr ""
 msgid "Check availability"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:344
-msgid "Invoice Issued"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:345
-msgid "Payable when available"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:346
-#: golf/templates/golf/golf-club-booking-form.html:354
+#: golf/templates/golf/golf-club-booking-form.html:339
+#: golf/templates/golf/golf-club-booking-form.html:355
 msgid "Estimated time: 15~30 minutes during business hours"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:352
-msgid "Booking Confirmed"
+#: golf/templates/golf/golf-club-booking-form.html:345
+msgid "Invoice Issued"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:346
+msgid "Make an online payment within 60 minutes"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:347
+msgid "Voided if not paid within designated timelines"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:353
+msgid "Booking Confirmed"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:354
 msgid "Wait for final confirmation"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:360
+#: golf/templates/golf/golf-club-booking-form.html:361
 msgid "Voucher Issued"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:361
+#: golf/templates/golf/golf-club-booking-form.html:362
 msgid "Submit your voucher issued to golf club on a date of a round"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:373
+#: golf/templates/golf/golf-club-booking-form.html:374
 msgid "Golf Club Information"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:449
+#: golf/templates/golf/golf-club-booking-form.html:450
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:462
+#: golf/templates/golf/golf-club-booking-form.html:463
 msgid "Rain Check"
 msgstr ""
 
