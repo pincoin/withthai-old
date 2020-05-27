@@ -78,3 +78,19 @@
 .booking-divider:before, .booking-divider:after {
     background-color: #dbdbdb;
 }
+
+.booking-form-alert {
+    width: 100%;
+}
+
+.booking-form-alert .message-body {
+    padding: .2rem;
+}
+
+.booking-form-alert .message-body ul {
+    margin: 0 0 0 .2rem;
+}
+
+.booking-form-alert .message-body ul li {
+    list-style-type: none;
+}

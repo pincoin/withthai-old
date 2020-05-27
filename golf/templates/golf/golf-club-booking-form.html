@@ -250,6 +250,20 @@
                                                 <div class="field is-horizontal">
                                                     <div class="field-label"></div>
                                                     <div class="field-body">
+                                                        <article class="message is-danger booking-form-alert">
+                                                            <div class="message-body">
+                                                                <ul>
+                                                                    <li>
+                                                                        {% trans 'You have to pay caddie fee and cart fee at golf course.' %}
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label"></div>
+                                                    <div class="field-body">
                                                         <div class="field">
                                                             <div class="control">
                                                                 <button type="submit"
@@ -258,12 +272,6 @@
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="field is-horizontal">
-                                                    <div class="field-label"></div>
-                                                    <div class="field-body has-text-danger">
-                                                        {% trans 'You have to pay caddie fee and cart fee at golf course.' %}
                                                     </div>
                                                 </div>
                                             </form>
