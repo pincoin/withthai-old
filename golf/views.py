@@ -4,7 +4,9 @@ from django.conf import settings
 from django.core.cache import cache
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 from django.views import generic
+from ipware.ip import get_ip
 
 from . import forms
 from . import models
@@ -106,12 +108,25 @@ class GolfClubBookingForm(generic.CreateView):
         return context
 
     def form_valid(self, form):
-        print(form.data)
-        return super().form_valid(form)
+        # 1. Construct booking list
 
-    def form_invalid(self, form):
-        print(form.errors)
-        return super().form_invalid(form)
+        # 2. Setup booking meta information
+        form.instance.total_selling_price = 0
+        form.instance.total_cost_price = 0
+
+        form.instance.ip_address = get_ip(self.request)
+        form.instance.user = self.request.user
+        form.instance.accept_language = self.request.META['HTTP_ACCEPT_LANGUAGE'] \
+            if 'HTTP_ACCEPT_LANGUAGE' in self.request.META.keys() else _('No language set')
+        form.instance.user_agent = self.request.META['HTTP_USER_AGENT']
+
+        response = super().form_valid(form)
+
+        # 3. Associate booking to order
+
+        # 4. Notify manager, club authorities, user
+
+        return response
 
     def get_success_url(self):
         return reverse('golf:golf-club-list', args=())

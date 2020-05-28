@@ -93,4 +93,9 @@
 
 .booking-form-alert .message-body ul li {
     list-style-type: none;
+    padding: .5rem 0;
+}
+
+.time-input-margin {
+    margin-left: 1px;
 }

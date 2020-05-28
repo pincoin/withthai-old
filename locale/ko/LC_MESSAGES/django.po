@@ -967,7 +967,7 @@ msgstr "예약 가능 여부 조회"
 #: golf/templates/golf/golf-club-booking-form.html:340
 #: golf/templates/golf/golf-club-booking-form.html:356
 msgid "Estimated time: 15~30 minutes during business hours"
-msgstr "소요시간: 업무시간 내 약 15~30분"
+msgstr "업무시간 내 약 15~30분 소요"
 
 #: golf/templates/golf/golf-club-booking-form.html:346
 msgid "Invoice Issued"

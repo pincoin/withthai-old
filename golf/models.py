@@ -621,7 +621,7 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
     payment_method = models.IntegerField(
         verbose_name=_('Payment method'),
         choices=PAYMENT_METHOD_CHOICES,
-        default=PAYMENT_METHOD_CHOICES.bank_transfer,
+        default=PAYMENT_METHOD_CHOICES.credit_card,
         db_index=True,
     )
 

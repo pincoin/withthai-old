@@ -6,3 +6,4 @@ PyJWT==1.7.1
 celery==4.4.2
 easy-thumbnails==2.7
 python-memcached==1.59
+django-ipware==2.1.0

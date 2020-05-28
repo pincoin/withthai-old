@@ -76,6 +76,15 @@ class ClubListAdmin(admin.ModelAdmin):
     exclude = ('clubs',)
 
 
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('user', 'fullname', 'created', 'status',
+                    'payment_method', 'total_selling_price', 'total_cost_price')
+    list_filter = ('status', 'payment_method')
+    readonly_fields = ('order_no', 'ip_address', 'user_agent', 'accept_language', 'created', 'is_removed')
+    raw_id_fields = ('user', 'parent',)
+    ordering = ('-created',)
+
+
 admin.site.register(models.Holiday, HolidayAdmin)
 admin.site.register(models.Area, AreaAdmin)
 admin.site.register(models.Province, ProvinceAdmin)
@@ -83,3 +92,4 @@ admin.site.register(models.District, DistrictAdmin)
 admin.site.register(models.Club, ClubAdmin)
 admin.site.register(models.Rate, RateAdmin)
 admin.site.register(models.ClubList, ClubListAdmin)
+admin.site.register(models.Order, OrderAdmin)

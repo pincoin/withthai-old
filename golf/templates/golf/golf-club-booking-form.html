@@ -177,30 +177,64 @@
                                                 {% csrf_token %}
                                                 <div class="field is-horizontal">
                                                     <div class="field-label is-normal">
-                                                        <label class="label">{% trans 'Date/Time' %}</label>
+                                                        <label class="label"
+                                                               for="{{ form.round_date.id_for_label }}">{% trans 'Date/Time' %}</label>
+                                                        <label class="label is-hidden"
+                                                               for="{{ form.round_time.id_for_label }}">{% trans 'Date/Time' %}</label>
                                                     </div>
                                                     <div class="field-body">
                                                         <div class="field has-addons has-addons-fullwidth has-addons-right">
                                                             <div class="control">
-                                                                <input class="input" type="date" id="round_date"
+                                                                <input class="input{% if form.round_date.errors %} is-danger{% endif %}"
+                                                                       type="date"
+                                                                       id="{{ form.round_date.id_for_label }}"
+                                                                       name="{{ form.round_date.name }}"
+                                                                       value="{{ form.round_date.value }}"
                                                                        placeholder="YYYY-MM-DD">
                                                             </div>
-                                                            <div class="control">
-                                                                <input class="input" type="time" id="round_time"
+                                                            <div class="control{% if form.round_date.errors and not form.round_time.errors %} time-input-margin{% endif %}">
+                                                                <input class="input{% if form.round_time.errors %} is-danger{% endif %}"
+                                                                       type="time"
+                                                                       id="{{ form.round_time.id_for_label }}"
+                                                                       name="{{ form.round_time.name }}"
+                                                                       value="{{ form.round_time.value }}"
                                                                        placeholder="HH:MM" step="60">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                {% if form.round_date.errors or form.round_time.errors %}
+                                                    <div class="field is-horizontal">
+                                                        <div class="field-label"></div>
+                                                        <div class="field-body">
+                                                            <article class="message is-danger booking-form-alert">
+                                                                <div class="message-body">
+                                                                    <ul>
+                                                                        {% for error in form.round_date.errors %}
+                                                                            <li>{{ error|escape }}</li>
+                                                                        {% endfor %}
+                                                                        {% for error in form.round_time.errors %}
+                                                                            <li>{{ error|escape }}</li>
+                                                                        {% endfor %}
+                                                                    </ul>
+                                                                </div>
+                                                            </article>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
                                                 <div class="field is-horizontal">
                                                     <div class="field-label is-normal">
-                                                        <label class="label">{% trans 'Golfer #' %}</label>
+                                                        <label class="label"
+                                                               for="{{ form.pax.id_for_label }}">
+                                                            {% trans 'Golfer #' %}
+                                                        </label>
                                                     </div>
                                                     <div class="field-body">
                                                         <div class="field">
                                                             <div class="control">
-                                                                <div class="select is-fullwidth">
-                                                                    <select>
+                                                                <div class="select is-fullwidth{% if form.pax.errors %} is-danger{% endif %}">
+                                                                    <select id="{{ form.pax.id_for_label }}"
+                                                                            name="{{ form.pax.name }}">
                                                                         <option>1</option>
                                                                         <option>2</option>
                                                                         <option>3</option>
@@ -214,13 +248,14 @@
                                                 </div>
                                                 <div class="field is-horizontal">
                                                     <div class="field-label is-normal">
-                                                        <label class="label">{% trans 'Green Fee' %}</label>
+                                                        <label class="label"
+                                                               for="id_green_fee">{% trans 'Green Fee' %}</label>
                                                     </div>
                                                     <div class="field-body">
                                                         <div class="field has-addons">
                                                             <div class="control is-expanded">
                                                                 <input type="text" class="input has-text-right" readonly
-                                                                       id="green-fee" value="0">
+                                                                       id="id_green_fee" value="0">
                                                             </div>
                                                             <div class="control">
                                                                 <a class="button is-static">
@@ -230,15 +265,31 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                {% if form.pax.errors %}
+                                                    <div class="field is-horizontal">
+                                                        <div class="field-label"></div>
+                                                        <div class="field-body">
+                                                            <article class="message is-danger booking-form-alert">
+                                                                <div class="message-body">
+                                                                    <ul>
+                                                                        {% for error in form.pax.errors %}
+                                                                            <li>{{ error|escape }}</li>
+                                                                        {% endfor %}
+                                                                    </ul>
+                                                                </div>
+                                                            </article>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
                                                 <div class="field is-horizontal">
                                                     <div class="field-label is-normal">
-                                                        <label class="label">{% trans 'Total' %}</label>
+                                                        <label class="label" for="id_total">{% trans 'Total' %}</label>
                                                     </div>
                                                     <div class="field-body">
                                                         <div class="field has-addons">
                                                             <div class="control is-expanded">
                                                                 <input type="text" class="input has-text-right" readonly
-                                                                       id="total-amount" value="0">
+                                                                       id="id_total" value="0">
                                                             </div>
                                                             <div class="control">
                                                                 <a class="button is-static">
