@@ -91,6 +91,10 @@
                         <span>{% trans 'BOOKING' %}</span>
                     </a>
                     <a href="#" class="navbar-item">
+                        <span class="icon"><i class="fas fa-heart fa-fw"></i></span>
+                        <span>{% trans 'FAVORITES' %}</span>
+                    </a>
+                    <a href="#" class="navbar-item">
                         <span class="icon"><i class="fas fa-info-circle fa-fw"></i></span>
                         <span>{% trans 'HELP' %}</span>
                     </a>
@@ -206,34 +210,40 @@
                 {% if user.is_authenticated %}
                     <li class="submenu-item">
                         <a href="{% url 'account_logout' %}">
-                            <i class="fas fa-sign-out-alt fa-fw"></i>
-                            {% trans 'SIGN OUT' %}
+                            <span class="icon"><i class="fas fa-sign-out-alt fa-fw"></i></span>
+                            <span>{% trans 'SIGN OUT' %}</span>
                         </a>
                     </li>
                 {% else %}
                     <li class="submenu-item">
                         <a href="{% url 'account_login' %}">
-                            <i class="fas fa-sign-out-alt fa-fw"></i>
-                            {% trans 'SIGN IN' %}
+                            <span class="icon"><i class="fas fa-sign-out-alt fa-fw"></i></span>
+                            <span>{% trans 'SIGN IN' %}</span>
                         </a>
                     </li>
                 {% endif %}
                 <li class="submenu-item">
                     <a href="#">
-                        <i class="fas fa-passport fa-fw"></i>
-                        {% trans 'MY BOOKING' %}
+                        <span class="icon"><i class="fas fa-passport fa-fw"></i></span>
+                        <span>{% trans 'MY BOOKING' %}</span>
                     </a>
                 </li>
                 <li class="submenu-item">
                     <a href="#">
-                        <i class="fas fa-user-cog fa-fw"></i>
-                        {% trans 'MY PAGE' %}
+                        <span class="icon"><i class="fas fa-heart fa-fw"></i></span>
+                        <span>{% trans 'FAVORITES' %}</span>
                     </a>
                 </li>
                 <li class="submenu-item">
                     <a href="#">
-                        <i class="fas fa-info-circle fa-fw"></i>
-                        {% trans 'HELP' %}
+                        <span class="icon"><i class="fas fa-user-cog fa-fw"></i></span>
+                        <span>{% trans 'MY PAGE' %}</span>
+                    </a>
+                </li>
+                <li class="submenu-item">
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-info-circle fa-fw"></i></span>
+                        <span>{% trans 'HELP' %}</span>
                     </a>
                 </li>
                 <li class="submenu-item">
