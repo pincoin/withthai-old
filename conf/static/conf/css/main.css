@@ -135,6 +135,14 @@ main {
     .club-list-item {
         padding: 1rem .8rem;
     }
+
+    .login-message {
+        padding: .7rem;
+    }
+
+    .login-message .message-body {
+        padding: 1rem;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -147,6 +155,14 @@ main {
     }
 
     .card-section {
+        padding: 1rem .8rem;
+    }
+
+    .login-message {
+        padding: 0;
+    }
+
+    .login-message .message-body {
         padding: 1rem .8rem;
     }
 }
