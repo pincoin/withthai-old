@@ -77,6 +77,12 @@
                     <a href="{% url 'magazine:home' %}" class="navbar-item">
                         {% trans 'MAGAZINE' %}
                     </a>
+                    <div class="navbar-item">
+                        <form class="control has-icons-left">
+                            <input class="input" type="text" placeholder="{% trans 'Search...' %}">
+                            <span class="icon is-small is-left"><i class="fas fa-search fa-fw"></i></span>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="navbar-end">
@@ -104,40 +110,33 @@
                             <span>{% trans 'SIGN IN' %}</span>
                         </a>
                     {% endif %}
+                    <div class="navbar-item">
+                        <form class="control has-icons-left" action="{% url 'set_language' %}" method="post">
+                            <div class="select">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ redirect_to }}">
+                                <select id="language-selector" class="select" name="language">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <option value="{{ language.code }}"
+                                                {% if language.code == LANGUAGE_CODE %}
+                                                selected{% endif %}>
+                                            {{ language.name_local }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="icon is-small is-left">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
-
-    <div class="container is-hidden-touch">
-        <div class="is-pulled-right field is-grouped">
-            <form class="control has-icons-left">
-                <input class="input" type="text" placeholder="{% trans 'Search...' %}">
-                <span class="icon is-small is-left"><i class="fas fa-search fa-fw"></i></span>
-            </form>
-            <form class="control has-icons-left" action="{% url 'set_language' %}" method="post">
-                <div class="select">
-                    {% csrf_token %}
-                    <input name="next" type="hidden" value="{{ redirect_to }}">
-                    <select id="language-selector" class="select" name="language">
-                        {% get_current_language as LANGUAGE_CODE %}
-                        {% get_available_languages as LANGUAGES %}
-                        {% get_language_info_list for LANGUAGES as languages %}
-                        {% for language in languages %}
-                            <option value="{{ language.code }}"
-                                    {% if language.code == LANGUAGE_CODE %}
-                                    selected{% endif %}>
-                                {{ language.name_local }}
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="icon is-small is-left">
-                    <i class="fas fa-globe"></i>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <div class="modal" id="left-sidebar">
         <div class="modal-background"></div>
