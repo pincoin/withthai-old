@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 03:24+0700\n"
+"POT-Creation-Date: 2020-05-31 03:38+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,16 +86,24 @@ msgstr "계정"
 msgid "Email"
 msgstr "이메일"
 
-#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
+#: allauth/templates/socialaccount/signup.html:53
+msgid "To get booking receipt"
+msgstr "예약 바우처 수신 이메일입니다."
+
+#: allauth/templates/socialaccount/signup.html:69 conf/models.py:141
 #: help/templates/help/privacy.html:19
 msgid "Username"
 msgstr "아이디"
 
-#: allauth/templates/socialaccount/signup.html:89 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:78
+msgid "Not your personal name"
+msgstr "이름이 아닌 아이디입니다."
+
+#: allauth/templates/socialaccount/signup.html:90 member/models.py:71
 msgid "Profile"
 msgstr "프로필"
 
-#: allauth/templates/socialaccount/signup.html:104
+#: allauth/templates/socialaccount/signup.html:105
 msgid "JOHN"
 msgstr "GILDONG"
 
@@ -103,14 +111,14 @@ msgstr "GILDONG"
 msgid "DOE"
 msgstr "HONG"
 
-#: allauth/templates/socialaccount/signup.html:151
+#: allauth/templates/socialaccount/signup.html:150
 #: golf/templates/golf/golf-club-booking-form.html:140
 #: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
 #: member/models.py:16
 msgid "Telephone"
 msgstr "전화번호"
 
-#: allauth/templates/socialaccount/signup.html:171
+#: allauth/templates/socialaccount/signup.html:170
 msgid "Sign up"
 msgstr "회원가입"
 
@@ -1380,7 +1388,11 @@ msgstr "영문 성(姓)"
 msgid "Last name written in English"
 msgstr "영문 성(姓) - 남/녀를 구별하는 성별이 아닙니다. (예: HONG)"
 
-#: member/forms.py:27
+#: member/forms.py:25
+msgid "Digits only"
+msgstr "숫자만 입력"
+
+#: member/forms.py:28
 msgid "Invalid phone number format"
 msgstr "잘못된 전화번호 양식"
 

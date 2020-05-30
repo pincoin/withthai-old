@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 03:24+0700\n"
+"POT-Creation-Date: 2020-05-31 03:38+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,16 +88,24 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
+#: allauth/templates/socialaccount/signup.html:53
+msgid "To get booking receipt"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:69 conf/models.py:141
 #: help/templates/help/privacy.html:19
 msgid "Username"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:89 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:78
+msgid "Not your personal name"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:90 member/models.py:71
 msgid "Profile"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:104
+#: allauth/templates/socialaccount/signup.html:105
 msgid "JOHN"
 msgstr ""
 
@@ -105,14 +113,14 @@ msgstr ""
 msgid "DOE"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:151
+#: allauth/templates/socialaccount/signup.html:150
 #: golf/templates/golf/golf-club-booking-form.html:140
 #: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:171
+#: allauth/templates/socialaccount/signup.html:170
 msgid "Sign up"
 msgstr ""
 
@@ -1373,7 +1381,11 @@ msgstr ""
 msgid "Last name written in English"
 msgstr ""
 
-#: member/forms.py:27
+#: member/forms.py:25
+msgid "Digits only"
+msgstr ""
+
+#: member/forms.py:28
 msgid "Invalid phone number format"
 msgstr ""
 
