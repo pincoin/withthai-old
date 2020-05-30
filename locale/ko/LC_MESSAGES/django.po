@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 03:50+0700\n"
+"POT-Creation-Date: 2020-05-31 04:14+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,44 +78,44 @@ msgstr "회원가입"
 msgid "You are about to use your SNS account to login to WITH THAI."
 msgstr "SNS 계정으로 위드타이에 회원가입합니다."
 
-#: allauth/templates/socialaccount/signup.html:29
+#: allauth/templates/socialaccount/signup.html:30
 msgid "Account"
 msgstr "계정"
 
-#: allauth/templates/socialaccount/signup.html:44
+#: allauth/templates/socialaccount/signup.html:45
 msgid "Email"
 msgstr "이메일"
 
-#: allauth/templates/socialaccount/signup.html:53
+#: allauth/templates/socialaccount/signup.html:54
 msgid "To get booking receipt"
 msgstr "예약 바우처 수신 이메일입니다."
 
-#: allauth/templates/socialaccount/signup.html:69 conf/models.py:141
+#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
 #: help/templates/help/privacy.html:19
 msgid "Username"
 msgstr "아이디"
 
-#: allauth/templates/socialaccount/signup.html:78
+#: allauth/templates/socialaccount/signup.html:79
 msgid "Not your personal name"
 msgstr "이름이 아닌 아이디입니다."
 
-#: allauth/templates/socialaccount/signup.html:90 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:92 member/models.py:71
 msgid "Profile"
 msgstr "프로필"
 
-#: allauth/templates/socialaccount/signup.html:105
+#: allauth/templates/socialaccount/signup.html:107
 msgid "JOHN"
 msgstr "GILDONG"
 
-#: allauth/templates/socialaccount/signup.html:127
+#: allauth/templates/socialaccount/signup.html:129
 msgid "DOE"
 msgstr "HONG"
 
-#: allauth/templates/socialaccount/signup.html:149
+#: allauth/templates/socialaccount/signup.html:151
 msgid "+66801231234"
 msgstr "+821012341234"
 
-#: allauth/templates/socialaccount/signup.html:170
+#: allauth/templates/socialaccount/signup.html:173
 msgid "Sign up"
 msgstr "회원가입"
 
@@ -1381,7 +1381,7 @@ msgstr "영문 이름"
 
 #: member/forms.py:11
 msgid "First name written in English"
-msgstr "성을 빼고 이름만 입력해주세요. (예: GILDONG)"
+msgstr "성을 빼고 이름만 입력해주세요."
 
 #: member/forms.py:16
 msgid "Last name"
@@ -1389,7 +1389,7 @@ msgstr "영문 성(姓)"
 
 #: member/forms.py:18
 msgid "Last name written in English"
-msgstr "남/녀를 구별하는 성별이 아닙니다. (예: HONG)"
+msgstr "남/녀를 구별하는 성별이 아닙니다."
 
 #: member/forms.py:25
 msgid "Digits or plus sign only"

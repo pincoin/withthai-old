@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 03:50+0700\n"
+"POT-Creation-Date: 2020-05-31 04:14+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,44 +80,44 @@ msgstr "LOGOUT"
 msgid "You are about to use your SNS account to login to WITH THAI."
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:29
+#: allauth/templates/socialaccount/signup.html:30
 msgid "Account"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:44
+#: allauth/templates/socialaccount/signup.html:45
 msgid "Email"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:53
+#: allauth/templates/socialaccount/signup.html:54
 msgid "To get booking receipt"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:69 conf/models.py:141
+#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
 #: help/templates/help/privacy.html:19
 msgid "Username"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:78
+#: allauth/templates/socialaccount/signup.html:79
 msgid "Not your personal name"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:90 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:92 member/models.py:71
 msgid "Profile"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:105
+#: allauth/templates/socialaccount/signup.html:107
 msgid "JOHN"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:127
+#: allauth/templates/socialaccount/signup.html:129
 msgid "DOE"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:149
+#: allauth/templates/socialaccount/signup.html:151
 msgid "+66801231234"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:170
+#: allauth/templates/socialaccount/signup.html:173
 msgid "Sign up"
 msgstr ""
 
