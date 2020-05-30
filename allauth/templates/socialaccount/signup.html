@@ -16,42 +16,6 @@
                 </div>
             </div>
             <div class="row mb-2">
-                <div class="col-sm-12 col-md-6">
-                    <h4 class="text-success">
-                        {% trans "Terms and Conditions" %}
-                    </h4>
-                    <pre class="term border border-dark p-2 mb-2">{% include 'member/account/terms/terms.txt' %}
-                    </pre>
-                    <div class="form-group mt-1 mt-md-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="{{ form.terms.id_for_label }}"
-                                   name="{{ form.terms.name }}" value="1" required>
-                            <label class="form-check-label" for="{{ form.terms.id_for_label }}">
-                                {{ form.terms.label }}<span class="asteriskField">*</span>
-                            </label>
-                            <small class="form-text text-muted">{{ form.terms.help_text }}</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 mt-2 mt-md-0">
-                    <h4 class="text-success">
-                        {% trans "Privacy Policy" %}
-                    </h4>
-                    <pre class="term border border-dark p-2 mb-2">{% include 'member/account/terms/privacy.txt' %}
-                    </pre>
-                    <div class="form-group mt-1 mt-md-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="{{ form.privacy.id_for_label }}"
-                                   name="{{ form.privacy.name }}" value="1" required>
-                            <label class="form-check-label" for="{{ form.privacy.id_for_label }}">
-                                {{ form.privacy.label }}<span class="asteriskField">*</span>
-                            </label>
-                            <small class="form-text text-muted">{{ form.privacy.help_text }}</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-2">
                 <div class="col-sm-12 col-md-6 mt-2 mt-md-0">
                     <div class="card rounded-2">
                         <h4 class="card-header text-center">
