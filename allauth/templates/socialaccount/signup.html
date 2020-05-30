@@ -117,7 +117,7 @@
                                         <div class="field is-horizontal">
                                             <div class="field-label is-normal">
                                                 <label for="{{ form.last_name.id_for_label }}" class="label">
-                                                    {{ form.username.label }}
+                                                    {{ form.last_name.label }}
                                                 </label>
                                             </div>
                                             <div class="field-body">
@@ -144,21 +144,19 @@
                                             </div>
                                             <div class="field-body">
                                                 <div class="field">
-                                                    <div class="field has-addons">
-                                                        <div class="control is-expanded has-icons-left">
-                                                            <input class="input" type="text"
-                                                                   placeholder="{% trans 'Telephone' %}"
-                                                                   id="{{ form.phone.id_for_label }}"
-                                                                   name="{{ form.phone.name }}"
-                                                                   value="{{ form.phone.value }}">
-                                                            <span class="icon is-small is-left">
+                                                    <div class="control is-expanded has-icons-left">
+                                                        <input class="input" type="text"
+                                                               placeholder="{% trans 'Telephone' %}"
+                                                               id="{{ form.phone.id_for_label }}"
+                                                               name="{{ form.phone.name }}"
+                                                               value="{{ form.phone.value }}">
+                                                        <span class="icon is-small is-left">
                                                             <i class="fas fa-mobile-alt"></i>
                                                         </span>
-                                                        </div>
-                                                        <ul>
-                                                            <li>{{ form.phone.help_text }}</li>
-                                                        </ul>
                                                     </div>
+                                                    <ul>
+                                                        <li>{{ form.phone.help_text }}</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
