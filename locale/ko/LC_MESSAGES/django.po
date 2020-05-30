@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-29 23:34+0700\n"
+"POT-Creation-Date: 2020-05-30 20:26+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -172,6 +172,7 @@ msgid "Website URL"
 msgstr "홈페이지주소"
 
 #: conf/models.py:160 golf/models.py:618 help/templates/help/privacy.html:25
+#: member/models.py:18
 msgid "IP address"
 msgstr "IP 주소"
 
@@ -544,7 +545,7 @@ msgstr "골프장 태국명"
 msgid "Golf club Korean name"
 msgstr "골프장 국문명"
 
-#: golf/models.py:238
+#: golf/models.py:238 member/forms.py:21
 msgid "Phone number"
 msgstr "대표 전화번호"
 
@@ -801,7 +802,7 @@ msgstr "예약무효"
 msgid "Order no"
 msgstr "예약번호"
 
-#: golf/models.py:593
+#: golf/models.py:593 member/models.py:10
 msgid "User"
 msgstr "사용자"
 
@@ -1020,7 +1021,7 @@ msgstr "우천 시 규정"
 
 #: golf/views.py:120
 msgid "No language set"
-msgstr ""
+msgstr "언어설정없음"
 
 #: help/templates/help/about.html:14
 msgid "We make online hotel/golf booking convenient."
@@ -1328,17 +1329,26 @@ msgstr "더보기"
 msgid "Member"
 msgstr "회원"
 
-#~ msgid "Payable when available"
-#~ msgstr "예약 가능 시 결제 진행"
+#: member/forms.py:7
+msgid "First name"
+msgstr "이름(예: 길동)"
 
-#~ msgid "SEARCH"
-#~ msgstr "검색"
+#: member/forms.py:9 member/forms.py:16
+msgid "Written in English"
+msgstr "영문"
 
-#~ msgid "CART"
-#~ msgstr "장바구니"
+#: member/forms.py:14
+msgid "Last name"
+msgstr "성(예: 홍)"
 
-#~ msgid "EMPTY"
-#~ msgstr "비어있음"
+#: member/forms.py:25
+msgid "Invalid phone number format"
+msgstr "잘못된 전화번호 양식"
 
-#~ msgid "PAY NOW"
-#~ msgstr "결제하기"
+#: member/models.py:22
+msgid "Login log"
+msgstr "로그인 이력"
+
+#: member/models.py:23
+msgid "Login logs"
+msgstr "로그인 이력"

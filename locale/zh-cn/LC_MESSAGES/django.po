@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-29 23:34+0700\n"
+"POT-Creation-Date: 2020-05-30 20:26+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -172,6 +172,7 @@ msgid "Website URL"
 msgstr ""
 
 #: conf/models.py:160 golf/models.py:618 help/templates/help/privacy.html:25
+#: member/models.py:18
 msgid "IP address"
 msgstr ""
 
@@ -542,7 +543,7 @@ msgstr ""
 msgid "Golf club Korean name"
 msgstr ""
 
-#: golf/models.py:238
+#: golf/models.py:238 member/forms.py:21
 msgid "Phone number"
 msgstr ""
 
@@ -799,7 +800,7 @@ msgstr ""
 msgid "Order no"
 msgstr ""
 
-#: golf/models.py:593
+#: golf/models.py:593 member/models.py:10
 msgid "User"
 msgstr ""
 
@@ -1307,4 +1308,28 @@ msgstr ""
 
 #: member/apps.py:7
 msgid "Member"
+msgstr ""
+
+#: member/forms.py:7
+msgid "First name"
+msgstr ""
+
+#: member/forms.py:9 member/forms.py:16
+msgid "Written in English"
+msgstr ""
+
+#: member/forms.py:14
+msgid "Last name"
+msgstr ""
+
+#: member/forms.py:25
+msgid "Invalid phone number format"
+msgstr ""
+
+#: member/models.py:22
+msgid "Login log"
+msgstr ""
+
+#: member/models.py:23
+msgid "Login logs"
 msgstr ""
