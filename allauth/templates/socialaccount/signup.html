@@ -149,7 +149,7 @@
                                                                placeholder="{% trans 'Telephone' %}"
                                                                id="{{ form.phone.id_for_label }}"
                                                                name="{{ form.phone.name }}"
-                                                               value="{{ form.phone.value }}">
+                                                               value="{{ form.phone.value|default_if_none:"" }}">
                                                         <span class="icon is-small is-left">
                                                             <i class="fas fa-mobile-alt"></i>
                                                         </span>
