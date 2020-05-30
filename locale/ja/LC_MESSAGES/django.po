@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-30 21:51+0700\n"
+"POT-Creation-Date: 2020-05-31 02:11+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,32 +71,23 @@ msgid ""
 "accounts."
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:12
-#, python-format
-msgid ""
-"\n"
-"                            You are about to use your %(provider_name)s "
-"account to login to WITH THAI.\n"
-"                        "
+#: allauth/templates/socialaccount/signup.html:15
+msgid "SIGN UP"
 msgstr ""
 
 #: allauth/templates/socialaccount/signup.html:21
-msgid "Terms and Conditions"
+msgid "You are about to use your SNS account to login to WITH THAI."
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:38
-msgid "Privacy Policy"
+#: allauth/templates/socialaccount/signup.html:31
+msgid "Account"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:58
-msgid "Account Info"
-msgstr ""
-
-#: allauth/templates/socialaccount/signup.html:87 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:49 member/models.py:71
 msgid "Profile"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:156
+#: allauth/templates/socialaccount/signup.html:182
 msgid "Sign up"
 msgstr ""
 
@@ -931,7 +922,7 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:21
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
@@ -1341,19 +1332,19 @@ msgstr ""
 msgid "Member"
 msgstr ""
 
-#: member/forms.py:7
+#: member/forms.py:9
 msgid "First name"
 msgstr ""
 
-#: member/forms.py:9 member/forms.py:16
+#: member/forms.py:11 member/forms.py:18
 msgid "Written in English"
 msgstr ""
 
-#: member/forms.py:14
+#: member/forms.py:16
 msgid "Last name"
 msgstr ""
 
-#: member/forms.py:25
+#: member/forms.py:27
 msgid "Invalid phone number format"
 msgstr ""
 

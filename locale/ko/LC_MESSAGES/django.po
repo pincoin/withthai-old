@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-30 21:51+0700\n"
+"POT-Creation-Date: 2020-05-31 02:11+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,34 +70,25 @@ msgid ""
 "accounts."
 msgstr "SNS 계정으로 간편 로그인하는 것을 취소했습니다."
 
-#: allauth/templates/socialaccount/signup.html:12
-#, python-format
-msgid ""
-"\n"
-"                            You are about to use your %(provider_name)s "
-"account to login to WITH THAI.\n"
-"                        "
-msgstr ""
+#: allauth/templates/socialaccount/signup.html:15
+msgid "SIGN UP"
+msgstr "회원가입"
 
 #: allauth/templates/socialaccount/signup.html:21
-msgid "Terms and Conditions"
-msgstr "이용약관"
+msgid "You are about to use your SNS account to login to WITH THAI."
+msgstr "SNS 계정으로 위드타이에 회원가입합니다."
 
-#: allauth/templates/socialaccount/signup.html:38
-msgid "Privacy Policy"
-msgstr "개인정보보호방침"
-
-#: allauth/templates/socialaccount/signup.html:58
-msgid "Account Info"
+#: allauth/templates/socialaccount/signup.html:31
+msgid "Account"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:87 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:49 member/models.py:71
 msgid "Profile"
 msgstr "프로필"
 
-#: allauth/templates/socialaccount/signup.html:156
+#: allauth/templates/socialaccount/signup.html:182
 msgid "Sign up"
-msgstr ""
+msgstr "회원가입"
 
 #: board/apps.py:7
 msgid "Board"
@@ -932,7 +923,7 @@ msgid "Caddie Fee"
 msgstr "캐디피"
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:21
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
 #: member/models.py:16
 msgid "Telephone"
 msgstr "전화번호"
@@ -1359,19 +1350,19 @@ msgstr "더보기"
 msgid "Member"
 msgstr "회원"
 
-#: member/forms.py:7
+#: member/forms.py:9
 msgid "First name"
 msgstr "이름 - 성을 빼고 이름만 입력해주세요. (예: 길동)"
 
-#: member/forms.py:9 member/forms.py:16
+#: member/forms.py:11 member/forms.py:18
 msgid "Written in English"
 msgstr "영문"
 
-#: member/forms.py:14
+#: member/forms.py:16
 msgid "Last name"
 msgstr "성(姓) - 남/녀를 구별하는 성별이 아닙니다. (예: 홍)"
 
-#: member/forms.py:25
+#: member/forms.py:27
 msgid "Invalid phone number format"
 msgstr "잘못된 전화번호 양식"
 
