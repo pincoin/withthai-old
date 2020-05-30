@@ -1378,7 +1378,7 @@ msgstr "영문 이름"
 
 #: member/forms.py:11
 msgid "First name written in English"
-msgstr "영문 이름 - 성을 빼고 이름만 입력해주세요. (예: GILDONG)"
+msgstr "성을 빼고 이름만 입력해주세요. (예: GILDONG)"
 
 #: member/forms.py:16
 msgid "Last name"
@@ -1386,7 +1386,7 @@ msgstr "영문 성(姓)"
 
 #: member/forms.py:18
 msgid "Last name written in English"
-msgstr "영문 성(姓) - 남/녀를 구별하는 성별이 아닙니다. (예: HONG)"
+msgstr "남/녀를 구별하는 성별이 아닙니다. (예: HONG)"
 
 #: member/forms.py:25
 msgid "Digits only"
