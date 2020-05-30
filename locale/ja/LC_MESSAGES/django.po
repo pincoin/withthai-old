@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 03:38+0700\n"
+"POT-Creation-Date: 2020-05-31 03:48+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -112,11 +112,8 @@ msgstr ""
 msgid "DOE"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:150
-#: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
-#: member/models.py:16
-msgid "Telephone"
+#: allauth/templates/socialaccount/signup.html:149
+msgid "+66801231234"
 msgstr ""
 
 #: allauth/templates/socialaccount/signup.html:170
@@ -947,6 +944,12 @@ msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:130
 msgid "Caddie Fee"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:140
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
+#: member/models.py:16
+msgid "Telephone"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:153
