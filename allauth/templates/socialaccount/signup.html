@@ -25,7 +25,7 @@
                         <div class="columns">
                             <div class="column is-half-desktop is-full-mobile">
                                 <header class="card-header has-background-grey-lighter">
-                                    <p class="card-header-title is-size-3">
+                                    <p class="card-header-title is-size-3 is-centered">
                                         {% trans "Account" %}
                                     </p>
                                 </header>
@@ -39,54 +39,43 @@
                                             </div>
                                             <div class="field-body">
                                                 <div class="field">
-                                                    <div class="control is-expanded has-icons-left has-icons-right">
-                                                        <input class="input" type="email" placeholder="Email"
+                                                    <div class="control is-expanded has-icons-left">
+                                                        <input class="input" type="email"
+                                                               placeholder="{% trans 'Email' %}"
+                                                               id="{{ form.email.id_for_label }}"
+                                                               name="{{ form.email.name }}"
                                                                value="{{ form.email.value }}">
                                                         <span class="icon is-small is-left">
                                                             <i class="fas fa-envelope"></i>
                                                         </span>
-                                                        <span class="icon is-small is-right">
-                                                          <i class="fas fa-check"></i>
-                                                        </span>
                                                     </div>
                                                     <div class="help">{{ form.email.help_text }}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="field is-horizontal">
-                                            <div class="field-label"></div>
-                                            <div class="field-body">
-                                                <div class="field is-expanded">
-                                                    <div class="field has-addons">
-                                                        <p class="control">
-                                                            <a class="button is-static">
-                                                                +44
-                                                            </a>
-                                                        </p>
-                                                        <p class="control is-expanded">
-                                                            <input class="input" type="tel"
-                                                                   placeholder="Your phone number">
-                                                        </p>
+                                                    <div class="help is-danger">
+                                                        This field is required
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="field is-horizontal">
                                             <div class="field-label is-normal">
-                                                <label class="label">Subject</label>
+                                                <label for="{{ form.username.id_for_label }}" class="label">
+                                                    {{ form.username.label }}
+                                                </label>
                                             </div>
                                             <div class="field-body">
                                                 <div class="field">
-                                                    <div class="control">
-                                                        <input class="input is-danger" type="text"
-                                                               placeholder="e.g. Partnership opportunity">
+                                                    <div class="control is-expanded has-icons-left">
+                                                        <input class="input" type="text"
+                                                               placeholder="{% trans 'Username' %}"
+                                                               id="{{ form.username.id_for_label }}"
+                                                               name="{{ form.username.name }}"
+                                                               value="{{ form.username.value }}">
+                                                        <span class="icon is-small is-left">
+                                                            <i class="fas fa-user"></i>
+                                                        </span>
                                                     </div>
-                                                    <p class="help is-danger">
-                                                        This field is required
-                                                    </p>
+                                                    <div class="help">{{ form.username.help_text }}</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -96,13 +85,76 @@
                             </div>
                             <div class="column is-half-desktop is-full-mobile">
                                 <header class="card-header has-background-grey-lighter">
-                                    <p class="card-header-title is-size-3">
+                                    <p class="card-header-title is-size-3 is-centered">
                                         {% trans "Profile" %}
                                     </p>
                                 </header>
                                 <div class="card-content">
                                     <div class="content">
-                                        {{ form.as_p }}
+                                        <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                                <label for="{{ form.first_name.id_for_label }}" class="label">
+                                                    {{ form.first_name.label }}
+                                                </label>
+                                            </div>
+                                            <div class="field-body">
+                                                <div class="field">
+                                                    <div class="control">
+                                                        <input class="input" type="text"
+                                                               placeholder="{% trans 'JOHN' %}"
+                                                               id="{{ form.first_name.id_for_label }}"
+                                                               name="{{ form.first_name.name }}"
+                                                               value="{{ form.first_name.value }}">
+                                                    </div>
+                                                    <div class="help">{{ form.first_name.help_text }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                                <label for="{{ form.last_name.id_for_label }}" class="label">
+                                                    {{ form.username.label }}
+                                                </label>
+                                            </div>
+                                            <div class="field-body">
+                                                <div class="field">
+                                                    <div class="control">
+                                                        <input class="input" type="text"
+                                                               placeholder="{% trans 'DOE' %}"
+                                                               id="{{ form.last_name.id_for_label }}"
+                                                               name="{{ form.last_name.name }}"
+                                                               value="{{ form.last_name.value }}">
+                                                    </div>
+                                                    <div class="help">{{ form.last_name.help_text }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="field is-horizontal">
+                                            <div class="field-label is-normal">
+                                                <label for="{{ form.phone.id_for_label }}" class="label">
+                                                    {{ form.phone.label }}
+                                                </label>
+                                            </div>
+                                            <div class="field-body">
+                                                <div class="field">
+                                                    <div class="field has-addons">
+                                                        <div class="control is-expanded has-icons-left">
+                                                            <input class="input" type="text"
+                                                                   placeholder="{% trans 'Telephone' %}"
+                                                                   id="{{ form.phone.id_for_label }}"
+                                                                   name="{{ form.phone.name }}"
+                                                                   value="{{ form.phone.value }}">
+                                                            <span class="icon is-small is-left">
+                                                            <i class="fas fa-mobile-alt"></i>
+                                                        </span>
+                                                        </div>
+                                                        <div class="help">{{ form.phone.help_text }}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

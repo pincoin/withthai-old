@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 02:11+0700\n"
+"POT-Creation-Date: 2020-05-31 03:24+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,23 +70,47 @@ msgid ""
 "accounts."
 msgstr "SNS 계정으로 간편 로그인하는 것을 취소했습니다."
 
-#: allauth/templates/socialaccount/signup.html:15
+#: allauth/templates/socialaccount/signup.html:13
 msgid "SIGN UP"
 msgstr "회원가입"
 
-#: allauth/templates/socialaccount/signup.html:21
+#: allauth/templates/socialaccount/signup.html:19
 msgid "You are about to use your SNS account to login to WITH THAI."
 msgstr "SNS 계정으로 위드타이에 회원가입합니다."
 
-#: allauth/templates/socialaccount/signup.html:31
+#: allauth/templates/socialaccount/signup.html:29
 msgid "Account"
-msgstr ""
+msgstr "계정"
 
-#: allauth/templates/socialaccount/signup.html:49 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:44
+msgid "Email"
+msgstr "이메일"
+
+#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
+#: help/templates/help/privacy.html:19
+msgid "Username"
+msgstr "아이디"
+
+#: allauth/templates/socialaccount/signup.html:89 member/models.py:71
 msgid "Profile"
 msgstr "프로필"
 
-#: allauth/templates/socialaccount/signup.html:182
+#: allauth/templates/socialaccount/signup.html:104
+msgid "JOHN"
+msgstr "GILDONG"
+
+#: allauth/templates/socialaccount/signup.html:127
+msgid "DOE"
+msgstr "HONG"
+
+#: allauth/templates/socialaccount/signup.html:151
+#: golf/templates/golf/golf-club-booking-form.html:140
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
+#: member/models.py:16
+msgid "Telephone"
+msgstr "전화번호"
+
+#: allauth/templates/socialaccount/signup.html:171
 msgid "Sign up"
 msgstr "회원가입"
 
@@ -178,10 +202,6 @@ msgstr "삭제됨"
 #: conf/models.py:119
 msgid "Content"
 msgstr "내용"
-
-#: conf/models.py:141 help/templates/help/privacy.html:19
-msgid "Username"
-msgstr "아이디"
 
 #: conf/models.py:148 golf/models.py:245 help/templates/help/privacy.html:21
 msgid "Email address"
@@ -922,12 +942,6 @@ msgstr "%(golfers)s명 이상 카트 의무"
 msgid "Caddie Fee"
 msgstr "캐디피"
 
-#: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
-#: member/models.py:16
-msgid "Telephone"
-msgstr "전화번호"
-
 #: golf/templates/golf/golf-club-booking-form.html:153
 #: golf/templates/golf/golf-club-booking-form.html:474
 msgid "Address"
@@ -1352,15 +1366,19 @@ msgstr "회원"
 
 #: member/forms.py:9
 msgid "First name"
-msgstr "이름 - 성을 빼고 이름만 입력해주세요. (예: 길동)"
+msgstr "영문 이름"
 
-#: member/forms.py:11 member/forms.py:18
-msgid "Written in English"
-msgstr "영문"
+#: member/forms.py:11
+msgid "First name written in English"
+msgstr "영문 이름 - 성을 빼고 이름만 입력해주세요. (예: GILDONG)"
 
 #: member/forms.py:16
 msgid "Last name"
-msgstr "성(姓) - 남/녀를 구별하는 성별이 아닙니다. (예: 홍)"
+msgstr "영문 성(姓)"
+
+#: member/forms.py:18
+msgid "Last name written in English"
+msgstr "영문 성(姓) - 남/녀를 구별하는 성별이 아닙니다. (예: HONG)"
 
 #: member/forms.py:27
 msgid "Invalid phone number format"

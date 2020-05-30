@@ -8,14 +8,14 @@ class MemberSignupForm(forms.Form):
     first_name = forms.CharField(
         label=_('First name'),
         max_length=30,
-        help_text=_('Written in English'),
+        help_text=_('First name written in English'),
         widget=forms.TextInput(),
     )
 
     last_name = forms.CharField(
         label=_('Last name'),
         max_length=30,
-        help_text=_('Written in English'),
+        help_text=_('Last name written in English'),
         widget=forms.TextInput(),
     )
 

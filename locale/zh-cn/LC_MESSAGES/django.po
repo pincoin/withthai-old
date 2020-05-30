@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 02:11+0700\n"
+"POT-Creation-Date: 2020-05-31 03:24+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,23 +70,47 @@ msgid ""
 "accounts."
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:15
+#: allauth/templates/socialaccount/signup.html:13
 msgid "SIGN UP"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:21
+#: allauth/templates/socialaccount/signup.html:19
 msgid "You are about to use your SNS account to login to WITH THAI."
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:31
+#: allauth/templates/socialaccount/signup.html:29
 msgid "Account"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:49 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:44
+msgid "Email"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
+#: help/templates/help/privacy.html:19
+msgid "Username"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:89 member/models.py:71
 msgid "Profile"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:182
+#: allauth/templates/socialaccount/signup.html:104
+msgid "JOHN"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:127
+msgid "DOE"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:151
+#: golf/templates/golf/golf-club-booking-form.html:140
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
+#: member/models.py:16
+msgid "Telephone"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:171
 msgid "Sign up"
 msgstr ""
 
@@ -177,10 +201,6 @@ msgstr ""
 
 #: conf/models.py:119
 msgid "Content"
-msgstr ""
-
-#: conf/models.py:141 help/templates/help/privacy.html:19
-msgid "Username"
 msgstr ""
 
 #: conf/models.py:148 golf/models.py:245 help/templates/help/privacy.html:21
@@ -920,12 +940,6 @@ msgstr ""
 msgid "Caddie Fee"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
-#: member/models.py:16
-msgid "Telephone"
-msgstr ""
-
 #: golf/templates/golf/golf-club-booking-form.html:153
 #: golf/templates/golf/golf-club-booking-form.html:474
 msgid "Address"
@@ -1335,12 +1349,16 @@ msgstr ""
 msgid "First name"
 msgstr ""
 
-#: member/forms.py:11 member/forms.py:18
-msgid "Written in English"
+#: member/forms.py:11
+msgid "First name written in English"
 msgstr ""
 
 #: member/forms.py:16
 msgid "Last name"
+msgstr ""
+
+#: member/forms.py:18
+msgid "Last name written in English"
 msgstr ""
 
 #: member/forms.py:27
