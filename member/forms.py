@@ -1,6 +1,8 @@
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
+from . import models
+
 
 class MemberSignupForm(forms.Form):
     first_name = forms.CharField(
@@ -18,7 +20,7 @@ class MemberSignupForm(forms.Form):
     )
 
     phone = forms.RegexField(
-        label=_('Phone number'),
+        label=_('Telephone'),
         widget=forms.TextInput(),
         regex=r'^\+?1?\d{9,15}$',
         error_messages={
@@ -34,6 +36,9 @@ class MemberSignupForm(forms.Form):
         user.first_name = self.cleaned_data['first_name'].strip()
         user.last_name = self.cleaned_data['last_name'].strip()
 
-        # TODO: Profile and Groups
+        # Required fields for profile model
+        profile = models.Profile()
+        profile.user = user
 
         user.save()
+        profile.save()

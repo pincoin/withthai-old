@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-30 20:26+0700\n"
+"POT-Creation-Date: 2020-05-30 21:51+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,6 +69,35 @@ msgstr ""
 msgid ""
 "You decided to cancel logging in to our site using one of your existing "
 "accounts."
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:12
+#, python-format
+msgid ""
+"\n"
+"                            You are about to use your %(provider_name)s "
+"account to login to WITH THAI.\n"
+"                        "
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:21
+msgid "Terms and Conditions"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:38
+msgid "Privacy Policy"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:58
+msgid "Account Info"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:87 member/models.py:71
+msgid "Profile"
+msgstr ""
+
+#: allauth/templates/socialaccount/signup.html:156
+msgid "Sign up"
 msgstr ""
 
 #: board/apps.py:7
@@ -173,7 +202,7 @@ msgid "Website URL"
 msgstr ""
 
 #: conf/models.py:160 golf/models.py:618 help/templates/help/privacy.html:25
-#: member/models.py:18
+#: member/models.py:89
 msgid "IP address"
 msgstr ""
 
@@ -544,7 +573,7 @@ msgstr ""
 msgid "Golf club Korean name"
 msgstr ""
 
-#: golf/models.py:238 member/forms.py:21
+#: golf/models.py:238
 msgid "Phone number"
 msgstr ""
 
@@ -801,7 +830,7 @@ msgstr ""
 msgid "Order no"
 msgstr ""
 
-#: golf/models.py:593 member/models.py:10
+#: golf/models.py:593 member/models.py:81
 msgid "User"
 msgstr ""
 
@@ -829,7 +858,7 @@ msgstr ""
 msgid "Order status"
 msgstr ""
 
-#: golf/models.py:643
+#: golf/models.py:643 member/models.py:45
 msgid "Total selling price"
 msgstr ""
 
@@ -902,7 +931,8 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:21
+#: member/models.py:16
 msgid "Telephone"
 msgstr ""
 
@@ -1327,10 +1357,42 @@ msgstr ""
 msgid "Invalid phone number format"
 msgstr ""
 
-#: member/models.py:22
+#: member/models.py:23
+msgid "Total order count"
+msgstr ""
+
+#: member/models.py:28
+msgid "First purchased date"
+msgstr ""
+
+#: member/models.py:33
+msgid "Last purchased date"
+msgstr ""
+
+#: member/models.py:38
+msgid "Max price"
+msgstr ""
+
+#: member/models.py:52
+msgid "Average price"
+msgstr ""
+
+#: member/models.py:59
+msgid "Mileage"
+msgstr ""
+
+#: member/models.py:66
+msgid "User memo"
+msgstr ""
+
+#: member/models.py:72
+msgid "Profiles"
+msgstr ""
+
+#: member/models.py:93
 msgid "Login log"
 msgstr ""
 
-#: member/models.py:23
+#: member/models.py:94
 msgid "Login logs"
 msgstr ""
