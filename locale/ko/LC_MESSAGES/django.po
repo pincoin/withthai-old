@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 03:48+0700\n"
+"POT-Creation-Date: 2020-05-31 03:50+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1392,8 +1392,8 @@ msgid "Last name written in English"
 msgstr "남/녀를 구별하는 성별이 아닙니다. (예: HONG)"
 
 #: member/forms.py:25
-msgid "Digits only"
-msgstr "숫자만 입력"
+msgid "Digits or plus sign only"
+msgstr "+또는 숫자만 입력"
 
 #: member/forms.py:28
 msgid "Invalid phone number format"

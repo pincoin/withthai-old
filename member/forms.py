@@ -22,7 +22,7 @@ class MemberSignupForm(forms.Form):
     phone = forms.RegexField(
         label=_('Telephone'),
         widget=forms.TextInput(),
-        help_text=_('Digits only'),
+        help_text=_('Digits or plus sign only'),
         regex=r'^\+?1?\d{9,15}$',
         error_messages={
             'invalid': _('Invalid phone number format'),
