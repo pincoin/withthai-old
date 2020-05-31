@@ -55,7 +55,7 @@
                                                             <ul class="help-text-list">
                                                                 <li>{% trans 'To get booking receipt' %}</li>
                                                                 {% for error in form.email.errors %}
-                                                                    <li class="is-danger">{{ error|escape }}</li>
+                                                                    <li class="has-text-danger">{{ error|escape }}</li>
                                                                 {% endfor %}
                                                             </ul>
                                                         </div>
@@ -84,7 +84,7 @@
                                                             <ul class="help-text-list">
                                                                 <li>{% trans 'Not your personal name' %}</li>
                                                                 {% for error in form.username.errors %}
-                                                                    <li class="is-danger">{{ error|escape }}</li>
+                                                                    <li class="has-text-danger">{{ error|escape }}</li>
                                                                 {% endfor %}
                                                             </ul>
                                                         </div>
@@ -122,7 +122,7 @@
                                                             <ul class="help-text-list">
                                                                 <li>{{ form.first_name.help_text }}</li>
                                                                 {% for error in form.first_name.errors %}
-                                                                    <li class="is-danger">{{ error|escape }}</li>
+                                                                    <li class="has-text-danger">{{ error|escape }}</li>
                                                                 {% endfor %}
                                                             </ul>
                                                         </div>
@@ -148,7 +148,7 @@
                                                             <ul class="help-text-list">
                                                                 <li>{{ form.last_name.help_text }}</li>
                                                                 {% for error in form.last_name.errors %}
-                                                                    <li class="is-danger">{{ error|escape }}</li>
+                                                                    <li class="has-text-danger">{{ error|escape }}</li>
                                                                 {% endfor %}
                                                             </ul>
                                                         </div>
@@ -177,7 +177,7 @@
                                                             <ul class="help-text-list">
                                                                 <li>{{ form.phone.help_text }}</li>
                                                                 {% for error in form.phone.errors %}
-                                                                    <li class="is-danger">{{ error|escape }}</li>
+                                                                    <li class="has-text-danger">{{ error|escape }}</li>
                                                                 {% endfor %}
                                                             </ul>
                                                         </div>

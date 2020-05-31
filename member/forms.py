@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib.auth.models import Group
 from django.core.validators import RegexValidator
 from django.utils.translation import ugettext_lazy as _
 
@@ -37,9 +38,13 @@ class MemberSignupForm(forms.Form):
         user.first_name = self.cleaned_data['first_name'].strip()
         user.last_name = self.cleaned_data['last_name'].strip()
 
+        # Default group: customers
+        g = Group.objects.get(name='customers')
+        user.groups.add(g)
+        user.save()
+
         # Required fields for profile model
         profile = models.Profile()
         profile.user = user
 
-        user.save()
         profile.save()
