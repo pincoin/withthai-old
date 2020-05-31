@@ -27,7 +27,7 @@ class MemberSignupForm(forms.Form):
         label=_('Telephone'),
         widget=forms.TextInput(),
         help_text=_('Digits or plus sign only'),
-        validators=[RegexValidator('^\+?1?\d{9,15}$', message=_('Invalid phone number format')), ],
+        validators=[RegexValidator('^\+?1?\d{9,20}$', message=_('Invalid phone number format')), ],
     )
 
     def __init__(self, *args, **kwargs):
