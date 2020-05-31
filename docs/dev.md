@@ -45,3 +45,12 @@ pip install --upgrade pip
 ```
 pip install django
 ```
+
+## RabbitMQ / Celery 테스트
+```
+rabbitmq-server
+```
+
+```
+DJANGO_SETTINGS_MODULE='conf.settings.local' celery -A conf worker -l info
+```
