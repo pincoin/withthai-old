@@ -25,6 +25,7 @@ class MemberSignupForm(forms.Form):
 
     phone = forms.CharField(
         label=_('Telephone'),
+        max_length=20,
         widget=forms.TextInput(),
         help_text=_('Digits or plus sign only'),
         validators=[RegexValidator('^\+?1?\d{9,20}$', message=_('Invalid phone number format')), ],
