@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 04:14+0700\n"
+"POT-Creation-Date: 2020-05-31 15:25+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,40 +84,40 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:45
+#: allauth/templates/socialaccount/signup.html:46
 msgid "Email"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:54
+#: allauth/templates/socialaccount/signup.html:55
 msgid "To get booking receipt"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
+#: allauth/templates/socialaccount/signup.html:72 conf/models.py:141
 #: help/templates/help/privacy.html:19
 msgid "Username"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:79
+#: allauth/templates/socialaccount/signup.html:81
 msgid "Not your personal name"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:92 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:94 member/models.py:71
 msgid "Profile"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:107
+#: allauth/templates/socialaccount/signup.html:110
 msgid "JOHN"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:129
+#: allauth/templates/socialaccount/signup.html:133
 msgid "DOE"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:151
+#: allauth/templates/socialaccount/signup.html:156
 msgid "+66801231234"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:173
+#: allauth/templates/socialaccount/signup.html:178
 msgid "Sign up"
 msgstr ""
 
@@ -958,7 +958,7 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:31
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
@@ -1376,19 +1376,23 @@ msgstr ""
 msgid "First name written in English"
 msgstr ""
 
-#: member/forms.py:16
+#: member/forms.py:15 member/forms.py:26
+msgid "Uppercase alphabet only"
+msgstr ""
+
+#: member/forms.py:20
 msgid "Last name"
 msgstr ""
 
-#: member/forms.py:18
+#: member/forms.py:22
 msgid "Last name written in English"
 msgstr ""
 
-#: member/forms.py:25
+#: member/forms.py:33
 msgid "Digits or plus sign only"
 msgstr ""
 
-#: member/forms.py:28
+#: member/forms.py:36
 msgid "Invalid phone number format"
 msgstr ""
 

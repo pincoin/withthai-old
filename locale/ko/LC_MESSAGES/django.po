@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 04:14+0700\n"
+"POT-Creation-Date: 2020-05-31 15:25+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -82,40 +82,40 @@ msgstr "SNS 계정으로 위드타이에 회원가입합니다."
 msgid "Account"
 msgstr "계정"
 
-#: allauth/templates/socialaccount/signup.html:45
+#: allauth/templates/socialaccount/signup.html:46
 msgid "Email"
 msgstr "이메일"
 
-#: allauth/templates/socialaccount/signup.html:54
+#: allauth/templates/socialaccount/signup.html:55
 msgid "To get booking receipt"
 msgstr "예약 바우처 수신 이메일입니다."
 
-#: allauth/templates/socialaccount/signup.html:70 conf/models.py:141
+#: allauth/templates/socialaccount/signup.html:72 conf/models.py:141
 #: help/templates/help/privacy.html:19
 msgid "Username"
 msgstr "아이디"
 
-#: allauth/templates/socialaccount/signup.html:79
+#: allauth/templates/socialaccount/signup.html:81
 msgid "Not your personal name"
-msgstr "이름이 아닌 아이디입니다."
+msgstr "회원 이름이 아닌 아이디입니다."
 
-#: allauth/templates/socialaccount/signup.html:92 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:94 member/models.py:71
 msgid "Profile"
 msgstr "프로필"
 
-#: allauth/templates/socialaccount/signup.html:107
+#: allauth/templates/socialaccount/signup.html:110
 msgid "JOHN"
 msgstr "GILDONG"
 
-#: allauth/templates/socialaccount/signup.html:129
+#: allauth/templates/socialaccount/signup.html:133
 msgid "DOE"
 msgstr "HONG"
 
-#: allauth/templates/socialaccount/signup.html:151
+#: allauth/templates/socialaccount/signup.html:156
 msgid "+66801231234"
 msgstr "+821012341234"
 
-#: allauth/templates/socialaccount/signup.html:173
+#: allauth/templates/socialaccount/signup.html:178
 msgid "Sign up"
 msgstr "회원가입"
 
@@ -948,7 +948,7 @@ msgid "Caddie Fee"
 msgstr "캐디피"
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:23
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:31
 #: member/models.py:16
 msgid "Telephone"
 msgstr "전화번호"
@@ -1383,19 +1383,23 @@ msgstr "영문 이름"
 msgid "First name written in English"
 msgstr "성을 빼고 이름만 입력해주세요."
 
-#: member/forms.py:16
+#: member/forms.py:15 member/forms.py:26
+msgid "Uppercase alphabet only"
+msgstr "알파벳 대문자만 입력하세요."
+
+#: member/forms.py:20
 msgid "Last name"
 msgstr "영문 성(姓)"
 
-#: member/forms.py:18
+#: member/forms.py:22
 msgid "Last name written in English"
 msgstr "남/녀를 구별하는 성별이 아닙니다."
 
-#: member/forms.py:25
+#: member/forms.py:33
 msgid "Digits or plus sign only"
 msgstr "+또는 숫자만 입력"
 
-#: member/forms.py:28
+#: member/forms.py:36
 msgid "Invalid phone number format"
 msgstr "잘못된 전화번호 양식"
 

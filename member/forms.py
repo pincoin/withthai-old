@@ -1,4 +1,5 @@
 from django import forms
+from django.core.validators import RegexValidator
 from django.utils.translation import ugettext_lazy as _
 
 from . import models
@@ -10,6 +11,7 @@ class MemberSignupForm(forms.Form):
         max_length=30,
         help_text=_('First name written in English'),
         widget=forms.TextInput(),
+        validators=[RegexValidator('^[A-Z]+$', message=_('Uppercase alphabet only')), ],
     )
 
     last_name = forms.CharField(
@@ -17,16 +19,14 @@ class MemberSignupForm(forms.Form):
         max_length=30,
         help_text=_('Last name written in English'),
         widget=forms.TextInput(),
+        validators=[RegexValidator('^[A-Z]+$', message=_('Uppercase alphabet only')), ],
     )
 
-    phone = forms.RegexField(
+    phone = forms.CharField(
         label=_('Telephone'),
         widget=forms.TextInput(),
         help_text=_('Digits or plus sign only'),
-        regex=r'^\+?1?\d{9,15}$',
-        error_messages={
-            'invalid': _('Invalid phone number format'),
-        }
+        validators=[RegexValidator('^\+?1?\d{9,15}$', message=_('Invalid phone number format')), ],
     )
 
     def __init__(self, *args, **kwargs):
