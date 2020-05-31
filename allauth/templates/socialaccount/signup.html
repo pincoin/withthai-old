@@ -4,7 +4,7 @@
 
 {% block main %}
     <main>
-        <div class="section sign-up-top-margin">
+        <div class="section sign-up-margin">
             <form class="form" method="post" class="container">
                 {% csrf_token %}
 
@@ -168,7 +168,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="column is-three-fifths is-offset-one-fifth">
+                    <div class="column is-three-fifths is-offset-one-fifth sign-up-button">
                         <button type="submit" class="button is-fullwidth is-primary" type="submit">
                             {% trans "Sign up" %}
                         </button>
