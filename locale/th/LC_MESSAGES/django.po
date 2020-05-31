@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 15:25+0700\n"
+"POT-Creation-Date: 2020-05-31 20:29+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,6 +50,14 @@ msgstr ""
 msgid "We are sorry, but the sign up is currently closed."
 msgstr ""
 
+#: allauth/templates/account/translations.html:3
+msgid "username"
+msgstr ""
+
+#: allauth/templates/account/translations.html:4
+msgid "A user with that username already exists."
+msgstr ""
+
 #: allauth/templates/socialaccount/authentication_error.html:5
 #: allauth/templates/socialaccount/authentication_error.html:15
 msgid "SNS LOGIN FAILURE"
@@ -70,52 +78,52 @@ msgid ""
 "accounts."
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:13
+#: allauth/templates/socialaccount/signup.html:14
 msgid "SIGN UP"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:19
+#: allauth/templates/socialaccount/signup.html:20
 msgid "You are about to use your SNS account to login to WITH THAI."
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:30
+#: allauth/templates/socialaccount/signup.html:31
 msgid "Account"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:46
+#: allauth/templates/socialaccount/signup.html:47
 msgid "Email"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:55
+#: allauth/templates/socialaccount/signup.html:56
 msgid "To get booking receipt"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:72 conf/models.py:141
+#: allauth/templates/socialaccount/signup.html:76 conf/models.py:141
 #: help/templates/help/privacy.html:19
 msgid "Username"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:81
+#: allauth/templates/socialaccount/signup.html:85
 msgid "Not your personal name"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:94 member/models.py:71
+#: allauth/templates/socialaccount/signup.html:101 member/models.py:71
 msgid "Profile"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:110
+#: allauth/templates/socialaccount/signup.html:117
 msgid "JOHN"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:133
+#: allauth/templates/socialaccount/signup.html:143
 msgid "DOE"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:156
+#: allauth/templates/socialaccount/signup.html:169
 msgid "+66801231234"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:178
+#: allauth/templates/socialaccount/signup.html:194
 msgid "Sign up"
 msgstr ""
 
@@ -318,49 +326,49 @@ msgstr "วิธไทย"
 msgid "MY BOOKING"
 msgstr ""
 
-#: conf/templates/conf/base.html:300 help/templates/help/terms.html:79
+#: conf/templates/conf/base.html:302 help/templates/help/terms.html:79
 msgid "WITH THAI Co., Ltd."
 msgstr "บริษัท วิธไทย จำกัด"
 
-#: conf/templates/conf/base.html:303
+#: conf/templates/conf/base.html:305
 msgid ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
 msgstr ""
 
-#: conf/templates/conf/base.html:306
+#: conf/templates/conf/base.html:308
 msgid "TAX ID: 0105563049000"
 msgstr "TAX ID: 0105563049000"
 
-#: conf/templates/conf/base.html:309
+#: conf/templates/conf/base.html:311
 msgid "TAT License: 14/03216"
 msgstr "TAT License: 14/03216"
 
-#: conf/templates/conf/base.html:317 help/apps.py:7
+#: conf/templates/conf/base.html:319 help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:321 help/templates/help/guide.html:11
+#: conf/templates/conf/base.html:323 help/templates/help/guide.html:11
 msgid "GUIDE"
 msgstr ""
 
-#: conf/templates/conf/base.html:327
+#: conf/templates/conf/base.html:329
 msgid "FAQ/How-to"
 msgstr ""
 
-#: conf/templates/conf/base.html:332 help/templates/help/terms.html:11
+#: conf/templates/conf/base.html:334 help/templates/help/terms.html:11
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:335 help/templates/help/privacy.html:11
+#: conf/templates/conf/base.html:337 help/templates/help/privacy.html:11
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:340
+#: conf/templates/conf/base.html:342
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:345
+#: conf/templates/conf/base.html:347
 msgid "CONTACT US"
 msgstr ""
 
@@ -952,7 +960,7 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:31
+#: golf/templates/golf/golf-club-booking-form.html:461 member/forms.py:27
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
@@ -1364,31 +1372,31 @@ msgstr ""
 msgid "Member"
 msgstr ""
 
-#: member/forms.py:9
+#: member/forms.py:11
 msgid "First name"
 msgstr ""
 
-#: member/forms.py:11
+#: member/forms.py:13
 msgid "First name written in English"
 msgstr ""
 
-#: member/forms.py:15 member/forms.py:26
+#: member/forms.py:15 member/forms.py:23
 msgid "Uppercase alphabet only"
 msgstr ""
 
-#: member/forms.py:20
+#: member/forms.py:19
 msgid "Last name"
 msgstr ""
 
-#: member/forms.py:22
+#: member/forms.py:21
 msgid "Last name written in English"
 msgstr ""
 
-#: member/forms.py:33
+#: member/forms.py:29
 msgid "Digits or plus sign only"
 msgstr ""
 
-#: member/forms.py:36
+#: member/forms.py:30
 msgid "Invalid phone number format"
 msgstr ""
 
