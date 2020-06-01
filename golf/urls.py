@@ -16,4 +16,7 @@ urlpatterns = [
 
     path('club/<slug:slug>/',
          views.GolfClubBookingForm.as_view(), name='golf-club-booking'),
+
+    path('club/<slug:slug>.json',
+         views.GolfClubBookingJson.as_view(), name='golf-club-booking-json'),
 ]

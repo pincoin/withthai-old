@@ -1,6 +1,6 @@
-$('#round_date').flatpickr();
+$('#id_round_date').flatpickr();
 
-$('#round_time').flatpickr({
+$('#id_round_time').flatpickr({
     enableTime: true,
     noCalendar: true,
     dateFormat: "H:i",

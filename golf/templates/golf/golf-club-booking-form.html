@@ -189,7 +189,7 @@
                                                                        type="date"
                                                                        id="{{ form.round_date.id_for_label }}"
                                                                        name="{{ form.round_date.name }}"
-                                                                       value="{{ form.round_date.value }}"
+                                                                       value="{{ form.round_date.value|default_if_none:"" }}"
                                                                        placeholder="YYYY-MM-DD">
                                                             </div>
                                                             <div class="control{% if form.round_date.errors and not form.round_time.errors %} time-input-margin{% endif %}">
@@ -197,7 +197,7 @@
                                                                        type="time"
                                                                        id="{{ form.round_time.id_for_label }}"
                                                                        name="{{ form.round_time.name }}"
-                                                                       value="{{ form.round_time.value }}"
+                                                                       value="{{ form.round_time.value|default_if_none:"" }}"
                                                                        placeholder="HH:MM" step="60">
                                                             </div>
                                                         </div>
@@ -538,6 +538,7 @@
     {{ block.super }}
     <script src="//cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{% static 'golf/js/datepicker.js' %}"></script>
+    <script src="{% static 'golf/js/main.js' %}"></script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap">
     </script>

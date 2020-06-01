@@ -2,6 +2,7 @@ import logging
 
 from django.conf import settings
 from django.core.cache import cache
+from django.http import JsonResponse
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -130,3 +131,58 @@ class GolfClubBookingForm(generic.CreateView):
 
     def get_success_url(self):
         return reverse('golf:golf-club-list', args=())
+
+
+class GolfClubBookingJson(generic.TemplateView):
+    def render_to_response(self, context, **response_kwargs):
+        data = {
+            'rates': [],
+            'holidays': []
+        }
+
+        cache_key = 'golf.GolfClubBookingJson.render_to_response(rates,{})'.format(self.kwargs['slug'])
+        cache_time = settings.CACHES['default']['TIMEOUT_DAY']
+
+        rates = cache.get(cache_key)
+
+        if not rates:
+            rates = models.Rate.objects \
+                .filter(club__slug=self.kwargs['slug'],
+                        season_end__gt=timezone.make_aware(timezone.localtime().today())) \
+                .order_by('season_start', 'day_of_week', 'slot_start')
+
+            cache.set(cache_key, rates, cache_time)
+
+        for rate in rates:
+            data['rates'].append({
+                'season_start': rate.season_start,
+                'season_end': rate.season_end,
+                'weekday': rate.day_of_week,
+                'slot_start': rate.slot_start.strftime('%H:%M'),
+                'slot_end': rate.slot_end.strftime('%H:%M'),
+                'green_fee': int(rate.green_fee_selling_price),
+            })
+
+        cache_key = 'golf.GolfClubBookingJson.render_to_response(holidays)'
+
+        holidays = cache.get(cache_key)
+
+        if not holidays:
+            holidays = models.Holiday.objects \
+                .filter(holiday__gte=timezone.make_aware(timezone.localtime().today()))
+
+            cache.set(cache_key, holidays, cache_time)
+
+        for holiday in holidays:
+            data['holidays'].append(holiday.holiday)
+
+        return JsonResponse(
+            data,
+            json_dumps_params={'ensure_ascii': False},
+            **response_kwargs
+        )
+
+    def get_queryset(self):
+        return models.Rate.objects \
+            .filter(club__slug=self.kwargs['slug'], season_end__gt=timezone.make_aware(timezone.localtime().today())) \
+            .order_by('season_start', 'day_of_week', 'slot_start')
