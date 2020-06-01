@@ -125,6 +125,12 @@ main {
     overflow-y: scroll;
 }
 
+#left-sidebar-close:link, #left-sidebar-close:visited, #right-sidebar-close:link, #right-sidebar-close:visited {
+    color: #03353e;
+    font-size: 1.5rem;
+    margin-top: -.3rem;
+}
+
 /* Home */
 .club-list-item .columns {
     box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);

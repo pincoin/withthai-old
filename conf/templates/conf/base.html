@@ -148,6 +148,9 @@
             <ul>
                 <li class="submenu-heading">
                     <a href="{% url 'home' %}">{% trans 'WITH THAI' %}</a>
+                    <a href="#" class="is-pulled-right" id="left-sidebar-close">
+                        <i class="fas fa-times"></i>
+                    </a>
                 </li>
                 <li class="submenu-item">
                     <form class="control has-icons-left">
@@ -206,6 +209,9 @@
             <ul>
                 <li class="submenu-heading">
                     <a href="#">{% trans 'MY WITH THAI' %}</a>
+                    <a href="#" class="is-pulled-right" id="right-sidebar-close">
+                        <i class="fas fa-times"></i>
+                    </a>
                 </li>
                 {% if user.is_authenticated %}
                     <li class="submenu-item">

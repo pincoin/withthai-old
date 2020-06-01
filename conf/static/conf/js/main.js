@@ -32,7 +32,7 @@ $(document).ready(function () {
         $('html').addClass('is-clipped');
     });
 
-    $('.modal-background').on('click', function() {
+    $('.modal-background, #left-sidebar-close, #right-sidebar-close').on('click', function() {
         $('#left-sidebar').removeClass('is-active');
         $('#right-sidebar').removeClass('is-active');
         $('html').removeClass('is-clipped');
