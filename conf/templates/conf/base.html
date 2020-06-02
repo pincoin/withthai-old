@@ -22,8 +22,10 @@
               integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous"/>
         {% if LANGUAGE_CODE == 'th' %}
             <link href="{% static 'conf/css/sarabun.css' %}" rel="stylesheet">
-        {% else %}
+        {% elif LANGUAGE_CODE == 'ko' %}
             <link href="{% static 'conf/css/godo.css' %}" rel="stylesheet">
+        {% else %}
+            <link href="{% static 'conf/css/arvo.css' %}" rel="stylesheet">
         {% endif %}
         <link type="text/css" href="{% static 'conf/css/withthai.css' %}"
               media="screen,projection" rel="stylesheet"/>
@@ -77,12 +79,6 @@
                     <a href="{% url 'magazine:home' %}" class="navbar-item">
                         {% trans 'MAGAZINE' %}
                     </a>
-                    <div class="navbar-item">
-                        <form class="control has-icons-left">
-                            <input class="input" type="text" placeholder="{% trans 'Search...' %}">
-                            <span class="icon is-small is-left"><i class="fas fa-search fa-fw"></i></span>
-                        </form>
-                    </div>
                 </div>
 
                 <div class="navbar-end">
