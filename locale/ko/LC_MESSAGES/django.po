@@ -981,7 +981,7 @@ msgstr "그린피"
 
 #: golf/templates/golf/golf-club-booking-form.html:286
 msgid "Total"
-msgstr "합계"
+msgstr "결제액"
 
 #: golf/templates/golf/golf-club-booking-form.html:309
 msgid "You have to pay caddie fee and cart fee at golf course."

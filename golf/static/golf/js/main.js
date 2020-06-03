@@ -41,7 +41,7 @@ $(document).ready(function () {
                     break;
             }
 
-            out = false;
+            let out1 = false;
 
             for (i = 0; i < rates.length; i++) {
                 if (rates[i]['weekday'] === weekday) {
@@ -63,16 +63,25 @@ $(document).ready(function () {
                             parseInt(slot_start[0], 10), parseInt(slot_start[1], 10))
                             && rtime.getTime() <= new Date(2020, 0, 1,
                                 parseInt(slot_end[0], 10), parseInt(slot_end[1], 10))) {
+                            $('#green-fee-block').removeClass('is-hidden');
                             $('#id_green_fee').val(intcomma(rates[i]['green_fee']));
+
+                            $('#total-block').removeClass('is-hidden');
                             $('#id_total').val(intcomma(rates[i]['green_fee'] * pax));
 
-                            out = true;
+                            out1 = true;
                             break;
                         }
                     }
                 }
-                if (out)
+                if (out1) {
                     break;
+                }
+            }
+
+            if (!out1) {
+                $('#green-fee-block').addClass('is-hidden');
+                $('#total-block').addClass('is-hidden');
             }
 
             console.log(out);

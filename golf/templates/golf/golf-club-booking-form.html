@@ -246,25 +246,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="field is-horizontal">
-                                                    <div class="field-label is-normal">
-                                                        <label class="label"
-                                                               for="id_green_fee">{% trans 'Green Fee' %}</label>
-                                                    </div>
-                                                    <div class="field-body">
-                                                        <div class="field has-addons">
-                                                            <div class="control is-expanded">
-                                                                <input type="text" class="input has-text-right" readonly
-                                                                       id="id_green_fee" value="0">
-                                                            </div>
-                                                            <div class="control">
-                                                                <a class="button is-static">
-                                                                    {% trans 'THB' %}
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                                 {% if form.pax.errors %}
                                                     <div class="field is-horizontal">
                                                         <div class="field-label"></div>
@@ -281,14 +262,37 @@
                                                         </div>
                                                     </div>
                                                 {% endif %}
-                                                <div class="field is-horizontal">
+                                                <div class="field is-horizontal is-hidden" id="green-fee-block">
+                                                    <div class="field-label is-normal">
+                                                        <label class="label"
+                                                               for="id_green_fee">{% trans 'Green Fee' %}</label>
+                                                    </div>
+                                                    <div class="field-body">
+                                                        <div class="field has-addons">
+                                                            <div class="control is-expanded">
+                                                                <input type="text"
+                                                                       class="input has-text-right has-text-weight-bold"
+                                                                       readonly
+                                                                       id="id_green_fee" value="0">
+                                                            </div>
+                                                            <div class="control">
+                                                                <a class="button is-static">
+                                                                    {% trans 'THB' %}
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal is-hidden" id="total-block">
                                                     <div class="field-label is-normal">
                                                         <label class="label" for="id_total">{% trans 'Total' %}</label>
                                                     </div>
                                                     <div class="field-body">
                                                         <div class="field has-addons">
                                                             <div class="control is-expanded">
-                                                                <input type="text" class="input has-text-right" readonly
+                                                                <input type="text"
+                                                                       class="input has-text-right has-text-weight-bold"
+                                                                       readonly
                                                                        id="id_total" value="0">
                                                             </div>
                                                             <div class="control">
