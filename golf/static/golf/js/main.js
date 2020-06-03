@@ -63,9 +63,8 @@ $(document).ready(function () {
                             parseInt(slot_start[0], 10), parseInt(slot_start[1], 10))
                             && rtime.getTime() <= new Date(2020, 0, 1,
                                 parseInt(slot_end[0], 10), parseInt(slot_end[1], 10))) {
-                            console.log(rates[i]['green_fee']);
-                            console.log(pax);
-                            console.log(intcomma(rates[i]['green_fee'] * pax));
+                            $('#id_green_fee').val(intcomma(rates[i]['green_fee']));
+                            $('#id_total').val(intcomma(rates[i]['green_fee'] * pax));
 
                             out = true;
                             break;
