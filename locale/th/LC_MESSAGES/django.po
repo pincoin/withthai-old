@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-31 20:29+0700\n"
+"POT-Creation-Date: 2020-06-03 17:59+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: allauth/templates/account/signup_closed.html:32
 #: allauth/templates/socialaccount/authentication_error.html:32
 #: allauth/templates/socialaccount/login_cancelled.html:32
-#: conf/templates/conf/base.html:114 conf/templates/conf/base.html:221
+#: conf/templates/conf/base.html:110 conf/templates/conf/base.html:223
 msgid "SIGN IN"
 msgstr ""
 
@@ -32,8 +32,8 @@ msgstr ""
 
 #: allauth/templates/account/logout.html:5
 #: allauth/templates/account/logout.html:14
-#: allauth/templates/account/logout.html:34 conf/templates/conf/base.html:109
-#: conf/templates/conf/base.html:214
+#: allauth/templates/account/logout.html:34 conf/templates/conf/base.html:105
+#: conf/templates/conf/base.html:216
 msgid "SIGN OUT"
 msgstr ""
 
@@ -269,106 +269,106 @@ msgstr ""
 msgid "Chinese"
 msgstr ""
 
-#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:53
-#: conf/templates/conf/base.html:55 conf/templates/conf/base.html:150
+#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:55
+#: conf/templates/conf/base.html:57 conf/templates/conf/base.html:146
 #: help/templates/help/about.html:12
 msgid "WITH THAI"
 msgstr "วิธไทย"
 
-#: conf/templates/conf/base.html:66 conf/templates/conf/base.html:160
-#: conf/templates/conf/base.html:184 golf/templates/golf/golf-club-list.html:12
+#: conf/templates/conf/base.html:68 conf/templates/conf/base.html:159
+#: conf/templates/conf/base.html:183 golf/templates/golf/golf-club-list.html:12
 msgid "GOLF"
 msgstr "กอล์ฟ"
 
-#: conf/templates/conf/base.html:69 conf/templates/conf/base.html:189
+#: conf/templates/conf/base.html:71 conf/templates/conf/base.html:188
 msgid "HOTEL"
 msgstr "โรงแรม"
 
-#: conf/templates/conf/base.html:72 magazine/templates/magazine/base.html:27
+#: conf/templates/conf/base.html:74 magazine/templates/magazine/base.html:27
 msgid "HOT DEALS"
 msgstr ""
 
-#: conf/templates/conf/base.html:75 magazine/templates/magazine/base.html:32
+#: conf/templates/conf/base.html:77 magazine/templates/magazine/base.html:32
 msgid "PROMOTIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:78 conf/templates/conf/base.html:194
+#: conf/templates/conf/base.html:80 conf/templates/conf/base.html:193
 msgid "MAGAZINE"
 msgstr ""
 
-#: conf/templates/conf/base.html:82 conf/templates/conf/base.html:154
-msgid "Search..."
-msgstr ""
-
-#: conf/templates/conf/base.html:91
+#: conf/templates/conf/base.html:87
 msgid "BOOKING"
 msgstr ""
 
-#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:234
+#: conf/templates/conf/base.html:91 conf/templates/conf/base.html:236
 msgid "FAVORITES"
 msgstr ""
 
-#: conf/templates/conf/base.html:99 conf/templates/conf/base.html:246
+#: conf/templates/conf/base.html:95 conf/templates/conf/base.html:248
 msgid "HELP"
 msgstr ""
 
-#: conf/templates/conf/base.html:103 conf/templates/conf/base.html:240
+#: conf/templates/conf/base.html:99 conf/templates/conf/base.html:242
 msgid "MY PAGE"
 msgstr ""
 
-#: conf/templates/conf/base.html:208
+#: conf/templates/conf/base.html:153
+msgid "Search..."
+msgstr ""
+
+#: conf/templates/conf/base.html:207
 #, fuzzy
 #| msgid "WITH THAI"
 msgid "MY WITH THAI"
 msgstr "วิธไทย"
 
-#: conf/templates/conf/base.html:228
+#: conf/templates/conf/base.html:230
 msgid "MY BOOKING"
 msgstr ""
 
-#: conf/templates/conf/base.html:302 help/templates/help/terms.html:79
+#: conf/templates/conf/base.html:304 help/templates/help/terms.html:79
 msgid "WITH THAI Co., Ltd."
 msgstr "บริษัท วิธไทย จำกัด"
 
-#: conf/templates/conf/base.html:305
+#: conf/templates/conf/base.html:307
 msgid ""
 "Ekkamai No. 30 Sukhumvit (settabut) soi. 61 Klongton Nua, Wattana, Bangkok "
 "10110"
 msgstr ""
 
-#: conf/templates/conf/base.html:308
+#: conf/templates/conf/base.html:310
 msgid "TAX ID: 0105563049000"
 msgstr "TAX ID: 0105563049000"
 
-#: conf/templates/conf/base.html:311
+#: conf/templates/conf/base.html:313
 msgid "TAT License: 14/03216"
 msgstr "TAT License: 14/03216"
 
-#: conf/templates/conf/base.html:319 help/apps.py:7
+#: conf/templates/conf/base.html:321 help/apps.py:7
 msgid "Help"
 msgstr "Help"
 
-#: conf/templates/conf/base.html:323 help/templates/help/guide.html:11
+#: conf/templates/conf/base.html:325 help/templates/help/guide.html:11
 msgid "GUIDE"
 msgstr ""
 
-#: conf/templates/conf/base.html:329
-msgid "FAQ/How-to"
+#: conf/templates/conf/base.html:331
+msgid "FAQ/HOW-TO"
 msgstr ""
 
-#: conf/templates/conf/base.html:334 help/templates/help/terms.html:11
+#: conf/templates/conf/base.html:336 help/templates/help/terms.html:11
 msgid "TERMS &amp; CONDITIONS"
 msgstr ""
 
-#: conf/templates/conf/base.html:337 help/templates/help/privacy.html:11
+#: conf/templates/conf/base.html:339 help/templates/help/privacy.html:11
 msgid "PRIVACY POLICY"
 msgstr ""
 
-#: conf/templates/conf/base.html:342
+#: conf/templates/conf/base.html:344
 msgid "ABOUT US"
 msgstr ""
 
-#: conf/templates/conf/base.html:347
+#: conf/templates/conf/base.html:349
 msgid "CONTACT US"
 msgstr ""
 
@@ -1079,7 +1079,7 @@ msgstr ""
 msgid "Rain Check"
 msgstr ""
 
-#: golf/views.py:120
+#: golf/views.py:121
 msgid "No language set"
 msgstr ""
 
@@ -1392,11 +1392,11 @@ msgstr ""
 msgid "Last name written in English"
 msgstr ""
 
-#: member/forms.py:29
+#: member/forms.py:30
 msgid "Digits or plus sign only"
 msgstr ""
 
-#: member/forms.py:30
+#: member/forms.py:31
 msgid "Invalid phone number format"
 msgstr ""
 
