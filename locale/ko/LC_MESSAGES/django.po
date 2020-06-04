@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 23:08+0700\n"
+"POT-Creation-Date: 2020-06-04 23:14+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -976,23 +976,19 @@ msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
 msgstr "캐디피와 카트피, 캐디팁은 라운드 당일 골프장에서 직접 지불해야 합니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:74
-#: golf/templates/golf/golf-club-booking-form.html:527
 msgid "At Bag Drop"
 msgstr "백드롭에서"
 
 #: golf/templates/golf/_golf-club-booking-details.html:78
-#: golf/templates/golf/golf-club-booking-form.html:531
 msgid ""
 "You need to arrive golf course about half of an hour before tee-off time."
 msgstr "티오프 30분 전에 백드롭에 도착합니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:81
-#: golf/templates/golf/golf-club-booking-form.html:534
 msgid "You may drop off your golf bags after presenting your booking voucher."
 msgstr "예약 바우처를 제시하고 골프백을 내려놓습니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:84
-#: golf/templates/golf/golf-club-booking-form.html:537
 msgid "You have to notify staffs whether you will use a golf cart or not."
 msgstr "카트 이용 여부를 직원에게 말합니다."
 
@@ -1199,6 +1195,10 @@ msgstr "전액 환불 불가"
 #: golf/templates/golf/golf-club-booking-form.html:521
 msgid "Rain Check"
 msgstr "우천 시 규정"
+
+#: golf/templates/golf/golf-club-booking-form.html:527
+msgid "We obey the rules of golf clubs"
+msgstr "위드타이는 골프장의 규정을 준수합니다."
 
 #: golf/views.py:121
 msgid "No language set"
