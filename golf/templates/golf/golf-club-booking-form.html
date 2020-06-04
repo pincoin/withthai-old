@@ -530,49 +530,74 @@
                             </header>
                             <div class="card-content">
                                 <div class="content">
-                                    <ul class="has-margin-top-0">
-                                        <li>{% trans 'Online Booking' %}</li>
+                                    <ul class="booking-description">
+                                        <li class="has-text-weight-bold">{% trans 'Online Booking' %}</li>
                                         <li>
                                             <ul>
-                                                <li>위드타이 온라인 예약단계에서는 최소한의 비용으로 그린피만 결제합니다.</li>
-                                                <li>캐디피와 카트피, 캐디팁은 골프장에서 직접 지불해야 합니다.</li>
+                                                <li>
+                                                    {% trans 'You need to pay green fee only at minimum cost during online booking process at WITH THAI.' %}
+                                                </li>
+                                                <li class="has-text-weight-bold has-text-danger">
+                                                    {% trans 'You have to pay caddie fee, cart fee and caddie tip at golf course.' %}
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li>{% trans 'At Bag Drop' %}</li>
+                                        <li class="has-text-weight-bold">{% trans 'At Bag Drop' %}</li>
                                         <li>
                                             <ul>
-                                                <li>티오프 30분 전에 백드롭에 도착합니다.</li>
-                                                <li>예약 바우처를 제시하고 골프백을 내려놓습니다.</li>
-                                                <li>카트 이용 여부를 직원에게 말합니다.</li>
+                                                <li>
+                                                    {% trans 'You need to arrive golf course about half of an hour before tee-off time.' %}
+                                                </li>
+                                                <li>
+                                                    {% trans 'You may drop off your golf bags after showing your booking voucher.' %}
+                                                </li>
+                                                <li>
+                                                    {% trans 'You have to notify staffs whether you will use a golf cart or not.' %}
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li>{% trans 'At Pro Shop' %}</li>
+                                        <li class="has-text-weight-bold">{% trans 'At Pro Shop' %}</li>
                                         <li>
                                             <ul>
-                                                <li>예약 바우처를 제시하고 캐디피를 지불합니다.</li>
-                                                <li>카트 이용할 경우 카트피를 지불합니다. 일부 골프장은 카트 이용 의무입니다.</li>
-                                                <li>캐디피와 카트피는 신용카드 또는 현금으로 결제 가능합니다.</li>
-                                                <li>캐디피와 카트피를 지불 후 티켓을 수령합니다.</li>
+                                                <li>
+                                                    {% trans 'You must pay caddie fee after submitting your booking voucher.' %}
+                                                </li>
+                                                <li>
+                                                    {% trans 'You may have to pay cart fee if you would like to use a golf cart. It is mandatory that golfers use golf carts at some golf courses.' %}
+                                                </li>
+                                                <li>
+                                                    {% trans 'You can receive your ticket after caddie fee and cart fee payment.' %}</li>
                                             </ul>
                                         </li>
-                                        <li>{% trans 'At Locker Room' %}</li>
+                                        <li class="has-text-weight-bold">{% trans 'At Locker Room' %}</li>
                                         <li>
                                             <ul>
-                                                <li>라커룸에 복장을 준비하고 소지품을 보관합니다.</li>
-                                                <li>고가의 귀중품은 라커룸에 있는 직원에게 별도로 보관을 문의하십시오.</li>
+                                                <li>
+                                                    {% trans 'You can store your personal belongings securely in lockers and change your clothes.' %}
+                                                </li>
+                                                <li>
+                                                    {% trans 'It is strongly recommended not to store valuable items in any lockers.' %}
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li>{% trans 'At Starter' %}</li>
+                                        <li class="has-text-weight-bold">{% trans 'At Starter' %}</li>
                                         <li>
                                             <ul>
-                                                <li>스타터에게 프로샵에서 받은 티켓을 전달합니다.</li>
-                                                <li>1~2인은 통상적으로 조인하여 플레이합니다.</li>
+                                                <li>
+                                                    {% trans 'You submit your tickets to starter staff.' %}
+
+                                                </li>
+                                                <li>
+                                                    {% trans 'You may have to join with other players if you are 1 or 2 players.' %}
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li>{% trans 'After Your Round' %}</li>
+                                        <li class="has-text-weight-bold">{% trans 'After Your Round' %}</li>
                                         <li>
                                             <ul>
-                                                <li>18홀 플레이를 마치면 캐디팁을 캐디피만큼 현금으로 지불합니다. 서비스 만족도에 따라 추가로 지불할 수도 있습니다.</li>
+                                                <li>
+                                                    {% trans 'You have to tip your caddie as much as caddie fee in cash after game.' %}
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>

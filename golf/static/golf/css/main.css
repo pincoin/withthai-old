@@ -15,10 +15,22 @@
     height: 150px;
 }
 
-
 .club-list-item .columns {
     box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+}
+
+.booking-description {
+    margin: 0 0 0 .5rem !important;
+}
+
+.booking-description li {
+    list-style-type: none !important;
+    padding: .3rem 0;
+}
+
+.booking-description ul {
+    margin: 0 0 0 .5rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -28,6 +40,12 @@
 
     .location-item {
         padding: .3rem .7rem;
+    }
+
+    .booking-description li ul li {
+        list-style-type: disc !important;
+        padding: .3rem 0;
+        margin-left: 1rem;
     }
 }
 
@@ -64,6 +82,11 @@
 
     .rate-table tr td, .rate-table tr th {
         padding: .5rem;
+    }
+
+    .booking-description li ul li {
+        list-style-type: disc !important;
+        padding: .3rem 0;
     }
 }
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 17:37+0700\n"
+"POT-Creation-Date: 2020-06-04 19:17+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1081,31 +1081,94 @@ msgstr "예약 및 이용 안내"
 msgid "Online Booking"
 msgstr "온라인 예약"
 
+#: golf/templates/golf/golf-club-booking-form.html:538
+msgid ""
+"You need to pay green fee only at minimum cost during online booking process "
+"at WITH THAI."
+msgstr "위드타이 온라인 예약단계에서는 최소한의 비용으로 그린피만 결제합니다."
+
 #: golf/templates/golf/golf-club-booking-form.html:541
+msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
+msgstr "캐디피와 카트피, 캐디팁은 골프장에서 직접 지불해야 합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:545
 msgid "At Bag Drop"
 msgstr "백드롭에서"
 
 #: golf/templates/golf/golf-club-booking-form.html:549
+msgid ""
+"You need to arrive golf course about half of an hour before tee-off time."
+msgstr "티오프 30분 전에 백드롭에 도착합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:552
+msgid "You may drop off your golf bags after showing your booking voucher."
+msgstr "예약 바우처를 제시하고 골프백을 내려놓습니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:555
+msgid "You have to notify staffs whether you will use a golf cart or not."
+msgstr "카트 이용 여부를 직원에게 말합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:559
 msgid "At Pro Shop"
 msgstr "프로샵에서"
 
-#: golf/templates/golf/golf-club-booking-form.html:558
+#: golf/templates/golf/golf-club-booking-form.html:563
+msgid "You must pay caddie fee after submitting your booking voucher."
+msgstr "예약 바우처를 제시하고 캐디피를 지불합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:566
+msgid ""
+"You may have to pay cart fee if you would like to use a golf cart. It is "
+"mandatory that golfers use golf carts at some golf courses."
+msgstr ""
+"카트 이용할 경우 카트피를 지불합니다. 일부 골프장은 카트 이용 의무입니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:569
+msgid "You can receive your ticket after caddie fee and cart fee payment."
+msgstr "캐디피와 카트피를 지불 후 티켓을 수령합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:572
 msgid "At Locker Room"
 msgstr "라커룸에서"
 
-#: golf/templates/golf/golf-club-booking-form.html:565
+#: golf/templates/golf/golf-club-booking-form.html:576
+msgid ""
+"You can store your personal belongings securely in lockers and change your "
+"clothes."
+msgstr "라커룸에 복장을 준비하고 소지품을 보관합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:579
+msgid "It is strongly recommended not to store valuable items in any lockers."
+msgstr ""
+"고가의 귀중품은 라커에 보관하지 않습니다. 골프장은 통상적으로 분실 시 책임을 "
+"지지 않습니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:583
 msgid "At Starter"
 msgstr "스타터에서"
 
-#: golf/templates/golf/golf-club-booking-form.html:572
+#: golf/templates/golf/golf-club-booking-form.html:587
+msgid "You submit your tickets to starter staff."
+msgstr "스타터에게 프로샵에서 받은 티켓을 전달합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:591
+msgid "You may have to join with other players if you are 1 or 2 players."
+msgstr "1~2인은 통상적으로 조인하여 플레이합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:595
 msgid "After Your Round"
 msgstr "라운드를 마치고"
 
-#: golf/templates/golf/golf-club-booking-form.html:587
+#: golf/templates/golf/golf-club-booking-form.html:599
+msgid "You have to tip your caddie as much as caddie fee in cash after game."
+msgstr ""
+"18홀 플레이를 마치면 통상적으로 캐디팁을 캐디피만큼 바트 현금으로 지불합니다."
+
+#: golf/templates/golf/golf-club-booking-form.html:612
 msgid "Cancel Policy"
 msgstr "취소 규정"
 
-#: golf/templates/golf/golf-club-booking-form.html:600
+#: golf/templates/golf/golf-club-booking-form.html:625
 msgid "Rain Check"
 msgstr "우천 시 규정"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 17:37+0700\n"
+"POT-Creation-Date: 2020-06-04 19:17+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1079,31 +1079,90 @@ msgstr ""
 msgid "Online Booking"
 msgstr ""
 
+#: golf/templates/golf/golf-club-booking-form.html:538
+msgid ""
+"You need to pay green fee only at minimum cost during online booking process "
+"at WITH THAI."
+msgstr ""
+
 #: golf/templates/golf/golf-club-booking-form.html:541
+msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:545
 msgid "At Bag Drop"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:549
+msgid ""
+"You need to arrive golf course about half of an hour before tee-off time."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:552
+msgid "You may drop off your golf bags after showing your booking voucher."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:555
+msgid "You have to notify staffs whether you will use a golf cart or not."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:559
 msgid "At Pro Shop"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:558
-msgid "At Locker Room"
+#: golf/templates/golf/golf-club-booking-form.html:563
+msgid "You must pay caddie fee after submitting your booking voucher."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:565
-msgid "At Starter"
+#: golf/templates/golf/golf-club-booking-form.html:566
+msgid ""
+"You may have to pay cart fee if you would like to use a golf cart. It is "
+"mandatory that golfers use golf carts at some golf courses."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:569
+msgid "You can receive your ticket after caddie fee and cart fee payment."
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:572
-msgid "After Your Round"
+msgid "At Locker Room"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:576
+msgid ""
+"You can store your personal belongings securely in lockers and change your "
+"clothes."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:579
+msgid "It is strongly recommended not to store valuable items in any lockers."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:583
+msgid "At Starter"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:587
+msgid "You submit your tickets to starter staff."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:591
+msgid "You may have to join with other players if you are 1 or 2 players."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:595
+msgid "After Your Round"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:599
+msgid "You have to tip your caddie as much as caddie fee in cash after game."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:612
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:600
+#: golf/templates/golf/golf-club-booking-form.html:625
 msgid "Rain Check"
 msgstr ""
 
