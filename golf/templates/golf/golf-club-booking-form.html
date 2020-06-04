@@ -519,13 +519,14 @@
         let rates;
         let holidays;
 
-        $.getJSON('{% url 'golf:golf-club-booking-json' club.slug %}', function (data) {
-            rates = data['rates'];
-            holidays = data['holidays'];
+        $(document).ready(function () {
+            $.getJSON('{% url 'golf:golf-club-booking-json' club.slug %}', function (data) {
+                rates = data['rates'];
+                holidays = data['holidays'];
+            });
         });
     </script>
     <script src="//cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="{% static 'golf/js/datepicker.js' %}"></script>
     <script src="{% static 'golf/js/main.js' %}"></script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap">

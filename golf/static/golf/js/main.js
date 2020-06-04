@@ -3,6 +3,19 @@ function intcomma(number) {
 }
 
 $(document).ready(function () {
+    $('#id_round_date').flatpickr();
+
+    $('#id_round_time').flatpickr({
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: true,
+        minTime: "06:00",
+        maxTime: "19:30",
+        defaultDate: "06:00",
+        minuteIncrement: 10
+    });
+
     $('#id_round_date, #id_round_time, #id_pax').on('change', function () {
         const round_date = $('#id_round_date').val().split('-');
         const round_time = $('#id_round_time').val().split(':');
