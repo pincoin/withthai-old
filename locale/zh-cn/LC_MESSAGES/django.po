@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 19:40+0700\n"
+"POT-Creation-Date: 2020-06-04 20:12+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -905,6 +905,143 @@ msgstr ""
 msgid "Booking orders"
 msgstr ""
 
+#: golf/templates/golf/_golf-club-booking-details.html:7
+msgid "Booking Process"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:18
+#: golf/templates/golf/golf-club-booking-form.html:342
+msgid "Booking Inquiry"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:19
+msgid "Check availability"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:20
+#: golf/templates/golf/_golf-club-booking-details.html:36
+msgid "Estimated time: 15~30 minutes during business hours"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:26
+msgid "Invoice Issued"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:27
+msgid "Make an online payment within 60 minutes"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:28
+msgid "Voided if not paid within designated timelines"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:34
+msgid "Booking Confirmed"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:35
+msgid "Wait for final confirmation"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:42
+msgid "Voucher Issued"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:43
+msgid "Submit your voucher issued to golf club on a date of a round"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:44
+msgid "Pay caddie fee, caddie tip and cart fee at golf course."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:57
+msgid "Booking Descriptions"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:63
+msgid "Online Booking"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:67
+msgid ""
+"You need to pay green fee only at minimum cost during online booking process "
+"at WITH THAI."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:70
+msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:74
+msgid "At Bag Drop"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:78
+msgid ""
+"You need to arrive golf course about half of an hour before tee-off time."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:81
+msgid "You may drop off your golf bags after presenting your booking voucher."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:84
+msgid "You have to notify staffs whether you will use a golf cart or not."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:88
+msgid "At Pro Shop"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:92
+msgid "You must pay caddie fee after submitting your booking voucher."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:95
+msgid ""
+"You may have to pay cart fee if you would like to use a golf cart. It is "
+"mandatory that golfers use golf carts at some golf courses."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:98
+msgid "You can receive your ticket after caddie fee and cart fee payment."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:101
+msgid "At Locker Room"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:105
+msgid ""
+"You can store your personal belongings securely in lockers and change your "
+"clothes."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:108
+msgid "It is strongly recommended not to store valuable items in any lockers."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:112
+msgid "At Starter"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:116
+msgid "You submit your tickets to starter staff."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:120
+msgid "You may have to join with other players if you are 1 or 2 players."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:124
+msgid "After Your Round"
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:128
+msgid "You have to tip your caddie as much as caddie fee in cash after game."
+msgstr ""
+
 #: golf/templates/golf/_golf-club-list.html:7
 msgid "Recommended"
 msgstr ""
@@ -989,11 +1126,6 @@ msgstr ""
 msgid "You have to pay caddie fee and cart fee at golf course."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:342
-#: golf/templates/golf/golf-club-booking-form.html:492
-msgid "Booking Inquiry"
-msgstr ""
-
 #: golf/templates/golf/golf-club-booking-form.html:347
 msgid "Booking Inquiry after Login"
 msgstr ""
@@ -1026,143 +1158,11 @@ msgstr ""
 msgid "Golf Club Information"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:479
-msgid "Booking Process"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:493
-msgid "Check availability"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:494
-#: golf/templates/golf/golf-club-booking-form.html:510
-msgid "Estimated time: 15~30 minutes during business hours"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:500
-msgid "Invoice Issued"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:501
-msgid "Make an online payment within 60 minutes"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:502
-msgid "Voided if not paid within designated timelines"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:508
-msgid "Booking Confirmed"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:509
-msgid "Wait for final confirmation"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:516
-msgid "Voucher Issued"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:517
-msgid "Submit your voucher issued to golf club on a date of a round"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:518
-msgid "Pay caddie fee, caddie tip and cart fee at golf course."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:531
-msgid "Booking Descriptions"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:537
-msgid "Online Booking"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:541
-msgid ""
-"You need to pay green fee only at minimum cost during online booking process "
-"at WITH THAI."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:544
-msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:548
-msgid "At Bag Drop"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:552
-msgid ""
-"You need to arrive golf course about half of an hour before tee-off time."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:555
-msgid "You may drop off your golf bags after presenting your booking voucher."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:558
-msgid "You have to notify staffs whether you will use a golf cart or not."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:562
-msgid "At Pro Shop"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:566
-msgid "You must pay caddie fee after submitting your booking voucher."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:569
-msgid ""
-"You may have to pay cart fee if you would like to use a golf cart. It is "
-"mandatory that golfers use golf carts at some golf courses."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:572
-msgid "You can receive your ticket after caddie fee and cart fee payment."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:575
-msgid "At Locker Room"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:579
-msgid ""
-"You can store your personal belongings securely in lockers and change your "
-"clothes."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:582
-msgid "It is strongly recommended not to store valuable items in any lockers."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:586
-msgid "At Starter"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:590
-msgid "You submit your tickets to starter staff."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:594
-msgid "You may have to join with other players if you are 1 or 2 players."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:598
-msgid "After Your Round"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:602
-msgid "You have to tip your caddie as much as caddie fee in cash after game."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:616
+#: golf/templates/golf/golf-club-booking-form.html:481
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:630
+#: golf/templates/golf/golf-club-booking-form.html:495
 msgid "Rain Check"
 msgstr ""
 

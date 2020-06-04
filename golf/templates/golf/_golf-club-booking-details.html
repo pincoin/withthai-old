@@ -1,0 +1,136 @@
+{% load i18n %}
+
+<div class="column is-12">
+    <div class="card">
+        <header class="card-header has-background-grey-lighter">
+            <h3 class="card-header-title is-size-3">
+                {% trans 'Booking Process' %}
+            </h3>
+        </header>
+        <div class="card-content">
+            <div class="content">
+                <div class="steps">
+                    <div class="step-item is-active">
+                        <div class="step-marker">
+                            <span class="icon"><i class="fa fa-check"></i></span>
+                        </div>
+                        <div class="step-details word-no-break">
+                            <p class="step-title ">{% trans 'Booking Inquiry' %}</p>
+                            <p>{% trans 'Check availability' %}</p>
+                            <p>{% trans 'Estimated time: 15~30 minutes during business hours' %}</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-marker">2</div>
+                        <div class="step-details word-no-break">
+                            <p class="step-title">{% trans 'Invoice Issued' %}</p>
+                            <p>{% trans 'Make an online payment within 60 minutes' %}</p>
+                            <p>{% trans 'Voided if not paid within designated timelines' %}</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-marker">3</div>
+                        <div class="step-details word-no-break">
+                            <p class="step-title">{% trans 'Booking Confirmed' %}</p>
+                            <p>{% trans 'Wait for final confirmation' %}</p>
+                            <p>{% trans 'Estimated time: 15~30 minutes during business hours' %}</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-marker">4</div>
+                        <div class="step-details word-no-break">
+                            <p class="step-title">{% trans 'Voucher Issued' %}</p>
+                            <p>{% trans 'Submit your voucher issued to golf club on a date of a round' %}</p>
+                            <p class="has-text-danger">{% trans 'Pay caddie fee, caddie tip and cart fee at golf course.' %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="column is-12">
+    <div class="card">
+        <header class="card-header has-background-grey-lighter">
+            <h3 class="card-header-title is-size-3">
+                {% trans 'Booking Descriptions' %}
+            </h3>
+        </header>
+        <div class="card-content">
+            <div class="content">
+                <ul class="booking-description">
+                    <li class="has-text-weight-bold">{% trans 'Online Booking' %}</li>
+                    <li>
+                        <ul>
+                            <li class="has-text-danger">
+                                {% trans 'You need to pay green fee only at minimum cost during online booking process at WITH THAI.' %}
+                            </li>
+                            <li class="has-text-danger">
+                                {% trans 'You have to pay caddie fee, cart fee and caddie tip at golf course.' %}
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-text-weight-bold">{% trans 'At Bag Drop' %}</li>
+                    <li>
+                        <ul>
+                            <li>
+                                {% trans 'You need to arrive golf course about half of an hour before tee-off time.' %}
+                            </li>
+                            <li>
+                                {% trans 'You may drop off your golf bags after presenting your booking voucher.' %}
+                            </li>
+                            <li>
+                                {% trans 'You have to notify staffs whether you will use a golf cart or not.' %}
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-text-weight-bold">{% trans 'At Pro Shop' %}</li>
+                    <li>
+                        <ul>
+                            <li>
+                                {% trans 'You must pay caddie fee after submitting your booking voucher.' %}
+                            </li>
+                            <li>
+                                {% trans 'You may have to pay cart fee if you would like to use a golf cart. It is mandatory that golfers use golf carts at some golf courses.' %}
+                            </li>
+                            <li>
+                                {% trans 'You can receive your ticket after caddie fee and cart fee payment.' %}</li>
+                        </ul>
+                    </li>
+                    <li class="has-text-weight-bold">{% trans 'At Locker Room' %}</li>
+                    <li>
+                        <ul>
+                            <li>
+                                {% trans 'You can store your personal belongings securely in lockers and change your clothes.' %}
+                            </li>
+                            <li>
+                                {% trans 'It is strongly recommended not to store valuable items in any lockers.' %}
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-text-weight-bold">{% trans 'At Starter' %}</li>
+                    <li>
+                        <ul>
+                            <li>
+                                {% trans 'You submit your tickets to starter staff.' %}
+
+                            </li>
+                            <li>
+                                {% trans 'You may have to join with other players if you are 1 or 2 players.' %}
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-text-weight-bold">{% trans 'After Your Round' %}</li>
+                    <li>
+                        <ul>
+                            <li>
+                                {% trans 'You have to tip your caddie as much as caddie fee in cash after game.' %}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
