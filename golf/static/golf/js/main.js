@@ -86,8 +86,6 @@ $(document).ready(function () {
                 $('#green-fee-block').addClass('is-hidden');
                 $('#total-block').addClass('is-hidden');
             }
-
-            console.log(out);
         }
     });
 });
