@@ -37,8 +37,9 @@ $(document).ready(function () {
                     break;
                 }
 
-                if (out)
+                if (out) {
                     break;
+                }
             }
 
             let out1 = false;
