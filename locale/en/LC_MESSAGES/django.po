@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 20:12+0700\n"
+"POT-Creation-Date: 2020-06-04 23:08+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -988,19 +988,23 @@ msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
 msgstr ""
 
 #: golf/templates/golf/_golf-club-booking-details.html:74
+#: golf/templates/golf/golf-club-booking-form.html:527
 msgid "At Bag Drop"
 msgstr ""
 
 #: golf/templates/golf/_golf-club-booking-details.html:78
+#: golf/templates/golf/golf-club-booking-form.html:531
 msgid ""
 "You need to arrive golf course about half of an hour before tee-off time."
 msgstr ""
 
 #: golf/templates/golf/_golf-club-booking-details.html:81
+#: golf/templates/golf/golf-club-booking-form.html:534
 msgid "You may drop off your golf bags after presenting your booking voucher."
 msgstr ""
 
 #: golf/templates/golf/_golf-club-booking-details.html:84
+#: golf/templates/golf/golf-club-booking-form.html:537
 msgid "You have to notify staffs whether you will use a golf cart or not."
 msgstr ""
 
@@ -1176,7 +1180,31 @@ msgstr ""
 msgid "Cancel Policy"
 msgstr ""
 
+#: golf/templates/golf/golf-club-booking-form.html:487
+msgid "8 days before round date"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:491
+msgid "Total amount is refunded."
+msgstr ""
+
 #: golf/templates/golf/golf-club-booking-form.html:495
+msgid "7-4 days before round date"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:499
+msgid "50 percent of total amount is refunded."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:503
+msgid "Within 3 days of round date"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:507
+msgid "Non-refundable"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:521
 msgid "Rain Check"
 msgstr ""
 

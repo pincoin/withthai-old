@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 20:12+0700\n"
+"POT-Creation-Date: 2020-06-04 23:08+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -976,19 +976,23 @@ msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
 msgstr "캐디피와 카트피, 캐디팁은 라운드 당일 골프장에서 직접 지불해야 합니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:74
+#: golf/templates/golf/golf-club-booking-form.html:527
 msgid "At Bag Drop"
 msgstr "백드롭에서"
 
 #: golf/templates/golf/_golf-club-booking-details.html:78
+#: golf/templates/golf/golf-club-booking-form.html:531
 msgid ""
 "You need to arrive golf course about half of an hour before tee-off time."
 msgstr "티오프 30분 전에 백드롭에 도착합니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:81
+#: golf/templates/golf/golf-club-booking-form.html:534
 msgid "You may drop off your golf bags after presenting your booking voucher."
 msgstr "예약 바우처를 제시하고 골프백을 내려놓습니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:84
+#: golf/templates/golf/golf-club-booking-form.html:537
 msgid "You have to notify staffs whether you will use a golf cart or not."
 msgstr "카트 이용 여부를 직원에게 말합니다."
 
@@ -1019,7 +1023,7 @@ msgstr "라커룸에서"
 msgid ""
 "You can store your personal belongings securely in lockers and change your "
 "clothes."
-msgstr "라커룸에 복장을 준비하고 소지품을 보관합니다."
+msgstr "라커룸에서 복장을 환복하고 소지품을 보관합니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:108
 msgid "It is strongly recommended not to store valuable items in any lockers."
@@ -1166,9 +1170,33 @@ msgstr "골프장 개요"
 
 #: golf/templates/golf/golf-club-booking-form.html:481
 msgid "Cancel Policy"
-msgstr "취소 규정"
+msgstr "취소/환불 규정"
+
+#: golf/templates/golf/golf-club-booking-form.html:487
+msgid "8 days before round date"
+msgstr "라운드 일자 8일전"
+
+#: golf/templates/golf/golf-club-booking-form.html:491
+msgid "Total amount is refunded."
+msgstr "전액 환불"
 
 #: golf/templates/golf/golf-club-booking-form.html:495
+msgid "7-4 days before round date"
+msgstr "라운드 일자 7-4일 전"
+
+#: golf/templates/golf/golf-club-booking-form.html:499
+msgid "50 percent of total amount is refunded."
+msgstr "50% 환불"
+
+#: golf/templates/golf/golf-club-booking-form.html:503
+msgid "Within 3 days of round date"
+msgstr "라운드 당일 포함 3일전"
+
+#: golf/templates/golf/golf-club-booking-form.html:507
+msgid "Non-refundable"
+msgstr "전액 환불 불가"
+
+#: golf/templates/golf/golf-club-booking-form.html:521
 msgid "Rain Check"
 msgstr "우천 시 규정"
 

@@ -20,16 +20,16 @@
     border-radius: 8px;
 }
 
-.booking-description {
+.booking-detail-list {
     margin: 0 0 0 .5rem !important;
 }
 
-.booking-description li {
+.booking-detail-list li {
     list-style-type: none !important;
     padding: .3rem 0;
 }
 
-.booking-description ul {
+.booking-detail-list ul {
     margin: 0 0 0 .5rem !important;
 }
 
@@ -42,7 +42,7 @@
         padding: .3rem .7rem;
     }
 
-    .booking-description li ul li {
+    .booking-detail-list li ul li {
         list-style-type: disc !important;
         padding: .3rem 0;
         margin-left: 1rem;
@@ -84,7 +84,7 @@
         padding: .5rem;
     }
 
-    .booking-description li ul li {
+    .booking-detail-list li ul li {
         list-style-type: disc !important;
         padding: .3rem 0;
     }
