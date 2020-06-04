@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 19:17+0700\n"
+"POT-Creation-Date: 2020-06-04 19:40+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -611,7 +611,7 @@ msgid "Fax number"
 msgstr ""
 
 #: golf/models.py:259 golf/templates/golf/golf-club-booking-form.html:164
-#: golf/templates/golf/golf-club-booking-form.html:510
+#: golf/templates/golf/golf-club-booking-form.html:460
 msgid "Website"
 msgstr ""
 
@@ -938,7 +938,7 @@ msgid "Next"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:85
-#: golf/templates/golf/golf-club-booking-form.html:461
+#: golf/templates/golf/golf-club-booking-form.html:411
 msgid "Location"
 msgstr ""
 
@@ -960,13 +960,13 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:486 member/forms.py:27
+#: golf/templates/golf/golf-club-booking-form.html:436 member/forms.py:27
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:153
-#: golf/templates/golf/golf-club-booking-form.html:499
+#: golf/templates/golf/golf-club-booking-form.html:449
 msgid "Address"
 msgstr ""
 
@@ -998,7 +998,7 @@ msgid "You have to pay caddie fee and cart fee at golf course."
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:342
-#: golf/templates/golf/golf-club-booking-form.html:414
+#: golf/templates/golf/golf-club-booking-form.html:492
 msgid "Booking Inquiry"
 msgstr ""
 
@@ -1030,149 +1030,149 @@ msgstr ""
 msgid "Rate"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:401
-msgid "Booking Process"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:415
-msgid "Check availability"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:416
-#: golf/templates/golf/golf-club-booking-form.html:432
-msgid "Estimated time: 15~30 minutes during business hours"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:422
-msgid "Invoice Issued"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:423
-msgid "Make an online payment within 60 minutes"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:424
-msgid "Voided if not paid within designated timelines"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:430
-msgid "Booking Confirmed"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:431
-msgid "Wait for final confirmation"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:438
-msgid "Voucher Issued"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:439
-msgid "Submit your voucher issued to golf club on a date of a round"
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:440
-msgid "Pay caddie fee, caddie tip and cart fee at golf course."
-msgstr ""
-
-#: golf/templates/golf/golf-club-booking-form.html:452
+#: golf/templates/golf/golf-club-booking-form.html:402
 msgid "Golf Club Information"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:528
+#: golf/templates/golf/golf-club-booking-form.html:479
+msgid "Booking Process"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:493
+msgid "Check availability"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:494
+#: golf/templates/golf/golf-club-booking-form.html:510
+msgid "Estimated time: 15~30 minutes during business hours"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:500
+msgid "Invoice Issued"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:501
+msgid "Make an online payment within 60 minutes"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:502
+msgid "Voided if not paid within designated timelines"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:508
+msgid "Booking Confirmed"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:509
+msgid "Wait for final confirmation"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:516
+msgid "Voucher Issued"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:517
+msgid "Submit your voucher issued to golf club on a date of a round"
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:518
+msgid "Pay caddie fee, caddie tip and cart fee at golf course."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:531
 msgid "Booking Descriptions"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:534
+#: golf/templates/golf/golf-club-booking-form.html:537
 msgid "Online Booking"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:538
+#: golf/templates/golf/golf-club-booking-form.html:541
 msgid ""
 "You need to pay green fee only at minimum cost during online booking process "
 "at WITH THAI."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:541
+#: golf/templates/golf/golf-club-booking-form.html:544
 msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:545
+#: golf/templates/golf/golf-club-booking-form.html:548
 msgid "At Bag Drop"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:549
+#: golf/templates/golf/golf-club-booking-form.html:552
 msgid ""
 "You need to arrive golf course about half of an hour before tee-off time."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:552
-msgid "You may drop off your golf bags after showing your booking voucher."
+#: golf/templates/golf/golf-club-booking-form.html:555
+msgid "You may drop off your golf bags after presenting your booking voucher."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:555
+#: golf/templates/golf/golf-club-booking-form.html:558
 msgid "You have to notify staffs whether you will use a golf cart or not."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:559
+#: golf/templates/golf/golf-club-booking-form.html:562
 msgid "At Pro Shop"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:563
+#: golf/templates/golf/golf-club-booking-form.html:566
 msgid "You must pay caddie fee after submitting your booking voucher."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:566
+#: golf/templates/golf/golf-club-booking-form.html:569
 msgid ""
 "You may have to pay cart fee if you would like to use a golf cart. It is "
 "mandatory that golfers use golf carts at some golf courses."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:569
+#: golf/templates/golf/golf-club-booking-form.html:572
 msgid "You can receive your ticket after caddie fee and cart fee payment."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:572
+#: golf/templates/golf/golf-club-booking-form.html:575
 msgid "At Locker Room"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:576
+#: golf/templates/golf/golf-club-booking-form.html:579
 msgid ""
 "You can store your personal belongings securely in lockers and change your "
 "clothes."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:579
+#: golf/templates/golf/golf-club-booking-form.html:582
 msgid "It is strongly recommended not to store valuable items in any lockers."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:583
+#: golf/templates/golf/golf-club-booking-form.html:586
 #, fuzzy
 #| msgid "Start From"
 msgid "At Starter"
 msgstr "ราคาเริ่มต้น"
 
-#: golf/templates/golf/golf-club-booking-form.html:587
+#: golf/templates/golf/golf-club-booking-form.html:590
 msgid "You submit your tickets to starter staff."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:591
+#: golf/templates/golf/golf-club-booking-form.html:594
 msgid "You may have to join with other players if you are 1 or 2 players."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:595
+#: golf/templates/golf/golf-club-booking-form.html:598
 msgid "After Your Round"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:599
+#: golf/templates/golf/golf-club-booking-form.html:602
 msgid "You have to tip your caddie as much as caddie fee in cash after game."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:612
+#: golf/templates/golf/golf-club-booking-form.html:616
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:625
+#: golf/templates/golf/golf-club-booking-form.html:630
 msgid "Rain Check"
 msgstr ""
 
