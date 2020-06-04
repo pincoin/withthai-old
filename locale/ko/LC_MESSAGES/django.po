@@ -1085,11 +1085,11 @@ msgstr "온라인 예약"
 msgid ""
 "You need to pay green fee only at minimum cost during online booking process "
 "at WITH THAI."
-msgstr "위드타이 온라인 예약단계에서는 최소한의 비용으로 그린피만 결제합니다."
+msgstr "위드타이 온라인 예약 단계에서는 최소한의 비용으로 그린피만 결제합니다."
 
 #: golf/templates/golf/golf-club-booking-form.html:544
 msgid "You have to pay caddie fee, cart fee and caddie tip at golf course."
-msgstr "캐디피와 카트피, 캐디팁은 골프장에서 직접 지불해야 합니다."
+msgstr "캐디피와 카트피, 캐디팁은 라운드 당일 골프장에서 직접 지불해야 합니다."
 
 #: golf/templates/golf/golf-club-booking-form.html:548
 msgid "At Bag Drop"
