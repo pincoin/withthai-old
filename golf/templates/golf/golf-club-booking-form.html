@@ -303,10 +303,24 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="field is-horizontal">
+                                                <div class="field is-horizontal is-hidden" id="invalid-round-date-time">
                                                     <div class="field-label"></div>
                                                     <div class="field-body">
                                                         <article class="message is-danger booking-form-alert">
+                                                            <div class="message-body">
+                                                                <ul>
+                                                                    <li>
+                                                                        {% trans 'You have chosen the unavailable round date/time.' %}
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
+                                                    <div class="field-label"></div>
+                                                    <div class="field-body">
+                                                        <article class="message is-info booking-form-alert">
                                                             <div class="message-body">
                                                                 <ul>
                                                                     <li>
@@ -503,6 +517,19 @@
                                             </div>
                                         {% endif %}
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Booking Descriptions' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">{{ time }}
                                 </div>
                             </div>
                         </div>

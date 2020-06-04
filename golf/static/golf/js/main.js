@@ -63,6 +63,8 @@ $(document).ready(function () {
                             parseInt(slot_start[0], 10), parseInt(slot_start[1], 10))
                             && rtime.getTime() <= new Date(2020, 0, 1,
                                 parseInt(slot_end[0], 10), parseInt(slot_end[1], 10))) {
+                            $('#invalid-round-date-time').addClass('is-hidden');
+
                             $('#green-fee-block').removeClass('is-hidden');
                             $('#id_green_fee').val(intcomma(rates[i]['green_fee']));
 
@@ -80,6 +82,7 @@ $(document).ready(function () {
             }
 
             if (!out1) {
+                $('#invalid-round-date-time').removeClass('is-hidden');
                 $('#green-fee-block').addClass('is-hidden');
                 $('#total-block').addClass('is-hidden');
             }
