@@ -322,10 +322,17 @@
                                                     <div class="field-body">
                                                         <div class="field">
                                                             <div class="control">
-                                                                <button type="submit"
-                                                                        class="button is-fullwidth is-primary">
-                                                                    {% trans 'Booking Inquiry' %}
-                                                                </button>
+                                                                {% if user.is_authenticated %}
+                                                                    <button type="submit"
+                                                                            class="button is-fullwidth is-primary">
+                                                                        {% trans 'Booking Inquiry' %}
+                                                                    </button>
+                                                                {% else %}
+                                                                    <a href="{% url 'account_login' %}"
+                                                                       class="button is-fullwidth is-success">
+                                                                        {% trans 'Booking Inquiry after Login' %}
+                                                                    </a>
+                                                                {% endif %}
                                                             </div>
                                                         </div>
                                                     </div>
