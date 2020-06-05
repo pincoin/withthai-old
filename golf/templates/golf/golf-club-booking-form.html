@@ -552,11 +552,13 @@
 {% block javascript %}
     {{ block.super }}
     <script>
+        let club;
         let rates;
         let holidays;
 
         $(document).ready(function () {
             $.getJSON('{% url 'golf:golf-club-booking-json' club.slug %}', function (data) {
+                club = data['club'];
                 rates = data['rates'];
                 holidays = data['holidays'];
             });

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 23:14+0700\n"
+"POT-Creation-Date: 2020-06-05 08:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1039,11 +1039,15 @@ msgstr "스타터에게 프로샵에서 받은 티켓을 전달합니다."
 msgid "You may have to join with other players if you are 1 or 2 players."
 msgstr "1~2인은 통상적으로 조인하여 플레이합니다."
 
-#: golf/templates/golf/_golf-club-booking-details.html:124
+#: golf/templates/golf/_golf-club-booking-details.html:123
+msgid "No outside food or drink is allowed."
+msgstr "외부 음식 또는 음료, 주류는 반입금지입니다."
+
+#: golf/templates/golf/_golf-club-booking-details.html:127
 msgid "After Your Round"
 msgstr "라운드를 마치고"
 
-#: golf/templates/golf/_golf-club-booking-details.html:128
+#: golf/templates/golf/_golf-club-booking-details.html:131
 msgid "You have to tip your caddie as much as caddie fee in cash after game."
 msgstr ""
 "18홀 플레이를 마치면 통상적으로 캐디팁을 캐디피만큼 바트 현금으로 지불합니다."

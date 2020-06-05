@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-04 23:14+0700\n"
+"POT-Creation-Date: 2020-06-05 08:37+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1034,11 +1034,15 @@ msgstr ""
 msgid "You may have to join with other players if you are 1 or 2 players."
 msgstr ""
 
-#: golf/templates/golf/_golf-club-booking-details.html:124
+#: golf/templates/golf/_golf-club-booking-details.html:123
+msgid "No outside food or drink is allowed."
+msgstr ""
+
+#: golf/templates/golf/_golf-club-booking-details.html:127
 msgid "After Your Round"
 msgstr ""
 
-#: golf/templates/golf/_golf-club-booking-details.html:128
+#: golf/templates/golf/_golf-club-booking-details.html:131
 msgid "You have to tip your caddie as much as caddie fee in cash after game."
 msgstr ""
 
