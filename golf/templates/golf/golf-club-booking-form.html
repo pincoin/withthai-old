@@ -567,10 +567,23 @@
                 rates = data['rates'];
                 holidays = data['holidays'];
 
-                $('#id_round_date').flatpickr({
-                    minDate: new Date().fp_incr(club['weekdays_min_in_advance']), // GMT+7 기준 16시 이후는 +2 +31
-                    maxDate: new Date().fp_incr(club['weekdays_max_in_advance'])
+                const hour = new Date().toLocaleString('en-US', {
+                    timeZone: 'Asia/Bangkok',
+                    hour: 'numeric',
+                    hour12: false
                 });
+
+                if (hour >= 16 && hour < 24) {
+                    $('#id_round_date').flatpickr({
+                        minDate: new Date().fp_incr(club['weekdays_min_in_advance'] + 1),
+                        maxDate: new Date().fp_incr(club['weekdays_max_in_advance'] + 1)
+                    });
+                } else {
+                    $('#id_round_date').flatpickr({
+                        minDate: new Date().fp_incr(club['weekdays_min_in_advance']),
+                        maxDate: new Date().fp_incr(club['weekdays_max_in_advance'])
+                    });
+                }
 
                 $('#id_round_time').flatpickr({
                     enableTime: true,
