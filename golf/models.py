@@ -307,6 +307,11 @@ class Club(model_utils_models.TimeStampedModel):
         db_index=True,
     )
 
+    max_pax = models.IntegerField(
+        verbose_name=_('Max PAX'),
+        default=4,
+    )
+
     cart_required = models.IntegerField(
         verbose_name=_('Require golf cart'),
         default=0,

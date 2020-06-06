@@ -236,12 +236,14 @@
                                                                     <select id="{{ form.pax.id_for_label }}"
                                                                             name="{{ form.pax.name }}">
                                                                         {% for choice in form.pax.field.choices %}
-                                                                            <option value="{{ choice.0 }}"
-                                                                                    {% if choice.1 == '4' %}
-                                                                                    selected
-                                                                                    {% endif %}>
-                                                                                {{ choice.1 }}
-                                                                            </option>
+                                                                            {% if forloop.counter0 <= club.max_pax %}
+                                                                                <option value="{{ choice.0 }}"
+                                                                                        {% if forloop.counter0 == club.max_pax %}
+                                                                                        selected
+                                                                                        {% endif %}>
+                                                                                    {{ choice.1 }}
+                                                                                </option>
+                                                                            {% endif %}
                                                                         {% endfor %}
                                                                     </select>
                                                                 </div>
