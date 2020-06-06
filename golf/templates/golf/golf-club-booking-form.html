@@ -235,11 +235,14 @@
                                                                 <div class="select is-fullwidth{% if form.pax.errors %} is-danger{% endif %}">
                                                                     <select id="{{ form.pax.id_for_label }}"
                                                                             name="{{ form.pax.name }}">
-                                                                        <option>1</option>
-                                                                        <option>2</option>
-                                                                        <option>3</option>
-                                                                        <option selected>4</option>
-                                                                        <option>5</option>
+                                                                        {% for choice in form.pax.field.choices %}
+                                                                            <option value="{{ choice.0 }}"
+                                                                                    {% if choice.1 == '4' %}
+                                                                                    selected
+                                                                                    {% endif %}>
+                                                                                {{ choice.1 }}
+                                                                            </option>
+                                                                        {% endfor %}
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -746,7 +749,7 @@
                 $('#plus-button').on('click', function () {
                     const pax = $('#id_pax');
 
-                    if (pax.val() < 4) {
+                    if (pax.val() < 6) {
                         let n = parseInt(pax.val()) + 1;
                         pax.val(n);
                         $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));

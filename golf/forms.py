@@ -5,11 +5,23 @@ from . import models
 
 
 class GolfClubBookingForm(forms.ModelForm):
-    round_date = forms.DateField()
+    PAX_CHOICES = (
+        ('1', '1'),
+        ('2', '2'),
+        ('3', '3'),
+        ('4', '4'),
+        ('5', '5'),
+        ('6', '6'),
+    )
 
-    round_time = forms.TimeField()
+    round_date = forms.DateField(required=True)
 
-    pax = forms.IntegerField()
+    round_time = forms.TimeField(required=True)
+
+    pax = forms.ChoiceField(choices=PAX_CHOICES, required=True)
+
+    def __init__(self, *args, **kwargs):
+        super(GolfClubBookingForm, self).__init__(*args, **kwargs)
 
     class Meta:
         model = models.Order
