@@ -238,7 +238,7 @@
                                                                         {% for choice in form.pax.field.choices %}
                                                                             {% if forloop.counter0 <= club.max_pax %}
                                                                                 <option value="{{ choice.0 }}"
-                                                                                        {% if forloop.counter0 == club.max_pax %}
+                                                                                        {% if forloop.counter0 == 3 %}
                                                                                         selected
                                                                                         {% endif %}>
                                                                                     {{ choice.1 }}
