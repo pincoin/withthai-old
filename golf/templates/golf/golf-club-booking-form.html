@@ -230,8 +230,8 @@
                                                         </label>
                                                     </div>
                                                     <div class="field-body">
-                                                        <div class="field">
-                                                            <div class="control">
+                                                        <div class="field has-addons">
+                                                            <div class="control is-expanded">
                                                                 <div class="select is-fullwidth{% if form.pax.errors %} is-danger{% endif %}">
                                                                     <select id="{{ form.pax.id_for_label }}"
                                                                             name="{{ form.pax.name }}">
@@ -242,6 +242,16 @@
                                                                         <option>5</option>
                                                                     </select>
                                                                 </div>
+                                                            </div>
+                                                            <div class="control">
+                                                                <a class="button" id="plus-button">
+                                                                    <i class="fas fa-plus fa-fw"></i>
+                                                                </a>
+                                                            </div>
+                                                            <div class="control">
+                                                                <a class="button" id="minus-button">
+                                                                    <i class="fas fa-minus fa-fw"></i>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -381,12 +391,21 @@
                                         <tbody>
                                         {% for rate in rates %}
                                             <tr>
-                                                <td class="is-hidden-touch">{{ rate.season_start }}
-                                                    ~ {{ rate.season_end }}</td>
-                                                <td>{{ rate.get_day_of_week_display }}</td>
-                                                <td class="is-hidden-touch">{{ rate.get_title_display }}</td>
-                                                <td>{{ rate.slot_start }} ~ {{ rate.slot_end }}</td>
-                                                <td>{{ rate.green_fee_selling_price|floatformat:0|intcomma }} {% trans 'THB' %}</td>
+                                                <td class="is-hidden-touch">
+                                                    {{ rate.season_start }} ~ {{ rate.season_end }}
+                                                </td>
+                                                <td>
+                                                    {{ rate.get_day_of_week_display }}
+                                                </td>
+                                                <td class="is-hidden-touch">
+                                                    {{ rate.get_title_display }}
+                                                </td>
+                                                <td>
+                                                    {{ rate.slot_start }} ~ {{ rate.slot_end }}
+                                                </td>
+                                                <td>
+                                                    {{ rate.green_fee_selling_price|floatformat:0|intcomma }} {% trans 'THB' %}
+                                                </td>
                                             </tr>
                                         {% endfor %}
                                         </tbody>
@@ -660,7 +679,7 @@
                                 && rdate.getTime() - today.getTime() < 7 * 24 * 60 * 60 * 1000)
                             && day.toUpperCase() !== 'SAT'
                             && day.toUpperCase() !== 'SUN') {
-                            
+
                             for (i = 0; i < rates.length; i++) {
                                 if (rates[i]['weekday'] === weekday) {
                                     // check whether round date is within season
@@ -708,6 +727,22 @@
                             $('#total-block').addClass('is-hidden');
                             $('#submit-button').prop('disabled', true);
                         }
+                    }
+                });
+
+                $('#plus-button').on('click', function () {
+                    const pax = $('#id_pax');
+
+                    if (pax.val() < 4) {
+                        pax.val(parseInt(pax.val()) + 1);
+                    }
+                });
+
+                $('#minus-button').on('click', function () {
+                    const pax = $('#id_pax');
+
+                    if (pax.val() > 1) {
+                        pax.val(parseInt(pax.val()) - 1);
                     }
                 });
             });
