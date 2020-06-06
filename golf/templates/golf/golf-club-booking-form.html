@@ -573,11 +573,17 @@
                 rates = data['rates'];
                 holidays = data['holidays'];
 
-                const hour = new Date().toLocaleString('en-US', {
+                const today = new Date();
+                const hour = today.toLocaleString('en-US', {
                     timeZone: 'Asia/Bangkok',
                     hour: 'numeric',
                     hour12: false
                 });
+                const day = today.toLocaleString('en-US', {
+                    timeZone: 'Asia/Bangkok',
+                    weekday: 'short',
+                });
+
 
                 {% if LANGUAGE_CODE == 'ko' %}
                     flatpickr.localize(flatpickr.l10ns.ko);
@@ -649,43 +655,50 @@
 
                         let out1 = false;
 
-                        for (i = 0; i < rates.length; i++) {
-                            if (rates[i]['weekday'] === weekday) {
-                                // check whether round date is within season
-                                const season_start = rates[i]['season_start'].split('-');
-                                const season_end = rates[i]['season_end'].split('-');
+                        if (weekday === 0
+                            || (weekday === 1
+                                && rdate.getTime() - today.getTime() < 7 * 24 * 60 * 60 * 1000)
+                            && day.toUpperCase() !== 'SAT'
+                            && day.toUpperCase() !== 'SUN') {
+                            
+                            for (i = 0; i < rates.length; i++) {
+                                if (rates[i]['weekday'] === weekday) {
+                                    // check whether round date is within season
+                                    const season_start = rates[i]['season_start'].split('-');
+                                    const season_end = rates[i]['season_end'].split('-');
 
-                                if (rdate.getTime() >= new Date(parseInt(season_start[0], 10),
-                                    parseInt(season_start[1], 10) - 1,
-                                    parseInt(season_start[2], 10)).getTime()
-                                    && rdate.getTime() <= new Date(parseInt(season_end[0], 10),
-                                        parseInt(season_end[1], 10) - 1,
-                                        parseInt(season_end[2], 10)).getTime()) {
-                                    // check whether round time is within round time
-                                    const slot_start = rates[i]['slot_start'].split(':');
-                                    const slot_end = rates[i]['slot_end'].split(':');
+                                    if (rdate.getTime() >= new Date(parseInt(season_start[0], 10),
+                                        parseInt(season_start[1], 10) - 1,
+                                        parseInt(season_start[2], 10)).getTime()
+                                        && rdate.getTime() <= new Date(parseInt(season_end[0], 10),
+                                            parseInt(season_end[1], 10) - 1,
+                                            parseInt(season_end[2], 10)).getTime()) {
+                                        // check whether round time is within round time
+                                        const slot_start = rates[i]['slot_start'].split(':');
+                                        const slot_end = rates[i]['slot_end'].split(':');
 
-                                    if (rtime.getTime() >= new Date(2020, 0, 1,
-                                        parseInt(slot_start[0], 10), parseInt(slot_start[1], 10))
-                                        && rtime.getTime() <= new Date(2020, 0, 1,
-                                            parseInt(slot_end[0], 10), parseInt(slot_end[1], 10))) {
-                                        $('#invalid-round-date-time').addClass('is-hidden');
+                                        if (rtime.getTime() >= new Date(2020, 0, 1,
+                                            parseInt(slot_start[0], 10), parseInt(slot_start[1], 10))
+                                            && rtime.getTime() <= new Date(2020, 0, 1,
+                                                parseInt(slot_end[0], 10), parseInt(slot_end[1], 10))) {
+                                            $('#invalid-round-date-time').addClass('is-hidden');
 
-                                        $('#green-fee-block').removeClass('is-hidden');
-                                        $('#id_green_fee').val(Number(rates[i]['green_fee']).toLocaleString('en'));
+                                            $('#green-fee-block').removeClass('is-hidden');
+                                            $('#id_green_fee').val(Number(rates[i]['green_fee']).toLocaleString('en'));
 
-                                        $('#total-block').removeClass('is-hidden');
-                                        $('#id_total').val(Number(rates[i]['green_fee'] * pax).toLocaleString('en'));
+                                            $('#total-block').removeClass('is-hidden');
+                                            $('#id_total').val(Number(rates[i]['green_fee'] * pax).toLocaleString('en'));
 
-                                        $('#submit-button').removeAttr('disabled');
+                                            $('#submit-button').removeAttr('disabled');
 
-                                        out1 = true;
-                                        break;
+                                            out1 = true;
+                                            break;
+                                        }
                                     }
                                 }
-                            }
-                            if (out1) {
-                                break;
+                                if (out1) {
+                                    break;
+                                }
                             }
                         }
 
