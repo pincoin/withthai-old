@@ -1024,7 +1024,7 @@ msgstr "라커룸에서 복장을 환복하고 소지품을 보관합니다."
 #: golf/templates/golf/_golf-club-booking-details.html:108
 msgid "It is strongly recommended not to store valuable items in any lockers."
 msgstr ""
-"고가의 귀중품은 라커에 보관하지 않습니다. 골프장은 통상적으로 분실 시 책임을 "
+"고가의 귀중품은 라커에 보관하지 않습니다. 골프장은 분실 시 책임을 "
 "지지 않습니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:112
