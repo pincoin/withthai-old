@@ -553,6 +553,11 @@
 {% block javascript %}
     {{ block.super }}
     <script src="//cdn.jsdelivr.net/npm/flatpickr"></script>
+    {% if LANGUAGE_CODE == 'ko' %}
+        <script src="//npmcdn.com/flatpickr/dist/l10n/ko.js"></script>
+    {% elif LANGUAGE_CODE == 'th' %}
+        <script src="//npmcdn.com/flatpickr/dist/l10n/th.js"></script>
+    {% endif %}
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap">
     </script>
@@ -573,6 +578,12 @@
                     hour: 'numeric',
                     hour12: false
                 });
+
+                {% if LANGUAGE_CODE == 'ko' %}
+                    flatpickr.localize(flatpickr.l10ns.ko);
+                {% elif LANGUAGE_CODE == 'th' %}
+                    flatpickr.localize(flatpickr.l10ns.th);
+                {% endif %}
 
                 if (hour >= 16 && hour < 24) {
                     $('#id_round_date').flatpickr({
