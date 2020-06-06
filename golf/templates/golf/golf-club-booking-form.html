@@ -336,6 +336,9 @@
                                                                     <li>
                                                                         {% trans 'You have to pay caddie fee and cart fee at golf course.' %}
                                                                     </li>
+                                                                    <li id="join-message" class="is-hidden">
+                                                                        {% trans '1 or 2 players may have to join with others. ' %}
+                                                                    </li>
                                                                 </ul>
                                                             </div>
                                                         </article>
@@ -548,7 +551,7 @@
                                         <li>
                                             <ul>
                                                 <li>
-                                                    ...
+                                                    {% trans 'No. Golf course has no rain check, no refund for any reason.' %}
                                                 </li>
                                             </ul>
                                         </li>
@@ -603,7 +606,6 @@
                     weekday: 'short',
                 });
 
-
                 {% if LANGUAGE_CODE == 'ko' %}
                     flatpickr.localize(flatpickr.l10ns.ko);
                 {% elif LANGUAGE_CODE == 'th' %}
@@ -646,6 +648,12 @@
                         const rtime = new Date(2020, 0, 1,
                             parseInt(round_time[0], 10),
                             parseInt(round_time[1], 10));
+
+                        if (pax < 3) {
+                            $('#join-message').removeClass('is-hidden');
+                        } else {
+                            $('#join-message').addClass('is-hidden');
+                        }
 
                         // check whether holiday/weekends or not
                         let weekday = 0;
