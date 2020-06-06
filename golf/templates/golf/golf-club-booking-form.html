@@ -649,21 +649,25 @@
                             parseInt(round_time[0], 10),
                             parseInt(round_time[1], 10));
 
+                        // 1. Notify join message
+
                         if (pax < 3) {
                             $('#join-message').removeClass('is-hidden');
                         } else {
                             $('#join-message').addClass('is-hidden');
                         }
 
-                        // check whether holiday/weekends or not
+                        // 2. Check whether holiday/weekends or not
                         let weekday = 0;
 
+                        // 2-1. Weekends
                         if (rdate.getDay() === 6 || rdate.getDay() === 0) {
                             weekday = 1;
                         }
 
                         let out = false;
 
+                        // 2-2. Holidays
                         for (i = 0; i < holidays.length; i++) {
                             const holiday = holidays[i].split('-');
 
@@ -682,9 +686,10 @@
 
                         let out1 = false;
 
+                        // 3. Calculate rate
                         if (weekday === 0
                             || (weekday === 1
-                                && rdate.getTime() - today.getTime() < 7 * 24 * 60 * 60 * 1000)
+                                && rdate.getTime() - today.getTime() < club['weekend_max_in_advance'] * 24 * 60 * 60 * 1000)
                             && day.toUpperCase() !== 'SAT'
                             && day.toUpperCase() !== 'SUN') {
 
@@ -700,7 +705,7 @@
                                         && rdate.getTime() <= new Date(parseInt(season_end[0], 10),
                                             parseInt(season_end[1], 10) - 1,
                                             parseInt(season_end[2], 10)).getTime()) {
-                                        // check whether round time is within round time
+                                        // check whether round time is within available slot time
                                         const slot_start = rates[i]['slot_start'].split(':');
                                         const slot_end = rates[i]['slot_end'].split(':');
 
