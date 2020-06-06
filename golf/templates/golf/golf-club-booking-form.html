@@ -742,7 +742,9 @@
                     const pax = $('#id_pax');
 
                     if (pax.val() < 4) {
-                        pax.val(parseInt(pax.val()) + 1);
+                        let n = parseInt(pax.val()) + 1;
+                        pax.val(n);
+                        $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
                     }
                 });
 
@@ -750,7 +752,9 @@
                     const pax = $('#id_pax');
 
                     if (pax.val() > 1) {
-                        pax.val(parseInt(pax.val()) - 1);
+                        let n = parseInt(pax.val()) - 1;
+                        pax.val(n);
+                        $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
                     }
                 });
             });
