@@ -338,7 +338,8 @@
                                                             <div class="control">
                                                                 {% if user.is_authenticated %}
                                                                     <button type="submit"
-                                                                            class="button is-fullwidth is-primary">
+                                                                            class="button is-fullwidth is-primary"
+                                                                            id="submit-button" disabled>
                                                                         {% trans 'Booking Inquiry' %}
                                                                     </button>
                                                                 {% else %}
@@ -665,6 +666,8 @@
                                         $('#total-block').removeClass('is-hidden');
                                         $('#id_total').val(Number(rates[i]['green_fee'] * pax).toLocaleString('en'));
 
+                                        $('#submit-button').removeAttr('disabled');
+
                                         out1 = true;
                                         break;
                                     }
@@ -679,6 +682,7 @@
                             $('#invalid-round-date-time').removeClass('is-hidden');
                             $('#green-fee-block').addClass('is-hidden');
                             $('#total-block').addClass('is-hidden');
+                            $('#submit-button').prop('disabled', true);
                         }
                     }
                 });
