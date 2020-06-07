@@ -223,6 +223,18 @@
                                                     </div>
                                                 {% endif %}
                                                 <div class="field is-horizontal">
+                                                    <div class="field-label"></div>
+                                                    <div class="field-body">
+                                                        <article class="message is-info booking-form-alert">
+                                                            <div class="message-body">
+                                                                <ul>
+                                                                    <li>{% trans 'Please, select your round date and time.' %}</li>
+                                                                </ul>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="field is-horizontal">
                                                     <div class="field-label is-normal">
                                                         <label class="label"
                                                                for="{{ form.pax.id_for_label }}">
@@ -342,7 +354,7 @@
                                                                         {% trans 'You have to pay caddie fee and cart fee at golf course.' %}
                                                                     </li>
                                                                     <li id="join-message" class="is-hidden">
-                                                                        {% trans '1 or 2 players may have to join with others. ' %}
+                                                                        {% trans '1 or 2 players may have to join with others.' %}
                                                                     </li>
                                                                 </ul>
                                                             </div>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-07 02:41+0700\n"
+"POT-Creation-Date: 2020-06-07 17:15+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -384,9 +384,9 @@ msgstr ""
 #: golf/templates/golf/_golf-club-list.html:62
 #: golf/templates/golf/golf-club-booking-form.html:111
 #: golf/templates/golf/golf-club-booking-form.html:133
-#: golf/templates/golf/golf-club-booking-form.html:293
-#: golf/templates/golf/golf-club-booking-form.html:313
-#: golf/templates/golf/golf-club-booking-form.html:413
+#: golf/templates/golf/golf-club-booking-form.html:307
+#: golf/templates/golf/golf-club-booking-form.html:327
+#: golf/templates/golf/golf-club-booking-form.html:427
 msgid "THB"
 msgstr ""
 
@@ -605,7 +605,7 @@ msgid "Fax number"
 msgstr ""
 
 #: golf/models.py:259 golf/templates/golf/golf-club-booking-form.html:164
-#: golf/templates/golf/golf-club-booking-form.html:486
+#: golf/templates/golf/golf-club-booking-form.html:500
 msgid "Website"
 msgstr ""
 
@@ -914,7 +914,7 @@ msgid "Booking Process"
 msgstr ""
 
 #: golf/templates/golf/_golf-club-booking-details.html:18
-#: golf/templates/golf/golf-club-booking-form.html:359
+#: golf/templates/golf/golf-club-booking-form.html:373
 msgid "Booking Inquiry"
 msgstr ""
 
@@ -1077,7 +1077,7 @@ msgid "Next"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:85
-#: golf/templates/golf/golf-club-booking-form.html:437
+#: golf/templates/golf/golf-club-booking-form.html:451
 msgid "Location"
 msgstr ""
 
@@ -1099,13 +1099,13 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:140
-#: golf/templates/golf/golf-club-booking-form.html:462 member/forms.py:27
+#: golf/templates/golf/golf-club-booking-form.html:476 member/forms.py:27
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
 
 #: golf/templates/golf/golf-club-booking-form.html:153
-#: golf/templates/golf/golf-club-booking-form.html:475
+#: golf/templates/golf/golf-club-booking-form.html:489
 msgid "Address"
 msgstr ""
 
@@ -1114,99 +1114,103 @@ msgstr ""
 msgid "Date/Time"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:229
+#: golf/templates/golf/golf-club-booking-form.html:231
+msgid "Please, select your round date and time."
+msgstr ""
+
+#: golf/templates/golf/golf-club-booking-form.html:241
 msgid "Golfer #"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:281
+#: golf/templates/golf/golf-club-booking-form.html:295
 msgid "Green Fee"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:301
+#: golf/templates/golf/golf-club-booking-form.html:315
 msgid "Total"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:326
+#: golf/templates/golf/golf-club-booking-form.html:340
 msgid "You have chosen the unavailable round date/time."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:340
+#: golf/templates/golf/golf-club-booking-form.html:354
 msgid "You have to pay caddie fee and cart fee at golf course."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:343
-msgid "1 or 2 players may have to join with others. "
+#: golf/templates/golf/golf-club-booking-form.html:357
+msgid "1 or 2 players may have to join with others."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:364
+#: golf/templates/golf/golf-club-booking-form.html:378
 msgid "Booking Inquiry after Login"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:382
+#: golf/templates/golf/golf-club-booking-form.html:396
 msgid "Rate / Schedule"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:390
+#: golf/templates/golf/golf-club-booking-form.html:404
 msgid "Period"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:391
+#: golf/templates/golf/golf-club-booking-form.html:405
 msgid "Type of day"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:392
+#: golf/templates/golf/golf-club-booking-form.html:406
 msgid "Time slot"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:393
+#: golf/templates/golf/golf-club-booking-form.html:407
 msgid "Time"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:394
+#: golf/templates/golf/golf-club-booking-form.html:408
 msgid "Rate"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:428
+#: golf/templates/golf/golf-club-booking-form.html:442
 msgid "Golf Club Information"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:507
+#: golf/templates/golf/golf-club-booking-form.html:521
 msgid "Cancel Policy"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:513
+#: golf/templates/golf/golf-club-booking-form.html:527
 msgid "8 days before round date"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:517
+#: golf/templates/golf/golf-club-booking-form.html:531
 msgid "Total amount is refunded."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:521
+#: golf/templates/golf/golf-club-booking-form.html:535
 msgid "7-4 days before round date"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:525
+#: golf/templates/golf/golf-club-booking-form.html:539
 msgid "50 percent of total amount is refunded."
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:529
+#: golf/templates/golf/golf-club-booking-form.html:543
 msgid "Within 3 days of round date"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:533
+#: golf/templates/golf/golf-club-booking-form.html:547
 msgid "Non-refundable"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:547
+#: golf/templates/golf/golf-club-booking-form.html:561
 msgid "Rain Check"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:553
+#: golf/templates/golf/golf-club-booking-form.html:567
 msgid "We obey the rules of golf clubs"
 msgstr ""
 
-#: golf/templates/golf/golf-club-booking-form.html:557
+#: golf/templates/golf/golf-club-booking-form.html:571
 msgid "No. Golf course has no rain check, no refund for any reason."
 msgstr ""
 
