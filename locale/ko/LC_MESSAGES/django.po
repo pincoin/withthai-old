@@ -637,7 +637,7 @@ msgstr "최대 인원"
 
 #: golf/models.py:316 golf/templates/golf/golf-club-booking-form.html:119
 msgid "Require golf cart"
-msgstr "카트 의무"
+msgstr "골프카트 의무"
 
 #: golf/models.py:322
 msgid "Weekdays minimum in advance"
@@ -994,7 +994,7 @@ msgstr "예약 바우처를 제시하고 골프백을 내려놓습니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:84
 msgid "You have to notify staffs whether you will use a golf cart or not."
-msgstr "카트 이용 여부를 직원에게 말합니다."
+msgstr "골프카트 이용 여부를 직원에게 말합니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:88
 msgid "At Pro Shop"
@@ -1009,7 +1009,7 @@ msgid ""
 "You may have to pay cart fee if you would like to use a golf cart. It is "
 "mandatory that golfers use golf carts at some golf courses."
 msgstr ""
-"카트 이용할 경우 카트피를 지불합니다. 일부 골프장은 카트 이용 의무입니다."
+"골프카트 이용할 경우 카트피를 지불합니다. 일부 골프장은 골프카트를 의무적으로 이용해야 합니다."
 
 #: golf/templates/golf/_golf-club-booking-details.html:98
 msgid "You can receive your ticket after caddie fee and cart fee payment."
@@ -1093,12 +1093,12 @@ msgstr "카트피"
 
 #: golf/templates/golf/golf-club-booking-form.html:115
 msgid "May require golf cart"
-msgstr "카트 의무아님"
+msgstr "골프카트 의무아님"
 
 #: golf/templates/golf/golf-club-booking-form.html:123
 #, python-format
 msgid "Require golf cart with %(golfers)s golfers or more"
-msgstr "%(golfers)s명 이상 카트 의무"
+msgstr "%(golfers)s명 이상 골프카트 의무"
 
 #: golf/templates/golf/golf-club-booking-form.html:130
 msgid "Caddie Fee"
