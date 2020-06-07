@@ -57,7 +57,6 @@ INSTALLED_APPS += [
     'board',
     'help',
     'booking',
-    'hotel',
     'event',
 ]
 

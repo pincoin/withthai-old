@@ -5,18 +5,18 @@ from . import views
 app_name = 'booking'
 
 urlpatterns = [
-    path('',
+    path('golf/',
          views.GolfClubListView.as_view(), name='golf-club-list'),
 
-    path('area/<slug:slug>/',
+    path('golf/area/<slug:slug>/',
          views.GolfAreaListView.as_view(), name='golf-area-list'),
 
-    path('province/<slug:slug>/',
+    path('golf/province/<slug:slug>/',
          views.GolfProvinceListView.as_view(), name='golf-province-list'),
 
-    path('club/<slug:slug>/',
+    path('golf/<slug:slug>/',
          views.GolfClubBookingForm.as_view(), name='golf-club-booking'),
 
-    path('club/<slug:slug>.json',
+    path('golf/<slug:slug>.json',
          views.GolfClubBookingJson.as_view(), name='golf-club-booking-json'),
 ]
