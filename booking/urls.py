@@ -19,4 +19,10 @@ urlpatterns = [
 
     path('golf/<slug:slug>.json',
          views.GolfClubBookingJson.as_view(), name='golf-club-booking-json'),
+
+    path('orders/',
+         views.GolfClubListView.as_view(), name='order-list'),
+
+    path('favorites/',
+         views.GolfClubListView.as_view(), name='favorite-list'),
 ]

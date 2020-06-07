@@ -82,11 +82,11 @@
                 </div>
 
                 <div class="navbar-end">
-                    <a href="#" class="navbar-item">
+                    <a href="{% url 'booking:order-list' %}" class="navbar-item">
                         <span class="icon"><i class="fas fa-passport fa-fw"></i></span>
                         <span>{% trans 'BOOKING' %}</span>
                     </a>
-                    <a href="#" class="navbar-item">
+                    <a href="{% url 'booking:favorite-list' %}" class="navbar-item">
                         <span class="icon"><i class="fas fa-heart fa-fw"></i></span>
                         <span>{% trans 'FAVORITES' %}</span>
                     </a>
@@ -225,13 +225,13 @@
                     </li>
                 {% endif %}
                 <li class="submenu-item">
-                    <a href="#">
+                    <a href="{% url 'booking:order-list' %}">
                         <span class="icon"><i class="fas fa-passport fa-fw"></i></span>
                         <span>{% trans 'MY BOOKING' %}</span>
                     </a>
                 </li>
                 <li class="submenu-item">
-                    <a href="#">
+                    <a href="{% url 'booking:favorite-list' %}">
                         <span class="icon"><i class="fas fa-heart fa-fw"></i></span>
                         <span>{% trans 'FAVORITES' %}</span>
                     </a>
