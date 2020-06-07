@@ -767,6 +767,12 @@
                         let n = parseInt(pax.val()) + 1;
                         pax.val(n);
                         $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
+
+                        if (n < 3) {
+                            $('#join-message').removeClass('is-hidden');
+                        } else {
+                            $('#join-message').addClass('is-hidden');
+                        }
                     }
                 });
 
@@ -777,6 +783,12 @@
                         let n = parseInt(pax.val()) - 1;
                         pax.val(n);
                         $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
+
+                        if (n < 3) {
+                            $('#join-message').removeClass('is-hidden');
+                        } else {
+                            $('#join-message').addClass('is-hidden');
+                        }
                     }
                 });
             });
