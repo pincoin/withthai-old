@@ -353,6 +353,9 @@
                                                                     <li>
                                                                         {% trans 'You have to pay caddie fee and cart fee at golf course.' %}
                                                                     </li>
+                                                                    <li id="cart-message" class="is-hidden">
+                                                                        {% trans 'You have to use a golf cart after payment at golf course.' %}
+                                                                    </li>
                                                                     <li id="join-message" class="is-hidden">
                                                                         {% trans '1 or 2 players may have to join with others.' %}
                                                                     </li>
@@ -674,17 +677,26 @@
                             $('#join-message').addClass('is-hidden');
                         }
 
-                        // 2. Check whether holiday/weekends or not
+                        // 2. Notify cart message
+                        {% if club.cart_required >= 1 %}
+                            if (pax >= {{ club.cart_required }}) {
+                                $('#cart-message').removeClass('is-hidden');
+                            } else {
+                                $('#cart-message').addClass('is-hidden');
+                            }
+                        {% endif %}
+
+                        // 3. Check whether holiday/weekends or not
                         let weekday = 0;
 
-                        // 2-1. Weekends
+                        // 3-1. Weekends
                         if (rdate.getDay() === 6 || rdate.getDay() === 0) {
                             weekday = 1;
                         }
 
                         let out = false;
 
-                        // 2-2. Holidays
+                        // 3-2. Holidays
                         for (i = 0; i < holidays.length; i++) {
                             const holiday = holidays[i].split('-');
 
@@ -703,7 +715,7 @@
 
                         let out1 = false;
 
-                        // 3. Calculate rate
+                        // 4. Calculate rate
                         if (weekday === 0
                             || (weekday === 1
                                 && rdate.getTime() - today.getTime() < club['weekend_max_in_advance'] * 24 * 60 * 60 * 1000)
@@ -773,6 +785,14 @@
                         } else {
                             $('#join-message').addClass('is-hidden');
                         }
+
+                        {% if club.cart_required >= 1 %}
+                            if (n >= {{ club.cart_required }}) {
+                                $('#cart-message').removeClass('is-hidden');
+                            } else {
+                                $('#cart-message').addClass('is-hidden');
+                            }
+                        {% endif %}
                     }
                 });
 
@@ -789,6 +809,14 @@
                         } else {
                             $('#join-message').addClass('is-hidden');
                         }
+
+                        {% if club.cart_required >= 1 %}
+                            if (n >= {{ club.cart_required }}) {
+                                $('#cart-message').removeClass('is-hidden');
+                            } else {
+                                $('#cart-message').addClass('is-hidden');
+                            }
+                        {% endif %}
                     }
                 });
             });
