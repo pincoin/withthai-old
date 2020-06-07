@@ -90,11 +90,11 @@
                         <span class="icon"><i class="fas fa-heart fa-fw"></i></span>
                         <span>{% trans 'FAVORITES' %}</span>
                     </a>
-                    <a href="#" class="navbar-item">
+                    <a href="{% url 'help:home' %}" class="navbar-item">
                         <span class="icon"><i class="fas fa-info-circle fa-fw"></i></span>
                         <span>{% trans 'HELP' %}</span>
                     </a>
-                    <a href="#" class="navbar-item">
+                    <a href="{% url 'member:profile' %}" class="navbar-item">
                         <span class="icon"><i class="fas fa-user-cog fa-fw"></i></span>
                         <span>{% trans 'MY PAGE' %}</span>
                     </a>
@@ -237,13 +237,13 @@
                     </a>
                 </li>
                 <li class="submenu-item">
-                    <a href="#">
+                    <a href="{% url 'member:profile' %}">
                         <span class="icon"><i class="fas fa-user-cog fa-fw"></i></span>
                         <span>{% trans 'MY PAGE' %}</span>
                     </a>
                 </li>
                 <li class="submenu-item">
-                    <a href="#">
+                    <a href="{% url 'help:home' %}">
                         <span class="icon"><i class="fas fa-info-circle fa-fw"></i></span>
                         <span>{% trans 'HELP' %}</span>
                     </a>
