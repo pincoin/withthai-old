@@ -9,7 +9,7 @@
                 <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
                     <ul>
                         <li>
-                            <a href="{% url 'golf:golf-area-list' club.district.province.area.slug %}">
+                            <a href="{% url 'booking:golf-area-list' club.district.province.area.slug %}">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ club.district.province.area.title_thai }}
                                 {% elif LANGUAGE_CODE == 'ko' %}
@@ -20,7 +20,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{% url 'golf:golf-province-list' club.district.province.slug %}">
+                            <a href="{% url 'booking:golf-province-list' club.district.province.slug %}">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ club.district.province.title_thai }}
                                 {% elif LANGUAGE_CODE == 'ko' %}
@@ -92,7 +92,7 @@
                                                     {% else %}
                                                         {{ club.district.title_english }}
                                                     {% endif %} -
-                                                    <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                                    <a href="{% url 'booking:golf-province-list'  club.district.province.slug %}">
                                                         {% if LANGUAGE_CODE == 'th' %}
                                                             {{ club.district.province.title_thai }}
                                                         {% elif LANGUAGE_CODE == 'ko' %}
@@ -461,7 +461,7 @@
                                                 {% else %}
                                                     {{ club.district.title_english }}
                                                 {% endif %} -
-                                                <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                                                <a href="{% url 'booking:golf-province-list'  club.district.province.slug %}">
                                                     {% if LANGUAGE_CODE == 'th' %}
                                                         {{ club.district.province.title_thai }}
                                                     {% elif LANGUAGE_CODE == 'ko' %}
@@ -588,7 +588,7 @@
 
 {% block stylesheet %}
     {{ block.super }}
-    <link type="text/css" rel="stylesheet" href="{% static 'golf/css/main.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'booking/css/main.css' %}">
     <link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 {% endblock %}
 
@@ -603,14 +603,14 @@
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap">
     </script>
-    <script src="{% static 'golf/js/main.js' %}"></script>
+    <script src="{% static 'booking/js/main.js' %}"></script>
     <script>
         let club;
         let rates;
         let holidays;
 
         $(document).ready(function () {
-            $.getJSON('{% url 'golf:golf-club-booking-json' club.slug %}', function (data) {
+            $.getJSON('{% url 'booking:golf-club-booking-json' club.slug %}', function (data) {
                 club = data['club'];
                 rates = data['rates'];
                 holidays = data['holidays'];

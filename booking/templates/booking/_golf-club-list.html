@@ -17,7 +17,7 @@
             <div class="section club-list-item">
                 <div class="columns">
                     <div class="column is-full-mobile is-one-third-desktop">
-                        <a href="{% url 'golf:golf-club-booking' club.slug %}">
+                        <a href="{% url 'booking:golf-club-booking' club.slug %}">
                             {% if club.thumbnail1 %}
                                 <img src="{{ club.thumbnail1.url }}" alt="" class="image">
                             {% else %}
@@ -26,7 +26,7 @@
                         </a>
                     </div>
                     <div class="column is-full-mobile is-two-thirds-desktop">
-                        <a href="{% url 'golf:golf-club-booking' club.slug %}">
+                        <a href="{% url 'booking:golf-club-booking' club.slug %}">
                             <h3 class="is-size-3">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ club.title_thai }}
@@ -45,7 +45,7 @@
                             {% else %}
                                 {{ club.district.title_english }}
                             {% endif %} -
-                            <a href="{% url 'golf:golf-province-list'  club.district.province.slug %}">
+                            <a href="{% url 'booking:golf-province-list'  club.district.province.slug %}">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ club.district.province.title_thai }}
                                 {% elif LANGUAGE_CODE == 'ko' %}

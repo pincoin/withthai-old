@@ -1,7 +1,7 @@
 {% extends 'conf/base.html' %}
 
 {% load i18n static %}
-{% load golf_tags %}
+{% load booking_tags %}
 
 {% block main %}
     <main>
@@ -10,7 +10,7 @@
                 <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
                     <ul>
                         <li>
-                            <a href="{% url 'golf:golf-area-list' area.slug %}">
+                            <a href="{% url 'booking:golf-area-list' area.slug %}">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ area.title_thai }}
                                 {% elif LANGUAGE_CODE == 'ko' %}
@@ -32,7 +32,7 @@
                 <div class="columns is-multiline is-mobile">
                     {% for province in provinces %}
                         <div class="column is-half-mobile is-one-quarter-desktop location-item">
-                            <a href="{% url 'golf:golf-province-list' province.slug %}"
+                            <a href="{% url 'booking:golf-province-list' province.slug %}"
                                class="button is-fullwidth">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ province.title_thai }}
@@ -56,5 +56,5 @@
 
 {% block stylesheet %}
     {{ block.super }}
-    <link type="text/css" href="{% static 'golf/css/main.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'booking/css/main.css' %}" rel="stylesheet">
 {% endblock %}

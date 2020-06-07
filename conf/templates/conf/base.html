@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static i18n %}
-{% load golf_tags %}
+{% load booking_tags %}
 
 {% get_current_language as LANGUAGE_CODE %}
 {% get_available_languages as LANGUAGES %}
@@ -64,7 +64,7 @@
 
             <div class="navbar-menu">
                 <div class="navbar-start">
-                    <a href="{% url 'golf:golf-club-list' %}" class="navbar-item">
+                    <a href="{% url 'booking:golf-club-list' %}" class="navbar-item">
                         {% trans 'GOLF' %}
                     </a>
                     <a href="#" class="navbar-item">
@@ -156,14 +156,14 @@
                 </li>
 
                 <li class="submenu-heading">
-                    <a href="{% url 'golf:golf-club-list' %}">{% trans 'GOLF' %}</a>
+                    <a href="{% url 'booking:golf-club-list' %}">{% trans 'GOLF' %}</a>
                 </li>
                 {% get_areas as areas %}
 
                 <div class="submenu-scroll">
                     {% for area in areas %}
                         <li class="submenu-item">
-                            <a href="{% url 'golf:golf-area-list' area.slug %}">
+                            <a href="{% url 'booking:golf-area-list' area.slug %}">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ area.title_thai }}
                                 {% elif LANGUAGE_CODE == 'ko' %}
@@ -179,7 +179,7 @@
                 <li class="submenu-bottom">
                     <div class="columns is-mobile is-gapless">
                         <div class="column has-text-centered submenu-heading submenu-bottom-active">
-                            <a href="{% url 'golf:golf-club-list' %}">
+                            <a href="{% url 'booking:golf-club-list' %}">
                                 {% trans 'GOLF' %}
                             </a>
                         </div>

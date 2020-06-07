@@ -28,7 +28,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'conf', 'static'),
     os.path.join(BASE_DIR, 'magazine', 'static'),
     os.path.join(BASE_DIR, 'help', 'static'),
-    os.path.join(BASE_DIR, 'golf', 'static'),
+    os.path.join(BASE_DIR, 'booking', 'static'),
 ]
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -61,7 +61,7 @@ LOGGING = {
             'handlers': ['console'],
             'level': 'INFO',
         },
-        'golf': {
+        'booking': {
             'handlers': ['console'],
             'level': 'INFO',
         },

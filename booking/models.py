@@ -114,7 +114,7 @@ class Province(model_utils_models.TimeStampedModel):
     )
 
     area = models.ForeignKey(
-        'golf.Area',
+        'booking.Area',
         verbose_name=_('Location area'),
         db_index=True,
         on_delete=models.CASCADE,
@@ -160,7 +160,7 @@ class District(model_utils_models.TimeStampedModel):
     )
 
     province = models.ForeignKey(
-        'golf.Province',
+        'booking.Province',
         verbose_name=_('Province'),
         db_index=True,
         on_delete=models.CASCADE,
@@ -228,7 +228,7 @@ class Club(model_utils_models.TimeStampedModel):
     )
 
     district = models.ForeignKey(
-        'golf.District',
+        'booking.District',
         verbose_name=_('District'),
         db_index=True,
         on_delete=models.CASCADE,
@@ -427,7 +427,7 @@ class Rate(model_utils_models.TimeStampedModel):
     )
 
     club = models.ForeignKey(
-        'golf.Club',
+        'booking.Club',
         verbose_name=_('Golf club'),
         db_index=True,
         on_delete=models.CASCADE,
@@ -536,14 +536,14 @@ class ClubList(model_utils_models.TimeStampedModel):
 
 class ClubListMembership(models.Model):
     club = models.ForeignKey(
-        'golf.Club',
+        'booking.Club',
         verbose_name=_('Golf club'),
         db_index=True,
         on_delete=models.CASCADE,
     )
 
     club_list = models.ForeignKey(
-        'golf.ClubList',
+        'booking.ClubList',
         verbose_name=_('Golf club list'),
         db_index=True,
         on_delete=models.CASCADE,

@@ -56,7 +56,7 @@ INSTALLED_APPS += [
     'magazine',
     'board',
     'help',
-    'golf',
+    'booking',
     'hotel',
     'event',
 ]

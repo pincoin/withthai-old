@@ -9,7 +9,7 @@
                 <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
                     <ul>
                         <li>
-                            <a href="{% url 'golf:golf-area-list' province.area.slug %}">
+                            <a href="{% url 'booking:golf-area-list' province.area.slug %}">
                                 {% if LANGUAGE_CODE == 'th' %}
                                     {{ province.area.title_thai }}
                                 {% elif LANGUAGE_CODE == 'ko' %}
@@ -47,5 +47,5 @@
 
 {% block stylesheet %}
     {{ block.super }}
-    <link type="text/css" href="{% static 'golf/css/main.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'booking/css/main.css' %}" rel="stylesheet">
 {% endblock %}

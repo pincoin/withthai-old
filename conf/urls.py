@@ -20,8 +20,8 @@ urlpatterns = [
     path('magazine/',
          include('magazine.urls', namespace='magazine')),
 
-    path('golf/',
-         include('golf.urls', namespace='golf')),
+    path('booking/',
+         include('booking.urls', namespace='booking')),
 
     path('member/',
          include('member.urls', namespace='member')),

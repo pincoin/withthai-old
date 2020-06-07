@@ -18,7 +18,7 @@ class GolfClubListView(viewmixins.PageableMixin, generic.ListView):
     logger = logging.getLogger(__name__)
     context_object_name = 'clubs'
 
-    template_name = 'golf/golf-club-list.html'
+    template_name = 'booking/golf-club-list.html'
 
     def get_queryset(self):
         queryset = models.Club.objects \
@@ -32,7 +32,7 @@ class GolfAreaListView(viewmixins.PageableMixin, generic.ListView):
     logger = logging.getLogger(__name__)
     context_object_name = 'clubs'
 
-    template_name = 'golf/golf-area-list.html'
+    template_name = 'booking/golf-area-list.html'
 
     def get_queryset(self):
         queryset = models.Club.objects \
@@ -61,7 +61,7 @@ class GolfProvinceListView(viewmixins.PageableMixin, generic.ListView):
     logger = logging.getLogger(__name__)
     context_object_name = 'clubs'
 
-    template_name = 'golf/golf-province-list.html'
+    template_name = 'booking/golf-province-list.html'
 
     def get_queryset(self):
         queryset = models.Club.objects \
@@ -91,7 +91,7 @@ class GolfClubBookingForm(generic.CreateView):
 
     form_class = forms.GolfClubBookingForm
 
-    template_name = 'golf/golf-club-booking-form.html'
+    template_name = 'booking/golf-club-booking-form.html'
 
     def get_context_data(self, **kwargs):
         context = super(GolfClubBookingForm, self).get_context_data(**kwargs)
@@ -130,7 +130,7 @@ class GolfClubBookingForm(generic.CreateView):
         return response
 
     def get_success_url(self):
-        return reverse('golf:golf-club-list', args=())
+        return reverse('booking:golf-club-list', args=())
 
 
 class GolfClubBookingJson(generic.TemplateView):

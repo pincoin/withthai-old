@@ -49,7 +49,7 @@ class ClubAdmin(admin.ModelAdmin):
 
     def club_link(self, obj=None):
         return mark_safe('<a href="{url}">{text}</a>'.format(
-            url=reverse('golf:golf-club-booking', args=(obj.slug,)),
+            url=reverse('booking:golf-club-booking', args=(obj.slug,)),
             text='{}'.format(obj.title_english),
         ))
 
