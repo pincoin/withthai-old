@@ -5,20 +5,11 @@ from . import models
 
 
 class GolfClubBookingForm(forms.ModelForm):
-    PAX_CHOICES = (
-        ('1', '1'),
-        ('2', '2'),
-        ('3', '3'),
-        ('4', '4'),
-        ('5', '5'),
-        ('6', '6'),
-    )
-
     round_date = forms.DateField(required=True)
 
     round_time = forms.TimeField(required=True)
 
-    pax = forms.ChoiceField(choices=PAX_CHOICES, required=True)
+    pax = forms.ChoiceField(choices=(), required=True)
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
@@ -26,6 +17,8 @@ class GolfClubBookingForm(forms.ModelForm):
         self.rates = kwargs.pop('rates', None)
 
         super(GolfClubBookingForm, self).__init__(*args, **kwargs)
+
+        self.fields['pax'].choices = tuple((str(i), str(i)) for i in [x for x in range(1, int(self.club.max_pax) + 1)])
 
     class Meta:
         model = models.Order
@@ -48,14 +41,15 @@ class GolfClubBookingForm(forms.ModelForm):
     def clean_pax(self):
         data = self.cleaned_data['pax']
 
-        # raise forms.ValidationError(_('Invalid PAX'))
+        if int(data) < 1 or int(data) > self.club.max_pax:
+            raise forms.ValidationError(_('Invalid PAX'))
 
         return data
 
     def clean(self):
         super().clean()
 
-        if not self.request.user.is_authenticated or 'customers' not in self.request.user.groups.all():
+        if not self.request.user.is_authenticated or not self.request.user.groups.filter(name='customers').exists():
             raise forms.ValidationError(_('You have to sign in as a customer for booking.'))
 
 

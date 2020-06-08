@@ -99,7 +99,6 @@ class GolfClubBookingCreateView(generic.CreateView):
         self.rates = None
 
     def get_form_kwargs(self):
-        print('get_form_kwargs')
         kwargs = super(GolfClubBookingCreateView, self).get_form_kwargs()
 
         self.club = models.Club.objects \
