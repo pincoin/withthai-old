@@ -350,6 +350,11 @@
                                                         <article class="message is-info booking-form-alert">
                                                             <div class="message-body">
                                                                 <ul>
+                                                                    {% for error in form.non_field_errors %}
+                                                                        <li class="has-text-danger">
+                                                                            {{ error }}
+                                                                        </li>
+                                                                    {% endfor %}
                                                                     <li>
                                                                         {% trans 'You have to pay caddie fee and cart fee at golf course.' %}
                                                                     </li>

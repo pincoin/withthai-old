@@ -86,25 +86,42 @@ class GolfProvinceListView(viewmixins.PageableMixin, generic.ListView):
         return context
 
 
-class GolfClubBookingForm(generic.CreateView):
+class GolfClubBookingCreateView(generic.CreateView):
     logger = logging.getLogger(__name__)
 
     form_class = forms.GolfClubBookingForm
 
     template_name = 'booking/golf-club-booking-form.html'
 
-    def get_context_data(self, **kwargs):
-        context = super(GolfClubBookingForm, self).get_context_data(**kwargs)
+    def __init__(self):
+        super(GolfClubBookingCreateView, self).__init__()
+        self.club = None
+        self.rates = None
 
-        context['club'] = models.Club.objects \
+    def get_form_kwargs(self):
+        print('get_form_kwargs')
+        kwargs = super(GolfClubBookingCreateView, self).get_form_kwargs()
+
+        self.club = models.Club.objects \
             .select_related('district', 'district__province', 'district__province__area') \
             .get(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
 
-        context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
-
-        context['rates'] = models.Rate.objects \
+        self.rates = models.Rate.objects \
             .filter(club__slug=self.kwargs['slug'], season_end__gt=timezone.make_aware(timezone.localtime().today())) \
             .order_by('season_start', 'day_of_week', 'slot_start')
+
+        kwargs['request'] = self.request
+        kwargs['club'] = self.club
+        kwargs['rates'] = self.rates
+
+        return kwargs
+
+    def get_context_data(self, **kwargs):
+        context = super(GolfClubBookingCreateView, self).get_context_data(**kwargs)
+
+        context['club'] = self.club
+        context['rates'] = self.rates
+        context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
 
         return context
 
