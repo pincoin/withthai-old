@@ -7,3 +7,4 @@ celery==4.4.4
 easy-thumbnails==2.7
 python-memcached==1.59
 django-ipware==2.1.0
+future==0.18.2
