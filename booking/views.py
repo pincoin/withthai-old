@@ -1,3 +1,4 @@
+import json
 import logging
 
 from django.conf import settings
@@ -95,8 +96,10 @@ class GolfClubBookingCreateView(generic.CreateView):
 
     def __init__(self):
         super(GolfClubBookingCreateView, self).__init__()
+
         self.club = None
         self.rates = None
+        self.holidays = None
 
     def get_form_kwargs(self):
         kwargs = super(GolfClubBookingCreateView, self).get_form_kwargs()
@@ -108,6 +111,9 @@ class GolfClubBookingCreateView(generic.CreateView):
         self.rates = models.Rate.objects \
             .filter(club__slug=self.kwargs['slug'], season_end__gt=timezone.make_aware(timezone.localtime().today())) \
             .order_by('season_start', 'day_of_week', 'slot_start')
+
+        self.holidays = models.Holiday.objects \
+            .filter(holiday__gte=timezone.make_aware(timezone.localtime().today()))
 
         kwargs['request'] = self.request
         kwargs['club'] = self.club
@@ -121,6 +127,33 @@ class GolfClubBookingCreateView(generic.CreateView):
         context['club'] = self.club
         context['rates'] = self.rates
         context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
+
+        data = {
+            'club': {},
+            'rates': [],
+            'holidays': [],
+        }
+
+        data['club']['cart_required'] = self.club.cart_required
+        data['club']['weekdays_min_in_advance'] = self.club.weekdays_min_in_advance
+        data['club']['weekdays_max_in_advance'] = self.club.weekdays_max_in_advance
+        data['club']['weekend_min_in_advance'] = self.club.weekend_min_in_advance
+        data['club']['weekend_max_in_advance'] = self.club.weekend_max_in_advance
+
+        for rate in self.rates:
+            data['rates'].append({
+                'season_start': rate.season_start.strftime('%Y-%m-%d'),
+                'season_end': rate.season_end.strftime('%Y-%m-%d'),
+                'weekday': rate.day_of_week,
+                'slot_start': rate.slot_start.strftime('%H:%M'),
+                'slot_end': rate.slot_end.strftime('%H:%M'),
+                'green_fee': int(rate.green_fee_selling_price),
+            })
+
+        for holiday in self.holidays:
+            data['holidays'].append(holiday.holiday.strftime('%Y-%m-%d'))
+
+        context['json'] = json.dumps(data)
 
         return context
 

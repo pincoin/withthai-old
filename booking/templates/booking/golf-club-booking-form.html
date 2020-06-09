@@ -615,215 +615,215 @@
         let holidays;
 
         $(document).ready(function () {
-            $.getJSON('{% url 'booking:golf-club-booking-json' club.slug %}', function (data) {
-                club = data['club'];
-                rates = data['rates'];
-                holidays = data['holidays'];
+            const data = {{ json|safe }}
 
-                const today = new Date();
-                const hour = today.toLocaleString('en-US', {
-                    timeZone: 'Asia/Bangkok',
-                    hour: 'numeric',
-                    hour12: false
+            club = data['club'];
+            rates = data['rates'];
+            holidays = data['holidays'];
+
+            const today = new Date();
+            const hour = today.toLocaleString('en-US', {
+                timeZone: 'Asia/Bangkok',
+                hour: 'numeric',
+                hour12: false
+            });
+            const day = today.toLocaleString('en-US', {
+                timeZone: 'Asia/Bangkok',
+                weekday: 'short',
+            });
+
+            {% if LANGUAGE_CODE == 'ko' %}
+                flatpickr.localize(flatpickr.l10ns.ko);
+            {% elif LANGUAGE_CODE == 'th' %}
+                flatpickr.localize(flatpickr.l10ns.th);
+            {% endif %}
+
+            if (hour >= 16 && hour < 24) {
+                $('#id_round_date').flatpickr({
+                    minDate: new Date().fp_incr(club['weekdays_min_in_advance'] + 1),
+                    maxDate: new Date().fp_incr(club['weekdays_max_in_advance'] + 1)
                 });
-                const day = today.toLocaleString('en-US', {
-                    timeZone: 'Asia/Bangkok',
-                    weekday: 'short',
+            } else {
+                $('#id_round_date').flatpickr({
+                    minDate: new Date().fp_incr(club['weekdays_min_in_advance']),
+                    maxDate: new Date().fp_incr(club['weekdays_max_in_advance'])
                 });
+            }
 
-                {% if LANGUAGE_CODE == 'ko' %}
-                    flatpickr.localize(flatpickr.l10ns.ko);
-                {% elif LANGUAGE_CODE == 'th' %}
-                    flatpickr.localize(flatpickr.l10ns.th);
-                {% endif %}
+            $('#id_round_time').flatpickr({
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+                time_24hr: true,
+                minTime: "06:00",
+                maxTime: "19:30",
+                defaultDate: "06:00",
+                minuteIncrement: 10
+            });
 
-                if (hour >= 16 && hour < 24) {
-                    $('#id_round_date').flatpickr({
-                        minDate: new Date().fp_incr(club['weekdays_min_in_advance'] + 1),
-                        maxDate: new Date().fp_incr(club['weekdays_max_in_advance'] + 1)
-                    });
-                } else {
-                    $('#id_round_date').flatpickr({
-                        minDate: new Date().fp_incr(club['weekdays_min_in_advance']),
-                        maxDate: new Date().fp_incr(club['weekdays_max_in_advance'])
-                    });
-                }
+            $('#id_round_date, #id_round_time, #id_pax').on('change', function () {
+                const round_date = $('#id_round_date').val().split('-');
+                const round_time = $('#id_round_time').val().split(':');
+                const pax = $('#id_pax').val();
 
-                $('#id_round_time').flatpickr({
-                    enableTime: true,
-                    noCalendar: true,
-                    dateFormat: "H:i",
-                    time_24hr: true,
-                    minTime: "06:00",
-                    maxTime: "19:30",
-                    defaultDate: "06:00",
-                    minuteIncrement: 10
-                });
+                if (round_date && round_time && pax) {
+                    const rdate = new Date(parseInt(round_date[0], 10),
+                        parseInt(round_date[1], 10) - 1,
+                        parseInt(round_date[2], 10));
 
-                $('#id_round_date, #id_round_time, #id_pax').on('change', function () {
-                    const round_date = $('#id_round_date').val().split('-');
-                    const round_time = $('#id_round_time').val().split(':');
-                    const pax = $('#id_pax').val();
+                    const rtime = new Date(2020, 0, 1,
+                        parseInt(round_time[0], 10),
+                        parseInt(round_time[1], 10));
 
-                    if (round_date && round_time && pax) {
-                        const rdate = new Date(parseInt(round_date[0], 10),
-                            parseInt(round_date[1], 10) - 1,
-                            parseInt(round_date[2], 10));
+                    // 1. Notify join message
 
-                        const rtime = new Date(2020, 0, 1,
-                            parseInt(round_time[0], 10),
-                            parseInt(round_time[1], 10));
+                    if (pax < 3) {
+                        $('#join-message').removeClass('is-hidden');
+                    } else {
+                        $('#join-message').addClass('is-hidden');
+                    }
 
-                        // 1. Notify join message
-
-                        if (pax < 3) {
-                            $('#join-message').removeClass('is-hidden');
+                    // 2. Notify cart message
+                    {% if club.cart_required >= 1 %}
+                        if (pax >= {{ club.cart_required }}) {
+                            $('#cart-message').removeClass('is-hidden');
                         } else {
-                            $('#join-message').addClass('is-hidden');
+                            $('#cart-message').addClass('is-hidden');
                         }
+                    {% endif %}
 
-                        // 2. Notify cart message
-                        {% if club.cart_required >= 1 %}
-                            if (pax >= {{ club.cart_required }}) {
-                                $('#cart-message').removeClass('is-hidden');
-                            } else {
-                                $('#cart-message').addClass('is-hidden');
-                            }
-                        {% endif %}
+                    // 3. Check whether holiday/weekends or not
+                    let weekday = 0;
 
-                        // 3. Check whether holiday/weekends or not
-                        let weekday = 0;
+                    // 3-1. Weekends
+                    if (rdate.getDay() === 6 || rdate.getDay() === 0) {
+                        weekday = 1;
+                    }
 
-                        // 3-1. Weekends
-                        if (rdate.getDay() === 6 || rdate.getDay() === 0) {
+                    let out = false;
+
+                    // 3-2. Holidays
+                    for (i = 0; i < holidays.length; i++) {
+                        const holiday = holidays[i].split('-');
+
+                        if (rdate.getTime() === new Date(parseInt(holiday[0], 10),
+                            parseInt(holiday[1], 10) - 1,
+                            parseInt(holiday[2], 10)).getTime()) {
+                            out = true;
                             weekday = 1;
+                            break;
                         }
 
-                        let out = false;
-
-                        // 3-2. Holidays
-                        for (i = 0; i < holidays.length; i++) {
-                            const holiday = holidays[i].split('-');
-
-                            if (rdate.getTime() === new Date(parseInt(holiday[0], 10),
-                                parseInt(holiday[1], 10) - 1,
-                                parseInt(holiday[2], 10)).getTime()) {
-                                out = true;
-                                weekday = 1;
-                                break;
-                            }
-
-                            if (out) {
-                                break;
-                            }
+                        if (out) {
+                            break;
                         }
+                    }
 
-                        let out1 = false;
+                    let out1 = false;
 
-                        // 4. Calculate rate
-                        if (weekday === 0
-                            || (weekday === 1
-                                && rdate.getTime() - today.getTime() < club['weekend_max_in_advance'] * 24 * 60 * 60 * 1000)
-                            && day.toUpperCase() !== 'SAT'
-                            && day.toUpperCase() !== 'SUN') {
+                    // 4. Calculate rate
+                    if (weekday === 0
+                        || (weekday === 1
+                            && rdate.getTime() - today.getTime() < club['weekend_max_in_advance'] * 24 * 60 * 60 * 1000)
+                        && day.toUpperCase() !== 'SAT'
+                        && day.toUpperCase() !== 'SUN') {
 
-                            for (i = 0; i < rates.length; i++) {
-                                if (rates[i]['weekday'] === weekday) {
-                                    // check whether round date is within season
-                                    const season_start = rates[i]['season_start'].split('-');
-                                    const season_end = rates[i]['season_end'].split('-');
+                        for (i = 0; i < rates.length; i++) {
+                            if (rates[i]['weekday'] === weekday) {
+                                // check whether round date is within season
+                                const season_start = rates[i]['season_start'].split('-');
+                                const season_end = rates[i]['season_end'].split('-');
 
-                                    if (rdate.getTime() >= new Date(parseInt(season_start[0], 10),
-                                        parseInt(season_start[1], 10) - 1,
-                                        parseInt(season_start[2], 10)).getTime()
-                                        && rdate.getTime() <= new Date(parseInt(season_end[0], 10),
-                                            parseInt(season_end[1], 10) - 1,
-                                            parseInt(season_end[2], 10)).getTime()) {
-                                        // check whether round time is within available slot time
-                                        const slot_start = rates[i]['slot_start'].split(':');
-                                        const slot_end = rates[i]['slot_end'].split(':');
+                                if (rdate.getTime() >= new Date(parseInt(season_start[0], 10),
+                                    parseInt(season_start[1], 10) - 1,
+                                    parseInt(season_start[2], 10)).getTime()
+                                    && rdate.getTime() <= new Date(parseInt(season_end[0], 10),
+                                        parseInt(season_end[1], 10) - 1,
+                                        parseInt(season_end[2], 10)).getTime()) {
+                                    // check whether round time is within available slot time
+                                    const slot_start = rates[i]['slot_start'].split(':');
+                                    const slot_end = rates[i]['slot_end'].split(':');
 
-                                        if (rtime.getTime() >= new Date(2020, 0, 1,
-                                            parseInt(slot_start[0], 10), parseInt(slot_start[1], 10))
-                                            && rtime.getTime() <= new Date(2020, 0, 1,
-                                                parseInt(slot_end[0], 10), parseInt(slot_end[1], 10))) {
-                                            $('#invalid-round-date-time').addClass('is-hidden');
+                                    if (rtime.getTime() >= new Date(2020, 0, 1,
+                                        parseInt(slot_start[0], 10), parseInt(slot_start[1], 10))
+                                        && rtime.getTime() <= new Date(2020, 0, 1,
+                                            parseInt(slot_end[0], 10), parseInt(slot_end[1], 10))) {
+                                        $('#invalid-round-date-time').addClass('is-hidden');
 
-                                            $('#green-fee-block').removeClass('is-hidden');
-                                            $('#id_green_fee').val(Number(rates[i]['green_fee']).toLocaleString('en'));
+                                        $('#green-fee-block').removeClass('is-hidden');
+                                        $('#id_green_fee').val(Number(rates[i]['green_fee']).toLocaleString('en'));
 
-                                            $('#total-block').removeClass('is-hidden');
-                                            $('#id_total').val(Number(rates[i]['green_fee'] * pax).toLocaleString('en'));
+                                        $('#total-block').removeClass('is-hidden');
+                                        $('#id_total').val(Number(rates[i]['green_fee'] * pax).toLocaleString('en'));
 
-                                            $('#submit-button').removeAttr('disabled');
+                                        $('#submit-button').removeAttr('disabled');
 
-                                            out1 = true;
-                                            break;
-                                        }
+                                        out1 = true;
+                                        break;
                                     }
                                 }
-                                if (out1) {
-                                    break;
-                                }
+                            }
+                            if (out1) {
+                                break;
                             }
                         }
-
-                        if (!out1) {
-                            $('#invalid-round-date-time').removeClass('is-hidden');
-                            $('#green-fee-block').addClass('is-hidden');
-                            $('#total-block').addClass('is-hidden');
-                            $('#submit-button').prop('disabled', true);
-                        }
                     }
-                });
 
-                $('#plus-button').on('click', function () {
-                    const pax = $('#id_pax');
+                    if (!out1) {
+                        $('#invalid-round-date-time').removeClass('is-hidden');
+                        $('#green-fee-block').addClass('is-hidden');
+                        $('#total-block').addClass('is-hidden');
+                        $('#submit-button').prop('disabled', true);
+                    }
+                }
+            });
 
-                    if (pax.val() <= {{ club.max_pax }}) {
-                        let n = parseInt(pax.val()) + 1;
-                        pax.val(n);
-                        $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
+            $('#plus-button').on('click', function () {
+                const pax = $('#id_pax');
 
-                        if (n < 3) {
-                            $('#join-message').removeClass('is-hidden');
+                if (pax.val() <= {{ club.max_pax }}) {
+                    let n = parseInt(pax.val()) + 1;
+                    pax.val(n);
+                    $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
+
+                    if (n < 3) {
+                        $('#join-message').removeClass('is-hidden');
+                    } else {
+                        $('#join-message').addClass('is-hidden');
+                    }
+
+                    {% if club.cart_required >= 1 %}
+                        if (n >= {{ club.cart_required }}) {
+                            $('#cart-message').removeClass('is-hidden');
                         } else {
-                            $('#join-message').addClass('is-hidden');
+                            $('#cart-message').addClass('is-hidden');
                         }
+                    {% endif %}
+                }
+            });
 
-                        {% if club.cart_required >= 1 %}
-                            if (n >= {{ club.cart_required }}) {
-                                $('#cart-message').removeClass('is-hidden');
-                            } else {
-                                $('#cart-message').addClass('is-hidden');
-                            }
-                        {% endif %}
+            $('#minus-button').on('click', function () {
+                const pax = $('#id_pax');
+
+                if (pax.val() > 1) {
+                    let n = parseInt(pax.val()) - 1;
+                    pax.val(n);
+                    $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
+
+                    if (n < 3) {
+                        $('#join-message').removeClass('is-hidden');
+                    } else {
+                        $('#join-message').addClass('is-hidden');
                     }
-                });
 
-                $('#minus-button').on('click', function () {
-                    const pax = $('#id_pax');
-
-                    if (pax.val() > 1) {
-                        let n = parseInt(pax.val()) - 1;
-                        pax.val(n);
-                        $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
-
-                        if (n < 3) {
-                            $('#join-message').removeClass('is-hidden');
+                    {% if club.cart_required >= 1 %}
+                        if (n >= {{ club.cart_required }}) {
+                            $('#cart-message').removeClass('is-hidden');
                         } else {
-                            $('#join-message').addClass('is-hidden');
+                            $('#cart-message').addClass('is-hidden');
                         }
-
-                        {% if club.cart_required >= 1 %}
-                            if (n >= {{ club.cart_required }}) {
-                                $('#cart-message').removeClass('is-hidden');
-                            } else {
-                                $('#cart-message').addClass('is-hidden');
-                            }
-                        {% endif %}
-                    }
-                });
+                    {% endif %}
+                }
             });
         });
     </script>
