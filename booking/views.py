@@ -153,17 +153,18 @@ class GolfClubBookingCreateView(generic.CreateView):
         context['rates'] = self.rates
         context['google_maps_api_key'] = settings.GOOGLE_MAPS_API_KEY
 
+        # Build JSON data
         data = {
-            'club': {},
+            'club': {
+                'cart_required': self.club.cart_required,
+                'weekdays_min_in_advance': self.club.weekdays_min_in_advance,
+                'weekdays_max_in_advance': self.club.weekdays_max_in_advance,
+                'weekend_min_in_advance': self.club.weekend_min_in_advance,
+                'weekend_max_in_advance': self.club.weekend_max_in_advance,
+            },
             'rates': [],
             'holidays': [],
         }
-
-        data['club']['cart_required'] = self.club.cart_required
-        data['club']['weekdays_min_in_advance'] = self.club.weekdays_min_in_advance
-        data['club']['weekdays_max_in_advance'] = self.club.weekdays_max_in_advance
-        data['club']['weekend_min_in_advance'] = self.club.weekend_min_in_advance
-        data['club']['weekend_max_in_advance'] = self.club.weekend_max_in_advance
 
         for rate in self.rates:
             data['rates'].append({
