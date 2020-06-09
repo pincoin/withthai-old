@@ -16,6 +16,7 @@ class GolfClubBookingForm(forms.ModelForm):
         self.request = kwargs.pop('request', None)
         self.club = kwargs.pop('club', None)
         self.rates = kwargs.pop('rates', None)
+        self.holidays = kwargs.pop('holidays', None)
 
         self.now = timezone.datetime.now()
 
@@ -72,6 +73,31 @@ class GolfClubBookingForm(forms.ModelForm):
             raise forms.ValidationError(_('You have to sign in as a customer for booking.'))
 
         # 2. Green fee validation
+
+        # 2.1. Weekday
+        holiday = 1 if self.cleaned_data['round_date'].weekday() in [5, 6] else 0
+
+        for day in self.holidays:
+            if day.holiday > self.cleaned_data['round_date']:
+                break
+            elif day.holiday == self.cleaned_data['round_date']:
+                holiday = 1
+                break
+
+        # 2.2 Rate
+        if not holiday \
+                or (holiday
+                    and self.cleaned_data['round_date'] - timezone.datetime.date(self.now)
+                    < timezone.timedelta(days=self.club.weekend_max_in_advance)):
+            for rate in self.rates:
+                if rate.day_of_week == holiday \
+                        and rate.season_end >= self.cleaned_data['round_date'] >= rate.season_start \
+                        and rate.slot_end >= self.cleaned_data['round_time'] >= rate.slot_start:
+                    self.cleaned_data['total_selling_price'] = rate.green_fee_selling_price * int(self.cleaned_data['pax'])
+                    self.cleaned_data['total_cost_price'] = rate.green_fee_cost_price * int(self.cleaned_data['pax'])
+                    return
+
+        raise forms.ValidationError(_('Invalid date, time or PAX'))
 
 
 class SearchForm(forms.Form):

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-09 22:13+0700\n"
+"POT-Creation-Date: 2020-06-10 01:04+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -141,27 +141,31 @@ msgstr ""
 msgid "Booking"
 msgstr ""
 
-#: booking/forms.py:40 booking/forms.py:46
+#: booking/forms.py:41 booking/forms.py:47
 msgid "Invalid round date"
 msgstr ""
 
-#: booking/forms.py:55
+#: booking/forms.py:56
 msgid "Invalid round time"
 msgstr ""
 
-#: booking/forms.py:63
+#: booking/forms.py:64
 msgid "Invalid PAX"
 msgstr ""
 
-#: booking/forms.py:71
+#: booking/forms.py:73
 msgid "You have to sign in as a customer for booking."
 msgstr ""
 
-#: booking/forms.py:78
+#: booking/forms.py:100
+msgid "Invalid date, time or PAX"
+msgstr ""
+
+#: booking/forms.py:105
 msgid "Search word"
 msgstr ""
 
-#: booking/forms.py:82
+#: booking/forms.py:109
 msgid "search word"
 msgstr ""
 
@@ -975,7 +979,7 @@ msgstr ""
 msgid "GOLF"
 msgstr ""
 
-#: booking/views.py:194
+#: booking/views.py:195
 msgid "No language set"
 msgstr ""
 

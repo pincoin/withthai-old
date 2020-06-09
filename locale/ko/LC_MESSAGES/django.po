@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-09 22:13+0700\n"
+"POT-Creation-Date: 2020-06-10 01:04+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -140,27 +140,31 @@ msgstr "골프장"
 msgid "Booking"
 msgstr "예약"
 
-#: booking/forms.py:40 booking/forms.py:46
+#: booking/forms.py:41 booking/forms.py:47
 msgid "Invalid round date"
 msgstr "예약할 수 없는 일자입니다."
 
-#: booking/forms.py:55
+#: booking/forms.py:56
 msgid "Invalid round time"
 msgstr "예약할 수 없는 시간입니다."
 
-#: booking/forms.py:63
+#: booking/forms.py:64
 msgid "Invalid PAX"
 msgstr "인원수 범위 초과입니다."
 
-#: booking/forms.py:71
+#: booking/forms.py:73
 msgid "You have to sign in as a customer for booking."
 msgstr "로그인 후 예약문의 가능합니다."
 
-#: booking/forms.py:78
+#: booking/forms.py:100
+msgid "Invalid date, time or PAX"
+msgstr "잘못된 일자 또는 시간입니다."
+
+#: booking/forms.py:105
 msgid "Search word"
 msgstr "검색어"
 
-#: booking/forms.py:82
+#: booking/forms.py:109
 msgid "search word"
 msgstr "검색어"
 
@@ -979,7 +983,7 @@ msgstr "우천 시 규정 없음. 우천 시에도 환불 불가합니다."
 msgid "GOLF"
 msgstr "골프"
 
-#: booking/views.py:194
+#: booking/views.py:195
 msgid "No language set"
 msgstr "언어설정없음"
 

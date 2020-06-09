@@ -77,7 +77,7 @@ class ClubListAdmin(admin.ModelAdmin):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('user', 'fullname', 'created', 'status',
+    list_display = ('user', 'first_name', 'last_name', 'created', 'status',
                     'payment_method', 'total_selling_price', 'total_cost_price')
     list_filter = ('status', 'payment_method')
     readonly_fields = ('order_no', 'ip_address', 'user_agent', 'accept_language', 'created', 'is_removed')

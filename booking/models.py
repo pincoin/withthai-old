@@ -603,8 +603,14 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
         on_delete=models.SET_NULL,
     )
 
-    fullname = models.CharField(
-        verbose_name=_('Personal name'),
+    last_name = models.CharField(
+        verbose_name=_('Last name'),
+        max_length=64,
+        blank=True,
+    )
+
+    first_name = models.CharField(
+        verbose_name=_('First name'),
         max_length=64,
         blank=True,
     )

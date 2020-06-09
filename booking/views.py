@@ -142,6 +142,7 @@ class GolfClubBookingCreateView(generic.CreateView):
         kwargs['request'] = self.request
         kwargs['club'] = self.club
         kwargs['rates'] = self.rates
+        kwargs['holidays'] = self.holidays
 
         return kwargs
 
@@ -185,8 +186,11 @@ class GolfClubBookingCreateView(generic.CreateView):
         # 1. Construct booking list
 
         # 2. Setup booking meta information
-        form.instance.total_selling_price = 0
-        form.instance.total_cost_price = 0
+        form.instance.first_name = self.request.user.first_name
+        form.instance.last_name = self.request.user.last_name
+
+        form.instance.total_selling_price = form.cleaned_data['total_selling_price']
+        form.instance.total_cost_price = form.cleaned_data['total_cost_price']
 
         form.instance.ip_address = get_ip(self.request)
         form.instance.user = self.request.user
