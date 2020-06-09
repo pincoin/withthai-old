@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-09 00:16+0700\n"
+"POT-Creation-Date: 2020-06-09 22:13+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -140,19 +140,27 @@ msgstr "골프장"
 msgid "Booking"
 msgstr "예약"
 
-#: booking/forms.py:52
+#: booking/forms.py:40 booking/forms.py:46
+msgid "Invalid round date"
+msgstr "예약할 수 없는 일자입니다."
+
+#: booking/forms.py:55
+msgid "Invalid round time"
+msgstr "예약할 수 없는 시간입니다."
+
+#: booking/forms.py:63
 msgid "Invalid PAX"
 msgstr "인원수 범위 초과입니다."
 
-#: booking/forms.py:60
+#: booking/forms.py:71
 msgid "You have to sign in as a customer for booking."
 msgstr "로그인 후 예약문의 가능합니다."
 
-#: booking/forms.py:65
+#: booking/forms.py:78
 msgid "Search word"
 msgstr "검색어"
 
-#: booking/forms.py:69
+#: booking/forms.py:82
 msgid "search word"
 msgstr "검색어"
 
@@ -971,7 +979,7 @@ msgstr "우천 시 규정 없음. 우천 시에도 환불 불가합니다."
 msgid "GOLF"
 msgstr "골프"
 
-#: booking/views.py:137
+#: booking/views.py:194
 msgid "No language set"
 msgstr "언어설정없음"
 
