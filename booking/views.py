@@ -45,7 +45,7 @@ class GolfAreaListView(viewmixins.PageableMixin, generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(GolfAreaListView, self).get_context_data(**kwargs)
 
-        cache_key = 'golf.GolfAreaListView.get_context_data({})'.format(self.kwargs['slug'])
+        cache_key = 'booking.GolfAreaListView.get_context_data({})'.format(self.kwargs['slug'])
         cache_time = settings.CACHES['default']['TIMEOUT_DAY']
 
         context['area'] = cache.get(cache_key)
@@ -74,7 +74,7 @@ class GolfProvinceListView(viewmixins.PageableMixin, generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(GolfProvinceListView, self).get_context_data(**kwargs)
 
-        cache_key = 'golf.GolfProvinceListView.get_context_data({})'.format(self.kwargs['slug'])
+        cache_key = 'booking.GolfProvinceListView.get_context_data({})'.format(self.kwargs['slug'])
         cache_time = settings.CACHES['default']['TIMEOUT_DAY']
 
         context['province'] = cache.get(cache_key)
@@ -104,16 +104,40 @@ class GolfClubBookingCreateView(generic.CreateView):
     def get_form_kwargs(self):
         kwargs = super(GolfClubBookingCreateView, self).get_form_kwargs()
 
-        self.club = models.Club.objects \
-            .select_related('district', 'district__province', 'district__province__area') \
-            .get(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
+        cache_time = settings.CACHES['default']['TIMEOUT_DAY']
 
-        self.rates = models.Rate.objects \
-            .filter(club__slug=self.kwargs['slug'], season_end__gt=timezone.make_aware(timezone.localtime().today())) \
-            .order_by('season_start', 'day_of_week', 'slot_start')
+        cache_key = 'booking.GolfClubBookingCreateView.get_form_kwargs(club,{})'.format(self.kwargs['slug'])
 
-        self.holidays = models.Holiday.objects \
-            .filter(holiday__gte=timezone.make_aware(timezone.localtime().today()))
+        self.club = cache.get(cache_key)
+
+        if not self.club:
+            self.club = models.Club.objects \
+                .select_related('district', 'district__province', 'district__province__area') \
+                .get(slug=self.kwargs['slug'], status=models.Club.STATUS_CHOICES.open)
+
+            cache.set(cache_key, self.club, cache_time)
+
+        cache_key = 'booking.GolfClubBookingCreateView.get_form_kwargs(rates,{})'.format(self.kwargs['slug'])
+
+        self.rates = cache.get(cache_key)
+
+        if not self.rates:
+            self.rates = models.Rate.objects \
+                .filter(club__slug=self.kwargs['slug'],
+                        season_end__gt=timezone.make_aware(timezone.localtime().today())) \
+                .order_by('season_start', 'day_of_week', 'slot_start')
+
+            cache.set(cache_key, self.rates, cache_time)
+
+        cache_key = 'booking.GolfClubBookingCreateView.get_form_kwargs(holidays)'
+
+        self.holidays = cache.get(cache_key)
+
+        if not self.holidays:
+            self.holidays = models.Holiday.objects \
+                .filter(holiday__gte=timezone.make_aware(timezone.localtime().today()))
+
+            cache.set(cache_key, self.holidays, cache_time)
 
         kwargs['request'] = self.request
         kwargs['club'] = self.club
@@ -192,7 +216,7 @@ class GolfClubBookingJson(generic.TemplateView):
 
         cache_time = settings.CACHES['default']['TIMEOUT_DAY']
 
-        cache_key = 'golf.GolfClubBookingJson.render_to_response(club,{})'.format(self.kwargs['slug'])
+        cache_key = 'booking.GolfClubBookingJson.render_to_response(club,{})'.format(self.kwargs['slug'])
 
         club = cache.get(cache_key)
 
@@ -209,7 +233,7 @@ class GolfClubBookingJson(generic.TemplateView):
         data['club']['weekend_min_in_advance'] = club.weekend_min_in_advance
         data['club']['weekend_max_in_advance'] = club.weekend_max_in_advance
 
-        cache_key = 'golf.GolfClubBookingJson.render_to_response(rates,{})'.format(self.kwargs['slug'])
+        cache_key = 'booking.GolfClubBookingJson.render_to_response(rates,{})'.format(self.kwargs['slug'])
 
         rates = cache.get(cache_key)
 
@@ -231,7 +255,7 @@ class GolfClubBookingJson(generic.TemplateView):
                 'green_fee': int(rate.green_fee_selling_price),
             })
 
-        cache_key = 'golf.GolfClubBookingJson.render_to_response(holidays)'
+        cache_key = 'booking.GolfClubBookingJson.render_to_response(holidays)'
 
         holidays = cache.get(cache_key)
 
