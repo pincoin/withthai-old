@@ -23,12 +23,12 @@ $(document).ready(function () {
     });
 
     $('#icon-burger').on('click', function() {
-        $('#left-sidebar').addClass('is-active').animate({"left":"0%"});
+        $('#left-sidebar').addClass('is-active').animate({"left":"0%"}, 3000);
         $('html').addClass('is-clipped');
     });
 
     $('#icon-search').on('click', function() {
-        $('#right-sidebar').addClass('is-active').animate({"left":"0%"});
+        $('#right-sidebar').addClass('is-active').animate({"left":"0%"}, 3000);
         $('html').addClass('is-clipped');
     });
 
