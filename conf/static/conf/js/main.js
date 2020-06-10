@@ -23,18 +23,18 @@ $(document).ready(function () {
     });
 
     $('#icon-burger').on('click', function() {
-        $('#left-sidebar').addClass('is-active');
+        $('#left-sidebar').addClass('is-active').animate({"left":"0%"});
         $('html').addClass('is-clipped');
     });
 
     $('#icon-search').on('click', function() {
-        $('#right-sidebar').addClass('is-active');
+        $('#right-sidebar').addClass('is-active').animate({"left":"0%"});
         $('html').addClass('is-clipped');
     });
 
     $('.modal-background, #left-sidebar-close, #right-sidebar-close').on('click', function() {
-        $('#left-sidebar').removeClass('is-active');
-        $('#right-sidebar').removeClass('is-active');
+        $('#left-sidebar').animate({"left":"-100%"},function(){ $(this).removeClass('is-active')  });
+        $('#right-sidebar').animate({"left":"-100%"},function(){ $(this).removeClass('is-active')  });
         $('html').removeClass('is-clipped');
     });
 });
