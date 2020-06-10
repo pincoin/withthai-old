@@ -33,8 +33,8 @@ $(document).ready(function () {
     });
 
     $('.modal-background, #left-sidebar-close, #right-sidebar-close').on('click', function() {
-        $('#left-sidebar').animate({"left":"-100%"},function(){ $(this).removeClass('is-active')  });
-        $('#right-sidebar').animate({"left":"-100%"},function(){ $(this).removeClass('is-active')  });
+        $('#left-sidebar').animate({"left":"-100%"}, 3000, function(){ $(this).removeClass('is-active')  });
+        $('#right-sidebar').animate({"left":"-100%"}, 3000,function(){ $(this).removeClass('is-active')  });
         $('html').removeClass('is-clipped');
     });
 });
