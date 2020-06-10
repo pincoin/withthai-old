@@ -3998,7 +3998,6 @@ a.list-item {
   justify-content: center;
   overflow: hidden;
   position: fixed;
-  left:-100%;
   z-index: 40; }
   .modal.is-active {
     display: flex; }

@@ -125,6 +125,10 @@ main {
     overflow-y: scroll;
 }
 
+#left-sidebar {
+    left: -100%;
+}
+
 #left-sidebar-close:link, #left-sidebar-close:visited, #right-sidebar-close:link, #right-sidebar-close:visited {
     color: #03353e;
     font-size: 1.5rem;
