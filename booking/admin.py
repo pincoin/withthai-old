@@ -11,6 +11,12 @@ class ClubInline(admin.TabularInline):
     extra = 1
 
 
+class ClubOrderInline(admin.TabularInline):
+    model = models.Order.clubs.through
+    raw_id_fields = ('club',)
+    extra = 1
+
+
 class HolidayAdmin(admin.ModelAdmin):
     list_display = ('holiday', 'country', 'title')
     list_filter = ('holiday', 'country')
@@ -82,6 +88,7 @@ class OrderAdmin(admin.ModelAdmin):
     list_filter = ('status', 'payment_method')
     readonly_fields = ('order_no', 'ip_address', 'user_agent', 'accept_language', 'created', 'is_removed')
     raw_id_fields = ('user', 'parent',)
+    inlines = [ClubOrderInline, ]
     ordering = ('-created',)
 
 

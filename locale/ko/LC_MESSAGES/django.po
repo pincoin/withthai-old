@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-11 13:52+0700\n"
+"POT-Creation-Date: 2020-06-11 22:03+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,8 +131,8 @@ msgstr "회원가입"
 msgid "Board"
 msgstr "게시판"
 
-#: booking/admin.py:56 booking/admin.py:70 booking/models.py:408
-#: booking/models.py:431 booking/models.py:540
+#: booking/admin.py:62 booking/admin.py:76 booking/models.py:408
+#: booking/models.py:431 booking/models.py:540 booking/models.py:693
 msgid "Golf club"
 msgstr "골프장"
 
@@ -335,7 +335,7 @@ msgstr "팩스 번호"
 
 #: booking/models.py:259
 #: booking/templates/booking/golf-club-booking-form.html:164
-#: booking/templates/booking/golf-club-booking-form.html:499
+#: booking/templates/booking/golf-club-booking-form.html:500
 msgid "Website"
 msgstr "홈페이지"
 
@@ -354,12 +354,13 @@ msgstr "시작가"
 #: booking/models.py:290 booking/models.py:298 booking/models.py:306
 #: booking/models.py:470 booking/models.py:477 booking/models.py:484
 #: booking/models.py:491 booking/models.py:498 booking/models.py:505
+#: booking/models.py:724 booking/models.py:731
 #: booking/templates/booking/_golf-club-list.html:62
 #: booking/templates/booking/golf-club-booking-form.html:111
 #: booking/templates/booking/golf-club-booking-form.html:133
-#: booking/templates/booking/golf-club-booking-form.html:295
-#: booking/templates/booking/golf-club-booking-form.html:315
-#: booking/templates/booking/golf-club-booking-form.html:426
+#: booking/templates/booking/golf-club-booking-form.html:296
+#: booking/templates/booking/golf-club-booking-form.html:316
+#: booking/templates/booking/golf-club-booking-form.html:427
 #: conf/templates/conf/home.html:62
 msgid "THB"
 msgstr "바트"
@@ -485,11 +486,11 @@ msgstr "시간대 종료시간"
 msgid "Rate title"
 msgstr "요금제"
 
-#: booking/models.py:467
+#: booking/models.py:467 booking/models.py:721
 msgid "Green fee selling price"
 msgstr "그.피 판매가"
 
-#: booking/models.py:474
+#: booking/models.py:474 booking/models.py:728
 msgid "Green fee cost price"
 msgstr "그.피 매입가"
 
@@ -654,20 +655,40 @@ msgstr "주문메시지"
 msgid "Parent order"
 msgstr "관련주문"
 
-#: booking/models.py:681
+#: booking/models.py:683
 msgid "Booking order"
 msgstr "예약주문"
 
-#: booking/models.py:682
+#: booking/models.py:684
 msgid "Booking orders"
 msgstr "예약주문"
+
+#: booking/models.py:700
+msgid "Order list"
+msgstr "주문목록"
+
+#: booking/models.py:706
+msgid "Round date"
+msgstr "라운드 일자"
+
+#: booking/models.py:711
+msgid "Round time"
+msgstr "라운드 시간"
+
+#: booking/models.py:716
+msgid "PAX"
+msgstr "인원"
+
+#: booking/models.py:735 booking/models.py:736
+msgid "Golf club order list membership"
+msgstr "예약 골프장 목록"
 
 #: booking/templates/booking/_golf-club-booking-details.html:7
 msgid "Booking Process"
 msgstr "예약 절차"
 
 #: booking/templates/booking/_golf-club-booking-details.html:18
-#: booking/templates/booking/golf-club-booking-form.html:372
+#: booking/templates/booking/golf-club-booking-form.html:373
 msgid "Booking Inquiry"
 msgstr "예약문의신청"
 
@@ -840,7 +861,7 @@ msgid "Next"
 msgstr "다음"
 
 #: booking/templates/booking/golf-club-booking-form.html:85
-#: booking/templates/booking/golf-club-booking-form.html:450
+#: booking/templates/booking/golf-club-booking-form.html:451
 msgid "Location"
 msgstr "지역"
 
@@ -862,13 +883,13 @@ msgid "Caddie Fee"
 msgstr "캐디피"
 
 #: booking/templates/booking/golf-club-booking-form.html:140
-#: booking/templates/booking/golf-club-booking-form.html:475 member/forms.py:27
+#: booking/templates/booking/golf-club-booking-form.html:476 member/forms.py:27
 #: member/models.py:16
 msgid "Telephone"
 msgstr "전화번호"
 
 #: booking/templates/booking/golf-club-booking-form.html:153
-#: booking/templates/booking/golf-club-booking-form.html:488
+#: booking/templates/booking/golf-club-booking-form.html:489
 msgid "Address"
 msgstr "주소"
 
@@ -881,103 +902,103 @@ msgstr "일시"
 msgid "Golfer #"
 msgstr "인원"
 
-#: booking/templates/booking/golf-club-booking-form.html:283
+#: booking/templates/booking/golf-club-booking-form.html:284
 msgid "Green Fee"
 msgstr "그린피"
 
-#: booking/templates/booking/golf-club-booking-form.html:303
+#: booking/templates/booking/golf-club-booking-form.html:304
 msgid "Total"
 msgstr "결제액"
 
-#: booking/templates/booking/golf-club-booking-form.html:328
+#: booking/templates/booking/golf-club-booking-form.html:329
 msgid "You have chosen the unavailable round date/time."
 msgstr "예약할 수 없는 일자/시간입니다."
 
-#: booking/templates/booking/golf-club-booking-form.html:347
+#: booking/templates/booking/golf-club-booking-form.html:348
 msgid "Please, select your round date, time and PAX."
 msgstr "예약문의 일자와 시간, 인원을 선택하세요."
 
-#: booking/templates/booking/golf-club-booking-form.html:350
+#: booking/templates/booking/golf-club-booking-form.html:351
 msgid "You have to pay caddie fee and cart fee at golf course."
 msgstr "캐디피와 카트피는 골프장에서 직접 결제합니다."
 
-#: booking/templates/booking/golf-club-booking-form.html:353
+#: booking/templates/booking/golf-club-booking-form.html:354
 msgid "You have to use a golf cart after payment at golf course."
 msgstr "골프카트를 반드시 골프장에서 결제 후 이용해야 합니다. "
 
-#: booking/templates/booking/golf-club-booking-form.html:356
+#: booking/templates/booking/golf-club-booking-form.html:357
 msgid "1 or 2 players may have to join with others."
 msgstr "인원 1~2명은 당일 골프장에서 조인 후 진행할 수도 있습니다."
 
-#: booking/templates/booking/golf-club-booking-form.html:377
+#: booking/templates/booking/golf-club-booking-form.html:378
 msgid "Booking Inquiry after Login"
 msgstr "로그인 후 예약문의신청"
 
-#: booking/templates/booking/golf-club-booking-form.html:395
+#: booking/templates/booking/golf-club-booking-form.html:396
 msgid "Rate / Schedule"
 msgstr "요금 및 시간표"
 
-#: booking/templates/booking/golf-club-booking-form.html:403
+#: booking/templates/booking/golf-club-booking-form.html:404
 msgid "Period"
 msgstr "기간"
 
-#: booking/templates/booking/golf-club-booking-form.html:404
+#: booking/templates/booking/golf-club-booking-form.html:405
 msgid "Type of day"
 msgstr "휴일구분"
 
-#: booking/templates/booking/golf-club-booking-form.html:405
+#: booking/templates/booking/golf-club-booking-form.html:406
 msgid "Time slot"
 msgstr "시간대"
 
-#: booking/templates/booking/golf-club-booking-form.html:406
+#: booking/templates/booking/golf-club-booking-form.html:407
 msgid "Time"
 msgstr "시간"
 
-#: booking/templates/booking/golf-club-booking-form.html:407
+#: booking/templates/booking/golf-club-booking-form.html:408
 msgid "Rate"
 msgstr "요금"
 
-#: booking/templates/booking/golf-club-booking-form.html:441
+#: booking/templates/booking/golf-club-booking-form.html:442
 msgid "Golf Club Information"
 msgstr "골프장 개요"
 
-#: booking/templates/booking/golf-club-booking-form.html:520
+#: booking/templates/booking/golf-club-booking-form.html:521
 msgid "Cancel Policy"
 msgstr "취소/환불 규정"
 
-#: booking/templates/booking/golf-club-booking-form.html:526
+#: booking/templates/booking/golf-club-booking-form.html:527
 msgid "8 days before round date"
 msgstr "라운드 일자 8일전"
 
-#: booking/templates/booking/golf-club-booking-form.html:530
+#: booking/templates/booking/golf-club-booking-form.html:531
 msgid "Total amount is refunded."
 msgstr "전액 환불"
 
-#: booking/templates/booking/golf-club-booking-form.html:534
+#: booking/templates/booking/golf-club-booking-form.html:535
 msgid "7-4 days before round date"
 msgstr "라운드 일자 7-4일 전"
 
-#: booking/templates/booking/golf-club-booking-form.html:538
+#: booking/templates/booking/golf-club-booking-form.html:539
 msgid "50 percent of total amount is refunded."
 msgstr "50% 환불"
 
-#: booking/templates/booking/golf-club-booking-form.html:542
+#: booking/templates/booking/golf-club-booking-form.html:543
 msgid "Within 3 days of round date"
 msgstr "라운드 당일 포함 3일전"
 
-#: booking/templates/booking/golf-club-booking-form.html:546
+#: booking/templates/booking/golf-club-booking-form.html:547
 msgid "Non-refundable"
 msgstr "전액 환불 불가"
 
-#: booking/templates/booking/golf-club-booking-form.html:560
+#: booking/templates/booking/golf-club-booking-form.html:561
 msgid "Rain Check"
 msgstr "우천 시 규정"
 
-#: booking/templates/booking/golf-club-booking-form.html:566
+#: booking/templates/booking/golf-club-booking-form.html:567
 msgid "We obey the rules of golf clubs"
 msgstr "위드타이는 골프장의 규정을 준수합니다."
 
-#: booking/templates/booking/golf-club-booking-form.html:570
+#: booking/templates/booking/golf-club-booking-form.html:571
 msgid "No. Golf course has no rain check, no refund for any reason."
 msgstr "우천 시 규정 없음. 우천 시에도 환불 불가합니다."
 

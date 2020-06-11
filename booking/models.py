@@ -677,9 +677,62 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
         on_delete=models.CASCADE,
     )
 
+    clubs = models.ManyToManyField(Club, through='ClubOrderListMembership')
+
     class Meta:
         verbose_name = _('Booking order')
         verbose_name_plural = _('Booking orders')
 
     def __str__(self):
         return '{} {} {}'.format(self.user, self.total_selling_price, self.created)
+
+
+class ClubOrderListMembership(models.Model):
+    club = models.ForeignKey(
+        'booking.Club',
+        verbose_name=_('Golf club'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
+    order_list = models.ForeignKey(
+        'booking.Order',
+        verbose_name=_('Order list'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
+    round_date = models.DateField(
+        verbose_name=_('Round date'),
+        db_index=True,
+    )
+
+    round_time = models.TimeField(
+        verbose_name=_('Round time'),
+        db_index=True,
+    )
+
+    pax = models.IntegerField(
+        verbose_name=_('PAX'),
+        default=4,
+    )
+
+    green_fee_selling_price = models.DecimalField(
+        verbose_name=_('Green fee selling price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+        help_text=_('THB'),
+    )
+
+    green_fee_cost_price = models.DecimalField(
+        verbose_name=_('Green fee cost price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+        help_text=_('THB'),
+    )
+
+    class Meta:
+        verbose_name = _('Golf club order list membership')
+        verbose_name_plural = _('Golf club order list membership')
