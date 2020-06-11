@@ -23,20 +23,30 @@ $(document).ready(function () {
     });
 
     $('#icon-burger').on('click', function () {
-        $('#left-sidebar').addClass('is-active').animate({"left": "0%"}, 3000);
+        $('#left-sidebar').addClass('is-active').animate({"left": "0%"}, 300);
         $('html').addClass('is-clipped');
     });
 
     $('#icon-search').on('click', function () {
-        $('#right-sidebar').addClass('is-active').animate({"left": "0%"}, 3000);
+        $('#right-sidebar').addClass('is-active').animate({"right": "0%"}, 300);
         $('html').addClass('is-clipped');
     });
 
-    $('.modal-background, #left-sidebar-close, #right-sidebar-close').on('click', function () {
-        $('#left-sidebar').animate({"left": "-100%"}, 3000, function () {
+    $('#left-sidebar .modal-background, #left-sidebar-close').on('click', function () {
+        $('#left-sidebar').animate({"left": "-100%"}, 300, function () {
             $(this).removeClass('is-active')
         });
-        $('#right-sidebar').animate({"left": "-100%"}, 3000, function () {
+        $('#right-sidebar').animate({"left": "-100%"}, 300, function () {
+            $(this).removeClass('is-active')
+        });
+        $('html').removeClass('is-clipped');
+    });
+
+    $('#right-sidebar .modal-background, #right-sidebar-close').on('click', function () {
+        $('#left-sidebar').animate({"right": "-200%"}, 300, function () {
+            $(this).removeClass('is-active')
+        });
+        $('#right-sidebar').animate({"right": "-200%"}, 300, function () {
             $(this).removeClass('is-active')
         });
         $('html').removeClass('is-clipped');
