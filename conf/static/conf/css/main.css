@@ -68,7 +68,7 @@ main {
 
 /* Mobile Sidebar */
 .left-sidebar {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
 
@@ -123,10 +123,6 @@ main {
     box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.5);
     background-color: #e4ebe3;
     overflow-y: scroll;
-}
-
-#left-sidebar {
-    left: -100%;
 }
 
 #left-sidebar-close:link, #left-sidebar-close:visited, #right-sidebar-close:link, #right-sidebar-close:visited {
