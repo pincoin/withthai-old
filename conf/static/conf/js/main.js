@@ -36,19 +36,27 @@ $(document).ready(function () {
         $('#left-sidebar').animate({"left": "-100%"}, 300, function () {
             $(this).removeClass('is-active')
         });
+
+        /*
         $('#right-sidebar').animate({"left": "-100%"}, 300, function () {
             $(this).removeClass('is-active')
         });
+         */
+
         $('html').removeClass('is-clipped');
     });
 
     $('#right-sidebar .modal-background, #right-sidebar-close').on('click', function () {
+        /*
         $('#left-sidebar').animate({"right": "-200%"}, 300, function () {
             $(this).removeClass('is-active')
         });
+         */
+
         $('#right-sidebar').animate({"right": "-200%"}, 300, function () {
             $(this).removeClass('is-active')
         });
+
         $('html').removeClass('is-clipped');
     });
 });
