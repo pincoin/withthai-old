@@ -41,7 +41,7 @@ $(document).ready(function () {
     });
 
     $('#right-sidebar .modal-background, #right-sidebar-close').on('click', function () {
-        $('#right-sidebar').animate({"right": "-150%"}, 150, 'swing', function () {
+        $('#right-sidebar').animate({"right": "-100%"}, 150, 'swing', function () {
             $(this).removeClass('is-active')
         });
 

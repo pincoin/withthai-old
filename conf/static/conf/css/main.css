@@ -98,7 +98,7 @@ main {
 }
 
 #right-sidebar {
-    right: -200%;
+    right: -100%;
 }
 
 #left-sidebar-close:link, #left-sidebar-close:visited, #right-sidebar-close:link, #right-sidebar-close:visited {
