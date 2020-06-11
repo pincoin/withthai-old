@@ -123,6 +123,10 @@
     margin-left: 1px;
 }
 
+.pax-select {
+    text-indent: 50%
+}
+
 #plus-button {
     background-color: #024769;
     border-color: transparent;

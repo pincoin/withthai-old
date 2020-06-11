@@ -231,10 +231,16 @@
                                                     </div>
                                                     <div class="field-body">
                                                         <div class="field has-addons">
+                                                            <div class="control">
+                                                                <a class="button" id="minus-button">
+                                                                    <i class="fas fa-minus fa-fw"></i>
+                                                                </a>
+                                                            </div>
                                                             <div class="control is-expanded">
                                                                 <div class="select is-fullwidth{% if form.pax.errors %} is-danger{% endif %}">
                                                                     <select id="{{ form.pax.id_for_label }}"
-                                                                            name="{{ form.pax.name }}">
+                                                                            name="{{ form.pax.name }}"
+                                                                            class="pax-select">
                                                                         {% for choice in form.pax.field.choices %}
                                                                             {% if forloop.counter0 <= club.max_pax %}
                                                                                 <option value="{{ choice.0 }}"
@@ -251,11 +257,6 @@
                                                             <div class="control">
                                                                 <a class="button" id="plus-button">
                                                                     <i class="fas fa-plus fa-fw"></i>
-                                                                </a>
-                                                            </div>
-                                                            <div class="control">
-                                                                <a class="button" id="minus-button">
-                                                                    <i class="fas fa-minus fa-fw"></i>
                                                                 </a>
                                                             </div>
                                                         </div>
