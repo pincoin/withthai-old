@@ -617,7 +617,7 @@
         $(document).ready(function () {
             const data = {{ json|safe }}
 
-            club = data['club'];
+                club = data['club'];
             rates = data['rates'];
             holidays = data['holidays'];
 
@@ -778,9 +778,11 @@
             });
 
             $('#plus-button').on('click', function () {
+                const round_date = $('#id_round_date').val();
+                const round_time = $('#id_round_time').val();
                 const pax = $('#id_pax');
 
-                if (pax.val() <= {{ club.max_pax }}) {
+                if (round_date && round_time && pax && pax.val() < {{ club.max_pax }}) {
                     let n = parseInt(pax.val()) + 1;
                     pax.val(n);
                     $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
@@ -802,9 +804,11 @@
             });
 
             $('#minus-button').on('click', function () {
+                const round_date = $('#id_round_date').val();
+                const round_time = $('#id_round_time').val();
                 const pax = $('#id_pax');
 
-                if (pax.val() > 1) {
+                if (round_date && round_time && pax && pax.val() > 1) {
                     let n = parseInt(pax.val()) - 1;
                     pax.val(n);
                     $('#id_total').val(Number(rates[i]['green_fee'] * n).toLocaleString('en'));
