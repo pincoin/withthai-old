@@ -68,6 +68,8 @@ class GolfClubBookingForm(forms.ModelForm):
     def clean(self):
         super().clean()
 
+        self.cleaned_data['club'] = self.club
+
         # 1. Authentication and Group membership
         if not self.request.user.is_authenticated or not self.request.user.groups.filter(name='customers').exists():
             raise forms.ValidationError(_('You have to sign in as a customer for booking.'))
@@ -93,8 +95,13 @@ class GolfClubBookingForm(forms.ModelForm):
                 if rate.day_of_week == holiday \
                         and rate.season_end >= self.cleaned_data['round_date'] >= rate.season_start \
                         and rate.slot_end >= self.cleaned_data['round_time'] >= rate.slot_start:
-                    self.cleaned_data['total_selling_price'] = rate.green_fee_selling_price * int(self.cleaned_data['pax'])
-                    self.cleaned_data['total_cost_price'] = rate.green_fee_cost_price * int(self.cleaned_data['pax'])
+                    self.cleaned_data['green_fee_selling_price'] = rate.green_fee_selling_price
+                    self.cleaned_data['green_fee_cost_price'] = rate.green_fee_cost_price
+
+                    self.cleaned_data['total_selling_price'] = rate.green_fee_selling_price \
+                                                               * int(self.cleaned_data['pax'])
+                    self.cleaned_data['total_cost_price'] = rate.green_fee_cost_price \
+                                                            * int(self.cleaned_data['pax'])
                     return
 
         raise forms.ValidationError(_('Invalid date, time or PAX'))

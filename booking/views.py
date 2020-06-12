@@ -184,9 +184,7 @@ class GolfClubBookingCreateView(generic.CreateView):
         return context
 
     def form_valid(self, form):
-        # 1. Construct booking list
-
-        # 2. Setup booking meta information
+        # 1. Setup booking meta information
         form.instance.first_name = self.request.user.first_name
         form.instance.last_name = self.request.user.last_name
 
@@ -201,9 +199,18 @@ class GolfClubBookingCreateView(generic.CreateView):
 
         response = super().form_valid(form)
 
-        # 3. Associate booking to order
+        # 2. Associate booking information (Many to many relationship)
+        models.ClubOrderListMembership.objects.create(
+            club=form.cleaned_data['club'],
+            order=self.object,
+            round_date=form.cleaned_data['round_date'],
+            round_time=form.cleaned_data['round_time'],
+            pax=form.cleaned_data['pax'],
+            green_fee_selling_price=form.cleaned_data['green_fee_selling_price'],
+            green_fee_cost_price=form.cleaned_data['green_fee_cost_price'],
+        )
 
-        # 4. Notify manager, club authorities, user
+        # 3. Notify manager, club authorities, user
 
         return response
 
