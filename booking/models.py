@@ -695,9 +695,9 @@ class ClubOrderListMembership(models.Model):
         on_delete=models.CASCADE,
     )
 
-    order_list = models.ForeignKey(
+    order = models.ForeignKey(
         'booking.Order',
-        verbose_name=_('Order list'),
+        verbose_name=_('Order'),
         db_index=True,
         on_delete=models.CASCADE,
     )
