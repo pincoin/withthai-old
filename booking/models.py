@@ -559,12 +559,6 @@ class ClubListMembership(models.Model):
 
 
 class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampedModel):
-    PAYMENT_METHOD_CHOICES = Choices(
-        (0, 'credit_card', _('Credit Card')),
-        (1, 'bank_transfer', _('Bank Transfer')),
-        (2, 'paypal', _('PayPal')),
-    )
-
     # TODO: order status != payment status
     # 전액환불요청 (total refund requested)
     # 부분환불요청 (partial refund requested)
@@ -627,13 +621,6 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
 
     ip_address = models.GenericIPAddressField(
         verbose_name=_('IP address'),
-    )
-
-    payment_method = models.IntegerField(
-        verbose_name=_('Payment method'),
-        choices=PAYMENT_METHOD_CHOICES,
-        default=PAYMENT_METHOD_CHOICES.credit_card,
-        db_index=True,
     )
 
     transaction_id = models.CharField(
@@ -736,3 +723,57 @@ class ClubOrderListMembership(models.Model):
     class Meta:
         verbose_name = _('Golf club order list membership')
         verbose_name_plural = _('Golf club order list membership')
+
+
+class OrderTransaction(model_utils_models.TimeStampedModel):
+    PAYMENT_METHOD_CHOICES = Choices(
+        (0, 'credit_card', _('Credit Card')),
+        (1, 'bank_transfer', _('Bank Transfer')),
+        (2, 'paypal', _('PayPal')),
+    )
+
+    CATEGORY_CHOICES = Choices(
+        (0, 'payment', _('Payment')),
+        (1, 'refunded', _('Refund')),
+        (2, 'purchase', _('Purchase')),
+    )
+
+    order = models.ForeignKey(
+        'booking.Order',
+        verbose_name=_('Order'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
+    payment_method = models.IntegerField(
+        verbose_name=_('Payment method'),
+        choices=PAYMENT_METHOD_CHOICES,
+        default=PAYMENT_METHOD_CHOICES.credit_card,
+        db_index=True,
+    )
+
+    category = models.IntegerField(
+        verbose_name=_('Transaction category'),
+        choices=PAYMENT_METHOD_CHOICES,
+        default=PAYMENT_METHOD_CHOICES.credit_card,
+        db_index=True,
+    )
+
+    amount = models.DecimalField(
+        verbose_name=_('Amount'),
+        max_digits=11,
+        decimal_places=0,
+    )
+
+    transaction_date = models.DateTimeField(
+        verbose_name=_('Transaction date'),
+    )
+
+    class Meta:
+        verbose_name = _('Order transaction')
+        verbose_name_plural = _('Order transactions')
+
+    def __str__(self):
+        return 'order - {} / transaction - {} {} {}'.format(
+            self.order.order_no, self.payment_method, self.amount, self.received
+        )

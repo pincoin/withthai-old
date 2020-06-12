@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-11 22:03+0700\n"
+"POT-Creation-Date: 2020-06-13 01:04+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,7 +132,7 @@ msgid "Board"
 msgstr "게시판"
 
 #: booking/admin.py:62 booking/admin.py:76 booking/models.py:408
-#: booking/models.py:431 booking/models.py:540 booking/models.py:693
+#: booking/models.py:431 booking/models.py:540 booking/models.py:680
 msgid "Golf club"
 msgstr "골프장"
 
@@ -152,19 +152,19 @@ msgstr "예약할 수 없는 시간입니다."
 msgid "Invalid PAX"
 msgstr "인원수 범위 초과입니다."
 
-#: booking/forms.py:73
+#: booking/forms.py:75
 msgid "You have to sign in as a customer for booking."
 msgstr "로그인 후 예약문의 가능합니다."
 
-#: booking/forms.py:100
+#: booking/forms.py:107
 msgid "Invalid date, time or PAX"
 msgstr "잘못된 일자 또는 시간입니다."
 
-#: booking/forms.py:105
+#: booking/forms.py:112
 msgid "Search word"
 msgstr "검색어"
 
-#: booking/forms.py:109
+#: booking/forms.py:116
 msgid "search word"
 msgstr "검색어"
 
@@ -354,7 +354,7 @@ msgstr "시작가"
 #: booking/models.py:290 booking/models.py:298 booking/models.py:306
 #: booking/models.py:470 booking/models.py:477 booking/models.py:484
 #: booking/models.py:491 booking/models.py:498 booking/models.py:505
-#: booking/models.py:724 booking/models.py:731
+#: booking/models.py:712 booking/models.py:720
 #: booking/templates/booking/_golf-club-list.html:62
 #: booking/templates/booking/golf-club-booking-form.html:111
 #: booking/templates/booking/golf-club-booking-form.html:133
@@ -486,11 +486,11 @@ msgstr "시간대 종료시간"
 msgid "Rate title"
 msgstr "요금제"
 
-#: booking/models.py:467 booking/models.py:721
+#: booking/models.py:467 booking/models.py:708
 msgid "Green fee selling price"
 msgstr "그.피 판매가"
 
-#: booking/models.py:474 booking/models.py:728
+#: booking/models.py:474 booking/models.py:716
 msgid "Green fee cost price"
 msgstr "그.피 매입가"
 
@@ -538,150 +538,182 @@ msgstr "골프장 묶음"
 msgid "Golf club list membership"
 msgstr "골프장 묶음 요소"
 
-#: booking/models.py:563
-msgid "Credit Card"
-msgstr "신용카드"
-
-#: booking/models.py:564
-msgid "Bank Transfer"
-msgstr "계좌이체"
-
-#: booking/models.py:565
-msgid "PayPal"
-msgstr "페이팔"
-
-#: booking/models.py:574
+#: booking/models.py:568
 msgid "Booking opened"
 msgstr "예약접수"
 
-#: booking/models.py:575
+#: booking/models.py:569
 msgid "Booking pending"
 msgstr "예약문의신청"
 
-#: booking/models.py:576
+#: booking/models.py:570
 msgid "Booking offered"
 msgstr "예약제안"
 
-#: booking/models.py:577
+#: booking/models.py:571
 msgid "Payment completed"
 msgstr "결제완료"
 
-#: booking/models.py:578
+#: booking/models.py:572
 msgid "Booking confirmed"
 msgstr "예약확정완료"
 
-#: booking/models.py:579
+#: booking/models.py:573
 msgid "Booking unavailable"
 msgstr "예약불가"
 
-#: booking/models.py:580
+#: booking/models.py:574
 msgid "Payment adjustment"
 msgstr "정산대기"
 
-#: booking/models.py:581
+#: booking/models.py:575
 msgid "Payment adjusted"
 msgstr "정산완료"
 
-#: booking/models.py:582
+#: booking/models.py:576
 msgid "Refund requested"
 msgstr "환불요청"
 
-#: booking/models.py:583
+#: booking/models.py:577
 msgid "Refund pending"
 msgstr "환불대기"
 
-#: booking/models.py:584 booking/models.py:585
+#: booking/models.py:578 booking/models.py:579
 msgid "Refunded"
 msgstr "환불완료"
 
-#: booking/models.py:586
+#: booking/models.py:580
 msgid "Voided"
 msgstr "예약무효"
 
-#: booking/models.py:590
+#: booking/models.py:584
 msgid "Order no"
 msgstr "예약번호"
 
-#: booking/models.py:598 member/models.py:81
+#: booking/models.py:592 member/models.py:81
 msgid "User"
 msgstr "사용자"
 
-#: booking/models.py:607 member/forms.py:19
+#: booking/models.py:601 member/forms.py:19
 msgid "Last name"
 msgstr "영문 성(姓)"
 
-#: booking/models.py:613 member/forms.py:11
+#: booking/models.py:607 member/forms.py:11
 msgid "First name"
 msgstr "영문 이름"
 
-#: booking/models.py:619
+#: booking/models.py:613
 msgid "User-agent"
 msgstr "User-agent"
 
-#: booking/models.py:624
+#: booking/models.py:618
 msgid "Accept-language"
 msgstr "Accept-language"
 
-#: booking/models.py:629 conf/models.py:160 help/templates/help/privacy.html:25
+#: booking/models.py:623 conf/models.py:160 help/templates/help/privacy.html:25
 #: member/models.py:89
 msgid "IP address"
 msgstr "IP 주소"
 
-#: booking/models.py:633
-msgid "Payment method"
-msgstr "결제수단"
-
-#: booking/models.py:640
+#: booking/models.py:627
 msgid "Transaction ID"
 msgstr "거래번호"
 
-#: booking/models.py:646
+#: booking/models.py:633
 msgid "Order status"
 msgstr "주문상태"
 
-#: booking/models.py:654 member/models.py:45
+#: booking/models.py:641 member/models.py:45
 msgid "Total selling price"
 msgstr "판매가격"
 
-#: booking/models.py:661
+#: booking/models.py:648
 msgid "Total cost price"
 msgstr "매입가격"
 
-#: booking/models.py:668
+#: booking/models.py:655
 msgid "Order message"
 msgstr "주문메시지"
 
-#: booking/models.py:674
+#: booking/models.py:661
 msgid "Parent order"
 msgstr "관련주문"
 
-#: booking/models.py:683
+#: booking/models.py:670
 msgid "Booking order"
 msgstr "예약주문"
 
-#: booking/models.py:684
+#: booking/models.py:671
 msgid "Booking orders"
 msgstr "예약주문"
 
-#: booking/models.py:700
-msgid "Order list"
-msgstr "주문목록"
+#: booking/models.py:687 booking/models.py:743
+msgid "Order"
+msgstr "주문"
 
-#: booking/models.py:706
+#: booking/models.py:693
 msgid "Round date"
 msgstr "라운드 일자"
 
-#: booking/models.py:711
+#: booking/models.py:698
 msgid "Round time"
 msgstr "라운드 시간"
 
-#: booking/models.py:716
+#: booking/models.py:703
 msgid "PAX"
 msgstr "인원"
 
-#: booking/models.py:735 booking/models.py:736
+#: booking/models.py:724 booking/models.py:725
 msgid "Golf club order list membership"
 msgstr "예약 골프장 목록"
+
+#: booking/models.py:730
+msgid "Credit Card"
+msgstr "신용카드"
+
+#: booking/models.py:731
+msgid "Bank Transfer"
+msgstr "계좌이체"
+
+#: booking/models.py:732
+msgid "PayPal"
+msgstr "페이팔"
+
+#: booking/models.py:736
+msgid "Payment"
+msgstr "결제"
+
+#: booking/models.py:737
+msgid "Refund"
+msgstr "환불"
+
+#: booking/models.py:738
+msgid "Purchase"
+msgstr "매입"
+
+#: booking/models.py:749
+msgid "Payment method"
+msgstr "결제수단"
+
+#: booking/models.py:756
+msgid "Transaction category"
+msgstr "결제분류"
+
+#: booking/models.py:763
+msgid "Amount"
+msgstr "금액"
+
+#: booking/models.py:769
+msgid "Transaction date"
+msgstr "거래일시"
+
+#: booking/models.py:773
+msgid "Order transaction"
+msgstr "주문 거래"
+
+#: booking/models.py:774
+msgid "Order transactions"
+msgstr "주문 거래"
 
 #: booking/templates/booking/_golf-club-booking-details.html:7
 msgid "Booking Process"
@@ -1008,7 +1040,7 @@ msgstr "우천 시 규정 없음. 우천 시에도 환불 불가합니다."
 msgid "GOLF"
 msgstr "골프"
 
-#: booking/views.py:199
+#: booking/views.py:197
 msgid "No language set"
 msgstr "언어설정없음"
 
