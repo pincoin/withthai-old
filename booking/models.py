@@ -725,7 +725,7 @@ class ClubOrderListMembership(models.Model):
         verbose_name_plural = _('Golf club order list membership')
 
 
-class OrderTransaction(model_utils_models.TimeStampedModel):
+class OrderSales(model_utils_models.TimeStampedModel):
     PAYMENT_METHOD_CHOICES = Choices(
         (0, 'credit_card', _('Credit Card')),
         (1, 'bank_transfer', _('Bank Transfer')),
@@ -770,10 +770,27 @@ class OrderTransaction(model_utils_models.TimeStampedModel):
     )
 
     class Meta:
-        verbose_name = _('Order transaction')
-        verbose_name_plural = _('Order transactions')
+        verbose_name = _('Order sales transaction')
+        verbose_name_plural = _('Order sales transactions')
 
     def __str__(self):
         return 'order - {} / transaction - {} {} {}'.format(
-            self.order.order_no, self.payment_method, self.amount, self.received
+            self.order.order_no, self.payment_method, self.amount, self.transaction_date
         )
+
+
+class Asset(model_utils_models.TimeStampedModel):
+    title = models.CharField(
+        verbose_name=_('Asset name'),
+        max_length=255,
+    )
+
+    balance = models.DecimalField(
+        verbose_name=_('Asset balance'),
+        max_digits=11,
+        decimal_places=0,
+    )
+
+    class Meta:
+        verbose_name = _('Asset')
+        verbose_name_plural = _('Assets')
