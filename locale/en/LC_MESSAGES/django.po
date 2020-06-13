@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-13 01:04+0700\n"
+"POT-Creation-Date: 2020-06-13 20:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -710,11 +710,47 @@ msgid "Transaction date"
 msgstr ""
 
 #: booking/models.py:773
-msgid "Order transaction"
+msgid "Order sales transaction"
 msgstr ""
 
 #: booking/models.py:774
-msgid "Order transactions"
+msgid "Order sales transactions"
+msgstr ""
+
+#: booking/models.py:784
+msgid "GB prime pay"
+msgstr ""
+
+#: booking/models.py:785
+msgid "Petty cash"
+msgstr ""
+
+#: booking/models.py:786
+msgid "Passbook Krungsri"
+msgstr ""
+
+#: booking/models.py:787
+msgid "Passbook Kasikorn"
+msgstr ""
+
+#: booking/models.py:791
+msgid "Asset code"
+msgstr ""
+
+#: booking/models.py:798
+msgid "Asset name"
+msgstr ""
+
+#: booking/models.py:803
+msgid "Asset balance"
+msgstr ""
+
+#: booking/models.py:809
+msgid "Asset"
+msgstr ""
+
+#: booking/models.py:810
+msgid "Assets"
 msgstr ""
 
 #: booking/templates/booking/_golf-club-booking-details.html:7

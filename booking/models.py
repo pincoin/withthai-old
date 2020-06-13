@@ -780,6 +780,20 @@ class OrderSales(model_utils_models.TimeStampedModel):
 
 
 class Asset(model_utils_models.TimeStampedModel):
+    CODE_CHOICES = Choices(
+        (0, 'payment_gateway', _('GB prime pay')),
+        (1, 'petty_cash', _('Petty cash')),
+        (2, 'passbook_krungsri', _('Passbook Krungsri')),
+        (3, 'passbook_kasikorn', _('Passbook Kasikorn')),
+    )
+
+    code = models.IntegerField(
+        verbose_name=_('Asset code'),
+        choices=CODE_CHOICES,
+        default=CODE_CHOICES.payment_gateway,
+        db_index=True,
+    )
+
     title = models.CharField(
         verbose_name=_('Asset name'),
         max_length=255,
@@ -794,3 +808,6 @@ class Asset(model_utils_models.TimeStampedModel):
     class Meta:
         verbose_name = _('Asset')
         verbose_name_plural = _('Assets')
+
+    def __str__(self):
+        return 'title - {} / balance - {}'.format(self.title, self.balance)

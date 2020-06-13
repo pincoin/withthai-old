@@ -92,6 +92,11 @@ class OrderAdmin(admin.ModelAdmin):
     ordering = ('-created',)
 
 
+class AssetAdmin(admin.ModelAdmin):
+    list_display = ('code', 'title', 'balance', 'created', 'modified')
+    list_filter = ('code',)
+
+
 admin.site.register(models.Holiday, HolidayAdmin)
 admin.site.register(models.Area, AreaAdmin)
 admin.site.register(models.Province, ProvinceAdmin)
@@ -100,3 +105,4 @@ admin.site.register(models.Club, ClubAdmin)
 admin.site.register(models.Rate, RateAdmin)
 admin.site.register(models.ClubList, ClubListAdmin)
 admin.site.register(models.Order, OrderAdmin)
+admin.site.register(models.Asset, AssetAdmin)

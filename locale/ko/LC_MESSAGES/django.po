@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-13 01:04+0700\n"
+"POT-Creation-Date: 2020-06-13 20:16+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -708,12 +708,48 @@ msgid "Transaction date"
 msgstr "거래일시"
 
 #: booking/models.py:773
-msgid "Order transaction"
-msgstr "주문 거래"
+msgid "Order sales transaction"
+msgstr "주문 매출 거래"
 
 #: booking/models.py:774
-msgid "Order transactions"
-msgstr "주문 거래"
+msgid "Order sales transactions"
+msgstr "주문 매출 거래"
+
+#: booking/models.py:784
+msgid "GB prime pay"
+msgstr "GB prime pay"
+
+#: booking/models.py:785
+msgid "Petty cash"
+msgstr "시재"
+
+#: booking/models.py:786
+msgid "Passbook Krungsri"
+msgstr "통장 (Krungsri)"
+
+#: booking/models.py:787
+msgid "Passbook Kasikorn"
+msgstr "통장 (Kasikorn)"
+
+#: booking/models.py:791
+msgid "Asset code"
+msgstr "자산 코드"
+
+#: booking/models.py:798
+msgid "Asset name"
+msgstr "자산 이름"
+
+#: booking/models.py:803
+msgid "Asset balance"
+msgstr "자산 잔액"
+
+#: booking/models.py:809
+msgid "Asset"
+msgstr "자산"
+
+#: booking/models.py:810
+msgid "Assets"
+msgstr "자산"
 
 #: booking/templates/booking/_golf-club-booking-details.html:7
 msgid "Booking Process"
