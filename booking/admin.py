@@ -97,6 +97,10 @@ class AssetAdmin(admin.ModelAdmin):
     list_filter = ('code',)
 
 
+class AssetTransactionAdmin(admin.ModelAdmin):
+    pass
+
+
 admin.site.register(models.Holiday, HolidayAdmin)
 admin.site.register(models.Area, AreaAdmin)
 admin.site.register(models.Province, ProvinceAdmin)
@@ -106,3 +110,4 @@ admin.site.register(models.Rate, RateAdmin)
 admin.site.register(models.ClubList, ClubListAdmin)
 admin.site.register(models.Order, OrderAdmin)
 admin.site.register(models.Asset, AssetAdmin)
+admin.site.register(models.AssetTransaction, AssetTransactionAdmin)

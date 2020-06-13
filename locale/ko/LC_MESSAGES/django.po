@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-13 22:02+0700\n"
+"POT-Creation-Date: 2020-06-13 22:06+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -697,15 +697,15 @@ msgstr "거래일시"
 
 #: booking/models.py:769
 msgid "Remarks"
-msgstr ""
+msgstr "비고"
 
 #: booking/models.py:774
-msgid "Order sales transaction"
-msgstr "주문 매출 거래"
+msgid "Asset transaction"
+msgstr "자산 거래내역"
 
 #: booking/models.py:775
-msgid "Order sales transactions"
-msgstr "주문 매출 거래"
+msgid "Asset transactions"
+msgstr "자산 거래내역"
 
 #: booking/models.py:783
 msgid "GB prime pay"

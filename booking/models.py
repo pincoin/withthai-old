@@ -771,8 +771,8 @@ class AssetTransaction(model_utils_models.TimeStampedModel):
     )
 
     class Meta:
-        verbose_name = _('Order sales transaction')
-        verbose_name_plural = _('Order sales transactions')
+        verbose_name = _('Asset transaction')
+        verbose_name_plural = _('Asset transactions')
 
     def __str__(self):
         return 'asset transaction - {} {}'.format(self.amount, self.transaction_date)
