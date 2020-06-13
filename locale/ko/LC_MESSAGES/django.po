@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-13 20:16+0700\n"
+"POT-Creation-Date: 2020-06-13 22:02+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -647,7 +647,7 @@ msgstr "예약주문"
 msgid "Booking orders"
 msgstr "예약주문"
 
-#: booking/models.py:687 booking/models.py:743
+#: booking/models.py:687 booking/models.py:737
 msgid "Order"
 msgstr "주문"
 
@@ -668,86 +668,74 @@ msgid "Golf club order list membership"
 msgstr "예약 골프장 목록"
 
 #: booking/models.py:730
-msgid "Credit Card"
-msgstr "신용카드"
-
-#: booking/models.py:731
-msgid "Bank Transfer"
-msgstr "계좌이체"
-
-#: booking/models.py:732
-msgid "PayPal"
-msgstr "페이팔"
-
-#: booking/models.py:736
 msgid "Payment"
 msgstr "결제"
 
-#: booking/models.py:737
+#: booking/models.py:731
 msgid "Refund"
 msgstr "환불"
 
-#: booking/models.py:738
+#: booking/models.py:732
 msgid "Purchase"
 msgstr "매입"
 
-#: booking/models.py:749
-msgid "Payment method"
-msgstr "결제수단"
+#: booking/models.py:746 booking/models.py:808
+msgid "Asset"
+msgstr "자산"
 
-#: booking/models.py:756
+#: booking/models.py:752
 msgid "Transaction category"
 msgstr "결제분류"
 
-#: booking/models.py:763
+#: booking/models.py:759
 msgid "Amount"
 msgstr "금액"
 
-#: booking/models.py:769
+#: booking/models.py:765
 msgid "Transaction date"
 msgstr "거래일시"
 
-#: booking/models.py:773
+#: booking/models.py:769
+msgid "Remarks"
+msgstr ""
+
+#: booking/models.py:774
 msgid "Order sales transaction"
 msgstr "주문 매출 거래"
 
-#: booking/models.py:774
+#: booking/models.py:775
 msgid "Order sales transactions"
 msgstr "주문 매출 거래"
 
-#: booking/models.py:784
+#: booking/models.py:783
 msgid "GB prime pay"
 msgstr "GB prime pay"
 
-#: booking/models.py:785
+#: booking/models.py:784
 msgid "Petty cash"
 msgstr "시재"
 
-#: booking/models.py:786
+#: booking/models.py:785
 msgid "Passbook Krungsri"
 msgstr "통장 (Krungsri)"
 
-#: booking/models.py:787
+#: booking/models.py:786
 msgid "Passbook Kasikorn"
 msgstr "통장 (Kasikorn)"
 
-#: booking/models.py:791
+#: booking/models.py:790
 msgid "Asset code"
 msgstr "자산 코드"
 
-#: booking/models.py:798
+#: booking/models.py:797
 msgid "Asset name"
 msgstr "자산 이름"
 
-#: booking/models.py:803
+#: booking/models.py:802
 msgid "Asset balance"
 msgstr "자산 잔액"
 
 #: booking/models.py:809
-msgid "Asset"
-msgstr "자산"
-
-#: booking/models.py:810
 msgid "Assets"
 msgstr "자산"
 

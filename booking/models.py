@@ -725,13 +725,7 @@ class ClubOrderListMembership(models.Model):
         verbose_name_plural = _('Golf club order list membership')
 
 
-class OrderSales(model_utils_models.TimeStampedModel):
-    PAYMENT_METHOD_CHOICES = Choices(
-        (0, 'credit_card', _('Credit Card')),
-        (1, 'bank_transfer', _('Bank Transfer')),
-        (2, 'paypal', _('PayPal')),
-    )
-
+class AssetTransaction(model_utils_models.TimeStampedModel):
     CATEGORY_CHOICES = Choices(
         (0, 'payment', _('Payment')),
         (1, 'refunded', _('Refund')),
@@ -743,19 +737,21 @@ class OrderSales(model_utils_models.TimeStampedModel):
         verbose_name=_('Order'),
         db_index=True,
         on_delete=models.CASCADE,
+        blank=True,
+        null=True,
     )
 
-    payment_method = models.IntegerField(
-        verbose_name=_('Payment method'),
-        choices=PAYMENT_METHOD_CHOICES,
-        default=PAYMENT_METHOD_CHOICES.credit_card,
+    asset = models.ForeignKey(
+        'booking.Asset',
+        verbose_name=_('Asset'),
         db_index=True,
+        on_delete=models.CASCADE,
     )
 
     category = models.IntegerField(
         verbose_name=_('Transaction category'),
-        choices=PAYMENT_METHOD_CHOICES,
-        default=PAYMENT_METHOD_CHOICES.credit_card,
+        choices=CATEGORY_CHOICES,
+        default=CATEGORY_CHOICES.payment,
         db_index=True,
     )
 
@@ -769,14 +765,17 @@ class OrderSales(model_utils_models.TimeStampedModel):
         verbose_name=_('Transaction date'),
     )
 
+    remarks = models.TextField(
+        verbose_name=_('Remarks'),
+        blank=True,
+    )
+
     class Meta:
         verbose_name = _('Order sales transaction')
         verbose_name_plural = _('Order sales transactions')
 
     def __str__(self):
-        return 'order - {} / transaction - {} {} {}'.format(
-            self.order.order_no, self.payment_method, self.amount, self.transaction_date
-        )
+        return 'asset transaction - {} {}'.format(self.amount, self.transaction_date)
 
 
 class Asset(model_utils_models.TimeStampedModel):
@@ -810,4 +809,4 @@ class Asset(model_utils_models.TimeStampedModel):
         verbose_name_plural = _('Assets')
 
     def __str__(self):
-        return 'title - {} / balance - {}'.format(self.title, self.balance)
+        return 'asset title - {} / balance - {}'.format(self.title, self.balance)
