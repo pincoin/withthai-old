@@ -98,7 +98,10 @@ class AssetAdmin(admin.ModelAdmin):
 
 
 class AssetTransactionAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('asset', 'category', 'amount', 'order', 'transaction_date')
+    list_filter = ('asset', 'category')
+    raw_id_fields = ('order',)
+    date_hierarchy = 'transaction_date'
 
 
 admin.site.register(models.Holiday, HolidayAdmin)

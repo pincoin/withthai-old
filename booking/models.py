@@ -730,6 +730,10 @@ class AssetTransaction(model_utils_models.TimeStampedModel):
         (0, 'payment', _('Payment')),
         (1, 'refunded', _('Refund')),
         (2, 'purchase', _('Purchase')),
+        (3, 'purchase_cancel', _('Purchase cancel')),
+        (4, 'transfer_payment', _('Transfer payment')),
+        (5, 'gains', _('Gains')),
+        (6, 'expense', _('Expense')),
     )
 
     order = models.ForeignKey(
