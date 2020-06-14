@@ -190,6 +190,7 @@ class GolfClubBookingCreateView(generic.CreateView):
 
         form.instance.total_selling_price = form.cleaned_data['total_selling_price']
         form.instance.total_cost_price = form.cleaned_data['total_cost_price']
+        form.instance.status = models.Order.STATUS_CHOICES.order_opened
 
         form.instance.ip_address = get_ip(self.request)
         form.instance.user = self.request.user
@@ -203,6 +204,20 @@ class GolfClubBookingCreateView(generic.CreateView):
         models.ClubOrderListMembership.objects.create(
             club=form.cleaned_data['club'],
             order=self.object,
+            round_date=form.cleaned_data['round_date'],
+            round_time=form.cleaned_data['round_time'],
+            pax=form.cleaned_data['pax'],
+            green_fee_selling_price=form.cleaned_data['green_fee_selling_price'],
+            green_fee_cost_price=form.cleaned_data['green_fee_cost_price'],
+        )
+
+        models.ClubOrderChangeLog.objects.create(
+            order=self.object,
+            user=self.request.user,
+            status=models.Order.STATUS_CHOICES.order_opened,
+            total_selling_price=form.cleaned_data['total_selling_price'],
+            total_cost_price=form.cleaned_data['total_cost_price'],
+            club=form.cleaned_data['club'],
             round_date=form.cleaned_data['round_date'],
             round_time=form.cleaned_data['round_time'],
             pax=form.cleaned_data['pax'],
