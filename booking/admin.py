@@ -17,6 +17,18 @@ class ClubOrderInline(admin.TabularInline):
     extra = 1
 
 
+class AssetTransactionInline(admin.TabularInline):
+    model = models.AssetTransaction
+    ordering = ['-transaction_date', ]
+    extra = 1
+
+
+class ClubOrderChangeLogInline(admin.TabularInline):
+    model = models.ClubOrderChangeLog
+    ordering = ['-created', ]
+    extra = 1
+
+
 class HolidayAdmin(admin.ModelAdmin):
     list_display = ('holiday', 'country', 'title')
     list_filter = ('holiday', 'country')
@@ -88,7 +100,7 @@ class OrderAdmin(admin.ModelAdmin):
     list_filter = ('status',)
     readonly_fields = ('order_no', 'ip_address', 'user_agent', 'accept_language', 'created', 'is_removed')
     raw_id_fields = ('user', 'parent',)
-    inlines = [ClubOrderInline, ]
+    inlines = [ClubOrderInline, AssetTransactionInline, ClubOrderChangeLogInline]
     ordering = ('-created',)
 
 

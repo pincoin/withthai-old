@@ -674,6 +674,88 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
         return '{} {} {}'.format(self.user, self.total_selling_price, self.created)
 
 
+class ClubOrderChangeLog(model_utils_models.TimeStampedModel):
+    order = models.ForeignKey(
+        'booking.Order',
+        verbose_name=_('Order'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_('User'),
+        db_index=True,
+        null=True,
+        blank=True,
+        editable=True,
+        on_delete=models.SET_NULL,
+    )
+
+    status = models.IntegerField(
+        verbose_name=_('Order status'),
+        choices=Order.STATUS_CHOICES,
+        default=Order.STATUS_CHOICES.order_opened,
+        db_index=True,
+    )
+
+    total_selling_price = models.DecimalField(
+        verbose_name=_('Total selling price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+    )
+
+    total_cost_price = models.DecimalField(
+        verbose_name=_('Total cost price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+    )
+
+    club = models.ForeignKey(
+        'booking.Club',
+        verbose_name=_('Golf club'),
+        db_index=True,
+        on_delete=models.CASCADE,
+    )
+
+    round_date = models.DateField(
+        verbose_name=_('Round date'),
+        db_index=True,
+    )
+
+    round_time = models.TimeField(
+        verbose_name=_('Round time'),
+        db_index=True,
+    )
+
+    pax = models.IntegerField(
+        verbose_name=_('PAX'),
+        default=4,
+    )
+
+    green_fee_selling_price = models.DecimalField(
+        verbose_name=_('Green fee selling price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+        help_text=_('THB'),
+    )
+
+    green_fee_cost_price = models.DecimalField(
+        verbose_name=_('Green fee cost price'),
+        max_digits=11,
+        decimal_places=0,
+        default=0,
+        help_text=_('THB'),
+    )
+
+    class Meta:
+        verbose_name = _('Golf club order changelog')
+        verbose_name_plural = _('Golf club order changelog')
+
+
 class ClubOrderListMembership(models.Model):
     club = models.ForeignKey(
         'booking.Club',
@@ -813,4 +895,4 @@ class Asset(model_utils_models.TimeStampedModel):
         verbose_name_plural = _('Assets')
 
     def __str__(self):
-        return 'asset title - {} / balance - {}'.format(self.title, self.balance)
+        return '{} = {}'.format(self.title, self.balance)

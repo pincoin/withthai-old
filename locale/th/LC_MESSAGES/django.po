@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-13 23:42+0700\n"
+"POT-Creation-Date: 2020-06-14 19:35+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -131,8 +131,9 @@ msgstr ""
 msgid "Board"
 msgstr ""
 
-#: booking/admin.py:62 booking/admin.py:76 booking/models.py:408
-#: booking/models.py:431 booking/models.py:540 booking/models.py:680
+#: booking/admin.py:74 booking/admin.py:88 booking/models.py:408
+#: booking/models.py:431 booking/models.py:540 booking/models.py:718
+#: booking/models.py:762
 msgid "Golf club"
 msgstr ""
 
@@ -354,8 +355,8 @@ msgstr "ราคาเริ่มต้น"
 #: booking/models.py:290 booking/models.py:298 booking/models.py:306
 #: booking/models.py:470 booking/models.py:477 booking/models.py:484
 #: booking/models.py:491 booking/models.py:498 booking/models.py:505
-#: booking/models.py:712 booking/models.py:720
-#: booking/templates/booking/_golf-club-list.html:62
+#: booking/models.py:743 booking/models.py:751 booking/models.py:794
+#: booking/models.py:802 booking/templates/booking/_golf-club-list.html:62
 #: booking/templates/booking/golf-club-booking-form.html:111
 #: booking/templates/booking/golf-club-booking-form.html:133
 #: booking/templates/booking/golf-club-booking-form.html:296
@@ -486,11 +487,11 @@ msgstr ""
 msgid "Rate title"
 msgstr ""
 
-#: booking/models.py:467 booking/models.py:708
+#: booking/models.py:467 booking/models.py:739 booking/models.py:790
 msgid "Green fee selling price"
 msgstr ""
 
-#: booking/models.py:474 booking/models.py:716
+#: booking/models.py:474 booking/models.py:747 booking/models.py:798
 msgid "Green fee cost price"
 msgstr ""
 
@@ -590,7 +591,7 @@ msgstr ""
 msgid "Order no"
 msgstr ""
 
-#: booking/models.py:592 member/models.py:81
+#: booking/models.py:592 booking/models.py:687 member/models.py:81
 msgid "User"
 msgstr ""
 
@@ -619,15 +620,15 @@ msgstr ""
 msgid "Transaction ID"
 msgstr ""
 
-#: booking/models.py:633
+#: booking/models.py:633 booking/models.py:696
 msgid "Order status"
 msgstr ""
 
-#: booking/models.py:641 member/models.py:45
+#: booking/models.py:641 booking/models.py:703 member/models.py:45
 msgid "Total selling price"
 msgstr ""
 
-#: booking/models.py:648
+#: booking/models.py:648 booking/models.py:710
 msgid "Total cost price"
 msgstr ""
 
@@ -647,111 +648,115 @@ msgstr ""
 msgid "Booking orders"
 msgstr ""
 
-#: booking/models.py:687 booking/models.py:741
+#: booking/models.py:680 booking/models.py:769 booking/models.py:823
 msgid "Order"
 msgstr ""
 
-#: booking/models.py:693
+#: booking/models.py:724 booking/models.py:775
 msgid "Round date"
 msgstr ""
 
-#: booking/models.py:698
+#: booking/models.py:729 booking/models.py:780
 msgid "Round time"
 msgstr ""
 
-#: booking/models.py:703
+#: booking/models.py:734 booking/models.py:785
 msgid "PAX"
 msgstr ""
 
-#: booking/models.py:724 booking/models.py:725
+#: booking/models.py:755 booking/models.py:756
+msgid "Golf club order changelog"
+msgstr ""
+
+#: booking/models.py:806 booking/models.py:807
 msgid "Golf club order list membership"
 msgstr ""
 
-#: booking/models.py:730
+#: booking/models.py:812
 msgid "Payment"
 msgstr ""
 
-#: booking/models.py:731
+#: booking/models.py:813
 msgid "Refund"
 msgstr ""
 
-#: booking/models.py:732
+#: booking/models.py:814
 msgid "Purchase"
 msgstr ""
 
-#: booking/models.py:733
+#: booking/models.py:815
 msgid "Purchase cancel"
 msgstr ""
 
-#: booking/models.py:734
+#: booking/models.py:816
 msgid "Transfer payment"
 msgstr ""
 
-#: booking/models.py:735
+#: booking/models.py:817
 msgid "Gains"
 msgstr ""
 
-#: booking/models.py:736
+#: booking/models.py:818
 msgid "Expense"
 msgstr ""
 
-#: booking/models.py:750 booking/models.py:812
+#: booking/models.py:832 booking/models.py:894
 msgid "Asset"
 msgstr ""
 
-#: booking/models.py:756
+#: booking/models.py:838
 msgid "Transaction category"
 msgstr ""
 
-#: booking/models.py:763
+#: booking/models.py:845
 msgid "Amount"
 msgstr ""
 
-#: booking/models.py:769
+#: booking/models.py:851
 msgid "Transaction date"
 msgstr ""
 
-#: booking/models.py:773
+#: booking/models.py:855
 msgid "Remarks"
 msgstr ""
 
-#: booking/models.py:778
+#: booking/models.py:860
 msgid "Asset transaction"
 msgstr ""
 
-#: booking/models.py:779
+#: booking/models.py:861
 msgid "Asset transactions"
 msgstr ""
 
-#: booking/models.py:787
+#: booking/models.py:869
 msgid "GB prime pay"
 msgstr ""
 
-#: booking/models.py:788
+#: booking/models.py:870
 msgid "Petty cash"
 msgstr ""
 
-#: booking/models.py:789
+#: booking/models.py:871
 msgid "Passbook Krungsri"
 msgstr ""
 
-#: booking/models.py:790
+#: booking/models.py:872
 msgid "Passbook Kasikorn"
 msgstr ""
 
-#: booking/models.py:794
+#: booking/models.py:876
 msgid "Asset code"
 msgstr ""
 
-#: booking/models.py:801
+#: booking/models.py:883
 msgid "Asset name"
 msgstr ""
 
-#: booking/models.py:806
+#: booking/models.py:888
 msgid "Asset balance"
 msgstr ""
 
-#: booking/models.py:813
+#: booking/models.py:895
 msgid "Assets"
 msgstr ""
 
