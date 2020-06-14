@@ -3,7 +3,10 @@ travel with thai
 
 # 3rd party
 ## PIP
-* Django
+* Django web framework
 
 ## CSS
-* materialize css version 1.0.0
+* Bulma CSS Framework
+
+## JS
+* jQuery
