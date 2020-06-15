@@ -21,7 +21,10 @@ urlpatterns = [
          views.GolfClubBookingJson.as_view(), name='golf-club-booking-json'),
 
     path('orders/',
-         views.GolfClubListView.as_view(), name='order-list'),
+         views.OrderListView.as_view(), name='order-list'),
+
+    path('orders/<uuid:uuid>/',
+         views.OrderDetailView.as_view(), name='order-detail'),
 
     path('favorites/',
          views.GolfClubListView.as_view(), name='favorite-list'),

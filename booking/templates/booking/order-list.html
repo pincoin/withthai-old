@@ -1,0 +1,101 @@
+{% extends 'conf/base.html' %}
+
+{% load i18n static humanize %}
+
+{% block main %}
+    <main>
+        <div class="section breadcrumbs">
+            <div class="container">
+                <nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="{% url 'booking:order-list' %}">{% trans 'MY BOOKING' %}</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="section mb-3">
+            <div class="container">
+                <div class="columns has-text-weight-bold is-hidden-touch has-text-centered-desktop order-list-heading">
+                    <div class="column is-full-mobile is-2-desktop">
+                        {% trans 'Order status' %}
+                    </div>
+                    <div class="column is-full-mobile is-2-desktop">
+                        {% trans 'Guest name' %}
+                    </div>
+                    <div class="column is-full-mobile is-3-desktop">
+                        {% trans 'Golf club' %}
+                    </div>
+                    <div class="column is-full-mobile is-2-desktop">
+                        {% trans 'Round date/time' %}
+                    </div>
+                    <div class="column is-half-mobile is-1-desktop">
+                        {% trans 'PAX' %}
+                    </div>
+                    <div class="column is-half-mobile is-2-desktop">
+                        {% trans 'Total amount' %}
+                    </div>
+                </div>
+                {% for order in orders %}
+                    <div class="columns has-text-centered-desktop is-mobile is-multiline order-list-row">
+                        <div class="column is-full-mobile is-2-desktop">
+                            <span class="tag is-primary">{{ order.get_status_display }}</span>
+                        </div>
+                        <div class="column is-full-mobile is-2-desktop">
+                            {{ order.first_name }} {{ order.last_name }}
+                        </div>
+
+                        {% for item in order.cluborderlistmembership_set.all %}
+                            {% if forloop.first %}
+                                <div class="column is-full-mobile is-3-desktop">
+                                    <a href="{% url 'booking:order-detail' order.order_no %}">
+                                        {% if LANGUAGE_CODE == 'th' %}
+                                            {{ item.club.title_thai }}
+                                        {% elif LANGUAGE_CODE == 'ko' %}
+                                            {{ item.club.title_korean }}
+                                        {% else %}
+                                            {{ item.club.title_english }}
+                                        {% endif %}
+                                        <small>[18 {% trans 'Holes' %}]</small>
+                                    </a>
+                                </div>
+                                <div class="column is-two-thirds-mobile is-2-desktop">
+                                    {{ item.round_date }} {{ item.round_time }}
+                                </div>
+                                <div class="column is-one-third-mobile is-1-desktop has-text-right">
+                                    {% if LANGUAGE_CODE == 'th' %}
+                                        {{ item.pax }} <span class="is-hidden-desktop">{% trans 'PAX' %}</span>
+                                    {% elif LANGUAGE_CODE == 'ko' %}
+                                        {{ item.pax }} {% trans 'Persons' %}
+                                    {% else %}
+                                        {{ item.pax }}  <span class="is-hidden-desktop">{% trans 'PAX' %}</span>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        {% empty %}
+                            <div class="column is-full-mobile is-3-desktop">
+                                {% trans 'N/A' %}
+                            </div>
+                            <div class="column is-full-mobile is-2-desktop">
+                                {% trans 'N/A' %}
+                            </div>
+                            <div class="column is-half-mobile is-1-desktop has-text-right">
+                                {% trans 'N/A' %}
+                            </div>
+                        {% endfor %}
+
+                        <div class="column is-full-mobile is-2-desktop has-text-right has-text-weight-bold">
+                            {{ order.total_selling_price|floatformat:0|intcomma }}
+                            <span>{% trans 'THB' %}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}
+
+{% block stylesheet %}
+    {{ block.super }}
+    <link type="text/css" href="{% static 'booking/css/main.css' %}" rel="stylesheet">
+{% endblock %}

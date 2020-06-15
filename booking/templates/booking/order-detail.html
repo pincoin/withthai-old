@@ -1,0 +1,15 @@
+{% extends 'conf/base.html' %}
+
+{% load i18n static %}
+{% load booking_tags %}
+
+{% block main %}
+    <main>
+        order detail
+    </main>
+{% endblock %}
+
+{% block stylesheet %}
+    {{ block.super }}
+    <link type="text/css" href="{% static 'booking/css/main.css' %}" rel="stylesheet">
+{% endblock %}

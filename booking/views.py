@@ -4,6 +4,7 @@ import logging
 from django.conf import settings
 from django.core.cache import cache
 from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -211,6 +212,7 @@ class GolfClubBookingCreateView(generic.CreateView):
             green_fee_cost_price=form.cleaned_data['green_fee_cost_price'],
         )
 
+        # 3. Associate booking change log
         models.ClubOrderChangeLog.objects.create(
             order=self.object,
             user=self.request.user,
@@ -225,12 +227,36 @@ class GolfClubBookingCreateView(generic.CreateView):
             green_fee_cost_price=form.cleaned_data['green_fee_cost_price'],
         )
 
-        # 3. Notify manager, club authorities, user
+        # 4. Notify manager, club authorities, user
 
         return response
 
     def get_success_url(self):
         return reverse('booking:golf-club-list', args=())
+
+
+class OrderListView(generic.ListView):
+    context_object_name = 'orders'
+    template_name = 'booking/order-list.html'
+
+    def get_queryset(self):
+        return models.Order.objects \
+            .filter(user=self.request.user) \
+            .select_related('user') \
+            .prefetch_related('cluborderlistmembership_set__club') \
+            .order_by('-created')
+
+
+class OrderDetailView(generic.DetailView):
+    context_object_name = 'order'
+    template_name = 'booking/order-detail.html'
+
+    def get_object(self, queryset=None):
+        # NOTE: This method is overridden because DetailView must be called with either an object pk or a slug.
+        queryset = models.Order.objects \
+            .filter(order_no=self.kwargs['uuid'])
+
+        return get_object_or_404(queryset)
 
 
 class GolfClubBookingJson(generic.TemplateView):

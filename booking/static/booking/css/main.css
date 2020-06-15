@@ -138,3 +138,28 @@
     border-color: transparent;
     color: #fff;
 }
+
+/* Order */
+
+.order-list-heading {
+    border-bottom: 1px solid #000;
+}
+
+
+@media (min-width: 1024px) {
+    .order-list-row {
+        border-bottom: 1px solid #000;
+    }
+}
+
+@media (max-width: 1023px) {
+    .order-list-row {
+        box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        margin-top: 0;
+    }
+
+    .order-list-row .column {
+        padding: 4px 16px;
+    }
+}
