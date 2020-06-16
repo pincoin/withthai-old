@@ -2,9 +2,8 @@ $(window).on('load resize', function () {
     if ($(this).width() < 960) {
         var h = $(window).height();
 
-        // 40x7=280, 40x8=320 + 4(border)
-        // 40+56+40+44 = 180
-        $('.submenu-scroll').css({'max-height': h - 180, 'min-height': h - 180});
+        // 37 + 48.75 + 37 + 41 = 163.75
+        $('.submenu-scroll').css({'max-height': h - 163.75, 'min-height': h - 163.75});
     }
 });
 
