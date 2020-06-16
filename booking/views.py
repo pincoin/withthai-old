@@ -2,6 +2,7 @@ import json
 import logging
 
 from django.conf import settings
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.cache import cache
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
@@ -235,7 +236,7 @@ class GolfClubBookingCreateView(generic.CreateView):
         return reverse('booking:golf-club-list', args=())
 
 
-class OrderListView(generic.ListView):
+class OrderListView(LoginRequiredMixin, generic.ListView):
     context_object_name = 'orders'
     template_name = 'booking/order-list.html'
 
@@ -247,7 +248,7 @@ class OrderListView(generic.ListView):
             .order_by('-created')
 
 
-class OrderDetailView(generic.DetailView):
+class OrderDetailView(LoginRequiredMixin, generic.DetailView):
     context_object_name = 'order'
     template_name = 'booking/order-detail.html'
 
