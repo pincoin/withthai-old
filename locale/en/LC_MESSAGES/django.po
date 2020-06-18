@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-18 20:45+0700\n"
+"POT-Creation-Date: 2020-06-18 21:29+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -375,8 +375,8 @@ msgstr ""
 #: booking/templates/booking/order-detail.html:175
 #: booking/templates/booking/order-detail.html:183
 #: booking/templates/booking/order-detail.html:188
-#: booking/templates/booking/order-detail.html:196
-#: booking/templates/booking/order-detail.html:201
+#: booking/templates/booking/order-detail.html:206
+#: booking/templates/booking/order-detail.html:211
 #: booking/templates/booking/order-list.html:91
 #: conf/templates/conf/home.html:62
 msgid "THB"
@@ -388,7 +388,7 @@ msgid "Caddie fee"
 msgstr ""
 
 #: booking/models.py:303 booking/templates/booking/order-detail.html:127
-#: booking/templates/booking/order-detail.html:192
+#: booking/templates/booking/order-detail.html:202
 msgid "Cart fee"
 msgstr ""
 
@@ -606,7 +606,7 @@ msgid "Voided"
 msgstr ""
 
 #: booking/models.py:584
-msgid "Order no"
+msgid "Booking no"
 msgstr ""
 
 #: booking/models.py:592 booking/models.py:687 member/models.py:81
@@ -641,7 +641,7 @@ msgstr ""
 #: booking/models.py:633 booking/models.py:696
 #: booking/templates/booking/order-detail.html:22
 #: booking/templates/booking/order-list.html:21
-msgid "Order status"
+msgid "Booking status"
 msgstr ""
 
 #: booking/models.py:641 booking/models.py:703 member/models.py:45
@@ -1075,52 +1075,52 @@ msgid "Golf Club Information"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:521
-#: booking/templates/booking/order-detail.html:216
+#: booking/templates/booking/order-detail.html:249
 msgid "Cancel Policy"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:527
-#: booking/templates/booking/order-detail.html:222
+#: booking/templates/booking/order-detail.html:255
 msgid "8 days before round date"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:531
-#: booking/templates/booking/order-detail.html:226
+#: booking/templates/booking/order-detail.html:259
 msgid "Total amount is refunded."
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:535
-#: booking/templates/booking/order-detail.html:230
+#: booking/templates/booking/order-detail.html:263
 msgid "7-4 days before round date"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:539
-#: booking/templates/booking/order-detail.html:234
+#: booking/templates/booking/order-detail.html:267
 msgid "50 percent of total amount is refunded."
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:543
-#: booking/templates/booking/order-detail.html:238
+#: booking/templates/booking/order-detail.html:271
 msgid "Within 3 days of round date"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:547
-#: booking/templates/booking/order-detail.html:242
+#: booking/templates/booking/order-detail.html:275
 msgid "Non-refundable"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:561
-#: booking/templates/booking/order-detail.html:256
+#: booking/templates/booking/order-detail.html:289
 msgid "Rain Check"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:567
-#: booking/templates/booking/order-detail.html:262
+#: booking/templates/booking/order-detail.html:295
 msgid "We obey the rules of golf clubs"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:571
-#: booking/templates/booking/order-detail.html:266
+#: booking/templates/booking/order-detail.html:299
 msgid "No. Golf course has no rain check, no refund for any reason."
 msgstr ""
 
@@ -1170,24 +1170,30 @@ msgstr ""
 
 #: booking/templates/booking/order-detail.html:120
 #: booking/templates/booking/order-detail.html:143
+#: booking/templates/booking/order-detail.html:193
+#: booking/templates/booking/order-detail.html:218
 msgid "REQUIRED"
 msgstr ""
 
 #: booking/templates/booking/order-detail.html:122
+#: booking/templates/booking/order-detail.html:197
 msgid "You must pay caddie fee at golf course."
 msgstr ""
 
 #: booking/templates/booking/order-detail.html:145
+#: booking/templates/booking/order-detail.html:222
 msgid ""
 "You must pay cart fee at golf course because it is required to use golf "
 "carts."
 msgstr ""
 
 #: booking/templates/booking/order-detail.html:149
+#: booking/templates/booking/order-detail.html:228
 msgid "OPTIONAL"
 msgstr ""
 
 #: booking/templates/booking/order-detail.html:151
+#: booking/templates/booking/order-detail.html:232
 msgid "Pay at golf course if you want to use golf cart."
 msgstr ""
 

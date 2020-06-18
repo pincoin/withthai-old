@@ -559,7 +559,7 @@ class ClubListMembership(models.Model):
 
 
 class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampedModel):
-    # TODO: order status != payment status
+    # TODO: booking status != payment status
     # 전액환불요청 (total refund requested)
     # 부분환불요청 (partial refund requested)
     # 전액환불됨 (total refund)
@@ -581,7 +581,7 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
     )
 
     order_no = models.UUIDField(
-        verbose_name=_('Order no'),
+        verbose_name=_('Booking no'),
         unique=True,
         default=uuid.uuid4,
         editable=False
@@ -630,7 +630,7 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
     )
 
     status = models.IntegerField(
-        verbose_name=_('Order status'),
+        verbose_name=_('Booking status'),
         choices=STATUS_CHOICES,
         default=STATUS_CHOICES.order_opened,
         db_index=True,
@@ -693,7 +693,7 @@ class ClubOrderChangeLog(model_utils_models.TimeStampedModel):
     )
 
     status = models.IntegerField(
-        verbose_name=_('Order status'),
+        verbose_name=_('Booking status'),
         choices=Order.STATUS_CHOICES,
         default=Order.STATUS_CHOICES.order_opened,
         db_index=True,
