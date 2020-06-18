@@ -33,6 +33,16 @@
     margin: 0 0 0 .5rem !important;
 }
 
+.booking-detail-alert {
+    margin: 0 !important;
+    padding-left: 1rem;
+    word-break: keep-all;
+}
+
+.booking-detail-alert li {
+    padding: .2rem 0;
+}
+
 @media (min-width: 1024px) {
     .club-list-item {
         padding: 1rem .8rem;

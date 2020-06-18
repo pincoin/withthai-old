@@ -41,13 +41,32 @@
                                         <div class="column is-2-desktop is-4-mobile has-text-right has-text-weight-bold">
                                             {% trans 'Total amount' %}
                                         </div>
-                                        <div class="column is-10-desktop is-8-mobile has-text-weight-bold pb-0">
+                                        <div class="column is-10-desktop is-8-mobile has-text-weight-bold">
                                             {{ order.total_selling_price|floatformat:0|intcomma }}
                                             <span>{% trans 'THB' %}</span>
                                         </div>
 
-                                        <div class="column is-offset-2-desktop is-10-desktop is-12-mobile has-text-danger pt-0">
-                                            {% trans 'The total amount as shown above does not include caddie fee and cart fee. ' %}
+                                        <div class="column is-offset-2-desktop is-10-desktop is-12-mobile">
+                                            <ul class="booking-detail-alert">
+                                                <li class="has-text-danger-dark">
+                                                    {% trans 'The total amount as shown above does not include caddie fee and cart fee.' %}
+                                                </li>
+                                                <li class="has-text-info-dark">
+                                                    {% trans 'The availability is currently being checked upon your request.' %}
+                                                </li>
+                                                <li class="has-text-info-dark">
+                                                    {% trans 'Tee times as listed below are now available.' %}
+                                                </li>
+                                                <li class="has-text-info-dark">
+                                                    {% trans 'You can confirm your round date/time your by making payment ' %}
+                                                </li>
+                                                <li class="has-text-info-dark">
+                                                    {% trans 'You may close your booking if none are suitable.' %}
+                                                </li>
+                                                <li class="has-text-info-dark">
+                                                    {% trans 'Your booking inquiry is automatically closed if not paid within 24 hours.' %}
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
