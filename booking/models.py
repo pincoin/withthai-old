@@ -565,12 +565,12 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
     # 전액환불됨 (total refund)
     # 부분환불됨 (partial refund)
     STATUS_CHOICES = Choices(
-        (0, 'order_opened', _('Booking opened')),
-        (1, 'order_pending', _('Booking pending')),
-        (2, 'order_offered', _('Booking offered')),
+        (0, 'booking_opened', _('Booking opened')),
+        (1, 'booking_pending', _('Booking pending')),
+        (2, 'booking_offered', _('Booking offered')),
         (3, 'payment_completed', _('Payment completed')),
-        (4, 'order_confirmed', _('Booking confirmed')),
-        (5, 'order_unavailable', _('Booking unavailable')),
+        (4, 'booking_confirmed', _('Booking confirmed')),
+        (5, 'booking_unavailable', _('Booking unavailable')),
         (6, 'payment_adjustment', _('Payment adjustment')),
         (7, 'payment_adjusted', _('Payment adjusted')),
         (8, 'refund_requested', _('Refund requested')),
@@ -632,7 +632,7 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
     status = models.IntegerField(
         verbose_name=_('Booking status'),
         choices=STATUS_CHOICES,
-        default=STATUS_CHOICES.order_opened,
+        default=STATUS_CHOICES.booking_opened,
         db_index=True,
     )
 
@@ -652,7 +652,7 @@ class Order(model_utils_models.SoftDeletableModel, model_utils_models.TimeStampe
     )
 
     message = models.TextField(
-        verbose_name=_('Order message'),
+        verbose_name=_('Booking message'),
         blank=True,
     )
 
@@ -695,7 +695,7 @@ class ClubOrderChangeLog(model_utils_models.TimeStampedModel):
     status = models.IntegerField(
         verbose_name=_('Booking status'),
         choices=Order.STATUS_CHOICES,
-        default=Order.STATUS_CHOICES.order_opened,
+        default=Order.STATUS_CHOICES.booking_opened,
         db_index=True,
     )
 

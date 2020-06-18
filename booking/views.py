@@ -192,7 +192,7 @@ class GolfClubBookingCreateView(generic.CreateView):
 
         form.instance.total_selling_price = form.cleaned_data['total_selling_price']
         form.instance.total_cost_price = form.cleaned_data['total_cost_price']
-        form.instance.status = models.Order.STATUS_CHOICES.order_opened
+        form.instance.status = models.Order.STATUS_CHOICES.booking_opened
 
         form.instance.ip_address = get_ip(self.request)
         form.instance.user = self.request.user
@@ -217,7 +217,7 @@ class GolfClubBookingCreateView(generic.CreateView):
         models.ClubOrderChangeLog.objects.create(
             order=self.object,
             user=self.request.user,
-            status=models.Order.STATUS_CHOICES.order_opened,
+            status=models.Order.STATUS_CHOICES.booking_opened,
             total_selling_price=form.cleaned_data['total_selling_price'],
             total_cost_price=form.cleaned_data['total_cost_price'],
             club=form.cleaned_data['club'],
