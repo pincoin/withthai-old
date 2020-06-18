@@ -1,15 +1,321 @@
 {% extends 'conf/base.html' %}
 
-{% load i18n static %}
+{% load i18n static humanize %}
 {% load booking_tags %}
 
 {% block main %}
     <main>
-        order detail
+        <div class="section">
+            <div class="container">
+                <div class="columns is-multiline club-detail">
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Booking Details' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="columns is-mobile is-multiline px-2 py-2">
+                                        <div class="column is-2-desktop is-4-mobile has-text-right">
+                                            {% trans 'Order status' %}
+                                        </div>
+                                        <div class="column is-10-desktop is-8-mobile">
+                                            <span class="tag is-primary">
+                                                {{ order.get_status_display }}
+                                            </span>
+                                        </div>
+                                        <div class="column is-2-desktop is-4-mobile has-text-right">
+                                            {% trans 'Guest name' %}
+                                        </div>
+                                        <div class="column is-10-desktop is-8-mobile">
+                                            {{ order.first_name }} {{ order.last_name }}
+                                        </div>
+                                        <div class="column is-2-desktop is-4-mobile has-text-right has-text-weight-bold">
+                                            {% trans 'Total amount' %}
+                                        </div>
+                                        <div class="column is-10-desktop is-8-mobile has-text-weight-bold pb-0">
+                                            {{ order.total_selling_price|floatformat:0|intcomma }}
+                                            <span>{% trans 'THB' %}</span>
+                                        </div>
+
+                                        <div class="column is-offset-2-desktop is-10-desktop is-12-mobile has-text-danger pt-0">
+                                            {% trans 'The total amount as shown above does not include caddie fee and cart fee. ' %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% for item in order.cluborderlistmembership_set.all %}
+                        <div class="column is-12">
+                            <div class="card">
+                                <header class="card-header has-background-grey-lighter">
+                                    <h3 class="card-header-title is-size-3">
+                                        <a href="{% url 'booking:golf-club-booking' item.club.slug %}">
+                                            {% if LANGUAGE_CODE == 'th' %}
+                                                {{ item.club.title_thai }}
+                                            {% elif LANGUAGE_CODE == 'ko' %}
+                                                {{ item.club.title_korean }}
+                                            {% else %}
+                                                {{ item.club.title_english }}
+                                            {% endif %}
+                                            <small>[18 {% trans 'Holes' %}]</small>
+                                        </a>
+                                    </h3>
+                                </header>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <div class="columns is-multiline is-hidden-touch px-2 mb-0">
+                                            <div class="column is-2 has-text-right">
+                                                {% trans 'Fee' %}
+                                            </div>
+                                            <div class="column is-1 has-text-centered">
+                                                {% trans 'Price' %}
+                                            </div>
+                                            <div class="column is-1 has-text-centered">
+                                                {% trans 'PAX' %}
+                                            </div>
+                                            <div class="column is-1 has-text-centered">
+                                                {% trans 'Amount' %}
+                                            </div>
+                                            <div class="column is-7 pl-6">
+                                                {% trans 'Remarks' %}
+                                            </div>
+
+                                            <div class="column is-2 has-text-right">
+                                                {% trans 'Green fee' %}
+                                            </div>
+                                            <div class="column is-1 has-text-right">
+                                                {{ item.green_fee_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+                                            <div class="column is-1 has-text-centered">
+                                                {{ item.pax }}
+                                            </div>
+                                            <div class="column is-1 has-text-right">
+                                                {{ item.green_fee_total_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+                                            <div class="column is-7"></div>
+
+                                            <div class="column is-2 has-text-right">
+                                                {% trans 'Caddie fee' %}
+                                            </div>
+                                            <div class="column is-1 has-text-right">
+                                                {{ item.club.caddie_fee_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+                                            <div class="column is-1 has-text-centered">
+                                                {{ item.pax }}
+                                            </div>
+                                            <div class="column is-1 has-text-right">
+                                                {{ item.caddie_fee_total_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+                                            <div class="column is-7 pl-6">
+                                                <span class="has-text-light has-background-danger">
+                                                    [{% trans 'REQUIRED' %}]</span>
+                                                <span class="has-text-danger">
+                                                    {% trans 'You must pay caddie fee at golf course.' %}
+                                                </span>
+                                            </div>
+
+                                            <div class="column is-2 has-text-right">
+                                                {% trans 'Cart fee' %}
+                                            </div>
+                                            <div class="column is-1 has-text-right">
+                                                {{ item.club.cart_fee_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+                                            <div class="column is-1 has-text-centered">
+                                                {{ item.pax }}
+                                            </div>
+                                            <div class="column is-1 has-text-right">
+                                                {{ item.cart_fee_total_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+                                            <div class="column is-7 pl-6 has-text-danger">
+                                                {% if 0 < item.club.cart_required and item.club.cart_required <= item.pax %}
+                                                    <span class="has-text-light has-background-danger">
+                                                        [{% trans 'REQUIRED' %}]</span>
+                                                    <span class="has-text-danger">
+                                                        {% trans 'You must pay cart fee at golf course because it is required to use golf carts.' %}
+                                                    </span>
+                                                {% else %}
+                                                    <span class="has-text-light has-background-info">
+                                                        [{% trans 'OPTIONAL' %}]</span>
+                                                    <span class="has-text-info">
+                                                        {% trans 'Pay at golf course if you want to use golf cart.' %}
+                                                    </span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+
+                                        <div class="columns is-mobile is-multiline is-hidden-desktop px-2 py-2">
+                                            <div class="column is-4 has-text-right">
+                                                {% trans 'Fee' %}
+                                            </div>
+                                            <div class="column is-8 has-text-right">
+                                                {% trans 'Price x PAX = Amount' %}
+                                            </div>
+
+                                            <div class="column is-4 has-text-right">
+                                                {% trans 'Green fee' %}
+                                            </div>
+                                            <div class="column is-8 has-text-right">
+                                                {{ item.green_fee_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                                x
+                                                {{ item.pax }}
+                                                =
+                                                {{ item.green_fee_total_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+
+                                            <div class="column is-4 has-text-right">
+                                                {% trans 'Caddie fee' %}
+                                            </div>
+                                            <div class="column is-8 has-text-right">
+                                                {{ item.club.caddie_fee_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                                x
+                                                {{ item.pax }}
+                                                =
+                                                {{ item.caddie_fee_total_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+
+                                            <div class="column is-4 has-text-right">
+                                                <span class="has-text-light has-background-danger">
+                                                    [{% trans 'REQUIRED' %}]</span>
+                                            </div>
+                                            <div class="column is-8 word-no-break">
+                                                <span class="has-text-danger">
+                                                    {% trans 'You must pay caddie fee at golf course.' %}
+                                                </span>
+                                            </div>
+
+                                            <div class="column is-4 has-text-right">
+                                                {% trans 'Cart fee' %}
+                                            </div>
+                                            <div class="column is-8 has-text-right">
+                                                {{ item.club.cart_fee_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                                x
+                                                {{ item.pax }}
+                                                =
+                                                {{ item.cart_fee_total_selling_price|floatformat:0|intcomma }}
+                                                <span>{% trans 'THB' %}</span>
+                                            </div>
+
+
+                                            {% if 0 < item.club.cart_required and item.club.cart_required <= item.pax %}
+                                                <div class="column is-4 has-text-right">
+                                                    <span class="has-text-light has-background-danger">
+                                                        [{% trans 'REQUIRED' %}]</span>
+                                                </div>
+                                                <div class="column is-8 word-no-break">
+                                                    <span class="has-text-danger">
+                                                        {% trans 'You must pay cart fee at golf course because it is required to use golf carts.' %}
+                                                    </span>
+                                                </div>
+                                            {% else %}
+                                                <div class="column is-4 has-text-right">
+                                                    <span class="has-text-light has-background-info">
+                                                        [{% trans 'OPTIONAL' %}]</span>
+                                                </div>
+                                                <div class="column is-8 word-no-break">
+                                                    <span class="has-text-info">
+                                                        {% trans 'Pay at golf course if you want to use golf cart.' %}
+                                                    </span>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                {% include './_golf-club-booking-details.html' %}
+
+                <div class="column is-12">
+                    <div class="card">
+                        <header class="card-header has-background-grey-lighter">
+                            <h3 class="card-header-title is-size-3">
+                                {% trans 'Cancel Policy' %}
+                            </h3>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <ul class="booking-detail-list">
+                                    <li class="has-text-weight-bold is-size-5">{% trans '8 days before round date' %}</li>
+                                    <li>
+                                        <ul>
+                                            <li class="word-no-break">
+                                                {% trans 'Total amount is refunded.' %}
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-text-weight-bold is-size-5">{% trans '7-4 days before round date' %}</li>
+                                    <li>
+                                        <ul>
+                                            <li class="word-no-break">
+                                                {% trans '50 percent of total amount is refunded.' %}
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-text-weight-bold is-size-5">{% trans 'Within 3 days of round date' %}</li>
+                                    <li>
+                                        <ul>
+                                            <li class="word-no-break">
+                                                {% trans 'Non-refundable' %}
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-12">
+                    <div class="card">
+                        <header class="card-header has-background-grey-lighter">
+                            <h3 class="card-header-title is-size-3">
+                                {% trans 'Rain Check' %}
+                            </h3>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <ul class="booking-detail-list">
+                                    <li class="has-text-weight-bold is-size-5">{% trans 'We obey the rules of golf clubs' %}</li>
+                                    <li>
+                                        <ul>
+                                            <li class="word-no-break">
+                                                {% trans 'No. Golf course has no rain check, no refund for any reason.' %}
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </main>
 {% endblock %}
 
 {% block stylesheet %}
     {{ block.super }}
     <link type="text/css" href="{% static 'booking/css/main.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block javascript %}
+    {{ block.super }}
 {% endblock %}

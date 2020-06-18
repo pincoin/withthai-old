@@ -255,6 +255,8 @@ class OrderDetailView(LoginRequiredMixin, generic.DetailView):
     def get_object(self, queryset=None):
         # NOTE: This method is overridden because DetailView must be called with either an object pk or a slug.
         queryset = models.Order.objects \
+            .select_related('user') \
+            .prefetch_related('cluborderlistmembership_set__club') \
             .filter(order_no=self.kwargs['uuid'])
 
         return get_object_or_404(queryset)

@@ -802,6 +802,30 @@ class ClubOrderListMembership(models.Model):
         help_text=_('THB'),
     )
 
+    @property
+    def green_fee_total_selling_price(self):
+        return self.green_fee_selling_price * self.pax
+
+    green_fee_total_selling_price.fget.short_description = _('Green fee total selling price')
+
+    @property
+    def green_fee_total_cost_price(self):
+        return self.green_fee_cost_price * self.pax
+
+    green_fee_total_cost_price.fget.short_description = _('Green fee total cost price')
+
+    @property
+    def caddie_fee_total_selling_price(self):
+        return self.club.caddie_fee_selling_price * self.pax
+
+    green_fee_total_selling_price.fget.short_description = _('Caddie fee total selling price')
+
+    @property
+    def cart_fee_total_selling_price(self):
+        return self.club.cart_fee_selling_price * self.pax
+
+    green_fee_total_selling_price.fget.short_description = _('Cart fee total selling price')
+
     class Meta:
         verbose_name = _('Golf club order list membership')
         verbose_name_plural = _('Golf club order list membership')

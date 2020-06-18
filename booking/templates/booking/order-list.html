@@ -39,7 +39,9 @@
                 {% for order in orders %}
                     <div class="columns has-text-centered-desktop is-mobile is-multiline order-list-row">
                         <div class="column is-full-mobile is-2-desktop">
-                            <span class="tag is-primary">{{ order.get_status_display }}</span>
+                            <span class="tag is-primary">
+                                {{ order.get_status_display }}
+                            </span>
                         </div>
                         <div class="column is-full-mobile is-2-desktop">
                             {{ order.first_name }} {{ order.last_name }}
