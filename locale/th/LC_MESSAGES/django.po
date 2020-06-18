@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-18 21:29+0700\n"
+"POT-Creation-Date: 2020-06-18 21:38+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -362,31 +362,31 @@ msgstr "ราคาเริ่มต้น"
 #: booking/templates/booking/golf-club-booking-form.html:296
 #: booking/templates/booking/golf-club-booking-form.html:316
 #: booking/templates/booking/golf-club-booking-form.html:427
-#: booking/templates/booking/order-detail.html:40
-#: booking/templates/booking/order-detail.html:93
-#: booking/templates/booking/order-detail.html:100
-#: booking/templates/booking/order-detail.html:109
-#: booking/templates/booking/order-detail.html:116
-#: booking/templates/booking/order-detail.html:131
-#: booking/templates/booking/order-detail.html:138
-#: booking/templates/booking/order-detail.html:170
-#: booking/templates/booking/order-detail.html:175
-#: booking/templates/booking/order-detail.html:183
-#: booking/templates/booking/order-detail.html:188
-#: booking/templates/booking/order-detail.html:206
-#: booking/templates/booking/order-detail.html:211
+#: booking/templates/booking/order-detail.html:46
+#: booking/templates/booking/order-detail.html:99
+#: booking/templates/booking/order-detail.html:106
+#: booking/templates/booking/order-detail.html:115
+#: booking/templates/booking/order-detail.html:122
+#: booking/templates/booking/order-detail.html:137
+#: booking/templates/booking/order-detail.html:144
+#: booking/templates/booking/order-detail.html:176
+#: booking/templates/booking/order-detail.html:181
+#: booking/templates/booking/order-detail.html:189
+#: booking/templates/booking/order-detail.html:194
+#: booking/templates/booking/order-detail.html:212
+#: booking/templates/booking/order-detail.html:217
 #: booking/templates/booking/order-list.html:91
 #: conf/templates/conf/home.html:62
 msgid "THB"
 msgstr "บาท"
 
-#: booking/models.py:295 booking/templates/booking/order-detail.html:105
-#: booking/templates/booking/order-detail.html:179
+#: booking/models.py:295 booking/templates/booking/order-detail.html:111
+#: booking/templates/booking/order-detail.html:185
 msgid "Caddie fee"
 msgstr ""
 
-#: booking/models.py:303 booking/templates/booking/order-detail.html:127
-#: booking/templates/booking/order-detail.html:202
+#: booking/models.py:303 booking/templates/booking/order-detail.html:133
+#: booking/templates/booking/order-detail.html:208
 msgid "Cart fee"
 msgstr ""
 
@@ -679,7 +679,7 @@ msgid "Round time"
 msgstr ""
 
 #: booking/models.py:734 booking/models.py:785
-#: booking/templates/booking/order-detail.html:79
+#: booking/templates/booking/order-detail.html:85
 #: booking/templates/booking/order-list.html:33
 #: booking/templates/booking/order-list.html:69
 #: booking/templates/booking/order-list.html:73
@@ -752,7 +752,7 @@ msgstr ""
 msgid "Transaction category"
 msgstr ""
 
-#: booking/models.py:869 booking/templates/booking/order-detail.html:82
+#: booking/models.py:869 booking/templates/booking/order-detail.html:88
 msgid "Amount"
 msgstr ""
 
@@ -760,7 +760,7 @@ msgstr ""
 msgid "Transaction date"
 msgstr ""
 
-#: booking/models.py:879 booking/templates/booking/order-detail.html:85
+#: booking/models.py:879 booking/templates/booking/order-detail.html:91
 msgid "Remarks"
 msgstr ""
 
@@ -1083,52 +1083,52 @@ msgid "Golf Club Information"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:521
-#: booking/templates/booking/order-detail.html:249
+#: booking/templates/booking/order-detail.html:255
 msgid "Cancel Policy"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:527
-#: booking/templates/booking/order-detail.html:255
+#: booking/templates/booking/order-detail.html:261
 msgid "8 days before round date"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:531
-#: booking/templates/booking/order-detail.html:259
+#: booking/templates/booking/order-detail.html:265
 msgid "Total amount is refunded."
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:535
-#: booking/templates/booking/order-detail.html:263
+#: booking/templates/booking/order-detail.html:269
 msgid "7-4 days before round date"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:539
-#: booking/templates/booking/order-detail.html:267
+#: booking/templates/booking/order-detail.html:273
 msgid "50 percent of total amount is refunded."
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:543
-#: booking/templates/booking/order-detail.html:271
+#: booking/templates/booking/order-detail.html:277
 msgid "Within 3 days of round date"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:547
-#: booking/templates/booking/order-detail.html:275
+#: booking/templates/booking/order-detail.html:281
 msgid "Non-refundable"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:561
-#: booking/templates/booking/order-detail.html:289
+#: booking/templates/booking/order-detail.html:295
 msgid "Rain Check"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:567
-#: booking/templates/booking/order-detail.html:295
+#: booking/templates/booking/order-detail.html:301
 msgid "We obey the rules of golf clubs"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:571
-#: booking/templates/booking/order-detail.html:299
+#: booking/templates/booking/order-detail.html:305
 msgid "No. Golf course has no rain check, no refund for any reason."
 msgstr ""
 
@@ -1143,71 +1143,75 @@ msgid "Booking Details"
 msgstr ""
 
 #: booking/templates/booking/order-detail.html:30
+msgid "Booking opened at"
+msgstr ""
+
+#: booking/templates/booking/order-detail.html:36
 #: booking/templates/booking/order-list.html:24
 msgid "Guest name"
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:36
+#: booking/templates/booking/order-detail.html:42
 #: booking/templates/booking/order-list.html:36
 msgid "Total amount"
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:44
+#: booking/templates/booking/order-detail.html:50
 msgid ""
 "The total amount as shown above does not include caddie fee and cart fee. "
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:65
+#: booking/templates/booking/order-detail.html:71
 #: booking/templates/booking/order-list.html:61
 msgid "Holes"
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:73
-#: booking/templates/booking/order-detail.html:159
+#: booking/templates/booking/order-detail.html:79
+#: booking/templates/booking/order-detail.html:165
 msgid "Fee"
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:76
+#: booking/templates/booking/order-detail.html:82
 msgid "Price"
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:89
-#: booking/templates/booking/order-detail.html:166
+#: booking/templates/booking/order-detail.html:95
+#: booking/templates/booking/order-detail.html:172
 #, fuzzy
 #| msgid "Start from"
 msgid "Green fee"
 msgstr "ราคาเริ่มต้น"
 
-#: booking/templates/booking/order-detail.html:120
-#: booking/templates/booking/order-detail.html:143
-#: booking/templates/booking/order-detail.html:193
-#: booking/templates/booking/order-detail.html:218
+#: booking/templates/booking/order-detail.html:126
+#: booking/templates/booking/order-detail.html:149
+#: booking/templates/booking/order-detail.html:199
+#: booking/templates/booking/order-detail.html:224
 msgid "REQUIRED"
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:122
-#: booking/templates/booking/order-detail.html:197
+#: booking/templates/booking/order-detail.html:128
+#: booking/templates/booking/order-detail.html:203
 msgid "You must pay caddie fee at golf course."
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:145
-#: booking/templates/booking/order-detail.html:222
+#: booking/templates/booking/order-detail.html:151
+#: booking/templates/booking/order-detail.html:228
 msgid ""
 "You must pay cart fee at golf course because it is required to use golf "
 "carts."
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:149
-#: booking/templates/booking/order-detail.html:228
+#: booking/templates/booking/order-detail.html:155
+#: booking/templates/booking/order-detail.html:234
 msgid "OPTIONAL"
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:151
-#: booking/templates/booking/order-detail.html:232
+#: booking/templates/booking/order-detail.html:157
+#: booking/templates/booking/order-detail.html:238
 msgid "Pay at golf course if you want to use golf cart."
 msgstr ""
 
-#: booking/templates/booking/order-detail.html:162
+#: booking/templates/booking/order-detail.html:168
 msgid "Price x PAX = Amount"
 msgstr ""
 

@@ -27,6 +27,12 @@
                                             </span>
                                         </div>
                                         <div class="column is-2-desktop is-4-mobile has-text-right">
+                                            {% trans 'Booking opened at' %}
+                                        </div>
+                                        <div class="column is-10-desktop is-8-mobile">
+                                            {{ order.created }}
+                                        </div>
+                                        <div class="column is-2-desktop is-4-mobile has-text-right">
                                             {% trans 'Guest name' %}
                                         </div>
                                         <div class="column is-10-desktop is-8-mobile">
@@ -240,73 +246,73 @@
                         </div>
                     {% endfor %}
 
-                {% include './_golf-club-booking-details.html' %}
+                    {% include './_golf-club-booking-details.html' %}
 
-                <div class="column is-12">
-                    <div class="card">
-                        <header class="card-header has-background-grey-lighter">
-                            <h3 class="card-header-title is-size-3">
-                                {% trans 'Cancel Policy' %}
-                            </h3>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul class="booking-detail-list">
-                                    <li class="has-text-weight-bold is-size-5">{% trans '8 days before round date' %}</li>
-                                    <li>
-                                        <ul>
-                                            <li class="word-no-break">
-                                                {% trans 'Total amount is refunded.' %}
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-text-weight-bold is-size-5">{% trans '7-4 days before round date' %}</li>
-                                    <li>
-                                        <ul>
-                                            <li class="word-no-break">
-                                                {% trans '50 percent of total amount is refunded.' %}
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-text-weight-bold is-size-5">{% trans 'Within 3 days of round date' %}</li>
-                                    <li>
-                                        <ul>
-                                            <li class="word-no-break">
-                                                {% trans 'Non-refundable' %}
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Cancel Policy' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <ul class="booking-detail-list">
+                                        <li class="has-text-weight-bold is-size-5">{% trans '8 days before round date' %}</li>
+                                        <li>
+                                            <ul>
+                                                <li class="word-no-break">
+                                                    {% trans 'Total amount is refunded.' %}
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-text-weight-bold is-size-5">{% trans '7-4 days before round date' %}</li>
+                                        <li>
+                                            <ul>
+                                                <li class="word-no-break">
+                                                    {% trans '50 percent of total amount is refunded.' %}
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-text-weight-bold is-size-5">{% trans 'Within 3 days of round date' %}</li>
+                                        <li>
+                                            <ul>
+                                                <li class="word-no-break">
+                                                    {% trans 'Non-refundable' %}
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="column is-12">
-                    <div class="card">
-                        <header class="card-header has-background-grey-lighter">
-                            <h3 class="card-header-title is-size-3">
-                                {% trans 'Rain Check' %}
-                            </h3>
-                        </header>
-                        <div class="card-content">
-                            <div class="content">
-                                <ul class="booking-detail-list">
-                                    <li class="has-text-weight-bold is-size-5">{% trans 'We obey the rules of golf clubs' %}</li>
-                                    <li>
-                                        <ul>
-                                            <li class="word-no-break">
-                                                {% trans 'No. Golf course has no rain check, no refund for any reason.' %}
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                    <div class="column is-12">
+                        <div class="card">
+                            <header class="card-header has-background-grey-lighter">
+                                <h3 class="card-header-title is-size-3">
+                                    {% trans 'Rain Check' %}
+                                </h3>
+                            </header>
+                            <div class="card-content">
+                                <div class="content">
+                                    <ul class="booking-detail-list">
+                                        <li class="has-text-weight-bold is-size-5">{% trans 'We obey the rules of golf clubs' %}</li>
+                                        <li>
+                                            <ul>
+                                                <li class="word-no-break">
+                                                    {% trans 'No. Golf course has no rain check, no refund for any reason.' %}
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
 {% endblock %}
