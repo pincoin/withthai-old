@@ -75,6 +75,12 @@
                                 <div class="card-content">
                                     <div class="content">
                                         <div class="columns is-multiline is-hidden-touch px-2 mb-0">
+                                            <div class="column is-2 has-text-right has-text-weight-bold">
+                                                {% trans 'Round date/time' %}
+                                            </div>
+                                            <div class="column is-10 has-text-weight-bold">
+                                                {{ item.round_date }} {{ item.round_time }}
+                                            </div>
                                             <div class="column is-2 has-text-right">
                                                 {% trans 'Fee' %}
                                             </div>
@@ -161,6 +167,13 @@
                                         </div>
 
                                         <div class="columns is-mobile is-multiline is-hidden-desktop px-2 py-2">
+                                            <div class="column is-4 has-text-right has-text-weight-bold">
+                                                {% trans 'Round date/time' %}
+                                            </div>
+                                            <div class="column is-8 has-text-weight-bold">
+                                                {{ item.round_date }} {{ item.round_time }}
+                                            </div>
+
                                             <div class="column is-4 has-text-right">
                                                 {% trans 'Fee' %}
                                             </div>
