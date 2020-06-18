@@ -233,7 +233,7 @@ class GolfClubBookingCreateView(generic.CreateView):
         return response
 
     def get_success_url(self):
-        return reverse('booking:golf-club-list', args=())
+        return reverse('booking:order-detail', args=(self.object.order_no,))
 
 
 class OrderListView(LoginRequiredMixin, generic.ListView):
