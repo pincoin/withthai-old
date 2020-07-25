@@ -10,7 +10,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.views import generic
-from ipware.ip import get_ip
+from ipware.ip import get_client_ip
 
 from . import forms
 from . import models
@@ -194,7 +194,7 @@ class GolfClubBookingCreateView(generic.CreateView):
         form.instance.total_cost_price = form.cleaned_data['total_cost_price']
         form.instance.status = models.Order.STATUS_CHOICES.booking_opened
 
-        form.instance.ip_address = get_ip(self.request)
+        form.instance.ip_address = get_client_ip(self.request)
         form.instance.user = self.request.user
         form.instance.accept_language = self.request.META['HTTP_ACCEPT_LANGUAGE'] \
             if 'HTTP_ACCEPT_LANGUAGE' in self.request.META.keys() else _('No language set')
