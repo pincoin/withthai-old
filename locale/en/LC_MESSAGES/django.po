@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-31 23:00+0700\n"
+"POT-Creation-Date: 2020-08-01 00:38+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: allauth/templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because user %(user_display)s has given yours "
+"as an e-mail address to connect their account.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s\n"
+msgstr ""
+
+#: allauth/templates/account/email/email_confirmation_message.txt:7
+#, python-format
+msgid ""
+"Thank you from %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: allauth/templates/account/email/email_confirmation_signup_message.txt:6
+msgid "Hello."
+msgstr ""
+
+#: allauth/templates/account/email/email_confirmation_signup_message.txt:8
+msgid ""
+"You have received this e-mail because you signed up with this e-mail address."
+msgstr ""
+
+#: allauth/templates/account/email/email_confirmation_signup_message.txt:10
+msgid "Please, click the activation link if correct."
+msgstr ""
+
+#: allauth/templates/account/email/email_confirmation_signup_message.txt:13
+msgid "Thank you."
+msgstr ""
+
+#: allauth/templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr ""
+
 #: allauth/templates/account/email_confirm.html:6
 #: allauth/templates/account/email_confirm.html:15
 msgid "Confirm E-mail Address"
 msgstr ""
 
+#: allauth/templates/account/email_confirm.html:26
+#: allauth/templates/socialaccount/signup.html:76 conf/models.py:141
+#: help/templates/help/privacy.html:19
+msgid "Username"
+msgstr ""
+
 #: allauth/templates/account/email_confirm.html:27
+#: allauth/templates/socialaccount/signup.html:47
+msgid "Email"
+msgstr ""
+
+#: allauth/templates/account/email_confirm.html:33
 msgid "Confirm email address"
 msgstr ""
 
-#: allauth/templates/account/email_confirm.html:36
+#: allauth/templates/account/email_confirm.html:42
 msgid "This e-mail confirmation link is expired or invalid."
 msgstr ""
 
-#: allauth/templates/account/email_confirm.html:40
+#: allauth/templates/account/email_confirm.html:46
 msgid "Re-send email"
 msgstr ""
 
@@ -126,17 +176,8 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
-#: allauth/templates/socialaccount/signup.html:47
-msgid "Email"
-msgstr ""
-
 #: allauth/templates/socialaccount/signup.html:56
 msgid "To get booking receipt"
-msgstr ""
-
-#: allauth/templates/socialaccount/signup.html:76 conf/models.py:141
-#: help/templates/help/privacy.html:19
-msgid "Username"
 msgstr ""
 
 #: allauth/templates/socialaccount/signup.html:85
