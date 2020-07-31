@@ -18,21 +18,21 @@
                     <div class="column is-one-third is-offset-one-third">
                         <article class="message is-info">
                             <div class="message-body">
-                                {% if confirmation %}
+                                {% if not confirmation %}
 
                                 {% user_display confirmation.email_address.user as user_display %}
+                                {% confirmation.email_address.email as email %}
 
-                                <p>
-                                    {% blocktrans with confirmation.email_address.email as email %}
-                                    Please confirm that
-                                    <a href="mailto:{{ email }}">{{ email }}</a>
-                                    is an e-mail address for user {{ user_display }}.
-                                    {% endblocktrans %}
-                                </p>
+                                <ul>
+                                    <li>{% trans 'Username' %}: {{ user_display }}</li>
+                                    <li>{% trans 'Email' %}: {{ email }}</li>
+                                </ul>
 
                                 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
                                     {% csrf_token %}
-                                    <button type="submit">{% trans 'Confirm' %}</button>
+                                    <button type="submit" class="button is-fullwidth mt-4">
+                                        {% trans 'Confirm email address' %}
+                                    </button>
                                 </form>
 
                                 {% else %}
@@ -43,7 +43,9 @@
                                     {% trans 'This e-mail confirmation link is expired or invalid.' %}
                                 </p>
                                 <p class="mt-4">
-                                    <a href="{{ email_url}}" class="button is-fullwidth">{% trans 'Re-issue' %}</a>
+                                    <a href="{{ email_url}}" class="button is-fullwidth">
+                                        {% trans 'Re-send email' %}
+                                    </a>
                                 </p>
                                 {% endif %}
                             </div>
