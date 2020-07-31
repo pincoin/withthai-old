@@ -21,7 +21,7 @@
                                 {% if not confirmation %}
 
                                 {% user_display confirmation.email_address.user as user_display %}
-                                {% confirmation.email_address.email as email %}
+                                {% email confirmation.email_address.email as email %}
 
                                 <ul>
                                     <li>{% trans 'Username' %}: {{ user_display }}</li>
