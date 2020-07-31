@@ -1,9 +1,16 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Hello from {{ site_name }}!
+{% load i18n %}
+{% load account %}
+{% user_display user as user_display %}
+{% autoescape off %}
 
-You're receiving this e-mail because user {{ user_display }} has given yours as an e-mail address to connect their account.
+{% trans 'Hello.' %}
 
-To confirm this is correct, go to {{ activate_url }}
-{% endblocktrans %}
-{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you from {{ site_name }}!
-{{ site_domain }}{% endblocktrans %}
+{% trans 'You have received this e-mail because you connected with this e-mail address.' %}
+
+{% trans 'Please, click the activation link if correct.' %}
+{{ activate_url }}
+
+{% trans 'Thank you.' %}
+
+{{ current_site.name }} {{ current_site.domain }}
 {% endautoescape %}
