@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-30 00:59+0700\n"
+"POT-Creation-Date: 2020-07-31 22:22+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: allauth/templates/account/email_confirm.html:6
+#: allauth/templates/account/email_confirm.html:15
+msgid "Confirm E-mail Address"
+msgstr "이메일주소 확인 요청"
+
+#: allauth/templates/account/email_confirm.html:26
+#, python-format
+msgid ""
+"\n"
+"                                    Please confirm that\n"
+"                                    <a href=\"mailto:%(email)s\">%(email)s</"
+"a>\n"
+"                                    is an e-mail address for user "
+"%(user_display)s.\n"
+"                                    "
+msgstr ""
+
+#: allauth/templates/account/email_confirm.html:35
+msgid "Confirm"
+msgstr "확인"
+
+#: allauth/templates/account/email_confirm.html:43
+msgid "This e-mail confirmation link is expired or invalid."
+msgstr "이메일 주소 확인 링크가 만료되었거나 유효하지 않습니다."
+
+#: allauth/templates/account/email_confirm.html:44
+msgid "Please, issue a new e-mail confirmation request."
+msgstr "메일을 다시 받으려면 아래 버튼을 클릭하세요."
+
+#: allauth/templates/account/email_confirm.html:47
+msgid "Re-issue"
+msgstr "이메일 주소 확인 메일 재발송"
 
 #: allauth/templates/account/login.html:6
 #: allauth/templates/account/login.html:15
