@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-01 00:38+0700\n"
+"POT-Creation-Date: 2020-08-01 00:45+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,16 +42,19 @@ msgstr "안녕하세요."
 #: allauth/templates/account/email/email_confirmation_signup_message.txt:8
 msgid ""
 "You have received this e-mail because you signed up with this e-mail address."
-msgstr ""
-"본 이메일 주소로 회원가입을 위해 이메일이 발송되었습니다."
+msgstr "이메일 주소 확인을 위해 이메일이 발송되었습니다."
 
 #: allauth/templates/account/email/email_confirmation_signup_message.txt:10
 msgid "Please, click the activation link if correct."
-msgstr "회원가입을 위해 이메일 주소 인증하려면 다음 링크를 클릭하세요."
+msgstr "회원가입 완료하기 위한 이메일 주소 인증은 다음 링크를 클릭하세요."
 
 #: allauth/templates/account/email/email_confirmation_signup_message.txt:13
 msgid "Thank you."
 msgstr "감사합니다."
+
+#: allauth/templates/account/email/email_confirmation_signup_subject.txt:3
+msgid "Please Confirm Your E-mail Address For Sign Up"
+msgstr "회원가입 이메일주소 확인 요청"
 
 #: allauth/templates/account/email/email_confirmation_subject.txt:3
 msgid "Please Confirm Your E-mail Address"
