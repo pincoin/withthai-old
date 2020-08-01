@@ -66,3 +66,8 @@ class MemberSetPasswordForm(allauthforms.SetPasswordForm):
 class MemberResetPasswordForm(allauthforms.ResetPasswordForm):
     def clean(self):
         raise forms.ValidationError(_('You cannot reset password.'))
+
+
+class MemberAddEmailForm(allauthforms.AddEmailForm):
+    def clean(self):
+        raise forms.ValidationError(_('You cannot add an email.'))

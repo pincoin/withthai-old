@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-02 01:33+0700\n"
+"POT-Creation-Date: 2020-08-02 01:58+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -677,11 +677,11 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: booking/models.py:601 member/forms.py:20
+#: booking/models.py:601 member/forms.py:21
 msgid "Last name"
 msgstr ""
 
-#: booking/models.py:607 member/forms.py:12
+#: booking/models.py:607 member/forms.py:13
 msgid "First name"
 msgstr ""
 
@@ -1059,7 +1059,7 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:140
-#: booking/templates/booking/golf-club-booking-form.html:476 member/forms.py:28
+#: booking/templates/booking/golf-club-booking-form.html:476 member/forms.py:29
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
@@ -1412,7 +1412,7 @@ msgstr ""
 msgid "Google Services"
 msgstr ""
 
-#: conf/settings/base.py:137
+#: conf/settings/base.py:141
 msgid "[WITH THAI] "
 msgstr ""
 
@@ -1863,7 +1863,7 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: member/adapters.py:18
+#: member/adapters.py:20
 msgid "You cannot disconnect social media account."
 msgstr ""
 
@@ -1871,36 +1871,40 @@ msgstr ""
 msgid "Member"
 msgstr ""
 
-#: member/forms.py:14
+#: member/forms.py:15
 msgid "First name written in English"
 msgstr ""
 
-#: member/forms.py:16 member/forms.py:24
+#: member/forms.py:17 member/forms.py:25
 msgid "Uppercase alphabet only"
 msgstr ""
 
-#: member/forms.py:22
+#: member/forms.py:23
 msgid "Last name written in English"
 msgstr ""
 
-#: member/forms.py:31
+#: member/forms.py:32
 msgid "Digits or plus sign only"
 msgstr ""
 
-#: member/forms.py:32
+#: member/forms.py:33
 msgid "Invalid phone number format"
 msgstr ""
 
-#: member/forms.py:57
+#: member/forms.py:58
 msgid "You cannot change password."
 msgstr ""
 
-#: member/forms.py:62
+#: member/forms.py:63
 msgid "You cannot set password."
 msgstr ""
 
-#: member/forms.py:67
+#: member/forms.py:68
 msgid "You cannot reset password."
+msgstr ""
+
+#: member/forms.py:73
+msgid "You cannot add an email."
 msgstr ""
 
 #: member/models.py:23

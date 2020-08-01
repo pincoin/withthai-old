@@ -133,6 +133,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 ACCOUNT_FORMS = {
+    'add_email': 'member.forms.MemberAddEmailForm',
     'change_password': 'member.forms.MemberChangePasswordForm',
     'set_password': 'member.forms.MemberSetPasswordForm',
     'reset_password': 'member.forms.MemberResetPasswordForm',
