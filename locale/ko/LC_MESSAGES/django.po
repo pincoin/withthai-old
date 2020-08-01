@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-01 19:56+0700\n"
+"POT-Creation-Date: 2020-08-02 00:45+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1885,6 +1885,10 @@ msgstr "인기 태그"
 #: magazine/templates/magazine/home.html:42
 msgid "Read more"
 msgstr "더보기"
+
+#: member/adapters.py:18
+msgid "You cannot disconnect social media account."
+msgstr "기본 SNS 계정은 연결해제할 수 없습니다."
 
 #: member/apps.py:7
 msgid "Member"

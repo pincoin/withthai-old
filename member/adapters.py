@@ -1,7 +1,9 @@
 from allauth.account.adapter import DefaultAccountAdapter
 from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
 
+from django.core.exceptions import ValidationError
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 
 
 class MyAccountAdapter(DefaultAccountAdapter):
@@ -12,4 +14,5 @@ class MyAccountAdapter(DefaultAccountAdapter):
 
 
 class SocialAccountAdapter(DefaultSocialAccountAdapter):
-    pass
+    def validate_disconnect(self, account, accounts):
+        raise ValidationError(_('You cannot disconnect social media account.'))
