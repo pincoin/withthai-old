@@ -2,7 +2,6 @@
 {% load account %}
 {% user_display user as user_display %}
 {% autoescape off %}
-
 {% trans 'Hello.' %}
 
 {% trans 'You have received this e-mail because you connected with this e-mail address.' %}
@@ -12,5 +11,5 @@
 
 {% trans 'Thank you.' %}
 
-{{ current_site.name }} {{ current_site.domain }}
+{% trans 'WITH THAI' %} www.withthai.com
 {% endautoescape %}
