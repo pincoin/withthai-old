@@ -1,4 +1,5 @@
 from allauth.account import forms as allauthforms
+from allauth.socialaccount import forms as allauthsocialforms
 from django import forms
 from django.contrib.auth.models import Group
 from django.core.validators import RegexValidator
@@ -7,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from . import models
 
 
-class MemberSignupForm(forms.Form):
+class MemberSignupForm(allauthsocialforms.SignupForm):
     first_name = forms.CharField(
         label=_('First name'),
         max_length=30,
