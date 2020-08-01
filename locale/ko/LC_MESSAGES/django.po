@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-01 00:52+0700\n"
+"POT-Creation-Date: 2020-08-01 17:19+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,22 +17,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: allauth/templates/account/email/email_confirmation_message.txt:6
+#: allauth/templates/account/email/email_confirmation_message.txt:5
 msgid "Hello."
 msgstr "안녕하세요."
 
-#: allauth/templates/account/email/email_confirmation_message.txt:8
+#: allauth/templates/account/email/email_confirmation_message.txt:7
 msgid ""
 "You have received this e-mail because you connected with this e-mail address."
 msgstr "이메일 주소 확인을 위해 이메일이 발송되었습니다."
 
-#: allauth/templates/account/email/email_confirmation_message.txt:10
+#: allauth/templates/account/email/email_confirmation_message.txt:9
 msgid "Please, click the activation link if correct."
 msgstr "이메일 주소 인증은 다음 링크를 클릭하세요."
 
-#: allauth/templates/account/email/email_confirmation_message.txt:13
+#: allauth/templates/account/email/email_confirmation_message.txt:12
 msgid "Thank you."
 msgstr "감사합니다."
+
+#: allauth/templates/account/email/email_confirmation_message.txt:14
+#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:53
+#: conf/templates/conf/base.html:55 conf/templates/conf/base.html:144
+#: help/templates/help/about.html:12
+msgid "WITH THAI"
+msgstr "위드타이"
 
 #: allauth/templates/account/email/email_confirmation_subject.txt:3
 msgid "Please Confirm Your E-mail Address"
@@ -1408,6 +1415,10 @@ msgstr "구글 서비스"
 msgid "Google Services"
 msgstr "구글 서비스"
 
+#: conf/settings/base.py:137
+msgid "[WITH THAI] "
+msgstr "[위드타이] "
+
 #: conf/settings/local.py:8
 msgid "Korean"
 msgstr "한국어"
@@ -1427,12 +1438,6 @@ msgstr "일본어"
 #: conf/settings/local.py:12
 msgid "Chinese"
 msgstr "중국어"
-
-#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:53
-#: conf/templates/conf/base.html:55 conf/templates/conf/base.html:144
-#: help/templates/help/about.html:12
-msgid "WITH THAI"
-msgstr "위드타이"
 
 #: conf/templates/conf/base.html:69 conf/templates/conf/base.html:186
 msgid "HOTEL"

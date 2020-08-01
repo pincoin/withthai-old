@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-01 00:52+0700\n"
+"POT-Creation-Date: 2020-08-01 17:19+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: allauth/templates/account/email/email_confirmation_message.txt:6
+#: allauth/templates/account/email/email_confirmation_message.txt:5
 msgid "Hello."
 msgstr ""
 
-#: allauth/templates/account/email/email_confirmation_message.txt:8
+#: allauth/templates/account/email/email_confirmation_message.txt:7
 msgid ""
 "You have received this e-mail because you connected with this e-mail address."
 msgstr ""
 
-#: allauth/templates/account/email/email_confirmation_message.txt:10
+#: allauth/templates/account/email/email_confirmation_message.txt:9
 msgid "Please, click the activation link if correct."
 msgstr ""
 
-#: allauth/templates/account/email/email_confirmation_message.txt:13
+#: allauth/templates/account/email/email_confirmation_message.txt:12
 msgid "Thank you."
+msgstr ""
+
+#: allauth/templates/account/email/email_confirmation_message.txt:14
+#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:53
+#: conf/templates/conf/base.html:55 conf/templates/conf/base.html:144
+#: help/templates/help/about.html:12
+msgid "WITH THAI"
 msgstr ""
 
 #: allauth/templates/account/email/email_confirmation_subject.txt:3
@@ -1404,6 +1411,10 @@ msgstr ""
 msgid "Google Services"
 msgstr ""
 
+#: conf/settings/base.py:137
+msgid "[WITH THAI] "
+msgstr ""
+
 #: conf/settings/local.py:8
 msgid "Korean"
 msgstr ""
@@ -1422,12 +1433,6 @@ msgstr ""
 
 #: conf/settings/local.py:12
 msgid "Chinese"
-msgstr ""
-
-#: conf/templates/conf/base.html:19 conf/templates/conf/base.html:53
-#: conf/templates/conf/base.html:55 conf/templates/conf/base.html:144
-#: help/templates/help/about.html:12
-msgid "WITH THAI"
 msgstr ""
 
 #: conf/templates/conf/base.html:69 conf/templates/conf/base.html:186

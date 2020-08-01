@@ -1,6 +1,8 @@
 import json
 import os
 
+from django.utils.translation import gettext_lazy as _
+
 from . import BASE_DIR
 
 # Secret settings
@@ -132,6 +134,7 @@ ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 ACCOUNT_SIGNUP_FORM_CLASS = 'member.forms.MemberSignupForm'
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True  # default=False
+ACCOUNT_EMAIL_SUBJECT_PREFIX = _('[WITH THAI] ')
 SOCIALACCOUNT_AUTO_SIGNUP = False
 
 SOCIALACCOUNT_PROVIDERS = {
