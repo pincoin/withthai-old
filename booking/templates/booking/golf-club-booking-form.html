@@ -189,7 +189,7 @@
                                                                        type="date"
                                                                        id="{{ form.round_date.id_for_label }}"
                                                                        name="{{ form.round_date.name }}"
-                                                                       value="{{ form.round_date.value|default_if_none:"" }}"
+                                                                       value="{{ form.round_date.value|default_if_none:'' }}"
                                                                        placeholder="YYYY-MM-DD">
                                                             </div>
                                                             <div class="control{% if form.round_date.errors and not form.round_time.errors %} time-input-margin{% endif %}">
@@ -197,7 +197,7 @@
                                                                        type="time"
                                                                        id="{{ form.round_time.id_for_label }}"
                                                                        name="{{ form.round_time.name }}"
-                                                                       value="{{ form.round_time.value|default_if_none:"" }}"
+                                                                       value="{{ form.round_time.value|default_if_none:'' }}"
                                                                        placeholder="HH:MM" step="60">
                                                             </div>
                                                         </div>
@@ -373,7 +373,7 @@
                                                                         {% trans 'Booking Inquiry' %}
                                                                     </button>
                                                                 {% else %}
-                                                                    <a href="{% url 'account_login' %}"
+                                                                    <a href="{% url 'account_login' %}?next={{ request.path }}"
                                                                        class="button is-fullwidth is-success">
                                                                         {% trans 'Booking Inquiry after Login' %}
                                                                     </a>
