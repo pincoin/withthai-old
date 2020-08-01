@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-01 17:19+0700\n"
+"POT-Creation-Date: 2020-08-01 19:56+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgid "SIGN IN"
 msgstr ""
 
 #: allauth/templates/account/login.html:65
-msgid "You may login with your SNS accounts."
+msgid "You may login with your social media accounts."
 msgstr ""
 
 #: allauth/templates/account/logout.html:5
@@ -133,16 +133,17 @@ msgstr ""
 
 #: allauth/templates/socialaccount/authentication_error.html:5
 #: allauth/templates/socialaccount/authentication_error.html:15
-msgid "SNS LOGIN FAILURE"
+msgid "SOCIAL MEDIA LOGIN FAILURE"
 msgstr ""
 
 #: allauth/templates/socialaccount/authentication_error.html:22
-msgid "An error occurred while attempting to login via your SNS account."
+msgid ""
+"An error occurred while attempting to login via your social media account."
 msgstr ""
 
 #: allauth/templates/socialaccount/login_cancelled.html:5
 #: allauth/templates/socialaccount/login_cancelled.html:15
-msgid "SNS LOGIN CANCELLED"
+msgid "SOCIAL MEDIA LOGIN CANCELLED"
 msgstr ""
 
 #: allauth/templates/socialaccount/login_cancelled.html:22
@@ -156,7 +157,7 @@ msgid "SIGN UP"
 msgstr ""
 
 #: allauth/templates/socialaccount/signup.html:20
-msgid "You are about to use your SNS account to login to WITH THAI."
+msgid "You are about to use your social media account to login to WITH THAI."
 msgstr ""
 
 #: allauth/templates/socialaccount/signup.html:31
@@ -759,22 +760,16 @@ msgid "Green fee total selling price"
 msgstr ""
 
 #: booking/models.py:815
-#, fuzzy
-#| msgid "Start From"
 msgid "Green fee total cost price"
-msgstr "ราคาเริ่มต้น"
+msgstr ""
 
 #: booking/models.py:821
-#, fuzzy
-#| msgid "Start From"
 msgid "Caddie fee total selling price"
-msgstr "ราคาเริ่มต้น"
+msgstr ""
 
 #: booking/models.py:827
-#, fuzzy
-#| msgid "Start From"
 msgid "Cart fee total selling price"
-msgstr "ราคาเริ่มต้น"
+msgstr ""
 
 #: booking/models.py:830 booking/models.py:831
 msgid "Golf club order list membership"
@@ -986,10 +981,8 @@ msgid "It is strongly recommended not to store valuable items in any lockers."
 msgstr ""
 
 #: booking/templates/booking/_golf-club-booking-details.html:112
-#, fuzzy
-#| msgid "Start From"
 msgid "At Starter"
-msgstr "ราคาเริ่มต้น"
+msgstr ""
 
 #: booking/templates/booking/_golf-club-booking-details.html:116
 msgid "You submit your tickets to starter staff."
@@ -1085,10 +1078,8 @@ msgid "Golfer #"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:284
-#, fuzzy
-#| msgid "Start from"
 msgid "Green Fee"
-msgstr "ราคาเริ่มต้น"
+msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:304
 msgid "Total"
@@ -1268,10 +1259,8 @@ msgstr ""
 
 #: booking/templates/booking/order-detail.html:120
 #: booking/templates/booking/order-detail.html:204
-#, fuzzy
-#| msgid "Start from"
 msgid "Green fee"
-msgstr "ราคาเริ่มต้น"
+msgstr ""
 
 #: booking/templates/booking/order-detail.html:151
 #: booking/templates/booking/order-detail.html:174
@@ -1423,10 +1412,8 @@ msgid "Google Services"
 msgstr ""
 
 #: conf/settings/base.py:137
-#, fuzzy
-#| msgid "WITH THAI"
 msgid "[WITH THAI] "
-msgstr "วิธไทย"
+msgstr "[วิธไทย] "
 
 #: conf/settings/local.py:8
 msgid "Korean"
@@ -1485,8 +1472,6 @@ msgid "Search..."
 msgstr ""
 
 #: conf/templates/conf/base.html:205
-#, fuzzy
-#| msgid "WITH THAI"
 msgid "MY WITH THAI"
 msgstr "วิธไทย"
 
@@ -1573,16 +1558,12 @@ msgid "Green Fee Online Payment for Booking"
 msgstr ""
 
 #: conf/templates/conf/home.html:107
-#, fuzzy
-#| msgid "Thailand"
 msgid "Living in Thailand"
-msgstr "ไทย"
+msgstr "อยู่ที่ไทย"
 
 #: conf/templates/conf/home.html:111
-#, fuzzy
-#| msgid "Thai"
 msgid "Thai News"
-msgstr "ภาษาไทย"
+msgstr "ข่าวไทย"
 
 #: conf/templates/conf/home.html:112
 msgid "Top Active Communities"

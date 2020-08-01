@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-01 17:19+0700\n"
+"POT-Creation-Date: 2020-08-01 19:56+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgid "SIGN IN"
 msgstr "로그인"
 
 #: allauth/templates/account/login.html:65
-msgid "You may login with your SNS accounts."
+msgid "You may login with your social media accounts."
 msgstr "SNS 계정으로 간편하게 회원가입/로그인하세요."
 
 #: allauth/templates/account/logout.html:5
@@ -133,16 +133,17 @@ msgstr "5분 이내에 메일을 받지 못한 경우 고객센터로 연락바�
 
 #: allauth/templates/socialaccount/authentication_error.html:5
 #: allauth/templates/socialaccount/authentication_error.html:15
-msgid "SNS LOGIN FAILURE"
+msgid "SOCIAL MEDIA LOGIN FAILURE"
 msgstr "SNS 계정 로그인 실패"
 
 #: allauth/templates/socialaccount/authentication_error.html:22
-msgid "An error occurred while attempting to login via your SNS account."
+msgid ""
+"An error occurred while attempting to login via your social media account."
 msgstr "SNS 계정으로 로그인 하는 도중 오류가 발생했습니다."
 
 #: allauth/templates/socialaccount/login_cancelled.html:5
 #: allauth/templates/socialaccount/login_cancelled.html:15
-msgid "SNS LOGIN CANCELLED"
+msgid "SOCIAL MEDIA LOGIN CANCELLED"
 msgstr "SNS 계정 로그인 취소"
 
 #: allauth/templates/socialaccount/login_cancelled.html:22
@@ -156,7 +157,7 @@ msgid "SIGN UP"
 msgstr "회원가입"
 
 #: allauth/templates/socialaccount/signup.html:20
-msgid "You are about to use your SNS account to login to WITH THAI."
+msgid "You are about to use your social media account to login to WITH THAI."
 msgstr "SNS 계정으로 위드타이에 회원가입합니다."
 
 #: allauth/templates/socialaccount/signup.html:31
@@ -1948,6 +1949,3 @@ msgstr "로그인 이력"
 #: member/models.py:94
 msgid "Login logs"
 msgstr "로그인 이력"
-
-#~ msgid "Please Confirm Your E-mail Address For Sign Up"
-#~ msgstr "회원가입 이메일주소 확인 요청"
