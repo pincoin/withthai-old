@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-02 00:45+0700\n"
+"POT-Creation-Date: 2020-08-02 01:33+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -677,11 +677,11 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: booking/models.py:601 member/forms.py:19
+#: booking/models.py:601 member/forms.py:20
 msgid "Last name"
 msgstr ""
 
-#: booking/models.py:607 member/forms.py:11
+#: booking/models.py:607 member/forms.py:12
 msgid "First name"
 msgstr ""
 
@@ -1059,7 +1059,7 @@ msgid "Caddie Fee"
 msgstr ""
 
 #: booking/templates/booking/golf-club-booking-form.html:140
-#: booking/templates/booking/golf-club-booking-form.html:476 member/forms.py:27
+#: booking/templates/booking/golf-club-booking-form.html:476 member/forms.py:28
 #: member/models.py:16
 msgid "Telephone"
 msgstr ""
@@ -1871,24 +1871,36 @@ msgstr ""
 msgid "Member"
 msgstr ""
 
-#: member/forms.py:13
+#: member/forms.py:14
 msgid "First name written in English"
 msgstr ""
 
-#: member/forms.py:15 member/forms.py:23
+#: member/forms.py:16 member/forms.py:24
 msgid "Uppercase alphabet only"
 msgstr ""
 
-#: member/forms.py:21
+#: member/forms.py:22
 msgid "Last name written in English"
 msgstr ""
 
-#: member/forms.py:30
+#: member/forms.py:31
 msgid "Digits or plus sign only"
 msgstr ""
 
-#: member/forms.py:31
+#: member/forms.py:32
 msgid "Invalid phone number format"
+msgstr ""
+
+#: member/forms.py:57
+msgid "You cannot change password."
+msgstr ""
+
+#: member/forms.py:62
+msgid "You cannot set password."
+msgstr ""
+
+#: member/forms.py:67
+msgid "You cannot reset password."
 msgstr ""
 
 #: member/models.py:23

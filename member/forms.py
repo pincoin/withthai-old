@@ -1,3 +1,4 @@
+from allauth.account import forms as allauthforms
 from django import forms
 from django.contrib.auth.models import Group
 from django.core.validators import RegexValidator
@@ -49,3 +50,18 @@ class MemberSignupForm(forms.Form):
         profile.user = user
 
         profile.save()
+
+
+class MemberChangePasswordForm(allauthforms.ChangePasswordForm):
+    def clean(self):
+        raise forms.ValidationError(_('You cannot change password.'))
+
+
+class MemberSetPasswordForm(allauthforms.SetPasswordForm):
+    def clean(self):
+        raise forms.ValidationError(_('You cannot set password.'))
+
+
+class MemberResetPasswordForm(allauthforms.ResetPasswordForm):
+    def clean(self):
+        raise forms.ValidationError(_('You cannot reset password.'))

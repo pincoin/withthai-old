@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-02 00:45+0700\n"
+"POT-Creation-Date: 2020-08-02 01:33+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -676,11 +676,11 @@ msgstr "예약번호"
 msgid "User"
 msgstr "사용자"
 
-#: booking/models.py:601 member/forms.py:19
+#: booking/models.py:601 member/forms.py:20
 msgid "Last name"
 msgstr "영문 성(姓)"
 
-#: booking/models.py:607 member/forms.py:11
+#: booking/models.py:607 member/forms.py:12
 msgid "First name"
 msgstr "영문 이름"
 
@@ -1063,7 +1063,7 @@ msgid "Caddie Fee"
 msgstr "캐디피"
 
 #: booking/templates/booking/golf-club-booking-form.html:140
-#: booking/templates/booking/golf-club-booking-form.html:476 member/forms.py:27
+#: booking/templates/booking/golf-club-booking-form.html:476 member/forms.py:28
 #: member/models.py:16
 msgid "Telephone"
 msgstr "전화번호"
@@ -1894,25 +1894,37 @@ msgstr "기본 SNS 계정은 연결해제할 수 없습니다."
 msgid "Member"
 msgstr "회원"
 
-#: member/forms.py:13
+#: member/forms.py:14
 msgid "First name written in English"
 msgstr "성을 빼고 이름만 입력해주세요."
 
-#: member/forms.py:15 member/forms.py:23
+#: member/forms.py:16 member/forms.py:24
 msgid "Uppercase alphabet only"
 msgstr "알파벳 대문자만 입력하세요."
 
-#: member/forms.py:21
+#: member/forms.py:22
 msgid "Last name written in English"
 msgstr "남/녀를 구별하는 성별이 아닙니다."
 
-#: member/forms.py:30
+#: member/forms.py:31
 msgid "Digits or plus sign only"
 msgstr "+또는 숫자만 입력"
 
-#: member/forms.py:31
+#: member/forms.py:32
 msgid "Invalid phone number format"
 msgstr "잘못된 전화번호 양식"
+
+#: member/forms.py:57
+msgid "You cannot change password."
+msgstr "비밀번호가 없는 SNS 계정입니다."
+
+#: member/forms.py:62
+msgid "You cannot set password."
+msgstr "비밀번호가 없는 SNS 계정입니다."
+
+#: member/forms.py:67
+msgid "You cannot reset password."
+msgstr "비밀번호가 없는 SNS 계정입니다."
 
 #: member/models.py:23
 msgid "Total order count"
