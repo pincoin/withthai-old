@@ -133,7 +133,6 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
 ACCOUNT_FORMS = {
-    'signup': 'member.forms.MemberSignupForm',
     'change_password': 'member.forms.MemberChangePasswordForm',
     'set_password': 'member.forms.MemberSetPasswordForm',
     'reset_password': 'member.forms.MemberResetPasswordForm',
@@ -143,6 +142,9 @@ ACCOUNT_EMAIL_SUBJECT_PREFIX = _('[WITH THAI] ')
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
 SOCIALACCOUNT_AUTO_SIGNUP = False
 SOCIALACCOUNT_ADAPTER = 'member.adapters.MySocialAccountAdapter'
+SOCIALACCOUNT_FORMS = {
+    'signup': 'member.forms.MemberSignupForm',
+}
 
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {},
