@@ -13,6 +13,6 @@ class MyAccountAdapter(DefaultAccountAdapter):
         return True
 
 
-class SocialAccountAdapter(DefaultSocialAccountAdapter):
+class MySocialAccountAdapter(DefaultSocialAccountAdapter):
     def validate_disconnect(self, account, accounts):
         raise ValidationError(_('You cannot disconnect social media account.'))
