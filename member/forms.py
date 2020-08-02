@@ -36,7 +36,7 @@ class MemberSignupForm(allauthsocialforms.SignupForm):
     def __init__(self, *args, **kwargs):
         super(MemberSignupForm, self).__init__(*args, **kwargs)
 
-    def signup(self, request, user):
+    def custom_signup(self, request, user):
         # Required fields for Django default model
         user.first_name = self.cleaned_data['first_name'].strip()
         user.last_name = self.cleaned_data['last_name'].strip()
