@@ -236,7 +236,7 @@ class GolfClubBookingCreateView(generic.CreateView):
             _('[WITH THAI] Booking Opened {}').format(str(self.object.order_no)[:8]),
             'dummy',
             settings.EMAIL_NO_REPLY,
-            [self.request.user.email],
+            self.request.user.email,
             html_message,
         )
 
