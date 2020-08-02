@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-02 01:58+0700\n"
+"POT-Creation-Date: 2020-08-02 23:41+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1310,8 +1310,12 @@ msgstr ""
 msgid "N/A"
 msgstr ""
 
-#: booking/views.py:200
+#: booking/views.py:202
 msgid "No language set"
+msgstr ""
+
+#: booking/views.py:236
+msgid "[WITH THAI] Booking Opened {}-*"
 msgstr ""
 
 #: conf/models.py:14 conf/models.py:57
@@ -1411,7 +1415,7 @@ msgstr ""
 msgid "Google Services"
 msgstr ""
 
-#: conf/settings/base.py:141
+#: conf/settings/base.py:142
 msgid "[WITH THAI] "
 msgstr ""
 
