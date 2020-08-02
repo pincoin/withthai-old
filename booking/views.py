@@ -231,7 +231,7 @@ class GolfClubBookingCreateView(generic.CreateView):
         )
 
         # 4. Notify manager, club authorities, user
-        html_message = render_to_string('booking/email/booking_opened_message.txt', {'order': self.object, })
+        html_message = render_to_string('booking/email/booking_opened_message.html', {'order': self.object, })
         tasks.send_notification_email.delay(
             _('[WITH THAI] Booking Opened {}-*').format(str(self.object.order_no)[:8]),
             'dummy',
