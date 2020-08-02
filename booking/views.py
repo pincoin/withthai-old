@@ -6,12 +6,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.cache import cache
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
+from django.template.loader import render_to_string
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.views import generic
 from ipware.ip import get_client_ip
 
+from conf import tasks
 from . import forms
 from . import models
 from . import viewmixins
@@ -229,6 +231,14 @@ class GolfClubBookingCreateView(generic.CreateView):
         )
 
         # 4. Notify manager, club authorities, user
+        html_message = render_to_string('booking/email/booking_opened_message.txt', {'order': self.object, })
+        tasks.send_notification_email.delay(
+            _('[WITH THAI] Booking Opened {}').format(self.object.order_no[:8]),
+            'dummy',
+            settings.EMAIL_NO_REPLY,
+            [self.request.user.email],
+            html_message,
+        )
 
         return response
 
