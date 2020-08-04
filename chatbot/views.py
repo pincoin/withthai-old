@@ -6,7 +6,6 @@ from django.utils.decorators import method_decorator
 from django.views import generic
 from django.views.decorators.csrf import csrf_exempt
 from linebot import LineBotApi, WebhookHandler
-from linebot import models
 from linebot.exceptions import InvalidSignatureError
 
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
@@ -32,8 +31,8 @@ class CallbackView(generic.View):
         return HttpResponseForbidden()
 
 
+'''
 @handler.add(models.MessageEvent, message=models.TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        models.TextSendMessage(text=event.message.text))
+    line_bot_api.reply_message(event.reply_token, models.TextSendMessage(text=event.message.text))
+'''
