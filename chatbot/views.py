@@ -1,41 +1,39 @@
-import logging
-
 from django.conf import settings
-from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
+from django.http import (
+    HttpResponse, HttpResponseForbidden
+)
+from django.utils.decorators import method_decorator
+from django.views import generic
 from django.views.decorators.csrf import csrf_exempt
 from linebot import LineBotApi, WebhookHandler
-from linebot.exceptions import InvalidSignatureError, LineBotApiError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot import models
+from linebot.exceptions import InvalidSignatureError
 
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(settings.LINE_CHANNEL_SECRET)
 
 
-@csrf_exempt
-def callback(request):
-    logger = logging.getLogger(__name__)
-    if request.method == 'POST':
-        signature = request.headers['X-Line-Signature']
-        body = request.body.decode('utf-8')
+@method_decorator(csrf_exempt, name='dispatch')
+class CallbackView(generic.View):
+    def post(self, request, *args, **kwargs):
+        print(request.headers)
 
-        logger.info(signature)
-        logger.info(body)
+        if 'X-Line-Signature' in request.headers:
+            signature = request.headers['X-Line-Signature']
+            body = request.body.decode('utf-8')
 
-        try:
-            events = handler.handle(body, signature)
-            logger.info(events)
-        except InvalidSignatureError:
-            return HttpResponseForbidden()
-        except LineBotApiError:
-            return HttpResponseBadRequest()
+            try:
+                handler.handle(body, signature)
+            except InvalidSignatureError:
+                return HttpResponseForbidden()
 
-        for event in events:
-            if isinstance(event, MessageEvent):
-                if isinstance(event.message, TextMessage):
-                    line_bot_api.reply_message(
-                        event.reply_token, TextSendMessage(text=event.message.text)
-                    )
+            return HttpResponse('OK')
 
-        return HttpResponse()
-    else:
-        return HttpResponseBadRequest()
+        return HttpResponseForbidden()
+
+
+@handler.add(models.MessageEvent, message=models.TextMessage)
+def handle_message(event):
+    line_bot_api.reply_message(
+        event.reply_token,
+        models.TextSendMessage(text=event.message.text))
