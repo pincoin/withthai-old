@@ -1,3 +1,5 @@
+import logging
+
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseForbidden
 from django.views.decorators.csrf import csrf_exempt
@@ -11,12 +13,17 @@ handler = WebhookHandler(settings.LINE_CHANNEL_SECRET)
 
 @csrf_exempt
 def callback(request):
+    logger = logging.getLogger(__name__)
     if request.method == 'POST':
         signature = request.META['X-Line-Signature']
+        logger.info(signature)
         body = request.body.decode('utf-8')
+        logger.info(body)
 
         try:
             events = handler.handle(body, signature)
+
+            logger.info(events)
         except InvalidSignatureError:
             return HttpResponseForbidden()
         except LineBotApiError:
