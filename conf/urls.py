@@ -26,6 +26,9 @@ urlpatterns = [
     path('member/',
          include('member.urls', namespace='member')),
 
+    path('chatbot/',
+         include('chatbot.urls', namespace='chatbot')),
+
     path('accounts/',
          include('allauth.urls')),
 

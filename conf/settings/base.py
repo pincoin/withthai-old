@@ -25,6 +25,9 @@ EMAIL_CUSTOMER_SERVICE = secret['EMAIL_CUSTOMER_SERVICE']
 
 LINE_NOTIFY_ACCESS_TOKEN = secret['LINE_NOTIFY_ACCESS_TOKEN']
 
+LINE_CHANNEL_ACCESS_TOKEN = secret['LINE_CHANNEL_ACCESS_TOKEN']
+LINE_CHANNEL_SECRET = secret['LINE_CHANNEL_SECRET']
+
 GOOGLE_MAPS_API_KEY = secret['GOOGLE_MAPS_API_KEY']
 
 # Quick-start development settings - unsuitable for production
@@ -62,6 +65,7 @@ INSTALLED_APPS += [
     'help',
     'booking',
     'event',
+    'chatbot',
 ]
 
 MIDDLEWARE = [
