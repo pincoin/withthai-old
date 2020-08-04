@@ -2,9 +2,9 @@ from django.urls import path
 
 from . import views
 
-app_name = 'help'
+app_name = 'chatbot'
 
 urlpatterns = [
-    path('',
+    path('callback/',
          views.callback, name='callback'),
     ]
