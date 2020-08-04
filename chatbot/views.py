@@ -16,8 +16,6 @@ handler = linebot.WebhookHandler(settings.LINE_CHANNEL_SECRET)
 @method_decorator(csrf_exempt, name='dispatch')
 class CallbackView(generic.View):
     def post(self, request, *args, **kwargs):
-        print(request.headers)
-
         if 'X-Line-Signature' in request.headers:
             signature = request.headers['X-Line-Signature']
             body = request.body.decode('utf-8')
