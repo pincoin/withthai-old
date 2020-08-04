@@ -15,14 +15,14 @@ handler = WebhookHandler(settings.LINE_CHANNEL_SECRET)
 def callback(request):
     logger = logging.getLogger(__name__)
     if request.method == 'POST':
-        signature = request.META['X-Line-Signature']
-        logger.info(signature)
+        signature = request.headers['X-Line-Signature']
         body = request.body.decode('utf-8')
+
+        logger.info(signature)
         logger.info(body)
 
         try:
             events = handler.handle(body, signature)
-
             logger.info(events)
         except InvalidSignatureError:
             return HttpResponseForbidden()
